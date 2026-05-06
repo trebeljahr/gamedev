@@ -1,0 +1,5 @@
+# Intentionally empty — heavy binaries (.glb, .gltf, .fbx, .obj, …) are
+# .gitignored, NOT tracked via LFS. Do not add LFS filters here unless you
+# really mean it; the prior LFS setup left ~1,445 pointer stubs that had to
+# be recovered by re-downloading from vendors. See project_lfs_recovery memory.
+* text=auto

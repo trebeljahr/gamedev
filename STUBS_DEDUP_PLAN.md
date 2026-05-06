@@ -1,0 +1,401 @@
+# LFS Stubs — Safe-to-Delete Dedup Plan
+
+Stubs with a matching real file already restored elsewhere in the project: **360** of 4647 total.
+
+Each stub below has a candidate replacement at the listed path. These stubs are redundant — deleting them is safe because the real file lives at the candidate path.
+
+Filename + extension match was used; if multiple candidates appear, all are listed (they may be different versions of the same model — pick the one you want to canonicalize on).
+
+## Quaternius (310 stubs)
+
+- ~~`3D/fbx/Ultimate Space Kit/Astronaut_BarbaraTheBee.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Characters/FBX/Astronaut_BarbaraTheBee.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Astronaut_FernandoTheFlamingo.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Characters/FBX/Astronaut_FernandoTheFlamingo.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Astronaut_FinnTheFrog.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Characters/FBX/Astronaut_FinnTheFrog.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Astronaut_RaeTheRedPanda.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Characters/FBX/Astronaut_RaeTheRedPanda.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Base_Large.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Base_Large.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Building_L.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Building_L.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Bush_1.fbx`~~  →  `models/quaternius/ultimate-nature-pack-jun-2019/extracted/Ultimate Nature Pack - Jun 2019/FBX/Bush_1.fbx`, `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Bush_1.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Bush_2.fbx`~~  →  `models/quaternius/ultimate-nature-pack-jun-2019/extracted/Ultimate Nature Pack - Jun 2019/FBX/Bush_2.fbx`, `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Bush_2.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Bush_3.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Bush_3.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Connector.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Connector.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Enemy_ExtraSmall.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Characters/FBX/Enemy_ExtraSmall.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Enemy_Flying.fbx`~~  →  `models/quaternius/cyberpunk-game-kit-quaternius/extracted/Cyberpunk Game Kit - Quaternius/Enemies/Enemy_Flying.fbx`, `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Characters/FBX/Enemy_Flying.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Enemy_Large.fbx`~~  →  `models/quaternius/cyberpunk-game-kit-quaternius/extracted/Cyberpunk Game Kit - Quaternius/Enemies/Enemy_Large.fbx`, `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Characters/FBX/Enemy_Large.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Enemy_Small.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Characters/FBX/Enemy_Small.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/GeodesicDome.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/GeodesicDome.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Grass_1.fbx`~~  →  `models/quaternius/nature-crops-pack-jan-2020/extracted/Nature Crops Pack - Jan 2020/FBX/Grass_1.fbx`, `models/quaternius/platformer-game-kit-dec-2021/extracted/Platformer Game Kit - Dec 2021/Nature/FBX/Grass_1.fbx`, `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Grass_1.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Grass_2.fbx`~~  →  `models/quaternius/ultimate-nature-pack-jun-2019/extracted/Ultimate Nature Pack - Jun 2019/FBX/Grass_2.fbx`, `models/quaternius/nature-crops-pack-jan-2020/extracted/Nature Crops Pack - Jan 2020/FBX/Grass_2.fbx`, `models/quaternius/platformer-game-kit-dec-2021/extracted/Platformer Game Kit - Dec 2021/Nature/FBX/Grass_2.fbx` (+1 more)
+- ~~`3D/fbx/Ultimate Space Kit/Grass_3.fbx`~~  →  `models/quaternius/nature-crops-pack-jan-2020/extracted/Nature Crops Pack - Jan 2020/FBX/Grass_3.fbx`, `models/quaternius/platformer-game-kit-dec-2021/extracted/Platformer Game Kit - Dec 2021/Nature/FBX/Grass_3.fbx`, `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Grass_3.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/House_Cylinder.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/House_Cylinder.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/House_Door.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/House_Door.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/House_Long.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/House_Long.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/House_Open.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/House_Open.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/House_OpenBack.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/House_OpenBack.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/House_Single.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/House_Single.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/House_Single_Support.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/House_Single_Support.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Mech_BarbaraTheBee.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Characters/FBX/Mech_BarbaraTheBee.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Mech_FernandoTheFlamingo.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Characters/FBX/Mech_FernandoTheFlamingo.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Mech_FinnTheFrog.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Characters/FBX/Mech_FinnTheFrog.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Mech_RaeTheRedPanda.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Characters/FBX/Mech_RaeTheRedPanda.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/MetalSupport.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/MetalSupport.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Pickup_Bullets.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Items/FBX/Pickup_Bullets.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Pickup_Crate.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Items/FBX/Pickup_Crate.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Pickup_Health.fbx`~~  →  `models/quaternius/cyberpunk-game-kit-quaternius/extracted/Cyberpunk Game Kit - Quaternius/Pickups and Objects/Pickup_Health.fbx`, `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Items/FBX/Pickup_Health.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Pickup_Jar.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Items/FBX/Pickup_Jar.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Pickup_KeyCard.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Items/FBX/Pickup_KeyCard.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Pickup_Sphere.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Items/FBX/Pickup_Sphere.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Pickup_Thunder.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Items/FBX/Pickup_Thunder.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Planet_1.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Planet_1.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Planet_10.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Planet_10.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Planet_11.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Planet_11.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Planet_2.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Planet_2.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Planet_3.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Planet_3.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Planet_4.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Planet_4.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Planet_5.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Planet_5.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Planet_6.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Planet_6.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Planet_7.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Planet_7.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Planet_8.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Planet_8.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Planet_9.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Planet_9.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Plant_1.fbx`~~  →  `models/quaternius/ultimate-stylized-nature-may-2022/extracted/Ultimate Stylized Nature - May 2022/FBX/Plant_1.fbx`, `models/quaternius/ultimate-nature-pack-jun-2019/extracted/Ultimate Nature Pack - Jun 2019/FBX/Plant_1.fbx`, `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Plant_1.fbx` (+2 more)
+- ~~`3D/fbx/Ultimate Space Kit/Plant_2.fbx`~~  →  `models/quaternius/cube-world-aug-2023/extracted/Cube World - Aug 2023/Environment/FBX/Plant_2.fbx`, `models/quaternius/ultimate-stylized-nature-may-2022/extracted/Ultimate Stylized Nature - May 2022/FBX/Plant_2.fbx`, `models/quaternius/ultimate-nature-pack-jun-2019/extracted/Ultimate Nature Pack - Jun 2019/FBX/Plant_2.fbx` (+1 more)
+- ~~`3D/fbx/Ultimate Space Kit/Plant_3.fbx`~~  →  `models/quaternius/cube-world-aug-2023/extracted/Cube World - Aug 2023/Environment/FBX/Plant_3.fbx`, `models/quaternius/ultimate-nature-pack-jun-2019/extracted/Ultimate Nature Pack - Jun 2019/FBX/Plant_3.fbx`, `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Plant_3.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Ramp.fbx`~~  →  `kenney/2D/minigolf-kit/extracted/Models/FBX format/ramp.fbx`, `kenney/2D/watercraft-pack/extracted/Models/FBX format/ramp.fbx`, `kenney/3D/racing-kit/extracted/Models/FBX format/ramp.fbx` (+1 more)
+- ~~`3D/fbx/Ultimate Space Kit/Rock_1.fbx`~~  →  `models/quaternius/ultimate-stylized-nature-may-2022/extracted/Ultimate Stylized Nature - May 2022/FBX/Rock_1.fbx`, `models/quaternius/ultimate-nature-pack-jun-2019/extracted/Ultimate Nature Pack - Jun 2019/FBX/Rock_1.fbx`, `models/quaternius/platformer-game-kit-dec-2021/extracted/Platformer Game Kit - Dec 2021/Nature/FBX/Rock_1.fbx` (+2 more)
+- ~~`3D/fbx/Ultimate Space Kit/Rock_2.fbx`~~  →  `models/quaternius/ultimate-stylized-nature-may-2022/extracted/Ultimate Stylized Nature - May 2022/FBX/Rock_2.fbx`, `models/quaternius/ultimate-nature-pack-jun-2019/extracted/Ultimate Nature Pack - Jun 2019/FBX/Rock_2.fbx`, `models/quaternius/platformer-game-kit-dec-2021/extracted/Platformer Game Kit - Dec 2021/Nature/FBX/Rock_2.fbx` (+2 more)
+- ~~`3D/fbx/Ultimate Space Kit/Rock_3.fbx`~~  →  `models/quaternius/ultimate-stylized-nature-may-2022/extracted/Ultimate Stylized Nature - May 2022/FBX/Rock_3.fbx`, `models/quaternius/ultimate-nature-pack-jun-2019/extracted/Ultimate Nature Pack - Jun 2019/FBX/Rock_3.fbx`, `models/quaternius/medieval-village-pack-dec-2020/extracted/Medieval Village Pack - Dec 2020/Props/FBX/Rock_3.fbx` (+1 more)
+- ~~`3D/fbx/Ultimate Space Kit/Rock_4.fbx`~~  →  `models/quaternius/ultimate-stylized-nature-may-2022/extracted/Ultimate Stylized Nature - May 2022/FBX/Rock_4.fbx`, `models/quaternius/ultimate-nature-pack-jun-2019/extracted/Ultimate Nature Pack - Jun 2019/FBX/Rock_4.fbx`, `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Rock_4.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Rock_Large_1.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Rock_Large_1.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Rock_Large_2.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Rock_Large_2.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Rock_Large_3.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Rock_Large_3.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Roof_Antenna.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Roof_Antenna.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Roof_Opening.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Roof_Opening.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Roof_Radar.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Roof_Radar.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Roof_VentL.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Roof_VentL.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Rover_1.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Vehicles/FBX/Rover_1.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Rover_2.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Vehicles/FBX/Rover_2.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Rover_Round.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Vehicles/FBX/Rover_Round.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/SolarPanel_Ground.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/SolarPanel_Ground.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/SolarPanel_Roof.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/SolarPanel_Roof.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/SolarPanel_Structure.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/SolarPanel_Structure.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Spaceship_BarbaraTheBee.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Vehicles/FBX/Spaceship_BarbaraTheBee.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Spaceship_FernandoTheFlamingo.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Vehicles/FBX/Spaceship_FernandoTheFlamingo.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Spaceship_FinnTheFrog.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Vehicles/FBX/Spaceship_FinnTheFrog.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Spaceship_RaeTheRedPanda.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Vehicles/FBX/Spaceship_RaeTheRedPanda.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Stairs.fbx`~~  →  `kenney/2D/mini-arena/extracted/Models/FBX format/stairs.fbx`, `kenney/2D/mini-dungeon/extracted/Models/FBX format/stairs.fbx`, `kenney/3D/prototype-kit/extracted/Models/FBX format/stairs.fbx` (+13 more)
+- ~~`3D/fbx/Ultimate Space Kit/Tree_Blob_1.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Tree_Blob_1.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Tree_Blob_2.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Tree_Blob_2.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Tree_Blob_3.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Tree_Blob_3.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Tree_Floating_1.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Tree_Floating_1.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Tree_Floating_2.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Tree_Floating_2.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Tree_Floating_3.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Tree_Floating_3.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Tree_Lava_1.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Tree_Lava_1.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Tree_Lava_2.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Tree_Lava_2.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Tree_Lava_3.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Tree_Lava_3.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Tree_Light_1.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Tree_Light_1.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Tree_Light_2.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Tree_Light_2.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Tree_Spikes_1.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Tree_Spikes_1.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Tree_Spikes_2.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Tree_Spikes_2.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Tree_Spiral_1.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Tree_Spiral_1.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Tree_Spiral_2.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Tree_Spiral_2.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Tree_Spiral_3.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Tree_Spiral_3.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Tree_Swirl_1.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Tree_Swirl_1.fbx`
+- ~~`3D/fbx/Ultimate Space Kit/Tree_Swirl_2.fbx`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/FBX/Tree_Swirl_2.fbx`
+- ~~`3D/glb/100 Avatars R1-glb/Alien.glb`~~  →  `kenney/3D/space-kit/extracted/Models/GLTF format/alien.glb`, `3D-optimized/kenney/space-kit/alien.glb`
+- ~~`3D/glb/100 Avatars R1-glb/Snowman.glb`~~  →  `kenney/3D/holiday-kit/extracted/Models/GLB format/snowman.glb`, `3D-optimized/kenney/holiday-kit/snowman.glb`
+- ~~`3D/glb/Animal Kit-glb/Bear.glb`~~  →  `kenney/3D/furniture-kit/extracted/Models/GLTF format/bear.glb`, `3D-optimized/kenney/furniture-kit/bear.glb`
+- ~~`3D/glb/Platform Kit Revamped-glb/Chest.glb`~~  →  `kenney/2D/mini-dungeon/extracted/Models/GLB format/chest.glb`, `kenney/3D/survival-kit/extracted/Models/GLB format/chest.glb`, `kenney/3D/pirate-kit/extracted/Models/GLB format/chest.glb` (+5 more)
+- ~~`3D/glb/Race kit-glb/Ambulance.glb`~~  →  `kenney/3D/car-kit/extracted/Models/GLB format/ambulance.glb`, `3D-optimized/kenney/car-kit/ambulance.glb`
+- ~~`3D/glb/Race kit-glb/Banner.glb`~~  →  `kenney/2D/mini-arena/extracted/Models/GLB format/banner.glb`, `kenney/2D/mini-dungeon/extracted/Models/GLB format/banner.glb`, `kenney/3D/marble-kit/extracted/Models/GLB format/banner.glb` (+3 more)
+- ~~`3D/glb/Race kit-glb/Fence.glb`~~  →  `kenney/2D/mini-market/extracted/Models/GLB format/fence.glb`, `kenney/2D/fantasy-town-kit/extracted/Models/GLB format/fence.glb`, `kenney/2D/retro-fantasy-kit/extracted/Models/GLB format/fence.glb` (+9 more)
+- ~~`3D/glb/Race kit-glb/Grass.glb`~~  →  `kenney/2D/retro-urban-kit/extracted/Models/GLB format/grass.glb`, `kenney/3D/survival-kit/extracted/Models/GLB format/grass.glb`, `kenney/3D/pirate-kit/extracted/Models/GLB format/grass.glb` (+13 more)
+- ~~`3D/glb/Race kit-glb/Rocks.glb`~~  →  `kenney/2D/mini-dungeon/extracted/Models/GLB format/rocks.glb`, `kenney/3D/space-station-kit/extracted/Models/GLB format/rocks.glb`, `kenney/3D/platformer-kit/extracted/Models/GLB format/rocks.glb` (+5 more)
+- ~~`3D/glb/Race kit-glb/Soda.glb`~~  →  `kenney/3D/food-kit/extracted/Models/GLB format/soda.glb`, `3D-optimized/kenney/food-kit/soda.glb`
+- ~~`3D/glb/Race kit-glb/Table.glb`~~  →  `kenney/3D/space-station-kit/extracted/Models/GLB format/table.glb`, `kenney/3D/furniture-kit/extracted/Models/GLTF format/table.glb`, `3D-optimized/kenney/furniture-kit/table.glb` (+1 more)
+- ~~`3D/glb/Small Camping Bundle-glb/Log.glb`~~  →  `kenney/3D/nature-kit/extracted/Models/GLTF format/log.glb`, `3D-optimized/kenney/nature-kit/log.glb`
+- ~~`3D/glb/Small Camping Bundle-glb/Rock.glb`~~  →  `kenney/3D/space-kit/extracted/Models/GLTF format/rock.glb`, `3D-optimized/kenney/space-kit/rock.glb`
+- ~~`3D/glb/Small Camping Bundle-glb/Tent.glb`~~  →  `kenney/3D/survival-kit/extracted/Models/GLB format/tent.glb`, `kenney/3D/racing-kit/extracted/Models/GLTF format/tent.glb`, `3D-optimized/kenney/racing-kit/tent.glb` (+1 more)
+- ~~`3D/glb/Small Camping Bundle-glb/Tree.glb`~~  →  `kenney/2D/mini-arena/extracted/Models/GLB format/tree.glb`, `kenney/2D/fantasy-town-kit/extracted/Models/GLB format/tree.glb`, `kenney/3D/survival-kit/extracted/Models/GLB format/tree.glb` (+13 more)
+- ~~`3D/glb/Small Platformer Kit-glb/Coin.glb`~~  →  `kenney/2D/mini-dungeon/extracted/Models/GLB format/coin.glb`, `kenney/3D/prototype-kit/extracted/Models/GLB format/coin.glb`, `3D-optimized/kenney/mini-dungeon/coin.glb` (+1 more)
+- ~~`3D/glb/Small Platformer Kit-glb/Flag.glb`~~  →  `kenney/3D/pirate-kit/extracted/Models/GLB format/flag.glb`, `kenney/3D/prototype-kit/extracted/Models/GLB format/flag.glb`, `kenney/3D/castle-kit/extracted/Models/GLB format/flag.glb` (+5 more)
+- ~~`3D/glb/Small Platformer Kit-glb/Tree.glb`~~  →  `kenney/2D/mini-arena/extracted/Models/GLB format/tree.glb`, `kenney/2D/fantasy-town-kit/extracted/Models/GLB format/tree.glb`, `kenney/3D/survival-kit/extracted/Models/GLB format/tree.glb` (+13 more)
+- ~~`3D/glb/Survival Kit-glb/Barrel.glb`~~  →  `kenney/2D/mini-dungeon/extracted/Models/GLB format/barrel.glb`, `kenney/3D/survival-kit/extracted/Models/GLB format/barrel.glb`, `kenney/3D/pirate-kit/extracted/Models/GLB format/barrel.glb` (+9 more)
+- ~~`3D/glb/Survival Kit-glb/Bedroll.glb`~~  →  `kenney/3D/survival-kit/extracted/Models/GLB format/bedroll.glb`, `3D-optimized/kenney/survival-kit/bedroll.glb`
+- ~~`3D/glb/Survival Kit-glb/Box.glb`~~  →  `kenney/3D/survival-kit/extracted/Models/GLB format/box.glb`, `kenney/3D/car-kit/extracted/Models/GLB format/box.glb`, `3D-optimized/kenney/car-kit/box.glb` (+1 more)
+- ~~`3D/glb/Survival Kit-glb/Chest.glb`~~  →  `kenney/2D/mini-dungeon/extracted/Models/GLB format/chest.glb`, `kenney/3D/survival-kit/extracted/Models/GLB format/chest.glb`, `kenney/3D/pirate-kit/extracted/Models/GLB format/chest.glb` (+5 more)
+- ~~`3D/glb/Survival Kit-glb/Fish.glb`~~  →  `kenney/3D/survival-kit/extracted/Models/GLB format/fish.glb`, `kenney/3D/food-kit/extracted/Models/GLB format/fish.glb`, `3D-optimized/kenney/food-kit/fish.glb` (+1 more)
+- ~~`3D/glb/Survival Kit-glb/Floor.glb`~~  →  `kenney/2D/mini-arena/extracted/Models/GLB format/floor.glb`, `kenney/2D/mini-market/extracted/Models/GLB format/floor.glb`, `kenney/2D/mini-dungeon/extracted/Models/GLB format/floor.glb` (+15 more)
+- ~~`3D/glb/Survival Kit-glb/Grass.glb`~~  →  `kenney/2D/retro-urban-kit/extracted/Models/GLB format/grass.glb`, `kenney/3D/survival-kit/extracted/Models/GLB format/grass.glb`, `kenney/3D/pirate-kit/extracted/Models/GLB format/grass.glb` (+13 more)
+- ~~`3D/glb/Survival Kit-glb/Rock.glb`~~  →  `kenney/3D/space-kit/extracted/Models/GLTF format/rock.glb`, `3D-optimized/kenney/space-kit/rock.glb`
+- ~~`3D/glb/Survival Kit-glb/Signpost.glb`~~  →  `kenney/3D/survival-kit/extracted/Models/GLB format/signpost.glb`, `3D-optimized/kenney/survival-kit/signpost.glb`
+- ~~`3D/glb/Survival Kit-glb/Structure.glb`~~  →  `kenney/2D/retro-fantasy-kit/extracted/Models/GLB format/structure.glb`, `kenney/3D/survival-kit/extracted/Models/GLB format/structure.glb`, `kenney/3D/pirate-kit/extracted/Models/GLB format/structure.glb` (+7 more)
+- ~~`3D/glb/Survival Kit-glb/Tree.glb`~~  →  `kenney/2D/mini-arena/extracted/Models/GLB format/tree.glb`, `kenney/2D/fantasy-town-kit/extracted/Models/GLB format/tree.glb`, `kenney/3D/survival-kit/extracted/Models/GLB format/tree.glb` (+13 more)
+- ~~`3D/glb/Survival Kit-glb/Workbench.glb`~~  →  `kenney/3D/survival-kit/extracted/Models/GLB format/workbench.glb`, `3D-optimized/kenney/survival-kit/workbench.glb`
+- ~~`3D/glb/Ultimate Interior Props Pack-glb/Bowl.glb`~~  →  `kenney/3D/food-kit/extracted/Models/GLB format/bowl.glb`, `3D-optimized/kenney/food-kit/bowl.glb`
+- ~~`3D/glb/Ultimate Interior Props Pack-glb/Plate.glb`~~  →  `kenney/3D/food-kit/extracted/Models/GLB format/plate.glb`, `3D-optimized/kenney/food-kit/plate.glb`
+- ~~`3D/glb/Ultimate Interior Props Pack-glb/Pot.glb`~~  →  `kenney/3D/food-kit/extracted/Models/GLB format/pot.glb`, `3D-optimized/kenney/food-kit/pot.glb`
+- ~~`3D/glb/Ultimate Interior Props Pack-glb/Toaster.glb`~~  →  `kenney/3D/furniture-kit/extracted/Models/GLTF format/toaster.glb`, `3D-optimized/kenney/furniture-kit/toaster.glb`
+- ~~`3D/gltf/Ultimate Space Kit/Astronaut_BarbaraTheBee.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Characters/GLTF/Astronaut_BarbaraTheBee.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Astronaut_FernandoTheFlamingo.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Characters/GLTF/Astronaut_FernandoTheFlamingo.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Astronaut_FinnTheFrog.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Characters/GLTF/Astronaut_FinnTheFrog.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Astronaut_RaeTheRedPanda.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Characters/GLTF/Astronaut_RaeTheRedPanda.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Base_Large.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Base_Large.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Building_L.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Building_L.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Bush_1.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Bush_1.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Bush_2.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Bush_2.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Bush_3.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Bush_3.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Connector.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Connector.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Enemy_ExtraSmall.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Characters/GLTF/Enemy_ExtraSmall.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Enemy_Flying.gltf`~~  →  `models/quaternius/cyberpunk-game-kit-quaternius/extracted/Cyberpunk Game Kit - Quaternius/Enemies/Enemy_Flying.gltf`, `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Characters/GLTF/Enemy_Flying.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Enemy_Large.gltf`~~  →  `models/quaternius/cyberpunk-game-kit-quaternius/extracted/Cyberpunk Game Kit - Quaternius/Enemies/Enemy_Large.gltf`, `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Characters/GLTF/Enemy_Large.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Enemy_Small.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Characters/GLTF/Enemy_Small.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/GeodesicDome.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/GeodesicDome.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Grass_1.gltf`~~  →  `models/quaternius/platformer-game-kit-dec-2021/extracted/Platformer Game Kit - Dec 2021/Nature/glTF/Grass_1.gltf`, `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Grass_1.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Grass_2.gltf`~~  →  `models/quaternius/platformer-game-kit-dec-2021/extracted/Platformer Game Kit - Dec 2021/Nature/glTF/Grass_2.gltf`, `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Grass_2.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Grass_3.gltf`~~  →  `models/quaternius/platformer-game-kit-dec-2021/extracted/Platformer Game Kit - Dec 2021/Nature/glTF/Grass_3.gltf`, `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Grass_3.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/House_Cylinder.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/House_Cylinder.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/House_Long.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/House_Long.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/House_Open.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/House_Open.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/House_OpenBack.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/House_OpenBack.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/House_Single.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/House_Single.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/House_Single_Support.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/House_Single_Support.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Mech_BarbaraTheBee.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Characters/GLTF/Mech_BarbaraTheBee.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Mech_FernandoTheFlamingo.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Characters/GLTF/Mech_FernandoTheFlamingo.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Mech_FinnTheFrog.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Characters/GLTF/Mech_FinnTheFrog.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Mech_RaeTheRedPanda.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Characters/GLTF/Mech_RaeTheRedPanda.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/MetalSupport.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/MetalSupport.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Pickup_Bullets.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Items/GLTF/Pickup_Bullets.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Pickup_Crate.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Items/GLTF/Pickup_Crate.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Pickup_Health.gltf`~~  →  `models/quaternius/cyberpunk-game-kit-quaternius/extracted/Cyberpunk Game Kit - Quaternius/Pickups and Objects/Pickup_Health.gltf`, `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Items/GLTF/Pickup_Health.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Pickup_Jar.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Items/GLTF/Pickup_Jar.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Pickup_KeyCard.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Items/GLTF/Pickup_KeyCard.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Pickup_Sphere.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Items/GLTF/Pickup_Sphere.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Pickup_Thunder.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Items/GLTF/Pickup_Thunder.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Planet_1.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Planet_1.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Planet_10.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Planet_10.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Planet_11.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Planet_11.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Planet_2.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Planet_2.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Planet_3.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Planet_3.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Planet_4.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Planet_4.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Planet_5.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Planet_5.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Planet_6.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Planet_6.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Planet_7.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Planet_7.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Planet_8.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Planet_8.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Planet_9.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Planet_9.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Plant_1.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Plant_1.gltf`, `misc-imports/synty-stylized-nature-megakit/extracted/glTF/Plant_1.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Plant_2.gltf`~~  →  `models/quaternius/cube-world-aug-2023/extracted/Cube World - Aug 2023/Environment/glTF/Plant_2.gltf`, `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Plant_2.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Plant_3.gltf`~~  →  `models/quaternius/cube-world-aug-2023/extracted/Cube World - Aug 2023/Environment/glTF/Plant_3.gltf`, `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Plant_3.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Ramp.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Ramp.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Rock_1.gltf`~~  →  `models/quaternius/platformer-game-kit-dec-2021/extracted/Platformer Game Kit - Dec 2021/Nature/glTF/Rock_1.gltf`, `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Rock_1.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Rock_2.gltf`~~  →  `models/quaternius/platformer-game-kit-dec-2021/extracted/Platformer Game Kit - Dec 2021/Nature/glTF/Rock_2.gltf`, `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Rock_2.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Rock_3.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Rock_3.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Rock_4.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Rock_4.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Rock_Large_1.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Rock_Large_1.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Rock_Large_2.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Rock_Large_2.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Rock_Large_3.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Rock_Large_3.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Roof_Antenna.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Roof_Antenna.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Roof_Opening.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Roof_Opening.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Roof_Radar.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Roof_Radar.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Roof_VentL.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Roof_VentL.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Roof_VentR.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Roof_VentR.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Rover_1.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Vehicles/GLTF/Rover_1.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Rover_2.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Vehicles/GLTF/Rover_2.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Rover_Round.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Vehicles/GLTF/Rover_Round.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/SolarPanel_Ground.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/SolarPanel_Ground.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/SolarPanel_Roof.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/SolarPanel_Roof.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/SolarPanel_Structure.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/SolarPanel_Structure.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Spaceship_BarbaraTheBee.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Vehicles/GLTF/Spaceship_BarbaraTheBee.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Spaceship_FernandoTheFlamingo.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Vehicles/GLTF/Spaceship_FernandoTheFlamingo.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Spaceship_FinnTheFrog.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Vehicles/GLTF/Spaceship_FinnTheFrog.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Spaceship_RaeTheRedPanda.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Vehicles/GLTF/Spaceship_RaeTheRedPanda.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Stairs.gltf`~~  →  `models/kaykit/dungeonremastered/extracted/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/stairs.gltf`, `models/quaternius/platformer-game-kit-dec-2021/extracted/Platformer Game Kit - Dec 2021/Level and Mechanics/glTF/Stairs.gltf`, `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Stairs.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Tree_Blob_1.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Tree_Blob_1.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Tree_Blob_2.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Tree_Blob_2.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Tree_Blob_3.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Tree_Blob_3.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Tree_Floating_1.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Tree_Floating_1.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Tree_Floating_2.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Tree_Floating_2.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Tree_Floating_3.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Tree_Floating_3.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Tree_Lava_1.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Tree_Lava_1.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Tree_Lava_2.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Tree_Lava_2.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Tree_Lava_3.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Tree_Lava_3.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Tree_Light_1.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Tree_Light_1.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Tree_Light_2.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Tree_Light_2.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Tree_Spikes_1.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Tree_Spikes_1.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Tree_Spikes_2.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Tree_Spikes_2.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Tree_Spiral_1.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Tree_Spiral_1.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Tree_Spiral_2.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Tree_Spiral_2.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Tree_Spiral_3.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Tree_Spiral_3.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Tree_Swirl_1.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Tree_Swirl_1.gltf`
+- ~~`3D/gltf/Ultimate Space Kit/Tree_Swirl_2.gltf`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/GLTF/Tree_Swirl_2.gltf`
+- ~~`3D/obj/Ultimate Space Kit/Astronaut_BarbaraTheBee.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Characters/OBJ/Astronaut_BarbaraTheBee.obj`
+- ~~`3D/obj/Ultimate Space Kit/Astronaut_FernandoTheFlamingo.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Characters/OBJ/Astronaut_FernandoTheFlamingo.obj`
+- ~~`3D/obj/Ultimate Space Kit/Astronaut_FinnTheFrog.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Characters/OBJ/Astronaut_FinnTheFrog.obj`
+- ~~`3D/obj/Ultimate Space Kit/Astronaut_RaeTheRedPanda.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Characters/OBJ/Astronaut_RaeTheRedPanda.obj`
+- ~~`3D/obj/Ultimate Space Kit/Base_Large.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Base_Large.obj`
+- ~~`3D/obj/Ultimate Space Kit/Building_L.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Building_L.obj`
+- ~~`3D/obj/Ultimate Space Kit/Bush_1.obj`~~  →  `models/quaternius/ultimate-nature-pack-jun-2019/extracted/Ultimate Nature Pack - Jun 2019/OBJ/Bush_1.obj`, `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Bush_1.obj`
+- ~~`3D/obj/Ultimate Space Kit/Bush_2.obj`~~  →  `models/quaternius/ultimate-nature-pack-jun-2019/extracted/Ultimate Nature Pack - Jun 2019/OBJ/Bush_2.obj`, `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Bush_2.obj`
+- ~~`3D/obj/Ultimate Space Kit/Bush_3.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Bush_3.obj`
+- ~~`3D/obj/Ultimate Space Kit/Connector.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Connector.obj`
+- ~~`3D/obj/Ultimate Space Kit/Enemy_ExtraSmall.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Characters/OBJ/Enemy_ExtraSmall.obj`
+- ~~`3D/obj/Ultimate Space Kit/Enemy_Flying.obj`~~  →  `models/quaternius/cyberpunk-game-kit-quaternius/extracted/Cyberpunk Game Kit - Quaternius/Enemies/Enemy_Flying.obj`, `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Characters/OBJ/Enemy_Flying.obj`
+- ~~`3D/obj/Ultimate Space Kit/Enemy_Large.obj`~~  →  `models/quaternius/cyberpunk-game-kit-quaternius/extracted/Cyberpunk Game Kit - Quaternius/Enemies/Enemy_Large.obj`, `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Characters/OBJ/Enemy_Large.obj`
+- ~~`3D/obj/Ultimate Space Kit/Enemy_Small.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Characters/OBJ/Enemy_Small.obj`
+- ~~`3D/obj/Ultimate Space Kit/GeodesicDome.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/GeodesicDome.obj`
+- ~~`3D/obj/Ultimate Space Kit/Grass_1.obj`~~  →  `models/quaternius/nature-crops-pack-jan-2020/extracted/Nature Crops Pack - Jan 2020/OBJ/Grass_1.obj`, `models/quaternius/platformer-game-kit-dec-2021/extracted/Platformer Game Kit - Dec 2021/Nature/OBJ/Grass_1.obj`, `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Grass_1.obj`
+- ~~`3D/obj/Ultimate Space Kit/Grass_2.obj`~~  →  `models/quaternius/ultimate-nature-pack-jun-2019/extracted/Ultimate Nature Pack - Jun 2019/OBJ/Grass_2.obj`, `models/quaternius/nature-crops-pack-jan-2020/extracted/Nature Crops Pack - Jan 2020/OBJ/Grass_2.obj`, `models/quaternius/platformer-game-kit-dec-2021/extracted/Platformer Game Kit - Dec 2021/Nature/OBJ/Grass_2.obj` (+1 more)
+- ~~`3D/obj/Ultimate Space Kit/Grass_3.obj`~~  →  `models/quaternius/nature-crops-pack-jan-2020/extracted/Nature Crops Pack - Jan 2020/OBJ/Grass_3.obj`, `models/quaternius/platformer-game-kit-dec-2021/extracted/Platformer Game Kit - Dec 2021/Nature/OBJ/Grass_3.obj`, `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Grass_3.obj`
+- ~~`3D/obj/Ultimate Space Kit/House_Cylinder.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/House_Cylinder.obj`
+- ~~`3D/obj/Ultimate Space Kit/House_Door.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/House_Door.obj`
+- ~~`3D/obj/Ultimate Space Kit/House_Long.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/House_Long.obj`
+- ~~`3D/obj/Ultimate Space Kit/House_Open.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/House_Open.obj`
+- ~~`3D/obj/Ultimate Space Kit/House_OpenBack.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/House_OpenBack.obj`
+- ~~`3D/obj/Ultimate Space Kit/House_Single.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/House_Single.obj`
+- ~~`3D/obj/Ultimate Space Kit/House_Single_Support.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/House_Single_Support.obj`
+- ~~`3D/obj/Ultimate Space Kit/Mech_BarbaraTheBee.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Characters/OBJ/Mech_BarbaraTheBee.obj`
+- ~~`3D/obj/Ultimate Space Kit/Mech_FernandoTheFlamingo.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Characters/OBJ/Mech_FernandoTheFlamingo.obj`
+- ~~`3D/obj/Ultimate Space Kit/Mech_FinnTheFrog.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Characters/OBJ/Mech_FinnTheFrog.obj`
+- ~~`3D/obj/Ultimate Space Kit/Mech_RaeTheRedPanda.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Characters/OBJ/Mech_RaeTheRedPanda.obj`
+- ~~`3D/obj/Ultimate Space Kit/MetalSupport.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/MetalSupport.obj`
+- ~~`3D/obj/Ultimate Space Kit/Pickup_Bullets.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Items/OBJ/Pickup_Bullets.obj`
+- ~~`3D/obj/Ultimate Space Kit/Pickup_Crate.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Items/OBJ/Pickup_Crate.obj`
+- ~~`3D/obj/Ultimate Space Kit/Pickup_Health.obj`~~  →  `models/quaternius/cyberpunk-game-kit-quaternius/extracted/Cyberpunk Game Kit - Quaternius/Pickups and Objects/Pickup_Health.obj`, `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Items/OBJ/Pickup_Health.obj`
+- ~~`3D/obj/Ultimate Space Kit/Pickup_Jar.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Items/OBJ/Pickup_Jar.obj`
+- ~~`3D/obj/Ultimate Space Kit/Pickup_KeyCard.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Items/OBJ/Pickup_KeyCard.obj`
+- ~~`3D/obj/Ultimate Space Kit/Pickup_Sphere.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Items/OBJ/Pickup_Sphere.obj`
+- ~~`3D/obj/Ultimate Space Kit/Pickup_Thunder.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Items/OBJ/Pickup_Thunder.obj`
+- ~~`3D/obj/Ultimate Space Kit/Planet_1.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Planet_1.obj`
+- ~~`3D/obj/Ultimate Space Kit/Planet_10.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Planet_10.obj`
+- ~~`3D/obj/Ultimate Space Kit/Planet_11.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Planet_11.obj`
+- ~~`3D/obj/Ultimate Space Kit/Planet_2.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Planet_2.obj`
+- ~~`3D/obj/Ultimate Space Kit/Planet_3.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Planet_3.obj`
+- ~~`3D/obj/Ultimate Space Kit/Planet_4.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Planet_4.obj`
+- ~~`3D/obj/Ultimate Space Kit/Planet_5.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Planet_5.obj`
+- ~~`3D/obj/Ultimate Space Kit/Planet_6.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Planet_6.obj`
+- ~~`3D/obj/Ultimate Space Kit/Planet_7.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Planet_7.obj`
+- ~~`3D/obj/Ultimate Space Kit/Planet_8.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Planet_8.obj`
+- ~~`3D/obj/Ultimate Space Kit/Planet_9.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Planet_9.obj`
+- ~~`3D/obj/Ultimate Space Kit/Plant_1.obj`~~  →  `models/quaternius/ultimate-stylized-nature-may-2022/extracted/Ultimate Stylized Nature - May 2022/OBJ/Plant_1.obj`, `models/quaternius/ultimate-nature-pack-jun-2019/extracted/Ultimate Nature Pack - Jun 2019/OBJ/Plant_1.obj`, `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Plant_1.obj` (+1 more)
+- ~~`3D/obj/Ultimate Space Kit/Plant_2.obj`~~  →  `models/quaternius/cube-world-aug-2023/extracted/Cube World - Aug 2023/Environment/OBJ/Plant_2.obj`, `models/quaternius/ultimate-stylized-nature-may-2022/extracted/Ultimate Stylized Nature - May 2022/OBJ/Plant_2.obj`, `models/quaternius/ultimate-nature-pack-jun-2019/extracted/Ultimate Nature Pack - Jun 2019/OBJ/Plant_2.obj` (+1 more)
+- ~~`3D/obj/Ultimate Space Kit/Plant_3.obj`~~  →  `models/quaternius/cube-world-aug-2023/extracted/Cube World - Aug 2023/Environment/OBJ/Plant_3.obj`, `models/quaternius/ultimate-nature-pack-jun-2019/extracted/Ultimate Nature Pack - Jun 2019/OBJ/Plant_3.obj`, `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Plant_3.obj`
+- ~~`3D/obj/Ultimate Space Kit/Ramp.obj`~~  →  `kenney/2D/minigolf-kit/extracted/Models/OBJ format/ramp.obj`, `kenney/2D/watercraft-pack/extracted/Models/OBJ format/ramp.obj`, `kenney/3D/racing-kit/extracted/Models/OBJ format/ramp.obj` (+1 more)
+- ~~`3D/obj/Ultimate Space Kit/Rock_1.obj`~~  →  `models/quaternius/ultimate-stylized-nature-may-2022/extracted/Ultimate Stylized Nature - May 2022/OBJ/Rock_1.obj`, `models/quaternius/ultimate-nature-pack-jun-2019/extracted/Ultimate Nature Pack - Jun 2019/OBJ/Rock_1.obj`, `models/quaternius/platformer-game-kit-dec-2021/extracted/Platformer Game Kit - Dec 2021/Nature/OBJ/Rock_1.obj` (+2 more)
+- ~~`3D/obj/Ultimate Space Kit/Rock_2.obj`~~  →  `models/quaternius/ultimate-stylized-nature-may-2022/extracted/Ultimate Stylized Nature - May 2022/OBJ/Rock_2.obj`, `models/quaternius/ultimate-nature-pack-jun-2019/extracted/Ultimate Nature Pack - Jun 2019/OBJ/Rock_2.obj`, `models/quaternius/platformer-game-kit-dec-2021/extracted/Platformer Game Kit - Dec 2021/Nature/OBJ/Rock_2.obj` (+2 more)
+- ~~`3D/obj/Ultimate Space Kit/Rock_3.obj`~~  →  `models/quaternius/ultimate-stylized-nature-may-2022/extracted/Ultimate Stylized Nature - May 2022/OBJ/Rock_3.obj`, `models/quaternius/ultimate-nature-pack-jun-2019/extracted/Ultimate Nature Pack - Jun 2019/OBJ/Rock_3.obj`, `models/quaternius/medieval-village-pack-dec-2020/extracted/Medieval Village Pack - Dec 2020/Props/OBJ/Rock_3.obj` (+1 more)
+- ~~`3D/obj/Ultimate Space Kit/Rock_4.obj`~~  →  `models/quaternius/ultimate-stylized-nature-may-2022/extracted/Ultimate Stylized Nature - May 2022/OBJ/Rock_4.obj`, `models/quaternius/ultimate-nature-pack-jun-2019/extracted/Ultimate Nature Pack - Jun 2019/OBJ/Rock_4.obj`, `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Rock_4.obj`
+- ~~`3D/obj/Ultimate Space Kit/Rock_Large_1.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Rock_Large_1.obj`
+- ~~`3D/obj/Ultimate Space Kit/Rock_Large_2.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Rock_Large_2.obj`
+- ~~`3D/obj/Ultimate Space Kit/Rock_Large_3.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Rock_Large_3.obj`
+- ~~`3D/obj/Ultimate Space Kit/Roof_Antenna.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Roof_Antenna.obj`
+- ~~`3D/obj/Ultimate Space Kit/Roof_Opening.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Roof_Opening.obj`
+- ~~`3D/obj/Ultimate Space Kit/Roof_Radar.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Roof_Radar.obj`
+- ~~`3D/obj/Ultimate Space Kit/Roof_VentL.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Roof_VentL.obj`
+- ~~`3D/obj/Ultimate Space Kit/Rover_1.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Vehicles/OBJ/Rover_1.obj`
+- ~~`3D/obj/Ultimate Space Kit/Rover_2.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Vehicles/OBJ/Rover_2.obj`
+- ~~`3D/obj/Ultimate Space Kit/Rover_Round.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Vehicles/OBJ/Rover_Round.obj`
+- ~~`3D/obj/Ultimate Space Kit/SolarPanel_Ground.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/SolarPanel_Ground.obj`
+- ~~`3D/obj/Ultimate Space Kit/SolarPanel_Roof.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/SolarPanel_Roof.obj`
+- ~~`3D/obj/Ultimate Space Kit/SolarPanel_Structure.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/SolarPanel_Structure.obj`
+- ~~`3D/obj/Ultimate Space Kit/Spaceship_BarbaraTheBee.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Vehicles/OBJ/Spaceship_BarbaraTheBee.obj`
+- ~~`3D/obj/Ultimate Space Kit/Spaceship_FernandoTheFlamingo.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Vehicles/OBJ/Spaceship_FernandoTheFlamingo.obj`
+- ~~`3D/obj/Ultimate Space Kit/Spaceship_FinnTheFrog.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Vehicles/OBJ/Spaceship_FinnTheFrog.obj`
+- ~~`3D/obj/Ultimate Space Kit/Spaceship_RaeTheRedPanda.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Vehicles/OBJ/Spaceship_RaeTheRedPanda.obj`
+- ~~`3D/obj/Ultimate Space Kit/Stairs.obj`~~  →  `kenney/2D/mini-arena/extracted/Models/OBJ format/stairs.obj`, `kenney/2D/mini-dungeon/extracted/Models/OBJ format/stairs.obj`, `kenney/3D/prototype-kit/extracted/Models/OBJ format/stairs.obj` (+12 more)
+- ~~`3D/obj/Ultimate Space Kit/Tree_Blob_1.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Tree_Blob_1.obj`
+- ~~`3D/obj/Ultimate Space Kit/Tree_Blob_2.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Tree_Blob_2.obj`
+- ~~`3D/obj/Ultimate Space Kit/Tree_Blob_3.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Tree_Blob_3.obj`
+- ~~`3D/obj/Ultimate Space Kit/Tree_Floating_1.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Tree_Floating_1.obj`
+- ~~`3D/obj/Ultimate Space Kit/Tree_Floating_2.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Tree_Floating_2.obj`
+- ~~`3D/obj/Ultimate Space Kit/Tree_Floating_3.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Tree_Floating_3.obj`
+- ~~`3D/obj/Ultimate Space Kit/Tree_Lava_1.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Tree_Lava_1.obj`
+- ~~`3D/obj/Ultimate Space Kit/Tree_Lava_2.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Tree_Lava_2.obj`
+- ~~`3D/obj/Ultimate Space Kit/Tree_Lava_3.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Tree_Lava_3.obj`
+- ~~`3D/obj/Ultimate Space Kit/Tree_Light_1.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Tree_Light_1.obj`
+- ~~`3D/obj/Ultimate Space Kit/Tree_Light_2.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Tree_Light_2.obj`
+- ~~`3D/obj/Ultimate Space Kit/Tree_Spikes_1.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Tree_Spikes_1.obj`
+- ~~`3D/obj/Ultimate Space Kit/Tree_Spikes_2.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Tree_Spikes_2.obj`
+- ~~`3D/obj/Ultimate Space Kit/Tree_Spiral_1.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Tree_Spiral_1.obj`
+- ~~`3D/obj/Ultimate Space Kit/Tree_Spiral_2.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Tree_Spiral_2.obj`
+- ~~`3D/obj/Ultimate Space Kit/Tree_Spiral_3.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Tree_Spiral_3.obj`
+- ~~`3D/obj/Ultimate Space Kit/Tree_Swirl_1.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Tree_Swirl_1.obj`
+- ~~`3D/obj/Ultimate Space Kit/Tree_Swirl_2.obj`~~  →  `models/quaternius/ultimate-space-kit-march-2023/extracted/Ultimate Space Kit - March 2023/Environment/OBJ/Tree_Swirl_2.obj`
+
+## KayKit (Kay Lousberg) (36 stubs)
+
+- ~~`3D/glb/City Pack-glb/Billboard.glb`~~  →  `kenney/3D/racing-kit/extracted/Models/GLTF format/billboard.glb`, `3D-optimized/kenney/racing-kit/billboard.glb`
+- ~~`3D/glb/City Pack-glb/Cone.glb`~~  →  `kenney/3D/car-kit/extracted/Models/GLB format/cone.glb`, `3D-optimized/kenney/car-kit/cone.glb`
+- ~~`3D/glb/City Pack-glb/Fence.glb`~~  →  `kenney/2D/mini-market/extracted/Models/GLB format/fence.glb`, `kenney/2D/fantasy-town-kit/extracted/Models/GLB format/fence.glb`, `kenney/2D/retro-fantasy-kit/extracted/Models/GLB format/fence.glb` (+9 more)
+- ~~`3D/glb/City Pack-glb/SUV.glb`~~  →  `kenney/3D/car-kit/extracted/Models/GLB format/suv.glb`, `3D-optimized/kenney/car-kit/suv.glb`
+- ~~`3D/glb/City Pack-glb/Tree.glb`~~  →  `kenney/2D/mini-arena/extracted/Models/GLB format/tree.glb`, `kenney/2D/fantasy-town-kit/extracted/Models/GLB format/tree.glb`, `kenney/3D/survival-kit/extracted/Models/GLB format/tree.glb` (+13 more)
+- ~~`3D/glb/City Pack-glb/Van.glb`~~  →  `kenney/3D/car-kit/extracted/Models/GLB format/van.glb`, `3D-optimized/kenney/car-kit/van.glb`
+- ~~`3D/glb/Exploded Card pack-glb/Coin.glb`~~  →  `kenney/2D/mini-dungeon/extracted/Models/GLB format/coin.glb`, `kenney/3D/prototype-kit/extracted/Models/GLB format/coin.glb`, `3D-optimized/kenney/mini-dungeon/coin.glb` (+1 more)
+- ~~`3D/glb/Furniture Kit-glb/Bathtub.glb`~~  →  `kenney/3D/furniture-kit/extracted/Models/GLTF format/bathtub.glb`, `3D-optimized/kenney/furniture-kit/bathtub.glb`
+- ~~`3D/glb/Furniture Kit-glb/Bear.glb`~~  →  `kenney/3D/furniture-kit/extracted/Models/GLTF format/bear.glb`, `3D-optimized/kenney/furniture-kit/bear.glb`
+- ~~`3D/glb/Furniture Kit-glb/Bench.glb`~~  →  `kenney/3D/holiday-kit/extracted/Models/GLB format/bench.glb`, `kenney/3D/graveyard-kit/extracted/Models/GLB format/bench.glb`, `kenney/3D/coaster-kit/extracted/Models/GLB format/bench.glb` (+5 more)
+- ~~`3D/glb/Furniture Kit-glb/Books.glb`~~  →  `kenney/3D/furniture-kit/extracted/Models/GLTF format/books.glb`, `3D-optimized/kenney/furniture-kit/books.glb`
+- ~~`3D/glb/Furniture Kit-glb/Doorway.glb`~~  →  `kenney/3D/furniture-kit/extracted/Models/GLTF format/doorway.glb`, `3D-optimized/kenney/furniture-kit/doorway.glb`
+- ~~`3D/glb/Furniture Kit-glb/Dryer.glb`~~  →  `kenney/3D/furniture-kit/extracted/Models/GLTF format/dryer.glb`, `3D-optimized/kenney/furniture-kit/dryer.glb`
+- ~~`3D/glb/Furniture Kit-glb/Laptop.glb`~~  →  `kenney/3D/furniture-kit/extracted/Models/GLTF format/laptop.glb`, `3D-optimized/kenney/furniture-kit/laptop.glb`
+- ~~`3D/glb/Furniture Kit-glb/Paneling.glb`~~  →  `kenney/3D/furniture-kit/extracted/Models/GLTF format/paneling.glb`, `3D-optimized/kenney/furniture-kit/paneling.glb`
+- ~~`3D/glb/Furniture Kit-glb/Radio.glb`~~  →  `kenney/3D/furniture-kit/extracted/Models/GLTF format/radio.glb`, `3D-optimized/kenney/furniture-kit/radio.glb`
+- ~~`3D/glb/Furniture Kit-glb/Speaker.glb`~~  →  `kenney/3D/furniture-kit/extracted/Models/GLTF format/speaker.glb`, `3D-optimized/kenney/furniture-kit/speaker.glb`
+- ~~`3D/glb/Furniture Kit-glb/Stairs.glb`~~  →  `kenney/2D/mini-arena/extracted/Models/GLB format/stairs.glb`, `kenney/2D/mini-dungeon/extracted/Models/GLB format/stairs.glb`, `kenney/3D/prototype-kit/extracted/Models/GLB format/stairs.glb` (+13 more)
+- ~~`3D/glb/Furniture Kit-glb/Toaster.glb`~~  →  `kenney/3D/furniture-kit/extracted/Models/GLTF format/toaster.glb`, `3D-optimized/kenney/furniture-kit/toaster.glb`
+- ~~`3D/glb/Furniture Kit-glb/Toilet.glb`~~  →  `kenney/3D/furniture-kit/extracted/Models/GLTF format/toilet.glb`, `3D-optimized/kenney/furniture-kit/toilet.glb`
+- ~~`3D/glb/Furniture Kit-glb/Trashcan.glb`~~  →  `kenney/3D/furniture-kit/extracted/Models/GLTF format/trashcan.glb`, `3D-optimized/kenney/furniture-kit/trashcan.glb`
+- ~~`3D/glb/Furniture Kit-glb/Washer.glb`~~  →  `kenney/3D/furniture-kit/extracted/Models/GLTF format/washer.glb`, `3D-optimized/kenney/furniture-kit/washer.glb`
+- ~~`3D/glb/Office Pack-glb/Chair.glb`~~  →  `kenney/3D/space-station-kit/extracted/Models/GLB format/chair.glb`, `kenney/3D/furniture-kit/extracted/Models/GLTF format/chair.glb`, `3D-optimized/kenney/furniture-kit/chair.glb` (+1 more)
+- ~~`3D/glb/Office Pack-glb/Computer.glb`~~  →  `kenney/3D/space-station-kit/extracted/Models/GLB format/computer.glb`, `3D-optimized/kenney/space-station-kit/computer.glb`
+- ~~`3D/glb/Office Pack-glb/Cup.glb`~~  →  `kenney/3D/food-kit/extracted/Models/GLB format/cup.glb`, `3D-optimized/kenney/food-kit/cup.glb`
+- ~~`3D/glb/Office Pack-glb/Desk.glb`~~  →  `kenney/3D/furniture-kit/extracted/Models/GLTF format/desk.glb`, `3D-optimized/kenney/furniture-kit/desk.glb`
+- ~~`3D/glb/Office Pack-glb/Doorway.glb`~~  →  `kenney/3D/furniture-kit/extracted/Models/GLTF format/doorway.glb`, `3D-optimized/kenney/furniture-kit/doorway.glb`
+- ~~`3D/glb/Office Pack-glb/Ladder.glb`~~  →  `kenney/2D/retro-fantasy-kit/extracted/Models/GLB format/ladder.glb`, `kenney/3D/prototype-kit/extracted/Models/GLB format/ladder.glb`, `kenney/3D/platformer-kit/extracted/Models/GLB format/ladder.glb` (+3 more)
+- ~~`3D/glb/Office Pack-glb/Mug.glb`~~  →  `kenney/3D/food-kit/extracted/Models/GLB format/mug.glb`, `3D-optimized/kenney/food-kit/mug.glb`
+- ~~`3D/glb/Office Pack-glb/Skateboard.glb`~~  →  `kenney/2D/mini-skate/extracted/Models/GLB format/skateboard.glb`, `3D-optimized/kenney/mini-skate/skateboard.glb`
+- ~~`3D/glb/Office Pack-glb/Soda.glb`~~  →  `kenney/3D/food-kit/extracted/Models/GLB format/soda.glb`, `3D-optimized/kenney/food-kit/soda.glb`
+- ~~`3D/glb/Office Pack-glb/Table.glb`~~  →  `kenney/3D/space-station-kit/extracted/Models/GLB format/table.glb`, `kenney/3D/furniture-kit/extracted/Models/GLTF format/table.glb`, `3D-optimized/kenney/furniture-kit/table.glb` (+1 more)
+- ~~`3D/glb/Office Pack-glb/Toilet.glb`~~  →  `kenney/3D/furniture-kit/extracted/Models/GLTF format/toilet.glb`, `3D-optimized/kenney/furniture-kit/toilet.glb`
+- ~~`3D/glb/Office Pack-glb/Trashcan.glb`~~  →  `kenney/3D/furniture-kit/extracted/Models/GLTF format/trashcan.glb`, `3D-optimized/kenney/furniture-kit/trashcan.glb`
+- ~~`3D/glb/Office Pack-glb/Trophy.glb`~~  →  `kenney/2D/mini-arena/extracted/Models/GLB format/trophy.glb`, `3D-optimized/kenney/mini-arena/trophy.glb`
+- ~~`3D/glb/Signs pack-glb/Grass.glb`~~  →  `kenney/2D/retro-urban-kit/extracted/Models/GLB format/grass.glb`, `kenney/3D/survival-kit/extracted/Models/GLB format/grass.glb`, `kenney/3D/pirate-kit/extracted/Models/GLB format/grass.glb` (+13 more)
+
+## Mixamo (7 stubs)
+
+- ~~`3D/fbx/mixamo/animations/_convert-3d-for-web/glb/idle.glb`~~  →  `3D-optimized/kenney/animated-characters-protagonists/idle.glb`, `3D-optimized/kenney/animated-characters-retro/idle.glb`, `3D-optimized/kenney/animated-characters-survivors/idle.glb`
+- ~~`3D/fbx/mixamo/animations/_convert-3d-for-web/glb/jump.glb`~~  →  `3D-optimized/kenney/animated-characters-protagonists/jump.glb`, `3D-optimized/kenney/animated-characters-retro/jump.glb`, `3D-optimized/kenney/animated-characters-survivors/jump.glb`
+- ~~`3D/fbx/mixamo/animations/bow.fbx`~~  →  `models/kaykit/adventurers/extracted/KayKit_Adventurers_2.0_FREE/Assets/fbx(unity)/bow.fbx`, `models/kaykit/adventurers/extracted/KayKit_Adventurers_2.0_FREE/Assets/fbx/bow.fbx`
+- ~~`3D/fbx/mixamo/animations/idle.fbx`~~  →  `kenney/2D/animated-characters-survivors/extracted/Animations/idle.fbx`, `kenney/2D/animated-characters-retro/extracted/Animations/idle.fbx`, `kenney/2D/animated-characters-protagonists/extracted/Animations/idle.fbx`
+- ~~`3D/fbx/mixamo/animations/jump.fbx`~~  →  `kenney/2D/animated-characters-survivors/extracted/Animations/jump.fbx`, `kenney/2D/animated-characters-retro/extracted/Animations/jump.fbx`, `kenney/2D/animated-characters-protagonists/extracted/Animations/jump.fbx`
+- ~~`3D/fbx/mixamo/characters/alien.fbx`~~  →  `kenney/3D/space-kit/extracted/Models/FBX format/alien.fbx`, `models/quaternius/ultimate-monsters/extracted/Ultimate Monsters/Blob/FBX/Alien.fbx`, `models/quaternius/ultimate-monsters/extracted/Ultimate Monsters/Big/FBX/Alien.fbx` (+2 more)
+- ~~`3D/fbx/mixamo/characters/ninja.fbx`~~  →  `models/quaternius/ultimate-monsters/extracted/Ultimate Monsters/Blob/FBX/Ninja.fbx`, `models/quaternius/ultimate-monsters/extracted/Ultimate Monsters/Big/FBX/Ninja.fbx`
+
+## Synty / Asset Store kit (4 stubs)
+
+- ~~`3D/glb/Weapons Pack In Case Of Zombies-glb/Arrow.glb`~~  →  `kenney/2D/watercraft-pack/extracted/Models/GLB format/arrow.glb`, `kenney/3D/platformer-kit/extracted/Models/GLB format/arrow.glb`, `kenney/3D/conveyor-kit/extracted/Models/GLB format/arrow.glb` (+3 more)
+- ~~`3D/glb/Weapons Pack In Case Of Zombies-glb/Bomb.glb`~~  →  `kenney/3D/platformer-kit/extracted/Models/GLB format/bomb.glb`, `3D-optimized/kenney/platformer-kit/bomb.glb`
+- ~~`3D/glb/Weapons Pack In Case Of Zombies-glb/Pipe.glb`~~  →  `kenney/3D/prototype-kit/extracted/Models/GLB format/pipe.glb`, `kenney/3D/space-station-kit/extracted/Models/GLB format/pipe.glb`, `3D-optimized/kenney/platformer-kit/pipe.glb` (+2 more)
+- ~~`3D/glb/Wood Frame Base Build Set-glb/Ladder.glb`~~  →  `kenney/2D/retro-fantasy-kit/extracted/Models/GLB format/ladder.glb`, `kenney/3D/prototype-kit/extracted/Models/GLB format/ladder.glb`, `kenney/3D/platformer-kit/extracted/Models/GLB format/ladder.glb` (+3 more)
+
+## Unknown — verify manually (2 stubs)
+
+- ~~`3D/obj/cat.fbx`~~  →  `models/quaternius/ultimate-monsters/extracted/Ultimate Monsters/Blob/FBX/Cat.fbx`, `models/quaternius/cube-world-aug-2023/extracted/Cube World - Aug 2023/Animals/FBX/Cat.fbx`
+- ~~`3D/obj/cat.obj`~~  →  `models/quaternius/ultimate-monsters/extracted/Ultimate Monsters/Blob/OBJ/Cat.obj`, `models/quaternius/cube-world-aug-2023/extracted/Cube World - Aug 2023/Environment/OBJ/Cat.obj`
+
+## Poly Pizza (mixed creators) (1 stubs)
+
+- ~~`3D/glb/weapons/Blade.glb`~~  →  `kenney/2D/fantasy-town-kit/extracted/Models/GLB format/blade.glb`, `3D-optimized/kenney/fantasy-town-kit/blade.glb`
+
+
+## Stubs with NO local replacement
+
+4287 stubs don't have a matching real file in the project. These need to be re-downloaded from the original source (see `STUBS_BY_VENDOR.md`).
+
+- **CMU Mocap** — 2548 stubs
+- **Mixamo** — 991 stubs
+- **Quaternius** — 311 stubs
+- **KayKit (Kay Lousberg)** — 268 stubs
+- **Synty / Asset Store kit** — 60 stubs
+- **Poly Pizza (mixed creators)** — 59 stubs
+- **Unknown — verify manually** — 34 stubs
+- **Premium Models (verify per-model)** — 7 stubs
+- **Sketchfab (per-model)** — 5 stubs
+- **Adobe Fuse (discontinued)** — 4 stubs

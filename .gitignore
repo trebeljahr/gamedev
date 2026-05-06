@@ -1,0 +1,122 @@
+# ---------------------------------------------------------------------------
+# 3d-assets: asset payloads are NOT tracked in git.
+# We re-download from vendors instead of storing in the repo (no LFS — see
+# the LFS recovery memory for context). Only metadata, docs, and the showcase
+# web app source live in the repo.
+# ---------------------------------------------------------------------------
+
+# --- Heavy asset top-level directories (never track) -----------------------
+/2D/
+/3D/
+/3D-optimized/
+/_mixamo-source/
+/_mocap-source/
+/glb-flat/
+/glb-optimized/
+/kenney/
+/misc-imports/
+/models/
+/sounds/
+/textures/
+/vector-tilesets/
+
+# --- Heavy/binary file extensions everywhere (safety net) ------------------
+# 3D models
+*.glb
+*.gltf
+*.fbx
+*.obj
+*.mtl
+*.blend
+*.blend1
+*.dae
+*.stl
+*.3ds
+*.ply
+*.usd
+*.usdz
+*.usdc
+*.abc
+
+# Mixamo / mocap
+*.bvh
+
+# Textures / images that tend to be heavy
+*.tga
+*.exr
+*.hdr
+*.ktx
+*.ktx2
+*.basis
+*.psd
+*.tif
+*.tiff
+# (Not blanket-ignoring .png/.jpg: small UI icons / docs may need them.
+#  Big texture trees are caught by the directory rules above.)
+
+# Audio
+*.wav
+*.aif
+*.aiff
+*.flac
+*.mp3
+*.ogg
+*.opus
+*.m4a
+
+# Video
+*.mp4
+*.mov
+*.webm
+*.mkv
+*.avi
+
+# Archives (vendor downloads land here)
+*.zip
+*.7z
+*.rar
+*.tar
+*.tar.gz
+*.tgz
+*.tar.bz2
+*.tbz2
+
+# --- Web/JS tooling --------------------------------------------------------
+node_modules/
+.next/
+out/
+dist/
+build/
+.turbo/
+.vercel/
+.cache/
+*.tsbuildinfo
+
+# --- OS / editor -----------------------------------------------------------
+.DS_Store
+._*
+*.swp
+*~
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+!.vscode/settings.json
+.idea/
+.cursor/
+
+# --- Python (asset processing scripts may exist) ---------------------------
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# --- Logs / env ------------------------------------------------------------
+*.log
+.env
+.env.local
+.env.*.local
+
+# --- Claude --------------------------------------------------------------
+.claude/settings.local.json
+.claude/worktrees/

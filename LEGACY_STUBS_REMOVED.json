@@ -1,0 +1,247 @@
+[
+  {
+    "folder": "3D/glb/Furniture Kit-glb",
+    "status": "stubs_only_deleted",
+    "stubs_deleted": 95,
+    "real_kept": 16,
+    "reason": "KayKit Furniture Kit (older) \u2192 models/kaykit/furniture-bits/"
+  },
+  {
+    "folder": "3D/glb/Office Pack-glb",
+    "status": "stubs_only_deleted",
+    "stubs_deleted": 94,
+    "real_kept": 17,
+    "reason": "KayKit Office Pack (older) \u2192 no direct equivalent; partly in furniture-bits"
+  },
+  {
+    "folder": "3D/glb/City Pack-glb",
+    "status": "stubs_only_deleted",
+    "stubs_deleted": 35,
+    "real_kept": 28,
+    "reason": "KayKit City Pack (older) \u2192 models/kaykit/city-builder-bits/"
+  },
+  {
+    "folder": "3D/glb/Race kit-glb",
+    "status": "stubs_only_deleted",
+    "stubs_deleted": 25,
+    "real_kept": 13,
+    "reason": "KayKit Race Kit (older) \u2192 not in current downloads"
+  },
+  {
+    "folder": "3D/glb/Exploded Card pack-glb",
+    "status": "stubs_only_deleted",
+    "stubs_deleted": 25,
+    "real_kept": 5,
+    "reason": "KayKit Exploded Card Pack (older)"
+  },
+  {
+    "folder": "3D/glb/Cosmetic Pack Two-glb",
+    "status": "folder_removed",
+    "stubs": 7,
+    "non_model_files": 0,
+    "reason": "KayKit Cosmetic Pack Two (older)"
+  },
+  {
+    "folder": "3D/glb/Signs pack-glb",
+    "status": "stubs_only_deleted",
+    "stubs_deleted": 1,
+    "real_kept": 12,
+    "reason": "KayKit Signs Pack (older)"
+  },
+  {
+    "folder": "3D/glb/Premium Models-glb",
+    "status": "stubs_only_deleted",
+    "stubs_deleted": 5,
+    "real_kept": 2,
+    "reason": "KayKit Premium Models (older)"
+  },
+  {
+    "folder": "3D/glb/Ultimate Interior Props Pack-glb",
+    "status": "stubs_only_deleted",
+    "stubs_deleted": 91,
+    "real_kept": 66,
+    "reason": "Quaternius (older) \u2192 models/quaternius/ultimate-house-interior-pack-june-2020/"
+  },
+  {
+    "folder": "3D/glb/Ultimate Interior Props Pack-glb-zsky",
+    "status": "stubs_only_deleted",
+    "stubs_deleted": 0,
+    "real_kept": 104,
+    "reason": "duplicate"
+  },
+  {
+    "folder": "3D/glb/100 Avatars R1-glb",
+    "status": "stubs_only_deleted",
+    "stubs_deleted": 59,
+    "real_kept": 12,
+    "reason": "Quaternius 100 Avatars R1 \u2192 partly in ultimate-modular-men/women"
+  },
+  {
+    "folder": "3D/glb/Animal Kit-glb",
+    "status": "stubs_only_deleted",
+    "stubs_deleted": 34,
+    "real_kept": 19,
+    "reason": "Quaternius Animal Kit (older) \u2192 spread across farm-animals + ultimate-animated-animals + cute-animated-monsters"
+  },
+  {
+    "folder": "3D/glb/Survival Kit-glb",
+    "status": "stubs_only_deleted",
+    "stubs_deleted": 24,
+    "real_kept": 34,
+    "reason": "Quaternius (older) \u2192 models/quaternius/survival-pack-sept-2020/"
+  },
+  {
+    "folder": "3D/glb/Platform Kit Revamped-glb",
+    "status": "stubs_only_deleted",
+    "stubs_deleted": 13,
+    "real_kept": 21,
+    "reason": "Quaternius (older) \u2192 models/quaternius/platformer-game-kit-dec-2021/"
+  },
+  {
+    "folder": "3D/glb/FPS pack-glb",
+    "status": "stubs_only_deleted",
+    "stubs_deleted": 13,
+    "real_kept": 1,
+    "reason": "Quaternius (older) \u2192 models/quaternius/animated-fps-guns-jun-2018/ or ultimate-gun-pack/"
+  },
+  {
+    "folder": "3D/glb/Small Platformer Kit-glb",
+    "status": "stubs_only_deleted",
+    "stubs_deleted": 8,
+    "real_kept": 21,
+    "reason": "Quaternius older \u2192 models/quaternius/platformer-pack-nov-2018/"
+  },
+  {
+    "folder": "3D/glb/Small Camping Bundle-glb",
+    "status": "folder_removed",
+    "stubs": 3,
+    "non_model_files": 0,
+    "reason": "Quaternius older"
+  },
+  {
+    "folder": "3D/glb/Coral Reef Kit-glb",
+    "status": "folder_removed",
+    "stubs": 6,
+    "non_model_files": 0,
+    "reason": "Quaternius older \u2014 content partly in cute-fish-pack-feb-2020"
+  },
+  {
+    "folder": "3D/glb/Crystal Pack-glb",
+    "status": "stubs_only_deleted",
+    "stubs_deleted": 1,
+    "real_kept": 27,
+    "reason": "Quaternius older \u2014 content in cube-world-aug-2023"
+  },
+  {
+    "folder": "3D/glb/Animated Animal Pack-glb",
+    "status": "stubs_only_deleted",
+    "stubs_deleted": 0,
+    "real_kept": 12,
+    "reason": "Quaternius older \u2192 ultimate-animated-animals-july-2021"
+  },
+  {
+    "folder": "3D/glb/Animated Dinosaur Bundle-glb",
+    "status": "stubs_only_deleted",
+    "stubs_deleted": 0,
+    "real_kept": 6,
+    "reason": "Quaternius older \u2192 dinosaur-animated-pack-dec-2018"
+  },
+  {
+    "folder": "3D/glb/Animated Enemies-glb",
+    "status": "stubs_only_deleted",
+    "stubs_deleted": 0,
+    "real_kept": 5,
+    "reason": "Quaternius older \u2192 easy-animated-enemy-pack-jan-2019 or animated-monster-pack"
+  },
+  {
+    "folder": "3D/glb/Cube World Kit-glb",
+    "status": "stubs_only_deleted",
+    "stubs_deleted": 0,
+    "real_kept": 85,
+    "reason": "Quaternius older \u2192 cube-world-aug-2023"
+  },
+  {
+    "folder": "3D/glb/Stylized Nature MegaKit-glb",
+    "status": "stubs_only_deleted",
+    "stubs_deleted": 0,
+    "real_kept": 68,
+    "reason": "Quaternius older \u2192 ultimate-stylized-nature-may-2022"
+  },
+  {
+    "folder": "3D/glb/Ultimate Food Pack-glb",
+    "status": "stubs_only_deleted",
+    "stubs_deleted": 0,
+    "real_kept": 50,
+    "reason": "Quaternius older \u2192 ultimate-food-pack-oct-2019"
+  },
+  {
+    "folder": "3D/glb/Ultimate Guns Pack-glb",
+    "status": "stubs_only_deleted",
+    "stubs_deleted": 0,
+    "real_kept": 25,
+    "reason": "Quaternius older \u2192 ultimate-gun-pack-july-2019"
+  },
+  {
+    "folder": "3D/glb/Ultimate Monsters Bundle-glb",
+    "status": "stubs_only_deleted",
+    "stubs_deleted": 0,
+    "real_kept": 39,
+    "reason": "Quaternius older \u2192 ultimate-monsters"
+  },
+  {
+    "folder": "3D/glb/Ultimate Modular Men Pack-glb",
+    "status": "stubs_only_deleted",
+    "stubs_deleted": 0,
+    "real_kept": 11,
+    "reason": "Quaternius older \u2192 ultimate-modular-men-feb-2022"
+  },
+  {
+    "folder": "3D/glb/Ultimate Modular Women Pack-glb",
+    "status": "stubs_only_deleted",
+    "stubs_deleted": 0,
+    "real_kept": 11,
+    "reason": "Quaternius older \u2192 ultimate-modular-women-april-2022"
+  },
+  {
+    "folder": "3D/glb/Ultimate Space Kit-glb",
+    "status": "stubs_only_deleted",
+    "stubs_deleted": 0,
+    "real_kept": 87,
+    "reason": "Quaternius older \u2192 ultimate-space-kit-march-2023"
+  },
+  {
+    "folder": "3D/glb/Scifi Turrets-glb",
+    "status": "stubs_only_deleted",
+    "stubs_deleted": 0,
+    "real_kept": 10,
+    "reason": "Quaternius older \u2192 turret-pack-march-2020"
+  },
+  {
+    "folder": "3D/fbx/Some Animals-fbx",
+    "status": "folder_removed",
+    "stubs": 6,
+    "non_model_files": 0,
+    "reason": "Quaternius older \u2014 superseded by farm-animals + ultimate-animated-animals"
+  },
+  {
+    "folder": "3D/fbx/Ultimate Space Kit",
+    "status": "folder_removed",
+    "stubs": 0,
+    "non_model_files": 1,
+    "reason": "Quaternius older \u2014 superseded by ultimate-space-kit-march-2023 (most already deduped)"
+  },
+  {
+    "folder": "3D/obj/Ultimate Space Kit",
+    "status": "folder_removed",
+    "stubs": 0,
+    "non_model_files": 92,
+    "reason": "Quaternius older OBJ \u2014 superseded by ultimate-space-kit-march-2023/OBJ"
+  },
+  {
+    "folder": "3D/gltf/Ultimate Space Kit",
+    "status": "folder_removed",
+    "stubs": 0,
+    "non_model_files": 1,
+    "reason": "Quaternius older glTF \u2014 superseded by ultimate-space-kit-march-2023/glTF"
+  }
+]
