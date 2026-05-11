@@ -209,13 +209,21 @@ function ActiveModels() {
         if (d < PACK_LOAD_BUFFER) near.push({ pl, d });
       }
       near.sort((a, b) => a.d - b.d);
+      // Pack-distance order for the outer loop (closest pack admits first,
+      // atomic on the MAX_MODELS cap). Within each pack, sort slots by per-
+      // slot distance to the camera so drip-fed mounts appear walking toward
+      // you, not in pack-grid index order from some far corner.
+      const slotDist2 = (s: Slot) => {
+        const dx = s.position[0] - cx;
+        const dz = s.position[2] - cz;
+        return dx * dx + dz * dz;
+      };
       const next: Slot[] = [];
       const nextIds = new Set<number>();
       for (const { pl } of near) {
-        // Atomic pack inclusion: skip a pack if adding it would bust the cap,
-        // unless nothing has been loaded yet (you're standing inside it).
         if (next.length > 0 && next.length + pl.slots.length > MAX_MODELS) break;
-        for (const s of pl.slots) {
+        const ordered = pl.slots.slice().sort((a, b) => slotDist2(a) - slotDist2(b));
+        for (const s of ordered) {
           next.push(s);
           nextIds.add(s.index);
         }
