@@ -31,27 +31,6 @@
 
 set -euo pipefail
 
-# Reattach to the controlling terminal when wrappers (pnpm, dotenvx)
-# piped our stdio. Both wrappers create fresh pipes for their child's
-# stdout/stderr instead of inheriting the user's terminal fds, so the
-# `-t` guard below would otherwise never trigger and rclone's
-# --progress dashboard would fall back to dumping a stats block every
-# 5s. /dev/tty is the process's controlling terminal, still reachable
-# from any child of a real shell session — re-exec with stdio bound
-# to it and the rest of the script sees a normal interactive run.
-# The re-exec replaces the bash process in place (same PID, same env),
-# so wrappers waiting on the original PID still see a clean exit.
-# Skipped when /dev/tty isn't writable (CI, headless cron, redirected
-# under `nohup`), where pipe-mode output is the only sane option.
-# Opt-out: SYNC_NO_REATTACH=1 (handy when redirecting to a file).
-if [ -z "${SYNC_REATTACHED:-}" ] \
-   && [ "${SYNC_NO_REATTACH:-}" != "1" ] \
-   && [ ! -t 1 ] \
-   && [ -w /dev/tty ]; then
-  export SYNC_REATTACHED=1
-  exec </dev/tty >/dev/tty 2>/dev/tty bash "$0" "$@"
-fi
-
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 ROOT="$( dirname "$SCRIPT_DIR" )"
 ASSETS_DIR="${ASSETS_DIR:-$ROOT/assets}"
@@ -125,7 +104,8 @@ exec docker run "${DOCKER_FLAGS[@]}" \
   --transfers 16 \
   --checkers 32 \
   --stats 5s \
-  --progress \
+  --stats-one-line \
+  --stats-one-line-date \
   --exclude '.DS_Store' \
   --exclude '._*' \
   --exclude '.git/**' \
