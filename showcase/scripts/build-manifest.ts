@@ -45,7 +45,14 @@ const RIGGED_HORIZ_RATIO = 0.5;
 // can ground the model on a base.
 type Size = [number, number, number];
 
-type Model = { name: string; file: string; label: string; size: Size; minY: number };
+type Model = {
+  name: string;
+  file: string;
+  label: string;
+  size: Size;
+  minY: number;
+  cxz: [number, number];
+};
 type Pack = {
   id: string;
   vendor: string;
@@ -94,9 +101,19 @@ function modelKey(file: string): string {
 
 // Bump when the bbox computation changes (clamp ratios, min dims, etc.) so
 // existing caches are invalidated automatically without rm/mv.
-const CACHE_VERSION = 2;
+const CACHE_VERSION = 3;
 
-type CacheEntry = { v: number; mtime: number; size: Size; minY: number };
+type CacheEntry = {
+  v: number;
+  mtime: number;
+  size: Size;
+  minY: number;
+  // Bbox centre in local model coords (X, Z). GLB origins aren't always at
+  // the model's XZ centre; storing this lets the renderer position the
+  // model so its bbox sits on the centre of its cell, with no overlap of
+  // neighbouring cells.
+  cxz: [number, number];
+};
 type Cache = Record<string, CacheEntry>;
 
 async function loadCache(): Promise<Cache> {
@@ -122,18 +139,27 @@ function clampRiggedHoriz(size: Size): Size {
 // visible base plate (some kenney pieces have one axis effectively zero).
 const MIN_DIM = 0.3;
 
-async function computeBbox(absPath: string, io: NodeIO): Promise<{ size: Size; minY: number }> {
+async function computeBbox(
+  absPath: string,
+  io: NodeIO,
+): Promise<{ size: Size; minY: number; cxz: [number, number] }> {
   const doc = await io.read(absPath);
   const root = doc.getRoot();
   const scene = root.getDefaultScene() || root.listScenes()[0];
-  if (!scene) return { size: [1, 1, 1], minY: 0 };
+  if (!scene) return { size: [1, 1, 1], minY: 0, cxz: [0, 0] };
   const b = getBounds(scene);
   const size: Size = [b.max[0] - b.min[0], b.max[1] - b.min[1], b.max[2] - b.min[2]];
   for (let i = 0; i < 3; i++) {
     if (!Number.isFinite(size[i]) || size[i] < MIN_DIM) size[i] = MIN_DIM;
   }
   const rigged = root.listSkins().length > 0;
-  return { size: rigged ? clampRiggedHoriz(size) : size, minY: b.min[1] };
+  // For rigged models we clamped the bind-pose width down to roughly idle-
+  // pose proportions; pretend the centre is at the rig root so the visible
+  // character lands in the middle of its cell.
+  const cxz: [number, number] = rigged
+    ? [0, 0]
+    : [(b.min[0] + b.max[0]) / 2, (b.min[2] + b.max[2]) / 2];
+  return { size: rigged ? clampRiggedHoriz(size) : size, minY: b.min[1], cxz };
 }
 
 /* -------- model discovery ------------------------------------------------ */
@@ -226,11 +252,23 @@ async function main() {
         } else {
           try {
             const bb = await computeBbox(a, io);
-            entry = { v: CACHE_VERSION, mtime, size: bb.size, minY: bb.minY };
+            entry = {
+              v: CACHE_VERSION,
+              mtime,
+              size: bb.size,
+              minY: bb.minY,
+              cxz: bb.cxz,
+            };
             stats.computed++;
           } catch (err) {
             stats.failed++;
-            entry = { v: CACHE_VERSION, mtime, size: [1, 1, 1], minY: 0 };
+            entry = {
+              v: CACHE_VERSION,
+              mtime,
+              size: [1, 1, 1],
+              minY: 0,
+              cxz: [0, 0],
+            };
             console.warn(`[manifest] bbox failed for ${relative(ASSETS_ROOT, a)}: ${(err as Error).message}`);
           }
         }
@@ -242,6 +280,7 @@ async function main() {
           label: humanize(name),
           size: entry.size,
           minY: entry.minY,
+          cxz: entry.cxz,
         });
       }
       models.sort((a, b) => a.label.localeCompare(b.label));

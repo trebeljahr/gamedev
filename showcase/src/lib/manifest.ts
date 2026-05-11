@@ -9,6 +9,10 @@ export type Model = {
   // pack cells without normalising every model into a fixed unit cube.
   size: [number, number, number]; // [width X, height Y, depth Z]
   minY: number; // bbox min Y — translate the model up by -minY to ground it
+  // Bbox centre in local model coords (X, Z). GLB origins aren't always at
+  // the model's XZ centre; the renderer uses this so each model sits in the
+  // middle of its cell rather than potentially overhanging into a neighbour.
+  cxz: [number, number];
 };
 export type Pack = {
   id: string;

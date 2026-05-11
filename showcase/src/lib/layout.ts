@@ -7,22 +7,26 @@
  * by scripts/build-manifest.ts). We then shelf-pack ("masonry") them into
  * pack blocks, and shelf-pack the pack blocks themselves into the world.
  *
- *   - Inside a pack: each model occupies size.x × size.z (plus CELL_PAD).
- *     Models tile along +X until the row reaches the pack's target width
- *     (roughly square; ~sqrt of summed footprint area). Each row's depth =
- *     max model.z in the row, so wide-but-shallow rows don't waste space.
+ *   - Inside a pack: each model is given a cell of (size.x + CELL_PAD) by
+ *     (size.z + CELL_PAD). Cells tile edge-to-edge along +X until the row
+ *     reaches the pack's target width (roughly square; ~sqrt of summed cell
+ *     area). The pad ensures adjacent *bases* (which are sized to the raw
+ *     model footprint) end up with CELL_PAD between them — no overlap.
  *   - Across packs: same shelf packing on the world. Each pack's footprint
  *     flows along +X until shelfX exceeds TARGET_WORLD_WIDTH, then wraps.
  *     Vendor changes always force a new shelf.
  *
- * Slot.position is the slot's NW corner (min X, 0, min Z). Slot.size is the
- * occupied XZ footprint (already padded). The model's gltf scene is centred
- * inside the cell by the renderer using `model.size` and `model.minY`.
+ * Slot.position is the cell's NW corner (min X, 0, min Z). Slot.cellSize is
+ * the cell's padded XZ footprint; the renderer centres model + base inside
+ * it. The base itself is sized to model.size (raw) so neighbours have a
+ * CELL_PAD-wide gap on each side.
  */
 import { manifest, type Pack, type Model } from "./manifest";
 
-// Gap padded around every model cell so adjacent bases don't touch.
-export const CELL_PAD = 0.5;
+// Gap added to every model cell. Adjacent cells touch edge-to-edge, but the
+// base inside each cell is only sized to the model's raw bbox — so two
+// neighbouring bases end up CELL_PAD apart (no overlap, visible gap).
+export const CELL_PAD = 1.0;
 // Gap between adjacent packs on a shelf.
 export const PACK_GAP = 4;
 // Gap between shelves on the world floor.
@@ -39,8 +43,9 @@ export type Slot = {
   model: Model;
   // NW corner of the cell on the world floor.
   position: [number, number, number];
-  // Padded XZ footprint of the cell — what the base plate matches.
-  size: [number, number];
+  // Cell footprint (includes CELL_PAD). The renderer centres the model and
+  // its (smaller) base inside this rect.
+  cellSize: [number, number];
   isPackHead: boolean;
 };
 
@@ -162,7 +167,7 @@ function computeSlots(): {
         pack: plan.pack,
         model: c.model,
         position: [x, 0, z],
-        size: [c.w, c.d],
+        cellSize: [c.w, c.d],
         isPackHead: i === 0,
       };
       slots.push(slot);

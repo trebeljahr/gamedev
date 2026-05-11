@@ -268,9 +268,10 @@ function Selector({
   return null;
 }
 
-/* Massive InstancedMesh of placeholder slabs — one per slot, sized to the
-   slot's real XZ footprint. Geometry is a 1×1×1 cube; per-instance scale
-   matrix stretches it to (size.x, BASE_THICKNESS, size.z). One drawcall. */
+/* Massive InstancedMesh of placeholder slabs — one per slot. Each instance
+   is centred on its cell and scaled to the *model's* raw XZ footprint, NOT
+   the padded cell size, so adjacent bases get a CELL_PAD gap between them.
+   Geometry is a unit cube; the per-instance scale matrix stretches it. */
 function Placeholders() {
   const ref = useRef<InstancedMesh>(null);
   const dummy = useMemo(() => new Object3D(), []);
@@ -279,11 +280,11 @@ function Placeholders() {
     for (let i = 0; i < allSlots.length; i++) {
       const slot = allSlots[i];
       const [x, _y, z] = slot.position;
-      const [w, d] = slot.size;
-      // slot.position is the cell's NW corner; centre the base on the cell.
-      dummy.position.set(x + w / 2, BASE_CENTER_Y, z + d / 2);
+      const [cw, cd] = slot.cellSize;
+      const [mw, _mh, md] = slot.model.size;
+      dummy.position.set(x + cw / 2, BASE_CENTER_Y, z + cd / 2);
       dummy.rotation.set(0, 0, 0);
-      dummy.scale.set(w, BASE_THICKNESS, d);
+      dummy.scale.set(mw, BASE_THICKNESS, md);
       dummy.updateMatrix();
       ref.current.setMatrixAt(i, dummy.matrix);
     }
@@ -420,13 +421,14 @@ function GroundedModel({
   onAnimInfo: (slotIndex: number, info: AnimationInfo | null) => void;
 }) {
   const [sx, _sy, sz] = slot.position;
-  const [w, d] = slot.size;
-  // Slot.position is the cell's NW corner; centre over the base. GLB origins
-  // are almost always at-or-near the model's XZ centre, so a cell-centre
-  // placement works for the vast majority of assets.
-  const cx = sx + w / 2;
-  const cz = sz + d / 2;
-  const yOffset = BASE_TOP_Y - (slot.model.minY ?? 0);
+  const [cw, cd] = slot.cellSize;
+  const [cxLocal, czLocal] = slot.model.cxz ?? [0, 0];
+  // Cell centre in world coords, then offset by the GLB's local bbox centre
+  // so the model's bbox lands centred on its base. Vast majority of GLBs are
+  // origin-centred and cxz is ~0, but some have off-origin meshes.
+  const x = sx + cw / 2 - cxLocal;
+  const z = sz + cd / 2 - czLocal;
+  const y = BASE_TOP_Y - (slot.model.minY ?? 0);
 
   const slotIndex = slot.index;
   const reportAnim = useCallback(
@@ -435,7 +437,7 @@ function GroundedModel({
   );
 
   return (
-    <group position={[cx, yOffset, cz]} userData={{ slot }}>
+    <group position={[x, y, z]} userData={{ slot }}>
       <Model
         url={slot.model.file}
         playAnimation={playAnimation}
