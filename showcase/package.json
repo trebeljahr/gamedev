@@ -15,6 +15,7 @@
     "@react-three/drei": "^10.0.0",
     "@react-three/fiber": "^9.0.0",
     "case": "^1.6.3",
+    "fflate": "^0.8.2",
     "leva": "^0.10.1",
     "next": "^15.0.3",
     "react": "^18.3.1",

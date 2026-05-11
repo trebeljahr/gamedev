@@ -4,10 +4,12 @@ import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import {
   Billboard,
   Environment,
+  Html,
   Text,
   PointerLockControls,
 } from "@react-three/drei";
 import {
+  type CSSProperties,
   Suspense,
   useCallback,
   useEffect,
@@ -469,19 +471,52 @@ function PackLabels() {
   return (
     <>
       {visible.map((pl) => (
-        <Billboard
+        <group
           key={pl.pack.id}
           position={[pl.bounds.minX - 1.5, 3.4, pl.bounds.minZ]}
-          follow
         >
-          <Text fontSize={0.55} color="#ffd84d" anchorX="left" anchorY="middle">
-            {`${pl.pack.vendor} · ${pl.pack.label} (${pl.pack.count})`}
-          </Text>
-        </Billboard>
+          <Billboard follow>
+            <Text fontSize={0.55} color="#ffd84d" anchorX="left" anchorY="middle">
+              {`${pl.pack.vendor} · ${pl.pack.label} (${pl.pack.count})`}
+            </Text>
+          </Billboard>
+          <Html
+            position={[0, -0.7, 0]}
+            transform
+            sprite
+            distanceFactor={6}
+            zIndexRange={[100, 0]}
+          >
+            <a
+              href={`/api/packs/${pl.pack.vendor}/${pl.pack.pack}/zip`}
+              download={`${pl.pack.vendor}_${pl.pack.pack}.zip`}
+              title="Esc to unlock cursor, then click"
+              style={downloadBtnStyle}
+            >
+              ⬇ download pack
+            </a>
+          </Html>
+        </group>
       ))}
     </>
   );
 }
+
+const downloadBtnStyle: CSSProperties = {
+  display: "inline-block",
+  padding: "4px 10px",
+  background: "#ffd84d",
+  color: "#1a1a20",
+  fontSize: 12,
+  fontWeight: 600,
+  borderRadius: 4,
+  textDecoration: "none",
+  whiteSpace: "nowrap",
+  fontFamily: "system-ui, -apple-system, sans-serif",
+  boxShadow: "0 2px 6px rgba(0,0,0,0.4)",
+  border: "1px solid rgba(0,0,0,0.2)",
+  userSelect: "none",
+};
 
 /* Big dark floor stretching across the world bounds. Sits just below y=0 to
    avoid z-fighting with anything placed on the y=0 plane. */
