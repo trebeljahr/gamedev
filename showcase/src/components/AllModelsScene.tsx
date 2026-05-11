@@ -4,12 +4,10 @@ import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import {
   Billboard,
   Environment,
-  Html,
   Text,
   PointerLockControls,
 } from "@react-three/drei";
 import {
-  type CSSProperties,
   Suspense,
   useCallback,
   useEffect,
@@ -247,17 +245,28 @@ function Selector({
     panelOpenRef.current = panelOpen;
   }, [panelOpen]);
 
-  // Hit-test what's under the crosshair. Returns a Slot if a model is hit
-  // within SELECT_RADIUS, else null. Shared by hover (each tick) and click.
-  function pickSlot(): Slot | null {
+  // Hit-test what's under the crosshair. Returns either a model slot
+  // (within SELECT_RADIUS) or a pack download link. Shared by hover (each
+  // tick, slot-only) and click (both kinds).
+  function pickHit(): CrosshairHit | null {
     const raycaster = raycasterRef.current!;
     raycaster.setFromCamera(centerRef.current!, camera);
     const hits = raycaster.intersectObjects(scene.children, true);
     for (const hit of hits) {
       let o: Object3D | null = hit.object;
       while (o) {
-        const slot = (o.userData as { slot?: Slot } | undefined)?.slot;
-        if (slot) return hit.distance <= SELECT_RADIUS ? slot : null;
+        const ud = o.userData as
+          | {
+              slot?: Slot;
+              download?: { href: string; name: string };
+            }
+          | undefined;
+        if (ud?.download)
+          return { kind: "download", href: ud.download.href, name: ud.download.name };
+        if (ud?.slot)
+          return hit.distance <= SELECT_RADIUS
+            ? { kind: "slot", slot: ud.slot }
+            : null;
         o = o.parent;
       }
     }
@@ -265,14 +274,17 @@ function Selector({
   }
 
   // Throttled hover detection — ~12Hz is enough for responsive cursor
-  // feedback without running a full-scene raycast every frame.
+  // feedback without running a full-scene raycast every frame. Only the
+  // magnifying-glass cursor for inspectable models is wired up; the download
+  // text doesn't get its own cursor change.
   useFrame((_, delta) => {
     sinceHoverCheck.current += delta;
     if (sinceHoverCheck.current < 0.08) return;
     sinceHoverCheck.current = 0;
     const el = gl.domElement;
     const locked = document.pointerLockElement === el;
-    const hovering = locked && !panelOpenRef.current && pickSlot() !== null;
+    const hovering =
+      locked && !panelOpenRef.current && pickHit()?.kind === "slot";
     if (hovering !== hoverRef.current) {
       hoverRef.current = hovering;
       onHoverChange?.(hovering);
@@ -289,25 +301,32 @@ function Selector({
         if (panelOpenRef.current) onPanelClose();
         return;
       }
-      const slot = pickSlot();
-      if (slot) {
-        onSelect(slot);
-        // drei's PointerLockControls listens for clicks on document and calls
-        // controls.lock() on every one. Without stopPropagation, our
-        // exitPointerLock in onSelect fires, then drei's document handler
-        // re-acquires the lock on the same click — the panel opens but the
-        // cursor stays trapped. Stopping the bubble keeps drei out.
-        e.stopPropagation();
+      const hit = pickHit();
+      if (!hit) return;
+      if (hit.kind === "download") {
+        triggerDownload(hit.href, hit.name);
+      } else {
+        onSelect(hit.slot);
       }
+      // drei's PointerLockControls listens for clicks on document and calls
+      // controls.lock() on every one. Without stopPropagation, our
+      // exitPointerLock in onSelect fires, then drei's document handler
+      // re-acquires the lock on the same click — the panel opens but the
+      // cursor stays trapped. Stopping the bubble keeps drei out.
+      e.stopPropagation();
     }
     el.addEventListener("click", onClick);
     return () => el.removeEventListener("click", onClick);
-    // pickSlot is stable via refs; we intentionally omit it to avoid re-binding
+    // pickHit is stable via refs; we intentionally omit it to avoid re-binding
     // the click listener every render.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [gl, onSelect, onPanelClose]);
   return null;
 }
+
+type CrosshairHit =
+  | { kind: "slot"; slot: Slot }
+  | { kind: "download"; href: string; name: string };
 
 /* Massive InstancedMesh of placeholder slabs — one per slot. Each instance
    is centred on its cell and scaled to the *model's* raw XZ footprint, NOT
@@ -509,53 +528,69 @@ function PackLabels() {
   });
   return (
     <>
-      {visible.map((pl) => (
-        <group
-          key={pl.pack.id}
-          position={[pl.bounds.minX - 1.5, 3.4, pl.bounds.minZ]}
-        >
-          <Billboard follow>
-            <Text fontSize={0.55} color="#ffd84d" anchorX="left" anchorY="middle">
-              {`${pl.pack.vendor} · ${pl.pack.label} (${pl.pack.count})`}
-            </Text>
-          </Billboard>
-          <Html
-            position={[0, -0.7, 0]}
-            transform
-            sprite
-            distanceFactor={6}
-            zIndexRange={[100, 0]}
+      {visible.map((pl) => {
+        const href = `/api/packs/${pl.pack.vendor}/${pl.pack.pack}/zip`;
+        const filename = `${pl.pack.vendor}_${pl.pack.pack}.zip`;
+        return (
+          <group
+            key={pl.pack.id}
+            position={[pl.bounds.minX - 1.5, 3.4, pl.bounds.minZ]}
           >
-            <a
-              href={`/api/packs/${pl.pack.vendor}/${pl.pack.pack}/zip`}
-              download={`${pl.pack.vendor}_${pl.pack.pack}.zip`}
-              title="Esc to unlock cursor, then click"
-              style={downloadBtnStyle}
-            >
-              ⬇ download pack
-            </a>
-          </Html>
-        </group>
-      ))}
+            <Billboard follow>
+              <Text
+                fontSize={0.55}
+                color="#ffd84d"
+                anchorX="left"
+                anchorY="middle"
+                outlineWidth={0.02}
+                outlineColor="#0a0a10"
+              >
+                {`${pl.pack.vendor} · ${pl.pack.label} (${pl.pack.count})`}
+              </Text>
+              <group
+                position={[0, -0.5, 0]}
+                userData={{ download: { href, name: filename } }}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  if (document.pointerLockElement) return;
+                  triggerDownload(href, filename);
+                }}
+                onPointerOver={(e) => {
+                  e.stopPropagation();
+                  document.body.style.cursor = "pointer";
+                }}
+                onPointerOut={(e) => {
+                  e.stopPropagation();
+                  document.body.style.cursor = "";
+                }}
+              >
+                <Text
+                  fontSize={0.3}
+                  color="#ffd84d"
+                  anchorX="left"
+                  anchorY="middle"
+                  outlineWidth={0.014}
+                  outlineColor="#0a0a10"
+                >
+                  [ download .zip ]
+                </Text>
+              </group>
+            </Billboard>
+          </group>
+        );
+      })}
     </>
   );
 }
 
-const downloadBtnStyle: CSSProperties = {
-  display: "inline-block",
-  padding: "4px 10px",
-  background: "#ffd84d",
-  color: "#1a1a20",
-  fontSize: 12,
-  fontWeight: 600,
-  borderRadius: 4,
-  textDecoration: "none",
-  whiteSpace: "nowrap",
-  fontFamily: "system-ui, -apple-system, sans-serif",
-  boxShadow: "0 2px 6px rgba(0,0,0,0.4)",
-  border: "1px solid rgba(0,0,0,0.2)",
-  userSelect: "none",
-};
+function triggerDownload(href: string, filename: string) {
+  const a = document.createElement("a");
+  a.href = href;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+}
 
 /* Big dark floor stretching across the world bounds. Sits just below y=0 to
    avoid z-fighting with anything placed on the y=0 plane. */
