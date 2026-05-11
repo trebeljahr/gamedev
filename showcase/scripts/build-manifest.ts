@@ -1,9 +1,14 @@
 /**
  * Walks the asset tree and emits src/lib/manifest.json.
  *
- * For KAYKIT packs the FBX→GLB conversion (conv3d) lost the external texture
- * atlases, so optimized .glb files render with broken 1×1 textures. We
- * prefer the original source files when they're present:
+ * Per-model the manifest carries a *real* bounding box (computed via
+ * @gltf-transform/core, cached by file mtime), so the /all view can place
+ * each model on a base sized to its actual XZ footprint rather than
+ * normalizing every model into a fixed unit cube.
+ *
+ * Source preference for kaykit packs is unchanged: the FBX→GLB conv3d
+ * pipeline lost the texture atlas, so we prefer the original gltf+bin+png
+ * tree on disk:
  *   1. models/<vendor>/<pack>/extracted/**\/Assets/gltf/*.gltf  (loose: gltf + bin + png)
  *   2. models/<vendor>/<pack>/extracted/**\/*.gltf.glb          (older kaykit, self-contained)
  *   3. fall back to glb-optimized/<vendor>/<pack>/**\/*.glb
@@ -13,22 +18,34 @@
  *   - optimized:    /glb/<rel-to-glb-optimized>
  */
 import { existsSync } from "node:fs";
-import { readdir, writeFile, mkdir } from "node:fs/promises";
+import { readdir, readFile, stat, writeFile, mkdir } from "node:fs/promises";
 import { dirname, join, relative } from "node:path";
+import { NodeIO, getBounds } from "@gltf-transform/core";
 
 const SHOWCASE_DIR = join(__dirname, "..");
 const ASSETS_ROOT = join(SHOWCASE_DIR, "..");
 const GLB_ROOT = join(ASSETS_ROOT, "glb-optimized");
 const MODELS_ROOT = join(ASSETS_ROOT, "models");
 const OUT = join(SHOWCASE_DIR, "src", "lib", "manifest.json");
+const BBOX_CACHE = join(SHOWCASE_DIR, ".manifest-bbox-cache.json");
 
 const SKIP_PACKS = new Set(["mixamo-library"]);
 
 // Vendors where we should prefer source files over the optimized GLBs.
-// conv3d's FBX→GLB conversion drops external texture atlases for these.
 const PREFER_SOURCE = new Set(["kaykit"]);
 
-type Model = { name: string; file: string; label: string };
+// getBounds returns the bind-pose (static) bbox. For rigged/skinned meshes
+// the bind pose puts arms out (T-pose) and sometimes up, so a 2m human
+// comes back with a 5×4.8m bbox. The runtime idle pose is much narrower.
+// When a Skin is present we clamp horizontal extents to RIGGED_HORIZ_RATIO ×
+// the height — a typical person at idle is ~0.4 wide for a 2m height.
+const RIGGED_HORIZ_RATIO = 0.5;
+
+// Per-model size we serialize: [width X, height Y, depth Z] + min Y so we
+// can ground the model on a base.
+type Size = [number, number, number];
+
+type Model = { name: string; file: string; label: string; size: Size; minY: number };
 type Pack = {
   id: string;
   vendor: string;
@@ -70,27 +87,71 @@ function modelKey(file: string): string {
   return file.replace(/\.gltf\.glb$/i, "").replace(/\.gltf$/i, "").replace(/\.glb$/i, "");
 }
 
-async function findSourceModels(vendor: string, pack: string): Promise<Model[]> {
+/* -------- bbox extraction + cache ----------------------------------------
+ * Cache shape: { [absPath]: { mtime, size, minY } }. Keyed by absolute path
+ * so files in models/ and glb-optimized/ have distinct entries; invalidated
+ * when the file's mtime no longer matches. */
+
+// Bump when the bbox computation changes (clamp ratios, min dims, etc.) so
+// existing caches are invalidated automatically without rm/mv.
+const CACHE_VERSION = 2;
+
+type CacheEntry = { v: number; mtime: number; size: Size; minY: number };
+type Cache = Record<string, CacheEntry>;
+
+async function loadCache(): Promise<Cache> {
+  if (!existsSync(BBOX_CACHE)) return {};
+  try {
+    return JSON.parse(await readFile(BBOX_CACHE, "utf8")) as Cache;
+  } catch {
+    return {};
+  }
+}
+
+async function saveCache(c: Cache): Promise<void> {
+  await writeFile(BBOX_CACHE, JSON.stringify(c));
+}
+
+function clampRiggedHoriz(size: Size): Size {
+  const [x, y, z] = size;
+  const maxHoriz = y * RIGGED_HORIZ_RATIO;
+  return [Math.min(x, maxHoriz), y, Math.min(z, maxHoriz)];
+}
+
+// Models flatter than this in any axis get bumped up so they still get a
+// visible base plate (some kenney pieces have one axis effectively zero).
+const MIN_DIM = 0.3;
+
+async function computeBbox(absPath: string, io: NodeIO): Promise<{ size: Size; minY: number }> {
+  const doc = await io.read(absPath);
+  const root = doc.getRoot();
+  const scene = root.getDefaultScene() || root.listScenes()[0];
+  if (!scene) return { size: [1, 1, 1], minY: 0 };
+  const b = getBounds(scene);
+  const size: Size = [b.max[0] - b.min[0], b.max[1] - b.min[1], b.max[2] - b.min[2]];
+  for (let i = 0; i < 3; i++) {
+    if (!Number.isFinite(size[i]) || size[i] < MIN_DIM) size[i] = MIN_DIM;
+  }
+  const rigged = root.listSkins().length > 0;
+  return { size: rigged ? clampRiggedHoriz(size) : size, minY: b.min[1] };
+}
+
+/* -------- model discovery ------------------------------------------------ */
+
+async function findSourceModels(vendor: string, pack: string): Promise<string[]> {
   const packDir = join(MODELS_ROOT, vendor, pack);
   if (!existsSync(packDir)) return [];
-
-  // Walk the entire source pack and grab .gltf / .gltf.glb / .glb.
-  // Skip animation subdirs (they're rig-only files, not standalone models).
   const all = await walk(packDir, (n) => {
     const lower = n.toLowerCase();
     return lower.endsWith(".gltf") || lower.endsWith(".glb");
   });
   const filtered = all.filter((p) => !/\/animations?\//i.test(p));
   if (filtered.length === 0) return [];
-
-  // Dedupe by basename, preferring .gltf (loose, has external map) >
-  // .gltf.glb > .glb. This lets us pick the kaykit-authored "Barbarian.glb"
-  // from Characters/gltf/ over the FBX-converted optimized one.
   const rank = (path: string) => {
     const lower = path.toLowerCase();
     if (lower.endsWith(".gltf")) return 0;
     if (lower.endsWith(".gltf.glb")) return 1;
-    return 2; // .glb
+    return 2;
   };
   const byName = new Map<string, string>();
   for (const abs of filtered) {
@@ -98,30 +159,16 @@ async function findSourceModels(vendor: string, pack: string): Promise<Model[]> 
     const cur = byName.get(key);
     if (!cur || rank(abs) < rank(cur)) byName.set(key, abs);
   }
-
-  return [...byName.values()]
-    .map((abs) => {
-      const name = modelKey(abs.split("/").pop()!);
-      return {
-        name,
-        file: urlFor(abs, MODELS_ROOT, "/raw"),
-        label: humanize(name),
-      };
-    })
-    .sort((a, b) => a.label.localeCompare(b.label));
+  return [...byName.values()];
 }
 
-async function findOptimizedModels(vendor: string, pack: string): Promise<Model[]> {
+async function findOptimizedModels(vendor: string, pack: string): Promise<string[]> {
   const packDir = join(GLB_ROOT, vendor, pack);
   if (!existsSync(packDir)) return [];
-  const glbs = await walk(packDir, (n) => n.toLowerCase().endsWith(".glb"));
-  return glbs
-    .map((abs) => {
-      const name = modelKey(abs.split("/").pop()!);
-      return { name, file: urlFor(abs, GLB_ROOT, "/glb"), label: humanize(name) };
-    })
-    .sort((a, b) => a.label.localeCompare(b.label));
+  return walk(packDir, (n) => n.toLowerCase().endsWith(".glb"));
 }
+
+/* -------- main ----------------------------------------------------------- */
 
 async function main() {
   if (!existsSync(GLB_ROOT)) {
@@ -129,13 +176,17 @@ async function main() {
     process.exit(1);
   }
 
+  const io = new NodeIO();
+  const cache = await loadCache();
+  const nextCache: Cache = {};
+
   const vendors = (await readdir(GLB_ROOT, { withFileTypes: true }))
     .filter((d) => d.isDirectory())
     .map((d) => d.name)
     .sort();
 
   const packs: Pack[] = [];
-  const stats = { source: 0, optimized: 0 };
+  const stats = { source: 0, optimized: 0, cacheHits: 0, computed: 0, failed: 0 };
 
   for (const vendor of vendors) {
     if (SKIP_PACKS.has(vendor)) continue;
@@ -146,16 +197,55 @@ async function main() {
       .sort();
 
     for (const pack of packDirs) {
-      let models: Model[] = [];
+      let abs: string[] = [];
       let usedSource = false;
+      let base = GLB_ROOT;
+      let urlPrefix = "/glb";
       if (PREFER_SOURCE.has(vendor)) {
-        models = await findSourceModels(vendor, pack);
-        usedSource = models.length > 0;
+        abs = await findSourceModels(vendor, pack);
+        if (abs.length > 0) {
+          usedSource = true;
+          base = MODELS_ROOT;
+          urlPrefix = "/raw";
+        }
       }
-      if (models.length === 0) {
-        models = await findOptimizedModels(vendor, pack);
+      if (abs.length === 0) {
+        abs = await findOptimizedModels(vendor, pack);
       }
-      if (models.length === 0) continue;
+      if (abs.length === 0) continue;
+
+      const models: Model[] = [];
+      for (const a of abs) {
+        const s = await stat(a);
+        const mtime = s.mtimeMs;
+        const cached = cache[a];
+        let entry: CacheEntry;
+        if (cached && cached.v === CACHE_VERSION && cached.mtime === mtime) {
+          entry = cached;
+          stats.cacheHits++;
+        } else {
+          try {
+            const bb = await computeBbox(a, io);
+            entry = { v: CACHE_VERSION, mtime, size: bb.size, minY: bb.minY };
+            stats.computed++;
+          } catch (err) {
+            stats.failed++;
+            entry = { v: CACHE_VERSION, mtime, size: [1, 1, 1], minY: 0 };
+            console.warn(`[manifest] bbox failed for ${relative(ASSETS_ROOT, a)}: ${(err as Error).message}`);
+          }
+        }
+        nextCache[a] = entry;
+        const name = modelKey(a.split("/").pop()!);
+        models.push({
+          name,
+          file: urlFor(a, base, urlPrefix),
+          label: humanize(name),
+          size: entry.size,
+          minY: entry.minY,
+        });
+      }
+      models.sort((a, b) => a.label.localeCompare(b.label));
+
       if (usedSource) stats.source += models.length;
       else stats.optimized += models.length;
 
@@ -174,9 +264,13 @@ async function main() {
 
   await mkdir(dirname(OUT), { recursive: true });
   await writeFile(OUT, JSON.stringify({ packs }, null, 2));
+  await saveCache(nextCache);
   const total = packs.reduce((n, p) => n + p.count, 0);
   console.log(
-    `[manifest] ${packs.length} packs · ${total} models (source: ${stats.source}, optimized: ${stats.optimized}) → ${relative(SHOWCASE_DIR, OUT)}`,
+    `[manifest] ${packs.length} packs · ${total} models ` +
+      `(source: ${stats.source}, optimized: ${stats.optimized}, ` +
+      `bbox: ${stats.cacheHits} cached / ${stats.computed} computed / ${stats.failed} failed) ` +
+      `→ ${relative(SHOWCASE_DIR, OUT)}`,
   );
 }
 

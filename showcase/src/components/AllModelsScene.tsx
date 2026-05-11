@@ -6,7 +6,6 @@ import {
   Environment,
   Text,
   PointerLockControls,
-  useGLTF,
 } from "@react-three/drei";
 import {
   Suspense,
@@ -17,7 +16,6 @@ import {
   useState,
 } from "react";
 import {
-  Box3,
   type InstancedMesh,
   Object3D,
   Raycaster,
@@ -43,21 +41,21 @@ const PACK_LABEL_BUFFER = 24; // labels appear slightly before models
 const MODEL_LABEL_RADIUS = 6; // small per-model name labels for close-by models
 const SELECT_RADIUS = 10; // max click-to-select reach
 const MAX_MODELS = 500; // safety cap on concurrent loaded models
-// Cap how many new GLBs mount per frame. GLTF parse + material lift + bbox
-// fit each run synchronously when a <FittedModel> first resolves; mounting
-// a whole 200+ model pack in one tick stalls the main thread for hundreds
-// of ms. Drip-feeding spreads the cost so the camera + animations stay at
-// 60fps. Unloads (when a pack leaves the buffer) happen all at once — those
-// are cheap.
+// Cap how many new GLBs mount per frame. GLTF parse + material lift run
+// synchronously when a GroundedModel's Suspense resolves; mounting a whole
+// 200+ model pack in one tick stalls the main thread for hundreds of ms.
+// Drip-feeding spreads the cost so the camera + animations stay at 60fps.
+// Unloads (when a pack leaves the buffer) happen all at once — those are
+// cheap.
 const MOUNT_PER_TICK = 6;
 const MOVE_SPEED = 12; // units/sec
 const WORLD_HEIGHT = 2;
 
-// Placeholder base: 1.2 × 0.2 × 1.2 box centered at y=0.5, so the top sits
-// at y=0.6. Models are grounded so their bottom rests slightly above this
-// (BASE_TOP_Y) to avoid base-intersection and z-fighting on the floor.
-const BASE_CENTER_Y = 0.5;
-const BASE_TOP_Y = BASE_CENTER_Y + 0.1 + 0.005; // top + small lift
+// Placeholder base: a thin slab whose XZ footprint matches each model's
+// actual bbox (from the manifest). Y is constant; X and Z scale per-instance.
+const BASE_THICKNESS = 0.2;
+const BASE_CENTER_Y = BASE_THICKNESS / 2;
+const BASE_TOP_Y = BASE_THICKNESS + 0.005; // top of base + tiny lift
 
 export function AllModelsScene() {
   const start = useMemo<[number, number, number]>(
@@ -249,17 +247,22 @@ function Selector({ onSelect }: { onSelect: (slot: Slot) => void }) {
   return null;
 }
 
-/* Massive InstancedMesh of placeholder cubes for every model. ONE drawcall. */
+/* Massive InstancedMesh of placeholder slabs — one per slot, sized to the
+   slot's real XZ footprint. Geometry is a 1×1×1 cube; per-instance scale
+   matrix stretches it to (size.x, BASE_THICKNESS, size.z). One drawcall. */
 function Placeholders() {
   const ref = useRef<InstancedMesh>(null);
   const dummy = useMemo(() => new Object3D(), []);
   useEffect(() => {
     if (!ref.current) return;
     for (let i = 0; i < allSlots.length; i++) {
-      const [x, _y, z] = allSlots[i].position;
-      dummy.position.set(x, BASE_CENTER_Y, z);
+      const slot = allSlots[i];
+      const [x, _y, z] = slot.position;
+      const [w, d] = slot.size;
+      // slot.position is the cell's NW corner; centre the base on the cell.
+      dummy.position.set(x + w / 2, BASE_CENTER_Y, z + d / 2);
       dummy.rotation.set(0, 0, 0);
-      dummy.scale.setScalar(1);
+      dummy.scale.set(w, BASE_THICKNESS, d);
       dummy.updateMatrix();
       ref.current.setMatrixAt(i, dummy.matrix);
     }
@@ -271,7 +274,7 @@ function Placeholders() {
       args={[undefined, undefined, allSlots.length]}
       frustumCulled={false}
     >
-      <boxGeometry args={[1.2, 0.2, 1.2]} />
+      <boxGeometry args={[1, 1, 1]} />
       <meshStandardMaterial color="#5d5d6b" roughness={0.7} />
     </instancedMesh>
   );
@@ -365,57 +368,55 @@ function ActiveModels({
     <>
       {mounted.map((slot) => (
         <Suspense key={slot.index} fallback={null}>
-          <group position={slot.position} userData={{ slot }}>
-            <FittedModel
-              url={slot.model.file}
-              slotIndex={slot.index}
-              playAnimation={
-                selectedIndex === slot.index ? playAnim ?? undefined : undefined
-              }
-              onAnimInfo={onAnimInfo}
-            />
-          </group>
+          <GroundedModel
+            slot={slot}
+            playAnimation={
+              selectedIndex === slot.index ? playAnim ?? undefined : undefined
+            }
+            onAnimInfo={onAnimInfo}
+          />
         </Suspense>
       ))}
     </>
   );
 }
 
-/* Auto-scales the model to fit inside a unit cell AND grounds it on top of
-   the placeholder base. Measurement happens synchronously off the loaded
-   gltf scene (via useGLTF) before the model mounts — no scale-then-shrink
-   flicker, no intersection with the base. */
-function FittedModel({
-  url,
-  slotIndex,
+/* Renders the model at its native GLB scale, centred over the slot's base
+   and grounded so the model's bottom sits at BASE_TOP_Y. Bbox metrics come
+   from the manifest (computed once at build-manifest time by
+   scripts/build-manifest.ts), so the model mounts at the right transform
+   from the first frame — no scale-then-shrink flicker.
+
+   The wrapping <group userData={{ slot }} /> is what the raycaster walks up
+   to figure out which slot was clicked. */
+function GroundedModel({
+  slot,
   playAnimation,
   onAnimInfo,
 }: {
-  url: string;
-  slotIndex: number;
+  slot: Slot;
   playAnimation?: string;
   onAnimInfo: (slotIndex: number, info: AnimationInfo | null) => void;
 }) {
-  const gltf = useGLTF(url) as unknown as { scene: Object3D };
+  const [sx, _sy, sz] = slot.position;
+  const [w, d] = slot.size;
+  // Slot.position is the cell's NW corner; centre over the base. GLB origins
+  // are almost always at-or-near the model's XZ centre, so a cell-centre
+  // placement works for the vast majority of assets.
+  const cx = sx + w / 2;
+  const cz = sz + d / 2;
+  const yOffset = BASE_TOP_Y - (slot.model.minY ?? 0);
 
-  const { scale, yOffset } = useMemo(() => {
-    gltf.scene.updateMatrixWorld(true);
-    const box = new Box3().setFromObject(gltf.scene);
-    const size = box.getSize(new Vector3());
-    const maxDim = Math.max(size.x, size.y, size.z) || 1;
-    const s = 1.8 / maxDim;
-    return { scale: s, yOffset: BASE_TOP_Y - box.min.y * s };
-  }, [gltf.scene]);
-
+  const slotIndex = slot.index;
   const reportAnim = useCallback(
     (info: AnimationInfo | null) => onAnimInfo(slotIndex, info),
     [onAnimInfo, slotIndex],
   );
 
   return (
-    <group position={[0, yOffset, 0]} scale={scale}>
+    <group position={[cx, yOffset, cz]} userData={{ slot }}>
       <Model
-        url={url}
+        url={slot.model.file}
         playAnimation={playAnimation}
         onAnimationsLoaded={reportAnim}
       />
