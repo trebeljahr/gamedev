@@ -14,6 +14,7 @@ import {
   type Material,
   type Mesh,
   MeshStandardMaterial,
+  type Side,
   type Texture,
   TextureLoader,
   SRGBColorSpace,
@@ -41,7 +42,7 @@ const FADE = 0.3;
  * the classic z-fighting "screen door" cross-hatch wherever two solids
  * meet on a shared plane.
  */
-function sideFor(src: { transparent?: boolean; alphaMap?: unknown; alphaTest?: number }): typeof FrontSide {
+function sideFor(src: { transparent?: boolean; alphaMap?: unknown; alphaTest?: number }): Side {
   const isCutout = !!src.alphaMap || (src.alphaTest ?? 0) > 0 || !!src.transparent;
   return isCutout ? DoubleSide : FrontSide;
 }

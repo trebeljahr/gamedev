@@ -236,9 +236,9 @@ function Selector({
 }) {
   const { camera, gl, scene } = useThree();
   const panelOpenRef = useRef(panelOpen);
-  const raycasterRef = useRef<Raycaster>(null);
+  const raycasterRef = useRef<Raycaster | null>(null);
   if (!raycasterRef.current) raycasterRef.current = new Raycaster();
-  const centerRef = useRef<Vector2>(null);
+  const centerRef = useRef<Vector2 | null>(null);
   if (!centerRef.current) centerRef.current = new Vector2(0, 0);
   const hoverRef = useRef(false);
   const sinceHoverCheck = useRef(0);
