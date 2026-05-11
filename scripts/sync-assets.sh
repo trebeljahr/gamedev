@@ -69,7 +69,10 @@ if [ -t 1 ]; then
   # Allocate a pseudo-TTY when stdout is a terminal so rclone --progress
   # can draw its in-place dashboard. -t alone (no -i) avoids docker
   # errors when stdin isn't attached (the common pnpm-wrapped case).
-  DOCKER_FLAGS+=(-t)
+  # TERM must be forwarded explicitly — without it the container falls
+  # back to dumb mode and rclone skips the cursor-position escapes that
+  # make the dashboard redraw in place.
+  DOCKER_FLAGS+=(-t -e "TERM=${TERM:-xterm-256color}")
 fi
 
 echo "[sync] starting rclone (assets/ → :s3:$R2_ASSETS_BUCKET)"
