@@ -6,6 +6,7 @@ import { useEffect, useMemo, useRef } from "react";
 import {
   type AnimationAction,
   type AnimationClip,
+  Box3,
   DoubleSide,
   type Group,
   type Material,
@@ -14,6 +15,7 @@ import {
   type Texture,
   TextureLoader,
   SRGBColorSpace,
+  Vector3,
 } from "three";
 
 export type AnimationInfo = {
@@ -149,6 +151,21 @@ export function Model({
   // Wrapping in an extra <group> can confuse PropertyBinding name lookups.
   const { actions, names, mixer } = useAnimations(gltf.animations, gltf.scene);
 
+  // Recenter the geometry's XZ centroid on the local origin. Some GLBs ship
+  // with a pivot that's nowhere near the geometry (one of the Quaternius
+  // burgers floats next to its pedestal because of this); without recentering,
+  // the spinning rotation orbits around that arbitrary pivot instead of doing
+  // a clean turntable. Y is left alone so callers can ground by bbox.min.y.
+  const xzOffset = useMemo(() => {
+    gltf.scene.updateMatrixWorld(true);
+    const box = new Box3().setFromObject(gltf.scene);
+    return new Vector3(
+      -(box.min.x + box.max.x) / 2,
+      0,
+      -(box.min.z + box.max.z) / 2,
+    );
+  }, [gltf.scene]);
+
   // Lift unlit materials → MeshStandardMaterial, force DoubleSide, disable
   // frustum culling on skinned meshes (Quaternius/Mixamo rigs routinely fail
   // the default culling check and vanish mid-animation).
@@ -199,7 +216,9 @@ export function Model({
   return (
     <>
       <group ref={ref}>
-        <primitive object={gltf.scene} />
+        <group position={xzOffset}>
+          <primitive object={gltf.scene} />
+        </group>
       </group>
       {externalTexUrl && (
         <ExternalTextureApplier url={externalTexUrl} scene={gltf.scene} />
