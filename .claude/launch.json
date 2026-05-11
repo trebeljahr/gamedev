@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "showcase",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["--dir", "showcase", "dev", "--port", "63684"],
+      "port": 63684
+    }
+  ]
+}
