@@ -1,0 +1,12 @@
+{
+  "name": "3d-assets",
+  "private": true,
+  "description": "Local 3d-assets library. The showcase web app lives under showcase/ and is wired up here as a pnpm workspace so `pnpm install` and `pnpm dev` from the repo root just work.",
+  "scripts": {
+    "dev": "pnpm --filter 3d-assets-showcase dev",
+    "build": "pnpm --filter 3d-assets-showcase build",
+    "start": "pnpm --filter 3d-assets-showcase start",
+    "lint": "pnpm --filter 3d-assets-showcase lint",
+    "manifest": "pnpm --filter 3d-assets-showcase manifest"
+  }
+}
