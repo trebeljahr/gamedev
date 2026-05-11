@@ -24,7 +24,7 @@ export function Model({ url }: { url: string }) {
 
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
-      if (e.key === " ") {
+      if (e.code === "KeyR") {
         stopped.current = !stopped.current;
         e.preventDefault();
       }
