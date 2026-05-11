@@ -155,7 +155,7 @@ export function Model({ url }: { url: string }) {
 
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
-      if (e.code === "KeyR") {
+      if (e.key === " ") {
         stopped.current = !stopped.current;
         e.preventDefault();
       }
