@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "cliVersion": "0.1.41",
+  "scaffoldedAt": "2026-05-11T20:03:15.296Z",
+  "name": "gamedev",
+  "domain": "gamedev.trebeljahr.com",
+  "description": "Assets Showcase for 3D and 2D",
+  "features": [
+    "s3"
+  ],
+  "mlServices": [],
+  "s3Provider": "existing",
+  "deployTarget": "existing",
+  "deploymentMode": "coolify",
+  "ports": {
+    "server": 3000,
+    "client": 3001
+  },
+  "surfaces": "client-only"
+}
