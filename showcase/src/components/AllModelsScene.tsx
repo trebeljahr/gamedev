@@ -86,10 +86,15 @@ export function AllModelsScene() {
   return (
     <>
       <Canvas
-        camera={{ position: start, fov: 60, near: 0.1, far: 800 }}
+        // near=0.5 (not 0.1) + logarithmicDepthBuffer drastically improves
+        // depth precision at distance. Without this, packs with many
+        // coplanar-ish surfaces (kenney 3d-road-tiles is the worst — every
+        // tile is a stack of road body / sidewalks / building bases at
+        // similar Y) z-fight in stripey bands once you're 50+ units away.
+        camera={{ position: start, fov: 60, near: 0.5, far: 800 }}
         shadows
         dpr={[1, 2]}
-        gl={{ antialias: true }}
+        gl={{ antialias: true, logarithmicDepthBuffer: true }}
       >
         <color attach="background" args={["#1a1a20"]} />
         <fog attach="fog" args={["#1a1a20", 80, 380]} />
