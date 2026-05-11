@@ -15,6 +15,9 @@ export default function HomePage() {
       <header className="app-header">
         <h1>3D Assets Showcase</h1>
         <div className="meta">
+          <Link href="/all" style={{ marginRight: 16, color: "#ffd84d" }}>
+            walk through everything →
+          </Link>
           {manifest.packs.length} packs · {totalModels.toLocaleString()} models
         </div>
       </header>

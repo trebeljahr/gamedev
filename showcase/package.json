@@ -6,9 +6,9 @@
     "manifest": "tsx scripts/build-manifest.ts",
     "predev": "pnpm manifest",
     "prebuild": "pnpm manifest",
-    "dev": "next dev",
+    "dev": "next dev --port 3679",
     "build": "next build",
-    "start": "next start",
+    "start": "next start --port 3679",
     "lint": "next lint"
   },
   "dependencies": {
