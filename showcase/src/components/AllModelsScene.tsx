@@ -10,11 +10,28 @@ import {
   Vector3,
 } from "three";
 import { Model } from "./Model";
-import { allSlots, worldBounds, type Slot } from "@/lib/layout";
+import {
+  allSlots,
+  distToPackXZ,
+  packLayouts,
+  worldBounds,
+  type PackLayout,
+  type Slot,
+} from "@/lib/layout";
 
-const LOAD_RADIUS = 28; // world units around the camera where GLBs get loaded
-const LABEL_RADIUS = 32;
-const MAX_ACTIVE = 96; // cap concurrent loaded models (perf safety net)
+// Load any pack whose nearest edge is within this distance of the camera.
+// Pack-coherent loading: when you approach a pack, the whole pack appears at
+// once instead of models popping in/out as you walk through it.
+const PACK_LOAD_BUFFER = 20;
+const PACK_LABEL_BUFFER = 24; // labels appear slightly before models
+const MAX_MODELS = 500; // safety cap on concurrent loaded models
+// Cap how many new GLBs mount per frame. GLTF parse + material lift + bbox
+// fit each run synchronously when a <FittedModel> first resolves; mounting
+// a whole 200+ model pack in one tick stalls the main thread for hundreds
+// of ms. Drip-feeding spreads the cost so the camera + animations stay at
+// 60fps. Unloads (when a pack leaves the buffer) happen all at once — those
+// are cheap.
+const MOUNT_PER_TICK = 6;
 const MOVE_SPEED = 12; // units/sec
 const WORLD_HEIGHT = 2;
 
@@ -167,39 +184,83 @@ function Placeholders() {
   );
 }
 
-/* Picks slots near the camera each tick; renders <Model> for the nearest N. */
+/* Picks whole packs near the camera each tick; renders every model in those
+   packs. Loading is pack-atomic — you never see a partial pack. Mounting is
+   drip-fed at MOUNT_PER_TICK to keep frames smooth as packs come into view. */
 function ActiveModels() {
   const { camera } = useThree();
-  const [active, setActive] = useState<Slot[]>([]);
-  const lastUpdate = useRef(0);
+  const [mounted, setMounted] = useState<Slot[]>([]);
+  const target = useRef<Slot[]>([]);
+  const targetIds = useRef<Set<number>>(new Set());
+  const sinceTargetScan = useRef(0);
 
   useFrame((_, delta) => {
-    // Throttle to ~4x/sec — distance check across thousands of slots is fine
-    // but re-rendering React every frame is wasteful.
-    lastUpdate.current += delta;
-    if (lastUpdate.current < 0.25) return;
-    lastUpdate.current = 0;
-    const cam = camera.position;
-    const near: Array<{ slot: Slot; d: number }> = [];
-    for (const slot of allSlots) {
-      const dx = slot.position[0] - cam.x;
-      const dz = slot.position[2] - cam.z;
-      const d = Math.hypot(dx, dz);
-      if (d < LOAD_RADIUS) near.push({ slot, d });
+    // Recompute the target set ~4x/sec — distance check across ~100 pack
+    // rects is cheap; doing it every frame would still be fine, but the
+    // throttle removes needless allocation.
+    sinceTargetScan.current += delta;
+    if (sinceTargetScan.current >= 0.25) {
+      sinceTargetScan.current = 0;
+      const cx = camera.position.x;
+      const cz = camera.position.z;
+      const near: Array<{ pl: PackLayout; d: number }> = [];
+      for (const pl of packLayouts) {
+        const d = distToPackXZ(cx, cz, pl.bounds);
+        if (d < PACK_LOAD_BUFFER) near.push({ pl, d });
+      }
+      near.sort((a, b) => a.d - b.d);
+      const next: Slot[] = [];
+      const nextIds = new Set<number>();
+      for (const { pl } of near) {
+        // Atomic pack inclusion: skip a pack if adding it would bust the cap,
+        // unless nothing has been loaded yet (you're standing inside it).
+        if (next.length > 0 && next.length + pl.slots.length > MAX_MODELS) break;
+        for (const s of pl.slots) {
+          next.push(s);
+          nextIds.add(s.index);
+        }
+        if (next.length >= MAX_MODELS) break;
+      }
+      target.current = next;
+      targetIds.current = nextIds;
     }
-    near.sort((a, b) => a.d - b.d);
-    const next = near.slice(0, MAX_ACTIVE).map((n) => n.slot);
-    setActive((prev) => {
-      if (prev.length !== next.length) return next;
-      for (let i = 0; i < prev.length; i++)
-        if (prev[i].index !== next[i].index) return next;
-      return prev;
+
+    // Reconcile `mounted` toward `target` every frame. Drops are immediate
+    // (cheap unmount); additions are rate-limited (each new <FittedModel>
+    // triggers a sync GLTF parse + scene traversal when its Suspense
+    // resolves — doing many in one frame stalls the main thread).
+    setMounted((prev) => {
+      const ids = targetIds.current;
+      // Fast path: already caught up. setMounted returning prev short-circuits
+      // React's render, so this runs every frame at near-zero cost.
+      if (prev.length === ids.size) {
+        let same = true;
+        for (let i = 0; i < prev.length; i++) {
+          if (!ids.has(prev[i].index)) {
+            same = false;
+            break;
+          }
+        }
+        if (same) return prev;
+      }
+      const kept = prev.filter((s) => ids.has(s.index));
+      const have = new Set<number>();
+      for (const s of kept) have.add(s.index);
+      let added = 0;
+      for (const s of target.current) {
+        if (added >= MOUNT_PER_TICK) break;
+        if (!have.has(s.index)) {
+          kept.push(s);
+          added++;
+        }
+      }
+      return kept;
     });
   });
 
   return (
     <>
-      {active.map((slot) => (
+      {mounted.map((slot) => (
         <Suspense key={slot.index} fallback={null}>
           <group position={slot.position}>
             <FittedModel url={slot.model.file} />
@@ -236,35 +297,35 @@ function FittedModel({ url }: { url: string }) {
   );
 }
 
-/* Sparse Text labels for pack heads near the camera (real Text is expensive). */
+/* Sparse Text labels for packs near the camera (real Text is expensive).
+   Visibility tracks pack-rect distance so labels appear consistently for big
+   and small packs. */
 function PackLabels() {
   const { camera } = useThree();
-  const [visible, setVisible] = useState<Slot[]>([]);
+  const [visible, setVisible] = useState<PackLayout[]>([]);
   const t = useRef(0);
   useFrame((_, delta) => {
     t.current += delta;
     if (t.current < 0.4) return;
     t.current = 0;
-    const cam = camera.position;
-    const list: Slot[] = [];
-    for (const slot of allSlots) {
-      if (!slot.isPackHead) continue;
-      const dx = slot.position[0] - cam.x;
-      const dz = slot.position[2] - cam.z;
-      if (Math.hypot(dx, dz) < LABEL_RADIUS) list.push(slot);
+    const cx = camera.position.x;
+    const cz = camera.position.z;
+    const list: PackLayout[] = [];
+    for (const pl of packLayouts) {
+      if (distToPackXZ(cx, cz, pl.bounds) < PACK_LABEL_BUFFER) list.push(pl);
     }
     setVisible(list);
   });
   return (
     <>
-      {visible.map((slot) => (
+      {visible.map((pl) => (
         <Billboard
-          key={slot.pack.id}
-          position={[slot.position[0] - 1.5, 2.6, slot.position[2]]}
+          key={pl.pack.id}
+          position={[pl.bounds.minX - 1.5, 2.6, pl.bounds.minZ]}
           follow
         >
           <Text fontSize={0.55} color="#ffd84d" anchorX="left" anchorY="middle">
-            {`${slot.pack.vendor} · ${slot.pack.label} (${slot.pack.count})`}
+            {`${pl.pack.vendor} · ${pl.pack.label} (${pl.pack.count})`}
           </Text>
         </Billboard>
       ))}

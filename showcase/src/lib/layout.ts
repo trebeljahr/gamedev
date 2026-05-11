@@ -28,6 +28,14 @@ export type Slot = {
   isPackHead: boolean;
 };
 
+export type PackBounds = { minX: number; maxX: number; minZ: number; maxZ: number };
+
+export type PackLayout = {
+  pack: Pack;
+  slots: Slot[];
+  bounds: PackBounds;
+};
+
 // Pack footprint: cols × rows that holds all models, biased to roughly square.
 function packDims(count: number): { cols: number; rows: number } {
   const cols = Math.max(1, Math.ceil(Math.sqrt(count)));
@@ -37,9 +45,11 @@ function packDims(count: number): { cols: number; rows: number } {
 
 function computeSlots(): {
   slots: Slot[];
+  packs: PackLayout[];
   bounds: { min: [number, number, number]; max: [number, number, number] };
 } {
   const slots: Slot[] = [];
+  const packs: PackLayout[] = [];
   // Shelf layout state — packs flow along +X, then wrap to a new shelf on +Z.
   let shelfX = 0;
   let shelfZ = 0;
@@ -66,22 +76,40 @@ function computeSlots(): {
     }
     prevVendor = pack.vendor;
 
+    const packSlots: Slot[] = [];
+    let pMinX = Infinity,
+      pMaxX = -Infinity,
+      pMinZ = Infinity,
+      pMaxZ = -Infinity;
+
     for (let i = 0; i < pack.count; i++) {
       const model = pack.models[i];
       const col = i % cols;
       const row = Math.floor(i / cols);
       const x = shelfX + col * CELL;
       const z = shelfZ + row * CELL;
-      slots.push({
+      const slot: Slot = {
         index: slots.length,
         pack,
         model,
         position: [x, 0, z],
         isPackHead: i === 0,
-      });
+      };
+      slots.push(slot);
+      packSlots.push(slot);
+      if (x < pMinX) pMinX = x;
+      if (x > pMaxX) pMaxX = x;
+      if (z < pMinZ) pMinZ = z;
+      if (z > pMaxZ) pMaxZ = z;
       if (x > maxX) maxX = x;
       if (z > maxZ) maxZ = z;
     }
+
+    packs.push({
+      pack,
+      slots: packSlots,
+      bounds: { minX: pMinX, maxX: pMaxX, minZ: pMinZ, maxZ: pMaxZ },
+    });
 
     shelfX += packW + PACK_GAP;
     if (packD > shelfDepth) shelfDepth = packD;
@@ -89,10 +117,20 @@ function computeSlots(): {
 
   return {
     slots,
+    packs,
     bounds: { min: [0, 0, 0], max: [maxX, 10, maxZ] },
   };
 }
 
 const _data = computeSlots();
 export const allSlots = _data.slots;
+export const packLayouts = _data.packs;
 export const worldBounds = _data.bounds;
+
+/* Distance from (cx,cz) to the nearest point of an axis-aligned rect. Zero
+   when the point is inside the rect. */
+export function distToPackXZ(cx: number, cz: number, b: PackBounds): number {
+  const dx = Math.max(0, b.minX - cx, cx - b.maxX);
+  const dz = Math.max(0, b.minZ - cz, cz - b.maxZ);
+  return Math.hypot(dx, dz);
+}
