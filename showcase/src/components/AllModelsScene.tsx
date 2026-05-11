@@ -65,29 +65,34 @@ export function AllModelsScene() {
   );
 }
 
-/* Camera walker — WASD + Space (up) / C (down), Shift toggles sprint.
+/* Camera walker — WASD + Space (up) / C (down), Shift held = sprint.
    Uses raw window listeners to avoid drei API drift. */
 function Walker({ onSprintChange }: { onSprintChange?: (s: boolean) => void }) {
   const { camera } = useThree();
   const keys = useRef<Record<string, boolean>>({});
-  const sprinting = useRef(false);
   useEffect(() => {
+    const setShift = (v: boolean) => {
+      if (keys.current.shift === v) return;
+      keys.current.shift = v;
+      onSprintChange?.(v);
+    };
     const down = (e: KeyboardEvent) => {
       if (e.key === "Shift") {
-        if (!e.repeat) {
-          sprinting.current = !sprinting.current;
-          onSprintChange?.(sprinting.current);
-        }
+        setShift(true);
         return;
       }
       keys.current[e.key.toLowerCase()] = true;
     };
     const up = (e: KeyboardEvent) => {
-      if (e.key === "Shift") return;
+      if (e.key === "Shift") {
+        setShift(false);
+        return;
+      }
       keys.current[e.key.toLowerCase()] = false;
     };
     const blur = () => {
       keys.current = {};
+      onSprintChange?.(false);
     };
     window.addEventListener("keydown", down);
     window.addEventListener("keyup", up);
@@ -128,7 +133,7 @@ function Walker({ onSprintChange }: { onSprintChange?: (s: boolean) => void }) {
     if (k.c) dy -= 1;
     const mag = Math.hypot(dx, dy, dz);
     if (mag > 0) {
-      const speed = sprinting.current ? MOVE_SPEED * 3 : MOVE_SPEED;
+      const speed = k.shift ? MOVE_SPEED * 3 : MOVE_SPEED;
       const s = (speed * delta) / mag;
       camera.position.x += dx * s;
       camera.position.y += dy * s;
