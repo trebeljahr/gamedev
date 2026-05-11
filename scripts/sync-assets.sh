@@ -102,7 +102,8 @@ exec docker run "${DOCKER_FLAGS[@]}" \
   --fast-list \
   --skip-links \
   --transfers 16 \
-  --checkers 32 \
+  --checkers 8 \
+  --low-level-retries 20 \
   --stats 5s \
   --stats-one-line \
   --stats-one-line-date \
