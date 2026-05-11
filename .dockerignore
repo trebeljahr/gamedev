@@ -1,0 +1,74 @@
+# Keep the build context lean. Anything large or rebuilt-in-image
+# stays out; the encrypted .env.production is explicitly re-included
+# because the Dockerfile decrypts it during `pnpm build`.
+
+# Deps + build output (rebuilt inside the image)
+node_modules
+**/node_modules
+.next
+**/.next
+out
+**/out
+dist
+**/dist
+build
+**/build
+.turbo
+**/.turbo
+
+# Local env / secrets
+.env
+.env.local
+.env.*.local
+.env.keys
+
+# VCS + editor + OS
+.git
+.gitignore
+.gitattributes
+.vscode
+.idea
+.DS_Store
+._*
+
+# Logs
+*.log
+
+# Asset payloads (gitignored already, but be defensive — these are
+# served from R2 in prod and the in-image manifest is rebuilt empty).
+/assets
+/2D
+/3D
+/3D-optimized
+/glb-flat
+/glb-optimized
+/glb-optimized-v2
+/models
+/sounds
+/textures
+/vector-tilesets
+*.glb
+*.gltf
+*.fbx
+*.zip
+*.7z
+*.tar.gz
+
+# Claude worktrees and local agent state
+.claude/worktrees
+.claude/settings.local.json
+.claude/scheduled_tasks.lock
+
+# Hatchkit + repo notes the runtime doesn't need
+MISSING_LINKS.md
+CREDITS.md
+STUBS_*.md
+STUBS_*.json
+STUB_REPLACEMENT_REPORT.json
+LEGACY_STUBS_REMOVED.json
+metadata.json
+
+# Re-include the encrypted production env — the Dockerfile decrypts it
+# in-memory at build time and ships it into the runtime image so
+# dotenvx can decrypt again at startup using the keychain-sourced key.
+!.env.production

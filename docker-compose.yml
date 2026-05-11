@@ -1,0 +1,31 @@
+# Coolify reads this file (build pack: dockercompose) to deploy
+# gamedev. The image is built by .github/workflows/deploy.yml and
+# pushed to GHCR; Coolify pulls it and (re)starts the service when
+# the workflow's deploy webhook fires.
+#
+# To pin a specific version, change the tag below from `latest` to a
+# git sha, semver tag, or whatever your release process uses.
+services:
+  app:
+    image: ghcr.io/trebeljahr/gamedev:latest
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      # Forwarded from Coolify's app env. dotenvx inside the
+      # container uses this to decrypt .env.production at runtime.
+      - DOTENV_PRIVATE_KEY_PRODUCTION
+    # node-based probe: the Next.js runtime image is node:slim, which
+    # ships neither wget nor curl. `node -e` is the universal fallback
+    # — exits 0 on <400 responses, 1 otherwise.
+    healthcheck:
+      test:
+        - "CMD"
+        - "node"
+        - "-e"
+        - "require('http').get('http://127.0.0.1:3000/',r=>{process.exit(r.statusCode<400?0:1)}).on('error',()=>process.exit(1))"
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
