@@ -604,16 +604,16 @@ function Crosshair({ hovering }: { hovering: boolean }) {
             cx="11.5"
             cy="11.5"
             r="6.5"
-            stroke="#ffd84d"
+            stroke="rgba(255,255,255,0.95)"
             strokeWidth="2"
-            fill="rgba(255,216,77,0.12)"
+            fill="rgba(255,255,255,0.08)"
           />
           <line
             x1="16.5"
             y1="16.5"
             x2="23"
             y2="23"
-            stroke="#ffd84d"
+            stroke="rgba(255,255,255,0.95)"
             strokeWidth="2.5"
             strokeLinecap="round"
           />
