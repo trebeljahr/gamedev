@@ -1,8 +1,9 @@
 packages:
   - showcase
-# pnpm 10+ requires explicit approval for install-time build scripts. Both
-# esbuild and sharp are dependencies pulled in transitively; we don't need
-# their native builds for the showcase to run.
-ignoredBuiltDependencies:
+# pnpm 11 errors out on ignored build scripts (strictDepBuilds=true by
+# default) instead of warning like pnpm 10 did. sharp is used by
+# next/image for runtime image optimization; esbuild is pulled in by the
+# toolchain. Approve them both so install completes cleanly.
+onlyBuiltDependencies:
   - esbuild
   - sharp
