@@ -87,6 +87,7 @@ echo "[sync] then per-file activity once transfers begin."
 #   - .gitattributes / .gitignore: shouldn't be there either
 exec docker run "${DOCKER_FLAGS[@]}" \
   -v "$ASSETS_DIR:/data:ro" \
+  -e RCLONE_CONFIG=/dev/null \
   -e RCLONE_S3_PROVIDER=Cloudflare \
   -e RCLONE_S3_ENDPOINT="$R2_ENDPOINT" \
   -e RCLONE_S3_ACCESS_KEY_ID="$R2_ACCESS_KEY_ID" \
