@@ -38,7 +38,6 @@ import { licenseForVendor } from "@/lib/license";
 // once instead of models popping in/out as you walk through it.
 const PACK_LOAD_BUFFER = 20;
 const PACK_LABEL_BUFFER = 24; // labels appear slightly before models
-const MODEL_LABEL_RADIUS = 6; // small per-model name labels for close-by models
 const SELECT_RADIUS = 10; // max click-to-select reach
 const MAX_MODELS = 500; // safety cap on concurrent loaded models
 // Cap how many new GLBs mount per frame. GLTF parse + material lift run
@@ -102,7 +101,11 @@ export function AllModelsScene() {
         />
         <hemisphereLight args={["#b1c1d4", "#2a2a32", 0.4]} />
         <Walker onSprintChange={setSprinting} />
-        <Selector onSelect={onSelect} />
+        <Selector
+          onSelect={onSelect}
+          panelOpen={!!selected}
+          onPanelClose={() => setSelected(null)}
+        />
         <Placeholders />
         <Floor />
         <ActiveModels
@@ -112,7 +115,6 @@ export function AllModelsScene() {
           playAnim={playAnim}
           onAnimInfo={setAnimInfo}
         />
-        <ModelLabels mounted={mounted} />
         <PackLabels />
         <Suspense fallback={null}>
           <Environment preset="warehouse" environmentIntensity={0.35} />
@@ -214,19 +216,38 @@ function Walker({ onSprintChange }: { onSprintChange?: (s: boolean) => void }) {
   return null;
 }
 
-/* Raycaster — on canvas click while pointer-locked, find the closest mounted
-   model in the crosshair within SELECT_RADIUS. Walks the parent chain on each
-   hit to find the wrapping <group userData={{ slot }} />. */
-function Selector({ onSelect }: { onSelect: (slot: Slot) => void }) {
+/* Raycaster + panel close handler — single canvas click listener.
+   While pointer is locked: raycast from crosshair, open panel if a model
+   in range is hit.
+   While pointer is NOT locked AND the panel is open: this click means the
+   user is reaching for the canvas (drei will re-acquire pointer lock on
+   the same event); close the panel so they're back in walking mode. */
+function Selector({
+  onSelect,
+  panelOpen,
+  onPanelClose,
+}: {
+  onSelect: (slot: Slot) => void;
+  panelOpen: boolean;
+  onPanelClose: () => void;
+}) {
   const { camera, gl, scene } = useThree();
+  const panelOpenRef = useRef(panelOpen);
+  useEffect(() => {
+    panelOpenRef.current = panelOpen;
+  }, [panelOpen]);
   useEffect(() => {
     const el = gl.domElement;
     const raycaster = new Raycaster();
     const center = new Vector2(0, 0);
     function onClick(e: MouseEvent) {
       if (e.button !== 0) return;
-      // Only act while pointer is locked (i.e. the user is "in walking mode").
-      if (document.pointerLockElement !== el) return;
+      if (document.pointerLockElement !== el) {
+        // Not yet locked: drei is about to re-lock on this click. If the panel
+        // was open, that means we're transitioning back to walking — close it.
+        if (panelOpenRef.current) onPanelClose();
+        return;
+      }
       raycaster.setFromCamera(center, camera);
       const hits = raycaster.intersectObjects(scene.children, true);
       for (const hit of hits) {
@@ -243,7 +264,7 @@ function Selector({ onSelect }: { onSelect: (slot: Slot) => void }) {
     }
     el.addEventListener("click", onClick);
     return () => el.removeEventListener("click", onClick);
-  }, [camera, gl, scene, onSelect]);
+  }, [camera, gl, scene, onSelect, onPanelClose]);
   return null;
 }
 
@@ -421,54 +442,6 @@ function GroundedModel({
         onAnimationsLoaded={reportAnim}
       />
     </group>
-  );
-}
-
-/* Per-mounted-model name labels for close models — quick at-a-glance ID
-   without needing to open the panel. */
-function ModelLabels({ mounted }: { mounted: Slot[] }) {
-  const { camera } = useThree();
-  const [visible, setVisible] = useState<Slot[]>([]);
-  const t = useRef(0);
-  useFrame((_, delta) => {
-    t.current += delta;
-    if (t.current < 0.2) return;
-    t.current = 0;
-    const cam = camera.position;
-    const list: Slot[] = [];
-    for (const slot of mounted) {
-      const dx = slot.position[0] - cam.x;
-      const dz = slot.position[2] - cam.z;
-      if (Math.hypot(dx, dz) < MODEL_LABEL_RADIUS) list.push(slot);
-    }
-    setVisible((prev) => {
-      if (prev.length !== list.length) return list;
-      for (let i = 0; i < prev.length; i++)
-        if (prev[i].index !== list[i].index) return list;
-      return prev;
-    });
-  });
-  return (
-    <>
-      {visible.map((slot) => (
-        <Billboard
-          key={slot.index}
-          position={[slot.position[0], 2.4, slot.position[2]]}
-          follow
-        >
-          <Text
-            fontSize={0.18}
-            color="white"
-            outlineWidth={0.012}
-            outlineColor="#0a0a0e"
-            anchorX="center"
-            anchorY="middle"
-          >
-            {slot.model.label}
-          </Text>
-        </Billboard>
-      ))}
-    </>
   );
 }
 
