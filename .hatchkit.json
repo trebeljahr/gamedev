@@ -1,7 +1,7 @@
 {
   "version": 1,
   "cliVersion": "0.1.42",
-  "scaffoldedAt": "2026-05-11T22:06:25.967Z",
+  "scaffoldedAt": "2026-05-11T22:59:01.818Z",
   "name": "gamedev",
   "domain": "gamedev.trebeljahr.com",
   "description": "Assets Showcase for 3D and 2D",
@@ -16,25 +16,5 @@
     "server": 3000,
     "client": 3001
   },
-  "surfaces": "client-only",
-  "s3Buckets": {
-    "assets": {
-      "name": "gamedev-assets",
-      "publicUrl": "https://assets.gamedev.trebeljahr.com",
-      "cors": {
-        "origins": [
-          "http://localhost:3000",
-          "http://localhost:3001",
-          "https://gamedev.trebeljahr.com"
-        ],
-        "methods": [
-          "GET",
-          "HEAD"
-        ],
-        "maxAgeSeconds": 86400
-      }
-    },
-    "tokenId": "1e18537d685eb90b8d7ff4780a7ccb21",
-    "accountId": "236db6b7957ea3079844334856fc162e"
-  }
+  "surfaces": "client-only"
 }
