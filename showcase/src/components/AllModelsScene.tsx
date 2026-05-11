@@ -1,28 +1,30 @@
 "use client";
 
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { Billboard, Environment, Text, PointerLockControls } from "@react-three/drei";
+import { Billboard, Environment, Text, PointerLockControls, useGLTF } from "@react-three/drei";
 import { Suspense, useEffect, useMemo, useRef, useState } from "react";
 import {
   Box3,
   type InstancedMesh,
-  Matrix4,
   Object3D,
   Vector3,
 } from "three";
 import { Model } from "./Model";
 import { allSlots, worldBounds, type Slot } from "@/lib/layout";
 
-const LOAD_RADIUS = 18; // models within this distance get real GLBs loaded
-const LABEL_RADIUS = 25; // pack headers labelled within this distance
-const MAX_ACTIVE = 64; // cap concurrent loaded models
+const LOAD_RADIUS = 28; // world units around the camera where GLBs get loaded
+const LABEL_RADIUS = 32;
+const MAX_ACTIVE = 96; // cap concurrent loaded models (perf safety net)
 const MOVE_SPEED = 12; // units/sec
 const WORLD_HEIGHT = 2;
 
+// Placeholder base: 1.2 × 0.2 × 1.2 box centered at y=0.5, so the top sits
+// at y=0.6. Models are grounded so their bottom rests slightly above this
+// (BASE_TOP_Y) to avoid base-intersection and z-fighting on the floor.
+const BASE_CENTER_Y = 0.5;
+const BASE_TOP_Y = BASE_CENTER_Y + 0.1 + 0.005; // top + small lift
+
 export function AllModelsScene() {
-  // Centre of the world so we can pick a sensible spawn point.
-  // Spawn slightly back and above the start of the grid so Rico can see
-  // models in front of him on first paint.
   const start = useMemo<[number, number, number]>(() => {
     return [6, WORLD_HEIGHT + 1.5, -4];
   }, []);
@@ -36,7 +38,7 @@ export function AllModelsScene() {
         gl={{ antialias: true }}
       >
         <color attach="background" args={["#1a1a20"]} />
-        <fog attach="fog" args={["#1a1a20", 60, 350]} />
+        <fog attach="fog" args={["#1a1a20", 80, 380]} />
         <ambientLight intensity={0.65} />
         <directionalLight
           position={[60, 80, 40]}
@@ -128,8 +130,8 @@ function Placeholders() {
   useEffect(() => {
     if (!ref.current) return;
     for (let i = 0; i < allSlots.length; i++) {
-      const [x, y, z] = allSlots[i].position;
-      dummy.position.set(x, y + 0.5, z);
+      const [x, _y, z] = allSlots[i].position;
+      dummy.position.set(x, BASE_CENTER_Y, z);
       dummy.rotation.set(0, 0, 0);
       dummy.scale.setScalar(1);
       dummy.updateMatrix();
@@ -152,8 +154,8 @@ function ActiveModels() {
   const lastUpdate = useRef(0);
 
   useFrame((_, delta) => {
-    // Throttle to ~4x/sec — distance check across 6.5K slots is fine but
-    // re-rendering React for every frame is wasteful.
+    // Throttle to ~4x/sec — distance check across thousands of slots is fine
+    // but re-rendering React every frame is wasteful.
     lastUpdate.current += delta;
     if (lastUpdate.current < 0.25) return;
     lastUpdate.current = 0;
@@ -168,7 +170,6 @@ function ActiveModels() {
     near.sort((a, b) => a.d - b.d);
     const next = near.slice(0, MAX_ACTIVE).map((n) => n.slot);
     setActive((prev) => {
-      // Stable comparison by index set
       if (prev.length !== next.length) return next;
       for (let i = 0; i < prev.length; i++)
         if (prev[i].index !== next[i].index) return next;
@@ -189,19 +190,27 @@ function ActiveModels() {
   );
 }
 
-/* Model auto-scaled to fit inside a unit cell so size variance doesn't break the grid. */
+/* Auto-scales the model to fit inside a unit cell AND grounds it on top of
+   the placeholder base. Measurement happens synchronously off the loaded
+   gltf scene (via useGLTF) before the model mounts — no scale-then-shrink
+   flicker, no intersection with the base. */
 function FittedModel({ url }: { url: string }) {
-  const group = useRef<import("three").Group>(null);
-  const [s, setS] = useState(1);
-  useEffect(() => {
-    if (!group.current) return;
-    const box = new Box3().setFromObject(group.current);
+  const gltf = useGLTF(url) as unknown as { scene: import("three").Object3D };
+
+  const { scale, yOffset } = useMemo(() => {
+    // Make sure world matrices on the loaded scene are current before measuring.
+    gltf.scene.updateMatrixWorld(true);
+    const box = new Box3().setFromObject(gltf.scene);
     const size = box.getSize(new Vector3());
     const maxDim = Math.max(size.x, size.y, size.z) || 1;
-    setS(1.8 / maxDim);
-  }, [url]);
+    const s = 1.8 / maxDim;
+    // After scaling, model's local-min-y lands at box.min.y * s. Lift it so
+    // the model's bottom sits at BASE_TOP_Y.
+    return { scale: s, yOffset: BASE_TOP_Y - box.min.y * s };
+  }, [gltf.scene]);
+
   return (
-    <group ref={group} scale={s}>
+    <group position={[0, yOffset, 0]} scale={scale}>
       <Model url={url} />
     </group>
   );
@@ -243,12 +252,17 @@ function PackLabels() {
   );
 }
 
-/* Big dark floor stretching across the world bounds. */
+/* Big dark floor stretching across the world bounds. Sits just below y=0 to
+   avoid z-fighting with anything placed on the y=0 plane. */
 function Floor() {
   const w = worldBounds.max[0] + 40;
   const d = worldBounds.max[2] + 40;
   return (
-    <mesh rotation={[-Math.PI / 2, 0, 0]} position={[w / 2 - 20, 0, d / 2 - 20]} receiveShadow>
+    <mesh
+      rotation={[-Math.PI / 2, 0, 0]}
+      position={[w / 2 - 20, -0.01, d / 2 - 20]}
+      receiveShadow
+    >
       <planeGeometry args={[w, d]} />
       <meshStandardMaterial color="#0e0e12" roughness={1} />
     </mesh>

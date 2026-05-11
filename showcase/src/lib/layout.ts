@@ -4,15 +4,21 @@
  * cells by world-distance from the camera.
  *
  * Layout:
- *   - One row per pack, models laid out along +X
- *   - Packs stacked along +Z (alphabetical by vendor/pack)
- *   - Vendor gap between vendors
+ *   - Each pack is a roughly square block (cols × rows). Big packs (200+ models)
+ *     fold into ~14-wide blocks instead of a 600-unit straight line.
+ *   - Packs flow along +X on a "shelf", wrapping to a new shelf on +Z when the
+ *     shelf exceeds TARGET_WORLD_WIDTH. This keeps the whole world ~square.
+ *   - Vendor changes force a shelf break and add VENDOR_GAP.
  */
 import { manifest, type Pack, type Model } from "./manifest";
 
-export const CELL = 3; // X spacing between models within a pack
-export const PACK_GAP = 5; // Z spacing between pack rows
-export const VENDOR_GAP = 10; // extra Z gap between vendors
+export const CELL = 3; // X/Z spacing between cells within a pack
+export const PACK_GAP = 4; // gap on +X between adjacent packs on a shelf
+export const SHELF_GAP = 6; // gap on +Z between shelves
+export const VENDOR_GAP = 12; // extra +Z gap between vendors
+
+// World tries to stay roughly this wide; shelves wrap when they exceed it.
+const TARGET_WORLD_WIDTH = 220;
 
 export type Slot = {
   index: number;
@@ -22,29 +28,68 @@ export type Slot = {
   isPackHead: boolean;
 };
 
+// Pack footprint: cols × rows that holds all models, biased to roughly square.
+function packDims(count: number): { cols: number; rows: number } {
+  const cols = Math.max(1, Math.ceil(Math.sqrt(count)));
+  const rows = Math.ceil(count / cols);
+  return { cols, rows };
+}
+
 function computeSlots(): {
   slots: Slot[];
   bounds: { min: [number, number, number]; max: [number, number, number] };
 } {
   const slots: Slot[] = [];
-  let z = 0;
+  // Shelf layout state — packs flow along +X, then wrap to a new shelf on +Z.
+  let shelfX = 0;
+  let shelfZ = 0;
+  let shelfDepth = 0;
   let prevVendor: string | null = null;
   let maxX = 0;
+  let maxZ = 0;
+
   for (const pack of manifest.packs) {
-    if (prevVendor !== null && pack.vendor !== prevVendor) z += VENDOR_GAP;
-    prevVendor = pack.vendor;
-    for (let i = 0; i < pack.models.length; i++) {
-      const model = pack.models[i];
-      const x = i * CELL;
-      const position: [number, number, number] = [x, 0, z];
-      slots.push({ index: slots.length, pack, model, position, isPackHead: i === 0 });
-      if (x > maxX) maxX = x;
+    const { cols, rows } = packDims(pack.count);
+    const packW = cols * CELL;
+    const packD = rows * CELL;
+
+    if (prevVendor !== null && pack.vendor !== prevVendor) {
+      // Vendor change → new shelf with extra spacing.
+      shelfZ += shelfDepth + VENDOR_GAP;
+      shelfX = 0;
+      shelfDepth = 0;
+    } else if (shelfX > 0 && shelfX + packW > TARGET_WORLD_WIDTH) {
+      // Same vendor, pack doesn't fit on this shelf — wrap.
+      shelfZ += shelfDepth + SHELF_GAP;
+      shelfX = 0;
+      shelfDepth = 0;
     }
-    z += PACK_GAP;
+    prevVendor = pack.vendor;
+
+    for (let i = 0; i < pack.count; i++) {
+      const model = pack.models[i];
+      const col = i % cols;
+      const row = Math.floor(i / cols);
+      const x = shelfX + col * CELL;
+      const z = shelfZ + row * CELL;
+      slots.push({
+        index: slots.length,
+        pack,
+        model,
+        position: [x, 0, z],
+        isPackHead: i === 0,
+      });
+      if (x > maxX) maxX = x;
+      if (z > maxZ) maxZ = z;
+    }
+
+    shelfX += packW + PACK_GAP;
+    if (packD > shelfDepth) shelfDepth = packD;
   }
+
   return {
     slots,
-    bounds: { min: [0, 0, 0], max: [maxX, 10, z] },
+    bounds: { min: [0, 0, 0], max: [maxX, 10, maxZ] },
   };
 }
 
