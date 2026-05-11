@@ -290,7 +290,15 @@ function Selector({
         return;
       }
       const slot = pickSlot();
-      if (slot) onSelect(slot);
+      if (slot) {
+        onSelect(slot);
+        // drei's PointerLockControls listens for clicks on document and calls
+        // controls.lock() on every one. Without stopPropagation, our
+        // exitPointerLock in onSelect fires, then drei's document handler
+        // re-acquires the lock on the same click — the panel opens but the
+        // cursor stays trapped. Stopping the bubble keeps drei out.
+        e.stopPropagation();
+      }
     }
     el.addEventListener("click", onClick);
     return () => el.removeEventListener("click", onClick);
