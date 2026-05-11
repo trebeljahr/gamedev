@@ -16,5 +16,25 @@
     "server": 3000,
     "client": 3001
   },
-  "surfaces": "client-only"
+  "surfaces": "client-only",
+  "s3Buckets": {
+    "assets": {
+      "name": "gamedev-assets",
+      "publicUrl": "https://assets.gamedev.trebeljahr.com",
+      "cors": {
+        "origins": [
+          "http://localhost:3000",
+          "http://localhost:3001",
+          "https://gamedev.trebeljahr.com"
+        ],
+        "methods": [
+          "GET",
+          "HEAD"
+        ],
+        "maxAgeSeconds": 86400
+      }
+    },
+    "tokenId": "1e18537d685eb90b8d7ff4780a7ccb21",
+    "accountId": "236db6b7957ea3079844334856fc162e"
+  }
 }
