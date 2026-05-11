@@ -1,15 +1,30 @@
 "use client";
 
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { Billboard, Environment, Text, PointerLockControls, useGLTF } from "@react-three/drei";
-import { Suspense, useEffect, useMemo, useRef, useState } from "react";
+import {
+  Billboard,
+  Environment,
+  Text,
+  PointerLockControls,
+  useGLTF,
+} from "@react-three/drei";
+import {
+  Suspense,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import {
   Box3,
   type InstancedMesh,
   Object3D,
+  Raycaster,
+  Vector2,
   Vector3,
 } from "three";
-import { Model } from "./Model";
+import { Model, type AnimationInfo } from "./Model";
 import {
   allSlots,
   distToPackXZ,
@@ -18,12 +33,15 @@ import {
   type PackLayout,
   type Slot,
 } from "@/lib/layout";
+import { licenseForVendor } from "@/lib/license";
 
 // Load any pack whose nearest edge is within this distance of the camera.
 // Pack-coherent loading: when you approach a pack, the whole pack appears at
 // once instead of models popping in/out as you walk through it.
 const PACK_LOAD_BUFFER = 20;
 const PACK_LABEL_BUFFER = 24; // labels appear slightly before models
+const MODEL_LABEL_RADIUS = 6; // small per-model name labels for close-by models
+const SELECT_RADIUS = 10; // max click-to-select reach
 const MAX_MODELS = 500; // safety cap on concurrent loaded models
 // Cap how many new GLBs mount per frame. GLTF parse + material lift + bbox
 // fit each run synchronously when a <FittedModel> first resolves; mounting
@@ -42,10 +60,29 @@ const BASE_CENTER_Y = 0.5;
 const BASE_TOP_Y = BASE_CENTER_Y + 0.1 + 0.005; // top + small lift
 
 export function AllModelsScene() {
-  const start = useMemo<[number, number, number]>(() => {
-    return [6, WORLD_HEIGHT + 1.5, -4];
-  }, []);
+  const start = useMemo<[number, number, number]>(
+    () => [6, WORLD_HEIGHT + 1.5, -4],
+    [],
+  );
   const [sprinting, setSprinting] = useState(false);
+  const [mounted, setMounted] = useState<Slot[]>([]);
+  const [selected, setSelected] = useState<Slot | null>(null);
+  const [playAnim, setPlayAnim] = useState<string | null>(null);
+  const animsRef = useRef<Map<number, AnimationInfo>>(new Map());
+
+  const onSelect = useCallback((slot: Slot) => {
+    setSelected(slot);
+    setPlayAnim(null);
+    document.exitPointerLock?.();
+  }, []);
+
+  const setAnimInfo = useCallback(
+    (slotIndex: number, info: AnimationInfo | null) => {
+      if (info) animsRef.current.set(slotIndex, info);
+      else animsRef.current.delete(slotIndex);
+    },
+    [],
+  );
 
   return (
     <>
@@ -67,9 +104,17 @@ export function AllModelsScene() {
         />
         <hemisphereLight args={["#b1c1d4", "#2a2a32", 0.4]} />
         <Walker onSprintChange={setSprinting} />
+        <Selector onSelect={onSelect} />
         <Placeholders />
         <Floor />
-        <ActiveModels />
+        <ActiveModels
+          mounted={mounted}
+          onMountedChange={setMounted}
+          selectedIndex={selected?.index ?? null}
+          playAnim={playAnim}
+          onAnimInfo={setAnimInfo}
+        />
+        <ModelLabels mounted={mounted} />
         <PackLabels />
         <Suspense fallback={null}>
           <Environment preset="warehouse" environmentIntensity={0.35} />
@@ -77,7 +122,16 @@ export function AllModelsScene() {
         <PointerLockControls />
       </Canvas>
       <Crosshair />
-      <HUD sprinting={sprinting} />
+      <HUD sprinting={sprinting} panelOpen={!!selected} />
+      {selected && (
+        <ModelPanel
+          slot={selected}
+          animationInfo={animsRef.current.get(selected.index) ?? null}
+          playAnim={playAnim}
+          onPlay={setPlayAnim}
+          onClose={() => setSelected(null)}
+        />
+      )}
     </>
   );
 }
@@ -126,7 +180,9 @@ function Walker({ onSprintChange }: { onSprintChange?: (s: boolean) => void }) {
     camera.getWorldDirection(fwd);
     fwd.y = 0;
     fwd.normalize();
-    const right = new Vector3().crossVectors(fwd, new Vector3(0, 1, 0)).normalize();
+    const right = new Vector3()
+      .crossVectors(fwd, new Vector3(0, 1, 0))
+      .normalize();
     let dx = 0,
       dy = 0,
       dz = 0;
@@ -160,6 +216,39 @@ function Walker({ onSprintChange }: { onSprintChange?: (s: boolean) => void }) {
   return null;
 }
 
+/* Raycaster — on canvas click while pointer-locked, find the closest mounted
+   model in the crosshair within SELECT_RADIUS. Walks the parent chain on each
+   hit to find the wrapping <group userData={{ slot }} />. */
+function Selector({ onSelect }: { onSelect: (slot: Slot) => void }) {
+  const { camera, gl, scene } = useThree();
+  useEffect(() => {
+    const el = gl.domElement;
+    const raycaster = new Raycaster();
+    const center = new Vector2(0, 0);
+    function onClick(e: MouseEvent) {
+      if (e.button !== 0) return;
+      // Only act while pointer is locked (i.e. the user is "in walking mode").
+      if (document.pointerLockElement !== el) return;
+      raycaster.setFromCamera(center, camera);
+      const hits = raycaster.intersectObjects(scene.children, true);
+      for (const hit of hits) {
+        let o: Object3D | null = hit.object;
+        while (o) {
+          const slot = (o.userData as { slot?: Slot } | undefined)?.slot;
+          if (slot) {
+            if (hit.distance <= SELECT_RADIUS) onSelect(slot);
+            return;
+          }
+          o = o.parent;
+        }
+      }
+    }
+    el.addEventListener("click", onClick);
+    return () => el.removeEventListener("click", onClick);
+  }, [camera, gl, scene, onSelect]);
+  return null;
+}
+
 /* Massive InstancedMesh of placeholder cubes for every model. ONE drawcall. */
 function Placeholders() {
   const ref = useRef<InstancedMesh>(null);
@@ -177,7 +266,11 @@ function Placeholders() {
     ref.current.instanceMatrix.needsUpdate = true;
   }, [dummy]);
   return (
-    <instancedMesh ref={ref} args={[undefined, undefined, allSlots.length]} frustumCulled={false}>
+    <instancedMesh
+      ref={ref}
+      args={[undefined, undefined, allSlots.length]}
+      frustumCulled={false}
+    >
       <boxGeometry args={[1.2, 0.2, 1.2]} />
       <meshStandardMaterial color="#5d5d6b" roughness={0.7} />
     </instancedMesh>
@@ -186,18 +279,28 @@ function Placeholders() {
 
 /* Picks whole packs near the camera each tick; renders every model in those
    packs. Loading is pack-atomic — you never see a partial pack. Mounting is
-   drip-fed at MOUNT_PER_TICK to keep frames smooth as packs come into view. */
-function ActiveModels() {
+   drip-fed at MOUNT_PER_TICK to keep frames smooth as packs come into view.
+   Each mounted model group carries userData.slot so the raycaster can find
+   which slot was clicked. */
+function ActiveModels({
+  mounted,
+  onMountedChange,
+  selectedIndex,
+  playAnim,
+  onAnimInfo,
+}: {
+  mounted: Slot[];
+  onMountedChange: (next: Slot[] | ((prev: Slot[]) => Slot[])) => void;
+  selectedIndex: number | null;
+  playAnim: string | null;
+  onAnimInfo: (slotIndex: number, info: AnimationInfo | null) => void;
+}) {
   const { camera } = useThree();
-  const [mounted, setMounted] = useState<Slot[]>([]);
   const target = useRef<Slot[]>([]);
   const targetIds = useRef<Set<number>>(new Set());
   const sinceTargetScan = useRef(0);
 
   useFrame((_, delta) => {
-    // Recompute the target set ~4x/sec — distance check across ~100 pack
-    // rects is cheap; doing it every frame would still be fine, but the
-    // throttle removes needless allocation.
     sinceTargetScan.current += delta;
     if (sinceTargetScan.current >= 0.25) {
       sinceTargetScan.current = 0;
@@ -209,10 +312,6 @@ function ActiveModels() {
         if (d < PACK_LOAD_BUFFER) near.push({ pl, d });
       }
       near.sort((a, b) => a.d - b.d);
-      // Pack-distance order for the outer loop (closest pack admits first,
-      // atomic on the MAX_MODELS cap). Within each pack, sort slots by per-
-      // slot distance to the camera so drip-fed mounts appear walking toward
-      // you, not in pack-grid index order from some far corner.
       const slotDist2 = (s: Slot) => {
         const dx = s.position[0] - cx;
         const dz = s.position[2] - cz;
@@ -222,7 +321,9 @@ function ActiveModels() {
       const nextIds = new Set<number>();
       for (const { pl } of near) {
         if (next.length > 0 && next.length + pl.slots.length > MAX_MODELS) break;
-        const ordered = pl.slots.slice().sort((a, b) => slotDist2(a) - slotDist2(b));
+        const ordered = pl.slots
+          .slice()
+          .sort((a, b) => slotDist2(a) - slotDist2(b));
         for (const s of ordered) {
           next.push(s);
           nextIds.add(s.index);
@@ -233,14 +334,8 @@ function ActiveModels() {
       targetIds.current = nextIds;
     }
 
-    // Reconcile `mounted` toward `target` every frame. Drops are immediate
-    // (cheap unmount); additions are rate-limited (each new <FittedModel>
-    // triggers a sync GLTF parse + scene traversal when its Suspense
-    // resolves — doing many in one frame stalls the main thread).
-    setMounted((prev) => {
+    onMountedChange((prev) => {
       const ids = targetIds.current;
-      // Fast path: already caught up. setMounted returning prev short-circuits
-      // React's render, so this runs every frame at near-zero cost.
       if (prev.length === ids.size) {
         let same = true;
         for (let i = 0; i < prev.length; i++) {
@@ -270,8 +365,15 @@ function ActiveModels() {
     <>
       {mounted.map((slot) => (
         <Suspense key={slot.index} fallback={null}>
-          <group position={slot.position}>
-            <FittedModel url={slot.model.file} />
+          <group position={slot.position} userData={{ slot }}>
+            <FittedModel
+              url={slot.model.file}
+              slotIndex={slot.index}
+              playAnimation={
+                selectedIndex === slot.index ? playAnim ?? undefined : undefined
+              }
+              onAnimInfo={onAnimInfo}
+            />
           </group>
         </Suspense>
       ))}
@@ -283,25 +385,89 @@ function ActiveModels() {
    the placeholder base. Measurement happens synchronously off the loaded
    gltf scene (via useGLTF) before the model mounts — no scale-then-shrink
    flicker, no intersection with the base. */
-function FittedModel({ url }: { url: string }) {
-  const gltf = useGLTF(url) as unknown as { scene: import("three").Object3D };
+function FittedModel({
+  url,
+  slotIndex,
+  playAnimation,
+  onAnimInfo,
+}: {
+  url: string;
+  slotIndex: number;
+  playAnimation?: string;
+  onAnimInfo: (slotIndex: number, info: AnimationInfo | null) => void;
+}) {
+  const gltf = useGLTF(url) as unknown as { scene: Object3D };
 
   const { scale, yOffset } = useMemo(() => {
-    // Make sure world matrices on the loaded scene are current before measuring.
     gltf.scene.updateMatrixWorld(true);
     const box = new Box3().setFromObject(gltf.scene);
     const size = box.getSize(new Vector3());
     const maxDim = Math.max(size.x, size.y, size.z) || 1;
     const s = 1.8 / maxDim;
-    // After scaling, model's local-min-y lands at box.min.y * s. Lift it so
-    // the model's bottom sits at BASE_TOP_Y.
     return { scale: s, yOffset: BASE_TOP_Y - box.min.y * s };
   }, [gltf.scene]);
 
+  const reportAnim = useCallback(
+    (info: AnimationInfo | null) => onAnimInfo(slotIndex, info),
+    [onAnimInfo, slotIndex],
+  );
+
   return (
     <group position={[0, yOffset, 0]} scale={scale}>
-      <Model url={url} />
+      <Model
+        url={url}
+        playAnimation={playAnimation}
+        onAnimationsLoaded={reportAnim}
+      />
     </group>
+  );
+}
+
+/* Per-mounted-model name labels for close models — quick at-a-glance ID
+   without needing to open the panel. */
+function ModelLabels({ mounted }: { mounted: Slot[] }) {
+  const { camera } = useThree();
+  const [visible, setVisible] = useState<Slot[]>([]);
+  const t = useRef(0);
+  useFrame((_, delta) => {
+    t.current += delta;
+    if (t.current < 0.2) return;
+    t.current = 0;
+    const cam = camera.position;
+    const list: Slot[] = [];
+    for (const slot of mounted) {
+      const dx = slot.position[0] - cam.x;
+      const dz = slot.position[2] - cam.z;
+      if (Math.hypot(dx, dz) < MODEL_LABEL_RADIUS) list.push(slot);
+    }
+    setVisible((prev) => {
+      if (prev.length !== list.length) return list;
+      for (let i = 0; i < prev.length; i++)
+        if (prev[i].index !== list[i].index) return list;
+      return prev;
+    });
+  });
+  return (
+    <>
+      {visible.map((slot) => (
+        <Billboard
+          key={slot.index}
+          position={[slot.position[0], 2.4, slot.position[2]]}
+          follow
+        >
+          <Text
+            fontSize={0.18}
+            color="white"
+            outlineWidth={0.012}
+            outlineColor="#0a0a0e"
+            anchorX="center"
+            anchorY="middle"
+          >
+            {slot.model.label}
+          </Text>
+        </Billboard>
+      ))}
+    </>
   );
 }
 
@@ -329,7 +495,7 @@ function PackLabels() {
       {visible.map((pl) => (
         <Billboard
           key={pl.pack.id}
-          position={[pl.bounds.minX - 1.5, 2.6, pl.bounds.minZ]}
+          position={[pl.bounds.minX - 1.5, 3.4, pl.bounds.minZ]}
           follow
         >
           <Text fontSize={0.55} color="#ffd84d" anchorX="left" anchorY="middle">
@@ -384,43 +550,264 @@ function Crosshair() {
 }
 
 /* On-screen help / status */
-function HUD({ sprinting }: { sprinting: boolean }) {
+function HUD({
+  sprinting,
+  panelOpen,
+}: {
+  sprinting: boolean;
+  panelOpen: boolean;
+}) {
   return (
-    <>
-      <div
+    <div
+      style={{
+        position: "fixed",
+        top: 12,
+        left: 12,
+        padding: "8px 12px",
+        background: "rgba(0,0,0,0.55)",
+        color: "white",
+        fontSize: 12,
+        borderRadius: 6,
+        pointerEvents: "auto",
+        lineHeight: 1.5,
+      }}
+    >
+      <strong>All models</strong> — {allSlots.length.toLocaleString()} slots
+      <br />
+      {panelOpen
+        ? "Click canvas to resume walking"
+        : "Click canvas to lock cursor"}
+      {" · "}WASD walk · Space up · C down ·{" "}
+      <span
         style={{
-          position: "fixed",
-          top: 12,
-          left: 12,
-          padding: "8px 12px",
-          background: "rgba(0,0,0,0.55)",
-          color: "white",
-          fontSize: 12,
-          borderRadius: 6,
-          pointerEvents: "auto",
-          lineHeight: 1.5,
+          color: sprinting ? "#1a1a20" : "white",
+          background: sprinting ? "#ffd84d" : "transparent",
+          padding: sprinting ? "0 4px" : 0,
+          borderRadius: 3,
+          fontWeight: sprinting ? 600 : 400,
         }}
       >
-        <strong>All models</strong> — {allSlots.length.toLocaleString()} slots
-        <br />
-        Click canvas to lock cursor · WASD walk · Space up · C down ·{" "}
-        <span
+        Shift sprint {sprinting ? "ON" : "off"}
+      </span>{" "}
+      · click a nearby model to inspect
+      <br />
+      <a href="/" style={{ color: "#ffd84d" }}>
+        ← back to packs
+      </a>
+    </div>
+  );
+}
+
+/* Right-side panel for the selected model. Plain HTML so it can capture
+   pointer events while pointer-lock is released. */
+function ModelPanel({
+  slot,
+  animationInfo,
+  playAnim,
+  onPlay,
+  onClose,
+}: {
+  slot: Slot;
+  animationInfo: AnimationInfo | null;
+  playAnim: string | null;
+  onPlay: (name: string | null) => void;
+  onClose: () => void;
+}) {
+  const license = licenseForVendor(slot.pack.vendor);
+  const downloadName = `${slot.model.label.replace(/\s+/g, "_")}.glb`;
+  return (
+    <div
+      style={{
+        position: "fixed",
+        top: 12,
+        right: 12,
+        bottom: 12,
+        width: 320,
+        background: "rgba(16,16,22,0.92)",
+        color: "white",
+        fontSize: 13,
+        borderRadius: 8,
+        boxShadow: "0 8px 32px rgba(0,0,0,0.5)",
+        border: "1px solid rgba(255,255,255,0.08)",
+        padding: 16,
+        display: "flex",
+        flexDirection: "column",
+        gap: 10,
+        overflowY: "auto",
+      }}
+    >
+      <div style={{ display: "flex", justifyContent: "space-between", gap: 8 }}>
+        <div style={{ minWidth: 0 }}>
+          <div
+            style={{
+              fontSize: 11,
+              color: "#8a8a93",
+              textTransform: "uppercase",
+              letterSpacing: 0.05,
+            }}
+          >
+            {slot.pack.vendor} · {slot.pack.label}
+          </div>
+          <div
+            style={{
+              fontWeight: 600,
+              fontSize: 16,
+              wordBreak: "break-word",
+            }}
+          >
+            {slot.model.label}
+          </div>
+        </div>
+        <button
+          type="button"
+          onClick={onClose}
+          aria-label="Close panel"
           style={{
-            color: sprinting ? "#1a1a20" : "white",
-            background: sprinting ? "#ffd84d" : "transparent",
-            padding: sprinting ? "0 4px" : 0,
-            borderRadius: 3,
-            fontWeight: sprinting ? 600 : 400,
+            background: "transparent",
+            color: "white",
+            border: "1px solid rgba(255,255,255,0.15)",
+            borderRadius: 4,
+            padding: "0 8px",
+            cursor: "pointer",
+            fontSize: 16,
+            lineHeight: 1.5,
+            height: 28,
           }}
         >
-          Shift sprint {sprinting ? "ON" : "off"}
-        </span>{" "}
-        · Esc to exit
-        <br />
-        <a href="/" style={{ color: "#ffd84d" }}>
-          ← back to packs
-        </a>
+          ×
+        </button>
       </div>
-    </>
+
+      <a
+        href={slot.model.file}
+        download={downloadName}
+        style={{
+          display: "inline-block",
+          textAlign: "center",
+          background: "#ffd84d",
+          color: "#1a1a20",
+          padding: "8px 12px",
+          borderRadius: 6,
+          fontWeight: 600,
+          textDecoration: "none",
+        }}
+      >
+        Download GLB
+      </a>
+
+      <div style={{ fontSize: 11, color: "#8a8a93" }}>
+        File:{" "}
+        <span style={{ color: "#cfcfd4", wordBreak: "break-all" }}>
+          {slot.model.file}
+        </span>
+      </div>
+
+      <Section title="License">
+        <div>
+          <strong>{license.license}</strong>
+          {license.licenseUrl && (
+            <>
+              {" "}·{" "}
+              <a
+                href={license.licenseUrl}
+                target="_blank"
+                rel="noreferrer"
+                style={{ color: "#ffd84d" }}
+              >
+                terms
+              </a>
+            </>
+          )}
+        </div>
+        <div style={{ fontSize: 11, color: "#8a8a93", marginTop: 4 }}>
+          {license.vendorUrl ? (
+            <>
+              by{" "}
+              <a
+                href={license.vendorUrl}
+                target="_blank"
+                rel="noreferrer"
+                style={{ color: "#cfcfd4" }}
+              >
+                {license.vendorLabel}
+              </a>
+            </>
+          ) : (
+            <>by {license.vendorLabel}</>
+          )}
+          {license.attributionRequired
+            ? " · attribution required"
+            : " · attribution optional"}
+        </div>
+        {license.notes && (
+          <div style={{ fontSize: 11, color: "#8a8a93", marginTop: 4 }}>
+            {license.notes}
+          </div>
+        )}
+      </Section>
+
+      <Section title="Animations">
+        {animationInfo && animationInfo.names.length > 0 ? (
+          <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
+            {animationInfo.names.map((name) => {
+              const active = playAnim === name;
+              return (
+                <button
+                  type="button"
+                  key={name}
+                  onClick={() => onPlay(active ? null : name)}
+                  style={{
+                    textAlign: "left",
+                    background: active
+                      ? "rgba(255,216,77,0.18)"
+                      : "rgba(255,255,255,0.04)",
+                    color: active ? "#ffd84d" : "white",
+                    border: `1px solid ${
+                      active ? "#ffd84d" : "rgba(255,255,255,0.08)"
+                    }`,
+                    borderRadius: 4,
+                    padding: "6px 8px",
+                    cursor: "pointer",
+                    fontFamily: "inherit",
+                    fontSize: 12,
+                  }}
+                >
+                  {name}
+                </button>
+              );
+            })}
+          </div>
+        ) : (
+          <div style={{ color: "#8a8a93", fontSize: 12 }}>
+            No animations in this model.
+          </div>
+        )}
+      </Section>
+    </div>
+  );
+}
+
+function Section({
+  title,
+  children,
+}: {
+  title: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div>
+      <div
+        style={{
+          fontSize: 10,
+          color: "#8a8a93",
+          textTransform: "uppercase",
+          letterSpacing: 0.08,
+          marginBottom: 6,
+        }}
+      >
+        {title}
+      </div>
+      {children}
+    </div>
   );
 }
