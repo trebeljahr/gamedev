@@ -63,7 +63,6 @@ export function AllModelsScene() {
     () => [6, WORLD_HEIGHT + 1.5, -4],
     [],
   );
-  const [sprinting, setSprinting] = useState(false);
   const [mounted, setMounted] = useState<Slot[]>([]);
   const [selected, setSelected] = useState<Slot | null>(null);
   const [hoverInspect, setHoverInspect] = useState(false);
@@ -103,7 +102,7 @@ export function AllModelsScene() {
           shadow-mapSize-height={1024}
         />
         <hemisphereLight args={["#b1c1d4", "#2a2a32", 0.4]} />
-        <Walker onSprintChange={setSprinting} />
+        <Walker />
         <Selector
           onSelect={onSelect}
           onHoverChange={setHoverInspect}
@@ -126,7 +125,7 @@ export function AllModelsScene() {
         <PointerLockControls />
       </Canvas>
       <Crosshair hovering={hoverInspect && !selected} />
-      <HUD sprinting={sprinting} panelOpen={!!selected} />
+      <HUD panelOpen={!!selected} />
       {selected && (
         <ModelPanel
           slot={selected}
@@ -142,32 +141,26 @@ export function AllModelsScene() {
 
 /* Camera walker — WASD + Space (up) / C (down), Shift held = sprint.
    Uses raw window listeners to avoid drei API drift. */
-function Walker({ onSprintChange }: { onSprintChange?: (s: boolean) => void }) {
+function Walker() {
   const { camera } = useThree();
   const keys = useRef<Record<string, boolean>>({});
   useEffect(() => {
-    const setShift = (v: boolean) => {
-      if (keys.current.shift === v) return;
-      keys.current.shift = v;
-      onSprintChange?.(v);
-    };
     const down = (e: KeyboardEvent) => {
       if (e.key === "Shift") {
-        setShift(true);
+        keys.current.shift = true;
         return;
       }
       keys.current[e.key.toLowerCase()] = true;
     };
     const up = (e: KeyboardEvent) => {
       if (e.key === "Shift") {
-        setShift(false);
+        keys.current.shift = false;
         return;
       }
       keys.current[e.key.toLowerCase()] = false;
     };
     const blur = () => {
       keys.current = {};
-      onSprintChange?.(false);
     };
     window.addEventListener("keydown", down);
     window.addEventListener("keyup", up);
@@ -177,7 +170,7 @@ function Walker({ onSprintChange }: { onSprintChange?: (s: boolean) => void }) {
       window.removeEventListener("keyup", up);
       window.removeEventListener("blur", blur);
     };
-  }, [onSprintChange]);
+  }, []);
   useFrame((_, delta) => {
     const k = keys.current;
     const fwd = new Vector3();
@@ -628,13 +621,7 @@ function Crosshair({ hovering }: { hovering: boolean }) {
 }
 
 /* On-screen help / status */
-function HUD({
-  sprinting,
-  panelOpen,
-}: {
-  sprinting: boolean;
-  panelOpen: boolean;
-}) {
+function HUD({ panelOpen }: { panelOpen: boolean }) {
   return (
     <div
       style={{
@@ -655,19 +642,8 @@ function HUD({
       {panelOpen
         ? "Click canvas to resume walking"
         : "Click canvas to lock cursor"}
-      {" · "}WASD walk · Space up · C down ·{" "}
-      <span
-        style={{
-          color: sprinting ? "#1a1a20" : "white",
-          background: sprinting ? "#ffd84d" : "transparent",
-          padding: sprinting ? "0 4px" : 0,
-          borderRadius: 3,
-          fontWeight: sprinting ? 600 : 400,
-        }}
-      >
-        Shift sprint {sprinting ? "ON" : "off"}
-      </span>{" "}
-      · click a nearby model to inspect
+      {" · "}WASD walk · Space up · C down · Shift sprint · click a nearby model
+      to inspect
       <br />
       <a href="/" style={{ color: "#ffd84d" }}>
         ← back to packs
