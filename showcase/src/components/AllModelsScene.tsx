@@ -66,6 +66,7 @@ export function AllModelsScene() {
   const [sprinting, setSprinting] = useState(false);
   const [mounted, setMounted] = useState<Slot[]>([]);
   const [selected, setSelected] = useState<Slot | null>(null);
+  const [hoverInspect, setHoverInspect] = useState(false);
   const [playAnim, setPlayAnim] = useState<string | null>(null);
   const animsRef = useRef<Map<number, AnimationInfo>>(new Map());
 
@@ -105,6 +106,7 @@ export function AllModelsScene() {
         <Walker onSprintChange={setSprinting} />
         <Selector
           onSelect={onSelect}
+          onHoverChange={setHoverInspect}
           panelOpen={!!selected}
           onPanelClose={() => setSelected(null)}
         />
@@ -123,7 +125,7 @@ export function AllModelsScene() {
         </Suspense>
         <PointerLockControls />
       </Canvas>
-      <Crosshair />
+      <Crosshair hovering={hoverInspect && !selected} />
       <HUD sprinting={sprinting} panelOpen={!!selected} />
       {selected && (
         <ModelPanel
@@ -226,22 +228,61 @@ function Walker({ onSprintChange }: { onSprintChange?: (s: boolean) => void }) {
    the same event); close the panel so they're back in walking mode. */
 function Selector({
   onSelect,
+  onHoverChange,
   panelOpen,
   onPanelClose,
 }: {
   onSelect: (slot: Slot) => void;
+  onHoverChange?: (hovering: boolean) => void;
   panelOpen: boolean;
   onPanelClose: () => void;
 }) {
   const { camera, gl, scene } = useThree();
   const panelOpenRef = useRef(panelOpen);
+  const raycasterRef = useRef<Raycaster>(null);
+  if (!raycasterRef.current) raycasterRef.current = new Raycaster();
+  const centerRef = useRef<Vector2>(null);
+  if (!centerRef.current) centerRef.current = new Vector2(0, 0);
+  const hoverRef = useRef(false);
+  const sinceHoverCheck = useRef(0);
   useEffect(() => {
     panelOpenRef.current = panelOpen;
   }, [panelOpen]);
+
+  // Hit-test what's under the crosshair. Returns a Slot if a model is hit
+  // within SELECT_RADIUS, else null. Shared by hover (each tick) and click.
+  function pickSlot(): Slot | null {
+    const raycaster = raycasterRef.current!;
+    raycaster.setFromCamera(centerRef.current!, camera);
+    const hits = raycaster.intersectObjects(scene.children, true);
+    for (const hit of hits) {
+      let o: Object3D | null = hit.object;
+      while (o) {
+        const slot = (o.userData as { slot?: Slot } | undefined)?.slot;
+        if (slot) return hit.distance <= SELECT_RADIUS ? slot : null;
+        o = o.parent;
+      }
+    }
+    return null;
+  }
+
+  // Throttled hover detection — ~12Hz is enough for responsive cursor
+  // feedback without running a full-scene raycast every frame.
+  useFrame((_, delta) => {
+    sinceHoverCheck.current += delta;
+    if (sinceHoverCheck.current < 0.08) return;
+    sinceHoverCheck.current = 0;
+    const el = gl.domElement;
+    const locked = document.pointerLockElement === el;
+    const hovering = locked && !panelOpenRef.current && pickSlot() !== null;
+    if (hovering !== hoverRef.current) {
+      hoverRef.current = hovering;
+      onHoverChange?.(hovering);
+    }
+  });
+
   useEffect(() => {
     const el = gl.domElement;
-    const raycaster = new Raycaster();
-    const center = new Vector2(0, 0);
     function onClick(e: MouseEvent) {
       if (e.button !== 0) return;
       if (document.pointerLockElement !== el) {
@@ -250,23 +291,15 @@ function Selector({
         if (panelOpenRef.current) onPanelClose();
         return;
       }
-      raycaster.setFromCamera(center, camera);
-      const hits = raycaster.intersectObjects(scene.children, true);
-      for (const hit of hits) {
-        let o: Object3D | null = hit.object;
-        while (o) {
-          const slot = (o.userData as { slot?: Slot } | undefined)?.slot;
-          if (slot) {
-            if (hit.distance <= SELECT_RADIUS) onSelect(slot);
-            return;
-          }
-          o = o.parent;
-        }
-      }
+      const slot = pickSlot();
+      if (slot) onSelect(slot);
     }
     el.addEventListener("click", onClick);
     return () => el.removeEventListener("click", onClick);
-  }, [camera, gl, scene, onSelect, onPanelClose]);
+    // pickSlot is stable via refs; we intentionally omit it to avoid re-binding
+    // the click listener every render.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [gl, onSelect, onPanelClose]);
   return null;
 }
 
@@ -535,8 +568,10 @@ function Floor() {
   );
 }
 
-/* Centered crosshair + click-to-lock overlay */
-function Crosshair() {
+/* Centered crosshair. When the crosshair sits over a clickable model within
+   SELECT_RADIUS, swap the plain dot for a yellow magnifying-glass icon so the
+   user knows clicking will open the inspector. */
+function Crosshair({ hovering }: { hovering: boolean }) {
   return (
     <div
       style={{
@@ -547,15 +582,47 @@ function Crosshair() {
         placeItems: "center",
       }}
     >
-      <div
-        style={{
-          width: 8,
-          height: 8,
-          borderRadius: 4,
-          border: "1px solid rgba(255,255,255,0.7)",
-          boxShadow: "0 0 4px rgba(0,0,0,0.5)",
-        }}
-      />
+      {hovering ? (
+        <svg
+          width="28"
+          height="28"
+          viewBox="0 0 28 28"
+          fill="none"
+          style={{
+            filter: "drop-shadow(0 1px 2px rgba(0,0,0,0.75))",
+            transition: "transform 90ms ease-out",
+            transform: "scale(1)",
+          }}
+        >
+          <circle
+            cx="11.5"
+            cy="11.5"
+            r="6.5"
+            stroke="#ffd84d"
+            strokeWidth="2"
+            fill="rgba(255,216,77,0.12)"
+          />
+          <line
+            x1="16.5"
+            y1="16.5"
+            x2="23"
+            y2="23"
+            stroke="#ffd84d"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : (
+        <div
+          style={{
+            width: 8,
+            height: 8,
+            borderRadius: 4,
+            border: "1px solid rgba(255,255,255,0.7)",
+            boxShadow: "0 0 4px rgba(0,0,0,0.5)",
+          }}
+        />
+      )}
     </div>
   );
 }
