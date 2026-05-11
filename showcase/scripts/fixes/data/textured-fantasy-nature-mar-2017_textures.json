@@ -1,0 +1,122 @@
+{
+  "BigBush": {
+    "materials": {
+      "Texture": [
+        "Tree7.png",
+        "Tree7.png.001"
+      ]
+    },
+    "all": [
+      "Tree7.png",
+      "Tree7.png.001"
+    ]
+  },
+  "BigTree": {
+    "materials": {
+      "Texture": [
+        "Tree7.png",
+        "Tree7.png.001"
+      ]
+    },
+    "all": [
+      "Tree7.png",
+      "Tree7.png.001"
+    ]
+  },
+  "BigTree2": {
+    "materials": {
+      "Texture": [
+        "Tree3.png"
+      ]
+    },
+    "all": [
+      "Tree3.png"
+    ]
+  },
+  "BiggerBush": {
+    "materials": {
+      "Texture": [
+        "Tree.png",
+        "Tree.png.001"
+      ]
+    },
+    "all": [
+      "Tree.png",
+      "Tree.png.001"
+    ]
+  },
+  "Bush": {
+    "materials": {
+      "Material": [
+        "Tree5.png",
+        "Tree5.png.001"
+      ]
+    },
+    "all": [
+      "Tree5.png",
+      "Tree5.png.001"
+    ]
+  },
+  "Flower": {
+    "materials": {
+      "Texture": [
+        "Flower.png"
+      ]
+    },
+    "all": [
+      "Flower.png"
+    ]
+  },
+  "Flower2": {
+    "materials": {
+      "Texture": [
+        "Flower.png"
+      ]
+    },
+    "all": [
+      "Flower.png"
+    ]
+  },
+  "Flower3": {
+    "materials": {
+      "Texture": [
+        "Flower.png",
+        "Flower.png.001"
+      ]
+    },
+    "all": [
+      "Flower.png",
+      "Flower.png.001"
+    ]
+  },
+  "Mushroom": {
+    "materials": {
+      "Mushroom": [
+        "Mushroom.png"
+      ]
+    },
+    "all": [
+      "Mushroom.png"
+    ]
+  },
+  "SmallTree": {
+    "materials": {
+      "Texture": [
+        "Tree7.png"
+      ]
+    },
+    "all": [
+      "Tree7.png"
+    ]
+  },
+  "Tree": {
+    "materials": {
+      "Texture": [
+        "Tree.png"
+      ]
+    },
+    "all": [
+      "Tree.png"
+    ]
+  }
+}

@@ -1,0 +1,618 @@
+{
+  "1Story_Base": {
+    "materials": {
+      "Texture": [
+        "Texture_Light.png",
+        "Texture.png",
+        "Texture.png.001"
+      ]
+    },
+    "all": [
+      "Texture_Light.png",
+      "Texture.png",
+      "Texture.png.001"
+    ]
+  },
+  "1Story_GableRoof_Base": {
+    "materials": {
+      "Texture": [
+        "Texture_Light.png",
+        "Texture.png",
+        "Texture.png.001"
+      ]
+    },
+    "all": [
+      "Texture_Light.png",
+      "Texture.png",
+      "Texture.png.001"
+    ]
+  },
+  "1Story_RoundRoof_Base": {
+    "materials": {
+      "Texture": [
+        "Texture_Light.png",
+        "Texture.png",
+        "Texture.png.001"
+      ]
+    },
+    "all": [
+      "Texture_Light.png",
+      "Texture.png",
+      "Texture.png.001"
+    ]
+  },
+  "1Story_Sign_Base": {
+    "materials": {
+      "Texture": [
+        "Texture_Light.png",
+        "Texture.png",
+        "Texture.png.001"
+      ]
+    },
+    "all": [
+      "Texture_Light.png",
+      "Texture.png",
+      "Texture.png.001"
+    ]
+  },
+  "2Story_Base": {
+    "materials": {
+      "Texture": [
+        "Texture_Light.png",
+        "Texture.png",
+        "Texture.png.001"
+      ]
+    },
+    "all": [
+      "Texture_Light.png",
+      "Texture.png",
+      "Texture.png.001"
+    ]
+  },
+  "2Story_Center_Base": {
+    "materials": {
+      "Texture": [
+        "Texture_Light.png",
+        "Texture.png",
+        "Texture.png.001"
+      ]
+    },
+    "all": [
+      "Texture_Light.png",
+      "Texture.png",
+      "Texture.png.001"
+    ]
+  },
+  "2Story_Columns_Base": {
+    "materials": {
+      "Texture": [
+        "Texture_Light.png",
+        "Texture.png",
+        "Texture.png.001"
+      ]
+    },
+    "all": [
+      "Texture_Light.png",
+      "Texture.png",
+      "Texture.png.001"
+    ]
+  },
+  "2Story_GableRoof_Base": {
+    "materials": {
+      "Texture": [
+        "Texture_Light.png",
+        "Texture.png",
+        "Texture.png.001"
+      ]
+    },
+    "all": [
+      "Texture_Light.png",
+      "Texture.png",
+      "Texture.png.001"
+    ]
+  },
+  "2Story_RoundRoof_Base": {
+    "materials": {
+      "Texture": [
+        "Texture_Light.png",
+        "Texture.png",
+        "Texture.png.001"
+      ]
+    },
+    "all": [
+      "Texture_Light.png",
+      "Texture.png",
+      "Texture.png.001"
+    ]
+  },
+  "2Story_Sidehouse_Base": {
+    "materials": {
+      "Texture": [
+        "Texture_Light.png",
+        "Texture.png",
+        "Texture.png.001"
+      ]
+    },
+    "all": [
+      "Texture_Light.png",
+      "Texture.png",
+      "Texture.png.001"
+    ]
+  },
+  "2Story_Sign_Base": {
+    "materials": {
+      "Texture": [
+        "Texture_Light.png",
+        "Texture.png",
+        "Texture.png.001"
+      ]
+    },
+    "all": [
+      "Texture_Light.png",
+      "Texture.png",
+      "Texture.png.001"
+    ]
+  },
+  "2Story_Slim_Base": {
+    "materials": {
+      "Texture": [
+        "Texture_Light.png",
+        "Texture.png",
+        "Texture.png.001"
+      ]
+    },
+    "all": [
+      "Texture_Light.png",
+      "Texture.png",
+      "Texture.png.001"
+    ]
+  },
+  "2Story_Wide_2Doors_Base": {
+    "materials": {
+      "Texture": [
+        "Texture_Light.png",
+        "Texture.png",
+        "Texture.png.001"
+      ]
+    },
+    "all": [
+      "Texture_Light.png",
+      "Texture.png",
+      "Texture.png.001"
+    ]
+  },
+  "2Story_Wide_Base": {
+    "materials": {
+      "Texture": [
+        "Texture_Light.png",
+        "Texture.png",
+        "Texture.png.001"
+      ]
+    },
+    "all": [
+      "Texture_Light.png",
+      "Texture.png",
+      "Texture.png.001"
+    ]
+  },
+  "3Story_Base": {
+    "materials": {
+      "Texture": [
+        "Texture_Light.png",
+        "Texture.png",
+        "Texture.png.001"
+      ]
+    },
+    "all": [
+      "Texture_Light.png",
+      "Texture.png",
+      "Texture.png.001"
+    ]
+  },
+  "3Story_Slim_Base": {
+    "materials": {
+      "Texture": [
+        "Texture_Light.png",
+        "Texture.png",
+        "Texture.png.001"
+      ]
+    },
+    "all": [
+      "Texture_Light.png",
+      "Texture.png",
+      "Texture.png.001"
+    ]
+  },
+  "4Story_Center_Base": {
+    "materials": {
+      "Texture": [
+        "Texture_Light.png",
+        "Texture.png",
+        "Texture.png.001"
+      ]
+    },
+    "all": [
+      "Texture_Light.png",
+      "Texture.png",
+      "Texture.png.001"
+    ]
+  },
+  "4Story_Wide_2Doors_Base": {
+    "materials": {
+      "Texture": [
+        "Texture_Light.png",
+        "Texture.png",
+        "Texture.png.001"
+      ]
+    },
+    "all": [
+      "Texture_Light.png",
+      "Texture.png",
+      "Texture.png.001"
+    ]
+  },
+  "1Story": {
+    "materials": {
+      "Texture": [
+        "Texture_Light.png",
+        "Texture.png",
+        "Texture.png.001"
+      ]
+    },
+    "all": [
+      "Texture_Light.png",
+      "Texture.png",
+      "Texture.png.001"
+    ]
+  },
+  "1Story_GableRoof": {
+    "materials": {
+      "Texture": [
+        "Texture_Light.png",
+        "Texture.png",
+        "Texture.png.001"
+      ]
+    },
+    "all": [
+      "Texture_Light.png",
+      "Texture.png",
+      "Texture.png.001"
+    ]
+  },
+  "1Story_RoundRoof": {
+    "materials": {
+      "Texture": [
+        "Texture_Light.png",
+        "Texture.png",
+        "Texture.png.001"
+      ]
+    },
+    "all": [
+      "Texture_Light.png",
+      "Texture.png",
+      "Texture.png.001"
+    ]
+  },
+  "1Story_Sign": {
+    "materials": {
+      "Texture": [
+        "Texture_Light.png",
+        "Texture.png",
+        "Texture.png.001"
+      ]
+    },
+    "all": [
+      "Texture_Light.png",
+      "Texture.png",
+      "Texture.png.001"
+    ]
+  },
+  "2Story": {
+    "materials": {
+      "Texture": [
+        "Texture_Light.png",
+        "Texture.png",
+        "Texture.png.001"
+      ]
+    },
+    "all": [
+      "Texture_Light.png",
+      "Texture.png",
+      "Texture.png.001"
+    ]
+  },
+  "2Story_2": {
+    "materials": {
+      "Texture": [
+        "Texture_Light.png",
+        "Texture.png",
+        "Texture.png.001"
+      ]
+    },
+    "all": [
+      "Texture_Light.png",
+      "Texture.png",
+      "Texture.png.001"
+    ]
+  },
+  "2Story_Balcony": {
+    "materials": {
+      "Texture": [
+        "Texture_Light.png",
+        "Texture.png",
+        "Texture.png.001"
+      ]
+    },
+    "all": [
+      "Texture_Light.png",
+      "Texture.png",
+      "Texture.png.001"
+    ]
+  },
+  "2Story_Center": {
+    "materials": {
+      "Texture": [
+        "Texture_Light.png",
+        "Texture.png",
+        "Texture.png.001"
+      ]
+    },
+    "all": [
+      "Texture_Light.png",
+      "Texture.png",
+      "Texture.png.001"
+    ]
+  },
+  "2Story_Columns": {
+    "materials": {
+      "Texture": [
+        "Texture_Light.png",
+        "Texture.png",
+        "Texture.png.001"
+      ]
+    },
+    "all": [
+      "Texture_Light.png",
+      "Texture.png",
+      "Texture.png.001"
+    ]
+  },
+  "2Story_Double": {
+    "materials": {
+      "Texture": [
+        "Texture_Light.png",
+        "Texture.png",
+        "Texture.png.001"
+      ]
+    },
+    "all": [
+      "Texture_Light.png",
+      "Texture.png",
+      "Texture.png.001"
+    ]
+  },
+  "2Story_GableRoof": {
+    "materials": {
+      "Texture": [
+        "Texture_Light.png",
+        "Texture.png",
+        "Texture.png.001"
+      ]
+    },
+    "all": [
+      "Texture_Light.png",
+      "Texture.png",
+      "Texture.png.001"
+    ]
+  },
+  "2Story_RoundRoof": {
+    "materials": {
+      "Texture": [
+        "Texture_Light.png",
+        "Texture.png",
+        "Texture.png.001"
+      ]
+    },
+    "all": [
+      "Texture_Light.png",
+      "Texture.png",
+      "Texture.png.001"
+    ]
+  },
+  "2Story_Sidehouse": {
+    "materials": {
+      "Texture": [
+        "Texture_Light.png",
+        "Texture.png",
+        "Texture.png.001"
+      ]
+    },
+    "all": [
+      "Texture_Light.png",
+      "Texture.png",
+      "Texture.png.001"
+    ]
+  },
+  "2Story_Sign": {
+    "materials": {
+      "Texture": [
+        "Texture_Light.png",
+        "Texture.png",
+        "Texture.png.001"
+      ]
+    },
+    "all": [
+      "Texture_Light.png",
+      "Texture.png",
+      "Texture.png.001"
+    ]
+  },
+  "2Story_Slim": {
+    "materials": {
+      "Texture": [
+        "Texture_Light.png",
+        "Texture.png",
+        "Texture.png.001"
+      ]
+    },
+    "all": [
+      "Texture_Light.png",
+      "Texture.png",
+      "Texture.png.001"
+    ]
+  },
+  "2Story_Stairs": {
+    "materials": {
+      "Texture": [
+        "Texture_Light.png",
+        "Texture.png",
+        "Texture.png.001"
+      ]
+    },
+    "all": [
+      "Texture_Light.png",
+      "Texture.png",
+      "Texture.png.001"
+    ]
+  },
+  "2Story_Wide": {
+    "materials": {
+      "Texture": [
+        "Texture_Light.png",
+        "Texture.png",
+        "Texture.png.001"
+      ]
+    },
+    "all": [
+      "Texture_Light.png",
+      "Texture.png",
+      "Texture.png.001"
+    ]
+  },
+  "2Story_Wide_2Doors": {
+    "materials": {
+      "Texture": [
+        "Texture_Light.png",
+        "Texture.png",
+        "Texture.png.001"
+      ]
+    },
+    "all": [
+      "Texture_Light.png",
+      "Texture.png",
+      "Texture.png.001"
+    ]
+  },
+  "3Story_Balcony": {
+    "materials": {
+      "Texture": [
+        "Texture_Light.png",
+        "Texture.png",
+        "Texture.png.001"
+      ]
+    },
+    "all": [
+      "Texture_Light.png",
+      "Texture.png",
+      "Texture.png.001"
+    ]
+  },
+  "3Story_Slim": {
+    "materials": {
+      "Texture": [
+        "Texture_Light.png",
+        "Texture.png",
+        "Texture.png.001"
+      ]
+    },
+    "all": [
+      "Texture_Light.png",
+      "Texture.png",
+      "Texture.png.001"
+    ]
+  },
+  "3Story_Small": {
+    "materials": {
+      "Texture": [
+        "Texture_Light.png",
+        "Texture.png",
+        "Texture.png.001"
+      ]
+    },
+    "all": [
+      "Texture_Light.png",
+      "Texture.png",
+      "Texture.png.001"
+    ]
+  },
+  "4Story": {
+    "materials": {
+      "Texture": [
+        "Texture_Light.png",
+        "Texture.png",
+        "Texture.png.001"
+      ]
+    },
+    "all": [
+      "Texture_Light.png",
+      "Texture.png",
+      "Texture.png.001"
+    ]
+  },
+  "4Story_Center": {
+    "materials": {
+      "Texture": [
+        "Texture_Light.png",
+        "Texture.png",
+        "Texture.png.001"
+      ]
+    },
+    "all": [
+      "Texture_Light.png",
+      "Texture.png",
+      "Texture.png.001"
+    ]
+  },
+  "4Story_Wide_2Doors": {
+    "materials": {
+      "Texture": [
+        "Texture_Light.png",
+        "Texture.png",
+        "Texture.png.001"
+      ]
+    },
+    "all": [
+      "Texture_Light.png",
+      "Texture.png",
+      "Texture.png.001"
+    ]
+  },
+  "4Story_Wide_2Doors_Roof": {
+    "materials": {
+      "Texture": [
+        "Texture_Light.png",
+        "Texture.png",
+        "Texture.png.001"
+      ]
+    },
+    "all": [
+      "Texture_Light.png",
+      "Texture.png",
+      "Texture.png.001"
+    ]
+  },
+  "6Story_Stack": {
+    "materials": {
+      "Texture": [
+        "Texture_Light.png",
+        "Texture.png",
+        "Texture.png.001"
+      ]
+    },
+    "all": [
+      "Texture_Light.png",
+      "Texture.png",
+      "Texture.png.001"
+    ]
+  }
+}

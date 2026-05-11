@@ -1,0 +1,688 @@
+{
+  "Birch_1": {
+    "materials": {
+      "Birch_Bark": [
+        "Birch_Bark.png",
+        "Bark2.png"
+      ],
+      "Birch_Leaves": [
+        "Birch_Leaves_Yellow.png",
+        "birchYellow.png"
+      ]
+    },
+    "all": [
+      "Birch_Leaves_Yellow.png",
+      "Birch_Bark.png",
+      "Bark2.png",
+      "birchYellow.png"
+    ]
+  },
+  "Birch_10": {
+    "materials": {
+      "Birch_Bark": [
+        "Birch_Bark.png",
+        "Bark2.png"
+      ],
+      "Birch_Leaves": [
+        "Birch_Leaves_Yellow.png",
+        "birchYellow.png"
+      ]
+    },
+    "all": [
+      "Birch_Leaves_Yellow.png",
+      "Birch_Bark.png",
+      "Bark2.png",
+      "birchYellow.png"
+    ]
+  },
+  "Birch_2": {
+    "materials": {
+      "Birch_Bark": [
+        "Birch_Bark.png",
+        "Bark2.png"
+      ],
+      "Birch_Leaves": [
+        "Birch_Leaves_Yellow.png",
+        "birchYellow.png"
+      ]
+    },
+    "all": [
+      "Birch_Leaves_Yellow.png",
+      "Birch_Bark.png",
+      "Bark2.png",
+      "birchYellow.png"
+    ]
+  },
+  "Birch_3": {
+    "materials": {
+      "Birch_Bark": [
+        "Birch_Bark.png",
+        "Bark2.png"
+      ],
+      "Birch_Leaves": [
+        "Birch_Leaves_Yellow.png",
+        "birchYellow.png"
+      ]
+    },
+    "all": [
+      "Birch_Leaves_Yellow.png",
+      "Birch_Bark.png",
+      "Bark2.png",
+      "birchYellow.png"
+    ]
+  },
+  "Birch_4": {
+    "materials": {
+      "Birch_Bark": [
+        "Birch_Bark.png",
+        "Bark2.png"
+      ],
+      "Birch_Leaves": [
+        "Birch_Leaves_Yellow.png",
+        "birchYellow.png"
+      ]
+    },
+    "all": [
+      "Birch_Leaves_Yellow.png",
+      "Birch_Bark.png",
+      "Bark2.png",
+      "birchYellow.png"
+    ]
+  },
+  "Birch_5": {
+    "materials": {
+      "Birch_Bark": [
+        "Birch_Bark.png",
+        "Bark2.png"
+      ],
+      "Birch_Leaves": [
+        "Birch_Leaves_Yellow.png",
+        "birchYellow.png"
+      ]
+    },
+    "all": [
+      "Birch_Leaves_Yellow.png",
+      "Birch_Bark.png",
+      "Bark2.png",
+      "birchYellow.png"
+    ]
+  },
+  "Birch_6": {
+    "materials": {
+      "Birch_Bark": [
+        "Birch_Bark.png",
+        "Bark2.png"
+      ],
+      "Birch_Leaves": [
+        "Birch_Leaves_Yellow.png",
+        "birchYellow.png"
+      ]
+    },
+    "all": [
+      "Birch_Leaves_Yellow.png",
+      "Birch_Bark.png",
+      "Bark2.png",
+      "birchYellow.png"
+    ]
+  },
+  "Birch_7": {
+    "materials": {
+      "Birch_Bark": [
+        "Birch_Bark.png",
+        "Bark2.png"
+      ],
+      "Birch_Leaves": [
+        "Birch_Leaves_Yellow.png",
+        "birchYellow.png"
+      ]
+    },
+    "all": [
+      "Birch_Leaves_Yellow.png",
+      "Birch_Bark.png",
+      "Bark2.png",
+      "birchYellow.png"
+    ]
+  },
+  "Birch_8": {
+    "materials": {
+      "Birch_Bark": [
+        "Birch_Bark.png",
+        "Bark2.png"
+      ],
+      "Birch_Leaves": [
+        "Birch_Leaves_Yellow.png",
+        "birchYellow.png"
+      ]
+    },
+    "all": [
+      "Birch_Leaves_Yellow.png",
+      "Birch_Bark.png",
+      "Bark2.png",
+      "birchYellow.png"
+    ]
+  },
+  "Birch_9": {
+    "materials": {
+      "Birch_Bark": [
+        "Birch_Bark.png",
+        "Bark2.png"
+      ],
+      "Birch_Leaves": [
+        "Birch_Leaves_Yellow.png",
+        "birchYellow.png"
+      ]
+    },
+    "all": [
+      "Birch_Leaves_Yellow.png",
+      "Birch_Bark.png",
+      "Bark2.png",
+      "birchYellow.png"
+    ]
+  },
+  "DeadBirch_1": {
+    "materials": {
+      "Birch_Bark": [
+        "Birch_Bark.png",
+        "Bark2.png"
+      ]
+    },
+    "all": [
+      "Birch_Bark.png",
+      "Bark2.png"
+    ]
+  },
+  "DeadBirch_10": {
+    "materials": {
+      "Birch_Bark": [
+        "Birch_Bark.png",
+        "Bark2.png"
+      ]
+    },
+    "all": [
+      "Birch_Bark.png",
+      "Bark2.png"
+    ]
+  },
+  "DeadBirch_2": {
+    "materials": {
+      "Birch_Bark": [
+        "Birch_Bark.png",
+        "Bark2.png"
+      ]
+    },
+    "all": [
+      "Birch_Bark.png",
+      "Bark2.png"
+    ]
+  },
+  "DeadBirch_3": {
+    "materials": {
+      "Birch_Bark": [
+        "Birch_Bark.png",
+        "Bark2.png"
+      ]
+    },
+    "all": [
+      "Birch_Bark.png",
+      "Bark2.png"
+    ]
+  },
+  "DeadBirch_4": {
+    "materials": {
+      "Birch_Bark": [
+        "Birch_Bark.png",
+        "Bark2.png"
+      ]
+    },
+    "all": [
+      "Birch_Bark.png",
+      "Bark2.png"
+    ]
+  },
+  "DeadBirch_5": {
+    "materials": {
+      "Birch_Bark": [
+        "Birch_Bark.png",
+        "Bark2.png"
+      ]
+    },
+    "all": [
+      "Birch_Bark.png",
+      "Bark2.png"
+    ]
+  },
+  "DeadBirch_6": {
+    "materials": {
+      "Birch_Bark": [
+        "Birch_Bark.png",
+        "Bark2.png"
+      ]
+    },
+    "all": [
+      "Birch_Bark.png",
+      "Bark2.png"
+    ]
+  },
+  "DeadBirch_7": {
+    "materials": {
+      "Birch_Bark": [
+        "Birch_Bark.png",
+        "Bark2.png"
+      ]
+    },
+    "all": [
+      "Birch_Bark.png",
+      "Bark2.png"
+    ]
+  },
+  "DeadBirch_8": {
+    "materials": {
+      "Birch_Bark": [
+        "Birch_Bark.png",
+        "Bark2.png"
+      ]
+    },
+    "all": [
+      "Birch_Bark.png",
+      "Bark2.png"
+    ]
+  },
+  "DeadBirch_9": {
+    "materials": {
+      "Birch_Bark": [
+        "Birch_Bark.png",
+        "Bark2.png"
+      ]
+    },
+    "all": [
+      "Birch_Bark.png",
+      "Bark2.png"
+    ]
+  },
+  "DeadTree_1": {
+    "materials": {
+      "Bark": [
+        "Tree_Bark.jpg",
+        "Bark.jpg"
+      ]
+    },
+    "all": [
+      "Tree_Bark.jpg",
+      "Bark.jpg"
+    ]
+  },
+  "DeadTree_10": {
+    "materials": {
+      "Bark": [
+        "Tree_Bark.jpg",
+        "Bark.jpg"
+      ]
+    },
+    "all": [
+      "Tree_Bark.jpg",
+      "Bark.jpg"
+    ]
+  },
+  "DeadTree_2": {
+    "materials": {
+      "Bark": [
+        "Tree_Bark.jpg",
+        "Bark.jpg"
+      ]
+    },
+    "all": [
+      "Tree_Bark.jpg",
+      "Bark.jpg"
+    ]
+  },
+  "DeadTree_3": {
+    "materials": {
+      "Bark": [
+        "Tree_Bark.jpg",
+        "Bark.jpg"
+      ]
+    },
+    "all": [
+      "Tree_Bark.jpg",
+      "Bark.jpg"
+    ]
+  },
+  "DeadTree_4": {
+    "materials": {
+      "Bark": [
+        "Tree_Bark.jpg",
+        "Bark.jpg"
+      ]
+    },
+    "all": [
+      "Tree_Bark.jpg",
+      "Bark.jpg"
+    ]
+  },
+  "DeadTree_5": {
+    "materials": {
+      "Bark": [
+        "Tree_Bark.jpg",
+        "Bark.jpg"
+      ]
+    },
+    "all": [
+      "Tree_Bark.jpg",
+      "Bark.jpg"
+    ]
+  },
+  "DeadTree_6": {
+    "materials": {
+      "Bark": [
+        "Tree_Bark.jpg",
+        "Bark.jpg"
+      ]
+    },
+    "all": [
+      "Tree_Bark.jpg",
+      "Bark.jpg"
+    ]
+  },
+  "DeadTree_7": {
+    "materials": {
+      "Bark": [
+        "Tree_Bark.jpg",
+        "Bark.jpg"
+      ]
+    },
+    "all": [
+      "Tree_Bark.jpg",
+      "Bark.jpg"
+    ]
+  },
+  "DeadTree_8": {
+    "materials": {
+      "Bark": [
+        "Tree_Bark.jpg",
+        "Bark.jpg"
+      ]
+    },
+    "all": [
+      "Tree_Bark.jpg",
+      "Bark.jpg"
+    ]
+  },
+  "DeadTree_9": {
+    "materials": {
+      "Bark": [
+        "Tree_Bark.jpg",
+        "Bark.jpg"
+      ]
+    },
+    "all": [
+      "Tree_Bark.jpg",
+      "Bark.jpg"
+    ]
+  },
+  "Pine_1": {
+    "materials": {
+      "Bark": [
+        "Tree_Bark.jpg",
+        "Bark.jpg"
+      ],
+      "Pine_Leaves": [
+        "Pine_Leaves.png",
+        "Pinetree.png"
+      ]
+    },
+    "all": [
+      "Pine_Leaves.png",
+      "Tree_Bark.jpg",
+      "Bark.jpg",
+      "Pinetree.png"
+    ]
+  },
+  "Pine_2": {
+    "materials": {
+      "Bark": [
+        "Tree_Bark.jpg",
+        "Bark.jpg"
+      ],
+      "Pine_Leaves": [
+        "Pine_Leaves.png",
+        "Pinetree.png"
+      ]
+    },
+    "all": [
+      "Pine_Leaves.png",
+      "Tree_Bark.jpg",
+      "Bark.jpg",
+      "Pinetree.png"
+    ]
+  },
+  "Pine_3": {
+    "materials": {
+      "Bark": [
+        "Tree_Bark.jpg",
+        "Bark.jpg"
+      ],
+      "Pine_Leaves": [
+        "Pine_Leaves.png",
+        "Pinetree.png"
+      ]
+    },
+    "all": [
+      "Pine_Leaves.png",
+      "Tree_Bark.jpg",
+      "Bark.jpg",
+      "Pinetree.png"
+    ]
+  },
+  "Pine_4": {
+    "materials": {
+      "Bark": [
+        "Tree_Bark.jpg"
+      ],
+      "Pine_Leaves": [
+        "Pine_Leaves_Red.png"
+      ]
+    },
+    "all": [
+      "Tree_Bark.jpg",
+      "Pine_Leaves_Red.png"
+    ]
+  },
+  "Pine_5": {
+    "materials": {
+      "Bark": [
+        "Tree_Bark.jpg",
+        "Bark.jpg"
+      ],
+      "Pine_Leaves": [
+        "Pine_Leaves.png",
+        "Pinetree.png"
+      ]
+    },
+    "all": [
+      "Pine_Leaves.png",
+      "Tree_Bark.jpg",
+      "Bark.jpg",
+      "Pinetree.png"
+    ]
+  },
+  "Tree_1": {
+    "materials": {
+      "Bark": [
+        "Tree_Bark.jpg",
+        "Bark.jpg"
+      ],
+      "Tree_Leaves": [
+        "Tree_Leaves.png",
+        "Leaf_High.png"
+      ]
+    },
+    "all": [
+      "Tree_Leaves.png",
+      "Tree_Bark.jpg",
+      "Bark.jpg",
+      "Leaf_High.png"
+    ]
+  },
+  "Tree_10": {
+    "materials": {
+      "Bark": [
+        "Tree_Bark.jpg",
+        "Bark.jpg"
+      ],
+      "Tree_Leaves": [
+        "Tree_Leaves.png",
+        "Leaf_High.png"
+      ]
+    },
+    "all": [
+      "Tree_Leaves.png",
+      "Tree_Bark.jpg",
+      "Bark.jpg",
+      "Leaf_High.png"
+    ]
+  },
+  "Tree_2": {
+    "materials": {
+      "Bark": [
+        "Tree_Bark.jpg",
+        "Bark.jpg"
+      ],
+      "Tree_Leaves": [
+        "Tree_Leaves.png",
+        "Leaf_High.png"
+      ]
+    },
+    "all": [
+      "Tree_Leaves.png",
+      "Tree_Bark.jpg",
+      "Bark.jpg",
+      "Leaf_High.png"
+    ]
+  },
+  "Tree_3": {
+    "materials": {
+      "Bark": [
+        "Tree_Bark.jpg",
+        "Bark.jpg"
+      ],
+      "Tree_Leaves": [
+        "Tree_Leaves.png",
+        "Leaf_High.png"
+      ]
+    },
+    "all": [
+      "Tree_Leaves.png",
+      "Tree_Bark.jpg",
+      "Bark.jpg",
+      "Leaf_High.png"
+    ]
+  },
+  "Tree_4": {
+    "materials": {
+      "Bark": [
+        "Tree_Bark.jpg",
+        "Bark.jpg"
+      ],
+      "Tree_Leaves": [
+        "Tree_Leaves.png",
+        "Leaf_High.png"
+      ]
+    },
+    "all": [
+      "Tree_Leaves.png",
+      "Tree_Bark.jpg",
+      "Bark.jpg",
+      "Leaf_High.png"
+    ]
+  },
+  "Tree_5": {
+    "materials": {
+      "Bark": [
+        "Tree_Bark.jpg",
+        "Bark.jpg"
+      ],
+      "Tree_Leaves": [
+        "Tree_Leaves.png",
+        "Leaf_High.png"
+      ]
+    },
+    "all": [
+      "Tree_Leaves.png",
+      "Tree_Bark.jpg",
+      "Bark.jpg",
+      "Leaf_High.png"
+    ]
+  },
+  "Tree_6": {
+    "materials": {
+      "Bark": [
+        "Tree_Bark.jpg",
+        "Bark.jpg"
+      ],
+      "Tree_Leaves": [
+        "Tree_Leaves.png",
+        "Leaf_High.png"
+      ]
+    },
+    "all": [
+      "Tree_Leaves.png",
+      "Tree_Bark.jpg",
+      "Bark.jpg",
+      "Leaf_High.png"
+    ]
+  },
+  "Tree_7": {
+    "materials": {
+      "Bark": [
+        "Tree_Bark.jpg",
+        "Bark.jpg"
+      ],
+      "Tree_Leaves": [
+        "Tree_Leaves.png",
+        "Leaf_High.png"
+      ]
+    },
+    "all": [
+      "Tree_Leaves.png",
+      "Tree_Bark.jpg",
+      "Bark.jpg",
+      "Leaf_High.png"
+    ]
+  },
+  "Tree_8": {
+    "materials": {
+      "Bark": [
+        "Tree_Bark.jpg",
+        "Bark.jpg"
+      ],
+      "Tree_Leaves": [
+        "Tree_Leaves.png",
+        "Leaf_High.png"
+      ]
+    },
+    "all": [
+      "Tree_Leaves.png",
+      "Tree_Bark.jpg",
+      "Bark.jpg",
+      "Leaf_High.png"
+    ]
+  },
+  "Tree_9": {
+    "materials": {
+      "Bark": [
+        "Tree_Bark.jpg",
+        "Bark.jpg"
+      ],
+      "Tree_Leaves": [
+        "Tree_Leaves.png",
+        "Leaf_High.png"
+      ]
+    },
+    "all": [
+      "Tree_Leaves.png",
+      "Tree_Bark.jpg",
+      "Bark.jpg",
+      "Leaf_High.png"
+    ]
+  }
+}
