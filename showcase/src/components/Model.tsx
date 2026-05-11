@@ -8,6 +8,7 @@ import {
   type AnimationClip,
   Box3,
   DoubleSide,
+  FrontSide,
   type Group,
   type Material,
   type Mesh,
@@ -42,15 +43,24 @@ export function pickDefaultAnimation(names: string[]): string | null {
  * Environment HDR have zero effect — models look flat. Convert to a lit
  * MeshStandardMaterial while preserving texture/color/side/vertex-colors.
  *
- * Also: many of these packs have one-sided geometry (planes for leaves,
- * banner cloth, open-bottom buildings). FrontSide makes them disappear from
- * one angle. Always force DoubleSide — perf cost on low-poly art is trivial.
+ * Side handling: alpha-tested cutout materials (leaves on planes, cloth
+ * banners) need DoubleSide so they don't vanish edge-on. Opaque solid
+ * materials (kenney 3d-road-tiles' Stone / Asphalt / Grass walls,
+ * buildings) MUST stay FrontSide — when DoubleSide is forced, the back of
+ * each wall renders at the exact same depth as the front, and you get
+ * the classic z-fighting "screen door" cross-hatch wherever two solids
+ * meet on a shared plane.
  */
+function sideFor(src: { transparent?: boolean; alphaMap?: unknown; alphaTest?: number }): typeof FrontSide {
+  const isCutout = !!src.alphaMap || (src.alphaTest ?? 0) > 0 || !!src.transparent;
+  return isCutout ? DoubleSide : FrontSide;
+}
+
 function liftMaterial(src: Material): Material {
   // biome-ignore lint/suspicious/noExplicitAny: we're sniffing three's material shape
   const s = src as any;
   if (s.isMeshStandardMaterial || s.isMeshPhysicalMaterial) {
-    s.side = DoubleSide;
+    s.side = sideFor(s);
     return src;
   }
   const m = new MeshStandardMaterial({
@@ -59,7 +69,7 @@ function liftMaterial(src: Material): Material {
     map: s.map ?? null,
     transparent: !!s.transparent,
     opacity: typeof s.opacity === "number" ? s.opacity : 1,
-    side: DoubleSide,
+    side: sideFor(s),
     vertexColors: !!s.vertexColors,
     alphaMap: s.alphaMap ?? null,
     alphaTest: s.alphaTest ?? 0,

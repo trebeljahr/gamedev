@@ -1,2 +1,8 @@
 packages:
   - showcase
+# pnpm 10+ requires explicit approval for install-time build scripts. Both
+# esbuild and sharp are dependencies pulled in transitively; we don't need
+# their native builds for the showcase to run.
+ignoredBuiltDependencies:
+  - esbuild
+  - sharp
