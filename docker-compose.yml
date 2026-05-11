@@ -8,6 +8,12 @@
 services:
   app:
     image: ghcr.io/trebeljahr/gamedev:latest
+    # Force a registry pull on every `compose up`, otherwise Coolify
+    # happily reuses a previously-cached `:latest` whose digest hasn't
+    # been refreshed in this engine's image store. The deploy webhook
+    # fires after each CI build but only updates the running container
+    # if compose actually fetches the new digest first.
+    pull_policy: always
     restart: unless-stopped
     # Coolify's Traefik reverse-proxy already owns host ports 80/443 and
     # routes to this container via its internal Docker network. Use
