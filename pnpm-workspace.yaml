@@ -1,9 +1,13 @@
 packages:
   - showcase
-# pnpm 11 errors out on ignored build scripts (strictDepBuilds=true by
-# default) instead of warning like pnpm 10 did. sharp is used by
-# next/image for runtime image optimization; esbuild is pulled in by the
-# toolchain. Approve them both so install completes cleanly.
+# pnpm 11 errors on ignored build scripts (strictDepBuilds=true by
+# default). sharp powers next/image runtime image optimization;
+# esbuild is pulled in by the toolchain. Approve both so install
+# completes cleanly. pnpm 11.1+ reads `allowBuilds` here; the older
+# `onlyBuiltDependencies` is kept for back-compat.
+allowBuilds:
+  esbuild: true
+  sharp: true
 onlyBuiltDependencies:
   - esbuild
   - sharp
