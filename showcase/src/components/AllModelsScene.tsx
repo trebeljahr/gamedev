@@ -28,6 +28,7 @@ export function AllModelsScene() {
   const start = useMemo<[number, number, number]>(() => {
     return [6, WORLD_HEIGHT + 1.5, -4];
   }, []);
+  const [sprinting, setSprinting] = useState(false);
 
   return (
     <>
@@ -48,7 +49,7 @@ export function AllModelsScene() {
           shadow-mapSize-height={1024}
         />
         <hemisphereLight args={["#b1c1d4", "#2a2a32", 0.4]} />
-        <Walker />
+        <Walker onSprintChange={setSprinting} />
         <Placeholders />
         <Floor />
         <ActiveModels />
@@ -59,30 +60,44 @@ export function AllModelsScene() {
         <PointerLockControls />
       </Canvas>
       <Crosshair />
-      <HUD />
+      <HUD sprinting={sprinting} />
     </>
   );
 }
 
-/* Camera walker — WASD + space/shift, gravity-free fly-over.
+/* Camera walker — WASD + Space (up) / C (down), Shift toggles sprint.
    Uses raw window listeners to avoid drei API drift. */
-function Walker() {
+function Walker({ onSprintChange }: { onSprintChange?: (s: boolean) => void }) {
   const { camera } = useThree();
   const keys = useRef<Record<string, boolean>>({});
+  const sprinting = useRef(false);
   useEffect(() => {
     const down = (e: KeyboardEvent) => {
+      if (e.key === "Shift") {
+        if (!e.repeat) {
+          sprinting.current = !sprinting.current;
+          onSprintChange?.(sprinting.current);
+        }
+        return;
+      }
       keys.current[e.key.toLowerCase()] = true;
     };
     const up = (e: KeyboardEvent) => {
+      if (e.key === "Shift") return;
       keys.current[e.key.toLowerCase()] = false;
+    };
+    const blur = () => {
+      keys.current = {};
     };
     window.addEventListener("keydown", down);
     window.addEventListener("keyup", up);
+    window.addEventListener("blur", blur);
     return () => {
       window.removeEventListener("keydown", down);
       window.removeEventListener("keyup", up);
+      window.removeEventListener("blur", blur);
     };
-  }, []);
+  }, [onSprintChange]);
   useFrame((_, delta) => {
     const k = keys.current;
     const fwd = new Vector3();
@@ -110,10 +125,10 @@ function Walker() {
       dz -= right.z;
     }
     if (k[" "]) dy += 1;
-    if (k.shift) dy -= 1;
+    if (k.c) dy -= 1;
     const mag = Math.hypot(dx, dy, dz);
     if (mag > 0) {
-      const speed = k.control ? MOVE_SPEED * 3 : MOVE_SPEED;
+      const speed = sprinting.current ? MOVE_SPEED * 3 : MOVE_SPEED;
       const s = (speed * delta) / mag;
       camera.position.x += dx * s;
       camera.position.y += dy * s;
@@ -295,7 +310,7 @@ function Crosshair() {
 }
 
 /* On-screen help / status */
-function HUD() {
+function HUD({ sprinting }: { sprinting: boolean }) {
   return (
     <>
       <div
@@ -314,7 +329,19 @@ function HUD() {
       >
         <strong>All models</strong> — {allSlots.length.toLocaleString()} slots
         <br />
-        Click canvas to lock cursor · WASD to walk · Space/Shift up/down · Esc to exit
+        Click canvas to lock cursor · WASD walk · Space up · C down ·{" "}
+        <span
+          style={{
+            color: sprinting ? "#1a1a20" : "white",
+            background: sprinting ? "#ffd84d" : "transparent",
+            padding: sprinting ? "0 4px" : 0,
+            borderRadius: 3,
+            fontWeight: sprinting ? 600 : 400,
+          }}
+        >
+          Shift sprint {sprinting ? "ON" : "off"}
+        </span>{" "}
+        · Esc to exit
         <br />
         <a href="/" style={{ color: "#ffd84d" }}>
           ← back to packs
