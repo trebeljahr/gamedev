@@ -95,7 +95,12 @@ def main():
 
         gltf, bin_bytes = read_glb(glb)
 
-        # Are any materials carrying real (non-default) colors already?
+        # Per-material gate: patch a material only if its current color is the
+        # default grey AND it has no baseColorTexture. This is idempotent (an
+        # already-patched material won't match default grey) and works for
+        # partial-broken packs like Ultimate Modular Ruins, where one material
+        # in a file is stripped to grey while others (Main, Highlights) carry
+        # real colors from the FBX→GLB export.
         # The exporter writes 0.8000…11920929 (float32 round-trip of 0.8),
         # so compare with a tolerance rather than against exact 0.8.
         def is_default_grey(c):
@@ -104,23 +109,18 @@ def main():
                 and all(abs(x - 0.8) < 1e-4 for x in c[:3])
                 and (len(c) < 4 or abs(c[3] - 1.0) < 1e-4)
             )
-        already_has_colors = any(
-            not is_default_grey(
-                m.get("pbrMetallicRoughness", {}).get("baseColorFactor", [0.8, 0.8, 0.8, 1.0])
-            )
-            for m in gltf.get("materials", [])
-        )
-        if already_has_colors:
-            print(f"  skip {glb.name} (already patched)")
-            skipped += 1
-            continue
 
         changes = 0
         for m in gltf.get("materials", []):
+            pbr = m.setdefault("pbrMetallicRoughness", {})
+            if "baseColorTexture" in pbr:
+                continue
+            current = pbr.get("baseColorFactor", [0.8, 0.8, 0.8, 1.0])
+            if not is_default_grey(current):
+                continue
             color = find_color(m.get("name", ""), mat_map)
             if color is None:
                 continue
-            pbr = m.setdefault("pbrMetallicRoughness", {})
             pbr["baseColorFactor"] = color
             pbr.setdefault("metallicFactor", 0.0)
             pbr.setdefault("roughnessFactor", 0.9)

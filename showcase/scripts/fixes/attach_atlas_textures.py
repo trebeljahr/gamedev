@@ -122,10 +122,6 @@ def attach(glb_path: Path, mat_textures: dict, fallback_candidates: list, tex_in
     """
     gltf, bin_bytes = read_glb(glb_path)
 
-    for m in gltf.get("materials", []):
-        if "baseColorTexture" in m.get("pbrMetallicRoughness", {}):
-            return f"  skip {glb_path.name} (already has texture)"
-
     # Build a normalized lookup so we can match material names that picked up
     # a Blender ".001" suffix during merge/dedup.
     norm_mat_textures = {normalize_name(k): v for k, v in mat_textures.items()}
@@ -135,12 +131,25 @@ def attach(glb_path: Path, mat_textures: dict, fallback_candidates: list, tex_in
     embedded: dict[Path, int] = {}
     applied = 0
 
+    # Once the JSON gives us per-material mappings, suppress the `all`
+    # fallback. Otherwise non-matching materials (Highlights, Main, Metal in
+    # the ruins pack) silently absorb the foliage texture that was only meant
+    # for Leaf_Texture / Texture_Leaves. The fallback is for legacy
+    # single-atlas packs whose JSON has no `materials` map.
+    use_fallback = not mat_textures
+
     for m in gltf.get("materials", []):
+        # Per-material idempotency: skip materials that already carry a texture
+        # so partial-broken packs (e.g. Ultimate Modular Ruins, where one
+        # material in a file is stripped to grey while others have real
+        # textures) can still be patched on the broken materials only.
+        if "baseColorTexture" in m.get("pbrMetallicRoughness", {}):
+            continue
         name = m.get("name", "")
         candidates = (
             mat_textures.get(name)
             or norm_mat_textures.get(normalize_name(re.sub(r"\.\d+$", "", name)))
-            or fallback_candidates
+            or (fallback_candidates if use_fallback else [])
         )
         if not candidates:
             continue
