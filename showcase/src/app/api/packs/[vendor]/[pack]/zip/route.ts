@@ -1,20 +1,8 @@
-import { readFile } from "node:fs/promises";
-import { join } from "node:path";
 import { Zip, ZipPassThrough } from "fflate";
-import { findPack } from "@/lib/manifest";
+import { assetUrl, findPack } from "@/lib/manifest";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
-
-const ASSETS_ROOT = join(process.cwd(), "..");
-
-function urlToDisk(url: string): string | null {
-  const m = url.match(/^\/(glb|raw)\/(.+)$/);
-  if (!m) return null;
-  const root = m[1] === "glb" ? "glb-optimized" : "models";
-  const decoded = m[2].split("/").map(decodeURIComponent).join("/");
-  return join(ASSETS_ROOT, root, decoded);
-}
 
 function entryName(url: string, vendor: string, pack: string): string {
   const m = url.match(/^\/(glb|raw)\/(.+)$/);
@@ -45,10 +33,20 @@ export async function GET(
       };
       (async () => {
         try {
+          // Source of truth for asset bytes is the asset HTTP origin
+          // (dev: scripts/serve-assets.mjs on :9101, prod: R2 custom
+          // domain). The Next server fetches → re-streams as a zip
+          // entry. Higher latency than a local file read, but it works
+          // identically in both environments and the showcase server
+          // never needs the ~50 GB of assets co-located.
           for (const m of p.models) {
-            const disk = urlToDisk(m.file);
-            if (!disk) continue;
-            const buf = await readFile(disk);
+            const src = assetUrl(m.file);
+            const res = await fetch(src);
+            if (!res.ok) {
+              console.warn(`[zip] skipping ${src}: ${res.status}`);
+              continue;
+            }
+            const buf = new Uint8Array(await res.arrayBuffer());
             const entry = new ZipPassThrough(entryName(m.file, vendor, pack));
             zip.add(entry);
             entry.push(buf, true);

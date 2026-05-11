@@ -5,7 +5,15 @@
 # web app source live in the repo.
 # ---------------------------------------------------------------------------
 
-# --- Heavy asset top-level directories (never track) -----------------------
+# --- Heavy asset top-level directory (never track) -------------------------
+# All vendor downloads + derived/optimized payloads live under assets/, which
+# is mirrored to R2 in prod via `pnpm assets:sync`. Local dev reads from disk
+# through scripts/serve-assets.mjs; nothing in here belongs in git.
+/assets/
+
+# Legacy top-level layout (kept here so old worktrees that haven't been
+# migrated yet still ignore the same payloads — safe to delete once nothing
+# on disk uses the old names).
 /2D/
 /3D/
 /3D-optimized/
@@ -13,12 +21,14 @@
 /_mocap-source/
 /glb-flat/
 /glb-optimized/
+/glb-optimized-v2/
 /kenney/
 /misc-imports/
 /models/
 /sounds/
 /textures/
 /vector-tilesets/
+/3d-assets/
 
 # --- Heavy/binary file extensions everywhere (safety net) ------------------
 # 3D models
@@ -92,6 +102,11 @@ build/
 .cache/
 *.tsbuildinfo
 
+# Bbox cache rebuilt on every `pnpm manifest`. Keyed by file mtime, so
+# committing it just causes merge churn.
+.manifest-bbox-cache.json
+showcase/src/lib/manifest.json
+
 # --- OS / editor -----------------------------------------------------------
 .DS_Store
 ._*
@@ -116,6 +131,9 @@ venv/
 .env
 .env.local
 .env.*.local
+# dotenvx keys: NEVER commit. The encrypted .env.production may be tracked,
+# but the private key that decrypts it lives in the OS keychain.
+.env.keys
 
 # --- Claude --------------------------------------------------------------
 .claude/settings.local.json

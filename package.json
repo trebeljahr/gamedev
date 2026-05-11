@@ -1,13 +1,16 @@
 {
-  "name": "3d-assets",
+  "name": "gamedev",
   "private": true,
-  "description": "Local 3d-assets library. The showcase web app lives under showcase/ and is wired up here as a pnpm workspace so `pnpm install` and `pnpm dev` from the repo root just work.",
+  "description": "gamedev.trebeljahr.com — 3d-assets library + showcase. Assets live under ./assets/ (gitignored, mirrored to R2). Showcase web app is under ./showcase/ as a pnpm workspace.",
   "scripts": {
-    "dev": "pnpm --filter 3d-assets-showcase dev",
+    "dev": "node scripts/dev.mjs",
     "build": "pnpm --filter 3d-assets-showcase build",
     "start": "pnpm --filter 3d-assets-showcase start",
     "lint": "pnpm --filter 3d-assets-showcase lint",
-    "manifest": "pnpm --filter 3d-assets-showcase manifest"
+    "manifest": "pnpm --filter 3d-assets-showcase manifest",
+    "assets:serve": "node scripts/serve-assets.mjs",
+    "assets:sync": "dotenvx run -f .env.production -f .env.local --ignore=MISSING_ENV_FILE --quiet -- bash scripts/sync-assets.sh",
+    "assets:sync:dry": "dotenvx run -f .env.production -f .env.local --ignore=MISSING_ENV_FILE --quiet -- bash scripts/sync-assets.sh --dry-run"
   },
   "packageManager": "pnpm@11.1.0+sha512.0c44e842e5686b2c061a81adda8b2258bd8818e9704b2cf2c63d56b931a7b2e910092e085027003b96ca3911ab56a07f6df5abaed2be9925034cdd686a535b14"
 }

@@ -31,6 +31,7 @@ import {
   type PackLayout,
   type Slot,
 } from "@/lib/layout";
+import { assetUrl } from "@/lib/manifest";
 import { licenseForVendor } from "@/lib/license";
 
 // Load any pack whose nearest edge is within this distance of the camera.
@@ -499,7 +500,7 @@ function GroundedModel({
   return (
     <group position={[x, y, z]} userData={{ slot }}>
       <Model
-        url={slot.model.file}
+        url={assetUrl(slot.model.file)}
         playAnimation={playAnimation}
         onAnimationsLoaded={reportAnim}
       />
@@ -781,7 +782,7 @@ function ModelPanel({
       </div>
 
       <a
-        href={slot.model.file}
+        href={assetUrl(slot.model.file)}
         download={downloadName}
         style={{
           display: "inline-block",

@@ -23,9 +23,17 @@ import { dirname, join, relative } from "node:path";
 import { NodeIO, getBounds } from "@gltf-transform/core";
 
 const SHOWCASE_DIR = join(__dirname, "..");
-const ASSETS_ROOT = join(SHOWCASE_DIR, "..");
-const GLB_ROOT = join(ASSETS_ROOT, "glb-optimized");
-const MODELS_ROOT = join(ASSETS_ROOT, "models");
+const REPO_ROOT = join(SHOWCASE_DIR, "..");
+// All asset payloads now live under <repo>/assets/, mirrored 1:1 to the
+// R2 bucket. The on-disk folder names match the URL prefixes the
+// showcase emits (assets/glb → /glb/…, assets/raw → /raw/…) so local
+// dev (scripts/serve-assets.mjs) and prod (R2 custom domain) read the
+// same URL shape.
+const ASSETS_ROOT = process.env.ASSETS_DIR
+  ? process.env.ASSETS_DIR
+  : join(REPO_ROOT, "assets");
+const GLB_ROOT = join(ASSETS_ROOT, "glb");
+const MODELS_ROOT = join(ASSETS_ROOT, "raw");
 const OUT = join(SHOWCASE_DIR, "src", "lib", "manifest.json");
 const BBOX_CACHE = join(SHOWCASE_DIR, ".manifest-bbox-cache.json");
 
@@ -198,8 +206,16 @@ async function findOptimizedModels(vendor: string, pack: string): Promise<string
 
 async function main() {
   if (!existsSync(GLB_ROOT)) {
-    console.error(`[manifest] glb-optimized/ not found at ${GLB_ROOT}`);
-    process.exit(1);
+    // Worktrees (and fresh checkouts) don't have the gitignored assets on
+    // disk. Emit an empty manifest so `next dev` / `next build` don't
+    // explode — the showcase just renders zero packs.
+    console.warn(
+      `[manifest] assets/glb/ not found at ${GLB_ROOT}; emitting empty manifest. ` +
+        `Run \`pnpm assets:sync\` or download payloads to populate.`,
+    );
+    await mkdir(dirname(OUT), { recursive: true });
+    await writeFile(OUT, JSON.stringify({ packs: [] }, null, 2));
+    return;
   }
 
   const io = new NodeIO();

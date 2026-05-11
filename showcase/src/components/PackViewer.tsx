@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import { useGLTF } from "@react-three/drei";
-import type { Pack } from "@/lib/manifest";
+import { assetUrl, type Pack } from "@/lib/manifest";
 
 const Viewer = dynamic(() => import("./Viewer").then((m) => m.Viewer), {
   ssr: false,
@@ -28,8 +28,8 @@ export function PackViewer({ pack }: { pack: Pack }) {
   useEffect(() => {
     const n = pack.models.length;
     if (n <= 1) return;
-    useGLTF.preload(pack.models[(index + 1) % n].file);
-    useGLTF.preload(pack.models[(index - 1 + n) % n].file);
+    useGLTF.preload(assetUrl(pack.models[(index + 1) % n].file));
+    useGLTF.preload(assetUrl(pack.models[(index - 1 + n) % n].file));
   }, [index, pack.models]);
 
   useEffect(() => {
@@ -64,7 +64,7 @@ export function PackViewer({ pack }: { pack: Pack }) {
         </ul>
       </aside>
       <main>
-        {model && <Viewer key={model.file} url={model.file} />}
+        {model && <Viewer key={model.file} url={assetUrl(model.file)} />}
         <div className="viewer-bar">
           <div className="name">
             {model?.label}{" "}

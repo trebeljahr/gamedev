@@ -29,3 +29,26 @@ export const manifest = data as Manifest;
 export function findPack(vendor: string, pack: string): Pack | undefined {
   return manifest.packs.find((p) => p.vendor === vendor && p.pack === pack);
 }
+
+/**
+ * Prefix a manifest-relative URL (`/glb/<vendor>/...` or `/raw/<vendor>/...`)
+ * with the configured asset base URL. `NEXT_PUBLIC_ASSETS_BASE_URL` is
+ * inlined by Next at build time, so this also works server-side (route
+ * handlers read the same env at runtime).
+ *
+ *   dev   → http://localhost:9101/glb/…   (scripts/serve-assets.mjs)
+ *   prod  → https://assets.gamedev.trebeljahr.com/glb/…   (R2 custom domain)
+ *
+ * Pass an already-absolute URL through unchanged so callers can mix
+ * external textures (rare) into the same pipeline.
+ */
+const ASSETS_BASE_URL = (process.env.NEXT_PUBLIC_ASSETS_BASE_URL ?? "").replace(
+  /\/+$/,
+  "",
+);
+
+export function assetUrl(file: string): string {
+  if (/^[a-z][a-z0-9+.-]*:\/\//i.test(file)) return file;
+  if (!ASSETS_BASE_URL) return file;
+  return ASSETS_BASE_URL + (file.startsWith("/") ? file : `/${file}`);
+}

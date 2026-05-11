@@ -3,6 +3,7 @@
 import { useGLTF, useAnimations } from "@react-three/drei";
 import { useFrame, useLoader } from "@react-three/fiber";
 import { useEffect, useMemo, useRef } from "react";
+import { assetUrl } from "@/lib/manifest";
 import {
   type AnimationAction,
   type AnimationClip,
@@ -98,7 +99,12 @@ function externalTextureUrlFor(modelUrl: string): string | null {
         : null;
     if (!target) return null;
     const path = `/raw/quaternius/textured-fantasy-nature-mar-2017/extracted/Textured Fantasy Nature - Mar 2017/Blends/Textures/${target}.png`;
-    return path.split("/").map(encodeURIComponent).join("/").replace(/%2F/g, "/");
+    const encoded = path
+      .split("/")
+      .map(encodeURIComponent)
+      .join("/")
+      .replace(/%2F/g, "/");
+    return assetUrl(encoded);
   }
   return null;
 }
