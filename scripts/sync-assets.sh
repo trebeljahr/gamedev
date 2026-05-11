@@ -96,10 +96,12 @@ exec docker run "${DOCKER_FLAGS[@]}" \
   --header-upload "Cache-Control: public, max-age=31536000, immutable" \
   --size-only \
   --fast-list \
+  --skip-links \
   --transfers 16 \
   --checkers 32 \
   --stats 5s \
-  --progress \
+  --stats-one-line \
+  --stats-one-line-date \
   --exclude '.DS_Store' \
   --exclude '._*' \
   --exclude '.git/**' \
