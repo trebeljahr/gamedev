@@ -2,31 +2,34 @@
 
 import { folder, useControls } from "leva";
 import { useEffect } from "react";
-import { pickDefaultAnimation } from "./Model";
+
+const NONE = "(none)";
 
 export function AnimationPicker({
   names,
   onChange,
 }: {
   names: string[];
-  onChange?: (name: string) => void;
+  onChange?: (name: string | undefined) => void;
 }) {
-  const defaultName = pickDefaultAnimation(names) ?? names[0];
+  const key = names.join("|");
   const [{ animation }, set] = useControls(
     () => ({
       animations: folder({
-        animation: { options: names, value: defaultName },
+        animation: { options: [NONE, ...names], value: NONE },
       }),
     }),
-    [defaultName, names.join("|")],
+    [key],
   );
 
+  // Reset to "(none)" whenever the model (and its animation list) changes —
+  // a new model should never inherit the previous model's selection.
   useEffect(() => {
-    set({ animation: defaultName });
-  }, [defaultName, set]);
+    set({ animation: NONE });
+  }, [key, set]);
 
   useEffect(() => {
-    onChange?.(animation);
+    onChange?.(animation === NONE ? undefined : animation);
   }, [animation, onChange]);
 
   return null;

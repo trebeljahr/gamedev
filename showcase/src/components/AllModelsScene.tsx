@@ -816,33 +816,20 @@ function ModelPanel({
       <Section title="Animations">
         {animationInfo && animationInfo.names.length > 0 ? (
           <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
-            {animationInfo.names.map((name) => {
-              const active = playAnim === name;
-              return (
-                <button
-                  type="button"
-                  key={name}
-                  onClick={() => onPlay(active ? null : name)}
-                  style={{
-                    textAlign: "left",
-                    background: active
-                      ? "rgba(255,216,77,0.18)"
-                      : "rgba(255,255,255,0.04)",
-                    color: active ? "#ffd84d" : "white",
-                    border: `1px solid ${
-                      active ? "#ffd84d" : "rgba(255,255,255,0.08)"
-                    }`,
-                    borderRadius: 4,
-                    padding: "6px 8px",
-                    cursor: "pointer",
-                    fontFamily: "inherit",
-                    fontSize: 12,
-                  }}
-                >
-                  {name}
-                </button>
-              );
-            })}
+            <AnimButton
+              label="No animation"
+              active={playAnim === null}
+              onClick={() => onPlay(null)}
+              muted
+            />
+            {animationInfo.names.map((name) => (
+              <AnimButton
+                key={name}
+                label={name}
+                active={playAnim === name}
+                onClick={() => onPlay(playAnim === name ? null : name)}
+              />
+            ))}
           </div>
         ) : (
           <div style={{ color: "#8a8a93", fontSize: 12 }}>
@@ -851,6 +838,41 @@ function ModelPanel({
         )}
       </Section>
     </div>
+  );
+}
+
+function AnimButton({
+  label,
+  active,
+  onClick,
+  muted = false,
+}: {
+  label: string;
+  active: boolean;
+  onClick: () => void;
+  muted?: boolean;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      style={{
+        textAlign: "left",
+        background: active
+          ? "rgba(255,216,77,0.18)"
+          : "rgba(255,255,255,0.04)",
+        color: active ? "#ffd84d" : muted ? "#8a8a93" : "white",
+        border: `1px solid ${active ? "#ffd84d" : "rgba(255,255,255,0.08)"}`,
+        borderRadius: 4,
+        padding: "6px 8px",
+        cursor: "pointer",
+        fontFamily: "inherit",
+        fontSize: 12,
+        fontStyle: muted && !active ? "italic" : "normal",
+      }}
+    >
+      {label}
+    </button>
   );
 }
 

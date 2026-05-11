@@ -24,18 +24,7 @@ export type AnimationInfo = {
   actions: Record<string, AnimationAction | null>;
 };
 
-const ANIM_PRIORITY = ["idle", "walk", "flying", "forward", "normal"];
 const FADE = 0.3;
-
-export function pickDefaultAnimation(names: string[]): string | null {
-  if (!names.length) return null;
-  const lower = names.map((n) => n.toLowerCase());
-  for (const key of ANIM_PRIORITY) {
-    const i = lower.findIndex((n) => n.includes(key));
-    if (i >= 0) return names[i];
-  }
-  return names[0];
-}
 
 /**
  * Quaternius/Kaykit/Kenney GLBs typically declare KHR_materials_unlit, which
@@ -202,12 +191,10 @@ export function Model({
     return () => onAnimationsLoaded?.(null);
   }, [names, actions, onAnimationsLoaded]);
 
-  // Decide which clip to play: parent's choice if valid, else default.
-  const activeAnim = useMemo(() => {
-    if (!names.length) return null;
-    if (playAnimation && actions[playAnimation]) return playAnimation;
-    return pickDefaultAnimation(names);
-  }, [playAnimation, names, actions]);
+  // Only play what the parent explicitly asked for. No auto-play default —
+  // the showcase opens silent and the user opts in via the picker.
+  const activeAnim =
+    playAnimation && actions[playAnimation] ? playAnimation : null;
 
   useEffect(() => {
     if (!activeAnim) return;
