@@ -207,10 +207,22 @@ async function findOptimizedModels(vendor: string, pack: string): Promise<string
 async function main() {
   if (!existsSync(GLB_ROOT)) {
     // Worktrees (and fresh checkouts) don't have the gitignored assets on
-    // disk. Emit an empty manifest so `next dev` / `next build` don't
-    // explode — the showcase just renders zero packs.
+    // disk. If a previously-generated manifest is checked in (the CI
+    // Docker build case — assets/ is gitignored so the build context
+    // never has them) leave it alone, so the deployed bundle keeps the
+    // pack list it was built with instead of getting clobbered to empty
+    // by the prebuild hook. Only emit an empty manifest when nothing
+    // has been generated yet — keeps `next dev` from exploding on a
+    // truly fresh checkout.
+    if (existsSync(OUT)) {
+      console.warn(
+        `[manifest] assets/glb/ not found at ${GLB_ROOT}; keeping existing ${relative(SHOWCASE_DIR, OUT)} ` +
+          `(run \`pnpm assets:sync\` then \`pnpm manifest\` to refresh).`,
+      );
+      return;
+    }
     console.warn(
-      `[manifest] assets/glb/ not found at ${GLB_ROOT}; emitting empty manifest. ` +
+      `[manifest] assets/glb/ not found at ${GLB_ROOT} and no existing manifest; emitting empty. ` +
         `Run \`pnpm assets:sync\` or download payloads to populate.`,
     );
     await mkdir(dirname(OUT), { recursive: true });

@@ -5,8 +5,10 @@ dist/
 *.tsbuildinfo
 next-env.d.ts.bak
 
-# Generated at predev/prebuild — kept out of git
-src/lib/manifest.json
+# Bbox cache rebuilt on every `pnpm manifest` — keyed by mtime,
+# committing it just churns. src/lib/manifest.json IS checked in:
+# the CI Docker build can't see assets/ (gitignored) so the
+# committed manifest is what the deployed bundle ships with.
 .manifest-bbox-cache.json
 
 # Symlinks to asset trees (point at gitignored content)
