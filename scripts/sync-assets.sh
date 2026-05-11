@@ -105,7 +105,6 @@ exec docker run "${DOCKER_FLAGS[@]}" \
   --checkers 32 \
   --stats 5s \
   --progress \
-  --verbose \
   --exclude '.DS_Store' \
   --exclude '._*' \
   --exclude '.git/**' \
