@@ -108,6 +108,7 @@ exec docker run "${DOCKER_FLAGS[@]}" \
   --stats 5s \
   --stats-one-line \
   --stats-one-line-date \
+  --verbose \
   --exclude '.DS_Store' \
   --exclude '._*' \
   --exclude '.git/**' \
