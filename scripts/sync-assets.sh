@@ -76,8 +76,9 @@ if [ -t 1 ]; then
 fi
 
 echo "[sync] starting rclone (assets/ → :s3:$R2_ASSETS_BUCKET)"
-echo "[sync] expect a quiet ~30s while --fast-list pulls the remote index,"
-echo "[sync] then per-file activity once transfers begin."
+echo "[sync] expect a quiet 2-3 min while --fast-list pulls the full remote"
+echo "[sync] index (~10k+ objects in this bucket), then per-file activity"
+echo "[sync] once transfers begin."
 
 # `:s3:<bucket>` is rclone's ad-hoc remote prefix — backend config from
 # RCLONE_S3_* env vars, no rclone.conf needed. provider=Cloudflare picks
