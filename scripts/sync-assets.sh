@@ -76,9 +76,8 @@ if [ -t 1 ]; then
 fi
 
 echo "[sync] starting rclone (assets/ → :s3:$R2_ASSETS_BUCKET)"
-echo "[sync] expect a quiet 2-3 min while --fast-list pulls the full remote"
-echo "[sync] index (~10k+ objects in this bucket), then per-file activity"
-echo "[sync] once transfers begin."
+echo "[sync] uploads start as soon as directories are walked; expect"
+echo "[sync] per-file activity within a few seconds."
 
 # `:s3:<bucket>` is rclone's ad-hoc remote prefix — backend config from
 # RCLONE_S3_* env vars, no rclone.conf needed. provider=Cloudflare picks
@@ -100,7 +99,6 @@ exec docker run "${DOCKER_FLAGS[@]}" \
   sync /data ":s3:$R2_ASSETS_BUCKET" \
   --header-upload "Cache-Control: public, max-age=31536000, immutable" \
   --size-only \
-  --fast-list \
   --skip-links \
   --transfers 16 \
   --checkers 8 \
