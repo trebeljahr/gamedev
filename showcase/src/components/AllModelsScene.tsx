@@ -483,12 +483,11 @@ function GroundedModel({
 }) {
   const [sx, _sy, sz] = slot.position;
   const [cw, cd] = slot.cellSize;
-  const [cxLocal, czLocal] = slot.model.cxz ?? [0, 0];
-  // Cell centre in world coords, then offset by the GLB's local bbox centre
-  // so the model's bbox lands centred on its base. Vast majority of GLBs are
-  // origin-centred and cxz is ~0, but some have off-origin meshes.
-  const x = sx + cw / 2 - cxLocal;
-  const z = sz + cd / 2 - czLocal;
+  // Model recenters its geometry's XZ centroid on its local origin, so we
+  // just drop it at the cell centre. Y is left alone by Model so we ground
+  // it here using the manifest's bbox minY.
+  const x = sx + cw / 2;
+  const z = sz + cd / 2;
   const y = BASE_TOP_Y - (slot.model.minY ?? 0);
 
   const slotIndex = slot.index;
