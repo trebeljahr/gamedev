@@ -9,8 +9,8 @@
     "lint": "pnpm --filter 3d-assets-showcase lint",
     "manifest": "pnpm --filter 3d-assets-showcase manifest",
     "assets:serve": "node scripts/serve-assets.mjs",
-    "assets:sync": "dotenvx run -f .env.production -f .env.local --ignore=MISSING_ENV_FILE --quiet -- bash scripts/sync-assets.sh",
-    "assets:sync:dry": "dotenvx run -f .env.production -f .env.local --ignore=MISSING_ENV_FILE --quiet -- bash scripts/sync-assets.sh --dry-run"
+    "assets:sync": "dotenvx run -f .env.production -f .env.local --ignore=MISSING_ENV_FILE --overload --quiet -- bash scripts/sync-assets.sh",
+    "assets:sync:dry": "dotenvx run -f .env.production -f .env.local --ignore=MISSING_ENV_FILE --overload --quiet -- bash scripts/sync-assets.sh --dry-run"
   },
   "packageManager": "pnpm@11.1.0+sha512.0c44e842e5686b2c061a81adda8b2258bd8818e9704b2cf2c63d56b931a7b2e910092e085027003b96ca3911ab56a07f6df5abaed2be9925034cdd686a535b14"
 }
