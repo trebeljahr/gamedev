@@ -29,7 +29,7 @@ export function Viewer({ url }: { url: string }) {
         />
         <Suspense fallback={null}>
           <ErrorBoundary fallback={<FallbackBox />}>
-            <Bounds key={url} fit clip observe margin={1.4}>
+            <Bounds key={url} fit margin={1.4}>
               <Model
                 url={url}
                 autoRotate
