@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import type { ReactNode } from "react";
-import { useState } from "react";
 import { navItems, type NavKey } from "@/lib/navigation";
 
 type SiteHeaderProps = {
@@ -12,18 +12,62 @@ type SiteHeaderProps = {
   active?: NavKey;
 };
 
-function activeKey(pathname: string): NavKey | undefined {
-  if (pathname === "/") return "library";
+function activeKey(pathname: string, search: string, hash: string): NavKey | undefined {
+  if (pathname === "/") {
+    if (hash === "#3d-packs" || hash === "#3d-collections" || hash.startsWith("#creator-")) return "packs";
+    return "library";
+  }
   if (pathname === "/models") return "packs";
-  if (pathname === "/media") return "sounds";
   if (pathname === "/all") return undefined;
+  if (pathname === "/media") {
+    const view = new URLSearchParams(search).get("view");
+    if (view === "art") return "art";
+    if (view === "textures" || view === "sources") return "packs";
+    return "sounds";
+  }
   return "packs";
+}
+
+function shouldUsePendingActive(event: React.MouseEvent): boolean {
+  return (
+    !event.defaultPrevented &&
+    event.button === 0 &&
+    !event.metaKey &&
+    !event.altKey &&
+    !event.ctrlKey &&
+    !event.shiftKey
+  );
 }
 
 export function SiteHeader({ meta, compact = false, active }: SiteHeaderProps) {
   const pathname = usePathname();
-  const current = active ?? activeKey(pathname);
+  const [locationParts, setLocationParts] = useState({ search: "", hash: "" });
+  const [pendingActive, setPendingActive] = useState<NavKey | null>(null);
   const [openKey, setOpenKey] = useState<NavKey | null>(null);
+  const inferredActive = activeKey(pathname, locationParts.search, locationParts.hash);
+  const routedActive = active ?? inferredActive;
+  const current = pendingActive ?? routedActive;
+
+  useEffect(() => {
+    function syncLocationParts() {
+      setLocationParts({
+        search: window.location.search,
+        hash: window.location.hash,
+      });
+    }
+
+    syncLocationParts();
+    window.addEventListener("hashchange", syncLocationParts);
+    window.addEventListener("popstate", syncLocationParts);
+    return () => {
+      window.removeEventListener("hashchange", syncLocationParts);
+      window.removeEventListener("popstate", syncLocationParts);
+    };
+  }, [pathname]);
+
+  useEffect(() => {
+    if (pendingActive === routedActive) setPendingActive(null);
+  }, [pendingActive, routedActive]);
 
   return (
     <header className={`app-header ${compact ? "compact" : ""}`}>
@@ -39,7 +83,10 @@ export function SiteHeader({ meta, compact = false, active }: SiteHeaderProps) {
               <Link
                 key={item.key}
                 href={item.href}
-                onClick={() => setOpenKey(null)}
+                onClick={(event) => {
+                  setOpenKey(null);
+                  if (shouldUsePendingActive(event)) setPendingActive(item.key);
+                }}
                 aria-current={current === item.key ? "page" : undefined}
               >
                 {item.label}
@@ -60,7 +107,14 @@ export function SiteHeader({ meta, compact = false, active }: SiteHeaderProps) {
                 </summary>
                 <div className="nav-panel">
                   {item.items.map((child) => (
-                    <Link key={child.href} href={child.href} onClick={() => setOpenKey(null)}>
+                    <Link
+                      key={child.href}
+                      href={child.href}
+                      onClick={(event) => {
+                        setOpenKey(null);
+                        if (shouldUsePendingActive(event)) setPendingActive(item.key);
+                      }}
+                    >
                       {child.label}
                     </Link>
                   ))}
