@@ -38,6 +38,7 @@ import { licenseForVendor } from "@/lib/license";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { LicenseLink } from "@/components/LicenseLink";
 import { packZipFilename } from "@/lib/pack-zip";
+import { ModelDownloadLinks } from "@/components/ModelDownloadLinks";
 import { uniqueTags } from "@/lib/tags";
 import {
   CameraFloorGuard,
@@ -979,7 +980,6 @@ function ModelPanel({
   onClose: () => void;
 }) {
   const license = licenseForVendor(slot.pack.vendor);
-  const downloadName = `${slot.model.title.replace(/\s+/g, "_")}.glb`;
   return (
     <div
       style={{
@@ -1043,22 +1043,7 @@ function ModelPanel({
         </button>
       </div>
 
-      <a
-        href={assetUrl(slot.model.file)}
-        download={downloadName}
-        style={{
-          display: "inline-block",
-          textAlign: "center",
-          background: "#ffd84d",
-          color: "#1a1a20",
-          padding: "8px 12px",
-          borderRadius: 6,
-          fontWeight: 600,
-          textDecoration: "none",
-        }}
-      >
-        Download GLB
-      </a>
+      <ModelDownloadLinks model={slot.model} className="scene-model-downloads" />
 
       <Section title="Metadata">
         <div style={{ display: "flex", flexWrap: "wrap", gap: 5 }}>

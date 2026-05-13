@@ -4,6 +4,7 @@ import type { ModelCategory } from "./catalog-metadata";
 export type Model = {
   name: string;
   file: string;
+  downloads?: ModelDownload[];
   label: string;
   title: string;
   description: string;
@@ -22,6 +23,12 @@ export type Model = {
   // the model's XZ centre; the renderer uses this so each model sits in the
   // middle of its cell rather than potentially overhanging into a neighbour.
   cxz: [number, number];
+};
+export type ModelDownload = {
+  format: string;
+  file: string;
+  label?: string;
+  optimized?: boolean;
 };
 export type PackPreview = {
   modelFile: string;
@@ -76,4 +83,68 @@ export function assetUrl(file: string): string {
   if (/^[a-z][a-z0-9+.-]*:\/\//i.test(file)) return file;
   if (!ASSETS_BASE_URL) return file;
   return ASSETS_BASE_URL + (file.startsWith("/") ? file : `/${file}`);
+}
+
+export function modelFormatForFile(file: string): string {
+  const clean = file.split(/[?#]/, 1)[0].toLowerCase();
+  if (clean.endsWith(".gltf")) return "gltf";
+  const ext = clean.match(/\.([a-z0-9]+)$/)?.[1];
+  return ext || "file";
+}
+
+export function modelDownloadLabel(download: ModelDownload): string {
+  const format = download.format.toLowerCase();
+  const formatted =
+    format === "gltf"
+      ? "glTF"
+      : format === "glb"
+        ? "GLB"
+        : format.toUpperCase();
+  if (download.optimized) return `${formatted} optimized`;
+  return `${formatted} source`;
+}
+
+export function downloadsForModel(model: Model): ModelDownload[] {
+  const rawDownloads =
+    model.downloads && model.downloads.length > 0
+      ? model.downloads
+      : [
+          {
+            format: modelFormatForFile(model.file),
+            file: model.file,
+            optimized: model.file.startsWith("/glb/"),
+          },
+        ];
+  const seen = new Set<string>();
+  const downloads: ModelDownload[] = [];
+  for (const download of rawDownloads) {
+    if (!download.file || seen.has(download.file)) continue;
+    seen.add(download.file);
+    downloads.push({
+      ...download,
+      format: (download.format || modelFormatForFile(download.file)).toLowerCase(),
+      optimized: download.optimized ?? download.file.startsWith("/glb/"),
+    });
+  }
+  return downloads.sort((a, b) => {
+    if (a.optimized !== b.optimized) return a.optimized ? -1 : 1;
+    return a.format.localeCompare(b.format);
+  });
+}
+
+export function downloadProxyUrl(file: string, name?: string): string {
+  const params = new URLSearchParams({ file });
+  if (name) params.set("name", name);
+  return `/api/models/download?${params.toString()}`;
+}
+
+export function modelDownloadFilename(model: Model, download: ModelDownload): string {
+  const format = modelFormatForFile(download.file);
+  const base = (model.title || model.name || "model")
+    .trim()
+    .replace(/[^a-z0-9._-]+/gi, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 80) || "model";
+  const variant = download.optimized ? "optimized" : "source";
+  return `${base}-${variant}.${format}`;
 }

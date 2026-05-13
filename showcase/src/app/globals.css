@@ -844,6 +844,40 @@ select:focus-visible {
   color: #11100b;
   background: #ffe57d;
 }
+.model-download-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 10px;
+}
+.model-download-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 30px;
+  padding: 0 9px;
+  color: #11100b;
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 750;
+  white-space: nowrap;
+}
+.model-download-links a:hover {
+  color: #11100b;
+  background: #ffe57d;
+  border-color: #ffe57d;
+}
+.model-download-links.compact {
+  gap: 6px;
+  margin-top: 8px;
+}
+.model-download-links.compact a {
+  min-height: 27px;
+  padding: 0 8px;
+  font-size: 11px;
+}
 .model-metadata {
   display: grid;
   align-content: start;
@@ -1211,6 +1245,16 @@ select:focus-visible {
   font-size: 12px;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+.asset-focus-downloads {
+  margin-top: 2px;
+}
+.scene-model-downloads {
+  margin-top: 0;
+}
+.scene-model-downloads a {
+  flex: 1 1 130px;
+  min-height: 34px;
 }
 .pack-credit-panel {
   display: grid;

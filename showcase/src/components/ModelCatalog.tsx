@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 import { useMemo, useState } from "react";
 import { InfiniteListSentinel, useInfiniteList } from "@/components/useInfiniteList";
 import { LicenseLink } from "@/components/LicenseLink";
+import { ModelDownloadLinks } from "@/components/ModelDownloadLinks";
 import { SiteHeader } from "@/components/SiteHeader";
 import { licenseForVendor, type VendorLicense } from "@/lib/license";
 import type { Manifest, Model, Pack } from "@/lib/manifest";
@@ -206,6 +207,7 @@ export function ModelCatalog({ manifest }: ModelCatalogProps) {
                 <div className="model-card-actions">
                   <Link href={modelViewerHref(entry)}>Evaluate asset</Link>
                 </div>
+                <ModelDownloadLinks model={entry.model} compact />
               </div>
               <dl className="model-metadata">
                 <div>

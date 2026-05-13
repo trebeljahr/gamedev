@@ -74,6 +74,7 @@ type Size = [number, number, number];
 type Model = {
   name: string;
   file: string;
+  downloads: ModelDownload[];
   label: string;
   title: string;
   description: string;
@@ -86,6 +87,12 @@ type Model = {
   size: Size;
   minY: number;
   cxz: [number, number];
+};
+type ModelDownload = {
+  format: string;
+  file: string;
+  label?: string;
+  optimized?: boolean;
 };
 type Pack = {
   id: string;
@@ -365,11 +372,11 @@ async function computeBbox(
 async function findSourceModels(vendor: string, pack: string): Promise<string[]> {
   const packDir = join(MODELS_ROOT, vendor, pack);
   if (!existsSync(packDir)) return [];
-  const all = await walk(packDir, (n) => {
-    const lower = n.toLowerCase();
-    return lower.endsWith(".gltf") || lower.endsWith(".glb");
+  const all = await findSourceDownloadFiles(vendor, pack);
+  const filtered = all.filter((p) => {
+    const lower = p.toLowerCase();
+    return !/\/animations?\//i.test(p) && (lower.endsWith(".gltf") || lower.endsWith(".glb"));
   });
-  const filtered = all.filter((p) => !/\/animations?\//i.test(p));
   if (filtered.length === 0) return [];
   const rank = (path: string) => {
     const lower = path.toLowerCase();
@@ -390,6 +397,79 @@ async function findOptimizedModels(vendor: string, pack: string): Promise<string
   const packDir = join(GLB_ROOT, vendor, pack);
   if (!existsSync(packDir)) return [];
   return walk(packDir, (n) => n.toLowerCase().endsWith(".glb"));
+}
+
+const SOURCE_DOWNLOAD_EXTENSIONS = [".gltf", ".glb", ".fbx", ".obj", ".blend", ".dae"];
+
+async function findSourceDownloadFiles(vendor: string, pack: string): Promise<string[]> {
+  const packDir = join(MODELS_ROOT, vendor, pack);
+  if (!existsSync(packDir)) return [];
+  return walk(packDir, (_path, name) => {
+    const lower = name.toLowerCase();
+    return SOURCE_DOWNLOAD_EXTENSIONS.some((ext) => lower.endsWith(ext));
+  });
+}
+
+function groupByModelKey(paths: string[]): Map<string, string[]> {
+  const out = new Map<string, string[]>();
+  for (const path of paths) {
+    const key = modelKey(path.split("/").pop()!).toLowerCase();
+    const list = out.get(key) ?? [];
+    list.push(path);
+    out.set(key, list);
+  }
+  for (const list of out.values()) list.sort((a, b) => a.localeCompare(b));
+  return out;
+}
+
+function formatForPath(path: string): string {
+  const lower = path.toLowerCase();
+  if (lower.endsWith(".gltf")) return "gltf";
+  return lower.match(/\.([a-z0-9]+)$/)?.[1] ?? "file";
+}
+
+function downloadLabel(format: string, optimized: boolean): string {
+  const name = format === "gltf" ? "glTF" : format === "glb" ? "GLB" : format.toUpperCase();
+  return `${name} ${optimized ? "optimized" : "source"}`;
+}
+
+function buildModelDownloads(
+  modelAbsPath: string,
+  optimizedByKey: Map<string, string[]>,
+  sourceByKey: Map<string, string[]>,
+): ModelDownload[] {
+  const key = modelKey(modelAbsPath.split("/").pop()!).toLowerCase();
+  const downloads: ModelDownload[] = [];
+  const seen = new Set<string>();
+  const seenFormatVariants = new Set<string>();
+
+  function add(absPath: string, base: string, urlPrefix: string, optimized: boolean) {
+    const file = urlFor(absPath, base, urlPrefix);
+    const format = formatForPath(absPath);
+    const formatVariant = `${optimized ? "optimized" : "source"}:${format}`;
+    if (seen.has(file)) return;
+    if (seenFormatVariants.has(formatVariant)) return;
+    seen.add(file);
+    seenFormatVariants.add(formatVariant);
+    downloads.push({
+      format,
+      file,
+      label: downloadLabel(format, optimized),
+      optimized,
+    });
+  }
+
+  for (const optimized of optimizedByKey.get(key) ?? []) add(optimized, GLB_ROOT, "/glb", true);
+  for (const source of sourceByKey.get(key) ?? []) add(source, MODELS_ROOT, "/raw", false);
+  if (downloads.length === 0) {
+    const inGlbRoot = modelAbsPath.startsWith(GLB_ROOT);
+    add(modelAbsPath, inGlbRoot ? GLB_ROOT : MODELS_ROOT, inGlbRoot ? "/glb" : "/raw", inGlbRoot);
+  }
+
+  return downloads.sort((a, b) => {
+    if (a.optimized !== b.optimized) return a.optimized ? -1 : 1;
+    return a.format.localeCompare(b.format);
+  });
 }
 
 /* -------- main ----------------------------------------------------------- */
@@ -444,6 +524,14 @@ async function main() {
       .sort();
 
     for (const pack of packDirs) {
+      const sourceDownloads = (await findSourceDownloadFiles(vendor, pack)).filter(
+        (path) => !/\/animations?\//i.test(path) && !isNonCommercialModelPath(relative(ASSETS_ROOT, path)),
+      );
+      const optimizedDownloads = (await findOptimizedModels(vendor, pack)).filter(
+        (path) => !isNonCommercialModelPath(relative(ASSETS_ROOT, path)),
+      );
+      const sourceByKey = groupByModelKey(sourceDownloads);
+      const optimizedByKey = groupByModelKey(optimizedDownloads);
       let abs: string[] = [];
       let usedSource = false;
       let base = GLB_ROOT;
@@ -457,7 +545,7 @@ async function main() {
         }
       }
       if (abs.length === 0) {
-        abs = await findOptimizedModels(vendor, pack);
+        abs = optimizedDownloads;
       }
       abs = abs.filter((path) => !isNonCommercialModelPath(relative(ASSETS_ROOT, path)));
       if (abs.length === 0) continue;
@@ -508,6 +596,7 @@ async function main() {
         models.push({
           name,
           file,
+          downloads: buildModelDownloads(a, optimizedByKey, sourceByKey),
           label: metadata.title,
           ...metadata,
           size: entry.size,

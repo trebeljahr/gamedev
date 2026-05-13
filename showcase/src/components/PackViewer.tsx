@@ -6,6 +6,7 @@ import dynamic from "next/dynamic";
 import { useInfiniteList } from "@/components/useInfiniteList";
 import { LicenseLink } from "@/components/LicenseLink";
 import { PackDownloadButton } from "@/components/PackDownloadButton";
+import { ModelDownloadLinks } from "@/components/ModelDownloadLinks";
 import { licenseForVendor } from "@/lib/license";
 import { assetUrl, type Pack } from "@/lib/manifest";
 import { uniqueTags } from "@/lib/tags";
@@ -228,11 +229,7 @@ function SingleAssetViewer({ pack, index }: { pack: Pack; index: number }) {
             <span key={tag}>{tag}</span>
           ))}
         </div>
-        <div className="pack-view-actions">
-          <a href={assetUrl(model.file)} download={`${model.title.replace(/\s+/g, "_")}.glb`}>
-            Download GLB
-          </a>
-        </div>
+        <ModelDownloadLinks model={model} className="asset-focus-downloads" compact />
         <input
           className="model-search"
           type="search"
