@@ -18,5 +18,6 @@ export default async function PackPage({
   const model = Array.isArray(query?.model) ? query?.model[0] : query?.model;
   const data = findPack(vendor, pack);
   if (!data) notFound();
+  if (model && !data.models.some((item) => item.file === model || item.name === model)) notFound();
   return <PackViewer pack={data} initialModelFile={model} />;
 }

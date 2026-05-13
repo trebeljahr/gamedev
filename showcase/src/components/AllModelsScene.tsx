@@ -168,12 +168,12 @@ export function AllModelsScene({
 
 export function PackModelsScene({
   pack,
-  selectedIndex,
+  selectedIndex = null,
   onSelectedIndexChange,
 }: {
   pack: Pack;
-  selectedIndex: number;
-  onSelectedIndexChange: (index: number) => void;
+  selectedIndex?: number | null;
+  onSelectedIndexChange?: (index: number) => void;
 }) {
   const layout = useMemo(() => layoutPackModels(pack), [pack]);
   const start = useMemo(() => startForBounds(layout.bounds), [layout]);

@@ -1006,15 +1006,20 @@ select:focus-visible {
 }
 
 .model-list { list-style: none; padding: 0; margin: 0; }
-.model-list li button {
+.model-list li button,
+.model-list li a {
+  display: block;
   width: 100%; text-align: left; cursor: pointer;
   background: transparent; color: var(--text);
   border: 1px solid transparent; border-radius: 6px;
   padding: 6px 8px; font-size: 13px;
   font-family: inherit;
+  text-decoration: none;
 }
-.model-list li button:hover { background: var(--surface-2); }
-.model-list li button.active {
+.model-list li button:hover,
+.model-list li a:hover { background: var(--surface-2); }
+.model-list li button.active,
+.model-list li a.active {
   background: var(--surface-2);
   border-color: var(--accent);
   color: var(--accent);
@@ -1042,13 +1047,18 @@ select:focus-visible {
   font-size: 12px;
   font-weight: 400;
 }
-.viewer-bar .nav button {
+.viewer-bar .nav button,
+.viewer-bar .nav a {
+  display: inline-grid;
+  place-items: center;
   width: 36px; height: 36px; border-radius: 6px;
   background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.15);
   color: white; cursor: pointer; font-size: 16px;
   font-family: inherit;
+  text-decoration: none;
 }
-.viewer-bar .nav button:hover { background: rgba(0,0,0,0.7); }
+.viewer-bar .nav button:hover,
+.viewer-bar .nav a:hover { background: rgba(0,0,0,0.7); }
 .viewer-bar .nav { display: flex; gap: 6px; }
 
 .creator-page {
