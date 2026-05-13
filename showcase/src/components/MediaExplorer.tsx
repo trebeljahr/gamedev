@@ -1185,7 +1185,7 @@ export function MediaExplorer({
 
       <section className="media-hero">
         <div>
-          <div className="vendor-tag">Library</div>
+          <div className="landing-kicker">GameDev Asset Library</div>
           <h2>Browse 2D art and sounds under the same asset taxonomy as the 3D library.</h2>
         </div>
         <div className="media-tabs" role="tablist" aria-label="Media type">
