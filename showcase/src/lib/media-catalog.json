@@ -3,9 +3,9 @@
   "stats": {
     "artPackCount": 260,
     "artSampleCount": 1923,
-    "soundCollectionCount": 26,
-    "soundSampleCount": 138,
-    "musicTrackCount": 10,
+    "soundCollectionCount": 22,
+    "soundSampleCount": 132,
+    "musicTrackCount": 16,
     "sourceMappingCount": 148,
     "artLicenseSplit": {
       "cc0": 187,
@@ -64049,189 +64049,6 @@
       ]
     },
     {
-      "id": "sounds/kenney/music-jingles/**",
-      "title": "Music Jingles",
-      "organization": "creator-pack",
-      "organizationLabel": "Creator packs",
-      "source": "Kenney",
-      "path": "sounds/kenney/music-jingles/**",
-      "license": "CC0 1.0",
-      "notes": "Generated from copied Kenney audio folders under assets/sounds/kenney.",
-      "url": "https://kenney.nl/assets?q=audio",
-      "description": "Music Jingles is a Kenney creator pack for background music, menus, level ambience. License: CC0 1.0. Generated from copied Kenney audio folders under assets/sounds/kenney.",
-      "category": "music",
-      "themes": [
-        "music"
-      ],
-      "useCases": [
-        "background music",
-        "menus",
-        "level ambience"
-      ],
-      "tags": [
-        "creator packs",
-        "creator-pack",
-        "kenney",
-        "music",
-        "sfx",
-        "sound"
-      ],
-      "searchText": "music jingles kenney sounds/kenney/music-jingles/** cc0 1.0 generated from copied kenney audio folders under assets/sounds/kenney. creator packs creator-pack music jingles is a kenney creator pack for background music, menus, level ambience. license: cc0 1.0. generated from copied kenney audio folders under assets/sounds/kenney. music background music menus level ambience creator packs kenney sfx sound",
-      "sampleCount": 6,
-      "samples": [
-        {
-          "collectionId": "sounds/kenney/music-jingles/**",
-          "path": "sounds/kenney/music-jingles/extracted/Audio/Hit jingles/jingles_HIT00.ogg",
-          "src": "/sounds/kenney/music-jingles/extracted/Audio/Hit%20jingles/jingles_HIT00.ogg",
-          "label": "Jingles Hit 00",
-          "kind": "combat",
-          "description": "Jingles Hit 00 is a music sound sample from Music Jingles. Useful for background music, menus, level ambience.",
-          "category": "music",
-          "themes": [
-            "combat",
-            "music"
-          ],
-          "useCases": [
-            "background music",
-            "menus",
-            "level ambience"
-          ],
-          "tags": [
-            "combat",
-            "music",
-            "sfx",
-            "sound"
-          ],
-          "searchText": "jingles hit 00 sounds/kenney/music-jingles/extracted/audio/hit jingles/jingles_hit00.ogg music jingles combat jingles hit 00 is a music sound sample from music jingles. useful for background music, menus, level ambience. music background music menus level ambience sfx sound"
-        },
-        {
-          "collectionId": "sounds/kenney/music-jingles/**",
-          "path": "sounds/kenney/music-jingles/extracted/Audio/Hit jingles/jingles_HIT01.ogg",
-          "src": "/sounds/kenney/music-jingles/extracted/Audio/Hit%20jingles/jingles_HIT01.ogg",
-          "label": "Jingles Hit 01",
-          "kind": "combat",
-          "description": "Jingles Hit 01 is a music sound sample from Music Jingles. Useful for background music, menus, level ambience.",
-          "category": "music",
-          "themes": [
-            "combat",
-            "music"
-          ],
-          "useCases": [
-            "background music",
-            "menus",
-            "level ambience"
-          ],
-          "tags": [
-            "combat",
-            "music",
-            "sfx",
-            "sound"
-          ],
-          "searchText": "jingles hit 01 sounds/kenney/music-jingles/extracted/audio/hit jingles/jingles_hit01.ogg music jingles combat jingles hit 01 is a music sound sample from music jingles. useful for background music, menus, level ambience. music background music menus level ambience sfx sound"
-        },
-        {
-          "collectionId": "sounds/kenney/music-jingles/**",
-          "path": "sounds/kenney/music-jingles/extracted/Audio/Hit jingles/jingles_HIT02.ogg",
-          "src": "/sounds/kenney/music-jingles/extracted/Audio/Hit%20jingles/jingles_HIT02.ogg",
-          "label": "Jingles Hit 02",
-          "kind": "combat",
-          "description": "Jingles Hit 02 is a music sound sample from Music Jingles. Useful for background music, menus, level ambience.",
-          "category": "music",
-          "themes": [
-            "combat",
-            "music"
-          ],
-          "useCases": [
-            "background music",
-            "menus",
-            "level ambience"
-          ],
-          "tags": [
-            "combat",
-            "music",
-            "sfx",
-            "sound"
-          ],
-          "searchText": "jingles hit 02 sounds/kenney/music-jingles/extracted/audio/hit jingles/jingles_hit02.ogg music jingles combat jingles hit 02 is a music sound sample from music jingles. useful for background music, menus, level ambience. music background music menus level ambience sfx sound"
-        },
-        {
-          "collectionId": "sounds/kenney/music-jingles/**",
-          "path": "sounds/kenney/music-jingles/extracted/Audio/Hit jingles/jingles_HIT03.ogg",
-          "src": "/sounds/kenney/music-jingles/extracted/Audio/Hit%20jingles/jingles_HIT03.ogg",
-          "label": "Jingles Hit 03",
-          "kind": "combat",
-          "description": "Jingles Hit 03 is a music sound sample from Music Jingles. Useful for background music, menus, level ambience.",
-          "category": "music",
-          "themes": [
-            "combat",
-            "music"
-          ],
-          "useCases": [
-            "background music",
-            "menus",
-            "level ambience"
-          ],
-          "tags": [
-            "combat",
-            "music",
-            "sfx",
-            "sound"
-          ],
-          "searchText": "jingles hit 03 sounds/kenney/music-jingles/extracted/audio/hit jingles/jingles_hit03.ogg music jingles combat jingles hit 03 is a music sound sample from music jingles. useful for background music, menus, level ambience. music background music menus level ambience sfx sound"
-        },
-        {
-          "collectionId": "sounds/kenney/music-jingles/**",
-          "path": "sounds/kenney/music-jingles/extracted/Audio/Hit jingles/jingles_HIT04.ogg",
-          "src": "/sounds/kenney/music-jingles/extracted/Audio/Hit%20jingles/jingles_HIT04.ogg",
-          "label": "Jingles Hit 04",
-          "kind": "combat",
-          "description": "Jingles Hit 04 is a music sound sample from Music Jingles. Useful for background music, menus, level ambience.",
-          "category": "music",
-          "themes": [
-            "combat",
-            "music"
-          ],
-          "useCases": [
-            "background music",
-            "menus",
-            "level ambience"
-          ],
-          "tags": [
-            "combat",
-            "music",
-            "sfx",
-            "sound"
-          ],
-          "searchText": "jingles hit 04 sounds/kenney/music-jingles/extracted/audio/hit jingles/jingles_hit04.ogg music jingles combat jingles hit 04 is a music sound sample from music jingles. useful for background music, menus, level ambience. music background music menus level ambience sfx sound"
-        },
-        {
-          "collectionId": "sounds/kenney/music-jingles/**",
-          "path": "sounds/kenney/music-jingles/extracted/Audio/Hit jingles/jingles_HIT05.ogg",
-          "src": "/sounds/kenney/music-jingles/extracted/Audio/Hit%20jingles/jingles_HIT05.ogg",
-          "label": "Jingles Hit 05",
-          "kind": "combat",
-          "description": "Jingles Hit 05 is a music sound sample from Music Jingles. Useful for background music, menus, level ambience.",
-          "category": "music",
-          "themes": [
-            "combat",
-            "music"
-          ],
-          "useCases": [
-            "background music",
-            "menus",
-            "level ambience"
-          ],
-          "tags": [
-            "combat",
-            "music",
-            "sfx",
-            "sound"
-          ],
-          "searchText": "jingles hit 05 sounds/kenney/music-jingles/extracted/audio/hit jingles/jingles_hit05.ogg music jingles combat jingles hit 05 is a music sound sample from music jingles. useful for background music, menus, level ambience. music background music menus level ambience sfx sound"
-        }
-      ]
-    },
-    {
       "id": "sounds/kenney/rpg-audio/**",
       "title": "Rpg Audio",
       "organization": "creator-pack",
@@ -65311,108 +65128,153 @@
           "searchText": "4 sounds/kenney/voiceover-pack-fighter/extracted/audio/4.ogg voiceover pack fighter effect 4 is a effect sound sample from voiceover pack fighter. useful for gameplay feedback, scene polish, interactive events. general gameplay feedback scene polish interactive events sfx sound"
         }
       ]
-    },
-    {
-      "id": "sounds/**/{numeric-id}__{username}__*.{mp3,wav,flac,ogg,m4a}",
-      "title": "Freesound ID file pattern",
-      "organization": "source-pattern",
-      "organizationLabel": "Source patterns",
-      "source": "Freesound",
-      "path": "sounds/**/{numeric-id}__{username}__*.{mp3,wav,flac,ogg,m4a}",
-      "license": "Varies",
-      "notes": "Per-file URL: https://freesound.org/s/{numeric-id}/. License is per-sound; check each.",
-      "description": "Freesound ID file pattern is a source-identification pattern for source verification, license lookup, file provenance. License: Varies. Per-file URL: https://freesound.org/s/{numeric-id}/. License is per-sound; check each.",
-      "category": "source-pattern",
-      "themes": [
-        "licensing",
-        "source"
-      ],
-      "useCases": [
-        "source verification",
-        "license lookup",
-        "file provenance"
-      ],
-      "tags": [
-        "freesound",
-        "licensing",
-        "sfx",
-        "sound",
-        "source",
-        "source patterns",
-        "source-pattern"
-      ],
-      "searchText": "freesound id file pattern freesound sounds/**/{numeric-id}__{username}__*.{mp3,wav,flac,ogg,m4a} varies per-file url: https://freesound.org/s/{numeric-id}/. license is per-sound; check each. source patterns source-pattern freesound id file pattern is a source-identification pattern for source verification, license lookup, file provenance. license: varies. per-file url: https://freesound.org/s/{numeric-id}/. license is per-sound; check each. licensing source source verification license lookup file provenance freesound sfx sound source patterns",
-      "sampleCount": 0,
-      "samples": []
-    },
-    {
-      "id": "sounds/**/freesound_community-*.mp3",
-      "title": "Pixabay Freesound Community pattern",
-      "organization": "source-pattern",
-      "organizationLabel": "Source patterns",
-      "source": "Pixabay",
-      "path": "sounds/**/freesound_community-*.mp3",
-      "license": "Pixabay License",
-      "notes": "'freesound_community' is Pixabay's re-upload account for CC0 Freesound content. Pixabay License (no attribution needed).",
-      "description": "Pixabay Freesound Community pattern is a source-identification pattern for source verification, license lookup, file provenance. License: Pixabay License. 'freesound_community' is Pixabay's re-upload account for CC0 Freesound content. Pixabay License (no attribution needed).",
-      "category": "source-pattern",
-      "themes": [
-        "licensing",
-        "source"
-      ],
-      "useCases": [
-        "source verification",
-        "license lookup",
-        "file provenance"
-      ],
-      "tags": [
-        "licensing",
-        "pixabay",
-        "sfx",
-        "sound",
-        "source",
-        "source patterns",
-        "source-pattern"
-      ],
-      "searchText": "pixabay freesound community pattern pixabay sounds/**/freesound_community-*.mp3 pixabay license 'freesound_community' is pixabay's re-upload account for cc0 freesound content. pixabay license (no attribution needed). source patterns source-pattern pixabay freesound community pattern is a source-identification pattern for source verification, license lookup, file provenance. license: pixabay license. 'freesound_community' is pixabay's re-upload account for cc0 freesound content. pixabay license (no attribution needed). licensing source source verification license lookup file provenance pixabay sfx sound source patterns",
-      "sampleCount": 0,
-      "samples": []
-    },
-    {
-      "id": "sounds/**/{name}-{id}.mp3",
-      "title": "Pixabay ID file pattern",
-      "organization": "source-pattern",
-      "organizationLabel": "Source patterns",
-      "source": "Pixabay",
-      "path": "sounds/**/{name}-{id}.mp3",
-      "license": "Pixabay License",
-      "notes": "Pixabay sound effects and music. IDs (4-7 digits, trailing before .mp3) map to Pixabay asset pages.",
-      "description": "Pixabay ID file pattern is a source-identification pattern for source verification, license lookup, file provenance. License: Pixabay License. Pixabay sound effects and music. IDs (4-7 digits, trailing before .mp3) map to Pixabay asset pages.",
-      "category": "source-pattern",
-      "themes": [
-        "licensing",
-        "source"
-      ],
-      "useCases": [
-        "source verification",
-        "license lookup",
-        "file provenance"
-      ],
-      "tags": [
-        "licensing",
-        "pixabay",
-        "sfx",
-        "sound",
-        "source",
-        "source patterns",
-        "source-pattern"
-      ],
-      "searchText": "pixabay id file pattern pixabay sounds/**/{name}-{id}.mp3 pixabay license pixabay sound effects and music. ids (4-7 digits, trailing before .mp3) map to pixabay asset pages. source patterns source-pattern pixabay id file pattern is a source-identification pattern for source verification, license lookup, file provenance. license: pixabay license. pixabay sound effects and music. ids (4-7 digits, trailing before .mp3) map to pixabay asset pages. licensing source source verification license lookup file provenance pixabay sfx sound source patterns",
-      "sampleCount": 0,
-      "samples": []
     }
   ],
   "musicTracks": [
+    {
+      "title": "Jingles Hit 00",
+      "source": "Kenney",
+      "path": "sounds/kenney/music-jingles/extracted/Audio/Hit jingles/jingles_HIT00.ogg",
+      "src": "/sounds/kenney/music-jingles/extracted/Audio/Hit%20jingles/jingles_HIT00.ogg",
+      "license": "CC0 1.0",
+      "url": "https://kenney.nl/assets?q=audio",
+      "description": "Jingles Hit 00 is a game music track by Kenney. Works well for background music, menus, level ambience. License: CC0 1.0.",
+      "category": "music",
+      "themes": [
+        "music"
+      ],
+      "useCases": [
+        "background music",
+        "menus",
+        "level ambience"
+      ],
+      "tags": [
+        "kenney",
+        "music",
+        "track"
+      ],
+      "searchText": "jingles hit 00 kenney cc0 1.0 sounds/kenney/music-jingles/extracted/audio/hit jingles/jingles_hit00.ogg jingles hit 00 is a game music track by kenney. works well for background music, menus, level ambience. license: cc0 1.0. music background music menus level ambience kenney track"
+    },
+    {
+      "title": "Jingles Hit 01",
+      "source": "Kenney",
+      "path": "sounds/kenney/music-jingles/extracted/Audio/Hit jingles/jingles_HIT01.ogg",
+      "src": "/sounds/kenney/music-jingles/extracted/Audio/Hit%20jingles/jingles_HIT01.ogg",
+      "license": "CC0 1.0",
+      "url": "https://kenney.nl/assets?q=audio",
+      "description": "Jingles Hit 01 is a game music track by Kenney. Works well for background music, menus, level ambience. License: CC0 1.0.",
+      "category": "music",
+      "themes": [
+        "music"
+      ],
+      "useCases": [
+        "background music",
+        "menus",
+        "level ambience"
+      ],
+      "tags": [
+        "kenney",
+        "music",
+        "track"
+      ],
+      "searchText": "jingles hit 01 kenney cc0 1.0 sounds/kenney/music-jingles/extracted/audio/hit jingles/jingles_hit01.ogg jingles hit 01 is a game music track by kenney. works well for background music, menus, level ambience. license: cc0 1.0. music background music menus level ambience kenney track"
+    },
+    {
+      "title": "Jingles Hit 02",
+      "source": "Kenney",
+      "path": "sounds/kenney/music-jingles/extracted/Audio/Hit jingles/jingles_HIT02.ogg",
+      "src": "/sounds/kenney/music-jingles/extracted/Audio/Hit%20jingles/jingles_HIT02.ogg",
+      "license": "CC0 1.0",
+      "url": "https://kenney.nl/assets?q=audio",
+      "description": "Jingles Hit 02 is a game music track by Kenney. Works well for background music, menus, level ambience. License: CC0 1.0.",
+      "category": "music",
+      "themes": [
+        "music"
+      ],
+      "useCases": [
+        "background music",
+        "menus",
+        "level ambience"
+      ],
+      "tags": [
+        "kenney",
+        "music",
+        "track"
+      ],
+      "searchText": "jingles hit 02 kenney cc0 1.0 sounds/kenney/music-jingles/extracted/audio/hit jingles/jingles_hit02.ogg jingles hit 02 is a game music track by kenney. works well for background music, menus, level ambience. license: cc0 1.0. music background music menus level ambience kenney track"
+    },
+    {
+      "title": "Jingles Hit 03",
+      "source": "Kenney",
+      "path": "sounds/kenney/music-jingles/extracted/Audio/Hit jingles/jingles_HIT03.ogg",
+      "src": "/sounds/kenney/music-jingles/extracted/Audio/Hit%20jingles/jingles_HIT03.ogg",
+      "license": "CC0 1.0",
+      "url": "https://kenney.nl/assets?q=audio",
+      "description": "Jingles Hit 03 is a game music track by Kenney. Works well for background music, menus, level ambience. License: CC0 1.0.",
+      "category": "music",
+      "themes": [
+        "music"
+      ],
+      "useCases": [
+        "background music",
+        "menus",
+        "level ambience"
+      ],
+      "tags": [
+        "kenney",
+        "music",
+        "track"
+      ],
+      "searchText": "jingles hit 03 kenney cc0 1.0 sounds/kenney/music-jingles/extracted/audio/hit jingles/jingles_hit03.ogg jingles hit 03 is a game music track by kenney. works well for background music, menus, level ambience. license: cc0 1.0. music background music menus level ambience kenney track"
+    },
+    {
+      "title": "Jingles Hit 04",
+      "source": "Kenney",
+      "path": "sounds/kenney/music-jingles/extracted/Audio/Hit jingles/jingles_HIT04.ogg",
+      "src": "/sounds/kenney/music-jingles/extracted/Audio/Hit%20jingles/jingles_HIT04.ogg",
+      "license": "CC0 1.0",
+      "url": "https://kenney.nl/assets?q=audio",
+      "description": "Jingles Hit 04 is a game music track by Kenney. Works well for background music, menus, level ambience. License: CC0 1.0.",
+      "category": "music",
+      "themes": [
+        "music"
+      ],
+      "useCases": [
+        "background music",
+        "menus",
+        "level ambience"
+      ],
+      "tags": [
+        "kenney",
+        "music",
+        "track"
+      ],
+      "searchText": "jingles hit 04 kenney cc0 1.0 sounds/kenney/music-jingles/extracted/audio/hit jingles/jingles_hit04.ogg jingles hit 04 is a game music track by kenney. works well for background music, menus, level ambience. license: cc0 1.0. music background music menus level ambience kenney track"
+    },
+    {
+      "title": "Jingles Hit 05",
+      "source": "Kenney",
+      "path": "sounds/kenney/music-jingles/extracted/Audio/Hit jingles/jingles_HIT05.ogg",
+      "src": "/sounds/kenney/music-jingles/extracted/Audio/Hit%20jingles/jingles_HIT05.ogg",
+      "license": "CC0 1.0",
+      "url": "https://kenney.nl/assets?q=audio",
+      "description": "Jingles Hit 05 is a game music track by Kenney. Works well for background music, menus, level ambience. License: CC0 1.0.",
+      "category": "music",
+      "themes": [
+        "music"
+      ],
+      "useCases": [
+        "background music",
+        "menus",
+        "level ambience"
+      ],
+      "tags": [
+        "kenney",
+        "music",
+        "track"
+      ],
+      "searchText": "jingles hit 05 kenney cc0 1.0 sounds/kenney/music-jingles/extracted/audio/hit jingles/jingles_hit05.ogg jingles hit 05 is a game music track by kenney. works well for background music, menus, level ambience. license: cc0 1.0. music background music menus level ambience kenney track"
+    },
     {
       "title": "Ancient Winds",
       "source": "Kevin MacLeod",

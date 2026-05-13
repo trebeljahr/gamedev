@@ -305,7 +305,7 @@ async function main() {
       };
     });
 
-  const soundCollectionsFromMappings = allowedMappings
+  const mappedSoundCollections = allowedMappings
     .filter((entry) => entry.path_pattern.startsWith("sounds/") && !entry.path_pattern.startsWith("sounds/music/"))
     .map((entry) => {
       const organization = soundOrganizationForMapping(entry);
@@ -349,9 +349,33 @@ async function main() {
       };
     });
 
+  const soundCollectionsFromMappings = mappedSoundCollections.filter((collection) => {
+    if (collection.samples.length === 0) return false;
+    if (collection.category !== "music") return true;
+
+    musicTracks.push(
+      ...collection.samples.map((sample) => {
+        const track = {
+          title: sample.label,
+          source: collection.source,
+          path: sample.path,
+          src: sample.src,
+          license: collection.license,
+          url: collection.url,
+        };
+        return {
+          ...track,
+          ...buildMusicTrackMetadata(track),
+        };
+      }),
+    );
+    return false;
+  });
+
   const soundCollectionsById = new Map(soundCollectionsFromMappings.map((collection) => [collection.id, collection]));
+  const mappedSoundCollectionIds = new Set(mappedSoundCollections.map((collection) => collection.id));
   for (const [collectionId, rawSamples] of [...soundSamplesByCollection.entries()].sort((a, b) => a[0].localeCompare(b[0]))) {
-    if (soundCollectionsById.has(collectionId)) continue;
+    if (soundCollectionsById.has(collectionId) || mappedSoundCollectionIds.has(collectionId)) continue;
     const collection = {
       id: collectionId,
       title: labelFromPath(collectionId),
@@ -373,6 +397,25 @@ async function main() {
         kind: sample.kind,
       }),
     }));
+    if (collectionMetadata.category === "music") {
+      musicTracks.push(
+        ...samples.map((sample) => {
+          const track = {
+            title: sample.label,
+            source: collection.source,
+            path: sample.path,
+            src: sample.src,
+            license: collection.license,
+            url: collection.url,
+          };
+          return {
+            ...track,
+            ...buildMusicTrackMetadata(track),
+          };
+        }),
+      );
+      continue;
+    }
     soundCollectionsById.set(collectionId, {
       ...collection,
       ...collectionMetadata,
@@ -388,6 +431,7 @@ async function main() {
     if (organizationDelta !== 0) return organizationDelta;
     return a.title.localeCompare(b.title) || a.id.localeCompare(b.id);
   });
+  musicTracks.sort((a, b) => a.path.localeCompare(b.path));
 
   const sourceMappings = allowedMappings.map((entry) => ({
     id: entry.path_pattern,
@@ -408,7 +452,7 @@ async function main() {
       artPackCount: artPacks.length,
       artSampleCount: mediaAssets.artSamples.filter((sample) => allowedArtPackFolders.has(sample.packFolder)).length,
       soundCollectionCount: soundCollections.length,
-      soundSampleCount: mediaAssets.soundSamples.length,
+      soundSampleCount: soundCollections.reduce((count, collection) => count + collection.samples.length, 0),
       musicTrackCount: musicTracks.length,
       sourceMappingCount: sourceMappings.length,
       artLicenseSplit: allowedArtPacks.reduce<Record<string, number>>((counts, pack) => {

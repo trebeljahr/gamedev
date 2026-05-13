@@ -1918,8 +1918,8 @@ export function MediaExplorer({
     setSoundTypeFilter(initialSoundType);
   }, [initialSoundType]);
 
-  const soundSources = useMemo(
-    () => ["all", ...Array.from(new Set(soundCollections.map((s) => s.source))).sort()],
+  const soundEffectCollections = useMemo(
+    () => soundCollections.filter((collection) => collection.category !== "music" && collection.samples.length > 0),
     [soundCollections],
   );
 
@@ -1928,16 +1928,33 @@ export function MediaExplorer({
       [
         "all",
         ...SOUND_ORGANIZATION_ORDER.filter((organization) =>
-          soundCollections.some((collection) => collection.organization === organization),
+          soundEffectCollections.some((collection) => collection.organization === organization),
         ),
       ] as SoundOrganizationFilter[],
-    [soundCollections],
+    [soundEffectCollections],
+  );
+
+  const soundSources = useMemo(
+    () => ["all", ...Array.from(new Set(soundEffectCollections.map((s) => s.source))).sort()],
+    [soundEffectCollections],
   );
 
   const soundCategories = useMemo(
-    () => ["all", ...Array.from(new Set(soundCollections.map((collection) => collection.category))).sort()],
-    [soundCollections],
+    () => ["all", ...Array.from(new Set(soundEffectCollections.map((collection) => collection.category))).sort()],
+    [soundEffectCollections],
   );
+
+  useEffect(() => {
+    if (!soundCategories.includes(soundCategoryFilter)) {
+      setSoundCategoryFilter("all");
+    }
+  }, [soundCategories, soundCategoryFilter]);
+
+  useEffect(() => {
+    if (!soundOrganizations.includes(soundOrganizationFilter)) {
+      setSoundOrganizationFilter("all");
+    }
+  }, [soundOrganizationFilter, soundOrganizations]);
 
   const artLicenses = useMemo(
     () => ["all", ...Array.from(new Set(artPacks.map((p) => licenseBucket(p.license_class))))],
@@ -1947,13 +1964,13 @@ export function MediaExplorer({
   const filteredSounds = useMemo(() => {
     if (soundTypeFilter === "music") return [];
     const q = query.trim().toLowerCase();
-    return soundCollections.filter((item) => {
+    return soundEffectCollections.filter((item) => {
       if (soundOrganizationFilter !== "all" && item.organization !== soundOrganizationFilter) return false;
       if (sourceFilter !== "all" && item.source !== sourceFilter) return false;
       if (soundCategoryFilter !== "all" && item.category !== soundCategoryFilter) return false;
       return searchMatches(item.searchText, q);
     });
-  }, [query, soundCategoryFilter, soundCollections, soundOrganizationFilter, soundTypeFilter, sourceFilter]);
+  }, [query, soundCategoryFilter, soundEffectCollections, soundOrganizationFilter, soundTypeFilter, sourceFilter]);
 
   const filteredMusic = useMemo(() => {
     if (soundTypeFilter === "sfx") return [];
@@ -2002,14 +2019,14 @@ export function MediaExplorer({
   }, [filteredSounds]);
 
   const soundOrganizationCounts = useMemo(() => {
-    return soundCollections.reduce<Record<SoundOrganization, number>>(
+    return soundEffectCollections.reduce<Record<SoundOrganization, number>>(
       (counts, collection) => {
         counts[collection.organization] += 1;
         return counts;
       },
       { "user-collection": 0, "creator-pack": 0, "source-pattern": 0 },
     );
-  }, [soundCollections]);
+  }, [soundEffectCollections]);
 
   useEffect(() => {
     if (!filteredArt.some((pack) => pack.folder === selectedArtFolder)) {
