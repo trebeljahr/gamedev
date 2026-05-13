@@ -615,16 +615,6 @@ select:focus-visible {
   color: #11100b;
   background: #ffe57d;
 }
-.model-card-actions a.secondary {
-  color: rgba(232,230,227,0.84);
-  background: rgba(255,255,255,0.05);
-  border-color: var(--border);
-}
-.model-card-actions a.secondary:hover {
-  color: var(--accent);
-  background: rgba(255,255,255,0.07);
-  border-color: rgba(255,216,77,0.4);
-}
 .model-metadata {
   display: grid;
   align-content: start;

@@ -205,9 +205,6 @@ export function ModelCatalog({ manifest }: ModelCatalogProps) {
                 </div>
                 <div className="model-card-actions">
                   <Link href={modelViewerHref(entry)}>Evaluate asset</Link>
-                  <Link className="secondary" href={`/${entry.pack.vendor}/${entry.pack.pack}`}>
-                    View pack context
-                  </Link>
                 </div>
               </div>
               <dl className="model-metadata">
