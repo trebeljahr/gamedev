@@ -197,7 +197,6 @@ export function ModelCatalog({ manifest }: ModelCatalogProps) {
                   />
                 </div>
                 <h3>{entry.model.title}</h3>
-                <p>{entry.model.description}</p>
                 <div className="model-tags">
                   {visibleModelTags(entry.model).map((tag) => (
                     <span key={tag}>{tag}</span>

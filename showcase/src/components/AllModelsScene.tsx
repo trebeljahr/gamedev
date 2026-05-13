@@ -1069,10 +1069,7 @@ function ModelPanel({
       </a>
 
       <Section title="Metadata">
-        <div style={{ color: "#cfcfd4", lineHeight: 1.45 }}>
-          {slot.model.description}
-        </div>
-        <div style={{ display: "flex", flexWrap: "wrap", gap: 5, marginTop: 8 }}>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 5 }}>
           {uniqueTags(slot.model.tags).slice(0, 8).map((tag) => (
             <span
               key={tag}

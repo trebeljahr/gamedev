@@ -577,11 +577,6 @@ select:focus-visible {
   line-height: 1.18;
   letter-spacing: 0;
 }
-.model-card p {
-  margin: 8px 0 0;
-  color: rgba(232,230,227,0.68);
-  line-height: 1.45;
-}
 .model-tags {
   margin-top: 12px;
 }
@@ -908,12 +903,6 @@ select:focus-visible {
   color: var(--text);
   font-size: 15px;
   line-height: 1.2;
-}
-.asset-focus-panel p {
-  margin: 0;
-  color: rgba(232,230,227,0.7);
-  font-size: 12px;
-  line-height: 1.4;
 }
 .asset-focus-panel dl {
   display: grid;

@@ -162,7 +162,6 @@ function SingleAssetViewer({ pack, index }: { pack: Pack; index: number }) {
         </Link>
         <div className="pack-context-label">Single asset</div>
         <h1>{model.title}</h1>
-        <p className="pack-view-description">{model.description}</p>
         <section className="asset-focus-panel" aria-label="Asset metadata">
           <span>Part of pack</span>
           <strong>{pack.title}</strong>
