@@ -985,8 +985,7 @@ select:focus-visible {
   gap: 10px;
 }
 .sound-controls label,
-.runner-controls label,
-.workbench-side label {
+.runner-controls label {
   display: grid;
   gap: 4px;
   color: var(--muted);
@@ -1039,12 +1038,11 @@ select:focus-visible {
 }
 .art-workbench {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
+  grid-template-columns: minmax(0, 1fr);
   gap: 16px;
   align-items: stretch;
 }
-.workbench-main,
-.workbench-side {
+.workbench-main {
   min-width: 0;
   background: var(--surface);
   border: 1px solid var(--border);
@@ -1116,23 +1114,6 @@ select:focus-visible {
   color: var(--text);
   font: inherit;
 }
-.workbench-side {
-  display: grid;
-  gap: 12px;
-  align-content: start;
-  padding: 14px;
-}
-.workbench-side select {
-  min-height: 36px;
-  max-width: 100%;
-  background: var(--surface-2);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  color: var(--text);
-  font: inherit;
-}
-.sample-strip canvas,
-.sample-strip img,
 .art-thumb canvas,
 .art-thumb img {
   display: block;
@@ -1142,39 +1123,6 @@ select:focus-visible {
   max-height: 100%;
   object-fit: contain;
   image-rendering: pixelated;
-}
-.sample-strip {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 8px;
-}
-.sample-strip button {
-  display: grid;
-  gap: 6px;
-  padding: 6px;
-  background: var(--surface-2);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  color: inherit;
-  cursor: pointer;
-  font: inherit;
-  text-align: left;
-}
-.sample-strip button > canvas,
-.sample-strip button > img {
-  aspect-ratio: 1;
-}
-.sample-strip button > span {
-  overflow: hidden;
-  color: var(--muted);
-  font-size: 11px;
-  line-height: 1.25;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.sample-strip button.active,
-.sample-strip button:hover {
-  border-color: var(--accent);
 }
 .empty-preview {
   padding: 12px;

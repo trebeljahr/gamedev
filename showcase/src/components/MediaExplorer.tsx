@@ -1113,12 +1113,7 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
 }
 
 function ArtWorkbench({ pack }: { pack: ArtPack }) {
-  const [sampleIndex, setSampleIndex] = useState(0);
-  const selectedSample = pack.samples[sampleIndex];
-
-  useEffect(() => {
-    setSampleIndex(0);
-  }, [pack.folder]);
+  const selectedSample = pack.samples[0];
 
   return (
     <section className="art-workbench">
@@ -1133,37 +1128,6 @@ function ArtWorkbench({ pack }: { pack: ArtPack }) {
         </div>
         <ArtCanvasRunner pack={pack} sample={selectedSample} />
       </div>
-      <aside className="workbench-side">
-        <label>
-          Sample
-          <select value={sampleIndex} onChange={(event) => setSampleIndex(Number(event.target.value))}>
-            {pack.samples.length > 0 ? (
-              pack.samples.map((sample, index) => (
-                <option key={sample.path} value={index}>
-                  {sample.label} · {sample.kind}
-                </option>
-              ))
-            ) : (
-              <option value={0}>No sample files</option>
-            )}
-          </select>
-        </label>
-        <div className="sample-strip">
-          {pack.samples.slice(0, 8).map((sample, index) => (
-            <button
-              key={sample.path}
-              type="button"
-              className={index === sampleIndex ? "active" : ""}
-              onClick={() => setSampleIndex(index)}
-              title={sample.path}
-            >
-              <ArtSamplePreview sample={sample} />
-              <span>{sample.label}</span>
-            </button>
-          ))}
-          {pack.samples.length === 0 && <div className="empty-preview">Manifest has metadata only.</div>}
-        </div>
-      </aside>
     </section>
   );
 }
