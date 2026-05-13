@@ -8,6 +8,7 @@ import { artCreators } from "@/lib/media";
 import { isLikelyHybridSpriteAtlasPath, isLikelySpriteSheetPath, isLikelyTextureAtlasPath } from "@/lib/media-inference";
 import { SiteHeader } from "@/components/SiteHeader";
 import { navGroups, type NavKey } from "@/lib/navigation";
+import { uniqueTags } from "@/lib/tags";
 
 type MediaExplorerProps = {
   soundCollections: SoundCollection[];
@@ -2375,7 +2376,7 @@ export function MediaExplorer({
                     />
                     <p>{track.description}</p>
                     <div className="inline-tags">
-                      {track.tags.slice(0, 5).map((tag) => (
+                      {uniqueTags(track.tags).slice(0, 5).map((tag) => (
                         <span key={tag}>{tag}</span>
                       ))}
                     </div>

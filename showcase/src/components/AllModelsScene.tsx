@@ -35,6 +35,7 @@ import { assetUrl } from "@/lib/manifest";
 import { licenseForVendor } from "@/lib/license";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { LicenseLink } from "@/components/LicenseLink";
+import { uniqueTags } from "@/lib/tags";
 
 // Load any pack whose nearest edge is within this distance of the camera.
 // Pack-coherent loading: when you approach a pack, the whole pack appears at
@@ -855,7 +856,7 @@ function ModelPanel({
           {slot.model.description}
         </div>
         <div style={{ display: "flex", flexWrap: "wrap", gap: 5, marginTop: 8 }}>
-          {slot.model.tags.slice(0, 8).map((tag) => (
+          {uniqueTags(slot.model.tags).slice(0, 8).map((tag) => (
             <span
               key={tag}
               style={{

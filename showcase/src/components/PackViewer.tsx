@@ -7,6 +7,7 @@ import { useGLTF } from "@react-three/drei";
 import { LicenseLink } from "@/components/LicenseLink";
 import { licenseForVendor } from "@/lib/license";
 import { assetUrl, type Pack } from "@/lib/manifest";
+import { uniqueTags } from "@/lib/tags";
 
 const Viewer = dynamic(() => import("./Viewer").then((m) => m.Viewer), {
   ssr: false,
@@ -112,7 +113,7 @@ export function PackViewer({ pack, initialModelFile }: { pack: Pack; initialMode
           </div>
         </div>
         <div className="pack-view-tags">
-          {pack.tags.slice(0, 6).map((tag) => (
+          {uniqueTags(pack.tags).slice(0, 6).map((tag) => (
             <span key={tag}>{tag}</span>
           ))}
         </div>
@@ -154,7 +155,7 @@ export function PackViewer({ pack, initialModelFile }: { pack: Pack; initialMode
             </span>
             {model && (
               <small>
-                {model.category} · {model.tags.slice(0, 4).join(" · ")}
+                {model.category} · {uniqueTags(model.tags).slice(0, 4).join(" · ")}
               </small>
             )}
           </div>

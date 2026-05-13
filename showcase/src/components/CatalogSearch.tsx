@@ -9,6 +9,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { licenseForVendor } from "@/lib/license";
 import type { Manifest, Pack } from "@/lib/manifest";
 import { previewModelFilesFor } from "@/lib/preview-model";
+import { uniqueTags } from "@/lib/tags";
 
 const PackCardPreview = dynamic(
   () => import("@/components/PackCardPreview").then((m) => m.PackCardPreview),
@@ -159,7 +160,7 @@ export function CatalogSearch({ manifest, children, showHeader = true, modelMoti
                     <Link className="pack-card-body-link" href={packHref}>
                       <p>{pack.description}</p>
                       <div className="pack-tags">
-                        {pack.tags.slice(0, 5).map((tag) => (
+                        {uniqueTags(pack.tags).slice(0, 5).map((tag) => (
                           <span key={tag}>{tag}</span>
                         ))}
                       </div>

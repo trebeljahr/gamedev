@@ -15,8 +15,53 @@ import { assetUrl } from "@/lib/manifest";
 import { Model } from "./Model";
 
 const CYCLE_MS = 1400;
+const MAX_ACTIVE_PREVIEWS = 8;
 const PREVIEW_IMAGE_CACHE_LIMIT = 256;
+const previewSubscribers = new Set<() => void>();
+let visiblePreviewIds: string[] = [];
 const previewImageCache = new Map<string, string>();
+
+function notifyPreviewSubscribers() {
+  previewSubscribers.forEach((listener) => listener());
+}
+
+function setPreviewVisible(id: string, visible: boolean) {
+  const isVisible = visiblePreviewIds.includes(id);
+  if (visible === isVisible) return;
+
+  visiblePreviewIds = visible
+    ? [...visiblePreviewIds, id]
+    : visiblePreviewIds.filter((item) => item !== id);
+  notifyPreviewSubscribers();
+}
+
+function canUsePreviewCanvas(id: string): boolean {
+  const index = visiblePreviewIds.indexOf(id);
+  return index >= 0 && index < MAX_ACTIVE_PREVIEWS;
+}
+
+function subscribePreviewBudget(listener: () => void) {
+  previewSubscribers.add(listener);
+  return () => previewSubscribers.delete(listener);
+}
+
+function usePreviewCanvasBudget(id: string, visible: boolean): boolean {
+  const [hasSlot, setHasSlot] = useState(false);
+
+  useEffect(() => {
+    const update = () => setHasSlot(canUsePreviewCanvas(id));
+    const unsubscribe = subscribePreviewBudget(update);
+    setPreviewVisible(id, visible);
+    update();
+
+    return () => {
+      unsubscribe();
+      setPreviewVisible(id, false);
+    };
+  }, [id, visible]);
+
+  return hasSlot;
+}
 
 function cachedPreviewImageFor(url: string): string | undefined {
   const image = previewImageCache.get(url);
@@ -46,11 +91,13 @@ export function PackCardPreview({
 }) {
   const rootRef = useRef<HTMLDivElement>(null);
   const [ready, setReady] = useState(false);
+  const [nearViewport, setNearViewport] = useState(false);
   const [active, setActive] = useState(false);
   const [index, setIndex] = useState(0);
   const urls = useMemo(() => modelFiles.map(assetUrl), [modelFiles]);
   const url = urls[index] ?? urls[0] ?? null;
   const nextUrl = urls.length > 1 ? urls[(index + 1) % urls.length] : null;
+  const budgetId = `${label ?? "preview"}:${urls.join("|")}`;
   const [previewImage, setPreviewImage] = useState<string | undefined>(() =>
     url ? cachedPreviewImageFor(url) : undefined,
   );
@@ -62,16 +109,22 @@ export function PackCardPreview({
   useEffect(() => {
     const el = rootRef.current;
     if (!el || !urls[0]) return;
+    if (!("IntersectionObserver" in window)) {
+      setNearViewport(true);
+      setReady(true);
+      return;
+    }
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (!entry?.isIntersecting) return;
+        const visible = !!entry?.isIntersecting;
+        setNearViewport(visible);
+        if (!visible) return;
         setReady(true);
         useGLTF.preload(urls[0]);
         if (urls[1]) useGLTF.preload(urls[1]);
-        observer.disconnect();
       },
-      { rootMargin: "260px" },
+      { rootMargin: "96px" },
     );
 
     observer.observe(el);
@@ -117,6 +170,10 @@ export function PackCardPreview({
   }, [nextUrl, ready, url]);
 
   const showCachedImage = !!previewImage && !active;
+  const hasCanvasSlot = usePreviewCanvasBudget(
+    budgetId,
+    nearViewport && !!url && !showCachedImage,
+  );
 
   return (
     <div
@@ -128,7 +185,7 @@ export function PackCardPreview({
     >
       {showCachedImage ? (
         <img className="pack-preview-image" src={previewImage} alt="" />
-      ) : ready && url ? (
+      ) : hasCanvasSlot && ready && url ? (
         <Canvas
           camera={{ position: [5.5, 4.2, 7], fov: 40, near: 0.1, far: 500 }}
           dpr={[1, 1.5]}

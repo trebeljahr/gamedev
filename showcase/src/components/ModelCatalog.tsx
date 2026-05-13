@@ -7,6 +7,7 @@ import { LicenseLink } from "@/components/LicenseLink";
 import { SiteHeader } from "@/components/SiteHeader";
 import { licenseForVendor, type VendorLicense } from "@/lib/license";
 import type { Manifest, Model, Pack } from "@/lib/manifest";
+import { uniqueTags } from "@/lib/tags";
 
 const PackCardPreview = dynamic(
   () => import("@/components/PackCardPreview").then((m) => m.PackCardPreview),
@@ -48,6 +49,10 @@ function niceVendor(vendor: string): string {
 
 function modelViewerHref(entry: ModelEntry): string {
   return `/${entry.pack.vendor}/${entry.pack.pack}?model=${encodeURIComponent(entry.model.file)}`;
+}
+
+function visibleModelTags(model: Model): string[] {
+  return uniqueTags([model.subcategory, ...model.themes, ...model.style, ...model.tags]).slice(0, 7);
 }
 
 export function ModelCatalog({ manifest }: ModelCatalogProps) {
@@ -194,12 +199,9 @@ export function ModelCatalog({ manifest }: ModelCatalogProps) {
                 <h3>{entry.model.title}</h3>
                 <p>{entry.model.description}</p>
                 <div className="model-tags">
-                  {[entry.model.subcategory, ...entry.model.themes, ...entry.model.style, ...entry.model.tags]
-                    .filter(Boolean)
-                    .slice(0, 7)
-                    .map((tag) => (
-                      <span key={tag}>{tag}</span>
-                    ))}
+                  {visibleModelTags(entry.model).map((tag) => (
+                    <span key={tag}>{tag}</span>
+                  ))}
                 </div>
                 <div className="model-card-actions">
                   <Link href={modelViewerHref(entry)}>Evaluate asset</Link>
