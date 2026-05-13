@@ -35,6 +35,7 @@ type SpriteGrid = {
 };
 type SpriteRect = { x: number; y: number; w: number; h: number };
 type SpriteSequence = { label: string; frames: SpriteRect[]; bounds: SpriteRect };
+type ContentIntegral = { width: number; height: number; stride: number; sums: Uint32Array };
 type LoadedSpriteImage = {
   src: string;
   image: HTMLImageElement;
@@ -249,6 +250,37 @@ function contentRatioForRect(imageData: ImageData, source: SpriteRect, bg: Retur
   return count / Math.max(1, source.w * source.h);
 }
 
+function buildContentIntegral(imageData: ImageData, bg: ReturnType<typeof sampleImageBackground>): ContentIntegral {
+  const { width, height, data } = imageData;
+  const stride = width + 1;
+  const sums = new Uint32Array((width + 1) * (height + 1));
+
+  for (let y = 1; y <= height; y++) {
+    let rowSum = 0;
+    for (let x = 1; x <= width; x++) {
+      if (isContentPixel(data, ((y - 1) * width + (x - 1)) * 4, bg)) rowSum++;
+      sums[y * stride + x] = sums[(y - 1) * stride + x] + rowSum;
+    }
+  }
+
+  return { width, height, stride, sums };
+}
+
+function contentPixelsInRect(integral: ContentIntegral, source: SpriteRect): number {
+  const x1 = Math.max(0, Math.min(integral.width, source.x));
+  const y1 = Math.max(0, Math.min(integral.height, source.y));
+  const x2 = Math.max(x1, Math.min(integral.width, source.x + source.w));
+  const y2 = Math.max(y1, Math.min(integral.height, source.y + source.h));
+  const { sums, stride } = integral;
+  return sums[y2 * stride + x2] - sums[y1 * stride + x2] - sums[y2 * stride + x1] + sums[y1 * stride + x1];
+}
+
+function isEmptyFrameRect(integral: ContentIntegral, source: SpriteRect): boolean {
+  const area = Math.max(1, source.w * source.h);
+  const minPixels = Math.max(3, Math.floor(area * 0.0015));
+  return contentPixelsInRect(integral, source) < minPixels;
+}
+
 function detectActiveSpans(activity: Float32Array): Array<{ start: number; end: number }> {
   let maxActivity = 0;
   for (let i = 0; i < activity.length; i++) maxActivity = Math.max(maxActivity, activity[i]);
@@ -340,6 +372,75 @@ function hasVariableSpanSizes(spans: Array<{ start: number; end: number }>): boo
   return max - min > Math.max(3, max * 0.18);
 }
 
+function scoreDivisorGrid(integral: ContentIntegral, cols: number, rows: number): number {
+  if (cols <= 0 || rows <= 0) return 0;
+  const total = cols * rows;
+  if (total <= 1 || total > 256) return 0;
+  if (integral.width % cols !== 0 || integral.height % rows !== 0) return 0;
+
+  const cellWidth = integral.width / cols;
+  const cellHeight = integral.height / rows;
+  if (cellWidth < 8 || cellHeight < 8) return 0;
+
+  let occupied = 0;
+  const occupiedRows = new Set<number>();
+  const occupiedCols = new Set<number>();
+  for (let row = 0; row < rows; row++) {
+    for (let col = 0; col < cols; col++) {
+      const rect = { x: col * cellWidth, y: row * cellHeight, w: cellWidth, h: cellHeight };
+      if (!isEmptyFrameRect(integral, rect)) {
+        occupied++;
+        occupiedRows.add(row);
+        occupiedCols.add(col);
+      }
+    }
+  }
+  if (occupied < 2) return 0;
+
+  const coverage = occupied / total;
+  if (coverage < 0.25) return 0;
+
+  let boundaryContent = 0;
+  let boundaryArea = 0;
+  for (let col = 1; col < cols; col++) {
+    const x = col * cellWidth;
+    const rect = { x: Math.max(0, x - 1), y: 0, w: Math.min(3, integral.width - Math.max(0, x - 1)), h: integral.height };
+    boundaryContent += contentPixelsInRect(integral, rect);
+    boundaryArea += rect.w * rect.h;
+  }
+  for (let row = 1; row < rows; row++) {
+    const y = row * cellHeight;
+    const rect = { x: 0, y: Math.max(0, y - 1), w: integral.width, h: Math.min(3, integral.height - Math.max(0, y - 1)) };
+    boundaryContent += contentPixelsInRect(integral, rect);
+    boundaryArea += rect.w * rect.h;
+  }
+
+  const boundaryRatio = boundaryArea > 0 ? boundaryContent / boundaryArea : 0;
+  const boundaryScore = 1 - Math.min(1, boundaryRatio * 12);
+  const cellAspect = cellWidth / cellHeight;
+  const aspectScore = 1 - Math.min(1, Math.abs(Math.log(cellAspect)) / Math.log(6));
+  const axisUse = (occupiedRows.size / rows + occupiedCols.size / cols) / 2;
+  const frameCountScore = Math.min(1, Math.log2(total + 1) / 6);
+
+  return boundaryScore * 0.4 + coverage * 0.2 + aspectScore * 0.22 + axisUse * 0.13 + frameCountScore * 0.05;
+}
+
+function detectDivisorGrid(integral: ContentIntegral): SpriteGrid | null {
+  let best: { cols: number; rows: number; score: number } | null = null;
+
+  for (let rows = 1; rows <= 32; rows++) {
+    if (integral.height % rows !== 0) continue;
+    for (let cols = 1; cols <= 32; cols++) {
+      if (integral.width % cols !== 0) continue;
+      const score = scoreDivisorGrid(integral, cols, rows);
+      if (!best || score > best.score) best = { cols, rows, score };
+    }
+  }
+
+  if (!best || best.score < 0.72) return null;
+  return { cols: best.cols, rows: best.rows, confidence: Math.min(0.72, 0.42 + best.score * 0.32), mode: "grid" };
+}
+
 function parseSpriteSizeHint(path: string, imageWidth: number, imageHeight: number): SpriteGrid | null {
   const hints = [...path.matchAll(/(^|[^0-9])(\d{2,4})\s*[x×]\s*(\d{2,4})(?:\s*px)?([^0-9]|$)/gi)];
   for (const hint of hints) {
@@ -370,6 +471,8 @@ function parseGridHint(path: string, imageWidth: number, imageHeight: number): S
 function detectGridFromImageData(imageData: ImageData, options: { preferSequences?: boolean } = {}): SpriteGrid {
   const { width, height, data } = imageData;
   const bg = sampleImageBackground(imageData);
+  const integral = buildContentIntegral(imageData, bg);
+  const divisorGrid = detectDivisorGrid(integral);
   const rowActivity = new Float32Array(height);
   const colActivity = new Float32Array(width);
 
@@ -417,7 +520,7 @@ function detectGridFromImageData(imageData: ImageData, options: { preferSequence
     while (start < isGap.length && isGap[start]) start++;
     let end = isGap.length - 1;
     while (end >= start && isGap[end]) end--;
-    if (start > end) return 1;
+    if (start > end) return 0;
     const gaps: number[] = [];
     let gap = 0;
     for (let i = start; i <= end; i++) {
@@ -436,14 +539,26 @@ function detectGridFromImageData(imageData: ImageData, options: { preferSequence
   const rows = countCells(rowActivity);
   const cols = countCells(colActivity);
   if (rows >= 1 && cols >= 1 && rows <= 32 && cols <= 32) {
+    const projectionGrid = { cols, rows, confidence: 0.6, mode: "grid" as const };
+    if (
+      divisorGrid &&
+      (divisorGrid.confidence >= projectionGrid.confidence + 0.04 ||
+        cols * rows > 96 ||
+        (cols * rows > 1 && scoreDivisorGrid(integral, cols, rows) < 0.58))
+    ) {
+      return divisorGrid;
+    }
+
     const frames = detectVariableFrames(imageData, bg, rowActivity, colActivity);
     const rowSpans = detectActiveSpans(rowActivity);
     const colSpans = detectActiveSpans(colActivity);
     if (frames.length > 1 && (frames.length !== rows * cols || hasVariableSpanSizes(rowSpans) || hasVariableSpanSizes(colSpans))) {
       return { cols: frames.length, rows: 1, confidence: 0.62, mode: "variable", frames };
     }
-    return { cols, rows, confidence: 0.6, mode: "grid" };
+    return projectionGrid;
   }
+
+  if (divisorGrid) return divisorGrid;
 
   for (const size of [16, 24, 32, 48, 64, 96, 128, 192, 256]) {
     if (width % size === 0 && height % size === 0) {
@@ -506,6 +621,14 @@ function framesForGrid(imageData: ImageData, grid: SpriteGrid): SpriteRect[] {
     w: frameWidth,
     h: frameHeight,
   }));
+}
+
+function nonEmptyFramesForGrid(imageData: ImageData, grid: SpriteGrid, bg: ReturnType<typeof sampleImageBackground>): SpriteRect[] {
+  const frames = framesForGrid(imageData, grid);
+  if (grid.frames || frames.length === 0) return frames;
+  const integral = buildContentIntegral(imageData, bg);
+  const occupiedFrames = frames.filter((rect) => !isEmptyFrameRect(integral, rect));
+  return occupiedFrames.length >= 2 ? occupiedFrames : frames;
 }
 
 function drawSquareFrameGrid(context: CanvasRenderingContext2D, image: HTMLImageElement, frames: SpriteRect[], size: number) {
@@ -725,7 +848,11 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
     setDetectedGrid(resolvedGrid);
     if (autoDetect && canAnimateSample && resolvedGrid && isUsableSpriteGrid(resolvedGrid)) {
       const selectedSequence = resolvedGrid.sequences?.[Math.min(sequenceIndex, resolvedGrid.sequences.length - 1)];
-      const selectedFrames = selectedSequence?.frames ?? resolvedGrid.frames ?? null;
+      const detectedFrames =
+        loadedImage?.imageData && loadedImage.bgSample ? nonEmptyFramesForGrid(loadedImage.imageData, resolvedGrid, loadedImage.bgSample) : resolvedGrid.frames ?? [];
+      const selectedFrames =
+        selectedSequence?.frames ??
+        (detectedFrames.length !== resolvedGrid.cols * resolvedGrid.rows ? detectedFrames : resolvedGrid.frames ?? null);
       setColumns(selectedFrames?.length ?? resolvedGrid.cols);
       setRows(selectedFrames ? 1 : resolvedGrid.rows);
       setLayoutFrames(selectedFrames);
@@ -735,7 +862,7 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
       setLayoutFrames(null);
       setPlaying(false);
     }
-  }, [autoDetect, canAnimateSample, resolvedGrid, sequenceIndex]);
+  }, [autoDetect, canAnimateSample, loadedImage?.bgSample, loadedImage?.imageData, resolvedGrid, sequenceIndex]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -936,7 +1063,7 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
             aria-label="Sprite sheet columns"
             type="range"
             min="1"
-            max="40"
+            max={Math.max(40, detectedGrid?.cols ?? columns)}
             value={columns}
             onChange={(event) => {
               setAutoDetect(false);
@@ -951,7 +1078,7 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
             aria-label="Sprite sheet rows"
             type="range"
             min="1"
-            max="8"
+            max={Math.max(8, detectedGrid?.rows ?? rows)}
             value={rows}
             onChange={(event) => {
               setAutoDetect(false);
