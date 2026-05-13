@@ -1,10 +1,16 @@
 "use client";
 
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import type { ReactNode } from "react";
 import { useMemo, useState } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
 import type { Manifest, Pack } from "@/lib/manifest";
+
+const PackCardPreview = dynamic(
+  () => import("@/components/PackCardPreview").then((m) => m.PackCardPreview),
+  { ssr: false },
+);
 
 type CatalogSearchProps = {
   manifest: Manifest;
@@ -25,6 +31,38 @@ function matchPack(pack: Pack, query: string): { pack: Pack; modelMatches: numbe
 
 function slug(value: string): string {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+}
+
+function previewModelFor(pack: Pack) {
+  const preferredCategories = new Set([
+    "character",
+    "creature",
+    "building",
+    "vehicle",
+    "environment",
+    "nature",
+    "sci-fi",
+  ]);
+  const tinyCategories = new Set(["projectile", "weapon", "effect"]);
+
+  return pack.models
+    .slice()
+    .sort((a, b) => {
+      const score = (model: Pack["models"][number]) => {
+        const glb = /\.glb($|[?#])/i.test(model.file);
+        const mirroredGlb = model.file.startsWith("/glb/");
+        const [w, h, d] = model.size ?? [1, 1, 1];
+        const visualWeight = Math.min(Math.max(w, d, h), 8);
+        return (
+          (mirroredGlb ? 120 : 0) +
+          (glb ? 60 : 0) +
+          (preferredCategories.has(model.category) ? 30 : 0) -
+          (tinyCategories.has(model.category) ? 35 : 0) +
+          visualWeight
+        );
+      };
+      return score(b) - score(a);
+    })[0];
 }
 
 export function CatalogSearch({ manifest, children, showHeader = true }: CatalogSearchProps) {
@@ -89,6 +127,7 @@ export function CatalogSearch({ manifest, children, showHeader = true }: Catalog
           <div className="pack-grid">
             {packs.map(({ pack, modelMatches }) => (
               <Link key={pack.id} className="pack-card" href={`/${pack.vendor}/${pack.pack}`}>
+                <PackCardPreview model={previewModelFor(pack)} />
                 <div className="pack-label">{pack.title}</div>
                 <p>{pack.description}</p>
                 <div className="pack-tags">

@@ -574,8 +574,11 @@ select:focus-visible {
   gap: 12px;
 }
 .pack-card {
-  display: block;
-  padding: 14px 16px;
+  display: grid;
+  grid-template-rows: 138px auto auto auto auto;
+  min-height: 344px;
+  overflow: hidden;
+  padding: 0;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 8px;
@@ -586,9 +589,35 @@ select:focus-visible {
   color: var(--text);
   transform: translateY(-1px);
 }
-.pack-card .pack-label { font-weight: 500; }
+.pack-preview {
+  position: relative;
+  height: 138px;
+  overflow: hidden;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 52% 62%, rgba(255,216,77,0.18), rgba(255,216,77,0) 34%),
+    linear-gradient(155deg, rgba(255,255,255,0.1), rgba(255,255,255,0.02) 46%),
+    #202129;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.pack-preview::before {
+  content: "";
+  position: absolute;
+  inset: 12px 14px;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+}
+.pack-preview canvas {
+  position: relative;
+  z-index: 1;
+}
+.pack-card .pack-label {
+  padding: 14px 16px 0;
+  font-weight: 600;
+}
 .pack-card p {
   margin: 8px 0 0;
+  padding: 0 16px;
   color: var(--muted);
   font-size: 12px;
   line-height: 1.45;
@@ -598,6 +627,7 @@ select:focus-visible {
   flex-wrap: wrap;
   gap: 6px;
   margin-top: 10px;
+  padding: 0 16px;
 }
 .pack-tags span {
   padding: 2px 6px;
@@ -607,7 +637,9 @@ select:focus-visible {
   font-size: 11px;
 }
 .pack-card .pack-count {
-  margin-top: 4px;
+  align-self: end;
+  margin-top: 12px;
+  padding: 0 16px 14px;
   color: var(--muted);
   font-size: 12px;
 }
