@@ -1,20 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import dynamic from "next/dynamic";
 import type { ReactNode } from "react";
 import { useMemo, useState } from "react";
 import { LicenseLink } from "@/components/LicenseLink";
+import { PackGrid } from "@/components/PackGrid";
 import { SiteHeader } from "@/components/SiteHeader";
 import { licenseForVendor } from "@/lib/license";
 import type { Manifest, Pack } from "@/lib/manifest";
 import { previewModelFilesFor } from "@/lib/preview-model";
-import { uniqueTags } from "@/lib/tags";
-
-const PackCardPreview = dynamic(
-  () => import("@/components/PackCardPreview").then((m) => m.PackCardPreview),
-  { ssr: false },
-);
 
 type CatalogSearchProps = {
   manifest: Manifest;
@@ -138,45 +132,20 @@ export function CatalogSearch({ manifest, children, showHeader = true, modelMoti
                 </div>
               </div>
             </div>
-            <div className="pack-grid">
-              {packs.map(({ pack, modelMatches }) => {
-                const packHref = `/${pack.vendor}/${pack.pack}`;
-                return (
-                  <article key={pack.id} className="pack-card">
-                    <Link className="pack-preview-link" href={packHref}>
-                      <PackCardPreview modelFiles={previewModelFilesFor(pack)} label={pack.preview?.modelTitle} />
-                    </Link>
-                    <Link className="pack-label pack-label-link" href={packHref}>
-                      {pack.title}
-                    </Link>
-                    <div className="pack-credit-row">
-                      <span>{credit.vendorLabel}</span>
-                      <LicenseLink
-                        license={pack.license || credit.license}
-                        source={credit.vendorLabel}
-                        fallbackUrl={credit.licenseUrl}
-                      />
-                    </div>
-                    <Link className="pack-card-body-link" href={packHref}>
-                      <p>{pack.description}</p>
-                      <div className="pack-tags">
-                        {uniqueTags(pack.tags).slice(0, 5).map((tag) => (
-                          <span key={tag}>{tag}</span>
-                        ))}
-                      </div>
-                      <div className="pack-count">
-                        {(normalizedQuery || modelMotion !== "all") && modelMatches > 0
-                          ? `${modelMatches} matching ${modelMatches === 1 ? "model" : "models"}`
-                        : `${pack.count} ${pack.count === 1 ? "model" : "models"}`}
-                      </div>
-                    </Link>
-                    <div className="pack-card-actions">
-                      <Link href={packHref}>View</Link>
-                    </div>
-                  </article>
-                );
-              })}
-            </div>
+            <PackGrid
+              credit={credit}
+              items={packs.map(({ pack, modelMatches }) => ({
+                pack,
+                previewModelFiles: previewModelFilesFor(pack),
+                modelMatches,
+              }))}
+              resetKey={`${vendor}:${normalizedQuery}:${modelMotion}`}
+              renderCount={({ pack, modelMatches = 0 }) =>
+                (normalizedQuery || modelMotion !== "all") && modelMatches > 0
+                  ? `${modelMatches} matching ${modelMatches === 1 ? "model" : "models"}`
+                  : `${pack.count} ${pack.count === 1 ? "model" : "models"}`
+              }
+            />
           </section>
         );
       })}

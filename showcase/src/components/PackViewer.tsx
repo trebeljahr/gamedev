@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { useCallback, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import dynamic from "next/dynamic";
+import { useInfiniteList } from "@/components/useInfiniteList";
 import { LicenseLink } from "@/components/LicenseLink";
 import { licenseForVendor } from "@/lib/license";
 import { assetUrl, type Pack } from "@/lib/manifest";
@@ -20,6 +21,8 @@ const Viewer = dynamic(() => import("./Viewer").then((m) => m.Viewer), {
 });
 
 type PackModel = Pack["models"][number];
+
+const MODEL_LIST_PAGE_SIZE = 80;
 
 function modelIndexFor(pack: Pack, initialModelFile: string): number | null {
   const index = pack.models.findIndex((item) => item.file === initialModelFile || item.name === initialModelFile);
@@ -47,11 +50,18 @@ function PackGroupViewer({ pack }: { pack: Pack }) {
   const credit = licenseForVendor(pack.vendor);
   const license = pack.license || credit.license;
   const normalizedQuery = query.trim().toLowerCase();
-  const visibleModels = normalizedQuery
-    ? pack.models
-        .map((item, itemIndex) => ({ item, itemIndex }))
-        .filter(({ item }) => normalizedQuery.split(/\s+/).every((term) => item.searchText.includes(term)))
-    : pack.models.map((item, itemIndex) => ({ item, itemIndex }));
+  const visibleModels = useMemo(() => {
+    const models = pack.models.map((item, itemIndex) => ({ item, itemIndex }));
+    if (!normalizedQuery) return models;
+    const terms = normalizedQuery.split(/\s+/).filter(Boolean);
+    return models.filter(({ item }) => terms.every((term) => item.searchText.includes(term)));
+  }, [normalizedQuery, pack.models]);
+  const modelList = useInfiniteList({
+    total: visibleModels.length,
+    pageSize: MODEL_LIST_PAGE_SIZE,
+    resetKey: `${pack.id}:${normalizedQuery}`,
+  });
+  const listedModels = visibleModels.slice(0, modelList.visibleCount);
 
   const openModel = useCallback(
     (index: number) => {
@@ -110,12 +120,20 @@ function PackGroupViewer({ pack }: { pack: Pack }) {
           placeholder="Search assets in this pack"
         />
         <ul className="model-list">
-          {visibleModels.map(({ item: m }) => (
+          {listedModels.map(({ item: m }) => (
             <li key={m.file}>
               <Link href={modelHref(pack, m)}>{m.title}</Link>
             </li>
           ))}
           {visibleModels.length === 0 && <li className="empty-model-list">No model matches.</li>}
+          {modelList.hasMore && (
+            <li className="model-list-sentinel" ref={modelList.sentinelRef}>
+              <span>Loading models</span>
+              <button type="button" onClick={modelList.loadMore}>
+                Load {Math.min(MODEL_LIST_PAGE_SIZE, modelList.remaining).toLocaleString()} more
+              </button>
+            </li>
+          )}
         </ul>
       </aside>
       <main>
@@ -145,11 +163,22 @@ function SingleAssetViewer({ pack, index }: { pack: Pack; index: number }) {
   const credit = licenseForVendor(pack.vendor);
   const license = pack.license || credit.license;
   const normalizedQuery = query.trim().toLowerCase();
-  const visibleModels = normalizedQuery
-    ? pack.models
-        .map((item, itemIndex) => ({ item, itemIndex }))
-        .filter(({ item }) => normalizedQuery.split(/\s+/).every((term) => item.searchText.includes(term)))
-    : pack.models.map((item, itemIndex) => ({ item, itemIndex }));
+  const visibleModels = useMemo(() => {
+    const models = pack.models.map((item, itemIndex) => ({ item, itemIndex }));
+    if (!normalizedQuery) return models;
+    const terms = normalizedQuery.split(/\s+/).filter(Boolean);
+    return models.filter(({ item }) => terms.every((term) => item.searchText.includes(term)));
+  }, [normalizedQuery, pack.models]);
+  const activeModelPosition = visibleModels.findIndex(({ itemIndex }) => itemIndex === index);
+  const singleListInitialLimit =
+    activeModelPosition >= 0 ? Math.max(MODEL_LIST_PAGE_SIZE, activeModelPosition + 1) : MODEL_LIST_PAGE_SIZE;
+  const modelList = useInfiniteList({
+    total: visibleModels.length,
+    pageSize: MODEL_LIST_PAGE_SIZE,
+    initialLimit: singleListInitialLimit,
+    resetKey: `${pack.id}:${index}:${normalizedQuery}`,
+  });
+  const listedModels = visibleModels.slice(0, modelList.visibleCount);
 
   return (
     <div className="viewer-shell">
@@ -213,7 +242,7 @@ function SingleAssetViewer({ pack, index }: { pack: Pack; index: number }) {
           placeholder="Search assets in this pack"
         />
         <ul className="model-list">
-          {visibleModels.map(({ item: m, itemIndex: i }) => (
+          {listedModels.map(({ item: m, itemIndex: i }) => (
             <li key={m.file}>
               <Link className={i === index ? "active" : ""} href={modelHref(pack, m)}>
                 {m.title}
@@ -221,6 +250,14 @@ function SingleAssetViewer({ pack, index }: { pack: Pack; index: number }) {
             </li>
           ))}
           {visibleModels.length === 0 && <li className="empty-model-list">No model matches.</li>}
+          {modelList.hasMore && (
+            <li className="model-list-sentinel" ref={modelList.sentinelRef}>
+              <span>Loading models</span>
+              <button type="button" onClick={modelList.loadMore}>
+                Load {Math.min(MODEL_LIST_PAGE_SIZE, modelList.remaining).toLocaleString()} more
+              </button>
+            </li>
+          )}
         </ul>
       </aside>
       <main>

@@ -645,18 +645,48 @@ select:focus-visible {
   border: 1px solid var(--border);
   border-radius: 8px;
 }
-.model-load-more {
-  min-height: 44px;
+.infinite-scroll-sentinel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.infinite-scroll-sentinel::before,
+.model-list-sentinel::before {
+  content: "";
+  width: 13px;
+  height: 13px;
+  border: 2px solid rgba(255,255,255,0.16);
+  border-top-color: var(--accent);
+  border-radius: 999px;
+  animation: infinite-spin 820ms linear infinite;
+}
+.infinite-scroll-sentinel button,
+.model-list-sentinel button {
+  min-height: 32px;
+  padding: 0 10px;
   color: #11100b;
   background: var(--accent);
   border: 1px solid var(--accent);
-  border-radius: 8px;
-  font: inherit;
-  font-weight: 750;
+  border-radius: 6px;
   cursor: pointer;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 750;
 }
-.model-load-more:hover {
+.infinite-scroll-sentinel button:hover,
+.model-list-sentinel button:hover {
+  color: #11100b;
   background: #ffe57d;
+}
+.pack-grid-sentinel {
+  margin-top: 12px;
+}
+@keyframes infinite-spin {
+  to { transform: rotate(360deg); }
 }
 
 .media-section {
@@ -1006,6 +1036,19 @@ select:focus-visible {
   font-size: 12px;
   padding: 8px;
 }
+.model-list-sentinel {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 8px;
+  padding: 9px 8px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.model-list-sentinel button {
+  grid-column: 1 / -1;
+  width: 100%;
+}
 
 .viewer-bar {
   position: absolute; bottom: 0; left: 0; right: 0;
@@ -1275,6 +1318,9 @@ select:focus-visible {
 .track-list {
   display: grid;
   gap: 8px;
+}
+.media-list-sentinel {
+  min-height: 42px;
 }
 .media-row,
 .track-row {

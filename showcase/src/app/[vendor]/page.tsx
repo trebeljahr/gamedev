@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LicenseLink } from "@/components/LicenseLink";
-import { PackCardPreview } from "@/components/PackCardPreview";
+import { PackGrid } from "@/components/PackGrid";
 import { SiteHeader } from "@/components/SiteHeader";
 import { licenseForVendor } from "@/lib/license";
 import { manifest } from "@/lib/manifest";
@@ -85,40 +85,25 @@ export default async function CreatorPage({
             <Link href="/models">Search every model</Link>
           </div>
 
-          <div className="pack-grid">
-            {packs.map((pack) => {
-              const packHref = `/${pack.vendor}/${pack.pack}`;
-              return (
-                <article key={pack.id} className="pack-card">
-                  <Link className="pack-preview-link" href={packHref}>
-                    <PackCardPreview modelFiles={previewModelFilesFor(pack)} label={pack.preview?.modelTitle} />
-                  </Link>
-                  <Link className="pack-label pack-label-link" href={packHref}>
-                    {pack.title}
-                  </Link>
-                  <div className="pack-credit-row">
-                    <span>{credit.vendorLabel}</span>
-                    <LicenseLink
-                      license={pack.license || credit.license}
-                      source={credit.vendorLabel}
-                      fallbackUrl={credit.licenseUrl}
-                    />
-                  </div>
-                  <Link className="pack-card-body-link" href={packHref}>
-                    <p>{pack.description}</p>
-                    <div className="pack-tags">
-                      {pack.tags.slice(0, 5).map((tag) => (
-                        <span key={tag}>{tag}</span>
-                      ))}
-                    </div>
-                    <div className="pack-count">
-                      {pack.count} {pack.count === 1 ? "model" : "models"}
-                    </div>
-                  </Link>
-                </article>
-              );
-            })}
-          </div>
+          <PackGrid
+            credit={credit}
+            items={packs.map((pack) => ({
+              pack: {
+                count: pack.count,
+                description: pack.description,
+                id: pack.id,
+                license: pack.license,
+                pack: pack.pack,
+                preview: pack.preview,
+                tags: pack.tags,
+                title: pack.title,
+                vendor: pack.vendor,
+              },
+              previewModelFiles: previewModelFilesFor(pack),
+            }))}
+            resetKey={vendor}
+            showActions={false}
+          />
         </section>
       </main>
     </>

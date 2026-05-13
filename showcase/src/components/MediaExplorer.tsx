@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { type CSSProperties, type ReactNode, useEffect, useMemo, useRef, useState } from "react";
 import { LicenseLink } from "@/components/LicenseLink";
+import { InfiniteListSentinel, useInfiniteList } from "@/components/useInfiniteList";
 import type { ArtPack, ArtSample, AudioAnalysis, MusicTrack, SoundCollection, SoundSample, SourceMapping } from "@/lib/media";
 import { artCreators } from "@/lib/media";
 import { isLikelyHybridSpriteAtlasPath, isLikelySpriteSheetPath, isLikelyTextureAtlasPath } from "@/lib/media-inference";
@@ -212,6 +213,10 @@ const SOUND_ORGANIZATION_NAMES: Record<SoundOrganization, string> = {
   "creator-pack": "Creator packs",
   "source-pattern": "Source patterns",
 };
+const TEXTURE_LIST_PAGE_SIZE = 80;
+const SOUND_LIST_PAGE_SIZE = 32;
+const MUSIC_LIST_PAGE_SIZE = 60;
+const ART_LIST_PAGE_SIZE = 48;
 
 function isSpriteSheetCandidate(sample: ArtSample): boolean {
   return sample.animated || isLikelySpriteSheetPath(sample.path) || /(?:sprite|spritesheet|sheet|animation|anim)/i.test(sample.label);
@@ -1046,7 +1051,7 @@ function SquareArtPreview({ sample, label }: { sample: ArtSample; label: string 
 
 function ArtSamplePreview({ sample }: { sample: ArtSample }) {
   if (isSpriteSheetCandidate(sample)) return <SquareArtPreview sample={sample} label={sample.label} />;
-  return <img src={sample.src} alt="" />;
+  return <img src={sample.src} alt="" loading="lazy" decoding="async" />;
 }
 
 function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }) {
@@ -1934,6 +1939,22 @@ export function MediaExplorer({
     })).filter((group) => group.collections.length > 0);
   }, [filteredSounds]);
 
+  const soundList = useInfiniteList({
+    total: filteredSounds.length,
+    pageSize: SOUND_LIST_PAGE_SIZE,
+    resetKey: ["sounds", query, soundCategoryFilter, soundOrganizationFilter, soundTypeFilter, sourceFilter].join("|"),
+  });
+
+  const visibleGroupedSounds = useMemo(() => {
+    let remaining = soundList.visibleCount;
+    return groupedSounds.flatMap((group) => {
+      if (remaining <= 0) return [];
+      const collections = group.collections.slice(0, remaining);
+      remaining -= collections.length;
+      return collections.length > 0 ? [{ ...group, collections, totalCollections: group.collections.length }] : [];
+    });
+  }, [groupedSounds, soundList.visibleCount]);
+
   const soundOrganizationCounts = useMemo(() => {
     return soundEffectCollections.reduce<Record<SoundOrganization, number>>(
       (counts, collection) => {
@@ -1966,6 +1987,34 @@ export function MediaExplorer({
     const q = query.trim().toLowerCase();
     return textureMappings.filter((mapping) => searchMatches(mapping.searchText, q));
   }, [query, textureMappings]);
+  const textureList = useInfiniteList({
+    total: filteredTextureMappings.length,
+    pageSize: TEXTURE_LIST_PAGE_SIZE,
+    resetKey: `sources:${query}`,
+  });
+  const visibleTextureMappings = filteredTextureMappings.slice(0, textureList.visibleCount);
+
+  const musicList = useInfiniteList({
+    total: filteredMusic.length,
+    pageSize: MUSIC_LIST_PAGE_SIZE,
+    resetKey: ["music", query, soundTypeFilter].join("|"),
+  });
+  const visibleMusic = filteredMusic.slice(0, musicList.visibleCount);
+
+  const artList = useInfiniteList({
+    total: filteredArt.length,
+    pageSize: ART_LIST_PAGE_SIZE,
+    resetKey: ["art", query, artTypeFilter, creatorFilter, groupMode, licenseFilter, spriteMotionFilter, spriteSubjectFilter].join("|"),
+  });
+  const visibleGroupedArt = useMemo(() => {
+    let remaining = artList.visibleCount;
+    return groupedArt.flatMap((group) => {
+      if (remaining <= 0) return [];
+      const packs = group.packs.slice(0, remaining);
+      remaining -= packs.length;
+      return packs.length > 0 ? [{ ...group, packs }] : [];
+    });
+  }, [artList.visibleCount, groupedArt]);
 
   const activeAssetGroup: NavKey = view === "sounds" ? "sounds" : view === "sources" ? "packs" : "art";
   const selectedArt = filteredArt.find((pack) => pack.folder === selectedArtFolder) ?? filteredArt[0] ?? artPacks[0];
@@ -2151,7 +2200,7 @@ export function MediaExplorer({
               <span>{filteredTextureMappings.length} {filteredTextureMappings.length === 1 ? "group" : "groups"}</span>
             </div>
             <div className="media-list">
-              {filteredTextureMappings.map((mapping) => (
+              {visibleTextureMappings.map((mapping) => (
                 <article className="media-row" key={mapping.id}>
                   <div>
                     <div className="media-title">{mapping.title}</div>
@@ -2176,6 +2225,15 @@ export function MediaExplorer({
                   </div>
                 </article>
               ))}
+              <InfiniteListSentinel
+                className="media-list-sentinel"
+                hasMore={textureList.hasMore}
+                label="Loading textures"
+                onLoadMore={textureList.loadMore}
+                pageSize={TEXTURE_LIST_PAGE_SIZE}
+                remaining={textureList.remaining}
+                sentinelRef={textureList.sentinelRef}
+              />
             </div>
           </section>
         </div>
@@ -2190,11 +2248,11 @@ export function MediaExplorer({
                 </span>
               </div>
               <div className="sound-groups">
-                {groupedSounds.map((group) => (
+                {visibleGroupedSounds.map((group) => (
                   <section className="sound-group" key={group.organization}>
                     <div className="sound-group-heading">
                       <h4>{group.label}</h4>
-                      <span>{group.collections.length} folders</span>
+                      <span>{group.totalCollections} folders</span>
                     </div>
                     <div className="media-list">
                       {group.collections.map((item) => (
@@ -2223,6 +2281,15 @@ export function MediaExplorer({
                     </div>
                   </section>
                 ))}
+                <InfiniteListSentinel
+                  className="media-list-sentinel"
+                  hasMore={soundList.hasMore}
+                  label="Loading sounds"
+                  onLoadMore={soundList.loadMore}
+                  pageSize={SOUND_LIST_PAGE_SIZE}
+                  remaining={soundList.remaining}
+                  sentinelRef={soundList.sentinelRef}
+                />
                 {groupedSounds.length === 0 && <div className="empty-preview">No sound folders match.</div>}
               </div>
             </section>
@@ -2235,7 +2302,7 @@ export function MediaExplorer({
                 <>
                   <h3>Music</h3>
                   <div className="track-list">
-                    {filteredMusic.map((track) => (
+                    {visibleMusic.map((track) => (
                       <article className="track-row" key={track.path}>
                         <AudioPlayer
                           src={track.src}
@@ -2258,6 +2325,15 @@ export function MediaExplorer({
                         <p>{track.description}</p>
                       </article>
                     ))}
+                    <InfiniteListSentinel
+                      className="media-list-sentinel"
+                      hasMore={musicList.hasMore}
+                      label="Loading tracks"
+                      onLoadMore={musicList.loadMore}
+                      pageSize={MUSIC_LIST_PAGE_SIZE}
+                      remaining={musicList.remaining}
+                      sentinelRef={musicList.sentinelRef}
+                    />
                   </div>
                 </>
               )}
@@ -2271,7 +2347,7 @@ export function MediaExplorer({
                 <span>{filteredMusic.length} tracks</span>
               </div>
               <div className="track-list">
-                {filteredMusic.map((track) => (
+                {visibleMusic.map((track) => (
                   <article className="track-row" key={track.path}>
                     <AudioPlayer
                       src={track.src}
@@ -2299,6 +2375,15 @@ export function MediaExplorer({
                     </div>
                   </article>
                 ))}
+                <InfiniteListSentinel
+                  className="media-list-sentinel"
+                  hasMore={musicList.hasMore}
+                  label="Loading tracks"
+                  onLoadMore={musicList.loadMore}
+                  pageSize={MUSIC_LIST_PAGE_SIZE}
+                  remaining={musicList.remaining}
+                  sentinelRef={musicList.sentinelRef}
+                />
               </div>
             </section>
           )}
@@ -2312,7 +2397,7 @@ export function MediaExplorer({
               <span>{filteredArt.length} sets</span>
             </div>
             <div className="art-groups">
-              {groupedArt.map((group) => (
+              {visibleGroupedArt.map((group) => (
                 <section className="art-group" key={group.label}>
                   <div className="art-group-heading">
                     <h4>{group.label}</h4>
@@ -2334,6 +2419,16 @@ export function MediaExplorer({
                   </div>
                 </section>
               ))}
+              <InfiniteListSentinel
+                className="media-list-sentinel"
+                hasMore={artList.hasMore}
+                label="Loading 2D sets"
+                onLoadMore={artList.loadMore}
+                pageSize={ART_LIST_PAGE_SIZE}
+                remaining={artList.remaining}
+                sentinelRef={artList.sentinelRef}
+              />
+              {groupedArt.length === 0 && <div className="empty-preview">No 2D sets match.</div>}
             </div>
           </section>
         </div>

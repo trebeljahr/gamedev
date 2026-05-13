@@ -225,7 +225,7 @@ export function PackCardPreview({
       aria-hidden={label ? undefined : true}
     >
       {showCachedImage ? (
-        <img className="pack-preview-image" src={previewImage} alt="" />
+        <img className="pack-preview-image" src={previewImage} alt="" loading="lazy" decoding="async" />
       ) : hasCanvasSlot && ready && url ? (
         <Canvas
           camera={{ position: [5.5, 4.2, 7], fov: 40, near: 0.1, far: 500 }}

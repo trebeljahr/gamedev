@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
+import { InfiniteListSentinel, useInfiniteList } from "@/components/useInfiniteList";
 import { LicenseLink } from "@/components/LicenseLink";
 import { SiteHeader } from "@/components/SiteHeader";
 import { licenseForVendor, type VendorLicense } from "@/lib/license";
@@ -61,7 +62,6 @@ export function ModelCatalog({ manifest }: ModelCatalogProps) {
   const [category, setCategory] = useState(ALL);
   const [style, setStyle] = useState(ALL);
   const [theme, setTheme] = useState(ALL);
-  const [visibleLimit, setVisibleLimit] = useState(PAGE_SIZE);
   const normalizedQuery = query.trim().toLowerCase();
   const terms = useMemo(() => normalizedQuery.split(/\s+/).filter(Boolean), [normalizedQuery]);
 
@@ -99,12 +99,13 @@ export function ModelCatalog({ manifest }: ModelCatalogProps) {
   );
 
   const totalModels = entries.length;
-  const visibleEntries = filtered.slice(0, visibleLimit);
-  const hasMore = visibleEntries.length < filtered.length;
-
-  useEffect(() => {
-    setVisibleLimit(PAGE_SIZE);
-  }, [category, normalizedQuery, style, theme, vendor]);
+  const listResetKey = [category, normalizedQuery, style, theme, vendor].join("|");
+  const infinite = useInfiniteList({
+    total: filtered.length,
+    pageSize: PAGE_SIZE,
+    resetKey: listResetKey,
+  });
+  const visibleEntries = filtered.slice(0, infinite.visibleCount);
 
   return (
     <>
@@ -246,15 +247,14 @@ export function ModelCatalog({ manifest }: ModelCatalogProps) {
               No models match these filters.
             </div>
           )}
-          {hasMore && (
-            <button
-              className="model-load-more"
-              type="button"
-              onClick={() => setVisibleLimit((current) => current + PAGE_SIZE)}
-            >
-              Show {Math.min(PAGE_SIZE, filtered.length - visibleEntries.length)} more models
-            </button>
-          )}
+          <InfiniteListSentinel
+            hasMore={infinite.hasMore}
+            label="Loading models"
+            onLoadMore={infinite.loadMore}
+            pageSize={PAGE_SIZE}
+            remaining={infinite.remaining}
+            sentinelRef={infinite.sentinelRef}
+          />
         </section>
       </main>
     </>
