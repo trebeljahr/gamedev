@@ -6,6 +6,10 @@ import { Suspense, useState } from "react";
 import { ErrorBoundary } from "./ErrorBoundary";
 import { Model, type AnimationInfo } from "./Model";
 import { AnimationPicker } from "./AnimationPicker";
+import {
+  CameraFloorGuard,
+  ORBIT_FLOOR_POLAR_LIMIT,
+} from "./CameraFloorGuard";
 
 export function Viewer({ url }: { url: string }) {
   const [anim, setAnim] = useState<AnimationInfo | null>(null);
@@ -40,7 +44,13 @@ export function Viewer({ url }: { url: string }) {
             <Environment preset="city" environmentIntensity={0.5} />
           </ErrorBoundary>
         </Suspense>
-        <OrbitControls makeDefault enableDamping dampingFactor={0.1} />
+        <OrbitControls
+          makeDefault
+          enableDamping
+          dampingFactor={0.1}
+          maxPolarAngle={ORBIT_FLOOR_POLAR_LIMIT}
+        />
+        <CameraFloorGuard />
       </Canvas>
       {anim && anim.names.length > 0 && (
         <AnimationPicker names={anim.names} onChange={setPlayAnim} />

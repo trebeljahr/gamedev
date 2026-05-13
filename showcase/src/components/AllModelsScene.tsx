@@ -37,6 +37,10 @@ import { licenseForVendor } from "@/lib/license";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { LicenseLink } from "@/components/LicenseLink";
 import { uniqueTags } from "@/lib/tags";
+import {
+  CameraFloorGuard,
+  clampCameraAboveFloor,
+} from "@/components/CameraFloorGuard";
 
 // Load any pack whose nearest edge is within this distance of the camera.
 // Pack-coherent loading: when you approach a pack, the whole pack appears at
@@ -300,6 +304,7 @@ function ModelGridScene({
           />
         </Suspense>
         <PointerLockControls selector=".all-scene-canvas canvas" />
+        <CameraFloorGuard minY={WORLD_HEIGHT} />
       </Canvas>
       <Crosshair hovering={hoverInspect && !panelOpen} />
       {showHud && (
@@ -394,6 +399,7 @@ function Walker({ allowArrowKeys = true }: { allowArrowKeys?: boolean }) {
       camera.position.y += dy * s;
       camera.position.z += dz * s;
     }
+    clampCameraAboveFloor(camera, WORLD_HEIGHT);
   });
   return null;
 }
@@ -849,6 +855,7 @@ function FocusSelectedSlot({ slot }: { slot: Slot }) {
     if (!target.current) return;
     const t = Math.min(1, delta * 3.4);
     camera.position.lerp(target.current.position, t);
+    clampCameraAboveFloor(camera, WORLD_HEIGHT);
     camera.lookAt(target.current.lookAt);
     if (camera.position.distanceTo(target.current.position) < 0.08) {
       target.current = null;
