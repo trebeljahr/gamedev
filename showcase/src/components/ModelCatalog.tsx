@@ -205,7 +205,7 @@ export function ModelCatalog({ manifest }: ModelCatalogProps) {
                   ))}
                 </div>
                 <div className="model-card-actions">
-                  <Link href={modelViewerHref(entry)}>Evaluate asset</Link>
+                  <Link href={modelViewerHref(entry)}>Inspect model</Link>
                 </div>
                 <ModelDownloadLinks model={entry.model} compact />
               </div>
