@@ -117,6 +117,10 @@ type SoundSample = {
   label: string;
   kind: "movement" | "combat" | "ui" | "ambient" | "effect";
 };
+type ArtPackDir = {
+  packFolder: string;
+  dir: string;
+};
 
 async function walk(dir: string, predicate: (path: string, name: string) => boolean): Promise<string[]> {
   const out: string[] = [];
@@ -143,6 +147,33 @@ function urlFor(absPath: string, base: string, urlPrefix: string): string {
 
 function isJunkMediaPath(path: string): boolean {
   return /(^|\/)(__MACOSX|\.DS_Store)(\/|$)/i.test(path) || /(^|\/)\._/.test(path);
+}
+
+async function addArtPackDirsFromRoot(
+  out: Map<string, ArtPackDir>,
+  dir: string,
+  packFolderForName: (name: string) => string,
+): Promise<void> {
+  if (!existsSync(dir)) return;
+  const entries = await readdir(dir, { withFileTypes: true });
+  for (const entry of entries) {
+    if (!entry.isDirectory()) continue;
+    const packFolder = packFolderForName(entry.name);
+    if (NON_COMMERCIAL_ART_PACKS.has(packFolder)) continue;
+    out.set(packFolder, { packFolder, dir: join(dir, entry.name) });
+  }
+}
+
+async function discoverArtPackDirs(assetsRoot: string): Promise<ArtPackDir[]> {
+  const out = new Map<string, ArtPackDir>();
+  const itchRoot = join(assetsRoot, "2D");
+
+  await addArtPackDirsFromRoot(out, itchRoot, (name) => name);
+  out.delete("kenney");
+  await addArtPackDirsFromRoot(out, join(assetsRoot, "2D", "kenney"), (name) => `kenney/2D/${name}`);
+  await addArtPackDirsFromRoot(out, join(assetsRoot, "kenney", "2D"), (name) => `kenney/2D/${name}`);
+
+  return [...out.values()].sort((a, b) => a.packFolder.localeCompare(b.packFolder));
 }
 
 function labelFromAssetPath(path: string): string {
@@ -190,15 +221,10 @@ async function writeMediaManifest(): Promise<void> {
   const artSamples: ArtSample[] = [];
   const soundSamples: SoundSample[] = [];
 
-  if (existsSync(artRoot)) {
-    const packDirs = (await readdir(artRoot, { withFileTypes: true }))
-      .filter((d) => d.isDirectory())
-      .map((d) => d.name)
-      .filter((name) => !NON_COMMERCIAL_ART_PACKS.has(name))
-      .sort();
+  if (existsSync(artRoot) || existsSync(join(ASSETS_ROOT, "kenney", "2D"))) {
+    const packDirs = await discoverArtPackDirs(ASSETS_ROOT);
 
-    for (const packFolder of packDirs) {
-      const packDir = join(artRoot, packFolder);
+    for (const { packFolder, dir: packDir } of packDirs) {
       const images = await walk(
         packDir,
         (path, name) => !isJunkMediaPath(path) && /\.(png|jpe?g|webp|gif)$/i.test(name),

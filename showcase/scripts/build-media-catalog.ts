@@ -111,18 +111,60 @@ function labelFromPath(path: string): string {
     .replace(/\b\w/g, (c) => c.toUpperCase());
 }
 
+function tokenTextValue(value: string): string {
+  return value
+    .replace(/([a-z])([A-Z])/g, "$1 $2")
+    .replace(/([a-z])(\d)/gi, "$1 $2")
+    .replace(/(\d)([a-z])/gi, "$1 $2")
+    .replace(/[^a-z0-9]+/gi, " ")
+    .trim()
+    .toLowerCase();
+}
+
+function hasToken(text: string, pattern: string): boolean {
+  return new RegExp(`(^|\\s)(${pattern})(\\s|$)`, "i").test(tokenTextValue(text));
+}
+
+function isKenney2DArtPackFolder(folder: string): boolean {
+  return /^kenney\/2D\/[^/]+$/i.test(folder);
+}
+
+function buildKenneyArtPack(folder: string): RawArtPack {
+  return {
+    folder,
+    title: labelFromPath(folder),
+    author: "Kenney",
+    author_url: "https://kenney.nl/",
+    url: "https://kenney.nl/assets/category:2D",
+    game_id: null,
+    license_class: "CC0 1.0 (Creative Commons Zero)",
+    attribution: "Optional",
+  };
+}
+
+function generatedKenneyArtPacks(mediaAssets: MediaAssets, existingFolders: Set<string>): RawArtPack[] {
+  const folders = new Set<string>();
+  for (const sample of mediaAssets.artSamples) {
+    if (isKenney2DArtPackFolder(sample.packFolder)) folders.add(sample.packFolder);
+  }
+  return [...folders]
+    .filter((folder) => !existingFolders.has(folder))
+    .sort()
+    .map(buildKenneyArtPack);
+}
+
 function artThemeFor(pack: RawArtPack) {
-  const text = `${pack.folder} ${pack.title}`.toLowerCase();
-  if (/(icon|item|coin|chest|pickup|potion|weapon|inventory|fable)/.test(text)) return "Icons & Items";
-  if (/(effect|fx|fire|smoke|bullet|spell|magic|explosion|slash)/.test(text)) return "Effects";
-  if (/(tile|tileset|forest|dungeon|mine|plains|land|nature|tree|tower|platformer|objects|town)/.test(text)) {
+  const text = tokenTextValue(`${pack.folder.replace(/^kenney\/2D\//i, "")} ${pack.title}`);
+  if (hasToken(text, "icon|icons|item|items|coin|coins|chest|pickup|pickups|potion|potions|weapon|weapons|inventory|fable")) return "Icons & Items";
+  if (hasToken(text, "effect|effects|fx|fire|smoke|bullet|bullets|spell|spells|magic|explosion|explosions|slash|slashes|particle|particles")) return "Effects";
+  if (hasToken(text, "tile|tiles|tileset|tilesets|terrain|forest|dungeon|mine|mines|plains|land|nature|tree|trees|tower|towers|platformer|objects|props|town|city|road|roads|isometric|platform")) {
     return "Environments";
   }
-  if (/(ui|hud|button|menu)/.test(text)) return "UI";
-  if (/(space|void|sci-fi|sci fi|mech|robo|ship|fleet|alien|shooter)/.test(text)) return "Vehicles & Sci-Fi";
-  if (/(animal|bird|cat|frog|dino|jellyfish|shark|turtle|crab|wolf|critters|creature)/.test(text)) return "Animals";
-  if (/(enemy|monster|demon|undead|skeleton|worm|executioner|obelisk)/.test(text)) return "Enemies";
-  if (/(character|hero|knight|warrior|mage|witch|archer|samurai|huntress|king|bandit)/.test(text)) return "Characters";
+  if (hasToken(text, "ui|hud|button|buttons|menu|menus|interface|interfaces|cursor|cursors|crosshair|crosshairs")) return "UI";
+  if (hasToken(text, "space|void|sci|sci fi|mech|mechs|robo|robot|robots|ship|ships|fleet|fleets|alien|aliens|shooter|shooters|vehicle|vehicles|racing")) return "Vehicles & Sci-Fi";
+  if (hasToken(text, "animal|animals|bird|birds|cat|cats|frog|frogs|dino|dinos|dinosaur|dinosaurs|jellyfish|shark|sharks|turtle|turtles|crab|crabs|wolf|wolves|critters|creature|creatures")) return "Animals";
+  if (hasToken(text, "enemy|enemies|monster|monsters|demon|demons|undead|skeleton|skeletons|worm|worms|executioner|obelisk")) return "Enemies";
+  if (hasToken(text, "character|characters|hero|heroes|knight|knights|warrior|warriors|mage|mages|witch|witches|archer|archers|samurai|huntress|king|kings|bandit|bandits")) return "Characters";
   return "General";
 }
 
@@ -151,7 +193,9 @@ async function main() {
     return map;
   }, new Map<string, SoundSample[]>());
 
-  const allowedArtPacks = metadata["2d_packs"].packs.filter((pack) => !isNonCommercialPack(pack));
+  const existingArtPackFolders = new Set(metadata["2d_packs"].packs.map((pack) => pack.folder));
+  const generatedKenneyPacks = generatedKenneyArtPacks(mediaAssets, existingArtPackFolders);
+  const allowedArtPacks = [...metadata["2d_packs"].packs, ...generatedKenneyPacks].filter((pack) => !isNonCommercialPack(pack));
   const allowedArtPackFolders = new Set(allowedArtPacks.map((pack) => pack.folder));
 
   const artPacks = allowedArtPacks.map((pack) => {
@@ -179,7 +223,20 @@ async function main() {
     };
   });
 
-  const allowedMappings = metadata.mappings.filter((entry) => !isNonCommercialMapping(entry));
+  const generatedMappings: MetadataMapping[] =
+    generatedKenneyPacks.length > 0
+      ? [
+          {
+            path_pattern: "kenney/2D/**",
+            source: "kenney",
+            author: "Kenney",
+            pack_url: "https://kenney.nl/assets/category:2D",
+            license: "CC0 1.0",
+            notes: "Generated from copied Kenney 2D pack folders under assets/kenney/2D or assets/2D/kenney.",
+          },
+        ]
+      : [];
+  const allowedMappings = [...metadata.mappings, ...generatedMappings].filter((entry) => !isNonCommercialMapping(entry));
 
   const musicTracks = allowedMappings
     .filter((entry) => entry.path_pattern.startsWith("sounds/music/"))

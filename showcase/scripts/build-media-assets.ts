@@ -31,6 +31,10 @@ type SoundSample = {
   label: string;
   kind: "movement" | "combat" | "ui" | "ambient" | "effect";
 };
+type ArtPackDir = {
+  packFolder: string;
+  dir: string;
+};
 
 async function walk(dir: string, predicate: (path: string, name: string) => boolean): Promise<string[]> {
   const out: string[] = [];
@@ -59,6 +63,33 @@ function isJunkPath(path: string): boolean {
   return /(^|\/)(__MACOSX|\.DS_Store)(\/|$)/i.test(path) || /(^|\/)\._/.test(path);
 }
 
+async function addPackDirsFromRoot(
+  out: Map<string, ArtPackDir>,
+  dir: string,
+  packFolderForName: (name: string) => string,
+): Promise<void> {
+  if (!existsSync(dir)) return;
+  const entries = await readdir(dir, { withFileTypes: true });
+  for (const entry of entries) {
+    if (!entry.isDirectory()) continue;
+    const packFolder = packFolderForName(entry.name);
+    if (NON_COMMERCIAL_ART_PACKS.has(packFolder)) continue;
+    out.set(packFolder, { packFolder, dir: join(dir, entry.name) });
+  }
+}
+
+async function discoverArtPackDirs(assetsRoot: string): Promise<ArtPackDir[]> {
+  const out = new Map<string, ArtPackDir>();
+  const itchRoot = join(assetsRoot, "2D");
+
+  await addPackDirsFromRoot(out, itchRoot, (name) => name);
+  out.delete("kenney");
+  await addPackDirsFromRoot(out, join(assetsRoot, "2D", "kenney"), (name) => `kenney/2D/${name}`);
+  await addPackDirsFromRoot(out, join(assetsRoot, "kenney", "2D"), (name) => `kenney/2D/${name}`);
+
+  return [...out.values()].sort((a, b) => a.packFolder.localeCompare(b.packFolder));
+}
+
 function labelFromAssetPath(path: string): string {
   return humanize(
     path
@@ -74,7 +105,7 @@ function inferSoundKind(path: string): SoundSample["kind"] {
   if (/(footstep|step|walk|run|jump|movement|grass|gravel)/.test(lower)) return "movement";
   if (/(hit|impact|slash|attack|weapon|arrow|explosion|laser|shoot|hurt|damage)/.test(lower)) return "combat";
   if (/(ui|click|button|select|menu|confirm|coin|pickup|notification)/.test(lower)) return "ui";
-  if (/(ambient|ambience|wind|rain|forest|water|loop|room|drone)/.test(lower)) return "ambient";
+  if (/(ambient|wind|rain|forest|water|loop|room|drone)/.test(lower)) return "ambient";
   return "effect";
 }
 
@@ -93,15 +124,10 @@ async function main() {
   const artSamples: ArtSample[] = [];
   const soundSamples: SoundSample[] = [];
 
-  if (existsSync(artRoot)) {
-    const packDirs = (await readdir(artRoot, { withFileTypes: true }))
-      .filter((d) => d.isDirectory())
-      .map((d) => d.name)
-      .filter((name) => !NON_COMMERCIAL_ART_PACKS.has(name))
-      .sort();
+  if (existsSync(artRoot) || existsSync(join(ASSETS_ROOT, "kenney", "2D"))) {
+    const packDirs = await discoverArtPackDirs(ASSETS_ROOT);
 
-    for (const packFolder of packDirs) {
-      const packDir = join(artRoot, packFolder);
+    for (const { packFolder, dir: packDir } of packDirs) {
       const images = await walk(
         packDir,
         (path, name) => !isJunkPath(path) && /\.(png|jpe?g|webp|gif)$/i.test(name),
@@ -131,7 +157,7 @@ async function main() {
       const rel = relative(ASSETS_ROOT, abs).split("/").join("/");
       if (rel.startsWith("sounds/music/")) continue;
       const parts = rel.split("/");
-      const collectionId = parts.length >= 3 ? `${parts[0]}/${parts[1]}/**` : `${parts.slice(0, -1).join("/")}/**`;
+      const collectionId = parts.length >= 4 ? `${parts[0]}/${parts[1]}/${parts[2]}/**` : `${parts.slice(0, -1).join("/")}/**`;
       const list = byCollection.get(collectionId) ?? [];
       list.push(abs);
       byCollection.set(collectionId, list);
@@ -140,7 +166,7 @@ async function main() {
     for (const [collectionId, files] of [...byCollection.entries()].sort((a, b) => a[0].localeCompare(b[0]))) {
       for (const abs of files
         .sort((a, b) => scoreSoundSample(b) - scoreSoundSample(a) || a.localeCompare(b))
-        .slice(0, 12)) {
+        .slice(0, 6)) {
         const rel = relative(ASSETS_ROOT, abs).split("/").join("/");
         soundSamples.push({
           collectionId,

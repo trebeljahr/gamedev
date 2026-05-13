@@ -195,6 +195,10 @@ function tokenText(...values: Array<string | undefined>): string {
   return values.filter(Boolean).map((value) => cleanRawText(value!)).join(" ").toLowerCase();
 }
 
+function hasToken(text: string, pattern: string): boolean {
+  return new RegExp(`(^|\\s)(${pattern})(\\s|$)`, "i").test(tokenText(text));
+}
+
 function inferCategory(text: string): { category: ModelCategory; subcategory: string } {
   for (const [category, pattern, subcategory] of CATEGORY_RULES) {
     if (pattern.test(text)) return { category, subcategory };
@@ -535,7 +539,7 @@ export function buildSourceMappingMetadata(input: {
 function mediumForPath(path: string): string {
   if (path.startsWith("sounds/music/")) return "music";
   if (path.startsWith("sounds/")) return "sound";
-  if (path.startsWith("2D/")) return "2d-art";
+  if (path.startsWith("2D/") || path.startsWith("kenney/2D/")) return "2d-art";
   if (path.startsWith("textures/")) return "texture";
   if (path.startsWith("3D/")) return "3d-legacy";
   return "asset";
@@ -545,7 +549,7 @@ function soundCategory(text: string): string {
   if (/(music|track|theme|song|incompetech|macleod)/i.test(text)) return "music";
   if (/(footstep|step|walk|run|jump|movement|grass|gravel)/i.test(text)) return "movement";
   if (/(hit|impact|slash|attack|weapon|arrow|explosion|laser|shoot|hurt|damage|combat)/i.test(text)) return "combat";
-  if (/(ui|click|button|select|menu|confirm|coin|pickup|notification)/i.test(text)) return "ui";
+  if (hasToken(text, "ui|click|button|select|menu|confirm|coin|pickup|notification")) return "ui";
   if (/(ambient|wind|rain|forest|water|loop|room|drone|atmosphere)/i.test(text)) return "ambient";
   return "effect";
 }
@@ -557,7 +561,7 @@ function soundThemes(text: string): string[] {
     [/(sci|laser|robot|space|ship|alien)/i, "sci-fi"],
     [/(forest|grass|gravel|wind|rain|water|nature)/i, "nature"],
     [/(combat|weapon|hit|impact|explosion|attack)/i, "combat"],
-    [/(ui|menu|click|button|select|confirm)/i, "interface"],
+    [/(^|\s)(ui|menu|click|button|select|confirm)(\s|$)/i, "interface"],
     [/(horror|dark|ghost|monster|zombie)/i, "horror"],
     [/(music|theme|song|loop)/i, "music"],
   ] as Array<[RegExp, string]>) {
@@ -608,7 +612,7 @@ function mediaUseCases(category: string, text: string): string[] {
   if (/(tile|tileset|forest|dungeon|mine|plains|platform|environment)/i.test(text) || category.includes("environment")) {
     return ["level building", "tilemaps", "environment dressing"];
   }
-  if (/(ui|hud|button|menu)/i.test(text) || category.includes("ui")) {
+  if (hasToken(text, "ui|hud|button|menu") || category.includes("ui")) {
     return ["menus", "HUD", "interface mockups"];
   }
   if (/(ship|fleet|space|mech|sci|shooter)/i.test(text)) {

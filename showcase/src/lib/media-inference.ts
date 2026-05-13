@@ -1,12 +1,16 @@
 export type ArtKind = "character" | "sprite" | "icon" | "tile" | "effect" | "ui" | "image";
 
 const ACTION_WORDS =
-  "idle|walk|run|jump|fall|attack|attacks|hurt|hit|death|die|move|dash|roll|slide|crouch|sleep|sleeping|damaged|charge|teleport";
+  "idle|walk|run|jump|fall|attack|attacks|hurt|hit|death|die|move|dash|roll|slide|crouch|sleep|sleeping|charge|teleport";
 const CHARACTER_WORDS =
-  "character|characters|hero|knight|warrior|mage|witch|dino|frog|cat|skeleton|monster|enemy|creature|samurai|archer|bandit|huntress|wizard|npc|villager|ronin|ship|fighter|bomber";
+  "character|characters|hero|heroes|knight|knights|warrior|warriors|mage|mages|witch|witches|dino|dinos|dinosaur|dinosaurs|frog|frogs|cat|cats|dog|dogs|sheep|bat|bats|bird|birds|wolf|wolves|fish|shark|sharks|turtle|turtles|crab|crabs|skeleton|skeletons|monster|monsters|enemy|enemies|creature|creatures|alien|aliens|samurai|archer|archers|bandit|bandits|huntress|wizard|wizards|npc|npcs|villager|villagers|ronin";
+const VEHICLE_SPRITE_WORDS =
+  "ship|ships|spaceship|spaceships|ufo|ufos|fighter|fighters|bomber|bombers|battlecruiser|battlecruisers|frigate|frigates|dreadnought|dreadnoughts|scout|scouts|torpedo";
 const ATLAS_WORDS =
   "atlas|texture|textures|tilesheet|tile sheet|tilemap|tile map|tileset|tiled|terrain|decoration|decorations|objects|props|ground";
 const SHEET_WORDS = "spritesheet|sprite sheet|sheet|strip|allanim|all anim|animation|animated";
+const STATIC_SHEET_WORDS =
+  "ui|hud|button|buttons|panel|panels|cursor|cursors|crosshair|crosshairs|icon|icons|item|items|coin|coins|controls|tile|tiles|tilesheet|tilemap|tileset|terrain|platform|platformer|dungeon|dungeons|cave|caves|industrial|roguelike|landscape|building|buildings|city|road|roads|vehicle|vehicles|car|cars|object|objects|prop|props";
 
 function parts(path: string): string[] {
   return path.split(/[\\/]+/).filter(Boolean);
@@ -52,13 +56,16 @@ export function isLikelySeparateFramePath(path: string): boolean {
 
 export function isLikelyTextureAtlasPath(path: string): boolean {
   const text = tokenText(path);
-  const atlasHint = hasToken(text, ATLAS_WORDS) || /(^|[\\/])(tiled_files|tilesets?|tilemaps?|textures?)([\\/]|$)/i.test(path);
+  const sheetHint = hasToken(text, "spritesheet|sprite sheet|sheet") || /(^|[\\/])spritesheets?([\\/]|$)/i.test(path);
+  const staticSheetHint = sheetHint && hasToken(text, STATIC_SHEET_WORDS);
+  const atlasHint = staticSheetHint || hasToken(text, ATLAS_WORDS) || /(^|[\\/])(tiled_files|tilesets?|tilemaps?|textures?)([\\/]|$)/i.test(path);
   if (!atlasHint) return false;
 
   const animationHint = hasToken(text, ACTION_WORDS) || hasToken(text, "animation|animated|allanim|all anim");
   const characterHint = hasToken(text, CHARACTER_WORDS);
   const animatedIconHint = hasToken(text, "coin|coins|chest|chests|pickup|gem|gems|potion|potions");
-  return !animationHint && !characterHint && !animatedIconHint;
+  if (animationHint && animatedIconHint) return false;
+  return !animationHint && !characterHint;
 }
 
 export function isLikelyHybridSpriteAtlasPath(path: string): boolean {
@@ -66,9 +73,10 @@ export function isLikelyHybridSpriteAtlasPath(path: string): boolean {
   const atlasHint = hasToken(text, ATLAS_WORDS) || /(^|[\\/])(atlases?|textures?|spritesheets?|sheets?)([\\/]|$)/i.test(path);
   if (!atlasHint) return false;
 
-  const animationHint = hasToken(text, ACTION_WORDS) || hasToken(text, SHEET_WORDS);
   const characterHint = hasToken(text, CHARACTER_WORDS);
-  const multiSubjectHint = hasToken(text, "characters|enemies|creatures|units|actors|players|npcs|all");
+  const sheetAnimationHint = hasToken(text, SHEET_WORDS) && characterHint && !hasToken(text, STATIC_SHEET_WORDS);
+  const animationHint = hasToken(text, ACTION_WORDS) || hasToken(text, "animation|animated|allanim|all anim|strip") || sheetAnimationHint;
+  const multiSubjectHint = hasToken(text, "characters|enemies|creatures|units|actors|players|npcs");
   return animationHint && (characterHint || multiSubjectHint || hasToken(text, "atlas|atlases"));
 }
 
@@ -77,6 +85,7 @@ export function isLikelySpriteSheetPath(path: string): boolean {
   if (isLikelyHybridSpriteAtlasPath(path)) return true;
   if (isLikelyTextureAtlasPath(path)) return false;
   if (isLikelySeparateFramePath(path)) return false;
+  if (hasToken(path, "ui|hud|button|buttons|panel|panels|cursor|cursors|crosshair|crosshairs|bar|slider|slide") && !hasToken(path, "animated|animation|spritesheet|sprite sheet|strip|allanim|all anim")) return false;
   if (/(^|[\\/])(spritesheets?|sheets?|strips?)([\\/]|$)/i.test(path)) return true;
   if (hasToken(path, SHEET_WORDS)) return true;
 
@@ -90,12 +99,14 @@ export function isLikelySpriteSheetPath(path: string): boolean {
 export function inferArtKind(path: string): ArtKind {
   const name = basenameWithoutExtension(path).toLowerCase();
   if (hasToken(path, "icon|icons|item|items|inventory|weapon|weapons|coin|coins|chest|pickup|potion|gem|gems")) return "icon";
-  if (hasToken(path, "tile|tiles|tileset|terrain|forest|dungeon|platform|ground|wall|walls|props")) return "tile";
   if (hasToken(path, "effect|effects|fx|fire|smoke|slash|impact|bullet|explosion|spell|magic")) return "effect";
   if (hasToken(path, "button|buttons|ui|hud|panel|cursor|menu|fullscreen|memoryprofiler") || /progress\s*bar/i.test(path)) return "ui";
+  if (hasToken(path, VEHICLE_SPRITE_WORDS)) return isLikelySpriteSheetPath(path) ? "sprite" : "image";
   if (hasToken(path, CHARACTER_WORDS)) {
     return "character";
   }
+  if (isLikelySpriteSheetPath(path) && hasToken(path, ACTION_WORDS)) return "sprite";
+  if (hasToken(path, "tile|tiles|tileset|terrain|forest|dungeon|platform|ground|wall|walls|props")) return "tile";
   if (isLikelySpriteSheetPath(path) || /\bspr(ite)?\b/i.test(name)) return "sprite";
   return "image";
 }
