@@ -90,6 +90,10 @@ function searchMatches(searchText: string, query: string): boolean {
   return terms.every((term) => searchText.includes(term));
 }
 
+function creatorUrlForPacks(packs: ArtPack[]): string | undefined {
+  return packs.find((pack) => pack.author_url)?.author_url;
+}
+
 function artTypeFor(pack: ArtPack): Exclude<ArtTypeFilter, "all"> {
   const sampleKinds = new Set(pack.samples.map((sample) => sample.kind));
   const uiOrIcons = pack.theme === "UI" || pack.theme === "Icons & Items";
@@ -1164,7 +1168,28 @@ function ArtWorkbench({ pack }: { pack: ArtPack }) {
             <h3>{pack.title}</h3>
             <p className="workbench-description">{pack.description}</p>
           </div>
-          <div className="media-detail">{pack.author} · {pack.samples.length} preview files</div>
+          <div className="workbench-credit-grid">
+            <div>
+              <span>Creator</span>
+              {pack.author_url ? (
+                <a href={pack.author_url} target="_blank" rel="noreferrer">
+                  {pack.author}
+                </a>
+              ) : (
+                <strong>{pack.author}</strong>
+              )}
+            </div>
+            <div>
+              <span>License</span>
+              <strong title={pack.license_class}>{licenseBucket(pack.license_class)}</strong>
+            </div>
+            {pack.url && (
+              <a className="source-link" href={pack.url} target="_blank" rel="noreferrer">
+                Pack source
+              </a>
+            )}
+            <small>{pack.samples.length} preview files</small>
+          </div>
         </div>
         <ArtCanvasRunner pack={pack} sample={selectedSample} />
       </div>
@@ -1190,12 +1215,27 @@ function ArtPackCard({
         </div>
         <div className="art-card-body">
           <strong>{pack.title}</strong>
-          <span>{pack.author} · {licenseBucket(pack.license_class)}</span>
+          <span>{pack.theme} · {pack.samples.length} previews</span>
           <small>{pack.tags.slice(0, 3).join(" · ")}</small>
         </div>
       </button>
+      <div className="art-card-credit">
+        <div>
+          <span>Creator</span>
+          <strong>{pack.author}</strong>
+        </div>
+        <div>
+          <span>License</span>
+          <strong title={pack.license_class}>{licenseBucket(pack.license_class)}</strong>
+        </div>
+      </div>
       <div className="media-actions">
         <span>{pack.attribution}</span>
+        {pack.author_url && (
+          <a href={pack.author_url} target="_blank" rel="noreferrer">
+            creator
+          </a>
+        )}
         {pack.url && (
           <a href={pack.url} target="_blank" rel="noreferrer">
             source
@@ -1483,10 +1523,14 @@ export function MediaExplorer({
         ? ART_TAXONOMY_ORDER
         : Array.from(new Set(filteredArt.map((pack) => pack.author))).sort();
     return labels
-      .map((label) => ({
-        label,
-        packs: filteredArt.filter((pack) => (groupMode === "type" ? artTaxonomyLabel(pack) === label : pack.author === label)),
-      }))
+      .map((label) => {
+        const packs = filteredArt.filter((pack) => (groupMode === "type" ? artTaxonomyLabel(pack) === label : pack.author === label));
+        return {
+          label,
+          packs,
+          creatorUrl: groupMode === "creator" ? creatorUrlForPacks(packs) : undefined,
+        };
+      })
       .filter((group) => group.packs.length > 0);
   }, [filteredArt, groupMode]);
 
@@ -1817,7 +1861,14 @@ export function MediaExplorer({
             <div className="art-groups">
               {groupedArt.map((group) => (
                 <section className="art-group" key={group.label}>
-                  <h4>{group.label}</h4>
+                  <div className="art-group-heading">
+                    <h4>{group.label}</h4>
+                    {group.creatorUrl && (
+                      <a href={group.creatorUrl} target="_blank" rel="noreferrer">
+                        Creator page
+                      </a>
+                    )}
+                  </div>
                   <div className="art-card-grid">
                     {group.packs.map((pack) => (
                       <ArtPackCard

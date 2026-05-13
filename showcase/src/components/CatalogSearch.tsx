@@ -5,7 +5,9 @@ import dynamic from "next/dynamic";
 import type { ReactNode } from "react";
 import { useMemo, useState } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
+import { licenseForVendor } from "@/lib/license";
 import type { Manifest, Pack } from "@/lib/manifest";
+import { previewModelFor } from "@/lib/preview-model";
 
 const PackCardPreview = dynamic(
   () => import("@/components/PackCardPreview").then((m) => m.PackCardPreview),
@@ -40,38 +42,6 @@ function matchPack(pack: Pack, query: string, motion: ModelMotionFilter): { pack
 
 function slug(value: string): string {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
-}
-
-function previewModelFor(pack: Pack) {
-  const preferredCategories = new Set([
-    "character",
-    "creature",
-    "building",
-    "vehicle",
-    "environment",
-    "nature",
-    "sci-fi",
-  ]);
-  const tinyCategories = new Set(["projectile", "weapon", "effect"]);
-
-  return pack.models
-    .slice()
-    .sort((a, b) => {
-      const score = (model: Pack["models"][number]) => {
-        const glb = /\.glb($|[?#])/i.test(model.file);
-        const mirroredGlb = model.file.startsWith("/glb/");
-        const [w, h, d] = model.size ?? [1, 1, 1];
-        const visualWeight = Math.min(Math.max(w, d, h), 8);
-        return (
-          (mirroredGlb ? 120 : 0) +
-          (glb ? 60 : 0) +
-          (preferredCategories.has(model.category) ? 30 : 0) -
-          (tinyCategories.has(model.category) ? 35 : 0) +
-          visualWeight
-        );
-      };
-      return score(b) - score(a);
-    })[0];
 }
 
 export function CatalogSearch({ manifest, children, showHeader = true, modelMotion = "all" }: CatalogSearchProps) {
@@ -134,30 +104,69 @@ export function CatalogSearch({ manifest, children, showHeader = true, modelMoti
 
       {children}
 
-      {byVendor.map(([vendor, packs]) => (
-        <section className="vendor-section" id={`creator-${slug(vendor)}`} key={vendor}>
-          <h2>{vendor}</h2>
-          <div className="pack-grid">
-            {packs.map(({ pack, modelMatches }) => (
-              <Link key={pack.id} className="pack-card" href={`/${pack.vendor}/${pack.pack}`}>
-                <PackCardPreview model={previewModelFor(pack)} />
-                <div className="pack-label">{pack.title}</div>
-                <p>{pack.description}</p>
-                <div className="pack-tags">
-                  {pack.tags.slice(0, 5).map((tag) => (
-                    <span key={tag}>{tag}</span>
+      {byVendor.map(([vendor, packs]) => {
+        const credit = licenseForVendor(vendor);
+        const packCount = packs.length;
+        const modelCount = packs.reduce((sum, item) => sum + item.pack.count, 0);
+
+        return (
+          <section className="vendor-section" id={`creator-${slug(vendor)}`} key={vendor}>
+            <div className="creator-section-header">
+              <div>
+                <div className="landing-kicker">Creator</div>
+                <h2>{credit.vendorLabel}</h2>
+                <p>
+                  {packCount} {packCount === 1 ? "pack" : "packs"} · {modelCount.toLocaleString()} models ·{" "}
+                  {credit.notes}
+                </p>
+              </div>
+              <div className="creator-credit-panel">
+                <div>
+                  <span>License</span>
+                  {credit.licenseUrl ? (
+                    <a href={credit.licenseUrl} target="_blank" rel="noreferrer" className="license-badge">
+                      {credit.license}
+                    </a>
+                  ) : (
+                    <strong className="license-badge">{credit.license}</strong>
+                  )}
+                </div>
+                <div className="creator-links" aria-label={`${credit.vendorLabel} links`}>
+                  <Link href={`/${vendor}`}>Creator page</Link>
+                  {credit.links.map((link) => (
+                    <a key={link.url} href={link.url} target="_blank" rel="noreferrer">
+                      {link.label}
+                    </a>
                   ))}
                 </div>
-                <div className="pack-count">
-                  {(normalizedQuery || modelMotion !== "all") && modelMatches > 0
-                    ? `${modelMatches} matching ${modelMatches === 1 ? "model" : "models"}`
-                    : `${pack.count} ${pack.count === 1 ? "model" : "models"}`}
-                </div>
-              </Link>
-            ))}
-          </div>
-        </section>
-      ))}
+              </div>
+            </div>
+            <div className="pack-grid">
+              {packs.map(({ pack, modelMatches }) => (
+                <Link key={pack.id} className="pack-card" href={`/${pack.vendor}/${pack.pack}`}>
+                  <PackCardPreview model={previewModelFor(pack)} />
+                  <div className="pack-label">{pack.title}</div>
+                  <div className="pack-credit-row">
+                    <span>{credit.vendorLabel}</span>
+                    <strong>{pack.license || credit.license}</strong>
+                  </div>
+                  <p>{pack.description}</p>
+                  <div className="pack-tags">
+                    {pack.tags.slice(0, 5).map((tag) => (
+                      <span key={tag}>{tag}</span>
+                    ))}
+                  </div>
+                  <div className="pack-count">
+                    {(normalizedQuery || modelMotion !== "all") && modelMatches > 0
+                      ? `${modelMatches} matching ${modelMatches === 1 ? "model" : "models"}`
+                      : `${pack.count} ${pack.count === 1 ? "model" : "models"}`}
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </section>
+        );
+      })}
     </>
   );
 }

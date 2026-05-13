@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
-import { licenseForVendor } from "@/lib/license";
+import { licenseForVendor, type VendorLicense } from "@/lib/license";
 import type { Manifest, Model, Pack } from "@/lib/manifest";
 
 type ModelCatalogProps = {
@@ -14,6 +14,7 @@ type ModelEntry = {
   model: Model;
   pack: Pack;
   license: string;
+  vendorCredit: VendorLicense;
   searchText: string;
 };
 
@@ -51,12 +52,14 @@ export function ModelCatalog({ manifest }: ModelCatalogProps) {
   const entries = useMemo<ModelEntry[]>(
     () =>
       manifest.packs.flatMap((pack) => {
-        const license = licenseForVendor(pack.vendor).license;
+        const vendorCredit = licenseForVendor(pack.vendor);
+        const license = pack.license || vendorCredit.license;
         return pack.models.map((model) => ({
           model,
           pack,
           license,
-          searchText: `${model.searchText} ${pack.searchText} ${license}`.toLowerCase(),
+          vendorCredit,
+          searchText: `${model.searchText} ${pack.searchText} ${vendorCredit.vendorLabel} ${license}`.toLowerCase(),
         }));
       }),
     [manifest.packs],
@@ -164,7 +167,7 @@ export function ModelCatalog({ manifest }: ModelCatalogProps) {
             <article className="model-card" key={entry.model.file} id={slug(entry.model.file)}>
               <div className="model-card-main">
                 <div className="model-card-kicker">
-                  <span>{entry.pack.vendor}</span>
+                  <span>{entry.vendorCredit.vendorLabel}</span>
                   <span>{entry.model.category}</span>
                   <span>{entry.license}</span>
                 </div>
@@ -180,6 +183,24 @@ export function ModelCatalog({ manifest }: ModelCatalogProps) {
                 </div>
               </div>
               <dl className="model-metadata">
+                <div>
+                  <dt>Creator</dt>
+                  <dd>
+                    <Link href={`/${entry.pack.vendor}`}>{entry.vendorCredit.vendorLabel}</Link>
+                  </dd>
+                </div>
+                <div>
+                  <dt>License</dt>
+                  <dd>
+                    {entry.vendorCredit.licenseUrl ? (
+                      <a href={entry.vendorCredit.licenseUrl} target="_blank" rel="noreferrer">
+                        {entry.license}
+                      </a>
+                    ) : (
+                      entry.license
+                    )}
+                  </dd>
+                </div>
                 <div>
                   <dt>Pack</dt>
                   <dd>

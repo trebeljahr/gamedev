@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import { useGLTF } from "@react-three/drei";
+import { licenseForVendor } from "@/lib/license";
 import { assetUrl, type Pack } from "@/lib/manifest";
 
 const Viewer = dynamic(() => import("./Viewer").then((m) => m.Viewer), {
@@ -15,6 +16,8 @@ export function PackViewer({ pack }: { pack: Pack }) {
   const [index, setIndex] = useState(0);
   const [query, setQuery] = useState("");
   const model = pack.models[index];
+  const credit = licenseForVendor(pack.vendor);
+  const license = pack.license || credit.license;
   const normalizedQuery = query.trim().toLowerCase();
   const visibleModels = normalizedQuery
     ? pack.models
@@ -54,9 +57,35 @@ export function PackViewer({ pack }: { pack: Pack }) {
         <Link className="back" href="/#3d-packs">
           ← all packs
         </Link>
-        <div className="vendor-tag">{pack.vendor}</div>
+        <Link className="vendor-tag vendor-link" href={`/${pack.vendor}`}>
+          {credit.vendorLabel}
+        </Link>
         <h1>{pack.title}</h1>
         <p className="pack-view-description">{pack.description}</p>
+        <div className="pack-credit-panel">
+          <div>
+            <span>Creator</span>
+            <Link href={`/${pack.vendor}`}>{credit.vendorLabel}</Link>
+          </div>
+          <div>
+            <span>License</span>
+            {credit.licenseUrl ? (
+              <a href={credit.licenseUrl} target="_blank" rel="noreferrer">
+                {license}
+              </a>
+            ) : (
+              <strong>{license}</strong>
+            )}
+          </div>
+          {credit.notes && <p>{credit.notes}</p>}
+          <div className="creator-links">
+            {credit.links.map((link) => (
+              <a key={link.url} href={link.url} target="_blank" rel="noreferrer">
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
         <div className="pack-view-tags">
           {pack.tags.slice(0, 6).map((tag) => (
             <span key={tag}>{tag}</span>
