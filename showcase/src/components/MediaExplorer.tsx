@@ -4,6 +4,7 @@ import { type CSSProperties, useEffect, useMemo, useRef, useState } from "react"
 import type { ArtPack, ArtSample, MusicTrack, SoundCollection, SoundSample } from "@/lib/media";
 import { artCreators } from "@/lib/media";
 import { isLikelySpriteSheetPath } from "@/lib/media-inference";
+import { SiteHeader } from "@/components/SiteHeader";
 
 type MediaExplorerProps = {
   soundCollections: SoundCollection[];
@@ -949,12 +950,13 @@ export function MediaExplorer({
 
   return (
     <div className="media-page">
-      <header className="app-header">
-        <h1>Game Asset Media</h1>
-        <div className="meta">
-          {artPacks.length} 2D packs · {soundCollections.length} sound effect groups · {musicTracks.length} music tracks
-        </div>
-      </header>
+      <SiteHeader
+        meta={
+          <>
+            {artPacks.length} 2D packs · {soundCollections.length} sound effect groups · {musicTracks.length} music tracks
+          </>
+        }
+      />
 
       <section className="media-hero">
         <div>

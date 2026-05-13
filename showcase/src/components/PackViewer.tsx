@@ -51,7 +51,7 @@ export function PackViewer({ pack }: { pack: Pack }) {
   return (
     <div className="viewer-shell">
       <aside>
-        <Link className="back" href="/">
+        <Link className="back" href="/#3d-packs">
           ← all packs
         </Link>
         <div className="vendor-tag">{pack.vendor}</div>

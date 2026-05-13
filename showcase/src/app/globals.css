@@ -33,11 +33,42 @@ select:focus-visible {
 .app-header {
   padding: 20px 24px 12px;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
   border-bottom: 1px solid var(--border);
 }
+.app-header-main {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-width: 0;
+}
 .app-header h1 { margin: 0; font-size: 18px; font-weight: 600; }
+.app-title {
+  display: inline-flex;
+  white-space: nowrap;
+}
+.top-nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+.top-nav a {
+  min-height: 30px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 8px;
+  border-radius: 6px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.top-nav a:hover {
+  color: var(--accent);
+  background: var(--surface-2);
+}
 .app-header .meta { color: var(--muted); font-size: 12px; }
 
 .library-hero {
@@ -1101,6 +1132,11 @@ select:focus-visible {
     flex-direction: column;
   }
   .app-header {
+    gap: 8px;
+  }
+  .app-header-main {
+    align-items: flex-start;
+    flex-direction: column;
     gap: 8px;
   }
   .library-hero {

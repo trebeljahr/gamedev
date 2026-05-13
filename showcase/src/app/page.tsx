@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SiteHeader } from "@/components/SiteHeader";
 import { manifest } from "@/lib/manifest";
 import { mediaStats } from "@/lib/media";
 import { CatalogSearch } from "@/components/CatalogSearch";
@@ -10,13 +11,14 @@ export default function HomePage() {
 
   return (
     <>
-      <header className="app-header">
-        <h1>3D Assets Showcase</h1>
-        <div className="meta">
-          {manifest.packs.length} 3D packs · {totalModels.toLocaleString()} models ·{" "}
-          {totalMediaCollections} media collections
-        </div>
-      </header>
+      <SiteHeader
+        meta={
+          <>
+            {manifest.packs.length} 3D packs · {totalModels.toLocaleString()} models ·{" "}
+            {totalMediaCollections} media collections
+          </>
+        }
+      />
 
       <main>
         <section className="library-hero" aria-labelledby="library-heading">

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { useMemo, useState } from "react";
+import { SiteHeader } from "@/components/SiteHeader";
 import type { Manifest, Pack } from "@/lib/manifest";
 
 type CatalogSearchProps = {
@@ -51,15 +52,16 @@ export function CatalogSearch({ manifest, children, showHeader = true }: Catalog
   return (
     <>
       {showHeader && (
-        <header className="app-header">
-          <h1>3D Assets Showcase</h1>
-          <div className="meta">
-            <Link href="/all" style={{ marginRight: 16, color: "#ffd84d" }}>
-              walk through everything
-            </Link>
-            {manifest.packs.length} packs · {totalModels.toLocaleString()} models
-          </div>
-        </header>
+        <SiteHeader
+          meta={
+            <>
+              <Link href="/all" style={{ marginRight: 16, color: "#ffd84d" }}>
+                walk through everything
+              </Link>
+              {manifest.packs.length} packs · {totalModels.toLocaleString()} models
+            </>
+          }
+        />
       )}
 
       <section className="catalog-tools" aria-label="3D catalog search">
