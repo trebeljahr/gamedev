@@ -110,7 +110,6 @@ export function PackViewer({ pack, initialModelFile }: { pack: Pack; initialMode
           ))}
         </div>
         <div className="pack-view-actions">
-          <Link href={`/${pack.vendor}/${pack.pack}/all`}>Walk this kit</Link>
           <a href={`/api/packs/${pack.vendor}/${pack.pack}/zip`} download>
             Download zip
           </a>

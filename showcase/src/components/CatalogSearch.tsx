@@ -172,7 +172,6 @@ export function CatalogSearch({ manifest, children, showHeader = true, modelMoti
                     </Link>
                     <div className="pack-card-actions">
                       <Link href={packHref}>View</Link>
-                      <Link href={`${packHref}/all`}>Walk kit</Link>
                     </div>
                   </article>
                 );
