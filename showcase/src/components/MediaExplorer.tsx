@@ -8,6 +8,7 @@ type MediaExplorerProps = {
   soundCollections: SoundCollection[];
   musicTracks: MusicTrack[];
   artPacks: ArtPack[];
+  initialView?: View;
 };
 
 type View = "sounds" | "art";
@@ -644,8 +645,9 @@ export function MediaExplorer({
   soundCollections,
   musicTracks,
   artPacks,
+  initialView = "sounds",
 }: MediaExplorerProps) {
-  const [view, setView] = useState<View>("sounds");
+  const [view, setView] = useState<View>(initialView);
   const [query, setQuery] = useState("");
   const [sourceFilter, setSourceFilter] = useState("all");
   const [licenseFilter, setLicenseFilter] = useState("all");
@@ -729,11 +731,23 @@ export function MediaExplorer({
           <div className="vendor-tag">Library</div>
           <h2>Explore sound effects, music, and 2D art alongside the 3D packs.</h2>
         </div>
-        <div className="media-tabs" aria-label="Media type">
-          <button type="button" className={view === "sounds" ? "active" : ""} onClick={() => setView("sounds")}>
+        <div className="media-tabs" role="tablist" aria-label="Media type">
+          <button
+            type="button"
+            role="tab"
+            aria-selected={view === "sounds"}
+            className={view === "sounds" ? "active" : ""}
+            onClick={() => setView("sounds")}
+          >
             Sounds
           </button>
-          <button type="button" className={view === "art" ? "active" : ""} onClick={() => setView("art")}>
+          <button
+            type="button"
+            role="tab"
+            aria-selected={view === "art"}
+            className={view === "art" ? "active" : ""}
+            onClick={() => setView("art")}
+          >
             2D art
           </button>
         </div>
@@ -771,11 +785,23 @@ export function MediaExplorer({
                 </option>
               ))}
             </select>
-            <div className="media-tabs compact" aria-label="Grouping">
-              <button type="button" className={groupMode === "theme" ? "active" : ""} onClick={() => setGroupMode("theme")}>
+            <div className="media-tabs compact" role="tablist" aria-label="Grouping">
+              <button
+                type="button"
+                role="tab"
+                aria-selected={groupMode === "theme"}
+                className={groupMode === "theme" ? "active" : ""}
+                onClick={() => setGroupMode("theme")}
+              >
                 Themes
               </button>
-              <button type="button" className={groupMode === "creator" ? "active" : ""} onClick={() => setGroupMode("creator")}>
+              <button
+                type="button"
+                role="tab"
+                aria-selected={groupMode === "creator"}
+                className={groupMode === "creator" ? "active" : ""}
+                onClick={() => setGroupMode("creator")}
+              >
                 Creators
               </button>
             </div>

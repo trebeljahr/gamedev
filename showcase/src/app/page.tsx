@@ -10,52 +10,78 @@ export default function HomePage() {
   }
 
   const totalModels = manifest.packs.reduce((n, p) => n + p.count, 0);
+  const totalMediaCollections =
+    mediaStats.soundCollectionCount + mediaStats.musicTrackCount + mediaStats.artPackCount;
 
   return (
     <>
       <header className="app-header">
         <h1>3D Assets Showcase</h1>
         <div className="meta">
-          <Link href="/all" style={{ marginRight: 16, color: "#ffd84d" }}>
-            walk through everything →
-          </Link>
-          {manifest.packs.length} packs · {totalModels.toLocaleString()} models
+          {manifest.packs.length} 3D packs · {totalModels.toLocaleString()} models ·{" "}
+          {totalMediaCollections} media collections
         </div>
       </header>
 
-      <section className="media-section">
-        <div>
-          <h2>Explore the rest of the asset library</h2>
-          <p>
-            Browse sound effect groups, preview music tracks, and filter the 2D art
-            catalog by license or author.
-          </p>
-        </div>
-        <Link className="media-card" href="/media">
-          <div className="pack-label">Sound effects and 2D art</div>
-          <div className="pack-count">
-            {mediaStats.soundCollectionCount} sound groups ·{" "}
-            {mediaStats.musicTrackCount} music tracks ·{" "}
-            {mediaStats.artPackCount} art packs
+      <main>
+        <section className="library-hero" aria-labelledby="library-heading">
+          <div>
+            <div className="vendor-tag">Asset library</div>
+            <h2 id="library-heading">Browse by asset type</h2>
+            <p>
+              3D models, 2D art, and sounds now sit at the same level so each
+              library is one obvious step from the front page.
+            </p>
           </div>
-        </Link>
-      </section>
-
-      {[...byVendor.entries()].map(([vendor, packs]) => (
-        <section className="vendor-section" key={vendor}>
-          <h2>{vendor}</h2>
-          <div className="pack-grid">
-            {packs.map((p) => (
-              <Link key={p.id} className="pack-card" href={`/${p.vendor}/${p.pack}`}>
-                <div className="pack-label">{p.label}</div>
-                <div className="pack-count">
-                  {p.count} {p.count === 1 ? "model" : "models"}
-                </div>
-              </Link>
-            ))}
-          </div>
+          <Link className="all-link" href="/all">
+            Walk through every 3D model
+          </Link>
         </section>
-      ))}
+
+        <nav className="asset-type-nav" aria-label="Asset type navigation">
+          <Link className="asset-type-link primary" href="#3d-packs">
+            <span>3D</span>
+            <strong>{totalModels.toLocaleString()} models</strong>
+            <small>{manifest.packs.length} packs grouped by vendor</small>
+          </Link>
+          <Link className="asset-type-link" href="/media?view=art">
+            <span>2D</span>
+            <strong>{mediaStats.artPackCount} art packs</strong>
+            <small>Filter by theme, creator, and license</small>
+          </Link>
+          <Link className="asset-type-link" href="/media?view=sounds">
+            <span>Sounds</span>
+            <strong>
+              {mediaStats.soundCollectionCount} groups · {mediaStats.musicTrackCount} tracks
+            </strong>
+            <small>Preview sound effects and music</small>
+          </Link>
+        </nav>
+
+        <section className="catalog-heading" id="3d-packs" aria-labelledby="packs-heading">
+          <div>
+            <div className="vendor-tag">3D catalog</div>
+            <h2 id="packs-heading">Model packs</h2>
+          </div>
+          <Link href="/all">Open all-model viewer</Link>
+        </section>
+
+        {[...byVendor.entries()].map(([vendor, packs]) => (
+          <section className="vendor-section" key={vendor}>
+            <h2>{vendor}</h2>
+            <div className="pack-grid">
+              {packs.map((p) => (
+                <Link key={p.id} className="pack-card" href={`/${p.vendor}/${p.pack}`}>
+                  <div className="pack-label">{p.label}</div>
+                  <div className="pack-count">
+                    {p.count} {p.count === 1 ? "model" : "models"}
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </section>
+        ))}
+      </main>
     </>
   );
 }
