@@ -17,6 +17,7 @@ import { Model } from "./Model";
 const CYCLE_MS = 1400;
 const MAX_ACTIVE_PREVIEWS = 8;
 const PREVIEW_IMAGE_CACHE_LIMIT = 256;
+const PREVIEW_CAPTURE_FRAME = 8;
 const previewSubscribers = new Set<() => void>();
 let visiblePreviewIds: string[] = [];
 const previewImageCache = new Map<string, string>();
@@ -276,11 +277,12 @@ function PreviewCapture({
   useFrame(() => {
     if (disabled) return;
     frame.current += 1;
-    if (frame.current < 2) {
+    // Bounds fits the camera after the model resolves; cache after that zoom settles.
+    if (frame.current < PREVIEW_CAPTURE_FRAME) {
       invalidate();
       return;
     }
-    if (frame.current > 2) return;
+    if (frame.current > PREVIEW_CAPTURE_FRAME) return;
 
     try {
       gl.render(scene, camera);
