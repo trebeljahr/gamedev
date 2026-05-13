@@ -37,6 +37,12 @@
       "source": "KayKit",
       "license": "CC0 1.0",
       "searchText": "adventurers adventurers kaykit kaykit cc0 1.0 adventurers is a kaykit game-ready, low-poly pack with 37 models focused on adventurers, fantasy. includes weapon, prop, projectile, character. weapon prop projectile character fantasy game-ready low-poly medieval small tall",
+      "preview": {
+        "modelFile": "/raw/kaykit/adventurers/extracted/KayKit_Adventurers_2.0_FREE/Characters/gltf/Mage.glb",
+        "modelName": "Mage",
+        "modelTitle": "Mage",
+        "category": "character"
+      },
       "count": 37,
       "models": [
         {
@@ -1269,6 +1275,12 @@
       "source": "KayKit",
       "license": "CC0 1.0",
       "searchText": "block bits blockbits kaykit kaykit cc0 1.0 block bits is a kaykit game-ready, low-poly, prototype pack with 40 models focused on prototype, nature. includes modular. modular prototype nature game-ready low-poly modular piece",
+      "preview": {
+        "modelFile": "/raw/kaykit/blockbits/extracted/KayKit_BlockBits_1.0_FREE/Assets/gltf/water.gltf",
+        "modelName": "water",
+        "modelTitle": "Water",
+        "category": "modular"
+      },
       "count": 40,
       "models": [
         {
@@ -2686,6 +2698,12 @@
       "source": "KayKit",
       "license": "CC0 1.0",
       "searchText": "city builder bits city-builder-bits kaykit kaykit cc0 1.0 city builder bits is a kaykit game-ready, low-poly pack with 41 models focused on urban. includes building, prop, modular, vehicle, furniture, nature. building prop modular vehicle furniture nature urban game-ready low-poly architecture modular piece small",
+      "preview": {
+        "modelFile": "/raw/kaykit/city-builder-bits/extracted/KayKit_City_Builder_Bits_1.0_FREE/Assets/gltf/building_H.gltf",
+        "modelName": "building_H",
+        "modelTitle": "Building H",
+        "category": "building"
+      },
       "count": 41,
       "models": [
         {
@@ -4075,6 +4093,12 @@
       "source": "KayKit",
       "license": "CC0 1.0",
       "searchText": "dungeon pack dungeon-pack kaykit kaykit cc0 1.0 dungeon pack is a kaykit game-ready, low-poly pack with 202 models focused on fantasy, horror. includes prop, building, modular, resource, weapon, character. prop building modular resource weapon character fantasy horror game-ready low-poly architecture collectible or resource medieval modular piece",
+      "preview": {
+        "modelFile": "/raw/kaykit/dungeon-pack/extracted/Models/gltf/wall_door.gltf.glb",
+        "modelName": "wall_door",
+        "modelTitle": "Wall Door",
+        "category": "building"
+      },
       "count": 202,
       "models": [
         {
@@ -10955,6 +10979,12 @@
       "source": "KayKit",
       "license": "CC0 1.0",
       "searchText": "dungeon remastered dungeonremastered kaykit kaykit cc0 1.0 dungeon remastered is a kaykit game-ready, low-poly pack with 211 models focused on fantasy, interior. includes building, prop, furniture, food, resource, weapon. building prop furniture food resource weapon fantasy interior game-ready low-poly architecture medieval modular tall wide",
+      "preview": {
+        "modelFile": "/raw/kaykit/dungeonremastered/extracted/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/floor_tile_extralarge_grates.gltf",
+        "modelName": "floor_tile_extralarge_grates",
+        "modelTitle": "Floor Tile Extralarge Grates",
+        "category": "building"
+      },
       "count": 211,
       "models": [
         {
@@ -18207,6 +18237,12 @@
       "source": "KayKit",
       "license": "CC0 1.0",
       "searchText": "forest nature pack forest-nature-pack kaykit kaykit cc0 1.0 forest nature pack is a kaykit game-ready, low-poly pack with 105 models focused on nature. includes nature. nature game-ready low-poly nature prop small tall wide",
+      "preview": {
+        "modelFile": "/raw/kaykit/forest-nature-pack/extracted/KayKit_Forest_Nature_Pack_1.0_FREE/Assets/gltf/Tree_2_D_Color1.gltf",
+        "modelName": "Tree_2_D_Color1",
+        "modelTitle": "Tree 2 D Color 1",
+        "category": "nature"
+      },
       "count": 105,
       "models": [
         {
@@ -21623,6 +21659,12 @@
       "source": "KayKit",
       "license": "CC0 1.0",
       "searchText": "furniture bits furniture-bits kaykit kaykit cc0 1.0 furniture bits is a kaykit game-ready, low-poly pack with 53 models focused on interior. includes furniture. furniture interior game-ready low-poly small tall wide",
+      "preview": {
+        "modelFile": "/raw/kaykit/furniture-bits/extracted/KayKit_Furniture_Bits_1.0_FREE/Assets/gltf/bed_double_B.gltf",
+        "modelName": "bed_double_B",
+        "modelTitle": "Bed Double B",
+        "category": "furniture"
+      },
       "count": 53,
       "models": [
         {
@@ -23369,6 +23411,12 @@
       "source": "KayKit",
       "license": "CC0 1.0",
       "searchText": "halloween bits halloweenbits kaykit kaykit cc0 1.0 halloween bits is a kaykit game-ready, low-poly pack with 63 models focused on horror, nature. includes prop, building, nature, furniture. prop building nature furniture horror game-ready low-poly architecture modular nature prop tall",
+      "preview": {
+        "modelFile": "/raw/kaykit/halloweenbits/extracted/KayKit_HalloweenBits_1.0_FREE/Assets/gltf/tree_pine_orange_large.gltf",
+        "modelName": "tree_pine_orange_large",
+        "modelTitle": "Tree Pine Orange Large",
+        "category": "nature"
+      },
       "count": 63,
       "models": [
         {
@@ -25478,6 +25526,12 @@
       "source": "KayKit",
       "license": "CC0 1.0",
       "searchText": "holiday bits holiday-bits kaykit kaykit cc0 1.0 holiday bits is a kaykit game-ready, low-poly pack with 98 models focused on holiday bits, nature, sci-fi. includes prop, food, vehicle, furniture, nature, building. prop food vehicle furniture nature building holiday bits sci-fi game-ready low-poly food item nature prop small",
+      "preview": {
+        "modelFile": "/raw/kaykit/holiday-bits/extracted/KayKit_Holiday_Bits_1.0_FREE/Assets/gltf/christmas_tree_decorated.gltf",
+        "modelName": "christmas_tree_decorated",
+        "modelTitle": "Christmas Tree Decorated",
+        "category": "nature"
+      },
       "count": 98,
       "models": [
         {
@@ -28678,6 +28732,12 @@
       "source": "KayKit",
       "license": "CC0 1.0",
       "searchText": "medieval builder pack medieval-builder-pack kaykit kaykit cc0 1.0 medieval builder pack is a kaykit game-ready, low-poly pack with 226 models focused on fantasy, nature, urban. includes modular, prop, building, nature. modular prop building nature fantasy urban game-ready low-poly architecture medieval modular piece",
+      "preview": {
+        "modelFile": "/raw/kaykit/medieval-builder-pack/extracted/Models/objects/gltf/castle.gltf.glb",
+        "modelName": "castle",
+        "modelTitle": "Castle",
+        "category": "building"
+      },
       "count": 226,
       "models": [
         {
@@ -36877,6 +36937,12 @@
       "source": "KayKit",
       "license": "CC0 1.0",
       "searchText": "prototype bits prototype-bits kaykit kaykit cc0 1.0 prototype bits is a kaykit game-ready, low-poly, prototype pack with 72 models focused on prototype. includes prop, building, modular, resource, furniture, projectile. prop building modular resource furniture projectile prototype game-ready low-poly architecture collectible or resource modular piece small wide",
+      "preview": {
+        "modelFile": "/raw/kaykit/prototype-bits/extracted/KayKit_Prototype_Bits_1.1_FREE/Assets/gltf/Primitive_Wall_Slope.gltf",
+        "modelName": "Primitive_Wall_Slope",
+        "modelTitle": "Primitive Wall Slope",
+        "category": "building"
+      },
       "count": 72,
       "models": [
         {
@@ -39374,6 +39440,12 @@
       "source": "KayKit",
       "license": "CC0 1.0",
       "searchText": "resource bits resourcebits kaykit kaykit cc0 1.0 resource bits is a kaykit game-ready, low-poly pack with 76 models focused on resource bits. includes resource, nature, modular. resource nature modular resource bits game-ready low-poly collectible or resource modular piece nature prop small",
+      "preview": {
+        "modelFile": "/raw/kaykit/resourcebits/extracted/KayKit_ResourceBits_1.0_FREE/Assets/gltf/Wood_Log_Stack.gltf",
+        "modelName": "Wood_Log_Stack",
+        "modelTitle": "Wood Log Stack",
+        "category": "nature"
+      },
       "count": 76,
       "models": [
         {
@@ -41933,6 +42005,12 @@
       "source": "KayKit",
       "license": "CC0 1.0",
       "searchText": "restaurant bits restaurant-bits kaykit kaykit cc0 1.0 restaurant bits is a kaykit game-ready, low-poly pack with 144 models focused on interior. includes building, weapon. building weapon interior game-ready low-poly architecture food modular small tall wide",
+      "preview": {
+        "modelFile": "/raw/kaykit/restaurant-bits/extracted/KayKit_Restaurant_Bits_1.0_FREE/Assets/gltf/pillar_A.gltf",
+        "modelName": "pillar_A",
+        "modelTitle": "Pillar A",
+        "category": "building"
+      },
       "count": 144,
       "models": [
         {
@@ -46889,6 +46967,12 @@
       "source": "KayKit",
       "license": "CC0 1.0",
       "searchText": "rpg tools bits rpgtoolsbits kaykit kaykit cc0 1.0 rpg tools bits is a kaykit game-ready, low-poly pack with 49 models focused on fantasy. includes prop, weapon. prop weapon fantasy game-ready low-poly small",
+      "preview": {
+        "modelFile": "/raw/kaykit/rpgtoolsbits/extracted/KayKit_RPGToolsBits_1.0_FREE/Assets/gltf/grindstone.gltf",
+        "modelName": "grindstone",
+        "modelTitle": "Grindstone",
+        "category": "prop"
+      },
       "count": 49,
       "models": [
         {
@@ -48500,6 +48584,12 @@
       "source": "KayKit",
       "license": "CC0 1.0",
       "searchText": "skeletons skeletons kaykit kaykit cc0 1.0 skeletons is a kaykit game-ready, low-poly pack with 17 models focused on skeletons. includes weapon, creature, projectile. weapon creature projectile game-ready low-poly fantasy medieval small tall",
+      "preview": {
+        "modelFile": "/raw/kaykit/skeletons/extracted/KayKit_Skeletons_1.1_FREE/characters/gltf/Skeleton_Mage.glb",
+        "modelName": "Skeleton_Mage",
+        "modelTitle": "Skeleton Mage",
+        "category": "creature"
+      },
       "count": 17,
       "models": [
         {
@@ -49124,6 +49214,12 @@
       "source": "KayKit",
       "license": "CC0 1.0",
       "searchText": "space base bits space-base-bits kaykit kaykit cc0 1.0 space base bits is a kaykit game-ready, low-poly pack with 57 models focused on sci-fi, nature. includes sci-fi, modular, nature. sci-fi modular nature game-ready low-poly modular piece nature prop sci-fi asset small tall",
+      "preview": {
+        "modelFile": "/raw/kaykit/space-base-bits/extracted/KayKit_Space_Base_Bits_1.0_FREE/Assets/gltf/windturbine_tall.gltf",
+        "modelName": "windturbine_tall",
+        "modelTitle": "Windturbine Tall",
+        "category": "sci-fi"
+      },
       "count": 57,
       "models": [
         {
@@ -50999,6 +51095,12 @@
       "source": "Kenney",
       "license": "CC0 1.0",
       "searchText": "3 d road tiles 3d-road-tiles kenney kenney cc0 1.0 3 d road tiles is a kenney game-ready, low-poly pack with 302 models focused on urban. includes modular. modular urban game-ready low-poly modular piece tall",
+      "preview": {
+        "modelFile": "/glb/kenney/3d-road-tiles/glb/roadTile_001.glb",
+        "modelName": "roadTile_001",
+        "modelTitle": "Road Tile 001",
+        "category": "modular"
+      },
       "count": 302,
       "models": [
         {
@@ -60999,6 +61101,12 @@
       "source": "Kenney",
       "license": "CC0 1.0",
       "searchText": "blaster kit blaster-kit kenney kenney cc0 1.0 blaster kit is a kenney game-ready, low-poly pack with 40 models focused on sci-fi. includes weapon, projectile. weapon projectile sci-fi game-ready low-poly small",
+      "preview": {
+        "modelFile": "/glb/kenney/blaster-kit/glb/blaster-e.glb",
+        "modelName": "blaster-e",
+        "modelTitle": "Blaster E",
+        "category": "weapon"
+      },
       "count": 40,
       "models": [
         {
@@ -62336,6 +62444,12 @@
       "source": "Kenney",
       "license": "CC0 1.0",
       "searchText": "brick kit brick-kit kenney kenney cc0 1.0 brick kit is a kenney game-ready, low-poly pack with 296 models focused on brick kit. includes modular. modular brick kit game-ready low-poly modular piece small",
+      "preview": {
+        "modelFile": "/glb/kenney/brick-kit/glb/bevel-hq-brick-1x8.glb",
+        "modelName": "bevel-hq-brick-1x8",
+        "modelTitle": "Bevel Hq Brick 1 X 8",
+        "category": "modular"
+      },
       "count": 296,
       "models": [
         {
@@ -72394,6 +72508,12 @@
       "source": "Kenney",
       "license": "CC0 1.0",
       "searchText": "building kit building-kit kenney kenney cc0 1.0 building kit is a kenney game-ready, low-poly pack with 79 models focused on urban. includes building. building urban game-ready low-poly architecture modular small tall",
+      "preview": {
+        "modelFile": "/glb/kenney/building-kit/glb/wall-doorway-wide-square.glb",
+        "modelName": "wall-doorway-wide-square",
+        "modelTitle": "Wall Doorway Wide Square",
+        "category": "building"
+      },
       "count": 79,
       "models": [
         {
@@ -75114,6 +75234,12 @@
       "source": "Kenney",
       "license": "CC0 1.0",
       "searchText": "car kit car-kit kenney kenney cc0 1.0 car kit is a kenney game-ready, low-poly pack with 50 models focused on car kit. includes vehicle. vehicle car kit game-ready low-poly modular small wide",
+      "preview": {
+        "modelFile": "/glb/kenney/car-kit/glb/garbage-truck.glb",
+        "modelName": "garbage-truck",
+        "modelTitle": "Garbage Truck",
+        "category": "vehicle"
+      },
       "count": 50,
       "models": [
         {
@@ -76764,6 +76890,12 @@
       "source": "Kenney",
       "license": "CC0 1.0",
       "searchText": "castle kit castle-kit kenney kenney cc0 1.0 castle kit is a kenney game-ready, low-poly pack with 76 models focused on fantasy, nature. includes building. building fantasy nature game-ready low-poly architecture medieval modular small tall",
+      "preview": {
+        "modelFile": "/glb/kenney/castle-kit/glb/siege-tower.glb",
+        "modelName": "siege-tower",
+        "modelTitle": "Siege Tower",
+        "category": "building"
+      },
       "count": 76,
       "models": [
         {
@@ -79427,6 +79559,12 @@
       "source": "Kenney",
       "license": "CC0 1.0",
       "searchText": "city kit commercial city-kit-commercial kenney kenney cc0 1.0 city kit commercial is a kenney game-ready, low-poly pack with 41 models focused on urban. includes building, prop. building prop urban game-ready low-poly architecture small tall",
+      "preview": {
+        "modelFile": "/glb/kenney/city-kit-commercial/glb/building-skyscraper-d.glb",
+        "modelName": "building-skyscraper-d",
+        "modelTitle": "Building Skyscraper D",
+        "category": "building"
+      },
       "count": 41,
       "models": [
         {
@@ -80822,6 +80960,12 @@
       "source": "Kenney",
       "license": "CC0 1.0",
       "searchText": "city kit industrial city-kit-industrial kenney kenney cc0 1.0 city kit industrial is a kenney game-ready, low-poly pack with 25 models focused on urban. includes building, prop, vehicle. building prop vehicle urban game-ready low-poly architecture",
+      "preview": {
+        "modelFile": "/glb/kenney/city-kit-industrial/glb/building-r.glb",
+        "modelName": "building-r",
+        "modelTitle": "Building R",
+        "category": "building"
+      },
       "count": 25,
       "models": [
         {
@@ -81679,6 +81823,12 @@
       "source": "Kenney",
       "license": "CC0 1.0",
       "searchText": "city kit roads city-kit-roads kenney kenney cc0 1.0 city kit roads is a kenney game-ready, low-poly pack with 72 models focused on urban. includes modular, prop, building. modular prop building urban game-ready low-poly architecture modular piece small",
+      "preview": {
+        "modelFile": "/glb/kenney/city-kit-roads/glb/road-bridge.glb",
+        "modelName": "road-bridge",
+        "modelTitle": "Road Bridge",
+        "category": "building"
+      },
       "count": 72,
       "models": [
         {
@@ -84086,6 +84236,12 @@
       "source": "Kenney",
       "license": "CC0 1.0",
       "searchText": "city kit suburban city-kit-suburban kenney kenney cc0 1.0 city kit suburban is a kenney game-ready, low-poly pack with 40 models focused on urban, nature. includes building, prop, nature. building prop nature urban game-ready low-poly architecture nature prop small",
+      "preview": {
+        "modelFile": "/glb/kenney/city-kit-suburban/glb/building-type-b.glb",
+        "modelName": "building-type-b",
+        "modelTitle": "Building Type B",
+        "category": "building"
+      },
       "count": 40,
       "models": [
         {
@@ -85459,6 +85615,12 @@
       "source": "Kenney",
       "license": "CC0 1.0",
       "searchText": "coaster kit coaster-kit kenney kenney cc0 1.0 coaster kit is a kenney game-ready, low-poly pack with 183 models focused on coaster kit, nature, sci-fi, interior. includes modular, prop, vehicle, resource, building, nature. modular prop vehicle resource building nature coaster kit sci-fi interior game-ready low-poly collectible or resource modular piece small wide",
+      "preview": {
+        "modelFile": "/glb/kenney/coaster-kit/glb/tree-large.glb",
+        "modelName": "tree-large",
+        "modelTitle": "Tree Large",
+        "category": "nature"
+      },
       "count": 183,
       "models": [
         {
@@ -91564,6 +91726,12 @@
       "source": "Kenney",
       "license": "CC0 1.0",
       "searchText": "conveyor kit conveyor-kit kenney kenney cc0 1.0 conveyor kit is a kenney game-ready, low-poly pack with 91 models focused on conveyor kit, sci-fi. includes prop, building, modular, projectile, character. prop building modular projectile character conveyor kit sci-fi game-ready low-poly architecture modular piece tall",
+      "preview": {
+        "modelFile": "/glb/kenney/conveyor-kit/glb/robot-arm-a.glb",
+        "modelName": "robot-arm-a",
+        "modelTitle": "Robot Arm A",
+        "category": "character"
+      },
       "count": 91,
       "models": [
         {
@@ -94540,6 +94708,12 @@
       "source": "Kenney",
       "license": "CC0 1.0",
       "searchText": "cube pets cube-pets kenney kenney cc0 1.0 cube pets is a kenney game-ready, low-poly, prototype pack with 24 models focused on nature. includes creature. creature nature game-ready low-poly prototype",
+      "preview": {
+        "modelFile": "/glb/kenney/cube-pets/glb/animal-crab.glb",
+        "modelName": "animal-crab",
+        "modelTitle": "Animal Crab",
+        "category": "creature"
+      },
       "count": 24,
       "models": [
         {
@@ -95374,6 +95548,12 @@
       "source": "Kenney",
       "license": "CC0 1.0",
       "searchText": "food kit food-kit kenney kenney cc0 1.0 food kit is a kenney game-ready, low-poly, prototype pack with 200 models focused on interior, prototype. includes food, creature, weapon, nature. food creature weapon nature interior prototype game-ready low-poly food item nature prop small",
+      "preview": {
+        "modelFile": "/glb/kenney/food-kit/glb/fish-bones.glb",
+        "modelName": "fish-bones",
+        "modelTitle": "Fish Bones",
+        "category": "creature"
+      },
       "count": 200,
       "models": [
         {
@@ -102166,6 +102346,12 @@
       "source": "Kenney",
       "license": "CC0 1.0",
       "searchText": "graveyard kit graveyard-kit kenney kenney cc0 1.0 graveyard kit is a kenney game-ready, low-poly pack with 91 models focused on horror, urban. includes prop, building, nature, resource, character, creature. prop building nature resource character creature horror urban game-ready low-poly architecture collectible or resource modular nature prop small",
+      "preview": {
+        "modelFile": "/glb/kenney/graveyard-kit/glb/crypt-large-roof.glb",
+        "modelName": "crypt-large-roof",
+        "modelTitle": "Crypt Large Roof",
+        "category": "building"
+      },
       "count": 91,
       "models": [
         {
@@ -105202,6 +105388,12 @@
       "source": "Kenney",
       "license": "CC0 1.0",
       "searchText": "hexagon kit hexagon-kit kenney kenney cc0 1.0 hexagon kit is a kenney game-ready, low-poly pack with 72 models focused on hexagon kit, urban, nature, fantasy, sci-fi. includes modular, building, prop, nature, resource, vehicle. modular building prop nature resource vehicle hexagon kit urban fantasy sci-fi game-ready low-poly architecture collectible or resource modular piece",
+      "preview": {
+        "modelFile": "/glb/kenney/hexagon-kit/glb/building-walls.glb",
+        "modelName": "building-walls",
+        "modelTitle": "Building Walls",
+        "category": "building"
+      },
       "count": 72,
       "models": [
         {
@@ -107615,6 +107807,12 @@
       "source": "Kenney",
       "license": "CC0 1.0",
       "searchText": "holiday kit holiday-kit kenney kenney cc0 1.0 holiday kit is a kenney game-ready, low-poly pack with 99 models focused on holiday kit, nature. includes prop, building, modular, vehicle, nature, character. prop building modular vehicle nature character holiday kit game-ready low-poly architecture modular piece small",
+      "preview": {
+        "modelFile": "/glb/kenney/holiday-kit/glb/tree-decorated.glb",
+        "modelName": "tree-decorated",
+        "modelTitle": "Tree Decorated",
+        "category": "nature"
+      },
       "count": 99,
       "models": [
         {
@@ -110906,6 +111104,12 @@
       "source": "Kenney",
       "license": "CC0 1.0",
       "searchText": "marble kit marble-kit kenney kenney cc0 1.0 marble kit is a kenney game-ready, low-poly pack with 162 models focused on marble kit, nature. includes prop, modular, nature. prop modular nature marble kit game-ready low-poly modular piece nature prop small tall wide",
+      "preview": {
+        "modelFile": "/glb/kenney/marble-kit/glb/tree-tall-large.glb",
+        "modelName": "tree-tall-large",
+        "modelTitle": "Tree Tall Large",
+        "category": "nature"
+      },
       "count": 162,
       "models": [
         {
@@ -116197,6 +116401,12 @@
       "source": "Kenney",
       "license": "CC0 1.0",
       "searchText": "modular dungeon kit modular-dungeon-kit kenney kenney cc0 1.0 modular dungeon kit is a kenney game-ready, low-poly pack with 39 models focused on fantasy. includes building, modular. building modular fantasy game-ready low-poly architecture medieval modular piece tall wide",
+      "preview": {
+        "modelFile": "/glb/kenney/modular-dungeon-kit/glb/room-corner.glb",
+        "modelName": "room-corner",
+        "modelTitle": "Room Corner",
+        "category": "building"
+      },
       "count": 39,
       "models": [
         {
@@ -117597,6 +117807,12 @@
       "source": "Kenney",
       "license": "CC0 1.0",
       "searchText": "modular space kit modular-space-kit kenney kenney cc0 1.0 modular space kit is a kenney game-ready, low-poly pack with 40 models focused on sci-fi. includes building, modular. building modular sci-fi game-ready low-poly architecture modular piece tall wide",
+      "preview": {
+        "modelFile": "/glb/kenney/modular-space-kit/glb/room-corner.glb",
+        "modelName": "room-corner",
+        "modelTitle": "Room Corner",
+        "category": "building"
+      },
       "count": 40,
       "models": [
         {
@@ -118995,6 +119211,12 @@
       "source": "Kenney",
       "license": "CC0 1.0",
       "searchText": "pirate kit pirate-kit kenney kenney cc0 1.0 pirate kit is a kenney game-ready, low-poly pack with 66 models focused on fantasy, sci-fi, nature. includes character, vehicle. character vehicle fantasy sci-fi nature game-ready low-poly medieval modular tall wide",
+      "preview": {
+        "modelFile": "/glb/kenney/pirate-kit/glb/ship-ghost.glb",
+        "modelName": "ship-ghost",
+        "modelTitle": "Ship Ghost",
+        "category": "vehicle"
+      },
       "count": 66,
       "models": [
         {
@@ -121264,6 +121486,12 @@
       "source": "Kenney",
       "license": "CC0 1.0",
       "searchText": "platformer kit platformer-kit kenney kenney cc0 1.0 platformer kit is a kenney game-ready, low-poly, prototype pack with 142 models focused on prototype, platformer kit, nature. includes modular, prop, building, resource, nature, projectile. modular prop building resource nature projectile prototype platformer kit game-ready low-poly architecture modular piece small",
+      "preview": {
+        "modelFile": "/glb/kenney/platformer-kit/glb/tree-pine.glb",
+        "modelName": "tree-pine",
+        "modelTitle": "Tree Pine",
+        "category": "nature"
+      },
       "count": 142,
       "models": [
         {
@@ -126151,6 +126379,12 @@
       "source": "Kenney",
       "license": "CC0 1.0",
       "searchText": "prototype kit prototype-kit kenney kenney cc0 1.0 prototype kit is a kenney game-ready, low-poly, prototype pack with 145 models focused on prototype, nature. includes prop, building, creature, resource, modular, vehicle. prop building creature resource modular vehicle prototype nature game-ready low-poly architecture collectible or resource small",
+      "preview": {
+        "modelFile": "/glb/kenney/prototype-kit/glb/wall-doorway-wide-sliding.glb",
+        "modelName": "wall-doorway-wide-sliding",
+        "modelTitle": "Wall Doorway Wide Sliding",
+        "category": "building"
+      },
       "count": 145,
       "models": [
         {
@@ -131134,6 +131368,12 @@
       "source": "Kenney",
       "license": "CC0 1.0",
       "searchText": "space station kit space-station-kit kenney kenney cc0 1.0 space station kit is a kenney game-ready, low-poly pack with 97 models focused on sci-fi. includes building. building sci-fi game-ready low-poly architecture modular small",
+      "preview": {
+        "modelFile": "/glb/kenney/space-station-kit/glb/table-large.glb",
+        "modelName": "table-large",
+        "modelTitle": "Table Large",
+        "category": "building"
+      },
       "count": 97,
       "models": [
         {
@@ -134449,6 +134689,12 @@
       "source": "Kenney",
       "license": "CC0 1.0",
       "searchText": "survival kit survival-kit kenney kenney cc0 1.0 survival kit is a kenney game-ready, low-poly pack with 80 models focused on survival kit, nature. includes prop, nature, building, resource, creature, food. prop nature building resource creature food survival kit game-ready low-poly architecture collectible or resource modular nature prop small",
+      "preview": {
+        "modelFile": "/glb/kenney/survival-kit/glb/rock-flat.glb",
+        "modelName": "rock-flat",
+        "modelTitle": "Rock Flat",
+        "category": "nature"
+      },
       "count": 80,
       "models": [
         {
@@ -137140,6 +137386,12 @@
       "source": "Kenney",
       "license": "CC0 1.0",
       "searchText": "tower defense kit tower-defense-kit kenney kenney cc0 1.0 tower defense kit is a kenney game-ready, low-poly pack with 160 models focused on tower defense kit, nature. includes building, creature, projectile, weapon. building creature projectile weapon tower defense kit nature game-ready low-poly architecture modular sci-fi small",
+      "preview": {
+        "modelFile": "/glb/kenney/tower-defense-kit/glb/snow-tile-corner-large.glb",
+        "modelName": "snow-tile-corner-large",
+        "modelTitle": "Snow Tile Corner Large",
+        "category": "building"
+      },
       "count": 160,
       "models": [
         {
@@ -142533,6 +142785,12 @@
       "source": "Kenney",
       "license": "CC0 1.0",
       "searchText": "toy car kit toy-car-kit kenney kenney cc0 1.0 toy car kit is a kenney game-ready, low-poly pack with 157 models focused on toy car kit, urban, nature. includes vehicle. vehicle toy car kit urban nature game-ready low-poly modular small wide",
+      "preview": {
+        "modelFile": "/glb/kenney/toy-car-kit/glb/track-road-wide-corner-large.glb",
+        "modelName": "track-road-wide-corner-large",
+        "modelTitle": "Track Road Wide Corner Large",
+        "category": "vehicle"
+      },
       "count": 157,
       "models": [
         {
@@ -147795,6 +148053,12 @@
       "source": "Kenney",
       "license": "CC0 1.0",
       "searchText": "train kit train-kit kenney kenney cc0 1.0 train kit is a kenney game-ready, low-poly pack with 103 models focused on train kit, urban. includes vehicle, projectile. vehicle projectile train kit urban game-ready low-poly modular wide",
+      "preview": {
+        "modelFile": "/glb/kenney/train-kit/glb/railroad-damaged-corner-large-ramp.glb",
+        "modelName": "railroad-damaged-corner-large-ramp",
+        "modelTitle": "Railroad Damaged Corner Large Ramp",
+        "category": "vehicle"
+      },
       "count": 103,
       "models": [
         {
@@ -151220,6 +151484,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "alien animated april 2019 alien-animated-april-2019 quaternius quaternius cc0 1.0 alien animated april 2019 is a quaternius animated, game-ready, low-poly pack with 2 models focused on sci-fi. includes creature. creature sci-fi animated game-ready low-poly tall",
+      "preview": {
+        "modelFile": "/glb/quaternius/alien-animated-april-2019/glb/Alien_Helmet.glb",
+        "modelName": "Alien_Helmet",
+        "modelTitle": "Alien Helmet",
+        "category": "creature"
+      },
       "count": 2,
       "models": [
         {
@@ -151323,6 +151593,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "animated fish pack by quaternius animated-fish-pack-by-quaternius quaternius quaternius cc0 1.0 animated fish pack by quaternius is a quaternius animated, game-ready, low-poly pack with 7 models focused on animated fish pack by quaternius. includes creature. creature animated fish pack by quaternius animated game-ready low-poly tall",
+      "preview": {
+        "modelFile": "/glb/quaternius/animated-fish-pack-by-quaternius/glb/Fish2.glb",
+        "modelName": "Fish2",
+        "modelTitle": "Fish 2",
+        "category": "creature"
+      },
       "count": 7,
       "models": [
         {
@@ -151602,6 +151878,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "animated fps guns jun 2018 animated-fps-guns-jun-2018 quaternius quaternius cc0 1.0 animated fps guns jun 2018 is a quaternius animated, game-ready, low-poly pack with 12 models focused on animated fps guns jun 2018. includes weapon, prop. weapon prop animated fps guns jun 2018 animated game-ready low-poly tall",
+      "preview": {
+        "modelFile": "/glb/quaternius/animated-fps-guns-jun-2018/Revolver.glb",
+        "modelName": "Revolver",
+        "modelTitle": "Revolver",
+        "category": "prop"
+      },
       "count": 12,
       "models": [
         {
@@ -152046,6 +152328,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "animated mech pack march 2021 animated-mech-pack-march-2021 quaternius quaternius cc0 1.0 animated mech pack march 2021 is a quaternius animated, game-ready, low-poly pack with 8 models focused on sci-fi. includes character. character sci-fi animated game-ready low-poly tall",
+      "preview": {
+        "modelFile": "/glb/quaternius/animated-mech-pack-march-2021/Textured/glb/George.glb",
+        "modelName": "George",
+        "modelTitle": "George",
+        "category": "character"
+      },
       "count": 8,
       "models": [
         {
@@ -152363,6 +152651,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "animated men characters feb 2019 animated-men-characters-feb-2019 quaternius quaternius cc0 1.0 animated men characters feb 2019 is a quaternius animated, game-ready, low-poly pack with 8 models focused on animated men characters feb 2019. includes character. character animated men characters feb 2019 animated game-ready low-poly tall",
+      "preview": {
+        "modelFile": "/glb/quaternius/animated-men-characters-feb-2019/glb/Male_Casual.glb",
+        "modelName": "Male_Casual",
+        "modelTitle": "Male Casual",
+        "category": "character"
+      },
       "count": 8,
       "models": [
         {
@@ -152680,6 +152974,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "animated monster pack by quaternius animated-monster-pack-by-quaternius quaternius quaternius cc0 1.0 animated monster pack by quaternius is a quaternius animated, game-ready, low-poly pack with 4 models focused on animated monster pack by quaternius. includes creature, weapon. creature weapon animated monster pack by quaternius animated game-ready low-poly fantasy medieval tall",
+      "preview": {
+        "modelFile": "/glb/quaternius/animated-monster-pack-by-quaternius/glb/Skeleton.glb",
+        "modelName": "Skeleton",
+        "modelTitle": "Skeleton",
+        "category": "creature"
+      },
       "count": 4,
       "models": [
         {
@@ -152854,6 +153154,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "animated robot oct 2018 animated-robot-oct-2018 quaternius quaternius cc0 1.0 animated robot oct 2018 is a quaternius animated, game-ready, low-poly pack with 1 models focused on sci-fi. includes character. character sci-fi animated game-ready low-poly tall",
+      "preview": {
+        "modelFile": "/glb/quaternius/animated-robot-oct-2018/glb/Robot.glb",
+        "modelName": "Robot",
+        "modelTitle": "Robot",
+        "category": "character"
+      },
       "count": 1,
       "models": [
         {
@@ -152924,6 +153230,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "animated women characters feb 2019 animated-women-characters-feb-2019 quaternius quaternius cc0 1.0 animated women characters feb 2019 is a quaternius animated, game-ready, low-poly pack with 8 models focused on animated women characters feb 2019. includes character, vehicle. character vehicle animated women characters feb 2019 animated game-ready low-poly tall",
+      "preview": {
+        "modelFile": "/glb/quaternius/animated-women-characters-feb-2019/glb/Female_Dress.glb",
+        "modelName": "Female_Dress",
+        "modelTitle": "Female Dress",
+        "category": "character"
+      },
       "count": 8,
       "models": [
         {
@@ -153238,6 +153550,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "buildings pack aug 2017 buildings-pack-aug-2017 quaternius quaternius cc0 1.0 buildings pack aug 2017 is a quaternius game-ready, low-poly pack with 20 models focused on buildings pack aug 2017. includes building, prop. building prop buildings pack aug 2017 game-ready low-poly architecture urban",
+      "preview": {
+        "modelFile": "/glb/quaternius/buildings-pack-aug-2017/Shop.glb",
+        "modelName": "Shop",
+        "modelTitle": "Shop",
+        "category": "building"
+      },
       "count": 20,
       "models": [
         {
@@ -153933,6 +154251,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "buildings pack jan 2019 buildings-pack-jan-2019 quaternius quaternius cc0 1.0 buildings pack jan 2019 is a quaternius game-ready, low-poly pack with 9 models focused on urban, buildings pack jan 2019. includes building. building urban buildings pack jan 2019 game-ready low-poly architecture",
+      "preview": {
+        "modelFile": "/glb/quaternius/buildings-pack-jan-2019/glb/Building1_Large.glb",
+        "modelName": "Building1_Large",
+        "modelTitle": "Building 1 Large",
+        "category": "building"
+      },
       "count": 9,
       "models": [
         {
@@ -154283,6 +154607,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "cube world aug 2023 cube-world-aug-2023 quaternius quaternius cc0 1.0 cube world aug 2023 is a quaternius game-ready, low-poly, prototype pack with 107 models focused on cube world aug 2023, nature, prototype, fantasy, horror. includes prop, modular, creature, nature, resource, weapon. prop modular creature nature resource weapon cube world aug 2023 prototype fantasy horror game-ready low-poly modular piece nature prop tall",
+      "preview": {
+        "modelFile": "/glb/quaternius/cube-world-aug-2023/Environment/glb/Tree_3.glb",
+        "modelName": "Tree_3",
+        "modelTitle": "Tree 3",
+        "category": "nature"
+      },
       "count": 107,
       "models": [
         {
@@ -157927,6 +158257,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "cute animated monsters aug 2020 cute-animated-monsters-aug-2020 quaternius quaternius cc0 1.0 cute animated monsters aug 2020 is a quaternius animated, game-ready, low-poly pack with 21 models focused on cute animated monsters aug 2020, sci-fi, horror, nature. includes prop, creature, nature, weapon. prop creature nature weapon cute animated monsters aug 2020 sci-fi horror animated game-ready low-poly nature prop tall",
+      "preview": {
+        "modelFile": "/glb/quaternius/cute-animated-monsters-aug-2020/glb/Tree.glb",
+        "modelName": "Tree",
+        "modelTitle": "Tree",
+        "category": "nature"
+      },
       "count": 21,
       "models": [
         {
@@ -158685,6 +159021,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "cute fish pack feb 2020 cute-fish-pack-feb-2020 quaternius quaternius cc0 1.0 cute fish pack feb 2020 is a quaternius game-ready, low-poly pack with 52 models focused on cute fish pack feb 2020, nature. includes creature, vehicle. creature vehicle cute fish pack feb 2020 nature game-ready low-poly modular small tall wide",
+      "preview": {
+        "modelFile": "/glb/quaternius/cute-fish-pack-feb-2020/glb/Boat.glb",
+        "modelName": "Boat",
+        "modelTitle": "Boat",
+        "category": "vehicle"
+      },
       "count": 52,
       "models": [
         {
@@ -160425,6 +160767,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "dinosaur animated pack dec 2018 dinosaur-animated-pack-dec-2018 quaternius quaternius cc0 1.0 dinosaur animated pack dec 2018 is a quaternius animated, game-ready, low-poly pack with 6 models focused on dinosaur animated pack dec 2018. includes creature. creature dinosaur animated pack dec 2018 animated game-ready low-poly tall",
+      "preview": {
+        "modelFile": "/glb/quaternius/dinosaur-animated-pack-dec-2018/glb/Apatosaurus.glb",
+        "modelName": "Apatosaurus",
+        "modelTitle": "Apatosaurus",
+        "category": "creature"
+      },
       "count": 6,
       "models": [
         {
@@ -160668,6 +161016,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "easy animated enemy pack jan 2019 easy-animated-enemy-pack-jan-2019 quaternius quaternius cc0 1.0 easy animated enemy pack jan 2019 is a quaternius animated, game-ready, low-poly pack with 6 models focused on easy animated enemy pack jan 2019. includes creature. creature easy animated enemy pack jan 2019 animated game-ready low-poly tall",
+      "preview": {
+        "modelFile": "/glb/quaternius/easy-animated-enemy-pack-jan-2019/glb/Wasp.glb",
+        "modelName": "Wasp",
+        "modelTitle": "Wasp",
+        "category": "creature"
+      },
       "count": 6,
       "models": [
         {
@@ -160907,6 +161261,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "farm animals by quaternius farm-animals-by-quaternius quaternius quaternius cc0 1.0 farm animals by quaternius is a quaternius game-ready, low-poly pack with 7 models focused on nature. includes creature. creature nature game-ready low-poly tall",
+      "preview": {
+        "modelFile": "/glb/quaternius/farm-animals-by-quaternius/glb/Zebra.glb",
+        "modelName": "Zebra",
+        "modelTitle": "Zebra",
+        "category": "creature"
+      },
       "count": 7,
       "models": [
         {
@@ -161174,6 +161534,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "farm buildings sept 2018 farm-buildings-sept-2018 quaternius quaternius cc0 1.0 farm buildings sept 2018 is a quaternius game-ready, low-poly pack with 13 models focused on nature. includes building, prop. building prop nature game-ready low-poly architecture tall urban wide",
+      "preview": {
+        "modelFile": "/glb/quaternius/farm-buildings-sept-2018/glb/Barn.glb",
+        "modelName": "Barn",
+        "modelTitle": "Barn",
+        "category": "building"
+      },
       "count": 13,
       "models": [
         {
@@ -161641,6 +162007,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "furniture pack march 2019 furniture-pack-march-2019 quaternius quaternius cc0 1.0 furniture pack march 2019 is a quaternius game-ready, low-poly pack with 20 models focused on interior. includes furniture, building. furniture building interior game-ready low-poly architecture modular small tall wide",
+      "preview": {
+        "modelFile": "/glb/quaternius/furniture-pack-march-2019/glb/Door3.glb",
+        "modelName": "Door3",
+        "modelTitle": "Door 3",
+        "category": "building"
+      },
       "count": 20,
       "models": [
         {
@@ -162333,6 +162705,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "furniture pack oct 2017 furniture-pack-oct-2017 quaternius quaternius cc0 1.0 furniture pack oct 2017 is a quaternius game-ready, low-poly pack with 46 models focused on interior, nature. includes furniture, nature. furniture nature interior game-ready low-poly nature prop small",
+      "preview": {
+        "modelFile": "/glb/quaternius/furniture-pack-oct-2017/Plant-transformed.glb",
+        "modelName": "Plant-transformed",
+        "modelTitle": "Plant Transformed",
+        "category": "nature"
+      },
       "count": 46,
       "models": [
         {
@@ -163844,6 +164222,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "junk food pack apr 2017 junk-food-pack-apr-2017 quaternius quaternius cc0 1.0 junk food pack apr 2017 is a quaternius game-ready, low-poly pack with 32 models focused on interior. includes food. food interior game-ready low-poly food item",
+      "preview": {
+        "modelFile": "/glb/quaternius/junk-food-pack-apr-2017/Soda.glb",
+        "modelName": "Soda",
+        "modelTitle": "Soda",
+        "category": "food"
+      },
       "count": 32,
       "models": [
         {
@@ -164934,6 +165318,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "knight by quaternius knight-by-quaternius quaternius quaternius cc0 1.0 knight by quaternius is a quaternius game-ready, low-poly pack with 9 models focused on fantasy. includes character, weapon. character weapon fantasy game-ready low-poly medieval tall",
+      "preview": {
+        "modelFile": "/glb/quaternius/knight-by-quaternius/glb/KnightCharacter.glb",
+        "modelName": "KnightCharacter",
+        "modelTitle": "Knight Character",
+        "category": "character"
+      },
       "count": 9,
       "models": [
         {
@@ -165268,6 +165658,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "man animated oct 2017 man-animated-oct-2017 quaternius quaternius cc0 1.0 man animated oct 2017 is a quaternius animated, game-ready, low-poly pack with 1 models focused on man animated oct 2017. includes character. character man animated oct 2017 animated game-ready low-poly",
+      "preview": {
+        "modelFile": "/glb/quaternius/man-animated-oct-2017/glb/Animated%20Human.glb",
+        "modelName": "Animated Human",
+        "modelTitle": "Animated Human",
+        "category": "character"
+      },
       "count": 1,
       "models": [
         {
@@ -165338,6 +165734,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "medieval village pack dec 2020 medieval-village-pack-dec-2020 quaternius quaternius cc0 1.0 medieval village pack dec 2020 is a quaternius game-ready, low-poly pack with 10 models focused on fantasy. includes building, prop. building prop fantasy game-ready low-poly architecture medieval tall urban",
+      "preview": {
+        "modelFile": "/glb/quaternius/medieval-village-pack-dec-2020/glb/Bell_Tower.glb",
+        "modelName": "Bell_Tower",
+        "modelTitle": "Bell Tower",
+        "category": "building"
+      },
       "count": 10,
       "models": [
         {
@@ -165714,6 +166116,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "medieval weapons pack by quaternius medieval-weapons-pack-by-quaternius quaternius quaternius cc0 1.0 medieval weapons pack by quaternius is a quaternius game-ready, low-poly pack with 24 models focused on fantasy. includes weapon, prop, projectile. weapon prop projectile fantasy game-ready low-poly medieval tall",
+      "preview": {
+        "modelFile": "/glb/quaternius/medieval-weapons-pack-by-quaternius/glb/Claymore.glb",
+        "modelName": "Claymore",
+        "modelTitle": "Claymore",
+        "category": "prop"
+      },
       "count": 24,
       "models": [
         {
@@ -166564,6 +166972,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "modular dungeon pack jan 2018 modular-dungeon-pack-jan-2018 quaternius quaternius cc0 1.0 modular dungeon pack jan 2018 is a quaternius game-ready, low-poly pack with 41 models focused on fantasy, nature. includes modular, building. modular building fantasy nature game-ready low-poly architecture medieval modular piece tall wide",
+      "preview": {
+        "modelFile": "/glb/quaternius/modular-dungeon-pack-jan-2018/glb/Column.glb",
+        "modelName": "Column",
+        "modelTitle": "Column",
+        "category": "building"
+      },
       "count": 41,
       "models": [
         {
@@ -168023,6 +168437,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "modular medieval buildings jul 2017 modular-medieval-buildings-jul-2017 quaternius quaternius cc0 1.0 modular medieval buildings jul 2017 is a quaternius game-ready, low-poly pack with 60 models focused on fantasy. includes building, modular. building modular fantasy game-ready low-poly architecture medieval modular piece small tall",
+      "preview": {
+        "modelFile": "/glb/quaternius/modular-medieval-buildings-jul-2017/PointyTower.glb",
+        "modelName": "PointyTower",
+        "modelTitle": "Pointy Tower",
+        "category": "building"
+      },
       "count": 60,
       "models": [
         {
@@ -170155,6 +170575,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "modular sci fi guns nov 2021 modular-sci-fi-guns-nov-2021 quaternius quaternius cc0 1.0 modular sci fi guns nov 2021 is a quaternius game-ready, low-poly pack with 78 models focused on sci-fi. includes modular, weapon. modular weapon sci-fi game-ready low-poly modular piece small",
+      "preview": {
+        "modelFile": "/glb/quaternius/modular-sci-fi-guns-nov-2021/Guns/glb/Sniper_2.glb",
+        "modelName": "Sniper_2",
+        "modelTitle": "Sniper 2",
+        "category": "modular"
+      },
       "count": 78,
       "models": [
         {
@@ -172789,6 +173215,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "nature crops pack jan 2020 nature-crops-pack-jan-2020 quaternius quaternius cc0 1.0 nature crops pack jan 2020 is a quaternius game-ready, low-poly pack with 102 models focused on nature. includes prop, nature, food. prop nature food game-ready low-poly food item nature prop small tall",
+      "preview": {
+        "modelFile": "/glb/quaternius/nature-crops-pack-jan-2020/glb/PalmTree_4.glb",
+        "modelName": "PalmTree_4",
+        "modelTitle": "Palm Tree 4",
+        "category": "nature"
+      },
       "count": 102,
       "models": [
         {
@@ -176157,6 +176589,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "pirate kit nov 2023 pirate-kit-nov-2023 quaternius quaternius cc0 1.0 pirate kit nov 2023 is a quaternius game-ready, low-poly pack with 72 models focused on fantasy, nature, sci-fi, horror. includes character, weapon, creature, vehicle. character weapon creature vehicle fantasy nature sci-fi horror game-ready low-poly medieval small tall urban",
+      "preview": {
+        "modelFile": "/glb/quaternius/pirate-kit-nov-2023/glb/Characters_Tentacle.glb",
+        "modelName": "Characters_Tentacle",
+        "modelTitle": "Characters Tentacle",
+        "category": "character"
+      },
       "count": 72,
       "models": [
         {
@@ -178624,6 +179062,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "platformer game kit dec 2021 platformer-game-kit-dec-2021 quaternius quaternius cc0 1.0 platformer game kit dec 2021 is a quaternius game-ready, low-poly, prototype pack with 110 models focused on platformer game kit dec 2021, nature, horror. includes prop, nature, building, modular, resource, creature. prop nature building modular resource creature platformer game kit dec 2021 horror game-ready low-poly prototype architecture modular piece nature prop",
+      "preview": {
+        "modelFile": "/glb/quaternius/platformer-game-kit-dec-2021/Nature/glb/RockPlatforms_2.glb",
+        "modelName": "RockPlatforms_2",
+        "modelTitle": "Rock Platforms 2",
+        "category": "nature"
+      },
       "count": 110,
       "models": [
         {
@@ -182266,6 +182710,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "platformer pack nov 2018 platformer-pack-nov-2018 quaternius quaternius cc0 1.0 platformer pack nov 2018 is a quaternius game-ready, low-poly pack with 53 models focused on platformer pack nov 2018, nature. includes prop, modular, nature, resource, building. prop modular nature resource building platformer pack nov 2018 game-ready low-poly collectible or resource modular piece nature prop tall wide",
+      "preview": {
+        "modelFile": "/glb/quaternius/platformer-pack-nov-2018/glb/Tree2.glb",
+        "modelName": "Tree2",
+        "modelTitle": "Tree 2",
+        "category": "nature"
+      },
       "count": 53,
       "models": [
         {
@@ -184025,6 +184475,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "posed background characters by quaternius posed-background-characters-by-quaternius quaternius quaternius cc0 1.0 posed background characters by quaternius is a quaternius game-ready, low-poly pack with 4 models focused on posed background characters by quaternius. includes character. character posed background characters by quaternius game-ready low-poly small",
+      "preview": {
+        "modelFile": "/glb/quaternius/posed-background-characters-by-quaternius/glb/Male_Hairstyle_3.glb",
+        "modelName": "Male_Hairstyle_3",
+        "modelTitle": "Male Hairstyle 3",
+        "category": "character"
+      },
       "count": 4,
       "models": [
         {
@@ -184190,6 +184646,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "public transport pack feb 2017 public-transport-pack-feb-2017 quaternius quaternius cc0 1.0 public transport pack feb 2017 is a quaternius game-ready, low-poly pack with 24 models focused on public transport pack feb 2017, urban. includes prop, vehicle. prop vehicle public transport pack feb 2017 urban game-ready low-poly wide",
+      "preview": {
+        "modelFile": "/glb/quaternius/public-transport-pack-feb-2017/Train.glb",
+        "modelName": "Train",
+        "modelTitle": "Train",
+        "category": "vehicle"
+      },
       "count": 24,
       "models": [
         {
@@ -184993,6 +185455,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "realistic car pack nov 2018 realistic-car-pack-nov-2018 quaternius quaternius cc0 1.0 realistic car pack nov 2018 is a quaternius game-ready, low-poly pack with 7 models focused on realistic car pack nov 2018. includes vehicle. vehicle realistic car pack nov 2018 game-ready low-poly wide",
+      "preview": {
+        "modelFile": "/glb/quaternius/realistic-car-pack-nov-2018/glb/NormalCar1.glb",
+        "modelName": "NormalCar1",
+        "modelTitle": "Normal Car 1",
+        "category": "vehicle"
+      },
       "count": 7,
       "models": [
         {
@@ -185265,6 +185733,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "rpg asset pack may 2017 rpg-asset-pack-may-2017 quaternius quaternius cc0 1.0 rpg asset pack may 2017 is a quaternius animated, game-ready, low-poly pack with 26 models focused on fantasy. includes weapon, prop, resource, character. weapon prop resource character fantasy animated game-ready low-poly collectible or resource medieval tall",
+      "preview": {
+        "modelFile": "/glb/quaternius/rpg-asset-pack-may-2017/KnightHelmet.glb",
+        "modelName": "KnightHelmet",
+        "modelTitle": "Knight Helmet",
+        "category": "character"
+      },
       "count": 26,
       "models": [
         {
@@ -186148,6 +186622,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "rpg characters nov 2020 rpg-characters-nov-2020 quaternius quaternius cc0 1.0 rpg characters nov 2020 is a quaternius game-ready, low-poly pack with 6 models focused on fantasy. includes prop, character. prop character fantasy game-ready low-poly medieval tall",
+      "preview": {
+        "modelFile": "/glb/quaternius/rpg-characters-nov-2020/glb/Wizard.glb",
+        "modelName": "Wizard",
+        "modelTitle": "Wizard",
+        "category": "character"
+      },
       "count": 6,
       "models": [
         {
@@ -186378,6 +186858,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "sci fi gun pack by quaternius sci-fi-gun-pack-by-quaternius quaternius quaternius cc0 1.0 sci fi gun pack by quaternius is a quaternius game-ready, low-poly pack with 7 models focused on sci-fi. includes weapon. weapon sci-fi game-ready low-poly wide",
+      "preview": {
+        "modelFile": "/glb/quaternius/sci-fi-gun-pack-by-quaternius/glb/Rifle.glb",
+        "modelName": "Rifle",
+        "modelTitle": "Rifle",
+        "category": "weapon"
+      },
       "count": 7,
       "models": [
         {
@@ -186642,6 +187128,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "ships by quaternius ships-by-quaternius quaternius quaternius cc0 1.0 ships by quaternius is a quaternius game-ready, low-poly pack with 6 models focused on ships by quaternius, sci-fi. includes vehicle, prop. vehicle prop ships by quaternius sci-fi game-ready low-poly wide",
+      "preview": {
+        "modelFile": "/glb/quaternius/ships-by-quaternius/glb/CruiseShip.glb",
+        "modelName": "CruiseShip",
+        "modelTitle": "Cruise Ship",
+        "category": "vehicle"
+      },
       "count": 6,
       "models": [
         {
@@ -186866,6 +187358,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "simple nature pack dec 2016 simple-nature-pack-dec-2016 quaternius quaternius cc0 1.0 simple nature pack dec 2016 is a quaternius game-ready, low-poly pack with 12 models focused on nature. includes nature. nature game-ready low-poly nature prop small",
+      "preview": {
+        "modelFile": "/glb/quaternius/simple-nature-pack-dec-2016/glb/Tree4.glb",
+        "modelName": "Tree4",
+        "modelTitle": "Tree 4",
+        "category": "nature"
+      },
       "count": 12,
       "models": [
         {
@@ -187284,6 +187782,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "spaceships by quaternius spaceships-by-quaternius quaternius quaternius cc0 1.0 spaceships by quaternius is a quaternius game-ready, low-poly pack with 5 models focused on spaceships by quaternius. includes vehicle. vehicle spaceships by quaternius game-ready low-poly wide",
+      "preview": {
+        "modelFile": "/glb/quaternius/spaceships-by-quaternius/glb/Spaceship3.glb",
+        "modelName": "Spaceship3",
+        "modelTitle": "Spaceship 3",
+        "category": "vehicle"
+      },
       "count": 5,
       "models": [
         {
@@ -187485,6 +187989,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "street pack by quaternius street-pack-by-quaternius quaternius quaternius cc0 1.0 street pack by quaternius is a quaternius game-ready, low-poly pack with 25 models focused on urban. includes modular, building. modular building urban game-ready low-poly architecture modular piece small wide",
+      "preview": {
+        "modelFile": "/glb/quaternius/street-pack-by-quaternius/glb/Street_Bridge_WaterRamp.glb",
+        "modelName": "Street_Bridge_WaterRamp",
+        "modelTitle": "Street Bridge Water Ramp",
+        "category": "building"
+      },
       "count": 25,
       "models": [
         {
@@ -188358,6 +188868,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "survival pack sept 2020 survival-pack-sept-2020 quaternius quaternius cc0 1.0 survival pack sept 2020 is a quaternius game-ready, low-poly pack with 53 models focused on survival pack sept 2020. includes prop, weapon, effect, food, nature, vehicle. prop weapon effect food nature vehicle survival pack sept 2020 game-ready low-poly food item small tall wide",
+      "preview": {
+        "modelFile": "/glb/quaternius/survival-pack-sept-2020/glb/WoodLog.glb",
+        "modelName": "WoodLog",
+        "modelTitle": "Wood Log",
+        "category": "nature"
+      },
       "count": 53,
       "models": [
         {
@@ -190125,6 +190641,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "sushi restaurant kit may 2023 sushi-restaurant-kit-may-2023 quaternius quaternius cc0 1.0 sushi restaurant kit may 2023 is a quaternius game-ready, low-poly pack with 117 models focused on interior, nature. includes building, weapon, creature, projectile, vehicle. building weapon creature projectile vehicle interior nature game-ready low-poly architecture food modular small tall wide",
+      "preview": {
+        "modelFile": "/glb/quaternius/sushi-restaurant-kit-may-2023/Environment/glb/Truck.glb",
+        "modelName": "Truck",
+        "modelTitle": "Truck",
+        "category": "vehicle"
+      },
       "count": 117,
       "models": [
         {
@@ -194194,6 +194716,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "tank pack june 2019 tank-pack-june-2019 quaternius quaternius cc0 1.0 tank pack june 2019 is a quaternius game-ready, low-poly pack with 4 models focused on tank pack june 2019. includes vehicle. vehicle tank pack june 2019 game-ready low-poly tall",
+      "preview": {
+        "modelFile": "/glb/quaternius/tank-pack-june-2019/glb/Tank.glb",
+        "modelName": "Tank",
+        "modelTitle": "Tank",
+        "category": "vehicle"
+      },
       "count": 4,
       "models": [
         {
@@ -194360,6 +194888,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "textured fantasy nature mar 2017 textured-fantasy-nature-mar-2017 quaternius quaternius cc0 1.0 textured fantasy nature mar 2017 is a quaternius game-ready, low-poly, textured pack with 22 models focused on fantasy, nature. includes nature. nature fantasy game-ready low-poly textured medieval nature prop",
+      "preview": {
+        "modelFile": "/glb/quaternius/textured-fantasy-nature-mar-2017/BigTree.glb",
+        "modelName": "BigTree",
+        "modelTitle": "Big Tree",
+        "category": "nature"
+      },
       "count": 22,
       "models": [
         {
@@ -195188,6 +195722,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "textured stylized trees may 2020 textured-stylized-trees-may-2020 quaternius quaternius cc0 1.0 textured stylized trees may 2020 is a quaternius game-ready, low-poly, textured pack with 90 models focused on textured stylized trees may 2020, nature. includes nature, prop. nature prop textured stylized trees may 2020 game-ready low-poly textured nature prop tall",
+      "preview": {
+        "modelFile": "/glb/quaternius/textured-stylized-trees-may-2020/Pine_2.glb",
+        "modelName": "Pine_2",
+        "modelTitle": "Pine 2",
+        "category": "nature"
+      },
       "count": 90,
       "models": [
         {
@@ -198228,6 +198768,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "toon shooter game kit dec 2022 toon-shooter-game-kit-dec-2022 quaternius quaternius cc0 1.0 toon shooter game kit dec 2022 is a quaternius game-ready, low-poly pack with 74 models focused on toon shooter game kit dec 2022, nature, urban. includes prop, building, resource, vehicle, weapon, nature. prop building resource vehicle weapon nature toon shooter game kit dec 2022 urban game-ready low-poly architecture collectible or resource tall wide",
+      "preview": {
+        "modelFile": "/glb/quaternius/toon-shooter-game-kit-dec-2022/Environment/glb/Tree_2.glb",
+        "modelName": "Tree_2",
+        "modelTitle": "Tree 2",
+        "category": "nature"
+      },
       "count": 74,
       "models": [
         {
@@ -200655,6 +201201,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "train pack april 2019 train-pack-april-2019 quaternius quaternius cc0 1.0 train pack april 2019 is a quaternius game-ready, low-poly pack with 14 models focused on train pack april 2019. includes vehicle. vehicle train pack april 2019 game-ready low-poly modular wide",
+      "preview": {
+        "modelFile": "/glb/quaternius/train-pack-april-2019/glb/CargoTrain_CoalContainer.glb",
+        "modelName": "CargoTrain_CoalContainer",
+        "modelTitle": "Cargo Train Coal Container",
+        "category": "vehicle"
+      },
       "count": 14,
       "models": [
         {
@@ -201154,6 +201706,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "turret pack march 2020 turret-pack-march-2020 quaternius quaternius cc0 1.0 turret pack march 2020 is a quaternius game-ready, low-poly pack with 37 models focused on turret pack march 2020, sci-fi. includes weapon, projectile. weapon projectile turret pack march 2020 sci-fi game-ready low-poly tall wide",
+      "preview": {
+        "modelFile": "/glb/quaternius/turret-pack-march-2020/glb/Laser_Quad.glb",
+        "modelName": "Laser_Quad",
+        "modelTitle": "Laser Quad",
+        "category": "projectile"
+      },
       "count": 37,
       "models": [
         {
@@ -202406,6 +202964,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "ultimate animated animals july 2021 ultimate-animated-animals-july-2021 quaternius quaternius cc0 1.0 ultimate animated animals july 2021 is a quaternius animated, game-ready, low-poly pack with 12 models focused on nature. includes creature. creature nature animated game-ready low-poly tall",
+      "preview": {
+        "modelFile": "/glb/quaternius/ultimate-animated-animals-july-2021/glb/Alpaca.glb",
+        "modelName": "Alpaca",
+        "modelTitle": "Alpaca",
+        "category": "creature"
+      },
       "count": 12,
       "models": [
         {
@@ -202866,6 +203430,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "ultimate animated character pack nov 2019 ultimate-animated-character-pack-nov-2019 quaternius quaternius cc0 1.0 ultimate animated character pack nov 2019 is a quaternius animated, game-ready, low-poly pack with 52 models focused on ultimate animated character pack nov 2019, fantasy, horror. includes character, creature. character creature ultimate animated character pack nov 2019 fantasy horror animated game-ready low-poly medieval tall",
+      "preview": {
+        "modelFile": "/glb/quaternius/ultimate-animated-character-pack-nov-2019/glb/Witch.glb",
+        "modelName": "Witch",
+        "modelTitle": "Witch",
+        "category": "character"
+      },
       "count": 52,
       "models": [
         {
@@ -204734,6 +205304,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "ultimate fantasy rts aug 2022 ultimate-fantasy-rts-aug-2022 quaternius quaternius cc0 1.0 ultimate fantasy rts aug 2022 is a quaternius game-ready, low-poly pack with 128 models focused on fantasy, nature. includes prop, building, nature, resource. prop building nature resource fantasy game-ready low-poly architecture collectible or resource medieval modular nature prop",
+      "preview": {
+        "modelFile": "/glb/quaternius/ultimate-fantasy-rts-aug-2022/glb/WallTowers_DoorClosed_SecondAge.glb",
+        "modelName": "WallTowers_DoorClosed_SecondAge",
+        "modelTitle": "Wall Towers Door Closed Second Age",
+        "category": "building"
+      },
       "count": 128,
       "models": [
         {
@@ -209096,6 +209672,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "ultimate food pack oct 2019 ultimate-food-pack-oct-2019 quaternius quaternius cc0 1.0 ultimate food pack oct 2019 is a quaternius game-ready, low-poly pack with 103 models focused on interior. includes food, creature, nature, weapon. food creature nature weapon interior game-ready low-poly food item nature prop small tall wide",
+      "preview": {
+        "modelFile": "/glb/quaternius/ultimate-food-pack-oct-2019/glb/Fish.glb",
+        "modelName": "Fish",
+        "modelTitle": "Fish",
+        "category": "creature"
+      },
       "count": 103,
       "models": [
         {
@@ -212543,6 +213125,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "ultimate gun pack july 2019 ultimate-gun-pack-july-2019 quaternius quaternius cc0 1.0 ultimate gun pack july 2019 is a quaternius game-ready, low-poly pack with 40 models focused on ultimate gun pack july 2019. includes weapon. weapon ultimate gun pack july 2019 game-ready low-poly wide",
+      "preview": {
+        "modelFile": "/glb/quaternius/ultimate-gun-pack-july-2019/glb/SniperRifle_2.glb",
+        "modelName": "SniperRifle_2",
+        "modelTitle": "Sniper Rifle 2",
+        "category": "weapon"
+      },
       "count": 40,
       "models": [
         {
@@ -213889,6 +214477,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "ultimate house interior pack june 2020 ultimate-house-interior-pack-june-2020 quaternius quaternius cc0 1.0 ultimate house interior pack june 2020 is a quaternius game-ready, low-poly, prototype pack with 123 models focused on interior. includes building, weapon. building weapon interior game-ready low-poly prototype architecture modular small tall urban wide",
+      "preview": {
+        "modelFile": "/glb/quaternius/ultimate-house-interior-pack-june-2020/glb/Couch_Large3.glb",
+        "modelName": "Couch_Large3",
+        "modelTitle": "Couch Large 3",
+        "category": "building"
+      },
       "count": 123,
       "models": [
         {
@@ -218178,6 +218772,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "ultimate modular men feb 2022 ultimate-modular-men-feb-2022 quaternius quaternius cc0 1.0 ultimate modular men feb 2022 is a quaternius game-ready, low-poly pack with 11 models focused on ultimate modular men feb 2022. includes modular, character. modular character ultimate modular men feb 2022 game-ready low-poly modular piece",
+      "preview": {
+        "modelFile": "/glb/quaternius/ultimate-modular-men-feb-2022/glb/Adventurer.glb",
+        "modelName": "Adventurer",
+        "modelTitle": "Adventurer",
+        "category": "character"
+      },
       "count": 11,
       "models": [
         {
@@ -218586,6 +219186,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "ultimate modular ruins pack aug 2021 ultimate-modular-ruins-pack-aug-2021 quaternius quaternius cc0 1.0 ultimate modular ruins pack aug 2021 is a quaternius game-ready, low-poly pack with 92 models focused on fantasy, nature, horror. includes modular, building, character, vehicle. modular building character vehicle fantasy nature horror game-ready low-poly architecture medieval modular piece small tall",
+      "preview": {
+        "modelFile": "/glb/quaternius/ultimate-modular-ruins-pack-aug-2021/glb/Column_BridgeSupport.glb",
+        "modelName": "Column_BridgeSupport",
+        "modelTitle": "Column Bridge Support",
+        "category": "building"
+      },
       "count": 92,
       "models": [
         {
@@ -221844,6 +222450,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "ultimate modular sci fi feb 2021 ultimate-modular-sci-fi-feb-2021 quaternius quaternius cc0 1.0 ultimate modular sci fi feb 2021 is a quaternius game-ready, low-poly pack with 45 models focused on sci-fi. includes building, modular, projectile. building modular projectile sci-fi game-ready low-poly architecture modular piece small tall wide",
+      "preview": {
+        "modelFile": "/glb/quaternius/ultimate-modular-sci-fi-feb-2021/glb/Column_3.glb",
+        "modelName": "Column_3",
+        "modelTitle": "Column 3",
+        "category": "building"
+      },
       "count": 45,
       "models": [
         {
@@ -223404,6 +224016,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "ultimate modular women april 2022 ultimate-modular-women-april-2022 quaternius quaternius cc0 1.0 ultimate modular women april 2022 is a quaternius game-ready, low-poly pack with 10 models focused on ultimate modular women april 2022, fantasy, sci-fi. includes modular, character. modular character ultimate modular women april 2022 fantasy sci-fi game-ready low-poly medieval modular piece tall",
+      "preview": {
+        "modelFile": "/glb/quaternius/ultimate-modular-women-april-2022/glb/Soldier.glb",
+        "modelName": "Soldier",
+        "modelTitle": "Soldier",
+        "category": "character"
+      },
       "count": 10,
       "models": [
         {
@@ -223780,6 +224398,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "ultimate monsters ultimate-monsters quaternius quaternius cc0 1.0 ultimate monsters is a quaternius game-ready, low-poly pack with 50 models focused on ultimate monsters, horror, sci-fi, fantasy. includes prop, creature, character, nature. prop creature character nature ultimate monsters horror sci-fi fantasy game-ready low-poly medieval tall",
+      "preview": {
+        "modelFile": "/glb/quaternius/ultimate-monsters/Big/glb/Fish.glb",
+        "modelName": "Fish",
+        "modelTitle": "Fish",
+        "category": "creature"
+      },
       "count": 50,
       "models": [
         {
@@ -225456,6 +226080,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "ultimate nature pack jun 2019 ultimate-nature-pack-jun-2019 quaternius quaternius cc0 1.0 ultimate nature pack jun 2019 is a quaternius game-ready, low-poly pack with 150 models focused on nature. includes nature, prop. nature prop game-ready low-poly nature prop small tall",
+      "preview": {
+        "modelFile": "/glb/quaternius/ultimate-nature-pack-jun-2019/glb/BirchTree_Snow_5.glb",
+        "modelName": "BirchTree_Snow_5",
+        "modelTitle": "Birch Tree Snow 5",
+        "category": "nature"
+      },
       "count": 150,
       "models": [
         {
@@ -230333,6 +230963,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "ultimate rpg items pack aug 2019 ultimate-rpg-items-pack-aug-2019 quaternius quaternius cc0 1.0 ultimate rpg items pack aug 2019 is a quaternius game-ready, low-poly pack with 106 models focused on fantasy, horror. includes prop, resource, weapon, projectile, creature. prop resource weapon projectile creature fantasy horror game-ready low-poly collectible or resource small tall",
+      "preview": {
+        "modelFile": "/glb/quaternius/ultimate-rpg-items-pack-aug-2019/glb/FishBone.glb",
+        "modelName": "FishBone",
+        "modelTitle": "Fish Bone",
+        "category": "creature"
+      },
       "count": 106,
       "models": [
         {
@@ -233832,6 +234468,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "ultimate space kit march 2023 ultimate-space-kit-march-2023 quaternius quaternius cc0 1.0 ultimate space kit march 2023 is a quaternius game-ready, low-poly pack with 92 models focused on sci-fi, nature, urban. includes nature, sci-fi, building, vehicle, creature, character. nature sci-fi building vehicle creature character urban game-ready low-poly architecture modular nature prop sci-fi asset tall",
+      "preview": {
+        "modelFile": "/glb/quaternius/ultimate-space-kit-march-2023/Environment/glb/Base_Large.glb",
+        "modelName": "Base_Large",
+        "modelTitle": "Base Large",
+        "category": "sci-fi"
+      },
       "count": 92,
       "models": [
         {
@@ -236929,6 +237571,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "ultimate spaceships may 2021 ultimate-spaceships-may-2021 quaternius quaternius cc0 1.0 ultimate spaceships may 2021 is a quaternius game-ready, low-poly pack with 11 models focused on ultimate spaceships may 2021. includes prop. prop ultimate spaceships may 2021 game-ready low-poly wide",
+      "preview": {
+        "modelFile": "/glb/quaternius/ultimate-spaceships-may-2021/Bob/glb/Bob.glb",
+        "modelName": "Bob",
+        "modelTitle": "Bob",
+        "category": "prop"
+      },
       "count": 11,
       "models": [
         {
@@ -237327,6 +237975,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "ultimate stylized nature may 2022 ultimate-stylized-nature-may-2022 quaternius quaternius cc0 1.0 ultimate stylized nature may 2022 is a quaternius game-ready, low-poly pack with 126 models focused on nature. includes nature, prop. nature prop game-ready low-poly nature prop small tall wide",
+      "preview": {
+        "modelFile": "/glb/quaternius/ultimate-stylized-nature-may-2022/DeadTree_8.glb",
+        "modelName": "DeadTree_8",
+        "modelTitle": "Dead Tree 8",
+        "category": "nature"
+      },
       "count": 126,
       "models": [
         {
@@ -241410,6 +242064,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "ultimate textured building pack dec 2019 ultimate-textured-building-pack-dec-2019 quaternius quaternius cc0 1.0 ultimate textured building pack dec 2019 is a quaternius game-ready, low-poly, textured pack with 52 models focused on urban. includes building. building urban game-ready low-poly textured architecture modular tall wide",
+      "preview": {
+        "modelFile": "/glb/quaternius/ultimate-textured-building-pack-dec-2019/6Story_Stack_Mat.glb",
+        "modelName": "6Story_Stack_Mat",
+        "modelTitle": "6 Story Stack Mat",
+        "category": "building"
+      },
       "count": 52,
       "models": [
         {
@@ -243237,6 +243897,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "updated modular dungeon may 2019 updated-modular-dungeon-may-2019 quaternius quaternius cc0 1.0 updated modular dungeon may 2019 is a quaternius game-ready, low-poly pack with 48 models focused on fantasy, horror. includes modular, building, weapon. modular building weapon fantasy horror game-ready low-poly architecture medieval modular piece small tall",
+      "preview": {
+        "modelFile": "/glb/quaternius/updated-modular-dungeon-may-2019/glb/Arch.glb",
+        "modelName": "Arch",
+        "modelTitle": "Arch",
+        "category": "building"
+      },
       "count": 48,
       "models": [
         {
@@ -244930,6 +245596,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "woman animated dec 2017 woman-animated-dec-2017 quaternius quaternius cc0 1.0 woman animated dec 2017 is a quaternius animated, game-ready, low-poly pack with 2 models focused on woman animated dec 2017. includes character. character woman animated dec 2017 animated game-ready low-poly",
+      "preview": {
+        "modelFile": "/glb/quaternius/woman-animated-dec-2017/glb/Animated%20Woman.glb",
+        "modelName": "Animated Woman",
+        "modelTitle": "Animated Woman",
+        "category": "character"
+      },
       "count": 2,
       "models": [
         {
@@ -245041,6 +245713,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "zombie apocalypse kit march 2024 zombie-apocalypse-kit-march-2024 quaternius quaternius cc0 1.0 zombie apocalypse kit march 2024 is a quaternius game-ready, low-poly, prototype pack with 64 models focused on horror, urban, prototype. includes creature, weapon, vehicle. creature weapon vehicle horror urban prototype game-ready low-poly modular small tall wide",
+      "preview": {
+        "modelFile": "/glb/quaternius/zombie-apocalypse-kit-march-2024/Environment/glb/Street_4Way.glb",
+        "modelName": "Street_4Way",
+        "modelTitle": "Street 4 Way",
+        "category": "creature"
+      },
       "count": 64,
       "models": [
         {
@@ -247173,6 +247851,12 @@
       "source": "Quaternius",
       "license": "CC0 1.0",
       "searchText": "zombie by quaternius zombie-by-quaternius quaternius quaternius cc0 1.0 zombie by quaternius is a quaternius game-ready, low-poly pack with 4 models focused on horror. includes creature. creature horror game-ready low-poly tall",
+      "preview": {
+        "modelFile": "/glb/quaternius/zombie-by-quaternius/Zombie.glb",
+        "modelName": "Zombie",
+        "modelTitle": "Zombie",
+        "category": "creature"
+      },
       "count": 4,
       "models": [
         {

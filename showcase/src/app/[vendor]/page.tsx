@@ -87,7 +87,7 @@ export default async function CreatorPage({
           <div className="pack-grid">
             {packs.map((pack) => (
               <Link key={pack.id} className="pack-card" href={`/${pack.vendor}/${pack.pack}`}>
-                <PackCardPreview modelFiles={previewModelFilesFor(pack)} />
+                <PackCardPreview modelFiles={previewModelFilesFor(pack)} label={pack.preview?.modelTitle} />
                 <div className="pack-label">{pack.title}</div>
                 <div className="pack-credit-row">
                   <span>{credit.vendorLabel}</span>

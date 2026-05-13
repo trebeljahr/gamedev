@@ -5,11 +5,16 @@ import {
   buildPackMetadata,
   type AssetSize,
 } from "../src/lib/catalog-metadata";
+import { buildPackPreviewMetadata } from "../src/lib/preview-model";
+import type { ModelCategory } from "../src/lib/catalog-metadata";
+import type { PackPreview } from "../src/lib/manifest";
 
 type ExistingModel = {
   name: string;
   file: string;
   label?: string;
+  title?: string;
+  category?: ModelCategory;
   size?: AssetSize;
   minY: number;
   cxz: [number, number];
@@ -20,6 +25,7 @@ type ExistingPack = {
   vendor: string;
   pack: string;
   label?: string;
+  preview?: PackPreview;
   count: number;
   models: ExistingModel[];
 };
@@ -46,6 +52,7 @@ async function main() {
         ...model,
         label: metadata.title,
         ...metadata,
+        size: model.size ?? ([1, 1, 1] as AssetSize),
       };
     });
 
@@ -57,9 +64,12 @@ async function main() {
     });
 
     return {
-      ...pack,
+      id: pack.id,
+      vendor: pack.vendor,
+      pack: pack.pack,
       label: metadata.title,
       ...metadata,
+      preview: buildPackPreviewMetadata(models),
       count: models.length,
       models,
     };

@@ -28,6 +28,8 @@ import {
   type ModelCategory,
 } from "../src/lib/catalog-metadata";
 import { inferArtKind, isAnimatedArtPath, selectRepresentativeArtSamples } from "../src/lib/media-inference";
+import { buildPackPreviewMetadata } from "../src/lib/preview-model";
+import type { PackPreview } from "../src/lib/manifest";
 
 const SHOWCASE_DIR = join(__dirname, "..");
 const REPO_ROOT = join(SHOWCASE_DIR, "..");
@@ -99,6 +101,7 @@ type Pack = {
   source: string;
   license: string;
   searchText: string;
+  preview?: PackPreview;
   count: number;
   models: Model[];
 };
@@ -530,6 +533,7 @@ async function main() {
         pack,
         label: packMetadata.title,
         ...packMetadata,
+        preview: buildPackPreviewMetadata(models),
         count: models.length,
         models,
       });

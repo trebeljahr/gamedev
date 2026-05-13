@@ -1,10 +1,16 @@
 "use client";
 
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { useEffect, useMemo, useState } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { licenseForVendor, type VendorLicense } from "@/lib/license";
 import type { Manifest, Model, Pack } from "@/lib/manifest";
+
+const PackCardPreview = dynamic(
+  () => import("@/components/PackCardPreview").then((m) => m.PackCardPreview),
+  { ssr: false },
+);
 
 type ModelCatalogProps = {
   manifest: Manifest;
@@ -169,6 +175,9 @@ export function ModelCatalog({ manifest }: ModelCatalogProps) {
         <section className="model-results" aria-label="Filtered models">
           {visibleEntries.map((entry) => (
             <article className="model-card" key={entry.model.file} id={slug(entry.model.file)}>
+              <div className="model-card-preview">
+                <PackCardPreview modelFiles={[entry.model.file]} label={entry.model.title} />
+              </div>
               <div className="model-card-main">
                 <div className="model-card-kicker">
                   <span>{entry.vendorCredit.vendorLabel}</span>

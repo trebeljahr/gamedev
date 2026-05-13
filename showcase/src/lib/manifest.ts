@@ -23,6 +23,12 @@ export type Model = {
   // middle of its cell rather than potentially overhanging into a neighbour.
   cxz: [number, number];
 };
+export type PackPreview = {
+  modelFile: string;
+  modelName: string;
+  modelTitle: string;
+  category: ModelCategory;
+};
 export type Pack = {
   id: string;
   vendor: string;
@@ -37,6 +43,7 @@ export type Pack = {
   source: string;
   license: string;
   searchText: string;
+  preview?: PackPreview;
   count: number;
   models: Model[];
 };
