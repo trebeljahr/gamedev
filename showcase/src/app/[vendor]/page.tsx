@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { LicenseLink } from "@/components/LicenseLink";
 import { PackCardPreview } from "@/components/PackCardPreview";
 import { SiteHeader } from "@/components/SiteHeader";
 import { licenseForVendor } from "@/lib/license";
@@ -53,7 +54,7 @@ export default async function CreatorPage({
               </div>
               <div>
                 <span>License</span>
-                <strong>{credit.license}</strong>
+                <LicenseLink license={credit.license} fallbackUrl={credit.licenseUrl} className="creator-stat-license" />
               </div>
             </div>
           </div>
@@ -85,25 +86,38 @@ export default async function CreatorPage({
           </div>
 
           <div className="pack-grid">
-            {packs.map((pack) => (
-              <Link key={pack.id} className="pack-card" href={`/${pack.vendor}/${pack.pack}`}>
-                <PackCardPreview modelFiles={previewModelFilesFor(pack)} label={pack.preview?.modelTitle} />
-                <div className="pack-label">{pack.title}</div>
-                <div className="pack-credit-row">
-                  <span>{credit.vendorLabel}</span>
-                  <strong>{pack.license || credit.license}</strong>
-                </div>
-                <p>{pack.description}</p>
-                <div className="pack-tags">
-                  {pack.tags.slice(0, 5).map((tag) => (
-                    <span key={tag}>{tag}</span>
-                  ))}
-                </div>
-                <div className="pack-count">
-                  {pack.count} {pack.count === 1 ? "model" : "models"}
-                </div>
-              </Link>
-            ))}
+            {packs.map((pack) => {
+              const packHref = `/${pack.vendor}/${pack.pack}`;
+              return (
+                <article key={pack.id} className="pack-card">
+                  <Link className="pack-preview-link" href={packHref}>
+                    <PackCardPreview modelFiles={previewModelFilesFor(pack)} label={pack.preview?.modelTitle} />
+                  </Link>
+                  <Link className="pack-label pack-label-link" href={packHref}>
+                    {pack.title}
+                  </Link>
+                  <div className="pack-credit-row">
+                    <span>{credit.vendorLabel}</span>
+                    <LicenseLink
+                      license={pack.license || credit.license}
+                      source={credit.vendorLabel}
+                      fallbackUrl={credit.licenseUrl}
+                    />
+                  </div>
+                  <Link className="pack-card-body-link" href={packHref}>
+                    <p>{pack.description}</p>
+                    <div className="pack-tags">
+                      {pack.tags.slice(0, 5).map((tag) => (
+                        <span key={tag}>{tag}</span>
+                      ))}
+                    </div>
+                    <div className="pack-count">
+                      {pack.count} {pack.count === 1 ? "model" : "models"}
+                    </div>
+                  </Link>
+                </article>
+              );
+            })}
           </div>
         </section>
       </main>

@@ -34,6 +34,7 @@ import {
 import { assetUrl } from "@/lib/manifest";
 import { licenseForVendor } from "@/lib/license";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
+import { LicenseLink } from "@/components/LicenseLink";
 
 // Load any pack whose nearest edge is within this distance of the camera.
 // Pack-coherent loading: when you approach a pack, the whole pack appears at
@@ -834,20 +835,12 @@ function ModelPanel({
 
       <Section title="License">
         <div>
-          <strong>{license.license}</strong>
-          {license.licenseUrl && (
-            <>
-              {" "}·{" "}
-              <a
-                href={license.licenseUrl}
-                target="_blank"
-                rel="noreferrer"
-                style={{ color: "#ffd84d" }}
-              >
-                terms
-              </a>
-            </>
-          )}
+          <LicenseLink
+            license={license.license}
+            source={license.vendorLabel}
+            fallbackUrl={license.licenseUrl}
+            style={{ color: "#ffd84d", fontWeight: 800 }}
+          />
         </div>
         <div style={{ fontSize: 11, color: "#8a8a93", marginTop: 4 }}>
           {license.vendorUrl ? (

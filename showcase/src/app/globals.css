@@ -553,11 +553,17 @@ select:focus-visible {
   flex-wrap: wrap;
   gap: 6px;
 }
-.model-card-kicker span {
+.model-card-kicker span,
+.model-card-kicker a {
   color: var(--muted);
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
+}
+.model-card-kicker a,
+.inline-license-link {
+  color: var(--accent);
+  cursor: pointer;
 }
 .model-card h3 {
   margin: 8px 0 0;
@@ -715,6 +721,17 @@ select:focus-visible {
   color: var(--text);
   transform: translateY(-1px);
 }
+.pack-preview-link {
+  display: block;
+  height: 138px;
+}
+.pack-label-link,
+.pack-card-body-link {
+  color: inherit;
+}
+.pack-card-body-link {
+  display: contents;
+}
 .pack-preview {
   position: relative;
   height: 138px;
@@ -759,20 +776,24 @@ select:focus-visible {
   color: rgba(232,230,227,0.72);
   font-size: 11px;
 }
-.pack-credit-row span,
-.pack-credit-row strong {
+.pack-credit-row > span:first-child,
+.pack-credit-row strong,
+.pack-credit-row a {
   min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.pack-credit-row strong {
+.pack-credit-row strong,
+.pack-credit-row a {
   flex: 0 0 auto;
   padding: 2px 6px;
   color: #11100b;
   background: var(--accent);
   border-radius: 5px;
+  cursor: pointer;
   font-size: 10px;
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
@@ -1045,12 +1066,14 @@ select:focus-visible {
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
-.creator-stat-grid strong {
+.creator-stat-grid strong,
+.creator-stat-grid a {
   display: block;
   margin-top: 4px;
   overflow: hidden;
   color: var(--text);
   font-size: 18px;
+  font-weight: 700;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -2012,19 +2035,22 @@ select:focus-visible {
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
-.art-card-credit strong {
+.art-card-credit strong,
+.art-card-credit a {
   overflow: hidden;
   color: rgba(232,230,227,0.86);
   font-size: 12px;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.art-card-credit div:last-child strong {
+.art-card-credit div:last-child strong,
+.art-card-credit div:last-child a {
   padding: 2px 6px;
   color: #11100b;
   background: var(--accent);
   border-radius: 5px;
   font-size: 10px;
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }

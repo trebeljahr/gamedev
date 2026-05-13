@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import { useGLTF } from "@react-three/drei";
+import { LicenseLink } from "@/components/LicenseLink";
 import { licenseForVendor } from "@/lib/license";
 import { assetUrl, type Pack } from "@/lib/manifest";
 
@@ -98,13 +99,7 @@ export function PackViewer({ pack, initialModelFile }: { pack: Pack; initialMode
           </div>
           <div>
             <span>License</span>
-            {credit.licenseUrl ? (
-              <a href={credit.licenseUrl} target="_blank" rel="noreferrer">
-                {license}
-              </a>
-            ) : (
-              <strong>{license}</strong>
-            )}
+            <LicenseLink license={license} source={credit.vendorLabel} fallbackUrl={credit.licenseUrl} />
           </div>
           {credit.notes && <p>{credit.notes}</p>}
           <div className="creator-links">

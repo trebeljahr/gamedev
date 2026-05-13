@@ -3,6 +3,7 @@
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { useEffect, useMemo, useState } from "react";
+import { LicenseLink } from "@/components/LicenseLink";
 import { SiteHeader } from "@/components/SiteHeader";
 import { licenseForVendor, type VendorLicense } from "@/lib/license";
 import type { Manifest, Model, Pack } from "@/lib/manifest";
@@ -182,7 +183,13 @@ export function ModelCatalog({ manifest }: ModelCatalogProps) {
                 <div className="model-card-kicker">
                   <span>{entry.vendorCredit.vendorLabel}</span>
                   <span>{entry.model.category}</span>
-                  <span>{entry.license}</span>
+                  <LicenseLink
+                    license={entry.license}
+                    source={entry.vendorCredit.vendorLabel}
+                    fallbackUrl={entry.vendorCredit.licenseUrl}
+                    className="model-license-link"
+                    fallbackElement="span"
+                  />
                 </div>
                 <h3>{entry.model.title}</h3>
                 <p>{entry.model.description}</p>
@@ -211,13 +218,12 @@ export function ModelCatalog({ manifest }: ModelCatalogProps) {
                 <div>
                   <dt>License</dt>
                   <dd>
-                    {entry.vendorCredit.licenseUrl ? (
-                      <a href={entry.vendorCredit.licenseUrl} target="_blank" rel="noreferrer">
-                        {entry.license}
-                      </a>
-                    ) : (
-                      entry.license
-                    )}
+                    <LicenseLink
+                      license={entry.license}
+                      source={entry.vendorCredit.vendorLabel}
+                      fallbackUrl={entry.vendorCredit.licenseUrl}
+                      fallbackElement="span"
+                    />
                   </dd>
                 </div>
                 <div>

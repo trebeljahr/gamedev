@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { type CSSProperties, useEffect, useMemo, useRef, useState } from "react";
+import { type CSSProperties, type ReactNode, useEffect, useMemo, useRef, useState } from "react";
+import { LicenseLink } from "@/components/LicenseLink";
 import type { ArtPack, ArtSample, MusicTrack, SoundCollection, SoundSample, SourceMapping } from "@/lib/media";
 import { artCreators } from "@/lib/media";
 import { isLikelyHybridSpriteAtlasPath, isLikelySpriteSheetPath, isLikelyTextureAtlasPath } from "@/lib/media-inference";
@@ -1586,7 +1587,12 @@ function ArtWorkbench({ pack }: { pack: ArtPack }) {
             </div>
             <div>
               <span>License</span>
-              <strong title={pack.license_class}>{licenseBucket(pack.license_class)}</strong>
+              <LicenseLink
+                license={pack.license_class}
+                fallbackUrl={pack.url}
+                label={licenseBucket(pack.license_class)}
+                title={pack.license_class}
+              />
             </div>
             {pack.url && (
               <a className="source-link" href={pack.url} target="_blank" rel="noreferrer">
@@ -1631,7 +1637,12 @@ function ArtPackCard({
         </div>
         <div>
           <span>License</span>
-          <strong title={pack.license_class}>{licenseBucket(pack.license_class)}</strong>
+          <LicenseLink
+            license={pack.license_class}
+            fallbackUrl={pack.url}
+            label={licenseBucket(pack.license_class)}
+            title={pack.license_class}
+          />
         </div>
       </div>
       <div className="media-actions">
@@ -1663,7 +1674,7 @@ function AudioPlayer({
 }: {
   src: string | undefined;
   title: string;
-  detail?: string;
+  detail?: ReactNode;
   volume?: number;
   rate?: number;
   loop?: boolean;
@@ -1814,7 +1825,16 @@ function SoundPad({ collection }: { collection: SoundCollection }) {
       <div className="sound-pad-head">
         <div>
           <h3>{collection.title}</h3>
-          <div className="media-detail">{collection.organizationLabel} · {collection.source} · {collection.license}</div>
+          <div className="media-detail">
+            {collection.organizationLabel} · {collection.source} ·{" "}
+            <LicenseLink
+              license={collection.license}
+              source={collection.source}
+              fallbackUrl={collection.url}
+              className="inline-license-link"
+              fallbackElement="span"
+            />
+          </div>
         </div>
       </div>
       <AudioPlayer
@@ -2206,7 +2226,15 @@ export function MediaExplorer({
                     <p>{mapping.description}</p>
                   </div>
                   <div className="media-actions">
-                    {mapping.license && <span>{mapping.license}</span>}
+                    {mapping.license && (
+                      <LicenseLink
+                        license={mapping.license}
+                        source={mapping.source}
+                        fallbackUrl={mapping.url}
+                        className="inline-license-link"
+                        fallbackElement="span"
+                      />
+                    )}
                     {mapping.url && (
                       <a href={mapping.url} target="_blank" rel="noreferrer">
                         source
@@ -2276,7 +2304,23 @@ export function MediaExplorer({
                   <div className="track-list">
                     {filteredMusic.map((track) => (
                       <article className="track-row" key={track.path}>
-                        <AudioPlayer src={track.src} title={track.title} detail={`${track.source} · ${track.license}`} compact />
+                        <AudioPlayer
+                          src={track.src}
+                          title={track.title}
+                          detail={
+                            <>
+                              {track.source} ·{" "}
+                              <LicenseLink
+                                license={track.license}
+                                source={track.source}
+                                fallbackUrl={track.url}
+                                className="inline-license-link"
+                                fallbackElement="span"
+                              />
+                            </>
+                          }
+                          compact
+                        />
                         <p>{track.description}</p>
                       </article>
                     ))}
@@ -2295,7 +2339,23 @@ export function MediaExplorer({
               <div className="track-list">
                 {filteredMusic.map((track) => (
                   <article className="track-row" key={track.path}>
-                    <AudioPlayer src={track.src} title={track.title} detail={`${track.source} · ${track.license}`} compact />
+                    <AudioPlayer
+                      src={track.src}
+                      title={track.title}
+                      detail={
+                        <>
+                          {track.source} ·{" "}
+                          <LicenseLink
+                            license={track.license}
+                            source={track.source}
+                            fallbackUrl={track.url}
+                            className="inline-license-link"
+                            fallbackElement="span"
+                          />
+                        </>
+                      }
+                      compact
+                    />
                     <p>{track.description}</p>
                     <div className="inline-tags">
                       {track.tags.slice(0, 5).map((tag) => (
