@@ -32,6 +32,9 @@ export type MusicTrack = {
   license: string;
   tags: string[];
   searchText: string;
+  packId?: string;
+  packTitle?: string;
+  notes?: string;
   url?: string;
 };
 

@@ -1,5 +1,5 @@
 import { existsSync } from "node:fs";
-import { mkdir, readdir, writeFile } from "node:fs/promises";
+import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
 import { dirname, join, relative } from "node:path";
 import { inferArtKind, isAnimatedArtPath, selectRepresentativeArtSamples } from "../src/lib/media-inference";
 
@@ -31,10 +31,36 @@ type SoundSample = {
   label: string;
   kind: "movement" | "combat" | "ui" | "ambient" | "effect";
 };
+
+type MusicTrackAsset = {
+  path: string;
+  src: string;
+  title: string;
+  packId: string;
+  packTitle: string;
+  source: string;
+  license: string;
+  notes: string;
+};
+
 type ArtPackDir = {
   packFolder: string;
   dir: string;
 };
+
+const AUDIO_EXT_PATTERN = /\.(mp3|wav|ogg|m4a|flac|opus)$/i;
+const KEVIN_MACLEOD_TRACKS = new Set([
+  "Ancient Winds.mp3",
+  "Bittersweet.mp3",
+  "Black Vortex.mp3",
+  "Clash Defiant.mp3",
+  "Comfortable Mystery 2.mp3",
+  "Corruption.mp3",
+  "Magic Forest.mp3",
+  "Midnight Tale.mp3",
+  "Peppers Theme.mp3",
+  "Stay the Course.mp3",
+]);
 
 async function walk(dir: string, predicate: (path: string, name: string) => boolean): Promise<string[]> {
   const out: string[] = [];
@@ -99,6 +125,122 @@ function labelFromAssetPath(path: string): string {
   );
 }
 
+function musicPackId(path: string): string {
+  const parts = path.split("/");
+  if (parts.length >= 4 && !AUDIO_EXT_PATTERN.test(parts[2])) return `${parts[0]}/${parts[1]}/${parts[2]}`;
+  return "sounds/music";
+}
+
+function musicPackTitle(packId: string): string {
+  if (packId === "sounds/music") return "Loose Music";
+  return humanize(packId.split("/").pop() ?? packId);
+}
+
+function musicBaseTitle(path: string): string {
+  const raw = path
+    .split("/")
+    .pop()!
+    .replace(/\.[^.]+$/i, "")
+    .replace(/^\d+[\s._-]+/, "")
+    .replace(/\s*\((?:loop|full|preview)\)\s*$/i, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  return humanize(raw);
+}
+
+function isMusicLoop(path: string): boolean {
+  return /\/loops?\//i.test(path) || /\bloop\b/i.test(path.split("/").pop() ?? "");
+}
+
+function musicTitle(path: string): string {
+  const title = musicBaseTitle(path);
+  return isMusicLoop(path) && !/\bloop\b/i.test(title) ? `${title} Loop` : title;
+}
+
+function musicDedupeKey(path: string): string {
+  const title = musicBaseTitle(path)
+    .replace(/\bloop\b/gi, "")
+    .replace(/\s+/g, " ")
+    .trim()
+    .toLowerCase();
+  return `${musicPackId(path)}:${isMusicLoop(path) ? "loop" : "track"}:${title}`;
+}
+
+function scoreMusicFile(path: string): number {
+  const lower = path.toLowerCase();
+  let score = 0;
+  if (lower.endsWith(".mp3")) score += 100;
+  else if (lower.endsWith(".ogg")) score += 90;
+  else if (lower.endsWith(".m4a") || lower.endsWith(".opus")) score += 80;
+  else if (lower.endsWith(".wav")) score += 70;
+  else if (lower.endsWith(".flac")) score += 60;
+  if (/\/tracks?\//.test(lower)) score += 20;
+  if (/\/loops?\//.test(lower)) score += 20;
+  if (/\/extracted-partial\//.test(lower)) score -= 50;
+  if (/(preview|demo)/.test(lower)) score -= 10;
+  return score;
+}
+
+function inferMusicSource(path: string, alkaKrabPackIds: Set<string>): Pick<MusicTrackAsset, "source" | "license" | "notes"> {
+  const basename = path.split("/").pop() ?? path;
+  if (KEVIN_MACLEOD_TRACKS.has(basename)) {
+    return {
+      source: "Kevin MacLeod",
+      license: "CC-BY 4.0",
+      notes: "Known incompetech track. Attribution required when used.",
+    };
+  }
+  if (alkaKrabPackIds.has(musicPackId(path))) {
+    return {
+      source: "AlkaKrab",
+      license: "Royalty-free custom terms",
+      notes: "Bundled AlkaKrab / Alanas Buividas license PDF. Verify terms before shipping.",
+    };
+  }
+  if (/^freesound_community-/i.test(basename) || /-\d{4,7}\.(mp3|wav|ogg|m4a|flac|opus)$/i.test(basename)) {
+    return {
+      source: "Pixabay",
+      license: "Pixabay License",
+      notes: "Filename pattern matches Pixabay-hosted music. Confirm source page before shipping.",
+    };
+  }
+  if (/^\d+__[^/]+__/i.test(basename)) {
+    return {
+      source: "Freesound",
+      license: "Varies per sound",
+      notes: "Freesound license varies by upload. Confirm source page before shipping.",
+    };
+  }
+  return {
+    source: "Local music library",
+    license: "Check source metadata",
+    notes: "Generated from the local music folder. Confirm bundled or source license before shipping.",
+  };
+}
+
+async function discoverAlkaKrabMusicPacks(musicRoot: string): Promise<Set<string>> {
+  const files = await walk(
+    musicRoot,
+    (path, name) => !isJunkPath(path) && /\.(pdf|txt|md)$/i.test(name) && /(?:alkakrab|license)/i.test(name),
+  );
+  const packIds = new Set<string>();
+  for (const abs of files) {
+    const rel = relative(ASSETS_ROOT, abs).split("/").join("/");
+    const basename = rel.split("/").pop() ?? "";
+    let isAlkaKrab = /alkakrab/i.test(basename);
+    if (!isAlkaKrab && /\.pdf$/i.test(basename)) {
+      try {
+        const bytes = await readFile(abs);
+        isAlkaKrab = /alkakrab|alkakrab04|alanas buividas/i.test(bytes.subarray(0, 16384).toString("latin1"));
+      } catch {
+        isAlkaKrab = false;
+      }
+    }
+    if (isAlkaKrab) packIds.add(musicPackId(rel));
+  }
+  return packIds;
+}
+
 function inferSoundKind(path: string): SoundSample["kind"] {
   const lower = path.toLowerCase();
   if (/(footstep|step|walk|run|jump|movement|grass|gravel)/.test(lower)) return "movement";
@@ -122,6 +264,7 @@ async function main() {
   const soundRoot = join(ASSETS_ROOT, "sounds");
   const artSamples: ArtSample[] = [];
   const soundSamples: SoundSample[] = [];
+  const musicTracks: MusicTrackAsset[] = [];
 
   if (existsSync(artRoot) || existsSync(join(ASSETS_ROOT, "kenney", "2D"))) {
     const packDirs = await discoverArtPackDirs(ASSETS_ROOT);
@@ -149,12 +292,22 @@ async function main() {
   if (existsSync(soundRoot)) {
     const sounds = await walk(
       soundRoot,
-      (path, name) => !isJunkPath(path) && /\.(mp3|wav|ogg|m4a|flac|opus)$/i.test(name),
+      (path, name) => !isJunkPath(path) && AUDIO_EXT_PATTERN.test(name),
     );
     const byCollection = new Map<string, string[]>();
+    const musicCandidates = new Map<string, string>();
+    const alkaKrabPackIds = await discoverAlkaKrabMusicPacks(join(soundRoot, "music"));
+
     for (const abs of sounds) {
       const rel = relative(ASSETS_ROOT, abs).split("/").join("/");
-      if (rel.startsWith("sounds/music/")) continue;
+      if (rel.startsWith("sounds/music/")) {
+        const key = musicDedupeKey(rel);
+        const current = musicCandidates.get(key);
+        if (!current || scoreMusicFile(rel) > scoreMusicFile(current) || (scoreMusicFile(rel) === scoreMusicFile(current) && rel.localeCompare(current) < 0)) {
+          musicCandidates.set(key, rel);
+        }
+        continue;
+      }
       const parts = rel.split("/");
       const collectionId = parts.length >= 4 ? `${parts[0]}/${parts[1]}/${parts[2]}/**` : `${parts.slice(0, -1).join("/")}/**`;
       const list = byCollection.get(collectionId) ?? [];
@@ -176,6 +329,19 @@ async function main() {
         });
       }
     }
+
+    for (const rel of [...musicCandidates.values()].sort((a, b) => a.localeCompare(b))) {
+      const packId = musicPackId(rel);
+      const inferred = inferMusicSource(rel, alkaKrabPackIds);
+      musicTracks.push({
+        path: rel,
+        src: `/${rel.split("/").map(encodeURIComponent).join("/")}`,
+        title: musicTitle(rel),
+        packId,
+        packTitle: musicPackTitle(packId),
+        ...inferred,
+      });
+    }
   }
 
   if (!existsSync(artRoot) && !existsSync(soundRoot) && existsSync(OUT)) {
@@ -184,8 +350,8 @@ async function main() {
   }
 
   await mkdir(dirname(OUT), { recursive: true });
-  await writeFile(OUT, `${JSON.stringify({ artSamples, soundSamples }, null, 2)}\n`);
-  console.log(`[media-assets] ${artSamples.length} art samples · ${soundSamples.length} sound samples`);
+  await writeFile(OUT, `${JSON.stringify({ artSamples, soundSamples, musicTracks }, null, 2)}\n`);
+  console.log(`[media-assets] ${artSamples.length} art samples · ${soundSamples.length} sound samples · ${musicTracks.length} music tracks`);
 }
 
 main().catch((err) => {

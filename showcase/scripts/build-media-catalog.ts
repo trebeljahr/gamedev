@@ -51,9 +51,21 @@ type SoundSample = {
   kind: "movement" | "combat" | "ui" | "ambient" | "effect";
 };
 
+type MusicTrackAsset = {
+  path: string;
+  src: string;
+  title: string;
+  packId: string;
+  packTitle: string;
+  source: string;
+  license: string;
+  notes: string;
+};
+
 type MediaAssets = {
   artSamples: ArtSample[];
   soundSamples: SoundSample[];
+  musicTracks?: MusicTrackAsset[];
 };
 
 type Metadata = {
@@ -192,6 +204,7 @@ function normalizeSource(source: string): string {
   if (source === "freesound") return "Freesound";
   if (source === "pixabay") return "Pixabay";
   if (source === "kevin-macleod") return "Kevin MacLeod";
+  if (/^alkakrab$/i.test(source)) return "AlkaKrab";
   return labelFromPath(source);
 }
 
@@ -288,22 +301,78 @@ async function main() {
   ];
   const allowedMappings = [...metadata.mappings, ...generatedMappings].filter((entry) => !isNonCommercialMapping(entry));
 
-  const musicTracks = allowedMappings
-    .filter((entry) => entry.path_pattern.startsWith("sounds/music/"))
-    .map((entry) => {
-      const track = {
-        title: entry.track_title ?? labelFromPath(entry.path_pattern),
-        source: "Kevin MacLeod",
-        path: entry.path_pattern,
-        src: `/${entry.path_pattern.split("/").map(encodeURIComponent).join("/")}`,
-        license: "CC-BY 4.0",
-        url: entry.url,
-      };
-      return {
-        ...track,
-        ...buildMusicTrackMetadata(track),
-      };
+  const musicMappings = allowedMappings.filter((entry) => entry.path_pattern.startsWith("sounds/music/"));
+  const musicMappingByPath = new Map(musicMappings.map((entry) => [entry.path_pattern, entry]));
+  const musicTracksByPath = new Map<string, ReturnType<typeof buildMusicTrackMetadata> & {
+    title: string;
+    source: string;
+    path: string;
+    src: string;
+    license: string;
+    packId?: string;
+    packTitle?: string;
+    notes?: string;
+    url?: string;
+  }>();
+
+  for (const entry of musicMappings) {
+    const track = {
+      title: entry.track_title ?? labelFromPath(entry.path_pattern),
+      source: normalizeSource(entry.source),
+      path: entry.path_pattern,
+      src: `/${entry.path_pattern.split("/").map(encodeURIComponent).join("/")}`,
+      license: entry.license ?? (entry.source === "kevin-macleod" ? "CC-BY 4.0" : "Check source metadata"),
+      notes: entry.notes,
+      url: entry.url,
+    };
+    musicTracksByPath.set(track.path, {
+      ...track,
+      ...buildMusicTrackMetadata(track),
     });
+  }
+
+  for (const asset of mediaAssets.musicTracks ?? []) {
+    const mapping = musicMappingByPath.get(asset.path);
+    const track = {
+      title: mapping?.track_title ?? asset.title,
+      source: mapping ? normalizeSource(mapping.source) : asset.source,
+      path: asset.path,
+      src: asset.src,
+      license: mapping?.license ?? asset.license,
+      packId: asset.packId,
+      packTitle: asset.packTitle,
+      notes: mapping?.notes ?? asset.notes,
+      url: mapping?.url,
+    };
+    musicTracksByPath.set(track.path, {
+      ...track,
+      ...buildMusicTrackMetadata(track),
+    });
+  }
+
+  const musicTracks = [...musicTracksByPath.values()].sort((a, b) => {
+    const sourceCompare = a.source.localeCompare(b.source);
+    if (sourceCompare !== 0) return sourceCompare;
+    const packCompare = (a.packTitle ?? "").localeCompare(b.packTitle ?? "");
+    if (packCompare !== 0) return packCompare;
+    return a.title.localeCompare(b.title);
+  });
+
+  const generatedMusicMappings = (mediaAssets.musicTracks ?? [])
+    .filter((track) => !musicMappingByPath.has(track.path))
+    .map((track) => {
+      const entry: MetadataMapping = {
+        path_pattern: track.path,
+        source: track.source,
+        license: track.license,
+        notes: `${track.notes} Pack: ${track.packTitle}.`,
+      };
+      return entry;
+    });
+
+  for (const entry of generatedMusicMappings) {
+    allowedMappings.push(entry);
+  }
 
   const mappedSoundCollections = allowedMappings
     .filter((entry) => entry.path_pattern.startsWith("sounds/") && !entry.path_pattern.startsWith("sounds/music/"))
