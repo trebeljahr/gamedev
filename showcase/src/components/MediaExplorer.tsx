@@ -27,6 +27,12 @@ type SoundTypeFilter = "all" | "sfx" | "music";
 type SpriteLayoutMode = "static" | "grid" | "variable" | "atlas";
 type SpriteGrid = { cols: number; rows: number; confidence: number; mode: SpriteLayoutMode; frames?: SpriteRect[] };
 type SpriteRect = { x: number; y: number; w: number; h: number };
+type LoadedSpriteImage = {
+  src: string;
+  image: HTMLImageElement;
+  imageData: ImageData | null;
+  bgSample: ReturnType<typeof sampleImageBackground> | null;
+};
 
 function isUsableSpriteGrid(grid: SpriteGrid): boolean {
   if (grid.mode === "atlas" || grid.mode === "static") return false;
@@ -543,6 +549,8 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
   const [scale, setScale] = useState(3);
   const [flip, setFlip] = useState(false);
   const [background, setBackground] = useState("#15171c");
+  const [loadedImage, setLoadedImage] = useState<LoadedSpriteImage | null>(null);
+  const [loadFailed, setLoadFailed] = useState(false);
 
   useEffect(() => {
     setPlaying(Boolean(sample?.animated && isLikelySpriteSheetPath(sample.path)));
@@ -553,7 +561,81 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
     setAutoDetect(true);
     setDetectedGrid(null);
     setLayoutFrames(null);
+    setLoadedImage(null);
+    setLoadFailed(false);
   }, [sample?.animated, sample?.path, sample?.src]);
+
+  useEffect(() => {
+    let cancelled = false;
+    const image = new Image();
+    image.crossOrigin = "anonymous";
+    image.onload = () => {
+      if (cancelled) return;
+      let imageData: ImageData | null = null;
+      let bgSample: ReturnType<typeof sampleImageBackground> | null = null;
+      try {
+        const scratch = document.createElement("canvas");
+        scratch.width = image.naturalWidth || image.width;
+        scratch.height = image.naturalHeight || image.height;
+        const scratchCtx = scratch.getContext("2d", { willReadFrequently: true });
+        if (scratchCtx) {
+          scratchCtx.drawImage(image, 0, 0);
+          imageData = scratchCtx.getImageData(0, 0, scratch.width, scratch.height);
+          bgSample = sampleImageBackground(imageData);
+        }
+      } catch {
+        imageData = null;
+        bgSample = null;
+      }
+      setLoadFailed(false);
+      setLoadedImage({ src: sample?.src ?? "", image, imageData, bgSample });
+    };
+    image.onerror = () => {
+      if (cancelled) return;
+      setLoadedImage(null);
+      setLoadFailed(true);
+    };
+    if (sample?.src) image.src = sample.src;
+    else setLoadFailed(true);
+
+    return () => {
+      cancelled = true;
+    };
+  }, [sample?.src]);
+
+  const resolvedGrid = useMemo(() => {
+    if (!sample || !loadedImage?.imageData) return null;
+    const imageData = loadedImage.imageData;
+    const detectedFromPixels = detectGridFromImageData(imageData);
+    const canAnimateSample = sample.animated && isLikelySpriteSheetPath(sample.path) && !isLikelyTextureAtlasPath(sample.path);
+    const hintedLayout = canAnimateSample
+      ? parseSpriteSizeHint(sample.path, imageData.width, imageData.height) ?? parseGridHint(sample.path, imageData.width, imageData.height)
+      : null;
+    if (isLikelyTextureAtlasPath(sample.path)) return { cols: 1, rows: 1, confidence: 0.9, mode: "atlas" as const };
+    if (hintedLayout) return hintedLayout;
+    if (!canAnimateSample || isUsableSpriteGrid(detectedFromPixels)) return detectedFromPixels;
+    const wide = Math.round(imageData.width / imageData.height);
+    if (wide >= 2 && wide <= 32) return { cols: wide, rows: 1, confidence: 0.55, mode: "grid" as const };
+    const tall = Math.round(imageData.height / imageData.width);
+    if (tall >= 2 && tall <= 32) return { cols: 1, rows: tall, confidence: 0.55, mode: "grid" as const };
+    return detectedFromPixels;
+  }, [loadedImage, sample]);
+
+  const canAnimateSample = Boolean(sample?.animated && isLikelySpriteSheetPath(sample.path) && !isLikelyTextureAtlasPath(sample.path));
+
+  useEffect(() => {
+    setDetectedGrid(resolvedGrid);
+    if (autoDetect && canAnimateSample && resolvedGrid && isUsableSpriteGrid(resolvedGrid)) {
+      setColumns(resolvedGrid.cols);
+      setRows(resolvedGrid.rows);
+      setLayoutFrames(resolvedGrid.frames ?? null);
+    } else if (autoDetect) {
+      setColumns(1);
+      setRows(1);
+      setLayoutFrames(null);
+      setPlaying(false);
+    }
+  }, [autoDetect, canAnimateSample, resolvedGrid]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -565,61 +647,10 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
 
     let raf = 0;
     let lastFrame = 0;
-    let imageReady = false;
-    let failed = false;
-    let imageData: ImageData | null = null;
-    let bgSample: ReturnType<typeof sampleImageBackground> | null = null;
     const trimCache = new Map<number, SpriteRect>();
-    const image = new Image();
-    image.crossOrigin = "anonymous";
-    image.onload = () => {
-      imageReady = true;
-      try {
-        const scratch = document.createElement("canvas");
-        scratch.width = image.naturalWidth || image.width;
-        scratch.height = image.naturalHeight || image.height;
-        const scratchCtx = scratch.getContext("2d", { willReadFrequently: true });
-        if (!scratchCtx) return;
-        scratchCtx.drawImage(image, 0, 0);
-        imageData = scratchCtx.getImageData(0, 0, scratch.width, scratch.height);
-        bgSample = sampleImageBackground(imageData);
-        const detectedFromPixels = detectGridFromImageData(imageData);
-        const canAnimateSample = sample ? sample.animated && isLikelySpriteSheetPath(sample.path) && !isLikelyTextureAtlasPath(sample.path) : false;
-        const hintedLayout =
-          sample && canAnimateSample
-            ? parseSpriteSizeHint(sample.path, imageData.width, imageData.height) ?? parseGridHint(sample.path, imageData.width, imageData.height)
-            : null;
-        const stripFallback = (() => {
-          if (sample && isLikelyTextureAtlasPath(sample.path)) return { cols: 1, rows: 1, confidence: 0.9, mode: "atlas" as const };
-          if (hintedLayout) return hintedLayout;
-          const detected = detectedFromPixels;
-          if (!canAnimateSample || isUsableSpriteGrid(detected)) return detected;
-          const wide = Math.round(imageData.width / imageData.height);
-          if (wide >= 2 && wide <= 32) return { cols: wide, rows: 1, confidence: 0.55, mode: "grid" as const };
-          const tall = Math.round(imageData.height / imageData.width);
-          if (tall >= 2 && tall <= 32) return { cols: 1, rows: tall, confidence: 0.55, mode: "grid" as const };
-          return detected;
-        })();
-        setDetectedGrid(stripFallback);
-        if (autoDetect && canAnimateSample && isUsableSpriteGrid(stripFallback)) {
-          setColumns(stripFallback.cols);
-          setRows(stripFallback.rows);
-          setLayoutFrames(stripFallback.frames ?? null);
-        } else if (autoDetect) {
-          setColumns(1);
-          setRows(1);
-          setLayoutFrames(null);
-          setPlaying(false);
-        }
-      } catch {
-        setDetectedGrid(null);
-      }
-    };
-    image.onerror = () => {
-      failed = true;
-    };
-    if (sample?.src) image.src = sample.src;
-    else failed = true;
+    const image = loadedImage?.image ?? null;
+    const imageData = loadedImage?.imageData ?? null;
+    const bgSample = loadedImage?.bgSample ?? null;
 
     function drawPlaceholder() {
       context.fillStyle = "rgba(255,255,255,0.07)";
@@ -645,7 +676,7 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
       }
       const currentFrame = Math.min(frameRef.current, totalFrames - 1);
 
-      if (imageReady && !failed) {
+      if (image && !loadFailed) {
         context.imageSmoothingEnabled = false;
         const frameWidth = isSpriteSheet ? Math.max(1, Math.floor(image.width / columns)) : image.width;
         const frameHeight = isSpriteSheet ? Math.max(1, Math.floor(image.height / rows)) : image.height;
@@ -697,7 +728,7 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
 
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [autoDetect, background, columns, flip, layoutFrames, pack.title, playing, rows, sample?.animated, sample?.label, sample?.path, sample?.src, scale, speed]);
+  }, [autoDetect, background, columns, flip, layoutFrames, loadFailed, loadedImage, pack.title, playing, rows, sample?.animated, sample?.label, scale, speed]);
 
   const detectionLabel = detectedGrid
     ? detectedGrid.frames
