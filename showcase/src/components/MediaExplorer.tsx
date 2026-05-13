@@ -59,7 +59,7 @@ function initials(value: string): string {
     .join("");
 }
 
-function sampleForUi(pack: ArtPack): ArtSample | undefined {
+function sampleForPreview(pack: ArtPack): ArtSample | undefined {
   return (
     pack.samples.find((sample) => sample.kind === "icon" || sample.kind === "ui") ??
     pack.samples.find((sample) => sample.kind === "character" || sample.kind === "sprite") ??
@@ -125,6 +125,10 @@ const ART_TAXONOMY_ORDER = [
   "Spritesheets / Other / Animated",
   "Spritesheets / Other / Static",
 ];
+
+function isSpriteSheetCandidate(sample: ArtSample): boolean {
+  return sample.animated || isLikelySpriteSheetPath(sample.path) || /(?:sprite|spritesheet|sheet|animation|anim)/i.test(sample.label);
+}
 
 function sampleImageBackground(imageData: ImageData) {
   const { width, height, data } = imageData;
@@ -409,8 +413,125 @@ function computeTrimRect(imageData: ImageData, source: SpriteRect, bg: ReturnTyp
   return { x: minX, y: minY, w: maxX - minX + 1, h: maxY - minY + 1 };
 }
 
+function drawCheckerboard(context: CanvasRenderingContext2D, width: number, height: number, background = "#15171c") {
+  context.fillStyle = background;
+  context.fillRect(0, 0, width, height);
+  context.fillStyle = "rgba(255,255,255,0.055)";
+  const size = 18;
+  for (let y = 0; y < height; y += size) {
+    for (let x = 0; x < width; x += size) {
+      if ((x / size + y / size) % 2 === 0) context.fillRect(x, y, size, size);
+    }
+  }
+}
+
+function drawImageContained(context: CanvasRenderingContext2D, image: HTMLImageElement, width: number, height: number) {
+  const ratio = Math.min(width / image.width, height / image.height);
+  const w = image.width * ratio;
+  const h = image.height * ratio;
+  context.drawImage(image, (width - w) / 2, (height - h) / 2, w, h);
+}
+
+function framesForGrid(imageData: ImageData, grid: SpriteGrid): SpriteRect[] {
+  if (grid.frames) return grid.frames;
+  if (!isUsableSpriteGrid(grid)) return [];
+  const frameWidth = Math.max(1, Math.floor(imageData.width / grid.cols));
+  const frameHeight = Math.max(1, Math.floor(imageData.height / grid.rows));
+  return Array.from({ length: grid.cols * grid.rows }, (_, index) => ({
+    x: (index % grid.cols) * frameWidth,
+    y: Math.floor(index / grid.cols) * frameHeight,
+    w: frameWidth,
+    h: frameHeight,
+  }));
+}
+
+function drawSquareFrameGrid(context: CanvasRenderingContext2D, image: HTMLImageElement, frames: SpriteRect[], size: number) {
+  const frameCount = frames.length;
+  const maxWidth = Math.max(...frames.map((rect) => rect.w));
+  const maxHeight = Math.max(...frames.map((rect) => rect.h));
+  let best = { cols: frameCount, rows: 1, score: Infinity };
+  for (let cols = 1; cols <= frameCount; cols++) {
+    const rows = Math.ceil(frameCount / cols);
+    const empty = cols * rows - frameCount;
+    const ratio = (cols * maxWidth) / (rows * maxHeight);
+    const score = Math.abs(Math.log(ratio)) + empty * 0.08;
+    if (score < best.score) best = { cols, rows, score };
+  }
+
+  const cellWidth = size / best.cols;
+  const cellHeight = size / best.rows;
+  for (let index = 0; index < frames.length; index++) {
+    const rect = frames[index];
+    const scale = Math.min(cellWidth / rect.w, cellHeight / rect.h);
+    const w = rect.w * scale;
+    const h = rect.h * scale;
+    const col = index % best.cols;
+    const row = Math.floor(index / best.cols);
+    context.drawImage(image, rect.x, rect.y, rect.w, rect.h, col * cellWidth + (cellWidth - w) / 2, row * cellHeight + (cellHeight - h) / 2, w, h);
+  }
+}
+
+function SquareArtPreview({ sample, label }: { sample: ArtSample; label: string }) {
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const context = canvas?.getContext("2d", { willReadFrequently: true });
+    if (!canvas || !context) return;
+
+    let cancelled = false;
+    const image = new Image();
+    image.crossOrigin = "anonymous";
+    image.onload = () => {
+      if (cancelled) return;
+      const size = canvas.width;
+      context.clearRect(0, 0, size, size);
+      context.imageSmoothingEnabled = false;
+
+      try {
+        const scratch = document.createElement("canvas");
+        scratch.width = image.naturalWidth || image.width;
+        scratch.height = image.naturalHeight || image.height;
+        const scratchContext = scratch.getContext("2d", { willReadFrequently: true });
+        if (!scratchContext) {
+          drawImageContained(context, image, size, size);
+          return;
+        }
+        scratchContext.drawImage(image, 0, 0);
+        const imageData = scratchContext.getImageData(0, 0, scratch.width, scratch.height);
+        const grid = detectGridFromImageData(imageData);
+        const frames = framesForGrid(imageData, grid);
+        if (frames.length >= 6 && Math.max(imageData.width / imageData.height, imageData.height / imageData.width) >= 4) {
+          drawSquareFrameGrid(context, image, frames, size);
+        } else {
+          drawImageContained(context, image, size, size);
+        }
+      } catch {
+        drawImageContained(context, image, size, size);
+      }
+    };
+    image.onerror = () => {
+      context.clearRect(0, 0, canvas.width, canvas.height);
+    };
+    image.src = sample.src;
+
+    return () => {
+      cancelled = true;
+    };
+  }, [sample.src]);
+
+  return <canvas ref={canvasRef} width={128} height={128} role="img" aria-label={label} />;
+}
+
+function ArtSamplePreview({ sample }: { sample: ArtSample }) {
+  if (isSpriteSheetCandidate(sample)) return <SquareArtPreview sample={sample} label={sample.label} />;
+  return <img src={sample.src} alt="" />;
+}
+
 function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const frameRef = useRef(0);
+  const [frame, setFrame] = useState(0);
   const [playing, setPlaying] = useState(true);
   const [speed, setSpeed] = useState(1);
   const [columns, setColumns] = useState(4);
@@ -424,6 +545,8 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
 
   useEffect(() => {
     setPlaying(Boolean(sample?.animated && isLikelySpriteSheetPath(sample.path)));
+    frameRef.current = 0;
+    setFrame(0);
     setColumns(1);
     setRows(1);
     setAutoDetect(true);
@@ -440,7 +563,6 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
     const context = ctx;
 
     let raf = 0;
-    let frame = 0;
     let lastFrame = 0;
     let imageReady = false;
     let failed = false;
@@ -498,17 +620,6 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
     if (sample?.src) image.src = sample.src;
     else failed = true;
 
-    function drawGrid() {
-      context.fillStyle = background;
-      context.fillRect(0, 0, drawingCanvas.width, drawingCanvas.height);
-      context.fillStyle = "rgba(255,255,255,0.035)";
-      const cell = 24;
-      for (let x = 0; x < drawingCanvas.width; x += cell) context.fillRect(x, 0, 1, drawingCanvas.height);
-      for (let y = 0; y < drawingCanvas.height; y += cell) context.fillRect(0, y, drawingCanvas.width, 1);
-      context.fillStyle = "rgba(255,216,77,0.12)";
-      context.fillRect(0, drawingCanvas.height - 72, drawingCanvas.width, 2);
-    }
-
     function drawPlaceholder() {
       context.fillStyle = "rgba(255,255,255,0.07)";
       context.fillRect(drawingCanvas.width / 2 - 48, drawingCanvas.height / 2 - 48, 96, 96);
@@ -522,14 +633,16 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
     }
 
     function tick(time: number) {
-      drawGrid();
+      drawCheckerboard(context, drawingCanvas.width, drawingCanvas.height, background);
       const frames = autoDetect ? layoutFrames : null;
       const totalFrames = Math.max(1, frames?.length ?? columns * rows);
       const isSpriteSheet = sample?.animated && totalFrames > 1;
       if (playing && time - lastFrame >= 1000 / (10 * speed)) {
-        frame = (frame + 1) % totalFrames;
+        frameRef.current = (frameRef.current + 1) % totalFrames;
+        setFrame(frameRef.current);
         lastFrame = time;
       }
+      const currentFrame = Math.min(frameRef.current, totalFrames - 1);
 
       if (imageReady && !failed) {
         context.imageSmoothingEnabled = false;
@@ -537,19 +650,19 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
         const frameHeight = isSpriteSheet ? Math.max(1, Math.floor(image.height / rows)) : image.height;
         const source: SpriteRect =
           isSpriteSheet && frames
-            ? frames[frame % frames.length]
+            ? frames[currentFrame % frames.length]
             : {
-                x: isSpriteSheet ? (frame % columns) * frameWidth : 0,
-                y: isSpriteSheet ? Math.floor(frame / columns) * frameHeight : 0,
+                x: isSpriteSheet ? (currentFrame % columns) * frameWidth : 0,
+                y: isSpriteSheet ? Math.floor(currentFrame / columns) * frameHeight : 0,
                 w: frameWidth,
                 h: frameHeight,
               };
         const drawSource =
           imageData && bgSample
-            ? trimCache.get(frame) ??
+            ? trimCache.get(currentFrame) ??
               (() => {
                 const rect = computeTrimRect(imageData, source, bgSample);
-                trimCache.set(frame, rect);
+                trimCache.set(currentFrame, rect);
                 return rect;
               })()
             : source;
@@ -576,7 +689,7 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
       context.fillStyle = "rgba(255,255,255,0.62)";
       context.font = "12px system-ui";
       context.textAlign = "left";
-      const status = totalFrames > 1 ? `frame ${frame + 1}/${totalFrames}` : "static";
+      const status = totalFrames > 1 ? `frame ${currentFrame + 1}/${totalFrames}` : "static";
       context.fillText(`${sample?.label ?? "No sample"} · ${status}`, 16, drawingCanvas.height - 18);
       raf = requestAnimationFrame(tick);
     }
@@ -600,6 +713,23 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
         <button type="button" onClick={() => setPlaying((value) => !value)}>
           {playing ? "Pause" : "Play"}
         </button>
+        <label className="frame-control">
+          Frame
+          <input
+            aria-label="Animation frame"
+            type="range"
+            min="0"
+            max={Math.max(1, (autoDetect ? layoutFrames?.length : undefined) ?? columns * rows) - 1}
+            value={Math.min(frame, Math.max(1, (autoDetect ? layoutFrames?.length : undefined) ?? columns * rows) - 1)}
+            onChange={(event) => {
+              const nextFrame = Number(event.target.value);
+              frameRef.current = nextFrame;
+              setFrame(nextFrame);
+              setPlaying(false);
+            }}
+          />
+          <span>{Math.min(frame, Math.max(1, (autoDetect ? layoutFrames?.length : undefined) ?? columns * rows) - 1) + 1}/{Math.max(1, (autoDetect ? layoutFrames?.length : undefined) ?? columns * rows)}</span>
+        </label>
         <label>
           Speed
           <input
@@ -669,36 +799,9 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
   );
 }
 
-function IconUiPreview({ sample, title }: { sample?: ArtSample; title: string }) {
-  const icon = sample?.src;
-  return (
-    <div className="icon-ui-preview" aria-label="Sample interface preview">
-      <div className="ui-topbar">
-        <div className="ui-avatar">{icon ? <img src={icon} alt="" /> : initials(title)}</div>
-        <div>
-          <strong>{title}</strong>
-          <span>Inventory test</span>
-        </div>
-      </div>
-      <div className="ui-inventory">
-        {Array.from({ length: 8 }).map((_, index) => (
-          <div className="ui-slot" key={index}>
-            {icon && index % 3 !== 2 ? <img src={icon} alt="" /> : <span />}
-          </div>
-        ))}
-      </div>
-      <div className="ui-hud">
-        <button type="button">{icon ? <img src={icon} alt="" /> : null} Equip</button>
-        <button type="button">Use</button>
-      </div>
-    </div>
-  );
-}
-
 function ArtWorkbench({ pack }: { pack: ArtPack }) {
   const [sampleIndex, setSampleIndex] = useState(0);
   const selectedSample = pack.samples[sampleIndex];
-  const uiSample = sampleForUi(pack);
 
   useEffect(() => {
     setSampleIndex(0);
@@ -732,9 +835,8 @@ function ArtWorkbench({ pack }: { pack: ArtPack }) {
             )}
           </select>
         </label>
-        <IconUiPreview sample={uiSample} title={pack.title} />
         <div className="sample-strip">
-          {pack.samples.slice(0, 6).map((sample, index) => (
+          {pack.samples.slice(0, 8).map((sample, index) => (
             <button
               key={sample.path}
               type="button"
@@ -742,7 +844,8 @@ function ArtWorkbench({ pack }: { pack: ArtPack }) {
               onClick={() => setSampleIndex(index)}
               title={sample.path}
             >
-              <img src={sample.src} alt="" />
+              <ArtSamplePreview sample={sample} />
+              <span>{sample.label}</span>
             </button>
           ))}
           {pack.samples.length === 0 && <div className="empty-preview">Manifest has metadata only.</div>}
@@ -761,12 +864,12 @@ function ArtPackCard({
   active: boolean;
   onSelect: () => void;
 }) {
-  const sample = sampleForUi(pack);
+  const sample = sampleForPreview(pack);
   return (
     <article className={`art-card ${active ? "active" : ""}`}>
       <button type="button" onClick={onSelect}>
         <div className="art-thumb">
-          {sample ? <img src={sample.src} alt="" /> : <span>{initials(pack.title)}</span>}
+          {sample ? <ArtSamplePreview sample={sample} /> : <span>{initials(pack.title)}</span>}
         </div>
         <div className="art-card-body">
           <strong>{pack.title}</strong>

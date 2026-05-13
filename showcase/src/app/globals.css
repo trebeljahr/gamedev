@@ -613,8 +613,7 @@ select:focus-visible {
   gap: 12px;
 }
 .sound-pad button,
-.runner-controls button,
-.icon-ui-preview button {
+.runner-controls button {
   min-height: 34px;
   border: 1px solid var(--border);
   border-radius: 6px;
@@ -625,10 +624,13 @@ select:focus-visible {
 }
 .sound-pad button:hover,
 .runner-controls button:hover,
-.icon-ui-preview button:hover,
 .sound-buttons button.active {
   border-color: var(--accent);
   color: var(--accent);
+}
+.runner-controls button:disabled {
+  cursor: default;
+  opacity: 0.5;
 }
 .audio-player {
   display: grid;
@@ -917,13 +919,22 @@ select:focus-visible {
   text-transform: none;
   letter-spacing: 0;
 }
-.runner-controls input[type="color"] {
-  width: 38px;
+.runner-controls > span {
+  color: var(--text);
+  font-size: 12px;
+}
+.runner-controls .frame-control {
+  flex: 1 1 220px;
+}
+.runner-controls input[type="number"] {
+  width: 70px;
   height: 34px;
-  padding: 2px;
+  padding: 0 8px;
   border: 1px solid var(--border);
   border-radius: 6px;
   background: var(--surface-2);
+  color: var(--text);
+  font: inherit;
 }
 .workbench-side {
   display: grid;
@@ -940,95 +951,46 @@ select:focus-visible {
   color: var(--text);
   font: inherit;
 }
-.icon-ui-preview {
-  display: grid;
-  gap: 12px;
-  padding: 12px;
-  background: #111318;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-}
-.ui-topbar {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.ui-topbar strong,
-.ui-topbar span {
-  display: block;
-}
-.ui-topbar span {
-  margin-top: 2px;
-  color: var(--muted);
-  font-size: 12px;
-}
-.ui-avatar,
-.ui-slot {
-  display: grid;
-  place-items: center;
-  background: var(--surface-2);
-  border: 1px solid var(--border);
-}
-.ui-avatar {
-  width: 42px;
-  height: 42px;
-  border-radius: 6px;
-  color: var(--accent);
-  font-weight: 700;
-}
-.ui-avatar img,
-.ui-slot img,
-.ui-hud img,
+.sample-strip canvas,
 .sample-strip img,
+.art-thumb canvas,
 .art-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
   image-rendering: pixelated;
 }
-.ui-inventory {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 6px;
-}
-.ui-slot {
-  aspect-ratio: 1;
-  border-radius: 6px;
-  padding: 7px;
-}
-.ui-slot span {
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  background: rgba(255,255,255,0.08);
-}
-.ui-hud {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
-}
-.ui-hud button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-}
-.ui-hud img {
-  width: 18px;
-  height: 18px;
-}
 .sample-strip {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px;
 }
 .sample-strip button {
-  aspect-ratio: 1;
+  display: grid;
+  gap: 6px;
   padding: 6px;
   background: var(--surface-2);
   border: 1px solid var(--border);
   border-radius: 6px;
+  color: inherit;
   cursor: pointer;
+  font: inherit;
+  text-align: left;
+}
+.sample-strip button > canvas,
+.sample-strip button > img {
+  aspect-ratio: 1;
+}
+.sample-strip button > span {
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.25;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .sample-strip button.active,
 .sample-strip button:hover {
