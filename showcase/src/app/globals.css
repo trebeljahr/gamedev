@@ -78,7 +78,7 @@ select:focus-visible {
 }
 .asset-type-nav {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 12px;
   padding: 0 24px 24px;
   border-bottom: 1px solid var(--border);
@@ -491,6 +491,44 @@ select:focus-visible {
   width: 100%;
   height: 34px;
   margin-top: 8px;
+}
+.inline-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+.inline-tags span {
+  padding: 2px 6px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 11px;
+}
+.sources-panel {
+  padding-top: 24px;
+}
+.source-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+}
+.source-card {
+  min-width: 0;
+  padding: 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+.source-card h4 {
+  margin: 3px 0 0;
+  font-size: 14px;
+}
+.source-card p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.45;
 }
 .sticky-panel {
   position: sticky;

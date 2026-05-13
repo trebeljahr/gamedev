@@ -1,17 +1,18 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import type { ArtPack, ArtSample, MusicTrack, SoundCollection, SoundSample } from "@/lib/media";
+import type { ArtPack, ArtSample, MusicTrack, SoundCollection, SoundSample, SourceMapping } from "@/lib/media";
 import { artCreators, artThemes } from "@/lib/media";
 
 type MediaExplorerProps = {
   soundCollections: SoundCollection[];
   musicTracks: MusicTrack[];
   artPacks: ArtPack[];
+  sourceMappings: SourceMapping[];
   initialView?: View;
 };
 
-type View = "sounds" | "art";
+type View = "sounds" | "art" | "sources";
 type GroupMode = "theme" | "creator";
 type SpriteGrid = { cols: number; rows: number; confidence: number };
 type SpriteRect = { x: number; y: number; w: number; h: number };
@@ -41,6 +42,12 @@ function sampleForUi(pack: ArtPack): ArtSample | undefined {
     pack.samples.find((sample) => sample.kind === "character" || sample.kind === "sprite") ??
     pack.samples[0]
   );
+}
+
+function searchMatches(searchText: string, query: string): boolean {
+  const terms = query.trim().toLowerCase().split(/\s+/).filter(Boolean);
+  if (terms.length === 0) return true;
+  return terms.every((term) => searchText.includes(term));
 }
 
 function sampleImageBackground(imageData: ImageData) {
@@ -646,6 +653,7 @@ export function MediaExplorer({
   soundCollections,
   musicTracks,
   artPacks,
+  sourceMappings,
   initialView = "sounds",
 }: MediaExplorerProps) {
   const [view, setView] = useState<View>(initialView);
@@ -664,6 +672,11 @@ export function MediaExplorer({
     [soundCollections],
   );
 
+  const sourceMediums = useMemo(
+    () => ["all", ...Array.from(new Set(sourceMappings.map((mapping) => mapping.medium))).sort()],
+    [sourceMappings],
+  );
+
   const artLicenses = useMemo(
     () => ["all", ...Array.from(new Set(artPacks.map((p) => licenseBucket(p.license_class))))],
     [artPacks],
@@ -673,20 +686,31 @@ export function MediaExplorer({
     const q = query.trim().toLowerCase();
     return soundCollections.filter((item) => {
       if (sourceFilter !== "all" && item.source !== sourceFilter) return false;
-      if (!q) return true;
-      return item.searchText.includes(q);
+      return searchMatches(item.searchText, q);
     });
   }, [query, soundCollections, sourceFilter]);
+
+  const filteredMusic = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    return musicTracks.filter((track) => searchMatches(track.searchText, q));
+  }, [musicTracks, query]);
 
   const filteredArt = useMemo(() => {
     const q = query.trim().toLowerCase();
     return artPacks.filter((pack) => {
       if (licenseFilter !== "all" && licenseBucket(pack.license_class) !== licenseFilter) return false;
       if (creatorFilter !== "all" && pack.author !== creatorFilter) return false;
-      if (!q) return true;
-      return pack.searchText.includes(q);
+      return searchMatches(pack.searchText, q);
     });
   }, [artPacks, creatorFilter, licenseFilter, query]);
+
+  const filteredSourceMappings = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    return sourceMappings.filter((mapping) => {
+      if (sourceFilter !== "all" && mapping.medium !== sourceFilter) return false;
+      return searchMatches(mapping.searchText, q);
+    });
+  }, [query, sourceFilter, sourceMappings]);
 
   const groupedArt = useMemo(() => {
     const labels =
@@ -721,7 +745,8 @@ export function MediaExplorer({
       <header className="app-header">
         <h1>Game Asset Media</h1>
         <div className="meta">
-          {soundCollections.length} sound groups · {artPacks.length} 2D packs
+          {soundCollections.length} sound groups · {musicTracks.length} music tracks · {artPacks.length} 2D packs ·{" "}
+          {sourceMappings.length} source mappings
         </div>
       </header>
 
@@ -749,21 +774,36 @@ export function MediaExplorer({
           >
             2D art
           </button>
+          <button
+            type="button"
+            role="tab"
+            aria-selected={view === "sources"}
+            className={view === "sources" ? "active" : ""}
+            onClick={() => setView("sources")}
+          >
+            Sources
+          </button>
         </div>
       </section>
 
       <section className="media-tools" aria-label="Catalog filters">
         <input
           type="search"
-          placeholder={view === "sounds" ? "Search sounds, folders, licenses" : "Search packs, creators, themes"}
+          placeholder={
+            view === "sounds"
+              ? "Search sounds, music, moods, folders, licenses"
+              : view === "art"
+                ? "Search packs, creators, themes, use cases"
+                : "Search sources, textures, folders, licenses"
+          }
           value={query}
           onChange={(event) => setQuery(event.target.value)}
         />
-        {view === "sounds" ? (
+        {view === "sounds" || view === "sources" ? (
           <select value={sourceFilter} onChange={(event) => setSourceFilter(event.target.value)}>
-            {soundSources.map((source) => (
+            {(view === "sounds" ? soundSources : sourceMediums).map((source) => (
               <option key={source} value={source}>
-                {source === "all" ? "All sources" : source}
+                {source === "all" ? (view === "sounds" ? "All sources" : "All media") : source}
               </option>
             ))}
           </select>
@@ -839,17 +879,23 @@ export function MediaExplorer({
             {selectedSound && <SoundPad collection={selectedSound} />}
             <h3>Music previews</h3>
             <div className="track-list">
-              {musicTracks.map((track) => (
+              {filteredMusic.map((track) => (
                 <article className="track-row" key={track.path}>
                   <div className="media-title">{track.title}</div>
                   <div className="media-detail">{track.source} · {track.license}</div>
+                  <p>{track.description}</p>
+                  <div className="inline-tags">
+                    {track.tags.slice(0, 5).map((tag) => (
+                      <span key={tag}>{tag}</span>
+                    ))}
+                  </div>
                   <audio controls preload="none" src={track.src} />
                 </article>
               ))}
             </div>
           </section>
         </div>
-      ) : (
+      ) : view === "art" ? (
         <div className="art-layout">
           {selectedArt && <ArtWorkbench pack={selectedArt} />}
           <section className="media-panel">
@@ -876,6 +922,38 @@ export function MediaExplorer({
             </div>
           </section>
         </div>
+      ) : (
+        <section className="media-panel sources-panel">
+          <div className="panel-heading">
+            <h3>Source and path mappings</h3>
+            <span>{filteredSourceMappings.length} groups</span>
+          </div>
+          <div className="source-grid">
+            {filteredSourceMappings.map((mapping) => (
+              <article className="source-card" key={mapping.id}>
+                <div>
+                  <div className="vendor-tag">{mapping.medium}</div>
+                  <h4>{mapping.title}</h4>
+                  <p>{mapping.description}</p>
+                </div>
+                <div className="media-detail">{mapping.pathPattern}</div>
+                <div className="inline-tags">
+                  {mapping.tags.slice(0, 6).map((tag) => (
+                    <span key={tag}>{tag}</span>
+                  ))}
+                </div>
+                <div className="media-actions">
+                  <span>{mapping.source}</span>
+                  {mapping.url && (
+                    <a href={mapping.url} target="_blank" rel="noreferrer">
+                      source
+                    </a>
+                  )}
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
       )}
     </div>
   );

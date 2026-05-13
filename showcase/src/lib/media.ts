@@ -1,27 +1,13 @@
-import metadata from "../../../metadata.json";
-import mediaAssets from "./media-assets.json";
+import mediaCatalog from "./media-catalog.json";
 import { assetUrl } from "./manifest";
-import {
-  buildArtPackMetadata,
-  buildMusicTrackMetadata,
-  buildSoundCollectionMetadata,
-} from "./catalog-metadata";
-
-type MetadataMapping = {
-  path_pattern: string;
-  source: string;
-  notes?: string;
-  author?: string;
-  pack_url?: string;
-  license?: string;
-  track_title?: string;
-  url?: string;
-};
 
 export type SoundCollection = {
   id: string;
   title: string;
   description: string;
+  category: string;
+  themes: string[];
+  useCases: string[];
   source: string;
   path: string;
   license: string;
@@ -35,6 +21,9 @@ export type SoundCollection = {
 export type MusicTrack = {
   title: string;
   description: string;
+  category: string;
+  themes: string[];
+  useCases: string[];
   source: string;
   path: string;
   src: string;
@@ -55,8 +44,12 @@ export type ArtPack = {
   attribution: string;
   theme: ArtTheme;
   description: string;
+  category: string;
+  themes: string[];
+  useCases: string[];
   tags: string[];
   searchText: string;
+  sampleCount: number;
   samples: ArtSample[];
 };
 
@@ -78,6 +71,12 @@ export type ArtSample = {
   label: string;
   kind: "character" | "sprite" | "icon" | "tile" | "effect" | "ui" | "image";
   animated: boolean;
+  description: string;
+  category: string;
+  themes: string[];
+  useCases: string[];
+  tags: string[];
+  searchText: string;
 };
 
 export type SoundSample = {
@@ -86,129 +85,74 @@ export type SoundSample = {
   src: string;
   label: string;
   kind: "movement" | "combat" | "ui" | "ambient" | "effect";
+  description: string;
+  category: string;
+  themes: string[];
+  useCases: string[];
+  tags: string[];
+  searchText: string;
 };
 
-type MediaAssets = {
-  artSamples: ArtSample[];
-  soundSamples: SoundSample[];
+export type SourceMapping = {
+  id: string;
+  pathPattern: string;
+  title: string;
+  medium: string;
+  source: string;
+  author?: string;
+  url?: string;
+  license?: string;
+  notes?: string;
+  likelyCreator?: string;
+  description: string;
+  category: string;
+  themes: string[];
+  useCases: string[];
+  tags: string[];
+  searchText: string;
 };
 
-type RawArtPack = Omit<ArtPack, "theme" | "description" | "tags" | "searchText" | "samples">;
-
-const mappings = metadata.mappings as MetadataMapping[];
-
-function labelFromPath(path: string): string {
-  const last = path
-    .replace(/^sounds\//, "")
-    .replace(/\/\*\*$/, "")
-    .split("/")
-    .pop();
-  return (last ?? path)
-    .replace(/^\d+__.+?__/, "")
-    .replace(/\.[^.]+$/, "")
-    .replace(/[-_]+/g, " ")
-    .replace(/\b\w/g, (c) => c.toUpperCase());
-}
+type MediaCatalog = {
+  description: string;
+  stats: {
+    artPackCount: number;
+    artSampleCount: number;
+    soundCollectionCount: number;
+    soundSampleCount: number;
+    musicTrackCount: number;
+    sourceMappingCount: number;
+    artLicenseSplit: Record<string, number>;
+  };
+  artPacks: ArtPack[];
+  soundCollections: SoundCollection[];
+  musicTracks: MusicTrack[];
+  sourceMappings: SourceMapping[];
+  sources: Record<string, unknown>;
+};
 
 function normalizeCreator(value: string): string {
   return value.trim().toLowerCase().replace(/[\s_-]+/g, "-");
 }
 
-function artThemeFor(pack: RawArtPack): ArtTheme {
-  const text = `${pack.folder} ${pack.title}`.toLowerCase();
-  if (/(icon|item|coin|chest|pickup|potion|weapon|inventory|fable)/.test(text)) {
-    return "Icons & Items";
-  }
-  if (/(effect|fx|fire|smoke|bullet|spell|magic|explosion|slash)/.test(text)) return "Effects";
-  if (/(tile|tileset|forest|dungeon|mine|plains|land|nature|tree|tower|platformer|objects|town)/.test(text)) {
-    return "Environments";
-  }
-  if (/(ui|hud|button|menu)/.test(text)) return "UI";
-  if (/(space|void|sci-fi|sci fi|mech|robo|ship|fleet|alien|shooter)/.test(text)) {
-    return "Vehicles & Sci-Fi";
-  }
-  if (/(animal|bird|cat|frog|dino|jellyfish|shark|turtle|crab|wolf|critters|creature)/.test(text)) {
-    return "Animals";
-  }
-  if (/(enemy|monster|demon|undead|skeleton|worm|executioner|obelisk)/.test(text)) return "Enemies";
-  if (/(character|hero|knight|warrior|mage|witch|archer|samurai|huntress|king|bandit)/.test(text)) {
-    return "Characters";
-  }
-  return "General";
-}
+export const catalog = mediaCatalog as MediaCatalog;
 
-const typedMediaAssets = mediaAssets as MediaAssets;
+export const musicTracks: MusicTrack[] = catalog.musicTracks.map((track) => ({
+  ...track,
+  src: assetUrl(track.src),
+}));
 
-const artSamplesByPack = typedMediaAssets.artSamples.reduce((map, sample) => {
-  const list = map.get(sample.packFolder) ?? [];
-  list.push({ ...sample, src: assetUrl(sample.src) });
-  map.set(sample.packFolder, list);
-  return map;
-}, new Map<string, ArtSample[]>());
+export const soundCollections: SoundCollection[] = catalog.soundCollections.map((collection) => ({
+  ...collection,
+  samples: collection.samples.map((sample) => ({ ...sample, src: assetUrl(sample.src) })),
+}));
 
-const soundSamplesByCollection = typedMediaAssets.soundSamples.reduce((map, sample) => {
-  const list = map.get(sample.collectionId) ?? [];
-  list.push({ ...sample, src: assetUrl(sample.src) });
-  map.set(sample.collectionId, list);
-  return map;
-}, new Map<string, SoundSample[]>());
+export const artPacks: ArtPack[] = catalog.artPacks.map((pack) => ({
+  ...pack,
+  samples: pack.samples.map((sample) => ({ ...sample, src: assetUrl(sample.src) })),
+}));
 
-export const musicTracks: MusicTrack[] = mappings
-  .filter((entry) => entry.path_pattern.startsWith("sounds/music/"))
-  .map((entry) => {
-    const track = {
-      title: entry.track_title ?? labelFromPath(entry.path_pattern),
-      source: "Kevin MacLeod",
-      path: entry.path_pattern,
-      src: assetUrl(`/${entry.path_pattern}`),
-      license: "CC-BY 4.0",
-      url: entry.url,
-    };
-    return {
-      ...track,
-      ...buildMusicTrackMetadata(track),
-    };
-  });
-
-export const soundCollections: SoundCollection[] = mappings
-  .filter(
-    (entry) =>
-      entry.path_pattern.startsWith("sounds/") &&
-      !entry.path_pattern.startsWith("sounds/music/"),
-  )
-  .map((entry) => {
-    const collection = {
-      id: entry.path_pattern,
-      title: entry.pack_url ? labelFromPath(entry.path_pattern) : labelFromPath(entry.source),
-      source: entry.source === "freesound" ? "Freesound" : "Pixabay",
-      path: entry.path_pattern,
-      license: entry.license ?? (entry.source === "pixabay" ? "Pixabay License" : "Varies"),
-      notes:
-        entry.notes ??
-        (entry.author ? `Pack by ${entry.author}. Check the source before shipping.` : ""),
-      url: entry.pack_url,
-      samples: soundSamplesByCollection.get(entry.path_pattern) ?? [],
-    };
-    return {
-      ...collection,
-      ...buildSoundCollectionMetadata(collection),
-    };
-  });
-
-export const artPacks: ArtPack[] = (metadata["2d_packs"].packs as RawArtPack[]).map(
-  (pack) => {
-    const normalizedPack = {
-      ...pack,
-      author: pack.author.trim(),
-      theme: artThemeFor(pack),
-    };
-    return {
-      ...normalizedPack,
-      ...buildArtPackMetadata(normalizedPack),
-      samples: artSamplesByPack.get(pack.folder) ?? [],
-    };
-  },
-);
+export const sourceMappings: SourceMapping[] = catalog.sourceMappings;
+export const mediaSources = catalog.sources;
 
 export const artCreators = Array.from(new Set(artPacks.map((pack) => pack.author)))
   .sort((a, b) => normalizeCreator(a).localeCompare(normalizeCreator(b)));
@@ -226,8 +170,11 @@ export const artThemes: ArtTheme[] = [
 ];
 
 export const mediaStats = {
-  artPackCount: metadata["2d_packs"].pack_count,
-  artLicenseSplit: metadata["2d_packs"].license_split,
+  artPackCount: catalog.stats.artPackCount,
+  artSampleCount: catalog.stats.artSampleCount,
+  artLicenseSplit: catalog.stats.artLicenseSplit,
   soundCollectionCount: soundCollections.length,
+  soundSampleCount: catalog.stats.soundSampleCount,
   musicTrackCount: musicTracks.length,
+  sourceMappingCount: catalog.stats.sourceMappingCount,
 };

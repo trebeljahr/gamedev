@@ -42,6 +42,9 @@ export type PackMetadata = {
 
 export type MediaMetadata = {
   description: string;
+  category: string;
+  themes: string[];
+  useCases: string[];
   tags: string[];
   searchText: string;
 };
@@ -208,6 +211,10 @@ function inferTags(text: string, extra: string[] = []): string[] {
   return unique(tags).sort();
 }
 
+function mediaTags(tags: string[]): string[] {
+  return tags.filter((tag) => tag !== "low-poly");
+}
+
 function inferThemes(text: string, packTitle: string): string[] {
   const themes: string[] = [];
   for (const [pattern, label] of [
@@ -355,8 +362,10 @@ export function buildArtPackMetadata(input: {
   attribution: string;
 }): MediaMetadata {
   const text = tokenText(input.folder, input.title, input.author, input.theme, input.license_class);
-  const tags = inferTags(text, [input.theme.toLowerCase(), "2d", "art", "sprite"]);
-  const description = `${cleanAssetTitle(input.title)} is a 2D ${input.theme.toLowerCase()} art pack by ${input.author}. License: ${input.license_class}. Attribution: ${input.attribution}.`;
+  const themes = unique([input.theme.toLowerCase(), ...inferThemes(text, input.title)]).sort();
+  const tags = mediaTags(inferTags(text, [input.theme.toLowerCase(), "2d", "art", "sprite", ...themes]));
+  const useCases = mediaUseCases(input.theme.toLowerCase(), text);
+  const description = `${cleanAssetTitle(input.title)} is a 2D ${input.theme.toLowerCase()} art pack by ${input.author}. Use it for ${useCases.join(", ")}. License: ${input.license_class}. Attribution: ${input.attribution}.`;
   const searchText = unique([
     input.title,
     input.folder,
@@ -365,9 +374,12 @@ export function buildArtPackMetadata(input: {
     input.license_class,
     input.attribution,
     description,
+    input.theme,
+    ...themes,
+    ...useCases,
     ...tags,
   ]).join(" ").toLowerCase();
-  return { description, tags, searchText };
+  return { description, category: input.theme, themes, useCases, tags, searchText };
 }
 
 export function buildSoundCollectionMetadata(input: {
@@ -378,8 +390,11 @@ export function buildSoundCollectionMetadata(input: {
   notes: string;
 }): MediaMetadata {
   const text = tokenText(input.title, input.source, input.path, input.notes);
-  const tags = inferTags(text, ["sound", "sfx", input.source.toLowerCase()]);
-  const description = `${input.title} is a ${input.source} sound collection. License: ${input.license}. ${input.notes}`.trim();
+  const category = soundCategory(text);
+  const themes = soundThemes(text);
+  const useCases = soundUseCases(category, text);
+  const tags = mediaTags(inferTags(text, ["sound", "sfx", category, input.source.toLowerCase(), ...themes]));
+  const description = `${input.title} is a ${input.source} ${category} sound collection for ${useCases.join(", ")}. License: ${input.license}. ${input.notes}`.trim();
   const searchText = unique([
     input.title,
     input.source,
@@ -387,9 +402,12 @@ export function buildSoundCollectionMetadata(input: {
     input.license,
     input.notes,
     description,
+    category,
+    ...themes,
+    ...useCases,
     ...tags,
   ]).join(" ").toLowerCase();
-  return { description, tags, searchText };
+  return { description, category, themes, useCases, tags, searchText };
 }
 
 export function buildMusicTrackMetadata(input: {
@@ -398,15 +416,203 @@ export function buildMusicTrackMetadata(input: {
   license: string;
   path: string;
 }): MediaMetadata {
-  const tags = inferTags(tokenText(input.title, input.path), ["music", "track", input.source.toLowerCase()]);
-  const description = `${input.title} is a music track by ${input.source}. License: ${input.license}.`;
+  const text = tokenText(input.title, input.path);
+  const themes = musicThemes(text);
+  const useCases = musicUseCases(text);
+  const tags = mediaTags(inferTags(text, ["music", "track", input.source.toLowerCase(), ...themes]));
+  const themeLabel = themes.filter((theme) => theme !== "music").join(", ") || "game";
+  const description = `${input.title} is a ${themeLabel} music track by ${input.source}. Works well for ${useCases.join(", ")}. License: ${input.license}.`;
   const searchText = unique([
     input.title,
     input.source,
     input.license,
     input.path,
     description,
+    ...themes,
+    ...useCases,
     ...tags,
   ]).join(" ").toLowerCase();
-  return { description, tags, searchText };
+  return { description, category: "music", themes, useCases, tags, searchText };
+}
+
+export function buildArtSampleMetadata(input: {
+  packTitle: string;
+  label: string;
+  path: string;
+  kind: string;
+  animated: boolean;
+}): MediaMetadata {
+  const text = tokenText(input.packTitle, input.label, input.path, input.kind);
+  const category = input.kind;
+  const themes = unique([category, ...inferThemes(text, input.packTitle)]).sort();
+  const useCases = mediaUseCases(category, text);
+  const tags = mediaTags(inferTags(text, ["2d", "art", category, input.animated ? "animated" : "static", ...themes]));
+  const description = `${input.label} is ${input.animated ? "an animated" : "a static"} 2D ${category} sample from ${input.packTitle}. Useful for ${useCases.join(", ")}.`;
+  const searchText = unique([
+    input.label,
+    input.path,
+    input.packTitle,
+    input.kind,
+    description,
+    ...themes,
+    ...useCases,
+    ...tags,
+  ]).join(" ").toLowerCase();
+  return { description, category, themes, useCases, tags, searchText };
+}
+
+export function buildSoundSampleMetadata(input: {
+  collectionTitle: string;
+  label: string;
+  path: string;
+  kind: string;
+}): MediaMetadata {
+  const text = tokenText(input.collectionTitle, input.label, input.path, input.kind);
+  const category = soundCategory(text) || input.kind;
+  const themes = soundThemes(text);
+  const useCases = soundUseCases(category, text);
+  const tags = mediaTags(inferTags(text, ["sound", "sfx", category, input.kind, ...themes]));
+  const description = `${input.label} is a ${category} sound sample from ${input.collectionTitle}. Useful for ${useCases.join(", ")}.`;
+  const searchText = unique([
+    input.label,
+    input.path,
+    input.collectionTitle,
+    input.kind,
+    description,
+    category,
+    ...themes,
+    ...useCases,
+    ...tags,
+  ]).join(" ").toLowerCase();
+  return { description, category, themes, useCases, tags, searchText };
+}
+
+export function buildSourceMappingMetadata(input: {
+  path_pattern: string;
+  source: string;
+  notes?: string;
+  author?: string;
+  license?: string;
+  track_title?: string;
+  likely_creator?: string;
+}): MediaMetadata & { title: string; medium: string } {
+  const title = input.track_title ?? cleanAssetTitle(input.path_pattern.replace(/\/\*\*$/, "").split("/").pop() || input.path_pattern);
+  const text = tokenText(input.path_pattern, input.source, input.notes, input.author, input.license, input.track_title, input.likely_creator);
+  const medium = mediumForPath(input.path_pattern);
+  const category =
+    medium === "sound" ? soundCategory(text) :
+    medium === "music" ? "music" :
+    medium === "texture" ? "texture" :
+    medium === "2d-art" ? "2d-art" :
+    "source";
+  const themes = medium === "sound" ? soundThemes(text) : inferThemes(text, title);
+  const useCases =
+    medium === "sound" ? soundUseCases(category, text) :
+    medium === "music" ? musicUseCases(text) :
+    medium === "texture" ? ["materials", "surface detail", "environment art"] :
+    mediaUseCases(category, text);
+  const tags = mediaTags(inferTags(text, [medium, category, input.source, ...themes]));
+  const source = cleanAssetTitle(input.source);
+  const license = input.license ?? "See source metadata";
+  const description = `${title} covers ${input.path_pattern} from ${source}. Medium: ${medium}. Category: ${category}. Use for ${useCases.join(", ")}. License: ${license}. ${input.notes ?? ""}`.trim();
+  const searchText = unique([
+    title,
+    input.path_pattern,
+    input.source,
+    input.author ?? "",
+    input.likely_creator ?? "",
+    license,
+    description,
+    medium,
+    category,
+    ...themes,
+    ...useCases,
+    ...tags,
+  ]).join(" ").toLowerCase();
+  return { title, medium, description, category, themes, useCases, tags, searchText };
+}
+
+function mediumForPath(path: string): string {
+  if (path.startsWith("sounds/music/")) return "music";
+  if (path.startsWith("sounds/")) return "sound";
+  if (path.startsWith("2D/")) return "2d-art";
+  if (path.startsWith("textures/")) return "texture";
+  if (path.startsWith("3D/")) return "3d-legacy";
+  return "asset";
+}
+
+function soundCategory(text: string): string {
+  if (/(music|track|theme|song|incompetech|macleod)/i.test(text)) return "music";
+  if (/(footstep|step|walk|run|jump|movement|grass|gravel)/i.test(text)) return "movement";
+  if (/(hit|impact|slash|attack|weapon|arrow|explosion|laser|shoot|hurt|damage|combat)/i.test(text)) return "combat";
+  if (/(ui|click|button|select|menu|confirm|coin|pickup|notification)/i.test(text)) return "ui";
+  if (/(ambient|wind|rain|forest|water|loop|room|drone|atmosphere)/i.test(text)) return "ambient";
+  return "effect";
+}
+
+function soundThemes(text: string): string[] {
+  const themes: string[] = [];
+  for (const [pattern, label] of [
+    [/(fantasy|magic|spell|sword|medieval|dungeon)/i, "fantasy"],
+    [/(sci|laser|robot|space|ship|alien)/i, "sci-fi"],
+    [/(forest|grass|gravel|wind|rain|water|nature)/i, "nature"],
+    [/(combat|weapon|hit|impact|explosion|attack)/i, "combat"],
+    [/(ui|menu|click|button|select|confirm)/i, "interface"],
+    [/(horror|dark|ghost|monster|zombie)/i, "horror"],
+    [/(music|theme|song|loop)/i, "music"],
+  ] as Array<[RegExp, string]>) {
+    if (pattern.test(text)) themes.push(label);
+  }
+  return unique(themes.length ? themes : ["general"]).sort();
+}
+
+function soundUseCases(category: string, text: string): string[] {
+  if (category === "movement") return ["footstep variation", "character movement", "terrain feedback"];
+  if (category === "combat") return ["attacks", "impacts", "combat feedback"];
+  if (category === "ui") return ["menus", "buttons", "inventory feedback"];
+  if (category === "ambient") return ["environment loops", "scene atmosphere", "background beds"];
+  if (category === "music") return musicUseCases(text);
+  return ["gameplay feedback", "scene polish", "interactive events"];
+}
+
+function musicThemes(text: string): string[] {
+  const themes: string[] = ["music"];
+  if (/(ancient|magic|forest|winds|tale|mystery)/i.test(text)) themes.push("fantasy");
+  if (/(black|vortex|corruption|midnight|mystery)/i.test(text)) themes.push("dark", "mystery");
+  if (/(clash|defiant|course)/i.test(text)) themes.push("action", "adventure");
+  if (/(comfortable|peppers)/i.test(text)) themes.push("light", "quirky");
+  return unique(themes).sort();
+}
+
+function musicUseCases(text: string): string[] {
+  if (/(clash|defiant|course)/i.test(text)) return ["battle scenes", "hero moments", "menus with momentum"];
+  if (/(black|vortex|corruption|midnight)/i.test(text)) return ["tense levels", "boss build-up", "dark menus"];
+  if (/(magic|forest|ancient|winds)/i.test(text)) return ["fantasy exploration", "overworld scenes", "ambient menus"];
+  if (/(comfortable|peppers|mystery)/i.test(text)) return ["puzzle scenes", "quirky menus", "light exploration"];
+  return ["background music", "menus", "level ambience"];
+}
+
+function mediaUseCases(category: string, text: string): string[] {
+  if (/(character|hero|warrior|mage|witch|archer|samurai|king)/i.test(text) || category.includes("character")) {
+    return ["player characters", "NPCs", "animation prototyping"];
+  }
+  if (/(enemy|monster|demon|undead|skeleton|creature|animal)/i.test(text) || category.includes("enemy")) {
+    return ["enemy variants", "encounters", "creature animation"];
+  }
+  if (/(effect|fx|fire|smoke|spell|magic|slash|bullet)/i.test(text) || category.includes("effect")) {
+    return ["combat VFX", "spell effects", "hit feedback"];
+  }
+  if (/(icon|item|coin|chest|pickup|potion|inventory)/i.test(text) || category.includes("icon")) {
+    return ["inventory UI", "loot", "pickup feedback"];
+  }
+  if (/(tile|tileset|forest|dungeon|mine|plains|platform|environment)/i.test(text) || category.includes("environment")) {
+    return ["level building", "tilemaps", "environment dressing"];
+  }
+  if (/(ui|hud|button|menu)/i.test(text) || category.includes("ui")) {
+    return ["menus", "HUD", "interface mockups"];
+  }
+  if (/(ship|fleet|space|mech|sci|shooter)/i.test(text)) {
+    return ["shooters", "space encounters", "sci-fi prototyping"];
+  }
+  return ["game jams", "prototypes", "scene dressing"];
 }

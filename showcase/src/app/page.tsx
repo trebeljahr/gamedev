@@ -51,6 +51,11 @@ export default function HomePage() {
             </strong>
             <small>Preview sound effects and music</small>
           </Link>
+          <Link className="asset-type-link" href="/media?view=sources">
+            <span>Sources</span>
+            <strong>{mediaStats.sourceMappingCount} mappings</strong>
+            <small>Search textures, path groups, licenses, and origins</small>
+          </Link>
         </nav>
 
         <section className="catalog-heading" id="3d-packs" aria-labelledby="packs-heading">
