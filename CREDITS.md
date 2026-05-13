@@ -79,11 +79,10 @@ Quick lookup of where every asset in this folder came from and what you owe each
 - URL: http://mocap.cs.cmu.edu/
 - License: Free for any use. Filenames use `{subject}_{trial}.{ext}` (e.g. `01_01.fbx`).
 
-### Sketchfab — individual `.glb`, and `3D/gltf/{buster_drone, mars-rover, steampunk-sub, triceratops}/`
+### Sketchfab — individual `.glb`, and `3D/gltf/{mars-rover, steampunk-sub, triceratops}/`
 - URL: https://sketchfab.com/
-- **License varies per model** — check each on its Sketchfab page.
-- Four models here ship with their own `license.txt`:
-  - **Buster Drone** by LaVADraGoN — CC-BY-NC-4.0 (non-commercial, attribution required). https://sketchfab.com/3d-models/buster-drone-294e79652f494130ad2ab00a13fdbafd
+- **License varies per model** — only commercially usable models should remain in this project; check each on its Sketchfab page.
+- Three models here ship with their own `license.txt`:
   - **Perseverance — NASA Mars Landing 2021** by Thomas Flynn — CC0. https://sketchfab.com/3d-models/perseverance-nasa-mars-landing-2021-c1c94e1f69df45eeae4a0a1d0d27e85b
   - **Steampunk underwater explorer** by Andrius Beconis — CC-BY-4.0 (attribution required). https://sketchfab.com/3d-models/steampunk-underwater-explorer-127471a23e0f4790914b13b9052c4912
   - **Animated triceratops skeleton** by Zacxophone — CC0. https://sketchfab.com/3d-models/animated-triceratops-skeleton-06cb55f941d94dc8b95ac46f92d89e7c
@@ -152,9 +151,6 @@ Music:
     Tracks used: [list only the ones that ship]
 
 Sketchfab per-model attribution (include only those you actually ship):
-  — "Buster Drone" by LaVADraGoN
-    https://sketchfab.com/3d-models/buster-drone-294e79652f494130ad2ab00a13fdbafd
-    Licensed under CC-BY-NC-4.0 (non-commercial use only).
   — "Steampunk underwater explorer" by Andrius Beconis
     https://sketchfab.com/3d-models/steampunk-underwater-explorer-127471a23e0f4790914b13b9052c4912
     Licensed under CC-BY-4.0.
@@ -215,12 +211,11 @@ See each pack's bundled `License.txt` / `Readme` and `sounds/music/_LICENSE_READ
 
 ## itch.io 2D packs — `2D/`
 
-Pixel art / 2D asset packs from itch.io (106 packs). See `2D/CREDITS.md` for per-pack attribution and license summaries; each pack also has a `LICENSE.md` with the exact terms.
+Pixel art / 2D asset packs from itch.io (104 packs). See `2D/CREDITS.md` for per-pack attribution and license summaries; each pack also has a `LICENSE.md` with the exact terms.
 
 License split:
 
 - **31** packs are **CC0** (no attribution required). Free for any use including redistribution.
 - **73** packs use custom **free-for-personal-and-commercial** terms with **no redistribution/resale** allowed; attribution appreciated but not required.
-- **2** packs are **free for non-commercial** use; author requests pay-what-you-want contribution for commercial use.
 
 Before shipping commercial work, verify each pack's current terms against the live itch.io page — author terms can change.

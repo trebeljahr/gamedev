@@ -10,6 +10,11 @@ const ASSETS_ROOT = process.env.ASSETS_DIR
   : join(REPO_ROOT, "assets");
 const OUT = join(SHOWCASE_DIR, "src", "lib", "media-assets.json");
 
+const NON_COMMERCIAL_ART_PACKS = new Set([
+  "bdragon1727__fire-pixel-bullet-16x16",
+  "bdragon1727__free-smoke-fx-pixel-2",
+]);
+
 type ArtSample = {
   packFolder: string;
   path: string;
@@ -92,6 +97,7 @@ async function main() {
     const packDirs = (await readdir(artRoot, { withFileTypes: true }))
       .filter((d) => d.isDirectory())
       .map((d) => d.name)
+      .filter((name) => !NON_COMMERCIAL_ART_PACKS.has(name))
       .sort();
 
     for (const packFolder of packDirs) {

@@ -86,12 +86,12 @@
     "sketchfab": {
       "name": "Sketchfab",
       "url": "https://sketchfab.com/",
-      "license": "Varies per model (CC0, CC-BY, CC-BY-NC, etc.)",
+      "license": "Varies per model (commercially usable CC0 or CC-BY only in this project)",
       "license_url": "https://sketchfab.com/licenses",
       "attribution_required": "depends_on_model",
       "commercial_use": "depends_on_model",
-      "notes": "Each Sketchfab model has its own license stated on its page. Models downloaded as gltf/zip often include a license.txt with the exact attribution text. Confirmed models below have license.txt files alongside them. For models without a license file, search the title on Sketchfab to verify. Many have lowercase_with_underscores filenames that match Sketchfab's URL slugs.",
-      "identification": "Snake_case filenames like 'fortnite_x_star_wars_encrypted_skin.glb', 'star_wars_x-wing.glb', 'model_72b_-_juvenile_green_sea_turtle.glb'. Also the four confirmed folders in 3D/gltf/ (buster_drone, mars-rover, steampunk-sub, triceratops) each carry their own license.txt."
+      "notes": "Each Sketchfab model has its own license stated on its page. Models downloaded as gltf/zip often include a license.txt with exact attribution text. Non-commercial licenses are excluded from this project.",
+      "identification": "Snake_case filenames like fortnite_x_star_wars_encrypted_skin.glb, star_wars_x-wing.glb, and other Sketchfab-style slugs. Confirmed allowed folders in 3D/gltf/ carry their own license.txt."
     },
     "freesound": {
       "name": "Freesound.org",
@@ -110,7 +110,7 @@
       "license_url": "https://pixabay.com/service/license-summary/",
       "attribution_required": false,
       "commercial_use": true,
-      "notes": "Pixabay sounds and music are free for commercial and non-commercial use; attribution is not required. Files typically include a trailing numeric Pixabay asset ID. Lookup URL: https://pixabay.com/sound-effects/search/?id={id} (or browse the asset page directly).",
+      "notes": "Pixabay sounds and music are free for commercial use; attribution is not required. Files typically include a trailing numeric Pixabay asset ID. Lookup URL: https://pixabay.com/sound-effects/search/?id={id} (or browse the asset page directly).",
       "identification": "Files named {slug}-{id}.mp3 with 4-to-7-digit id, and files prefixed with 'freesound_community-' (Pixabay's reupload account that re-hosts CC0 Freesound content)."
     },
     "kevin-macleod": {
@@ -452,18 +452,6 @@
       "notes": "Axe, Blade, Crossbow, Staff variants, Sword variants, Shield. Verify each on poly.pizza."
     },
     {
-      "path_pattern": "3D/gltf/buster_drone/**",
-      "source": "sketchfab",
-      "asset_title": "Buster Drone",
-      "author": "LaVADraGoN",
-      "sketchfab_url": "https://sketchfab.com/3d-models/buster-drone-294e79652f494130ad2ab00a13fdbafd",
-      "license": "CC-BY-NC-4.0",
-      "attribution_required": true,
-      "commercial_use": false,
-      "attribution_text": "This work is based on \"Buster Drone\" (https://sketchfab.com/3d-models/buster-drone-294e79652f494130ad2ab00a13fdbafd) by LaVADraGoN (https://sketchfab.com/lavadragon) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)",
-      "notes": "Non-commercial only. See the bundled license.txt."
-    },
-    {
       "path_pattern": "3D/gltf/mars-rover/**",
       "source": "sketchfab",
       "asset_title": "Perseverance - NASA Mars Landing 2021",
@@ -632,11 +620,6 @@
     {
       "path_pattern": "3D/glb/paracheirodon_innesi___tetra_neon.glb",
       "source": "sketchfab"
-    },
-    {
-      "path_pattern": "3D/glb/model_{number}{letter}_-_*.glb",
-      "source": "sketchfab",
-      "notes": "Series of marine life models (dolphin, sea turtle, hammerhead, manta ray, great white shark, whale shark, blacktip shark). Likely from the Digital Life Project on Sketchfab \u2014 CC-BY-NC. Verify each."
     },
     {
       "path_pattern": "3D/glb/electric_staff_low-poly.glb",
@@ -858,7 +841,6 @@
     "poly-pizza": "3D models sourced from Poly Pizza (poly.pizza). Individual creators credited per asset.",
     "mixamo": "Character animations and rigs from Mixamo (mixamo.com) by Adobe.",
     "sketchfab-by": "This work uses \"{TITLE}\" (https://sketchfab.com/3d-models/{slug}) by {AUTHOR} (https://sketchfab.com/{author_handle}) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
-    "sketchfab-by-nc": "This work uses \"{TITLE}\" by {AUTHOR} licensed under CC-BY-NC-4.0 (non-commercial only).",
     "freesound": "Sound effects from Freesound.org contributors. Per-sound license info: https://freesound.org/s/{id}/",
     "pixabay": "Sound effects and music from Pixabay (pixabay.com) \u2014 Pixabay Content License.",
     "kevin-macleod": "\"{TRACK}\" by Kevin MacLeod (incompetech.com) \u2014 Licensed under Creative Commons: By Attribution 4.0 \u2014 http://creativecommons.org/licenses/by/4.0/"
@@ -868,11 +850,10 @@
     "last_updated": "2026-04-30",
     "download_method": "itch.io API + Wayback Machine for game ID discovery; some packs imported from local ~/Downloads",
     "licensing_note": "Per-pack terms in 2D/<pack>/LICENSE.md. See 2D/CREDITS.md for the summary table.",
-    "pack_count": 106,
+    "pack_count": 104,
     "license_split": {
       "cc0": 31,
-      "custom_no_redist": 73,
-      "non_commercial": 2
+      "custom_no_redist": 73
     },
     "packs": [
       {
@@ -984,26 +965,6 @@
         "game_id": 2368902,
         "license_class": "Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms)",
         "attribution": "Appreciated / not required"
-      },
-      {
-        "folder": "bdragon1727__fire-pixel-bullet-16x16",
-        "title": "Fire Pixel Bullet 16x16",
-        "author": "bdragon1727",
-        "author_url": "https://bdragon1727.itch.io",
-        "url": "https://bdragon1727.itch.io/fire-pixel-bullet-16x16",
-        "game_id": 941139,
-        "license_class": "Free for non-commercial; contribute any amount for commercial use; no redistribution/resale",
-        "attribution": "Appreciated"
-      },
-      {
-        "folder": "bdragon1727__free-smoke-fx-pixel-2",
-        "title": "Free Smoke Fx Pixel 2",
-        "author": "bdragon1727",
-        "author_url": "https://bdragon1727.itch.io",
-        "url": "https://bdragon1727.itch.io/free-smoke-fx-pixel-2",
-        "game_id": 2133569,
-        "license_class": "Free for non-commercial; contribute any amount for commercial use; no redistribution/resale",
-        "attribution": "Appreciated"
       },
       {
         "folder": "c1b0rg0101__little-witch-pixel-character-animation",

@@ -69,6 +69,35 @@ const metadataPath = join(repoRoot, "metadata.json");
 const mediaAssetsPath = join(__dirname, "..", "src", "lib", "media-assets.json");
 const outPath = join(__dirname, "..", "src", "lib", "media-catalog.json");
 
+const NON_COMMERCIAL_ART_PACKS = new Set([
+  "bdragon1727__fire-pixel-bullet-16x16",
+  "bdragon1727__free-smoke-fx-pixel-2",
+]);
+
+const NON_COMMERCIAL_PATH_PATTERNS = new Set([
+  "3D/gltf/buster_drone/**",
+  "3D/glb/model_{number}{letter}_-_*.glb",
+]);
+
+function isNonCommercialText(value: string | undefined): boolean {
+  if (!value) return false;
+  return /cc[- ]?by[- ]?nc|by-nc|free for non-commercial/i.test(value);
+}
+
+function isNonCommercialMapping(entry: MetadataMapping): boolean {
+  if (NON_COMMERCIAL_PATH_PATTERNS.has(entry.path_pattern)) return true;
+  return isNonCommercialText(entry.license) || isNonCommercialText(entry.notes);
+}
+
+function isNonCommercialPack(pack: RawArtPack): boolean {
+  return NON_COMMERCIAL_ART_PACKS.has(pack.folder) || isNonCommercialText(pack.license_class);
+}
+
+function artLicenseKey(licenseClass: string): string {
+  if (/cc0|creative commons zero/i.test(licenseClass)) return "cc0";
+  return "custom_no_redist";
+}
+
 function labelFromPath(path: string): string {
   const last = path
     .replace(/^sounds\//, "")
@@ -122,7 +151,10 @@ async function main() {
     return map;
   }, new Map<string, SoundSample[]>());
 
-  const artPacks = metadata["2d_packs"].packs.map((pack) => {
+  const allowedArtPacks = metadata["2d_packs"].packs.filter((pack) => !isNonCommercialPack(pack));
+  const allowedArtPackFolders = new Set(allowedArtPacks.map((pack) => pack.folder));
+
+  const artPacks = allowedArtPacks.map((pack) => {
     const normalizedPack = {
       ...pack,
       author: pack.author.trim(),
@@ -147,7 +179,9 @@ async function main() {
     };
   });
 
-  const musicTracks = metadata.mappings
+  const allowedMappings = metadata.mappings.filter((entry) => !isNonCommercialMapping(entry));
+
+  const musicTracks = allowedMappings
     .filter((entry) => entry.path_pattern.startsWith("sounds/music/"))
     .map((entry) => {
       const track = {
@@ -164,7 +198,7 @@ async function main() {
       };
     });
 
-  const soundCollectionsFromMappings = metadata.mappings
+  const soundCollectionsFromMappings = allowedMappings
     .filter((entry) => entry.path_pattern.startsWith("sounds/") && !entry.path_pattern.startsWith("sounds/music/"))
     .map((entry) => {
       const collection = {
@@ -226,7 +260,7 @@ async function main() {
 
   const soundCollections = [...soundCollectionsById.values()].sort((a, b) => a.id.localeCompare(b.id));
 
-  const sourceMappings = metadata.mappings.map((entry) => ({
+  const sourceMappings = allowedMappings.map((entry) => ({
     id: entry.path_pattern,
     pathPattern: entry.path_pattern,
     source: entry.source,
@@ -243,12 +277,16 @@ async function main() {
       "Search-ready metadata for non-3D-library assets. Generated from metadata.json plus media-assets.json; agents can use this to choose 2D art, sound effects, music, textures, and source path groups without opening or listening to files.",
     stats: {
       artPackCount: artPacks.length,
-      artSampleCount: mediaAssets.artSamples.length,
+      artSampleCount: mediaAssets.artSamples.filter((sample) => allowedArtPackFolders.has(sample.packFolder)).length,
       soundCollectionCount: soundCollections.length,
       soundSampleCount: mediaAssets.soundSamples.length,
       musicTrackCount: musicTracks.length,
       sourceMappingCount: sourceMappings.length,
-      artLicenseSplit: metadata["2d_packs"].license_split,
+      artLicenseSplit: allowedArtPacks.reduce<Record<string, number>>((counts, pack) => {
+        const key = artLicenseKey(pack.license_class);
+        counts[key] = (counts[key] ?? 0) + 1;
+        return counts;
+      }, {}),
     },
     artPacks,
     soundCollections,

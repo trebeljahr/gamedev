@@ -46,6 +46,14 @@ const MEDIA_OUT = join(SHOWCASE_DIR, "src", "lib", "media-assets.json");
 const BBOX_CACHE = join(SHOWCASE_DIR, ".manifest-bbox-cache.json");
 
 const SKIP_PACKS = new Set(["mixamo-library"]);
+const NON_COMMERCIAL_ART_PACKS = new Set([
+  "bdragon1727__fire-pixel-bullet-16x16",
+  "bdragon1727__free-smoke-fx-pixel-2",
+]);
+const NON_COMMERCIAL_MODEL_PATTERNS: RegExp[] = [
+  /(^|\/)gltf\/buster_drone\//i,
+  /(^|\/)glb\/model_\d+[a-z]_-_/i,
+];
 
 // Vendors where we should prefer source files over the optimized GLBs.
 const PREFER_SOURCE = new Set(["kaykit"]);
@@ -165,6 +173,11 @@ function scoreSoundSample(path: string): number {
   return score;
 }
 
+function isNonCommercialModelPath(path: string): boolean {
+  const normalized = path.split("\\").join("/");
+  return NON_COMMERCIAL_MODEL_PATTERNS.some((pattern) => pattern.test(normalized));
+}
+
 async function writeEmptyMediaManifestIfNeeded(): Promise<void> {
   if (existsSync(MEDIA_OUT)) return;
   await mkdir(dirname(MEDIA_OUT), { recursive: true });
@@ -181,6 +194,7 @@ async function writeMediaManifest(): Promise<void> {
     const packDirs = (await readdir(artRoot, { withFileTypes: true }))
       .filter((d) => d.isDirectory())
       .map((d) => d.name)
+      .filter((name) => !NON_COMMERCIAL_ART_PACKS.has(name))
       .sort();
 
     for (const packFolder of packDirs) {
@@ -417,6 +431,7 @@ async function main() {
       if (abs.length === 0) {
         abs = await findOptimizedModels(vendor, pack);
       }
+      abs = abs.filter((path) => !isNonCommercialModelPath(relative(ASSETS_ROOT, path)));
       if (abs.length === 0) continue;
 
       const models: Model[] = [];
