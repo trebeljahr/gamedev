@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { type CSSProperties, useEffect, useMemo, useRef, useState } from "react";
 import type { ArtPack, ArtSample, MusicTrack, SoundCollection, SoundSample } from "@/lib/media";
 import { artCreators } from "@/lib/media";
 import { isLikelySpriteSheetPath } from "@/lib/media-inference";
@@ -27,6 +27,13 @@ type SpriteRect = { x: number; y: number; w: number; h: number };
 
 function isUsableSpriteGrid(grid: SpriteGrid): boolean {
   return grid.cols * grid.rows > 1 && grid.confidence >= 0.45;
+}
+
+function formatTime(value: number): string {
+  if (!Number.isFinite(value) || value <= 0) return "0:00";
+  const minutes = Math.floor(value / 60);
+  const seconds = Math.floor(value % 60);
+  return `${minutes}:${seconds.toString().padStart(2, "0")}`;
 }
 
 function licenseBucket(license: string): string {
@@ -656,27 +663,141 @@ function ArtPackCard({
   );
 }
 
-function SoundPad({ collection }: { collection: SoundCollection }) {
+function AudioPlayer({
+  src,
+  title,
+  detail,
+  volume = 0.8,
+  rate = 1,
+  loop = false,
+  playSignal = 0,
+  compact = false,
+}: {
+  src: string | undefined;
+  title: string;
+  detail?: string;
+  volume?: number;
+  rate?: number;
+  loop?: boolean;
+  playSignal?: number;
+  compact?: boolean;
+}) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [playing, setPlaying] = useState(false);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
+  const progress = duration > 0 ? (currentTime / duration) * 100 : 0;
+  const progressStyle = { "--progress": `${progress}%` } as CSSProperties;
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    audio.volume = volume;
+    audio.playbackRate = rate;
+    audio.loop = loop;
+  }, [loop, rate, volume]);
+
+  useEffect(() => {
+    setCurrentTime(0);
+    setDuration(0);
+    setPlaying(false);
+  }, [src]);
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio || !src || playSignal === 0) return;
+    audio.currentTime = 0;
+    const playPromise = audio.play();
+    void playPromise?.catch(() => setPlaying(false));
+  }, [playSignal, src]);
+
+  function togglePlay() {
+    const audio = audioRef.current;
+    if (!audio || !src) return;
+    if (audio.paused) {
+      void audio.play().catch(() => setPlaying(false));
+    } else {
+      audio.pause();
+    }
+  }
+
+  function seek(value: number) {
+    const audio = audioRef.current;
+    if (!audio || !Number.isFinite(duration)) return;
+    audio.currentTime = value;
+    setCurrentTime(value);
+  }
+
+  return (
+    <div className={`audio-player ${compact ? "compact" : ""} ${playing ? "playing" : ""}`}>
+      <audio
+        ref={audioRef}
+        preload="none"
+        src={src}
+        onDurationChange={(event) => setDuration(event.currentTarget.duration || 0)}
+        onLoadedMetadata={(event) => setDuration(event.currentTarget.duration || 0)}
+        onPlay={() => setPlaying(true)}
+        onPause={() => setPlaying(false)}
+        onEnded={() => {
+          setPlaying(false);
+          setCurrentTime(0);
+        }}
+        onTimeUpdate={(event) => setCurrentTime(event.currentTarget.currentTime)}
+      />
+      <button className="transport-button" type="button" onClick={togglePlay} disabled={!src} aria-label={playing ? "Pause audio" : "Play audio"}>
+        <span className={playing ? "pause-glyph" : "play-glyph"} aria-hidden="true" />
+      </button>
+      <div className="audio-main">
+        <div className="audio-meta">
+          <div>
+            <span>{playing ? "Playing" : "Ready"}</span>
+            <strong>{title}</strong>
+            {detail && <small>{detail}</small>}
+          </div>
+          <div className="audio-time">
+            {formatTime(currentTime)} / {formatTime(duration)}
+          </div>
+        </div>
+        <div className="audio-strip">
+          <div className="audio-bars" aria-hidden="true">
+            {Array.from({ length: 18 }, (_, index) => (
+              <span key={index} style={{ "--bar-index": index, "--bar-height": `${20 + (index % 6) * 11}%` } as CSSProperties} />
+            ))}
+          </div>
+          <input
+            aria-label={`Seek ${title}`}
+            className="audio-seeker"
+            type="range"
+            min="0"
+            max={duration || 0}
+            step="0.01"
+            value={duration ? currentTime : 0}
+            style={progressStyle}
+            onChange={(event) => seek(Number(event.target.value))}
+            disabled={!src || duration <= 0}
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function SoundPad({ collection }: { collection: SoundCollection }) {
   const [sample, setSample] = useState<SoundSample | undefined>(collection.samples[0]);
   const [volume, setVolume] = useState(0.8);
   const [rate, setRate] = useState(1);
   const [loop, setLoop] = useState(false);
+  const [playSignal, setPlaySignal] = useState(0);
 
   useEffect(() => {
     setSample(collection.samples[0]);
+    setPlaySignal(0);
   }, [collection.id, collection.samples]);
 
   function play(next: SoundSample | undefined = sample) {
     if (!next) return;
     setSample(next);
-    const audio = audioRef.current;
-    if (!audio) return;
-    audio.src = next.src;
-    audio.volume = volume;
-    audio.playbackRate = rate;
-    audio.loop = loop;
-    void audio.play();
+    setPlaySignal((value) => value + 1);
   }
 
   return (
@@ -686,11 +807,16 @@ function SoundPad({ collection }: { collection: SoundCollection }) {
           <h3>{collection.title}</h3>
           <div className="media-detail">{collection.source} · {collection.license}</div>
         </div>
-        <button type="button" onClick={() => play()}>
-          Play
-        </button>
       </div>
-      <audio ref={audioRef} controls preload="none" />
+      <AudioPlayer
+        src={sample?.src}
+        title={sample?.label ?? "No sample selected"}
+        detail={sample ? `${sample.kind} · ${sample.path.split("/").pop()}` : undefined}
+        volume={volume}
+        rate={rate}
+        loop={loop}
+        playSignal={playSignal}
+      />
       <div className="sound-controls">
         <label>
           Volume
@@ -1007,10 +1133,8 @@ export function MediaExplorer({
                   <div className="track-list">
                     {filteredMusic.map((track) => (
                       <article className="track-row" key={track.path}>
-                        <div className="media-title">{track.title}</div>
-                        <div className="media-detail">{track.source} · {track.license}</div>
+                        <AudioPlayer src={track.src} title={track.title} detail={`${track.source} · ${track.license}`} compact />
                         <p>{track.description}</p>
-                        <audio controls preload="none" src={track.src} />
                       </article>
                     ))}
                   </div>
@@ -1028,15 +1152,13 @@ export function MediaExplorer({
               <div className="track-list">
                 {filteredMusic.map((track) => (
                   <article className="track-row" key={track.path}>
-                    <div className="media-title">{track.title}</div>
-                    <div className="media-detail">{track.source} · {track.license}</div>
+                    <AudioPlayer src={track.src} title={track.title} detail={`${track.source} · ${track.license}`} compact />
                     <p>{track.description}</p>
                     <div className="inline-tags">
                       {track.tags.slice(0, 5).map((tag) => (
                         <span key={tag}>{tag}</span>
                       ))}
                     </div>
-                    <audio controls preload="none" src={track.src} />
                   </article>
                 ))}
               </div>
