@@ -101,12 +101,15 @@ export default async function HomePage({ searchParams }: HomePageProps) {
             </div>
           </section>
           <section className="asset-type-link" aria-labelledby="nav-sprites">
-            <Link className="asset-type-main" href="/media?view=art&type=spritesheets">
-              <span>2D Sprites</span>
-              <strong id="nav-sprites">{spritePackCount} packs</strong>
-              <small>Characters, creatures, tiles, FX, props, and spritesheets</small>
+            <Link className="asset-type-main" href="/media?view=art&type=all">
+              <span>2D Art</span>
+              <strong id="nav-sprites">{mediaStats.artPackCount} packs</strong>
+              <small>Spritesheets, characters, tiles, FX, icons, and UI art in one search</small>
             </Link>
             <div className="asset-subnav" aria-label="2D sprite categories">
+              <Link href="/media?view=art&type=all">All 2D</Link>
+              <Link href="/media?view=art&type=spritesheets">Sprites</Link>
+              <Link href="/media?view=art&type=ui-icons">UI / Icons</Link>
               <Link href="/media?view=art&type=spritesheets&subject=characters&motion=animated">Animated characters</Link>
               <Link href="/media?view=art&type=spritesheets&subject=environments">Environments</Link>
             </div>
@@ -132,13 +135,15 @@ export default async function HomePage({ searchParams }: HomePageProps) {
             </div>
           </section>
           <section className="asset-type-link" aria-labelledby="nav-sfx">
-            <Link className="asset-type-main" href="/media?view=sounds&type=sfx">
-              <span>Sound Effects</span>
-              <strong id="nav-sfx">{mediaStats.soundCollectionCount} groups</strong>
-              <small>Combat, movement, ambience, UI feedback, creature, and misc SFX</small>
+            <Link className="asset-type-main" href="/media?view=sounds&type=all">
+              <span>Sounds</span>
+              <strong id="nav-sfx">{mediaStats.soundCollectionCount + mediaStats.musicTrackCount} items</strong>
+              <small>Sound effects and music tracks together in one searchable page</small>
             </Link>
             <div className="asset-subnav" aria-label="Sound effect categories">
+              <Link href="/media?view=sounds&type=all">All sounds</Link>
               <Link href="/media?view=sounds&type=sfx">Browse SFX</Link>
+              <Link href="/media?view=sounds&type=music">Music</Link>
             </div>
           </section>
           <section className="asset-type-link" aria-labelledby="nav-music">

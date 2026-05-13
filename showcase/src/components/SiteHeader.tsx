@@ -27,6 +27,7 @@ const navItems = [
     label: "2D",
     key: "art",
     items: [
+      { label: "All 2D", href: "/media?view=art&type=all" },
       { label: "Animated", href: "/media?view=art&type=spritesheets&motion=animated" },
       { label: "Static", href: "/media?view=art&type=spritesheets&motion=static" },
       { label: "UI", href: "/media?view=art&type=ui-icons" },
@@ -36,7 +37,8 @@ const navItems = [
     label: "Sounds",
     key: "sounds",
     items: [
-      { label: "VFX", href: "/media?view=sounds&type=sfx" },
+      { label: "All sounds", href: "/media?view=sounds&type=all" },
+      { label: "Sound effects", href: "/media?view=sounds&type=sfx" },
       { label: "Music", href: "/media?view=sounds&type=music" },
     ],
   },

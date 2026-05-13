@@ -1809,8 +1809,24 @@ export function MediaExplorer({
     return textureMappings.filter((mapping) => searchMatches(mapping.searchText, q));
   }, [query, textureMappings]);
 
-  const selectedArt = filteredArt.find((pack) => pack.folder === selectedArtFolder) ?? filteredArt[0] ?? artPacks[0];
-  const selectedSound = filteredSounds.find((item) => item.id === selectedSoundId) ?? filteredSounds[0] ?? soundCollections[0];
+  const selectedArt = filteredArt.find((pack) => pack.folder === selectedArtFolder) ?? filteredArt[0];
+  const selectedSound = filteredSounds.find((item) => item.id === selectedSoundId) ?? filteredSounds[0];
+
+  function selectArtType(value: ArtTypeFilter) {
+    setArtTypeFilter(value);
+    if (value !== "spritesheets") {
+      setSpriteSubjectFilter("all");
+      setSpriteMotionFilter("all");
+    }
+  }
+
+  function selectSoundType(value: SoundTypeFilter) {
+    setSoundTypeFilter(value);
+    if (value === "all") {
+      setSoundCategoryFilter("all");
+      setSourceFilter("all");
+    }
+  }
 
   return (
     <div className="media-page">
@@ -1835,11 +1851,23 @@ export function MediaExplorer({
           <button
             type="button"
             role="tab"
+            aria-selected={view === "art" && artTypeFilter === "all"}
+            className={view === "art" && artTypeFilter === "all" ? "active" : ""}
+            onClick={() => {
+              setView("art");
+              selectArtType("all");
+            }}
+          >
+            All 2D
+          </button>
+          <button
+            type="button"
+            role="tab"
             aria-selected={view === "art" && artTypeFilter === "spritesheets"}
             className={view === "art" && artTypeFilter === "spritesheets" ? "active" : ""}
             onClick={() => {
               setView("art");
-              setArtTypeFilter("spritesheets");
+              selectArtType("spritesheets");
             }}
           >
             2D Sprites
@@ -1860,10 +1888,22 @@ export function MediaExplorer({
             className={view === "art" && artTypeFilter === "ui-icons" ? "active" : ""}
             onClick={() => {
               setView("art");
-              setArtTypeFilter("ui-icons");
+              selectArtType("ui-icons");
             }}
           >
             Icons & UI
+          </button>
+          <button
+            type="button"
+            role="tab"
+            aria-selected={view === "sounds" && soundTypeFilter === "all"}
+            className={view === "sounds" && soundTypeFilter === "all" ? "active" : ""}
+            onClick={() => {
+              setView("sounds");
+              selectSoundType("all");
+            }}
+          >
+            All Sounds
           </button>
           <button
             type="button"
@@ -1872,7 +1912,7 @@ export function MediaExplorer({
             className={view === "sounds" && soundTypeFilter === "sfx" ? "active" : ""}
             onClick={() => {
               setView("sounds");
-              setSoundTypeFilter("sfx");
+              selectSoundType("sfx");
             }}
           >
             Sound Effects
@@ -1884,7 +1924,7 @@ export function MediaExplorer({
             className={view === "sounds" && soundTypeFilter === "music" ? "active" : ""}
             onClick={() => {
               setView("sounds");
-              setSoundTypeFilter("music");
+              selectSoundType("music");
             }}
           >
             Music
@@ -1909,10 +1949,10 @@ export function MediaExplorer({
           <span className="catalog-result-count">Textures are separate from sprites and 3D model packs.</span>
         ) : view === "sounds" ? (
           <>
-            <select value={soundTypeFilter} onChange={(event) => setSoundTypeFilter(event.target.value as SoundTypeFilter)}>
+            <select value={soundTypeFilter} onChange={(event) => selectSoundType(event.target.value as SoundTypeFilter)}>
+              <option value="all">All sounds</option>
               <option value="sfx">Sound effects</option>
               <option value="music">Music</option>
-              <option value="all">All sounds</option>
             </select>
             {soundTypeFilter !== "music" && (
               <>
@@ -1939,11 +1979,7 @@ export function MediaExplorer({
               value={artTypeFilter}
               onChange={(event) => {
                 const value = event.target.value as ArtTypeFilter;
-                setArtTypeFilter(value);
-                if (value === "ui-icons") {
-                  setSpriteSubjectFilter("all");
-                  setSpriteMotionFilter("all");
-                }
+                selectArtType(value);
               }}
             >
               <option value="all">All 2D</option>
