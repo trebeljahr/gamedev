@@ -7,7 +7,7 @@ import { useMemo, useState } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { licenseForVendor } from "@/lib/license";
 import type { Manifest, Pack } from "@/lib/manifest";
-import { previewModelFor } from "@/lib/preview-model";
+import { previewModelFilesFor } from "@/lib/preview-model";
 
 const PackCardPreview = dynamic(
   () => import("@/components/PackCardPreview").then((m) => m.PackCardPreview),
@@ -144,7 +144,7 @@ export function CatalogSearch({ manifest, children, showHeader = true, modelMoti
             <div className="pack-grid">
               {packs.map(({ pack, modelMatches }) => (
                 <Link key={pack.id} className="pack-card" href={`/${pack.vendor}/${pack.pack}`}>
-                  <PackCardPreview model={previewModelFor(pack)} />
+                  <PackCardPreview modelFiles={previewModelFilesFor(pack)} />
                   <div className="pack-label">{pack.title}</div>
                   <div className="pack-credit-row">
                     <span>{credit.vendorLabel}</span>

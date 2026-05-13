@@ -4,7 +4,7 @@ import { PackCardPreview } from "@/components/PackCardPreview";
 import { SiteHeader } from "@/components/SiteHeader";
 import { licenseForVendor } from "@/lib/license";
 import { manifest } from "@/lib/manifest";
-import { previewModelFor } from "@/lib/preview-model";
+import { previewModelFilesFor } from "@/lib/preview-model";
 
 export function generateStaticParams() {
   return Array.from(new Set(manifest.packs.map((pack) => pack.vendor))).map((vendor) => ({ vendor }));
@@ -87,7 +87,7 @@ export default async function CreatorPage({
           <div className="pack-grid">
             {packs.map((pack) => (
               <Link key={pack.id} className="pack-card" href={`/${pack.vendor}/${pack.pack}`}>
-                <PackCardPreview model={previewModelFor(pack)} />
+                <PackCardPreview modelFiles={previewModelFilesFor(pack)} />
                 <div className="pack-label">{pack.title}</div>
                 <div className="pack-credit-row">
                   <span>{credit.vendorLabel}</span>
