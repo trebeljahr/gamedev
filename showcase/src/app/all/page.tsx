@@ -16,7 +16,6 @@ export default function AllModelsPage() {
     <div className="all-scene-shell">
       <SiteHeader
         compact
-        active="world"
         meta={
           <>
             {totalModels.toLocaleString()} models · {manifest.packs.length} packs

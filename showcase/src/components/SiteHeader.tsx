@@ -11,19 +11,18 @@ type SiteHeaderProps = {
 };
 
 const navItems = [
-  { label: "Library", href: "/", key: "library" },
-  { label: "3D packs", href: "/#3d-packs", key: "packs" },
+  { label: "Home", href: "/", key: "library" },
+  { label: "3D", href: "/#3d-packs", key: "packs" },
   { label: "2D", href: "/media?view=art", key: "art" },
   { label: "Sounds", href: "/media?view=sounds", key: "sounds" },
-  { label: "All models", href: "/all", key: "world" },
 ] as const;
 
 type NavKey = (typeof navItems)[number]["key"];
 
-function activeKey(pathname: string): NavKey {
+function activeKey(pathname: string): NavKey | undefined {
   if (pathname === "/") return "library";
-  if (pathname === "/all") return "world";
   if (pathname === "/media") return "sounds";
+  if (pathname === "/all") return undefined;
   return "packs";
 }
 
