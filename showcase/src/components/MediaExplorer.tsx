@@ -502,6 +502,49 @@ function parseGridHint(path: string, imageWidth: number, imageHeight: number): S
   return null;
 }
 
+function buildRowSequenceGrid(cols: number, rows: number, imageWidth: number, imageHeight: number, confidence = 0.54): SpriteGrid | null {
+  if (cols <= 1 || rows <= 1 || cols > 32 || rows > 32) return null;
+  if (imageWidth % cols !== 0 || imageHeight % rows !== 0) return null;
+
+  const frameWidth = imageWidth / cols;
+  const frameHeight = imageHeight / rows;
+  const sequences: SpriteSequence[] = Array.from({ length: rows }, (_, row) => {
+    const frames = Array.from({ length: cols }, (_, col) => ({
+      x: col * frameWidth,
+      y: row * frameHeight,
+      w: frameWidth,
+      h: frameHeight,
+    }));
+    return {
+      label: `row ${row + 1}`,
+      frames,
+      bounds: { x: 0, y: row * frameHeight, w: imageWidth, h: frameHeight },
+    };
+  });
+
+  return { cols, rows: 1, confidence, mode: "sequence-pack", frames: sequences[0]?.frames, sequences };
+}
+
+function fallbackSequenceGridFromImage(path: string, imageWidth: number, imageHeight: number): SpriteGrid | null {
+  if (!isLikelySpriteSequencePackPath(path)) return null;
+
+  const hinted = parseSpriteSizeHint(path, imageWidth, imageHeight) ?? parseGridHint(path, imageWidth, imageHeight);
+  if (hinted && hinted.cols > 1 && hinted.rows > 1) {
+    return buildRowSequenceGrid(hinted.cols, hinted.rows, imageWidth, imageHeight, Math.min(0.7, hinted.confidence));
+  }
+
+  for (const cellSize of [64, 96, 80, 48, 32, 128, 24, 16]) {
+    if (imageWidth % cellSize !== 0 || imageHeight % cellSize !== 0) continue;
+    const cols = imageWidth / cellSize;
+    const rows = imageHeight / cellSize;
+    if (cols >= 2 && rows >= 2 && cols <= 16 && rows <= 16) {
+      return buildRowSequenceGrid(cols, rows, imageWidth, imageHeight);
+    }
+  }
+
+  return null;
+}
+
 function detectGridFromImageData(imageData: ImageData, options: { sequenceMode?: SpriteSequenceMode } = {}): SpriteGrid {
   const { width, height, data } = imageData;
   const bg = sampleImageBackground(imageData);
@@ -760,6 +803,129 @@ function exportFramesAsStrip(image: HTMLImageElement, frames: SpriteRect[], file
   downloadCanvasPng(canvas, filename);
 }
 
+function displaySequenceLabel(sequence: SpriteSequence, index: number): string {
+  const rowMatch = sequence.label.match(/^row\s+(\d+)$/i);
+  if (rowMatch) return `Animation ${rowMatch[1]}`;
+  return sequence.label || `Animation ${index + 1}`;
+}
+
+function drawSpriteFrame(
+  context: CanvasRenderingContext2D,
+  image: HTMLImageElement,
+  source: SpriteRect,
+  width: number,
+  height: number,
+  offsetX = 0,
+  offsetY = 0,
+) {
+  const ratio = Math.min(width / source.w, height / source.h);
+  const w = source.w * ratio;
+  const h = source.h * ratio;
+  context.imageSmoothingEnabled = false;
+  context.drawImage(image, source.x, source.y, source.w, source.h, offsetX + (width - w) / 2, offsetY + (height - h) / 2, w, h);
+}
+
+function SequencePreviewCanvas({ image, frames, label }: { image: HTMLImageElement | null; frames: SpriteRect[]; label: string }) {
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const context = canvas?.getContext("2d");
+    if (!canvas || !context || !image || frames.length === 0) return;
+    const previewCanvas = canvas;
+    const previewContext = context;
+    const previewImage = image;
+
+    let raf = 0;
+    let lastFrame = 0;
+    let frameIndex = 0;
+
+    function tick(time: number) {
+      drawCheckerboard(previewContext, previewCanvas.width, previewCanvas.height, "#111318");
+      if (time - lastFrame >= 120) {
+        frameIndex = (frameIndex + 1) % frames.length;
+        lastFrame = time;
+      }
+      drawSpriteFrame(previewContext, previewImage, frames[frameIndex], previewCanvas.width - 10, previewCanvas.height - 10, 5, 5);
+      raf = requestAnimationFrame(tick);
+    }
+
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [frames, image]);
+
+  return <canvas ref={canvasRef} width={92} height={58} aria-label={label} />;
+}
+
+function SpriteSheetOverview({
+  image,
+  sequences,
+  activeIndex,
+  onSelect,
+}: {
+  image: HTMLImageElement | null;
+  sequences: SpriteSequence[];
+  activeIndex: number;
+  onSelect: (index: number) => void;
+}) {
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const mappingRef = useRef({ x: 0, y: 0, ratio: 1 });
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const context = canvas?.getContext("2d");
+    if (!canvas || !context) return;
+
+    drawCheckerboard(context, canvas.width, canvas.height, "#111318");
+    if (!image) return;
+
+    const ratio = Math.min((canvas.width - 20) / image.width, (canvas.height - 20) / image.height);
+    const w = image.width * ratio;
+    const h = image.height * ratio;
+    const x = (canvas.width - w) / 2;
+    const y = (canvas.height - h) / 2;
+    mappingRef.current = { x, y, ratio };
+
+    context.imageSmoothingEnabled = false;
+    context.drawImage(image, x, y, w, h);
+
+    sequences.forEach((sequence, index) => {
+      const active = index === activeIndex;
+      const rect = sequence.bounds;
+      context.lineWidth = active ? 3 : 1.5;
+      context.strokeStyle = active ? "#ffd84d" : "rgba(255,255,255,0.42)";
+      context.fillStyle = active ? "rgba(255,216,77,0.14)" : "rgba(255,255,255,0.035)";
+      context.fillRect(x + rect.x * ratio, y + rect.y * ratio, rect.w * ratio, rect.h * ratio);
+      context.strokeRect(x + rect.x * ratio, y + rect.y * ratio, rect.w * ratio, rect.h * ratio);
+    });
+  }, [activeIndex, image, sequences]);
+
+  return (
+    <canvas
+      ref={canvasRef}
+      className="sprite-sheet-overview-canvas"
+      width={320}
+      height={190}
+      aria-label="Sprite sheet animation overview"
+      onClick={(event) => {
+        const canvas = canvasRef.current;
+        if (!canvas || !image) return;
+        const box = canvas.getBoundingClientRect();
+        const { x, y, ratio } = mappingRef.current;
+        const canvasX = (event.clientX - box.left) * (canvas.width / box.width);
+        const canvasY = (event.clientY - box.top) * (canvas.height / box.height);
+        const imageX = (canvasX - x) / ratio;
+        const imageY = (canvasY - y) / ratio;
+        const nextIndex = sequences.findIndex((sequence) => {
+          const rect = sequence.bounds;
+          return imageX >= rect.x && imageX <= rect.x + rect.w && imageY >= rect.y && imageY <= rect.y + rect.h;
+        });
+        if (nextIndex >= 0) onSelect(nextIndex);
+      }}
+    />
+  );
+}
+
 function SquareArtPreview({ sample, label }: { sample: ArtSample; label: string }) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
@@ -888,8 +1054,11 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
   }, [sample?.src]);
 
   const resolvedGrid = useMemo(() => {
-    if (!sample || !loadedImage?.imageData) return null;
+    if (!sample || !loadedImage?.image) return null;
+    const image = loadedImage.image;
     const imageData = loadedImage.imageData;
+    const imageWidth = image.naturalWidth || image.width;
+    const imageHeight = image.naturalHeight || image.height;
     const hybridAtlas = isLikelyHybridSpriteAtlasPath(sample.path);
     const sequenceMode: SpriteSequenceMode = hybridAtlas
       ? "hybrid-atlas"
@@ -897,6 +1066,8 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
         ? "sequence-pack"
         : "off";
     const pureAtlas = isLikelyTextureAtlasPath(sample.path) && !hybridAtlas;
+    const fallbackSequenceGrid = fallbackSequenceGridFromImage(sample.path, imageWidth, imageHeight);
+    if (!imageData) return pureAtlas ? { cols: 1, rows: 1, confidence: 0.9, mode: "atlas" as const } : fallbackSequenceGrid;
     const detectedFromPixels = detectGridFromImageData(imageData, { sequenceMode });
     const canAnimateSample = sample.animated && isLikelySpriteSheetPath(sample.path) && !pureAtlas;
     const hintedLayout = canAnimateSample
@@ -904,6 +1075,7 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
       : null;
     if (pureAtlas) return { cols: 1, rows: 1, confidence: 0.9, mode: "atlas" as const };
     if (detectedFromPixels.sequences && isUsableSpriteGrid(detectedFromPixels)) return detectedFromPixels;
+    if (fallbackSequenceGrid && sequenceMode === "sequence-pack" && !detectedFromPixels.sequences) return fallbackSequenceGrid;
     if (hintedLayout) return hintedLayout;
     if (!canAnimateSample || isUsableSpriteGrid(detectedFromPixels)) return detectedFromPixels;
     const wide = Math.round(imageData.width / imageData.height);
@@ -1055,8 +1227,25 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
               : `auto ${detectedGrid.cols}x${detectedGrid.rows} (${Math.round(detectedGrid.confidence * 100)}%)`
     : "auto";
 
-  const activeSequence = detectedGrid?.sequences?.[Math.min(sequenceIndex, Math.max(0, (detectedGrid.sequences?.length ?? 1) - 1))];
+  const sequences = detectedGrid?.sequences ?? [];
+  const activeSequenceIndex = Math.min(sequenceIndex, Math.max(0, sequences.length - 1));
+  const activeSequence = sequences[activeSequenceIndex];
   const exportFrameCount = Math.max(1, (autoDetect ? layoutFrames?.length : undefined) ?? columns * rows);
+
+  function selectSequence(nextIndex: number) {
+    const nextSequence = sequences[nextIndex];
+    setSequenceIndex(nextIndex);
+    if (nextSequence) {
+      setAutoDetect(true);
+      setColumns(nextSequence.frames.length);
+      setRows(1);
+      setLayoutFrames(nextSequence.frames);
+    }
+    frameRef.current = 0;
+    setFrame(0);
+    setPlaying(Boolean(nextSequence));
+  }
+
   function exportCurrentSequence() {
     const image = loadedImage?.image ?? null;
     if (!image) return;
@@ -1074,7 +1263,44 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
 
   return (
     <div className="art-runner">
-      <canvas ref={canvasRef} width={720} height={420} />
+      <div className="art-runner-stage">
+        <canvas ref={canvasRef} width={720} height={420} />
+        {sequences.length > 1 && (
+          <aside className="animation-overview" aria-label="Detected animations">
+            <div className="animation-overview-head">
+              <span>{sequences.length} animations</span>
+              <strong>{activeSequence ? displaySequenceLabel(activeSequence, activeSequenceIndex) : "Auto"}</strong>
+            </div>
+            <SpriteSheetOverview
+              image={loadedImage?.image ?? null}
+              sequences={sequences}
+              activeIndex={activeSequenceIndex}
+              onSelect={selectSequence}
+            />
+            <div className="animation-list">
+              {sequences.map((sequence, index) => {
+                const active = index === activeSequenceIndex;
+                const label = displaySequenceLabel(sequence, index);
+                return (
+                  <button
+                    key={`${sequence.label}-${index}`}
+                    type="button"
+                    className={active ? "active" : ""}
+                    aria-pressed={active}
+                    onClick={() => selectSequence(index)}
+                  >
+                    <SequencePreviewCanvas image={loadedImage?.image ?? null} frames={sequence.frames} label={label} />
+                    <span>
+                      <strong>{label}</strong>
+                      <small>{sequence.frames.length} frames</small>
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          </aside>
+        )}
+      </div>
       <div className="runner-controls">
         <button type="button" onClick={() => setPlaying((value) => !value)}>
           {playing ? "Pause" : "Play"}
@@ -1113,28 +1339,16 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
           <input type="checkbox" checked={autoDetect} onChange={(event) => setAutoDetect(event.target.checked)} />
           {detectionLabel}
         </label>
-        {detectedGrid?.sequences && detectedGrid.sequences.length > 1 && (
+        {sequences.length > 1 && (
           <label>
             Sequence
             <select
-              value={sequenceIndex}
-              onChange={(event) => {
-                const nextIndex = Number(event.target.value);
-                const nextSequence = detectedGrid?.sequences?.[nextIndex];
-                setSequenceIndex(nextIndex);
-                if (nextSequence) {
-                  setAutoDetect(true);
-                  setColumns(nextSequence.frames.length);
-                  setRows(1);
-                  setLayoutFrames(nextSequence.frames);
-                }
-                frameRef.current = 0;
-                setFrame(0);
-              }}
+              value={activeSequenceIndex}
+              onChange={(event) => selectSequence(Number(event.target.value))}
             >
-              {detectedGrid.sequences.map((sequence, index) => (
+              {sequences.map((sequence, index) => (
                 <option key={`${sequence.label}-${index}`} value={index}>
-                  {sequence.label} · {sequence.frames.length} frames
+                  {displaySequenceLabel(sequence, index)} · {sequence.frames.length} frames
                 </option>
               ))}
             </select>

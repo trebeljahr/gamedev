@@ -1618,12 +1618,112 @@ select:focus-visible {
   grid-column: 1 / -1;
   color: rgba(232,230,227,0.62);
 }
-.art-runner canvas {
+.art-runner-stage {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 300px);
+  align-items: stretch;
+  min-width: 0;
+}
+.art-runner-stage > canvas {
   display: block;
   width: 100%;
   aspect-ratio: 12 / 7;
   background: #15171c;
   image-rendering: pixelated;
+}
+.animation-overview {
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr);
+  gap: 10px;
+  min-width: 0;
+  padding: 12px;
+  background: #101216;
+  border-left: 1px solid var(--border);
+}
+.animation-overview-head {
+  display: grid;
+  gap: 2px;
+}
+.animation-overview-head span {
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.animation-overview-head strong {
+  overflow: hidden;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 650;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.sprite-sheet-overview-canvas {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9.5;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 6px;
+  background: #111318;
+  cursor: pointer;
+  image-rendering: pixelated;
+}
+.animation-list {
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  min-height: 0;
+  overflow: auto;
+  padding-right: 2px;
+}
+.animation-list button {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  min-width: 0;
+  min-height: 68px;
+  padding: 6px;
+  text-align: left;
+  transition: border-color 0.15s, background 0.15s, transform 0.15s;
+}
+.animation-list button:hover {
+  transform: translateY(-1px);
+}
+.animation-list button.active {
+  border-color: var(--accent);
+  background: rgba(255,216,77,0.08);
+  box-shadow: inset 0 0 0 1px rgba(255,216,77,0.45);
+}
+.animation-list canvas {
+  display: block;
+  width: 92px;
+  height: 58px;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 5px;
+  background: #111318;
+  image-rendering: pixelated;
+}
+.animation-list span {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+}
+.animation-list strong,
+.animation-list small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.animation-list strong {
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 650;
+}
+.animation-list small {
+  color: var(--muted);
+  font-size: 11px;
 }
 .runner-controls {
   padding: 12px;
@@ -2438,6 +2538,18 @@ select:focus-visible {
   }
   .art-workbench {
     grid-template-columns: 1fr;
+  }
+  .art-runner-stage {
+    grid-template-columns: 1fr;
+  }
+  .animation-overview {
+    border-top: 1px solid var(--border);
+    border-left: 0;
+  }
+  .animation-list {
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    max-height: none;
+    overflow: visible;
   }
   .workbench-title,
   .sound-pad-head {
