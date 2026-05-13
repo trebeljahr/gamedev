@@ -549,8 +549,9 @@ select:focus-visible {
 }
 .model-card-preview .pack-preview {
   height: 118px;
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 8px;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
 }
 .model-card-kicker,
 .model-tags {
@@ -731,19 +732,16 @@ select:focus-visible {
   position: relative;
   height: 138px;
   overflow: hidden;
-  pointer-events: none;
+  cursor: grab;
+  touch-action: none;
   background:
     radial-gradient(circle at 52% 62%, rgba(255,216,77,0.18), rgba(255,216,77,0) 34%),
     linear-gradient(155deg, rgba(255,255,255,0.1), rgba(255,255,255,0.02) 46%),
     #202129;
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
-.pack-preview::before {
-  content: "";
-  position: absolute;
-  inset: 12px 14px;
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 8px;
+.pack-preview:active {
+  cursor: grabbing;
 }
 .pack-preview canvas {
   position: relative;

@@ -1,7 +1,7 @@
 "use client";
 
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { Bounds, useGLTF } from "@react-three/drei";
+import { Bounds, OrbitControls, useGLTF } from "@react-three/drei";
 import {
   Component,
   Suspense,
@@ -9,6 +9,8 @@ import {
   useMemo,
   useRef,
   useState,
+  type MouseEvent,
+  type PointerEvent,
   type ReactNode,
 } from "react";
 import { assetUrl } from "@/lib/manifest";
@@ -95,6 +97,8 @@ export function PackCardPreview({
   const [nearViewport, setNearViewport] = useState(false);
   const [active, setActive] = useState(false);
   const [index, setIndex] = useState(0);
+  const pointerStartRef = useRef<{ x: number; y: number } | null>(null);
+  const orbitDragRef = useRef(false);
   const urls = useMemo(() => modelFiles.map(assetUrl), [modelFiles]);
   const url = urls[index] ?? urls[0] ?? null;
   const nextUrl = urls.length > 1 ? urls[(index + 1) % urls.length] : null;
@@ -170,6 +174,36 @@ export function PackCardPreview({
     if (nextUrl) useGLTF.preload(nextUrl);
   }, [nextUrl, ready, url]);
 
+  const handlePointerDown = (event: PointerEvent<HTMLDivElement>) => {
+    setActive(true);
+    orbitDragRef.current = false;
+    pointerStartRef.current = { x: event.clientX, y: event.clientY };
+  };
+
+  const handlePointerMove = (event: PointerEvent<HTMLDivElement>) => {
+    const start = pointerStartRef.current;
+    if (!start) return;
+    const dx = event.clientX - start.x;
+    const dy = event.clientY - start.y;
+    if (dx * dx + dy * dy > 16) orbitDragRef.current = true;
+  };
+
+  const handlePointerUp = () => {
+    pointerStartRef.current = null;
+    if (orbitDragRef.current) {
+      window.setTimeout(() => {
+        orbitDragRef.current = false;
+      }, 0);
+    }
+  };
+
+  const handleClickCapture = (event: MouseEvent<HTMLDivElement>) => {
+    if (!orbitDragRef.current) return;
+    event.preventDefault();
+    event.stopPropagation();
+    orbitDragRef.current = false;
+  };
+
   const showCachedImage = !!previewImage && !active;
   const hasCanvasSlot = usePreviewCanvasBudget(
     budgetId,
@@ -180,6 +214,12 @@ export function PackCardPreview({
     <div
       ref={rootRef}
       className="pack-preview"
+      onClickCapture={handleClickCapture}
+      onPointerDown={handlePointerDown}
+      onPointerMove={handlePointerMove}
+      onPointerUp={handlePointerUp}
+      onPointerCancel={handlePointerUp}
+      onPointerLeave={handlePointerUp}
       role={label ? "img" : undefined}
       aria-label={label ? `${label} preview` : undefined}
       aria-hidden={label ? undefined : true}
@@ -211,6 +251,13 @@ export function PackCardPreview({
                   <Model url={url} autoRotate={active} />
                 </group>
               </Bounds>
+              <OrbitControls
+                enableDamping
+                enablePan={false}
+                enableZoom={false}
+                makeDefault
+                rotateSpeed={0.7}
+              />
               <PreviewCapture cacheKey={url} disabled={active} onCapture={setPreviewImage} />
             </PreviewErrorBoundary>
           </Suspense>
