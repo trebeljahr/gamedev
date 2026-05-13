@@ -62,6 +62,24 @@ type MusicTrackAsset = {
   notes: string;
 };
 
+type AudioAnalysisItem = {
+  path: string;
+  contentHash: string;
+  byteLength: number;
+  duration: number;
+  sampleRate: number | null;
+  channels: number | null;
+  analysisSampleRate: number;
+  bucketCount: number;
+  loudness: number[];
+  peak: number;
+  rms: number;
+};
+
+type AudioAnalysisCatalog = {
+  items?: Record<string, AudioAnalysisItem>;
+};
+
 type MediaAssets = {
   artSamples: ArtSample[];
   soundSamples: SoundSample[];
@@ -81,6 +99,7 @@ type Metadata = {
 const repoRoot = join(__dirname, "..", "..");
 const metadataPath = join(repoRoot, "metadata.json");
 const mediaAssetsPath = join(__dirname, "..", "src", "lib", "media-assets.json");
+const audioAnalysisPath = join(__dirname, "..", "src", "lib", "audio-analysis.json");
 const outPath = join(__dirname, "..", "src", "lib", "media-catalog.json");
 
 const NON_COMMERCIAL_ART_PACKS = new Set([
@@ -92,6 +111,14 @@ const NON_COMMERCIAL_PATH_PATTERNS = new Set([
   "3D/gltf/buster_drone/**",
   "3D/glb/model_{number}{letter}_-_*.glb",
 ]);
+
+async function readOptionalJson<T>(path: string, fallback: T): Promise<T> {
+  try {
+    return JSON.parse(await readFile(path, "utf8")) as T;
+  } catch {
+    return fallback;
+  }
+}
 
 function isNonCommercialText(value: string | undefined): boolean {
   if (!value) return false;
@@ -238,6 +265,8 @@ function userCollectionNotes(collectionId: string): string {
 async function main() {
   const metadata = JSON.parse(await readFile(metadataPath, "utf8")) as Metadata;
   const mediaAssets = JSON.parse(await readFile(mediaAssetsPath, "utf8")) as MediaAssets;
+  const audioAnalysis = await readOptionalJson<AudioAnalysisCatalog>(audioAnalysisPath, { items: {} });
+  const audioByPath = audioAnalysis.items ?? {};
 
   const artSamplesByPack = mediaAssets.artSamples.reduce((map, sample) => {
     const list = map.get(sample.packFolder) ?? [];
@@ -313,6 +342,7 @@ async function main() {
     packTitle?: string;
     notes?: string;
     url?: string;
+    audio?: AudioAnalysisItem;
   }>();
 
   for (const entry of musicMappings) {
@@ -324,6 +354,7 @@ async function main() {
       license: entry.license ?? (entry.source === "kevin-macleod" ? "CC-BY 4.0" : "Check source metadata"),
       notes: entry.notes,
       url: entry.url,
+      audio: audioByPath[entry.path_pattern],
     };
     musicTracksByPath.set(track.path, {
       ...track,
@@ -343,6 +374,7 @@ async function main() {
       packTitle: asset.packTitle,
       notes: mapping?.notes ?? asset.notes,
       url: mapping?.url,
+      audio: audioByPath[asset.path],
     };
     musicTracksByPath.set(track.path, {
       ...track,
@@ -403,6 +435,7 @@ async function main() {
       const collectionMetadata = buildSoundCollectionMetadata(collection);
       const samples = (soundSamplesByCollection.get(entry.path_pattern) ?? []).map((sample) => ({
         ...sample,
+        audio: audioByPath[sample.path],
         ...buildSoundSampleMetadata({
           collectionTitle: collection.title,
           label: sample.label,
@@ -431,6 +464,7 @@ async function main() {
           src: sample.src,
           license: collection.license,
           url: collection.url,
+          audio: audioByPath[sample.path],
         };
         return {
           ...track,
@@ -459,6 +493,7 @@ async function main() {
     const collectionMetadata = buildSoundCollectionMetadata(collection);
     const samples = rawSamples.map((sample) => ({
       ...sample,
+      audio: audioByPath[sample.path],
       ...buildSoundSampleMetadata({
         collectionTitle: collection.title,
         label: sample.label,
@@ -476,6 +511,7 @@ async function main() {
             src: sample.src,
             license: collection.license,
             url: collection.url,
+            audio: audioByPath[sample.path],
           };
           return {
             ...track,
@@ -523,6 +559,7 @@ async function main() {
       soundCollectionCount: soundCollections.length,
       soundSampleCount: soundCollections.reduce((count, collection) => count + collection.samples.length, 0),
       musicTrackCount: musicTracks.length,
+      audioAnalysisCount: Object.keys(audioByPath).length,
       sourceMappingCount: sourceMappings.length,
       artLicenseSplit: allowedArtPacks.reduce<Record<string, number>>((counts, pack) => {
         const key = artLicenseKey(pack.license_class);

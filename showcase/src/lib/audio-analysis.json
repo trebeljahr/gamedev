@@ -1,0 +1,6 @@
+{
+  "schema": "gamedev.audio-analysis.v1",
+  "bucketCount": 64,
+  "analysisSampleRate": 1000,
+  "items": {}
+}

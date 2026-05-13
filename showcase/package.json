@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "manifest": "tsx scripts/build-manifest.ts && tsx scripts/build-media-catalog.ts",
+    "manifest": "tsx scripts/build-manifest.ts && tsx scripts/build-audio-analysis.ts && tsx scripts/build-media-catalog.ts",
     "media:assets": "tsx scripts/build-media-assets.ts",
-    "media:catalog": "tsx scripts/build-media-assets.ts && tsx scripts/build-media-catalog.ts",
+    "media:audio": "tsx scripts/build-audio-analysis.ts",
+    "media:catalog": "tsx scripts/build-media-assets.ts && tsx scripts/build-audio-analysis.ts && tsx scripts/build-media-catalog.ts",
     "manifest:enrich": "tsx scripts/enrich-existing-manifest.ts",
     "predev": "pnpm manifest && node scripts/clean-dev-cache.mjs",
     "prebuild": "pnpm manifest",

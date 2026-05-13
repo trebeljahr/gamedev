@@ -29,6 +29,7 @@ export type MusicTrack = {
   source: string;
   path: string;
   src: string;
+  audio?: AudioAnalysis;
   license: string;
   tags: string[];
   searchText: string;
@@ -88,6 +89,7 @@ export type SoundSample = {
   collectionId: string;
   path: string;
   src: string;
+  audio?: AudioAnalysis;
   label: string;
   kind: "movement" | "combat" | "ui" | "ambient" | "effect";
   description: string;
@@ -96,6 +98,20 @@ export type SoundSample = {
   useCases: string[];
   tags: string[];
   searchText: string;
+};
+
+export type AudioAnalysis = {
+  path: string;
+  contentHash: string;
+  byteLength: number;
+  duration: number;
+  sampleRate: number | null;
+  channels: number | null;
+  analysisSampleRate: number;
+  bucketCount: number;
+  loudness: number[];
+  peak: number;
+  rms: number;
 };
 
 export type SourceMapping = {
@@ -125,6 +141,7 @@ type MediaCatalog = {
     soundCollectionCount: number;
     soundSampleCount: number;
     musicTrackCount: number;
+    audioAnalysisCount?: number;
     sourceMappingCount: number;
     artLicenseSplit: Record<string, number>;
   };
@@ -181,5 +198,6 @@ export const mediaStats = {
   soundCollectionCount: soundCollections.length,
   soundSampleCount: catalog.stats.soundSampleCount,
   musicTrackCount: musicTracks.length,
+  audioAnalysisCount: catalog.stats.audioAnalysisCount ?? 0,
   sourceMappingCount: catalog.stats.sourceMappingCount,
 };

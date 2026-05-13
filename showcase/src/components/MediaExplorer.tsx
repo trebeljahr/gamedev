@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { type CSSProperties, type ReactNode, useEffect, useMemo, useRef, useState } from "react";
 import { LicenseLink } from "@/components/LicenseLink";
-import type { ArtPack, ArtSample, MusicTrack, SoundCollection, SoundSample, SourceMapping } from "@/lib/media";
+import type { ArtPack, ArtSample, AudioAnalysis, MusicTrack, SoundCollection, SoundSample, SourceMapping } from "@/lib/media";
 import { artCreators } from "@/lib/media";
 import { isLikelyHybridSpriteAtlasPath, isLikelySpriteSheetPath, isLikelyTextureAtlasPath } from "@/lib/media-inference";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -97,111 +97,23 @@ function fallbackLoudnessEnvelope(seed: string, bucketCount: number): number[] {
   });
 }
 
-function normalizeLoudnessEnvelope(values: number[]): number[] {
-  const sorted = values.filter((value) => Number.isFinite(value)).sort((a, b) => a - b);
-  const reference = sorted[Math.max(0, Math.floor(sorted.length * 0.95) - 1)] || sorted.at(-1) || 1;
-  return values.map((value) => {
-    const normalized = clamp(value / reference, 0, 1);
-    return clamp(0.1 + Math.pow(normalized, 0.56) * 0.9, 0.1, 1);
+function resampleLoudnessEnvelope(values: number[], bucketCount: number): number[] {
+  if (values.length === bucketCount) return values.map((value) => clamp(value, 0.1, 1));
+  if (values.length === 0) return [];
+  return Array.from({ length: bucketCount }, (_, index) => {
+    const position = bucketCount <= 1 ? 0 : (index / (bucketCount - 1)) * (values.length - 1);
+    const left = Math.floor(position);
+    const right = Math.min(values.length - 1, left + 1);
+    const mix = position - left;
+    return clamp(values[left] * (1 - mix) + values[right] * mix, 0.1, 1);
   });
 }
 
-function buildLoudnessEnvelope(buffer: AudioBuffer, bucketCount: number): number[] {
-  const raw = new Array<number>(bucketCount).fill(0);
-  const channels = Array.from({ length: buffer.numberOfChannels }, (_, channel) => buffer.getChannelData(channel));
-
-  for (let bucket = 0; bucket < bucketCount; bucket += 1) {
-    const start = Math.floor((bucket / bucketCount) * buffer.length);
-    const end = Math.max(start + 1, Math.floor(((bucket + 1) / bucketCount) * buffer.length));
-    const step = Math.max(1, Math.floor((end - start) / 1400));
-    let sumSquares = 0;
-    let peak = 0;
-    let sampleCount = 0;
-
-    for (let index = start; index < end; index += step) {
-      for (const channelData of channels) {
-        const sample = Math.abs(channelData[index] ?? 0);
-        sumSquares += sample * sample;
-        peak = Math.max(peak, sample);
-        sampleCount += 1;
-      }
-    }
-
-    const rms = sampleCount > 0 ? Math.sqrt(sumSquares / sampleCount) : 0;
-    raw[bucket] = rms * 0.78 + peak * 0.22;
-  }
-
-  return normalizeLoudnessEnvelope(raw);
-}
-
-type AudioWindow = Window & { webkitAudioContext?: typeof AudioContext };
-
-let sharedAudioContext: AudioContext | null = null;
-const loudnessEnvelopeCache = new Map<string, Promise<number[]>>();
-
-function getSharedAudioContext(): AudioContext | null {
-  if (typeof window === "undefined") return null;
-  const AudioContextCtor = window.AudioContext ?? (window as AudioWindow).webkitAudioContext;
-  if (!AudioContextCtor) return null;
-  sharedAudioContext ??= new AudioContextCtor();
-  return sharedAudioContext;
-}
-
-function loadLoudnessEnvelope(src: string, bucketCount: number): Promise<number[]> {
-  const key = `${bucketCount}:${src}`;
-  const cached = loudnessEnvelopeCache.get(key);
-  if (cached) return cached;
-
-  const promise = (async () => {
-    const context = getSharedAudioContext();
-    if (!context) throw new Error("AudioContext is not available");
-    const response = await fetch(audioAnalysisUrl(src), { cache: "force-cache" });
-    if (!response.ok) throw new Error(`Audio fetch failed: ${response.status}`);
-    const buffer = await context.decodeAudioData(await response.arrayBuffer());
-    return buildLoudnessEnvelope(buffer, bucketCount);
-  })().catch((error) => {
-    loudnessEnvelopeCache.delete(key);
-    throw error;
-  });
-
-  loudnessEnvelopeCache.set(key, promise);
-  return promise;
-}
-
-function audioAnalysisUrl(src: string): string {
-  if (typeof window === "undefined") return src;
-  const url = new URL(src, window.location.href);
-  if (url.origin === window.location.origin) return url.href;
-  return `/api/audio-proxy?src=${encodeURIComponent(url.href)}`;
-}
-
-function useLoudnessEnvelope(src: string | undefined, seed: string, bucketCount: number): number[] {
-  const fallback = useMemo(() => fallbackLoudnessEnvelope(seed, bucketCount), [bucketCount, seed]);
-  const [envelope, setEnvelope] = useState(fallback);
-
-  useEffect(() => {
-    let cancelled = false;
-    setEnvelope(fallback);
-    if (!src) {
-      return () => {
-        cancelled = true;
-      };
-    }
-
-    void loadLoudnessEnvelope(src, bucketCount)
-      .then((nextEnvelope) => {
-        if (!cancelled) setEnvelope(nextEnvelope);
-      })
-      .catch(() => {
-        if (!cancelled) setEnvelope(fallback);
-      });
-
-    return () => {
-      cancelled = true;
-    };
-  }, [bucketCount, fallback, src]);
-
-  return envelope;
+function useLoudnessEnvelope(seed: string, bucketCount: number, audio?: AudioAnalysis): number[] {
+  return useMemo(() => {
+    if (audio?.loudness?.length) return resampleLoudnessEnvelope(audio.loudness, bucketCount);
+    return fallbackLoudnessEnvelope(seed, bucketCount);
+  }, [audio, bucketCount, seed]);
 }
 
 function licenseBucket(license: string): string {
@@ -1672,6 +1584,7 @@ function AudioPlayer({
   loop = false,
   playSignal = 0,
   compact = false,
+  audio,
 }: {
   src: string | undefined;
   title: string;
@@ -1681,13 +1594,14 @@ function AudioPlayer({
   loop?: boolean;
   playSignal?: number;
   compact?: boolean;
+  audio?: AudioAnalysis;
 }) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [playing, setPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const barCount = compact ? 48 : 56;
-  const loudnessEnvelope = useLoudnessEnvelope(src, `${src ?? ""}|${title}|${detail ?? ""}`, barCount);
+  const loudnessEnvelope = useLoudnessEnvelope(`${src ?? ""}|${title}`, barCount, audio);
   const progress = duration > 0 ? (currentTime / duration) * 100 : 0;
   const progressStyle = { "--progress": `${progress}%` } as CSSProperties;
   const activeBar =
@@ -1846,6 +1760,7 @@ function SoundPad({ collection }: { collection: SoundCollection }) {
         rate={rate}
         loop={loop}
         playSignal={playSignal}
+        audio={sample?.audio}
       />
       <div className="sound-controls">
         <label>
@@ -2338,6 +2253,7 @@ export function MediaExplorer({
                             </>
                           }
                           compact
+                          audio={track.audio}
                         />
                         <p>{track.description}</p>
                       </article>
@@ -2373,6 +2289,7 @@ export function MediaExplorer({
                         </>
                       }
                       compact
+                      audio={track.audio}
                     />
                     <p>{track.description}</p>
                     <div className="inline-tags">
