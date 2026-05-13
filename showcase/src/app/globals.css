@@ -1624,6 +1624,7 @@ select:focus-visible {
 .landing-proof,
 .landing-showcase,
 .landing-workflow,
+.landing-credits,
 .landing-final {
   width: min(1180px, calc(100% - 44px));
   margin: 0 auto;
@@ -1639,6 +1640,7 @@ select:focus-visible {
 .landing-proof h2,
 .landing-showcase h2,
 .landing-workflow h2,
+.landing-credits h2,
 .landing-final h2 {
   margin: 8px 0 0;
   font-size: clamp(32px, 5vw, 64px);
@@ -1743,6 +1745,55 @@ select:focus-visible {
   color: var(--muted);
   line-height: 1.55;
 }
+.landing-credits {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.82fr) minmax(0, 1.18fr);
+  gap: clamp(28px, 6vw, 72px);
+  align-items: start;
+  padding: clamp(58px, 9vw, 104px) 0;
+  border-bottom: 1px solid var(--border);
+}
+.landing-credit-copy {
+  display: grid;
+  gap: 22px;
+}
+.landing-credit-copy p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.58;
+}
+.landing-credit-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.landing-credit-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 11px;
+  color: rgba(232,230,227,0.82);
+  background: rgba(255,255,255,0.055);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+}
+.landing-credit-links a:hover {
+  color: var(--accent);
+  background: rgba(255,216,77,0.1);
+  border-color: rgba(255,216,77,0.38);
+}
+.landing-inline-link {
+  justify-self: start;
+  color: var(--accent);
+  font-weight: 750;
+}
+.landing-inline-link:hover {
+  color: #fff1a5;
+}
 .landing-final {
   min-height: 46vh;
   display: flex;
@@ -1753,6 +1804,42 @@ select:focus-visible {
 }
 .landing-final h2 {
   max-width: 780px;
+}
+.landing-footer {
+  width: min(1180px, calc(100% - 44px));
+  margin: 0 auto;
+  padding: 24px 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+  color: rgba(232,230,227,0.58);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  font-size: 13px;
+}
+.landing-footer div,
+.landing-footer p {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0;
+}
+.landing-footer a {
+  color: rgba(232,230,227,0.82);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: rgba(255,216,77,0.42);
+  text-underline-offset: 4px;
+}
+.landing-footer a:hover {
+  color: var(--accent);
+}
+.landing-heart {
+  width: 15px;
+  height: 15px;
+  color: #e8839b;
+  animation: landing-heartbeat 2s ease-in-out infinite;
 }
 
 @keyframes landing-enter {
@@ -1781,6 +1868,19 @@ select:focus-visible {
     transform: rotate(-5deg) translate3d(-18px, 16px, 0);
   }
 }
+@keyframes landing-heartbeat {
+  0%,
+  45%,
+  100% {
+    transform: scale(1);
+  }
+  12% {
+    transform: scale(1.18);
+  }
+  24% {
+    transform: scale(0.96);
+  }
+}
 
 @media (prefers-reduced-motion: reduce) {
   .library-hero-copy,
@@ -1788,11 +1888,13 @@ select:focus-visible {
   .landing-image-field,
   .landing-orbit,
   .landing-hero-copy,
-  .landing-stats {
+  .landing-stats,
+  .landing-heart {
     animation: none;
   }
   .landing-button,
-  .landing-coverage div {
+  .landing-coverage div,
+  .landing-credit-links a {
     transition: none;
   }
 }
@@ -2004,11 +2106,13 @@ select:focus-visible {
   .landing-proof,
   .landing-showcase,
   .landing-workflow,
+  .landing-credits,
   .landing-final {
     width: min(100% - 36px, 1180px);
   }
   .landing-proof,
-  .landing-showcase {
+  .landing-showcase,
+  .landing-credits {
     grid-template-columns: 1fr;
   }
   .landing-proof {
@@ -2017,6 +2121,7 @@ select:focus-visible {
   .landing-proof h2,
   .landing-showcase h2,
   .landing-workflow h2,
+  .landing-credits h2,
   .landing-final h2 {
     font-size: clamp(30px, 10vw, 46px);
   }
@@ -2038,5 +2143,10 @@ select:focus-visible {
   .landing-final {
     display: grid;
     min-height: 38vh;
+  }
+  .landing-footer {
+    width: min(100% - 36px, 1180px);
+    display: grid;
+    justify-items: start;
   }
 }
