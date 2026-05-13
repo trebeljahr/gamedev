@@ -98,10 +98,6 @@ function Stage() {
           metalness={0.02}
         />
       </mesh>
-      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.015, 0]}>
-        <ringGeometry args={[2.55, 2.66, 48]} />
-        <meshBasicMaterial color="#ffd84d" transparent opacity={0.52} />
-      </mesh>
     </group>
   );
 }
