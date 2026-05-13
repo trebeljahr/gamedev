@@ -94,6 +94,8 @@
 node_modules/
 .pnpm-store/
 .next/
+.next-dev-*/
+.next-dev.lock.json
 out/
 dist/
 build/
