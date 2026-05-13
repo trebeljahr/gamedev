@@ -12,6 +12,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hatchkit/dev-plugin-next": "^0.1.43",
     "@react-three/drei": "^10.0.0",
     "@react-three/fiber": "^9.0.0",
     "case": "^1.6.3",

@@ -16,4 +16,10 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+// Tailscale dev URL wiring (https://gamedev.local.ricoslabs.com/).
+// hatchkit's auto-patcher only handles ESM `export default` shapes; this
+// file is CJS, so the wrap goes here by hand.
+module.exports = async () => {
+  const { withLocalDev } = await import("@hatchkit/dev-plugin-next");
+  return withLocalDev(nextConfig, { slug: "gamedev" });
+};

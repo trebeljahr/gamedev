@@ -10,6 +10,9 @@ importers:
 
   showcase:
     dependencies:
+      '@hatchkit/dev-plugin-next':
+        specifier: ^0.1.43
+        version: 0.1.45(next@15.5.18(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       '@react-three/drei':
         specifier: ^10.0.0
         version: 10.7.7(@react-three/fiber@9.6.1(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.169.0))(@types/react@18.3.28)(@types/three@0.169.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.169.0)
@@ -242,6 +245,14 @@ packages:
 
   '@gltf-transform/core@4.3.0':
     resolution: {integrity: sha512-ZeaQfszGJ9LYwELszu45CuDQCsE26lJNNe36FVmN8xclaT6WDdCj7fwGpQXo0/l/YgAVAHX+uO7YNBW75/SRYw==}
+
+  '@hatchkit/dev-plugin-next@0.1.45':
+    resolution: {integrity: sha512-3P/PYrvYpbmubNLe1dVUvi45/PLGJZplGifVW8x+qJ1wgBPGrYZQrqcPVgoSjAE0CTxrXBlwEJqR0vqWQ6B0PA==}
+    peerDependencies:
+      next: '>=14'
+
+  '@hatchkit/dev-shared@0.1.45':
+    resolution: {integrity: sha512-2wwnLkk7Ax25u47f5sBdZpCZU9BVOx0gAyLENKHebT4L1TDhcntGzrkptlLyMTXEUjwkukuKLgzi7tOsAFnijg==}
 
   '@img/colour@1.1.0':
     resolution: {integrity: sha512-Td76q7j57o/tLVdgS746cYARfSyxk8iEfRxewL9h4OMzYhbW4TAcppl0mT4eyqXddh6L/jwoM75mo7ixa/pCeQ==}
@@ -1345,6 +1356,13 @@ snapshots:
   '@gltf-transform/core@4.3.0':
     dependencies:
       property-graph: 4.1.0
+
+  '@hatchkit/dev-plugin-next@0.1.45(next@15.5.18(react-dom@18.3.1(react@18.3.1))(react@18.3.1))':
+    dependencies:
+      '@hatchkit/dev-shared': 0.1.45
+      next: 15.5.18(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+
+  '@hatchkit/dev-shared@0.1.45': {}
 
   '@img/colour@1.1.0':
     optional: true
