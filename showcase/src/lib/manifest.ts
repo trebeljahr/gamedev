@@ -1,9 +1,18 @@
 import data from "./manifest.json";
+import type { ModelCategory } from "./catalog-metadata";
 
 export type Model = {
   name: string;
   file: string;
   label: string;
+  title: string;
+  description: string;
+  category: ModelCategory;
+  subcategory: string;
+  style: string[];
+  themes: string[];
+  tags: string[];
+  searchText: string;
   // World-space XZ footprint + height of the model's static bbox, computed
   // by scripts/build-manifest.ts. Used by /all to size the base plate and to
   // pack cells without normalising every model into a fixed unit cube.
@@ -19,6 +28,15 @@ export type Pack = {
   vendor: string;
   pack: string;
   label: string;
+  title: string;
+  description: string;
+  categories: ModelCategory[];
+  style: string[];
+  themes: string[];
+  tags: string[];
+  source: string;
+  license: string;
+  searchText: string;
   count: number;
   models: Model[];
 };

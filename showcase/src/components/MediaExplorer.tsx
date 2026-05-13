@@ -502,6 +502,7 @@ function ArtWorkbench({ pack }: { pack: ArtPack }) {
           <div>
             <div className="vendor-tag">{pack.theme}</div>
             <h3>{pack.title}</h3>
+            <p className="workbench-description">{pack.description}</p>
           </div>
           <div className="media-detail">{pack.author} · {pack.samples.length} preview files</div>
         </div>
@@ -561,7 +562,7 @@ function ArtPackCard({
         <div className="art-card-body">
           <strong>{pack.title}</strong>
           <span>{pack.author} · {licenseBucket(pack.license_class)}</span>
-          <small>{pack.samples.length > 0 ? `${pack.samples.length} previews` : "metadata only"}</small>
+          <small>{pack.tags.slice(0, 3).join(" · ")}</small>
         </div>
       </button>
       <div className="media-actions">
@@ -673,7 +674,7 @@ export function MediaExplorer({
     return soundCollections.filter((item) => {
       if (sourceFilter !== "all" && item.source !== sourceFilter) return false;
       if (!q) return true;
-      return `${item.title} ${item.path} ${item.license} ${item.notes}`.toLowerCase().includes(q);
+      return item.searchText.includes(q);
     });
   }, [query, soundCollections, sourceFilter]);
 
@@ -683,9 +684,7 @@ export function MediaExplorer({
       if (licenseFilter !== "all" && licenseBucket(pack.license_class) !== licenseFilter) return false;
       if (creatorFilter !== "all" && pack.author !== creatorFilter) return false;
       if (!q) return true;
-      return `${pack.title} ${pack.author} ${pack.folder} ${pack.license_class} ${pack.theme}`
-        .toLowerCase()
-        .includes(q);
+      return pack.searchText.includes(q);
     });
   }, [artPacks, creatorFilter, licenseFilter, query]);
 
@@ -820,7 +819,7 @@ export function MediaExplorer({
                     <div>
                       <div className="media-title">{item.title}</div>
                       <div className="media-detail">{item.path}</div>
-                      {item.notes && <p>{item.notes}</p>}
+                      <p>{item.description}</p>
                     </div>
                   </button>
                   <div className="media-actions">

@@ -1,14 +1,9 @@
 import Link from "next/link";
 import { manifest } from "@/lib/manifest";
 import { mediaStats } from "@/lib/media";
+import { CatalogSearch } from "@/components/CatalogSearch";
 
 export default function HomePage() {
-  const byVendor = new Map<string, typeof manifest.packs>();
-  for (const p of manifest.packs) {
-    if (!byVendor.has(p.vendor)) byVendor.set(p.vendor, []);
-    byVendor.get(p.vendor)!.push(p);
-  }
-
   const totalModels = manifest.packs.reduce((n, p) => n + p.count, 0);
   const totalMediaCollections =
     mediaStats.soundCollectionCount + mediaStats.musicTrackCount + mediaStats.artPackCount;
@@ -66,21 +61,7 @@ export default function HomePage() {
           <Link href="/all">Open all-model viewer</Link>
         </section>
 
-        {[...byVendor.entries()].map(([vendor, packs]) => (
-          <section className="vendor-section" key={vendor}>
-            <h2>{vendor}</h2>
-            <div className="pack-grid">
-              {packs.map((p) => (
-                <Link key={p.id} className="pack-card" href={`/${p.vendor}/${p.pack}`}>
-                  <div className="pack-label">{p.label}</div>
-                  <div className="pack-count">
-                    {p.count} {p.count === 1 ? "model" : "models"}
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </section>
-        ))}
+        <CatalogSearch manifest={manifest} showHeader={false} />
       </main>
     </>
   );

@@ -716,7 +716,7 @@ function ModelPanel({
   onClose: () => void;
 }) {
   const license = licenseForVendor(slot.pack.vendor);
-  const downloadName = `${slot.model.label.replace(/\s+/g, "_")}.glb`;
+  const downloadName = `${slot.model.title.replace(/\s+/g, "_")}.glb`;
   return (
     <div
       style={{
@@ -757,7 +757,7 @@ function ModelPanel({
               wordBreak: "break-word",
             }}
           >
-            {slot.model.label}
+            {slot.model.title}
           </div>
         </div>
         <button
@@ -796,6 +796,28 @@ function ModelPanel({
       >
         Download GLB
       </a>
+
+      <Section title="Metadata">
+        <div style={{ color: "#cfcfd4", lineHeight: 1.45 }}>
+          {slot.model.description}
+        </div>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 5, marginTop: 8 }}>
+          {slot.model.tags.slice(0, 8).map((tag) => (
+            <span
+              key={tag}
+              style={{
+                border: "1px solid rgba(255,255,255,0.12)",
+                borderRadius: 999,
+                color: "#8a8a93",
+                fontSize: 11,
+                padding: "2px 6px",
+              }}
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      </Section>
 
       <div style={{ fontSize: 11, color: "#8a8a93" }}>
         File:{" "}

@@ -21,6 +21,12 @@ import { existsSync } from "node:fs";
 import { readdir, readFile, stat, writeFile, mkdir } from "node:fs/promises";
 import { dirname, join, relative } from "node:path";
 import { NodeIO, getBounds } from "@gltf-transform/core";
+import {
+  buildModelMetadata,
+  buildPackMetadata,
+  cleanAssetTitle,
+  type ModelCategory,
+} from "../src/lib/catalog-metadata";
 
 const SHOWCASE_DIR = join(__dirname, "..");
 const REPO_ROOT = join(SHOWCASE_DIR, "..");
@@ -58,6 +64,14 @@ type Model = {
   name: string;
   file: string;
   label: string;
+  title: string;
+  description: string;
+  category: ModelCategory;
+  subcategory: string;
+  style: string[];
+  themes: string[];
+  tags: string[];
+  searchText: string;
   size: Size;
   minY: number;
   cxz: [number, number];
@@ -67,6 +81,15 @@ type Pack = {
   vendor: string;
   pack: string;
   label: string;
+  title: string;
+  description: string;
+  categories: ModelCategory[];
+  style: string[];
+  themes: string[];
+  tags: string[];
+  source: string;
+  license: string;
+  searchText: string;
   count: number;
   models: Model[];
 };
@@ -102,11 +125,7 @@ async function walk(dir: string, predicate: (name: string) => boolean): Promise<
 }
 
 function humanize(s: string): string {
-  return s
-    .replace(/[-_]+/g, " ")
-    .replace(/\b\w/g, (c) => c.toUpperCase())
-    .replace(/\s+/g, " ")
-    .trim();
+  return cleanAssetTitle(s);
 }
 
 function urlFor(absPath: string, base: string, urlPrefix: string): string {
@@ -451,10 +470,20 @@ async function main() {
         }
         nextCache[a] = entry;
         const name = modelKey(a.split("/").pop()!);
+        const file = urlFor(a, base, urlPrefix);
+        const metadata = buildModelMetadata({
+          vendor,
+          pack,
+          packTitle: humanize(pack),
+          name,
+          file,
+          size: entry.size,
+        });
         models.push({
           name,
-          file: urlFor(a, base, urlPrefix),
-          label: humanize(name),
+          file,
+          label: metadata.title,
+          ...metadata,
           size: entry.size,
           minY: entry.minY,
           cxz: entry.cxz,
@@ -465,11 +494,19 @@ async function main() {
       if (usedSource) stats.source += models.length;
       else stats.optimized += models.length;
 
+      const packMetadata = buildPackMetadata({
+        vendor,
+        pack,
+        count: models.length,
+        models,
+      });
+
       packs.push({
         id: `${vendor}/${pack}`,
         vendor,
         pack,
-        label: humanize(pack),
+        label: packMetadata.title,
+        ...packMetadata,
         count: models.length,
         models,
       });

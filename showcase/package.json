@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "manifest": "tsx scripts/build-manifest.ts",
+    "manifest:enrich": "tsx scripts/enrich-existing-manifest.ts",
     "predev": "pnpm manifest",
     "prebuild": "pnpm manifest",
     "dev": "next dev --port 3679",

@@ -13,7 +13,14 @@ const Viewer = dynamic(() => import("./Viewer").then((m) => m.Viewer), {
 
 export function PackViewer({ pack }: { pack: Pack }) {
   const [index, setIndex] = useState(0);
+  const [query, setQuery] = useState("");
   const model = pack.models[index];
+  const normalizedQuery = query.trim().toLowerCase();
+  const visibleModels = normalizedQuery
+    ? pack.models
+        .map((item, itemIndex) => ({ item, itemIndex }))
+        .filter(({ item }) => normalizedQuery.split(/\s+/).every((term) => item.searchText.includes(term)))
+    : pack.models.map((item, itemIndex) => ({ item, itemIndex }));
 
   const next = useCallback(() => {
     setIndex((i) => (i + 1) % pack.models.length);
@@ -48,29 +55,48 @@ export function PackViewer({ pack }: { pack: Pack }) {
           ← all packs
         </Link>
         <div className="vendor-tag">{pack.vendor}</div>
-        <h1>{pack.label}</h1>
+        <h1>{pack.title}</h1>
+        <p className="pack-view-description">{pack.description}</p>
+        <div className="pack-view-tags">
+          {pack.tags.slice(0, 6).map((tag) => (
+            <span key={tag}>{tag}</span>
+          ))}
+        </div>
+        <input
+          className="model-search"
+          type="search"
+          value={query}
+          onChange={(event) => setQuery(event.target.value)}
+          placeholder="Search models in pack"
+        />
         <ul className="model-list">
-          {pack.models.map((m, i) => (
+          {visibleModels.map(({ item: m, itemIndex: i }) => (
             <li key={m.file}>
               <button
                 type="button"
                 className={i === index ? "active" : ""}
                 onClick={() => setIndex(i)}
               >
-                {m.label}
+                {m.title}
               </button>
             </li>
           ))}
+          {visibleModels.length === 0 && <li className="empty-model-list">No model matches.</li>}
         </ul>
       </aside>
       <main>
         {model && <Viewer key={model.file} url={assetUrl(model.file)} />}
         <div className="viewer-bar">
           <div className="name">
-            {model?.label}{" "}
+            {model?.title}{" "}
             <span style={{ color: "rgba(255,255,255,0.6)", fontSize: 12 }}>
               ({index + 1}/{pack.models.length})
             </span>
+            {model && (
+              <small>
+                {model.category} · {model.tags.slice(0, 4).join(" · ")}
+              </small>
+            )}
           </div>
           <div className="nav">
             <button type="button" onClick={prev} aria-label="Previous">

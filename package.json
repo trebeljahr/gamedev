@@ -8,6 +8,7 @@
     "start": "pnpm --filter 3d-assets-showcase start",
     "lint": "pnpm --filter 3d-assets-showcase lint",
     "manifest": "pnpm --filter 3d-assets-showcase manifest",
+    "manifest:enrich": "pnpm --filter 3d-assets-showcase manifest:enrich",
     "assets:serve": "node scripts/serve-assets.mjs",
     "assets:sync": "dotenvx run -f .env.production -f .env.local --ignore=MISSING_ENV_FILE --overload --quiet -- bash scripts/sync-assets.sh",
     "assets:sync:dry": "dotenvx run -f .env.production -f .env.local --ignore=MISSING_ENV_FILE --overload --quiet -- bash scripts/sync-assets.sh --dry-run"

@@ -1,6 +1,11 @@
 import metadata from "../../../metadata.json";
 import mediaAssets from "./media-assets.json";
 import { assetUrl } from "./manifest";
+import {
+  buildArtPackMetadata,
+  buildMusicTrackMetadata,
+  buildSoundCollectionMetadata,
+} from "./catalog-metadata";
 
 type MetadataMapping = {
   path_pattern: string;
@@ -16,20 +21,26 @@ type MetadataMapping = {
 export type SoundCollection = {
   id: string;
   title: string;
+  description: string;
   source: string;
   path: string;
   license: string;
   notes: string;
+  tags: string[];
+  searchText: string;
   samples: SoundSample[];
   url?: string;
 };
 
 export type MusicTrack = {
   title: string;
+  description: string;
   source: string;
   path: string;
   src: string;
   license: string;
+  tags: string[];
+  searchText: string;
   url?: string;
 };
 
@@ -43,6 +54,9 @@ export type ArtPack = {
   license_class: string;
   attribution: string;
   theme: ArtTheme;
+  description: string;
+  tags: string[];
+  searchText: string;
   samples: ArtSample[];
 };
 
@@ -79,6 +93,8 @@ type MediaAssets = {
   soundSamples: SoundSample[];
 };
 
+type RawArtPack = Omit<ArtPack, "theme" | "description" | "tags" | "searchText" | "samples">;
+
 const mappings = metadata.mappings as MetadataMapping[];
 
 function labelFromPath(path: string): string {
@@ -98,7 +114,7 @@ function normalizeCreator(value: string): string {
   return value.trim().toLowerCase().replace(/[\s_-]+/g, "-");
 }
 
-function artThemeFor(pack: Omit<ArtPack, "theme" | "samples">): ArtTheme {
+function artThemeFor(pack: RawArtPack): ArtTheme {
   const text = `${pack.folder} ${pack.title}`.toLowerCase();
   if (/(icon|item|coin|chest|pickup|potion|weapon|inventory|fable)/.test(text)) {
     return "Icons & Items";
@@ -139,14 +155,20 @@ const soundSamplesByCollection = typedMediaAssets.soundSamples.reduce((map, samp
 
 export const musicTracks: MusicTrack[] = mappings
   .filter((entry) => entry.path_pattern.startsWith("sounds/music/"))
-  .map((entry) => ({
-    title: entry.track_title ?? labelFromPath(entry.path_pattern),
-    source: "Kevin MacLeod",
-    path: entry.path_pattern,
-    src: assetUrl(`/${entry.path_pattern}`),
-    license: "CC-BY 4.0",
-    url: entry.url,
-  }));
+  .map((entry) => {
+    const track = {
+      title: entry.track_title ?? labelFromPath(entry.path_pattern),
+      source: "Kevin MacLeod",
+      path: entry.path_pattern,
+      src: assetUrl(`/${entry.path_pattern}`),
+      license: "CC-BY 4.0",
+      url: entry.url,
+    };
+    return {
+      ...track,
+      ...buildMusicTrackMetadata(track),
+    };
+  });
 
 export const soundCollections: SoundCollection[] = mappings
   .filter(
@@ -154,26 +176,38 @@ export const soundCollections: SoundCollection[] = mappings
       entry.path_pattern.startsWith("sounds/") &&
       !entry.path_pattern.startsWith("sounds/music/"),
   )
-  .map((entry) => ({
-    id: entry.path_pattern,
-    title: entry.pack_url ? labelFromPath(entry.path_pattern) : labelFromPath(entry.source),
-    source: entry.source === "freesound" ? "Freesound" : "Pixabay",
-    path: entry.path_pattern,
-    license: entry.license ?? (entry.source === "pixabay" ? "Pixabay License" : "Varies"),
-    notes:
-      entry.notes ??
-      (entry.author ? `Pack by ${entry.author}. Check the source before shipping.` : ""),
-    url: entry.pack_url,
-    samples: soundSamplesByCollection.get(entry.path_pattern) ?? [],
-  }));
+  .map((entry) => {
+    const collection = {
+      id: entry.path_pattern,
+      title: entry.pack_url ? labelFromPath(entry.path_pattern) : labelFromPath(entry.source),
+      source: entry.source === "freesound" ? "Freesound" : "Pixabay",
+      path: entry.path_pattern,
+      license: entry.license ?? (entry.source === "pixabay" ? "Pixabay License" : "Varies"),
+      notes:
+        entry.notes ??
+        (entry.author ? `Pack by ${entry.author}. Check the source before shipping.` : ""),
+      url: entry.pack_url,
+      samples: soundSamplesByCollection.get(entry.path_pattern) ?? [],
+    };
+    return {
+      ...collection,
+      ...buildSoundCollectionMetadata(collection),
+    };
+  });
 
-export const artPacks: ArtPack[] = (metadata["2d_packs"].packs as Array<Omit<ArtPack, "theme" | "samples">>).map(
-  (pack) => ({
-    ...pack,
-    author: pack.author.trim(),
-    theme: artThemeFor(pack),
-    samples: artSamplesByPack.get(pack.folder) ?? [],
-  }),
+export const artPacks: ArtPack[] = (metadata["2d_packs"].packs as RawArtPack[]).map(
+  (pack) => {
+    const normalizedPack = {
+      ...pack,
+      author: pack.author.trim(),
+      theme: artThemeFor(pack),
+    };
+    return {
+      ...normalizedPack,
+      ...buildArtPackMetadata(normalizedPack),
+      samples: artSamplesByPack.get(pack.folder) ?? [],
+    };
+  },
 );
 
 export const artCreators = Array.from(new Set(artPacks.map((pack) => pack.author)))
