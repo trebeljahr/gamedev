@@ -605,15 +605,38 @@ function detectGridFromImageData(imageData: ImageData, options: { sequenceMode?:
   return { cols: 1, rows: 1, confidence: 0, mode: "static" };
 }
 
-function computeTrimRect(imageData: ImageData, source: SpriteRect, bg: ReturnType<typeof sampleImageBackground>): SpriteRect {
-  const { width, data } = imageData;
-  let minX = source.x + source.w;
-  let minY = source.y + source.h;
-  let maxX = source.x - 1;
-  let maxY = source.y - 1;
+function clampRectToImage(source: SpriteRect, imageWidth: number, imageHeight: number): SpriteRect {
+  const x = Math.max(0, Math.min(imageWidth - 1, source.x));
+  const y = Math.max(0, Math.min(imageHeight - 1, source.y));
+  const maxX = Math.max(x + 1, Math.min(imageWidth, source.x + source.w));
+  const maxY = Math.max(y + 1, Math.min(imageHeight, source.y + source.h));
+  return { x, y, w: maxX - x, h: maxY - y };
+}
 
-  for (let y = source.y; y < source.y + source.h; y++) {
-    for (let x = source.x; x < source.x + source.w; x++) {
+function expandRectWithinImage(source: SpriteRect, imageWidth: number, imageHeight: number, padding: number): SpriteRect {
+  if (padding <= 0) return clampRectToImage(source, imageWidth, imageHeight);
+  return clampRectToImage(
+    {
+      x: source.x - padding,
+      y: source.y - padding,
+      w: source.w + padding * 2,
+      h: source.h + padding * 2,
+    },
+    imageWidth,
+    imageHeight,
+  );
+}
+
+function computeTrimRect(imageData: ImageData, source: SpriteRect, bg: ReturnType<typeof sampleImageBackground>, padding = 0): SpriteRect {
+  const { width, data } = imageData;
+  const bounds = clampRectToImage(source, imageData.width, imageData.height);
+  let minX = bounds.x + bounds.w;
+  let minY = bounds.y + bounds.h;
+  let maxX = bounds.x - 1;
+  let maxY = bounds.y - 1;
+
+  for (let y = bounds.y; y < bounds.y + bounds.h; y++) {
+    for (let x = bounds.x; x < bounds.x + bounds.w; x++) {
       if (isContentPixel(data, (y * width + x) * 4, bg)) {
         if (x < minX) minX = x;
         if (y < minY) minY = y;
@@ -623,8 +646,13 @@ function computeTrimRect(imageData: ImageData, source: SpriteRect, bg: ReturnTyp
     }
   }
 
-  if (maxX < minX || maxY < minY) return source;
-  return { x: minX, y: minY, w: maxX - minX + 1, h: maxY - minY + 1 };
+  if (maxX < minX || maxY < minY) return bounds;
+  return expandRectWithinImage(
+    { x: minX, y: minY, w: maxX - minX + 1, h: maxY - minY + 1 },
+    imageData.width,
+    imageData.height,
+    padding,
+  );
 }
 
 function drawCheckerboard(context: CanvasRenderingContext2D, width: number, height: number, background = "#15171c") {
@@ -646,17 +674,22 @@ function drawImageContained(context: CanvasRenderingContext2D, image: HTMLImageE
   context.drawImage(image, (width - w) / 2, (height - h) / 2, w, h);
 }
 
+function spriteGridCellRect(imageWidth: number, imageHeight: number, cols: number, rows: number, index: number): SpriteRect {
+  const col = index % cols;
+  const row = Math.floor(index / cols);
+  const x = Math.floor((col * imageWidth) / cols);
+  const y = Math.floor((row * imageHeight) / rows);
+  const nextX = Math.floor(((col + 1) * imageWidth) / cols);
+  const nextY = Math.floor(((row + 1) * imageHeight) / rows);
+  return { x, y, w: Math.max(1, nextX - x), h: Math.max(1, nextY - y) };
+}
+
 function framesForGrid(imageData: ImageData, grid: SpriteGrid): SpriteRect[] {
   if (grid.frames) return grid.frames;
   if (!isUsableSpriteGrid(grid)) return [];
-  const frameWidth = Math.max(1, Math.floor(imageData.width / grid.cols));
-  const frameHeight = Math.max(1, Math.floor(imageData.height / grid.rows));
-  return Array.from({ length: grid.cols * grid.rows }, (_, index) => ({
-    x: (index % grid.cols) * frameWidth,
-    y: Math.floor(index / grid.cols) * frameHeight,
-    w: frameWidth,
-    h: frameHeight,
-  }));
+  return Array.from({ length: grid.cols * grid.rows }, (_, index) =>
+    spriteGridCellRect(imageData.width, imageData.height, grid.cols, grid.rows, index),
+  );
 }
 
 function nonEmptyFramesForGrid(imageData: ImageData, grid: SpriteGrid, bg: ReturnType<typeof sampleImageBackground>): SpriteRect[] {
@@ -916,10 +949,37 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
 
     let raf = 0;
     let lastFrame = 0;
-    const trimCache = new Map<number, SpriteRect>();
     const image = loadedImage?.image ?? null;
     const imageData = loadedImage?.imageData ?? null;
     const bgSample = loadedImage?.bgSample ?? null;
+    const frames = autoDetect ? layoutFrames : null;
+    const totalFrames = Math.max(1, frames?.length ?? columns * rows);
+    const isSpriteSheet = Boolean(sample?.animated && totalFrames > 1);
+    const imageWidth = image ? image.naturalWidth || image.width : 0;
+    const imageHeight = image ? image.naturalHeight || image.height : 0;
+    const frameSources: SpriteRect[] =
+      image && imageWidth > 0 && imageHeight > 0
+        ? Array.from({ length: totalFrames }, (_, index) =>
+            isSpriteSheet && frames
+              ? clampRectToImage(frames[index % frames.length], imageWidth, imageHeight)
+              : isSpriteSheet
+                ? spriteGridCellRect(imageWidth, imageHeight, columns, rows, index)
+                : { x: 0, y: 0, w: imageWidth, h: imageHeight },
+          )
+        : [];
+    const drawSources =
+      imageData && bgSample
+        ? frameSources.map((source) => {
+            const sourcePadding =
+              isSpriteSheet && frames
+                ? Math.min(16, Math.max(2, Math.ceil(Math.max(source.w, source.h) * 0.04)))
+                : 0;
+            const trimSource = expandRectWithinImage(source, imageData.width, imageData.height, sourcePadding);
+            return computeTrimRect(imageData, trimSource, bgSample, isSpriteSheet ? 2 : 0);
+          })
+        : frameSources;
+    const stageWidth = Math.max(1, ...drawSources.map((source) => source.w));
+    const stageHeight = Math.max(1, ...drawSources.map((source) => source.h));
 
     function drawPlaceholder() {
       context.fillStyle = "rgba(255,255,255,0.07)";
@@ -935,9 +995,6 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
 
     function tick(time: number) {
       drawCheckerboard(context, drawingCanvas.width, drawingCanvas.height, background);
-      const frames = autoDetect ? layoutFrames : null;
-      const totalFrames = Math.max(1, frames?.length ?? columns * rows);
-      const isSpriteSheet = sample?.animated && totalFrames > 1;
       if (playing && time - lastFrame >= 1000 / (10 * speed)) {
         frameRef.current = (frameRef.current + 1) % totalFrames;
         setFrame(frameRef.current);
@@ -945,35 +1002,22 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
       }
       const currentFrame = Math.min(frameRef.current, totalFrames - 1);
 
-      if (image && !loadFailed) {
+      if (image && !loadFailed && drawSources.length > 0) {
         context.imageSmoothingEnabled = false;
-        const frameWidth = isSpriteSheet ? Math.max(1, Math.floor(image.width / columns)) : image.width;
-        const frameHeight = isSpriteSheet ? Math.max(1, Math.floor(image.height / rows)) : image.height;
-        const source: SpriteRect =
-          isSpriteSheet && frames
-            ? frames[currentFrame % frames.length]
-            : {
-                x: isSpriteSheet ? (currentFrame % columns) * frameWidth : 0,
-                y: isSpriteSheet ? Math.floor(currentFrame / columns) * frameHeight : 0,
-                w: frameWidth,
-                h: frameHeight,
-              };
-        const drawSource =
-          imageData && bgSample
-            ? trimCache.get(currentFrame) ??
-              (() => {
-                const rect = computeTrimRect(imageData, source, bgSample);
-                trimCache.set(currentFrame, rect);
-                return rect;
-              })()
-            : source;
-        const drawWidth = Math.min(drawSource.w * scale, drawingCanvas.width * 0.82);
-        const drawHeight = Math.min(drawSource.h * scale, drawingCanvas.height * 0.74);
-        const ratio = Math.min(drawWidth / drawSource.w, drawHeight / drawSource.h);
+        const drawSource = drawSources[currentFrame % drawSources.length];
+        const ratio = Math.min(
+          scale,
+          (drawingCanvas.width * 0.82) / stageWidth,
+          (drawingCanvas.height * 0.74) / stageHeight,
+        );
+        const stageW = stageWidth * ratio;
+        const stageH = stageHeight * ratio;
         const w = drawSource.w * ratio;
         const h = drawSource.h * ratio;
-        const x = (drawingCanvas.width - w) / 2;
-        const y = (drawingCanvas.height - h) / 2 - 8;
+        const stageX = (drawingCanvas.width - stageW) / 2;
+        const stageY = (drawingCanvas.height - stageH) / 2 - 8;
+        const x = stageX + (stageW - w) / 2;
+        const y = stageY + stageH - h;
         context.save();
         if (flip) {
           context.translate(drawingCanvas.width, 0);
@@ -1020,14 +1064,9 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
     const frames =
       explicitFrames ??
       Array.from({ length: columns * rows }, (_, index) => {
-        const frameWidth = Math.max(1, Math.floor(image.width / columns));
-        const frameHeight = Math.max(1, Math.floor(image.height / rows));
-        return {
-          x: (index % columns) * frameWidth,
-          y: Math.floor(index / columns) * frameHeight,
-          w: frameWidth,
-          h: frameHeight,
-        };
+        const imageWidth = image.naturalWidth || image.width;
+        const imageHeight = image.naturalHeight || image.height;
+        return spriteGridCellRect(imageWidth, imageHeight, columns, rows, index);
       });
     const stem = safeFileStem(`${sample?.label ?? pack.title}-${activeSequence?.label ?? "animation"}`);
     exportFramesAsStrip(image, frames, `${stem}.png`);
