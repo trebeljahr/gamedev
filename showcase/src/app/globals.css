@@ -1004,6 +1004,9 @@ select:focus-visible {
 .pack-preview canvas {
   position: relative;
   z-index: 1;
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
 }
 .pack-preview-image {
   position: relative;

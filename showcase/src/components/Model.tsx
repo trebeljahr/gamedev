@@ -4,6 +4,7 @@ import { useGLTF, useAnimations } from "@react-three/drei";
 import { useFrame, useLoader } from "@react-three/fiber";
 import { useEffect, useMemo, useRef } from "react";
 import { assetUrl } from "@/lib/manifest";
+import { clone as cloneSkeleton } from "three/examples/jsm/utils/SkeletonUtils.js";
 import {
   type AnimationAction,
   type AnimationClip,
@@ -51,8 +52,9 @@ function liftMaterial(src: Material): Material {
   // biome-ignore lint/suspicious/noExplicitAny: we're sniffing three's material shape
   const s = src as any;
   if (s.isMeshStandardMaterial || s.isMeshPhysicalMaterial) {
-    s.side = sideFor(s);
-    return src;
+    const material = src.clone();
+    material.side = sideFor(s);
+    return material;
   }
   const m = new MeshStandardMaterial({
     name: s.name,
@@ -151,11 +153,12 @@ export function Model({
     scene: Group;
     animations: AnimationClip[];
   };
+  const scene = useMemo(() => cloneSkeleton(gltf.scene) as Group, [gltf.scene]);
   const externalTexUrl = useMemo(() => externalTextureUrlFor(url), [url]);
 
-  // Bind useAnimations directly to the gltf.scene (the actual armature root).
-  // Wrapping in an extra <group> can confuse PropertyBinding name lookups.
-  const { actions, names, mixer } = useAnimations(gltf.animations, gltf.scene);
+  // Bind useAnimations directly to the cloned armature root. Wrapping in an
+  // extra <group> can confuse PropertyBinding name lookups.
+  const { actions, names, mixer } = useAnimations(gltf.animations, scene);
 
   // Recenter the geometry's XZ centroid on the local origin. Some GLBs ship
   // with a pivot that's nowhere near the geometry (one of the Quaternius
@@ -163,20 +166,20 @@ export function Model({
   // the spinning rotation orbits around that arbitrary pivot instead of doing
   // a clean turntable. Y is left alone so callers can ground by bbox.min.y.
   const xzOffset = useMemo(() => {
-    gltf.scene.updateMatrixWorld(true);
-    const box = new Box3().setFromObject(gltf.scene);
+    scene.updateMatrixWorld(true);
+    const box = new Box3().setFromObject(scene);
     return new Vector3(
       -(box.min.x + box.max.x) / 2,
       0,
       -(box.min.z + box.max.z) / 2,
     );
-  }, [gltf.scene]);
+  }, [scene]);
 
-  // Lift unlit materials → MeshStandardMaterial, force DoubleSide, disable
+  // Lift unlit materials → MeshStandardMaterial, preserve cutout sides, disable
   // frustum culling on skinned meshes (Quaternius/Mixamo rigs routinely fail
   // the default culling check and vanish mid-animation).
   useMemo(() => {
-    gltf.scene.traverse((o) => {
+    scene.traverse((o) => {
       const mesh = o as Mesh;
       if (!mesh.isMesh) return;
       if (Array.isArray(mesh.material)) {
@@ -190,7 +193,7 @@ export function Model({
       mesh.castShadow = true;
       mesh.receiveShadow = true;
     });
-  }, [gltf.scene]);
+  }, [scene]);
 
   // Publish animations to the parent so it can drive the picker UI.
   useEffect(() => {
@@ -221,11 +224,11 @@ export function Model({
     <>
       <group ref={ref}>
         <group position={xzOffset}>
-          <primitive object={gltf.scene} />
+          <primitive object={scene} />
         </group>
       </group>
       {externalTexUrl && (
-        <ExternalTextureApplier url={externalTexUrl} scene={gltf.scene} />
+        <ExternalTextureApplier url={externalTexUrl} scene={scene} />
       )}
     </>
   );
