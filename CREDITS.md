@@ -19,7 +19,7 @@ Quick lookup of where every asset in this folder came from and what you owe each
 | `3D/glb/characters-glb/`, `enemies/`, `weapons/` | [Poly Pizza](https://poly.pizza/) | Mostly CC0 | Per-model |
 | `3D/glb/<snake_case>.glb` (individual) | [Sketchfab](https://sketchfab.com/) | **Varies — check each** | Often yes |
 | `3D/gltf/buster_drone/`, `mars-rover/`, `steampunk-sub/`, `triceratops/` | Sketchfab | See bundled `license.txt` | Varies |
-| `3D/kenney/` (48 packs), `3D-optimized/kenney/` (Draco-compressed mirror), `2D/kenney/` (142 packs) | [Kenney](https://kenney.nl/) | CC0 | Optional |
+| `3D/kenney/` (49 packs), `3D-optimized/kenney/` (48 optimized packs), `2D/kenney/` (157 packs), `sounds/kenney/` (10 packs) | [Kenney](https://kenney.nl/) | CC0 | Optional |
 | `sounds/**/<id>__<user>__*.mp3` | [Freesound](https://freesound.org/) | **Varies per sound** | Often yes |
 | `sounds/**/freesound_community-*.mp3` | [Pixabay](https://pixabay.com/) (CC0 reuploads) | Pixabay License | No |
 | `sounds/**/*-<id>.mp3` (trailing numeric id) | [Pixabay](https://pixabay.com/) | Pixabay License | No |
@@ -44,13 +44,13 @@ Quick lookup of where every asset in this folder came from and what you owe each
 - License: CC0 1.0 — attribution optional.
 - Kits here believed to be KayKit: City Pack, Office Pack, Pirate Kit (the KayKit one), Signs Pack, possibly Cosmetic Pack Two, Exploded Card Pack, Furniture Kit. Verify each on poly.pizza or kaylousberg.com.
 
-### Kenney — `3D/kenney/`, `3D-optimized/kenney/`, `2D/kenney/`
+### Kenney — `3D/kenney/`, `3D-optimized/kenney/`, `2D/kenney/`, `sounds/kenney/`
 - URL: https://kenney.nl/
 - License: CC0 1.0 — attribution optional but appreciated ("Kenney" or "www.kenney.nl").
 - Support: https://kenney.nl/donate and https://patreon.com/kenney
-- Sourced by a full sweep of the [2D category](https://kenney.nl/assets/category:2D) (140 packs) plus 2 pattern texture packs, and the [3D category](https://kenney.nl/assets/category:3D) (48 packs).
+- Sourced by a full sweep of the [2D category](https://kenney.nl/assets/category:2D), the [3D category](https://kenney.nl/assets/category:3D), and Kenney audio packs. Source folders are organized by asset type, not by creator root.
 - Each pack folder keeps the original `License.txt` shipped by Kenney.
-- `3D-optimized/kenney/` mirrors `3D/kenney/` file-for-file, Draco-compressed via `gltf-pipeline -d` (~26% smaller whole-tree). Requires a Draco-capable loader (three.js `GLTFLoader` via `DRACOLoader`).
+- `3D-optimized/kenney/` contains the Draco-compressed optimized subset of `3D/kenney/`. Requires a Draco-capable loader (three.js `GLTFLoader` via `DRACOLoader`).
 - Format notes: `3D/kenney/3d-road-tiles/` was converted from GLTF-only to GLB with `gltf-pipeline`. `3D/kenney/animated-characters-{protagonists,retro,survivors}/` were converted from FBX with `conv3d bulk -m FBX`; each retains its `Skins/` folder of PNG variants.
 - Dedupe: `tower-defense-kit` was skipped because it already exists at `3D/glb/Kenney Tower Defense Kit-glb/`.
 - Additional per-pack credits (beyond Kenney):
@@ -179,9 +179,9 @@ Support: https://www.patreon.com/quaternius
 Support: https://www.patreon.com/kaylousberg
 
 
-## Kenney — `kenney/`
+## Kenney — `2D/kenney/`, `3D/kenney/`, `sounds/kenney/`
 
-205 packs by [Kenney](https://kenney.nl/), all **CC0 1.0**. Split between `kenney/2D/` (164) and `kenney/3D/` (41) by content type. Each subdir has a `_KENNEY_LICENSE.md` summary.
+216 packs by [Kenney](https://kenney.nl/), all **CC0 1.0**. Split between `2D/kenney/` (157), `3D/kenney/` (49), and `sounds/kenney/` (10) by content type. Each typed Kenney root has a `_KENNEY_LICENSE.md` summary when available.
 
 Support: https://patreon.com/kenney
 

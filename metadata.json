@@ -1,7 +1,7 @@
 {
-  "_description": "Credits and licensing metadata for all 3D assets, textures, and sounds. Look up an asset by matching its path against the 'mappings' patterns to find the source entry in 'sources'.",
+  "_description": "Credits and licensing metadata for all game assets, textures, and sounds. Look up an asset by matching its path against the 'mappings' patterns to find the source entry in 'sources'.",
   "_last_updated": "2026-04-20",
-  "_root": "/Users/rico/projects/3d-assets",
+  "_root": "/Users/rico/projects/gamedev/assets",
   "sources": {
     "poly-haven": {
       "name": "Poly Haven",
@@ -837,7 +837,7 @@
     "poly-haven": "Textures from Poly Haven (polyhaven.com) \u2014 CC0.",
     "quaternius": "3D models by Quaternius (quaternius.com) \u2014 CC0. Support the creator at https://www.patreon.com/quaternius",
     "kay-lousberg": "3D kits by Kay Lousberg / KayKit (kaylousberg.com) \u2014 CC0.",
-    "kenney": "3D assets by Kenney (kenney.nl) \u2014 CC0.",
+    "kenney": "Assets by Kenney (kenney.nl) \u2014 CC0.",
     "poly-pizza": "3D models sourced from Poly Pizza (poly.pizza). Individual creators credited per asset.",
     "mixamo": "Character animations and rigs from Mixamo (mixamo.com) by Adobe.",
     "sketchfab-by": "This work uses \"{TITLE}\" (https://sketchfab.com/3d-models/{slug}) by {AUTHOR} (https://sketchfab.com/{author_handle}) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
@@ -1918,14 +1918,20 @@
       "source": "https://kaylousberg.com/"
     },
     "kenney_2d": {
-      "path": "kenney/2D/",
-      "count": 164,
+      "path": "2D/kenney/",
+      "count": 157,
       "license": "CC0",
       "source": "https://kenney.nl/"
     },
     "kenney_3d": {
-      "path": "kenney/3D/",
-      "count": 41,
+      "path": "3D/kenney/",
+      "count": 49,
+      "license": "CC0",
+      "source": "https://kenney.nl/"
+    },
+    "kenney_audio": {
+      "path": "sounds/kenney/",
+      "count": 10,
       "license": "CC0",
       "source": "https://kenney.nl/"
     },

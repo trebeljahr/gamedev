@@ -539,7 +539,7 @@ export function buildSourceMappingMetadata(input: {
 function mediumForPath(path: string): string {
   if (path.startsWith("sounds/music/")) return "music";
   if (path.startsWith("sounds/")) return "sound";
-  if (path.startsWith("2D/") || path.startsWith("kenney/2D/")) return "2d-art";
+  if (path.startsWith("2D/")) return "2d-art";
   if (path.startsWith("textures/")) return "texture";
   if (path.startsWith("3D/")) return "3d-legacy";
   return "asset";

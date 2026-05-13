@@ -126,7 +126,7 @@ function hasToken(text: string, pattern: string): boolean {
 }
 
 function isKenney2DArtPackFolder(folder: string): boolean {
-  return /^kenney\/2D\/[^/]+$/i.test(folder);
+  return /^2D\/kenney\/[^/]+$/i.test(folder);
 }
 
 function buildKenneyArtPack(folder: string): RawArtPack {
@@ -153,8 +153,26 @@ function generatedKenneyArtPacks(mediaAssets: MediaAssets, existingFolders: Set<
     .map(buildKenneyArtPack);
 }
 
+function generatedKenneySoundMappings(mediaAssets: MediaAssets, existingPatterns: Set<string>): MetadataMapping[] {
+  const collectionIds = new Set<string>();
+  for (const sample of mediaAssets.soundSamples) {
+    if (/^sounds\/kenney\/[^/]+\/\*\*$/i.test(sample.collectionId)) collectionIds.add(sample.collectionId);
+  }
+  return [...collectionIds]
+    .filter((collectionId) => !existingPatterns.has(collectionId))
+    .sort()
+    .map((collectionId) => ({
+      path_pattern: collectionId,
+      source: "kenney",
+      author: "Kenney",
+      pack_url: "https://kenney.nl/assets?q=audio",
+      license: "CC0 1.0",
+      notes: "Generated from copied Kenney audio folders under assets/sounds/kenney.",
+    }));
+}
+
 function artThemeFor(pack: RawArtPack) {
-  const text = tokenTextValue(`${pack.folder.replace(/^kenney\/2D\//i, "")} ${pack.title}`);
+  const text = tokenTextValue(`${pack.folder.replace(/^2D\/kenney\//i, "")} ${pack.title}`);
   if (hasToken(text, "icon|icons|item|items|coin|coins|chest|pickup|pickups|potion|potions|weapon|weapons|inventory|fable")) return "Icons & Items";
   if (hasToken(text, "effect|effects|fx|fire|smoke|bullet|bullets|spell|spells|magic|explosion|explosions|slash|slashes|particle|particles")) return "Effects";
   if (hasToken(text, "tile|tiles|tileset|tilesets|terrain|forest|dungeon|mine|mines|plains|land|nature|tree|trees|tower|towers|platformer|objects|props|town|city|road|roads|isometric|platform")) {
@@ -223,19 +241,22 @@ async function main() {
     };
   });
 
-  const generatedMappings: MetadataMapping[] =
-    generatedKenneyPacks.length > 0
+  const existingMappingPatterns = new Set(metadata.mappings.map((entry) => entry.path_pattern));
+  const generatedMappings: MetadataMapping[] = [
+    ...(generatedKenneyPacks.length > 0
       ? [
           {
-            path_pattern: "kenney/2D/**",
+            path_pattern: "2D/kenney/**",
             source: "kenney",
             author: "Kenney",
             pack_url: "https://kenney.nl/assets/category:2D",
             license: "CC0 1.0",
-            notes: "Generated from copied Kenney 2D pack folders under assets/kenney/2D or assets/2D/kenney.",
+            notes: "Generated from copied Kenney 2D pack folders under assets/2D/kenney.",
           },
         ]
-      : [];
+      : []),
+    ...generatedKenneySoundMappings(mediaAssets, existingMappingPatterns),
+  ];
   const allowedMappings = [...metadata.mappings, ...generatedMappings].filter((entry) => !isNonCommercialMapping(entry));
 
   const musicTracks = allowedMappings

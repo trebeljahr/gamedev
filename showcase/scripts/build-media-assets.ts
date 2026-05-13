@@ -84,8 +84,7 @@ async function discoverArtPackDirs(assetsRoot: string): Promise<ArtPackDir[]> {
 
   await addPackDirsFromRoot(out, itchRoot, (name) => name);
   out.delete("kenney");
-  await addPackDirsFromRoot(out, join(assetsRoot, "2D", "kenney"), (name) => `kenney/2D/${name}`);
-  await addPackDirsFromRoot(out, join(assetsRoot, "kenney", "2D"), (name) => `kenney/2D/${name}`);
+  await addPackDirsFromRoot(out, join(assetsRoot, "2D", "kenney"), (name) => `2D/kenney/${name}`);
 
   return [...out.values()].sort((a, b) => a.packFolder.localeCompare(b.packFolder));
 }
