@@ -3,13 +3,12 @@
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import dynamic from "next/dynamic";
-import { useGLTF } from "@react-three/drei";
 import { LicenseLink } from "@/components/LicenseLink";
 import { licenseForVendor } from "@/lib/license";
-import { assetUrl, type Pack } from "@/lib/manifest";
+import type { Pack } from "@/lib/manifest";
 import { uniqueTags } from "@/lib/tags";
 
-const Viewer = dynamic(() => import("./Viewer").then((m) => m.Viewer), {
+const PackModelsScene = dynamic(() => import("./AllModelsScene").then((m) => m.PackModelsScene), {
   ssr: false,
   loading: () => null,
 });
@@ -47,13 +46,6 @@ export function PackViewer({ pack, initialModelFile }: { pack: Pack; initialMode
   }, [pack.models.length]);
 
   useEffect(() => setIndex(initialIndexFor(pack, initialModelFile)), [initialModelFile, pack]);
-
-  useEffect(() => {
-    const n = pack.models.length;
-    if (n <= 1) return;
-    useGLTF.preload(assetUrl(pack.models[(index + 1) % n].file));
-    useGLTF.preload(assetUrl(pack.models[(index - 1 + n) % n].file));
-  }, [index, pack.models]);
 
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
@@ -146,7 +138,11 @@ export function PackViewer({ pack, initialModelFile }: { pack: Pack; initialMode
         </ul>
       </aside>
       <main>
-        {model && <Viewer key={model.file} url={assetUrl(model.file)} />}
+        <PackModelsScene
+          pack={pack}
+          selectedIndex={index}
+          onSelectedIndexChange={setIndex}
+        />
         <div className="viewer-bar">
           <div className="name">
             {model?.title}{" "}

@@ -27,11 +27,12 @@ import {
   allModelsLayout,
   distToPackXZ,
   layoutForPackId,
+  layoutPackModels,
   type PackLayout,
-  type SceneLayout,
   type Slot,
+  type WorldBounds,
 } from "@/lib/layout";
-import { assetUrl } from "@/lib/manifest";
+import { assetUrl, type Pack } from "@/lib/manifest";
 import { licenseForVendor } from "@/lib/license";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { LicenseLink } from "@/components/LicenseLink";
@@ -60,6 +61,72 @@ const BASE_THICKNESS = 0.2;
 const BASE_CENTER_Y = BASE_THICKNESS / 2;
 const BASE_TOP_Y = BASE_THICKNESS + 0.005; // top of base + tiny lift
 
+type SceneTheme = {
+  background: string;
+  fog: [string, number, number];
+  floor: string;
+  base: string;
+  ambient: number;
+  directionalPosition: [number, number, number];
+  directionalIntensity: number;
+  hemisphere: [string, string, number];
+  environmentPreset: "warehouse" | "city";
+  environmentIntensity: number;
+};
+
+const ARCHIVE_THEME: SceneTheme = {
+  background: "#1a1a20",
+  fog: ["#1a1a20", 80, 380],
+  floor: "#0e0e12",
+  base: "#5d5d6b",
+  ambient: 0.65,
+  directionalPosition: [60, 80, 40],
+  directionalIntensity: 1.3,
+  hemisphere: ["#b1c1d4", "#2a2a32", 0.4],
+  environmentPreset: "warehouse",
+  environmentIntensity: 0.35,
+};
+
+const PACK_STUDIO_THEME: SceneTheme = {
+  background: "#f5efe6",
+  fog: ["#f5efe6", 120, 420],
+  floor: "#eadfce",
+  base: "#3a3e48",
+  ambient: 0.72,
+  directionalPosition: [22, 28, 16],
+  directionalIntensity: 1.55,
+  hemisphere: ["#fff4d0", "#7a756c", 0.58],
+  environmentPreset: "city",
+  environmentIntensity: 0.5,
+};
+
+type ModelGridSceneProps = {
+  slots: Slot[];
+  layouts: PackLayout[];
+  bounds: WorldBounds;
+  title: string;
+  backHref: string;
+  backLabel: string;
+  theme: SceneTheme;
+  start?: [number, number, number];
+  loadAll?: boolean;
+  showHud?: boolean;
+  showPackLabels?: boolean;
+  showModelPanel?: boolean;
+  allowArrowWalk?: boolean;
+  selectedIndex?: number | null;
+  onSelectedIndexChange?: (index: number) => void;
+};
+
+function startForBounds(bounds: WorldBounds): [number, number, number] {
+  const [width, _height, depth] = bounds.max;
+  return [
+    Math.min(Math.max(width * 0.18, 4), 18),
+    WORLD_HEIGHT + 1.5,
+    -Math.min(Math.max(depth * 0.08, 4), 14),
+  ];
+}
+
 export function AllModelsScene({
   packId,
 }: {
@@ -69,38 +136,98 @@ export function AllModelsScene({
     () => (packId ? layoutForPackId(packId) ?? allModelsLayout : allModelsLayout),
     [packId],
   );
-  const start = useMemo<[number, number, number]>(() => {
-    const [width, _height, depth] = sceneLayout.bounds.max;
-    return [
-      Math.min(Math.max(width * 0.18, 4), 18),
-      WORLD_HEIGHT + 1.5,
-      -Math.min(Math.max(depth * 0.08, 4), 14),
-    ];
-  }, [sceneLayout]);
+  const start = useMemo(() => startForBounds(sceneLayout.bounds), [sceneLayout]);
   const isPackScene = sceneLayout.packs.length === 1 && !!packId;
   const title = isPackScene ? sceneLayout.packs[0].pack.title : "All models";
   const backHref = isPackScene
     ? `/${sceneLayout.packs[0].pack.vendor}/${sceneLayout.packs[0].pack.pack}`
     : "/#3d-packs";
   const backLabel = isPackScene ? "back to kit" : "back to packs";
+
+  return (
+    <ModelGridScene
+      slots={sceneLayout.slots}
+      layouts={sceneLayout.packs}
+      bounds={sceneLayout.bounds}
+      title={title}
+      backHref={backHref}
+      backLabel={backLabel}
+      theme={isPackScene ? PACK_STUDIO_THEME : ARCHIVE_THEME}
+      start={start}
+      loadAll={isPackScene}
+      showHud
+      showPackLabels={!isPackScene}
+      showModelPanel
+    />
+  );
+}
+
+export function PackModelsScene({
+  pack,
+  selectedIndex,
+  onSelectedIndexChange,
+}: {
+  pack: Pack;
+  selectedIndex: number;
+  onSelectedIndexChange: (index: number) => void;
+}) {
+  const layout = useMemo(() => layoutPackModels(pack), [pack]);
+  const start = useMemo(() => startForBounds(layout.bounds), [layout]);
+  return (
+    <ModelGridScene
+      slots={layout.slots}
+      layouts={[layout.packLayout]}
+      bounds={layout.bounds}
+      title={pack.title}
+      backHref="/#3d-packs"
+      backLabel="back to packs"
+      theme={PACK_STUDIO_THEME}
+      start={start}
+      loadAll
+      showHud={false}
+      showPackLabels={false}
+      showModelPanel={false}
+      allowArrowWalk={false}
+      selectedIndex={selectedIndex}
+      onSelectedIndexChange={onSelectedIndexChange}
+    />
+  );
+}
+
+function ModelGridScene({
+  slots,
+  layouts,
+  bounds,
+  title,
+  backHref,
+  backLabel,
+  theme,
+  start = [6, WORLD_HEIGHT + 1.5, -4],
+  loadAll = false,
+  showHud = false,
+  showPackLabels = false,
+  showModelPanel = false,
+  allowArrowWalk = true,
+  selectedIndex,
+  onSelectedIndexChange,
+}: ModelGridSceneProps) {
   const [mounted, setMounted] = useState<Slot[]>([]);
-  const [selected, setSelected] = useState<Slot | null>(null);
+  const [internalSelected, setInternalSelected] = useState<Slot | null>(null);
   const [hoverInspect, setHoverInspect] = useState(false);
   const [playAnim, setPlayAnim] = useState<string | null>(null);
   const animsRef = useRef<Map<number, AnimationInfo>>(new Map());
-
-  useEffect(() => {
-    setMounted([]);
-    setSelected(null);
-    setPlayAnim(null);
-    animsRef.current.clear();
-  }, [sceneLayout]);
+  const controlledSelected = selectedIndex == null
+    ? null
+    : slots.find((slot) => slot.index === selectedIndex) ?? null;
+  const selected = controlledSelected ?? internalSelected;
+  const panelOpen = showModelPanel && !!selected;
 
   const onSelect = useCallback((slot: Slot) => {
-    setSelected(slot);
+    if (onSelectedIndexChange) onSelectedIndexChange(slot.index);
+    else setInternalSelected(slot);
     setPlayAnim(null);
     document.exitPointerLock?.();
-  }, []);
+  }, [onSelectedIndexChange]);
 
   const setAnimInfo = useCallback(
     (slotIndex: number, info: AnimationInfo | null) => {
@@ -110,8 +237,18 @@ export function AllModelsScene({
     [],
   );
 
+  useEffect(() => {
+    setMounted([]);
+    setInternalSelected(null);
+    animsRef.current.clear();
+  }, [slots]);
+
+  useEffect(() => {
+    setPlayAnim(null);
+  }, [selected?.index]);
+
   return (
-    <>
+    <div className="model-grid-scene all-scene-canvas">
       <Canvas
         // near=0.5 (not 0.1) + logarithmicDepthBuffer drastically improves
         // depth precision at distance. Without this, packs with many
@@ -123,64 +260,73 @@ export function AllModelsScene({
         dpr={[1, 2]}
         gl={{ antialias: true, logarithmicDepthBuffer: true }}
       >
-        <color attach="background" args={["#1a1a20"]} />
-        <fog attach="fog" args={["#1a1a20", 80, 380]} />
-        <ambientLight intensity={0.65} />
+        <color attach="background" args={[theme.background]} />
+        <fog attach="fog" args={theme.fog} />
+        <ambientLight intensity={theme.ambient} />
         <directionalLight
-          position={[60, 80, 40]}
-          intensity={1.3}
+          position={theme.directionalPosition}
+          intensity={theme.directionalIntensity}
           castShadow
           shadow-mapSize-width={1024}
           shadow-mapSize-height={1024}
         />
-        <hemisphereLight args={["#b1c1d4", "#2a2a32", 0.4]} />
-        <Walker />
+        <hemisphereLight args={theme.hemisphere} />
+        <Walker allowArrowKeys={allowArrowWalk} />
         <Selector
           onSelect={onSelect}
           onHoverChange={setHoverInspect}
-          panelOpen={!!selected}
-          onPanelClose={() => setSelected(null)}
+          panelOpen={panelOpen}
+          onPanelClose={() => setInternalSelected(null)}
         />
-        <Placeholders slots={sceneLayout.slots} />
-        <Floor bounds={sceneLayout.bounds} />
+        <Placeholders slots={slots} color={theme.base} />
+        <Floor bounds={bounds} color={theme.floor} />
         <ActiveModels
-          layouts={sceneLayout.packs}
+          slots={slots}
+          layouts={layouts}
           mounted={mounted}
           onMountedChange={setMounted}
           selectedIndex={selected?.index ?? null}
           playAnim={playAnim}
           onAnimInfo={setAnimInfo}
+          loadAll={loadAll}
         />
-        <PackLabels layouts={sceneLayout.packs} />
+        {selected && <SelectedMarker slot={selected} />}
+        {controlledSelected && <FocusSelectedSlot slot={controlledSelected} />}
+        {showPackLabels && <PackLabels layouts={layouts} />}
         <Suspense fallback={null}>
-          <Environment preset="warehouse" environmentIntensity={0.35} />
+          <Environment
+            preset={theme.environmentPreset}
+            environmentIntensity={theme.environmentIntensity}
+          />
         </Suspense>
         <PointerLockControls selector=".all-scene-canvas canvas" />
       </Canvas>
-      <Crosshair hovering={hoverInspect && !selected} />
-      <HUD
-        title={title}
-        count={sceneLayout.slots.length}
-        panelOpen={!!selected}
-        backHref={backHref}
-        backLabel={backLabel}
-      />
-      {selected && (
+      <Crosshair hovering={hoverInspect && !panelOpen} />
+      {showHud && (
+        <HUD
+          title={title}
+          count={slots.length}
+          panelOpen={panelOpen}
+          backHref={backHref}
+          backLabel={backLabel}
+        />
+      )}
+      {showModelPanel && selected && (
         <ModelPanel
           slot={selected}
           animationInfo={animsRef.current.get(selected.index) ?? null}
           playAnim={playAnim}
           onPlay={setPlayAnim}
-          onClose={() => setSelected(null)}
+          onClose={() => setInternalSelected(null)}
         />
       )}
-    </>
+    </div>
   );
 }
 
 /* Camera walker — WASD + Space (up) / C (down), Shift held = sprint.
    Uses raw window listeners to avoid drei API drift. */
-function Walker() {
+function Walker({ allowArrowKeys = true }: { allowArrowKeys?: boolean }) {
   const { camera } = useThree();
   const keys = useRef<Record<string, boolean>>({});
   useEffect(() => {
@@ -222,19 +368,19 @@ function Walker() {
     let dx = 0,
       dy = 0,
       dz = 0;
-    if (k.w || k.arrowup) {
+    if (k.w || (allowArrowKeys && k.arrowup)) {
       dx += fwd.x;
       dz += fwd.z;
     }
-    if (k.s || k.arrowdown) {
+    if (k.s || (allowArrowKeys && k.arrowdown)) {
       dx -= fwd.x;
       dz -= fwd.z;
     }
-    if (k.d || k.arrowright) {
+    if (k.d || (allowArrowKeys && k.arrowright)) {
       dx += right.x;
       dz += right.z;
     }
-    if (k.a || k.arrowleft) {
+    if (k.a || (allowArrowKeys && k.arrowleft)) {
       dx -= right.x;
       dz -= right.z;
     }
@@ -368,7 +514,7 @@ type CrosshairHit =
    is centred on its cell and scaled to the *model's* raw XZ footprint, NOT
    the padded cell size, so adjacent bases get a CELL_PAD gap between them.
    Geometry is a unit cube; the per-instance scale matrix stretches it. */
-function Placeholders({ slots }: { slots: Slot[] }) {
+function Placeholders({ slots, color }: { slots: Slot[]; color: string }) {
   const ref = useRef<InstancedMesh>(null);
   const dummy = useMemo(() => new Object3D(), []);
   useEffect(() => {
@@ -393,7 +539,7 @@ function Placeholders({ slots }: { slots: Slot[] }) {
       frustumCulled={false}
     >
       <boxGeometry args={[1, 1, 1]} />
-      <meshStandardMaterial color="#5d5d6b" roughness={0.7} />
+      <meshStandardMaterial color={color} roughness={0.7} />
     </instancedMesh>
   );
 }
@@ -404,28 +550,38 @@ function Placeholders({ slots }: { slots: Slot[] }) {
    Each mounted model group carries userData.slot so the raycaster can find
    which slot was clicked. */
 function ActiveModels({
+  slots,
   layouts,
   mounted,
   onMountedChange,
   selectedIndex,
   playAnim,
   onAnimInfo,
+  loadAll = false,
 }: {
+  slots: Slot[];
   layouts: PackLayout[];
   mounted: Slot[];
   onMountedChange: (next: Slot[] | ((prev: Slot[]) => Slot[])) => void;
   selectedIndex: number | null;
   playAnim: string | null;
   onAnimInfo: (slotIndex: number, info: AnimationInfo | null) => void;
+  loadAll?: boolean;
 }) {
   const { camera } = useThree();
   const target = useRef<Slot[]>([]);
   const targetIds = useRef<Set<number>>(new Set());
   const sinceTargetScan = useRef(0);
 
+  useEffect(() => {
+    if (!loadAll) return;
+    target.current = slots;
+    targetIds.current = new Set(slots.map((slot) => slot.index));
+  }, [loadAll, slots]);
+
   useFrame((_, delta) => {
-    sinceTargetScan.current += delta;
-    if (sinceTargetScan.current >= 0.25) {
+    if (!loadAll) sinceTargetScan.current += delta;
+    if (!loadAll && sinceTargetScan.current >= 0.25) {
       sinceTargetScan.current = 0;
       const cx = camera.position.x;
       const cz = camera.position.z;
@@ -633,7 +789,7 @@ function triggerDownload(href: string, filename: string) {
 
 /* Big dark floor stretching across the world bounds. Sits just below y=0 to
    avoid z-fighting with anything placed on the y=0 plane. */
-function Floor({ bounds }: { bounds: SceneLayout["bounds"] }) {
+function Floor({ bounds, color }: { bounds: WorldBounds; color: string }) {
   const w = bounds.max[0] + 40;
   const d = bounds.max[2] + 40;
   return (
@@ -643,9 +799,63 @@ function Floor({ bounds }: { bounds: SceneLayout["bounds"] }) {
       receiveShadow
     >
       <planeGeometry args={[w, d]} />
-      <meshStandardMaterial color="#0e0e12" roughness={1} />
+      <meshStandardMaterial color={color} roughness={1} />
     </mesh>
   );
+}
+
+function slotCenter(slot: Slot): Vector3 {
+  const [sx, _sy, sz] = slot.position;
+  const [cw, cd] = slot.cellSize;
+  return new Vector3(sx + cw / 2, BASE_TOP_Y + 0.5, sz + cd / 2);
+}
+
+function SelectedMarker({ slot }: { slot: Slot }) {
+  const center = slotCenter(slot);
+  const radius = Math.max(slot.model.size[0], slot.model.size[2], 1) / 2 + 0.42;
+  return (
+    <mesh
+      rotation={[-Math.PI / 2, 0, 0]}
+      position={[center.x, BASE_TOP_Y + 0.035, center.z]}
+      renderOrder={2}
+    >
+      <ringGeometry args={[radius, radius + 0.08, 64]} />
+      <meshBasicMaterial color="#ffd84d" transparent opacity={0.9} />
+    </mesh>
+  );
+}
+
+function FocusSelectedSlot({ slot }: { slot: Slot }) {
+  const { camera } = useThree();
+  const target = useRef<{
+    position: Vector3;
+    lookAt: Vector3;
+  } | null>(null);
+
+  useEffect(() => {
+    const center = slotCenter(slot);
+    const reach = Math.max(5, Math.max(slot.model.size[0], slot.model.size[2]) * 1.35);
+    target.current = {
+      position: new Vector3(
+        center.x + reach,
+        Math.max(WORLD_HEIGHT + 1.4, Math.min(9, slot.model.size[1] + 2.2)),
+        center.z + reach,
+      ),
+      lookAt: center,
+    };
+  }, [slot]);
+
+  useFrame((_, delta) => {
+    if (!target.current) return;
+    const t = Math.min(1, delta * 3.4);
+    camera.position.lerp(target.current.position, t);
+    camera.lookAt(target.current.lookAt);
+    if (camera.position.distanceTo(target.current.position) < 0.08) {
+      target.current = null;
+    }
+  });
+
+  return null;
 }
 
 /* Centered crosshair. When the crosshair sits over a clickable model within
@@ -655,7 +865,7 @@ function Crosshair({ hovering }: { hovering: boolean }) {
   return (
     <div
       style={{
-        position: "fixed",
+        position: "absolute",
         inset: 0,
         pointerEvents: "none",
         display: "grid",
@@ -724,7 +934,7 @@ function HUD({
   return (
     <div
       style={{
-        position: "fixed",
+        position: "absolute",
         top: "var(--scene-header-offset)",
         left: 12,
         right: 12,
@@ -774,7 +984,7 @@ function ModelPanel({
   return (
     <div
       style={{
-        position: "fixed",
+        position: "absolute",
         top: "var(--scene-header-offset)",
         right: 12,
         bottom: 12,

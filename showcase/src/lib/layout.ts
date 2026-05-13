@@ -57,10 +57,15 @@ export type PackLayout = {
   bounds: PackBounds;
 };
 
+export type WorldBounds = {
+  min: [number, number, number];
+  max: [number, number, number];
+};
+
 export type SceneLayout = {
   slots: Slot[];
   packs: PackLayout[];
-  bounds: { min: [number, number, number]; max: [number, number, number] };
+  bounds: WorldBounds;
 };
 
 /* Shelf-pack a sequence of (w, d) rectangles into a target-width row layout.
@@ -93,6 +98,45 @@ function shelfPack(
     if (shelfZ + item.d > maxZ) maxZ = shelfZ + item.d;
   }
   return { positions, width: maxX, depth: maxZ };
+}
+
+export function layoutPackModels(pack: Pack, indexStart = 0): {
+  slots: Slot[];
+  packLayout: PackLayout;
+  bounds: WorldBounds;
+} {
+  const items = pack.models.map((model) => {
+    const w = (model.size?.[0] ?? 1) + CELL_PAD;
+    const d = (model.size?.[2] ?? 1) + CELL_PAD;
+    return { model, w, d };
+  });
+  const area = items.reduce((acc, item) => acc + item.w * item.d, 0);
+  const target = Math.max(Math.sqrt(area) * 1.1, items[0]?.w ?? 1);
+  const { positions, width, depth } = shelfPack(items, target);
+  const slots = items.map((item, i): Slot => ({
+    index: indexStart + i,
+    pack,
+    model: item.model,
+    position: [positions[i].x, 0, positions[i].z],
+    cellSize: [item.w, item.d],
+    isPackHead: i === 0,
+  }));
+  const packLayout = {
+    pack,
+    slots,
+    bounds: {
+      minX: 0,
+      maxX: width,
+      minZ: 0,
+      maxZ: depth,
+    },
+  };
+
+  return {
+    slots,
+    packLayout,
+    bounds: { min: [0, 0, 0], max: [width, 10, depth] },
+  };
 }
 
 /* Pack each pack's models into a roughly-square block, then pack those

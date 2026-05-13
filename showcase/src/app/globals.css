@@ -176,6 +176,11 @@ select:focus-visible {
   position: absolute;
   inset: 0;
 }
+.model-grid-scene {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
 
 .library-page {
   min-height: 100vh;
@@ -865,6 +870,9 @@ select:focus-visible {
   padding: 16px 12px;
 }
 .viewer-shell main { position: relative; background: #f5efe6; }
+.viewer-shell main .model-grid-scene {
+  --scene-header-offset: 12px;
+}
 .viewer-shell h1 { font-size: 14px; margin: 0 0 4px; font-weight: 600; }
 .viewer-shell .vendor-tag {
   font-size: 11px; color: var(--muted); text-transform: uppercase;
@@ -2744,6 +2752,20 @@ select:focus-visible {
     padding-left: 0;
     border-top: 1px solid var(--border);
     border-left: 0;
+  }
+  .viewer-shell {
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(360px, 58svh) minmax(0, 1fr);
+  }
+  .viewer-shell aside {
+    grid-row: 2;
+    min-height: 0;
+    border-top: 1px solid var(--border);
+    border-right: 0;
+  }
+  .viewer-shell main {
+    grid-row: 1;
+    min-height: 0;
   }
   .all-scene-shell {
     --scene-header-offset: 142px;
