@@ -16,15 +16,24 @@ type CatalogSearchProps = {
   manifest: Manifest;
   children?: ReactNode;
   showHeader?: boolean;
+  modelMotion?: ModelMotionFilter;
 };
 
-function matchPack(pack: Pack, query: string): { pack: Pack; modelMatches: number } | null {
-  if (!query) return { pack, modelMatches: 0 };
+type ModelMotionFilter = "all" | "animated" | "static";
+
+function modelMatchesMotion(model: Pack["models"][number], motion: ModelMotionFilter): boolean {
+  if (motion === "all") return true;
+  const animated = model.style.includes("animated") || model.tags.includes("animated");
+  return motion === "animated" ? animated : !animated;
+}
+
+function matchPack(pack: Pack, query: string, motion: ModelMotionFilter): { pack: Pack; modelMatches: number } | null {
+  const eligibleModels = pack.models.filter((model) => modelMatchesMotion(model, motion));
+  if (eligibleModels.length === 0) return null;
+  if (!query && motion === "all") return { pack, modelMatches: 0 };
   const terms = query.split(/\s+/).filter(Boolean);
-  const packHit = terms.every((term) => pack.searchText.includes(term));
-  const modelMatches = pack.models.filter((model) =>
-    terms.every((term) => model.searchText.includes(term)),
-  ).length;
+  const packHit = motion === "all" && terms.every((term) => pack.searchText.includes(term));
+  const modelMatches = eligibleModels.filter((model) => terms.every((term) => model.searchText.includes(term))).length;
   if (!packHit && modelMatches === 0) return null;
   return { pack, modelMatches };
 }
@@ -65,20 +74,20 @@ function previewModelFor(pack: Pack) {
     })[0];
 }
 
-export function CatalogSearch({ manifest, children, showHeader = true }: CatalogSearchProps) {
+export function CatalogSearch({ manifest, children, showHeader = true, modelMotion = "all" }: CatalogSearchProps) {
   const [query, setQuery] = useState("");
   const normalizedQuery = query.trim().toLowerCase();
 
   const byVendor = useMemo(() => {
     const groups = new Map<string, Array<{ pack: Pack; modelMatches: number }>>();
     for (const pack of manifest.packs) {
-      const match = matchPack(pack, normalizedQuery);
+      const match = matchPack(pack, normalizedQuery, modelMotion);
       if (!match) continue;
       if (!groups.has(pack.vendor)) groups.set(pack.vendor, []);
       groups.get(pack.vendor)!.push(match);
     }
     return [...groups.entries()];
-  }, [manifest.packs, normalizedQuery]);
+  }, [manifest.packs, modelMotion, normalizedQuery]);
 
   const totalModels = manifest.packs.reduce((n, pack) => n + pack.count, 0);
   const visiblePacks = byVendor.reduce((n, [, packs]) => n + packs.length, 0);
@@ -115,7 +124,11 @@ export function CatalogSearch({ manifest, children, showHeader = true }: Catalog
         <div className="catalog-result-count">
           {normalizedQuery
             ? `${visiblePacks} packs · ${matchedModels.toLocaleString()} model matches`
-            : "Search uses titles, descriptions, categories, themes, tags, and paths"}
+            : modelMotion === "animated"
+              ? `${visiblePacks} packs · animated 3D models`
+              : modelMotion === "static"
+                ? `${visiblePacks} packs · static 3D models`
+                : "Search uses titles, descriptions, categories, themes, tags, and paths"}
         </div>
       </section>
 
@@ -136,7 +149,7 @@ export function CatalogSearch({ manifest, children, showHeader = true }: Catalog
                   ))}
                 </div>
                 <div className="pack-count">
-                  {normalizedQuery && modelMatches > 0
+                  {(normalizedQuery || modelMotion !== "all") && modelMatches > 0
                     ? `${modelMatches} matching ${modelMatches === 1 ? "model" : "models"}`
                     : `${pack.count} ${pack.count === 1 ? "model" : "models"}`}
                 </div>

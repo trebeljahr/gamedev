@@ -4,6 +4,12 @@ import { manifest } from "@/lib/manifest";
 import { catalog, mediaStats, sourceMappings } from "@/lib/media";
 import { CatalogSearch } from "@/components/CatalogSearch";
 
+type HomePageProps = {
+  searchParams?: Promise<{
+    model?: string | string[];
+  }>;
+};
+
 const LANDING_ASSET_BASE_URL = (
   process.env.NEXT_PUBLIC_LANDING_ASSETS_BASE_URL ?? "https://assets.gamedev.trebeljahr.com"
 ).replace(/\/+$/, "");
@@ -22,7 +28,14 @@ const featuredArt = catalog.artPacks
     src: assetUrl(pack.samples[0].src),
   }));
 
-export default function HomePage() {
+function firstParam(value: string | string[] | undefined) {
+  return Array.isArray(value) ? value[0] : value;
+}
+
+export default async function HomePage({ searchParams }: HomePageProps) {
+  const params = await searchParams;
+  const modelParam = firstParam(params?.model);
+  const modelMotion = modelParam === "animated" || modelParam === "static" ? modelParam : "all";
   const totalModels = manifest.packs.reduce((n, p) => n + p.count, 0);
   const iconPackCount = catalog.artPacks.filter((pack) => pack.theme === "UI" || pack.theme === "Icons & Items").length;
   const spritePackCount = Math.max(mediaStats.artPackCount - iconPackCount, 0);
@@ -151,7 +164,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <CatalogSearch manifest={manifest} showHeader={false} />
+        <CatalogSearch manifest={manifest} showHeader={false} modelMotion={modelMotion} />
       </main>
     </>
   );

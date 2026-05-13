@@ -90,7 +90,7 @@ export function ModelCatalog({ manifest }: ModelCatalogProps) {
   return (
     <>
       <SiteHeader
-        active="models"
+        active="packs"
         meta={
           <>
             <Link href="/all" className="header-meta-link">
