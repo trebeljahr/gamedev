@@ -16,6 +16,7 @@ const PackCardPreview = dynamic(
 
 export type PackGridItem = {
   pack: Pick<Pack, "count" | "description" | "id" | "license" | "pack" | "preview" | "tags" | "title" | "vendor">;
+  actions?: ReactNode;
   previewModelFiles: string[];
   modelMatches?: number;
 };
@@ -83,6 +84,7 @@ export function PackGrid({
               {showActions && (
                 <div className="pack-card-actions">
                   <Link href={packHref}>View</Link>
+                  {item.actions}
                 </div>
               )}
             </article>

@@ -33,9 +33,11 @@ import {
   type WorldBounds,
 } from "@/lib/layout";
 import { assetUrl, type Pack } from "@/lib/manifest";
+import { downloadPackZip } from "@/lib/download-pack-zip";
 import { licenseForVendor } from "@/lib/license";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { LicenseLink } from "@/components/LicenseLink";
+import { packZipFilename } from "@/lib/pack-zip";
 import { uniqueTags } from "@/lib/tags";
 import {
   CameraFloorGuard,
@@ -446,11 +448,11 @@ function Selector({
         const ud = o.userData as
           | {
               slot?: Slot;
-              download?: { href: string; name: string };
+              download?: { pack: Pack; name: string };
             }
           | undefined;
         if (ud?.download)
-          return { kind: "download", href: ud.download.href, name: ud.download.name };
+          return { kind: "download", pack: ud.download.pack };
         if (ud?.slot)
           return hit.distance <= SELECT_RADIUS
             ? { kind: "slot", slot: ud.slot }
@@ -492,7 +494,7 @@ function Selector({
       const hit = pickHit();
       if (!hit) return;
       if (hit.kind === "download") {
-        triggerDownload(hit.href, hit.name);
+        void downloadPackZip(hit.pack);
       } else {
         onSelect(hit.slot);
       }
@@ -514,7 +516,7 @@ function Selector({
 
 type CrosshairHit =
   | { kind: "slot"; slot: Slot }
-  | { kind: "download"; href: string; name: string };
+  | { kind: "download"; pack: Pack };
 
 /* Massive InstancedMesh of placeholder slabs — one per slot. Each instance
    is centred on its cell and scaled to the *model's* raw XZ footprint, NOT
@@ -730,8 +732,7 @@ function PackLabels({ layouts }: { layouts: PackLayout[] }) {
   return (
     <>
       {visible.map((pl) => {
-        const href = `/api/packs/${pl.pack.vendor}/${pl.pack.pack}/zip`;
-        const filename = `${pl.pack.vendor}_${pl.pack.pack}.zip`;
+        const filename = packZipFilename(pl.pack);
         return (
           <group
             key={pl.pack.id}
@@ -750,11 +751,11 @@ function PackLabels({ layouts }: { layouts: PackLayout[] }) {
               </Text>
               <group
                 position={[0, -0.5, 0]}
-                userData={{ download: { href, name: filename } }}
+                userData={{ download: { pack: pl.pack, name: filename } }}
                 onClick={(e) => {
                   e.stopPropagation();
                   if (document.pointerLockElement) return;
-                  triggerDownload(href, filename);
+                  void downloadPackZip(pl.pack);
                 }}
                 onPointerOver={(e) => {
                   e.stopPropagation();
@@ -782,15 +783,6 @@ function PackLabels({ layouts }: { layouts: PackLayout[] }) {
       })}
     </>
   );
-}
-
-function triggerDownload(href: string, filename: string) {
-  const a = document.createElement("a");
-  a.href = href;
-  a.download = filename;
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
 }
 
 /* Big dark floor stretching across the world bounds. Sits just below y=0 to

@@ -1,16 +1,9 @@
 import { Zip, ZipPassThrough } from "fflate";
 import { assetUrl, findPack } from "@/lib/manifest";
+import { packZipEntryName, packZipFilename } from "@/lib/pack-zip";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
-
-function entryName(url: string, vendor: string, pack: string): string {
-  const m = url.match(/^\/(glb|raw)\/(.+)$/);
-  const decoded = (m ? m[2] : url).split("/").map(decodeURIComponent).join("/");
-  const prefix = `${vendor}/${pack}/`;
-  const rel = decoded.startsWith(prefix) ? decoded.slice(prefix.length) : decoded;
-  return `${pack}/${rel}`;
-}
 
 export async function GET(
   _req: Request,
@@ -47,7 +40,7 @@ export async function GET(
               continue;
             }
             const buf = new Uint8Array(await res.arrayBuffer());
-            const entry = new ZipPassThrough(entryName(m.file, vendor, pack));
+            const entry = new ZipPassThrough(packZipEntryName(m.file, vendor, pack));
             zip.add(entry);
             entry.push(buf, true);
           }
@@ -62,7 +55,7 @@ export async function GET(
   return new Response(stream, {
     headers: {
       "Content-Type": "application/zip",
-      "Content-Disposition": `attachment; filename="${vendor}_${pack}.zip"`,
+      "Content-Disposition": `attachment; filename="${packZipFilename(p)}"`,
       "Cache-Control": "no-store",
     },
   });

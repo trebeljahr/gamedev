@@ -1086,7 +1086,9 @@ select:focus-visible {
   padding: 12px 16px 14px;
 }
 .pack-card-actions a,
-.pack-view-actions a {
+.pack-card-actions button,
+.pack-view-actions a,
+.pack-view-actions button {
   display: inline-flex;
   align-items: center;
   min-height: 30px;
@@ -1097,12 +1099,38 @@ select:focus-visible {
   border-radius: 6px;
   font-size: 12px;
   font-weight: 650;
+  font-family: inherit;
 }
 .pack-card-actions a:hover,
-.pack-view-actions a:hover {
+.pack-card-actions button:hover,
+.pack-view-actions a:hover,
+.pack-view-actions button:hover {
   color: #11100b;
   background: var(--accent);
   border-color: var(--accent);
+}
+.pack-card-actions button,
+.pack-view-actions button {
+  cursor: pointer;
+}
+.pack-card-actions button:disabled,
+.pack-view-actions button:disabled {
+  cursor: wait;
+  opacity: 0.72;
+}
+.pack-download-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+.pack-download-status {
+  max-width: 130px;
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 11px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .viewer-shell {

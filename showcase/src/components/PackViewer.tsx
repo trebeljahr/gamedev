@@ -5,6 +5,7 @@ import { useCallback, useMemo, useState } from "react";
 import dynamic from "next/dynamic";
 import { useInfiniteList } from "@/components/useInfiniteList";
 import { LicenseLink } from "@/components/LicenseLink";
+import { PackDownloadButton } from "@/components/PackDownloadButton";
 import { licenseForVendor } from "@/lib/license";
 import { assetUrl, type Pack } from "@/lib/manifest";
 import { uniqueTags } from "@/lib/tags";
@@ -108,9 +109,7 @@ function PackGroupViewer({ pack }: { pack: Pack }) {
           ))}
         </div>
         <div className="pack-view-actions">
-          <a href={`/api/packs/${pack.vendor}/${pack.pack}/zip`} download>
-            Download zip
-          </a>
+          <PackDownloadButton pack={pack} />
         </div>
         <input
           className="model-search"

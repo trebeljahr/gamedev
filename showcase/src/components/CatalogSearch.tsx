@@ -5,6 +5,7 @@ import type { ReactNode } from "react";
 import { useMemo, useState } from "react";
 import { LicenseLink } from "@/components/LicenseLink";
 import { PackGrid } from "@/components/PackGrid";
+import { PackDownloadButton } from "@/components/PackDownloadButton";
 import { SiteHeader } from "@/components/SiteHeader";
 import { licenseForVendor } from "@/lib/license";
 import type { Manifest, Pack } from "@/lib/manifest";
@@ -135,6 +136,7 @@ export function CatalogSearch({ manifest, children, showHeader = true, modelMoti
             <PackGrid
               credit={credit}
               items={packs.map(({ pack, modelMatches }) => ({
+                actions: <PackDownloadButton pack={pack} />,
                 pack,
                 previewModelFiles: previewModelFilesFor(pack),
                 modelMatches,
