@@ -3,6 +3,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { manifest } from "@/lib/manifest";
 import { catalog, mediaStats, sourceMappings } from "@/lib/media";
 import { CatalogSearch } from "@/components/CatalogSearch";
+import { navGroups } from "@/lib/navigation";
 
 type HomePageProps = {
   searchParams?: Promise<{
@@ -40,6 +41,8 @@ export default async function HomePage({ searchParams }: HomePageProps) {
   const iconPackCount = catalog.artPacks.filter((pack) => pack.theme === "UI" || pack.theme === "Icons & Items").length;
   const spritePackCount = Math.max(mediaStats.artPackCount - iconPackCount, 0);
   const textureSourceCount = sourceMappings.filter((mapping) => mapping.medium === "texture").length;
+  const textureGroupCount = textureSourceCount || 1;
+  const textureGroupLabel = `${textureGroupCount} texture ${textureGroupCount === 1 ? "group" : "groups"}`;
   const totalMediaCollections =
     spritePackCount +
     iconPackCount +
@@ -64,8 +67,8 @@ export default async function HomePage({ searchParams }: HomePageProps) {
             <div className="landing-kicker">GameDev Asset Library</div>
             <h2 id="library-heading">Search the whole asset archive from one place.</h2>
             <p>
-              3D models, 2D sprites, textures, icons, sound effects, and music
-              each get their own searchable asset entry.
+              3D models and textures, 2D sprites and icons, sound effects, and music
+              share the same compact navigation.
             </p>
             <div className="library-actions" aria-label="Primary catalog actions">
               <Link className="landing-button primary" href="/models">
@@ -87,76 +90,24 @@ export default async function HomePage({ searchParams }: HomePageProps) {
         </section>
 
         <nav className="asset-type-nav" aria-label="Asset library navigation">
-          <section className="asset-type-link primary" aria-labelledby="nav-3d">
-            <Link className="asset-type-main" href="/models">
-              <span>3D Models</span>
-              <strong id="nav-3d">{totalModels.toLocaleString()} models</strong>
-              <small>Flat asset search with creator, license, and pack context visible</small>
-            </Link>
-            <div className="asset-subnav" aria-label="3D creators">
-              <Link href="/models">All models</Link>
-              <Link href="#3d-collections">Pack collections</Link>
-              <Link href="#creator-kaykit">KayKit</Link>
-              <Link href="#creator-kenney">Kenney</Link>
-              <Link href="#creator-quaternius">Quaternius</Link>
-            </div>
-          </section>
-          <section className="asset-type-link" aria-labelledby="nav-sprites">
-            <Link className="asset-type-main" href="/media?view=art&type=all">
-              <span>2D Art</span>
-              <strong id="nav-sprites">{mediaStats.artPackCount} packs</strong>
-              <small>Spritesheets, characters, tiles, FX, icons, and UI art in one search</small>
-            </Link>
-            <div className="asset-subnav" aria-label="2D sprite categories">
-              <Link href="/media?view=art&type=all">All 2D</Link>
-              <Link href="/media?view=art&type=spritesheets">Sprites</Link>
-              <Link href="/media?view=art&type=ui-icons">UI / Icons</Link>
-              <Link href="/media?view=art&type=spritesheets&subject=characters&motion=animated">Animated characters</Link>
-              <Link href="/media?view=art&type=spritesheets&subject=environments">Environments</Link>
-            </div>
-          </section>
-          <section className="asset-type-link" aria-labelledby="nav-textures">
-            <Link className="asset-type-main" href="/media?view=textures">
-              <span>Textures</span>
-              <strong id="nav-textures">{textureSourceCount || 1} groups</strong>
-              <small>Material and surface sets kept separate from sprites</small>
-            </Link>
-            <div className="asset-subnav" aria-label="Texture categories">
-              <Link href="/media?view=textures">Texture library</Link>
-            </div>
-          </section>
-          <section className="asset-type-link" aria-labelledby="nav-icons">
-            <Link className="asset-type-main" href="/media?view=art&type=ui-icons">
-              <span>Icons & UI</span>
-              <strong id="nav-icons">{iconPackCount} packs</strong>
-              <small>Icons, controls, buttons, GUI sheets, pickups, and item art</small>
-            </Link>
-            <div className="asset-subnav" aria-label="Icon and UI categories">
-              <Link href="/media?view=art&type=ui-icons">UI / Icons</Link>
-            </div>
-          </section>
-          <section className="asset-type-link" aria-labelledby="nav-sfx">
-            <Link className="asset-type-main" href="/media?view=sounds&type=all">
-              <span>Sounds</span>
-              <strong id="nav-sfx">{mediaStats.soundCollectionCount + mediaStats.musicTrackCount} items</strong>
-              <small>Sound effects and music tracks together in one searchable page</small>
-            </Link>
-            <div className="asset-subnav" aria-label="Sound effect categories">
-              <Link href="/media?view=sounds&type=all">All sounds</Link>
-              <Link href="/media?view=sounds&type=sfx">Browse SFX</Link>
-              <Link href="/media?view=sounds&type=music">Music</Link>
-            </div>
-          </section>
-          <section className="asset-type-link" aria-labelledby="nav-music">
-            <Link className="asset-type-main" href="/media?view=sounds&type=music">
-              <span>Music</span>
-              <strong id="nav-music">{mediaStats.musicTrackCount} tracks</strong>
-              <small>Playable loops, ambient beds, and credited background music</small>
-            </Link>
-            <div className="asset-subnav" aria-label="Music categories">
-              <Link href="/media?view=sounds&type=music">Play music</Link>
-            </div>
-          </section>
+          {navGroups.map((group) => (
+            <details key={group.key} className="nav-drawer">
+              <summary className="nav-trigger" data-active={group.key === "packs" ? "" : undefined}>
+                <span>{group.label}</span>
+                <span className="nav-chevron" aria-hidden="true" />
+              </summary>
+              <div className="nav-panel">
+                {group.items.map((child) => (
+                  <Link key={child.href} href={child.href}>
+                    {child.label}
+                  </Link>
+                ))}
+              </div>
+            </details>
+          ))}
+          <span className="asset-nav-note">
+            {totalModels.toLocaleString()} models · {textureGroupLabel} · {totalMediaCollections} media collections
+          </span>
         </nav>
 
         <section className="catalog-heading" id="3d-collections" aria-labelledby="packs-heading">

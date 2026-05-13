@@ -1,10 +1,12 @@
 "use client";
 
+import Link from "next/link";
 import { type CSSProperties, useEffect, useMemo, useRef, useState } from "react";
 import type { ArtPack, ArtSample, MusicTrack, SoundCollection, SoundSample, SourceMapping } from "@/lib/media";
 import { artCreators } from "@/lib/media";
 import { isLikelyHybridSpriteAtlasPath, isLikelySpriteSheetPath, isLikelyTextureAtlasPath } from "@/lib/media-inference";
 import { SiteHeader } from "@/components/SiteHeader";
+import { navGroups, type NavKey } from "@/lib/navigation";
 
 type MediaExplorerProps = {
   soundCollections: SoundCollection[];
@@ -2005,14 +2007,16 @@ export function MediaExplorer({
     () => sourceMappings.filter((mapping) => mapping.medium === "texture" || mapping.category === "texture"),
     [sourceMappings],
   );
+  const textureGroupLabel = `${textureMappings.length} texture ${textureMappings.length === 1 ? "group" : "groups"}`;
 
   const filteredTextureMappings = useMemo(() => {
     const q = query.trim().toLowerCase();
     return textureMappings.filter((mapping) => searchMatches(mapping.searchText, q));
   }, [query, textureMappings]);
 
-  const selectedArt = filteredArt.find((pack) => pack.folder === selectedArtFolder) ?? filteredArt[0];
-  const selectedSound = filteredSounds.find((item) => item.id === selectedSoundId) ?? filteredSounds[0];
+  const activeAssetGroup: NavKey = view === "sounds" ? "sounds" : view === "sources" ? "packs" : "art";
+  const selectedArt = filteredArt.find((pack) => pack.folder === selectedArtFolder) ?? filteredArt[0] ?? artPacks[0];
+  const selectedSound = filteredSounds.find((item) => item.id === selectedSoundId) ?? filteredSounds[0] ?? soundCollections[0];
 
   function selectArtType(value: ArtTypeFilter) {
     setArtTypeFilter(value);
@@ -2034,10 +2038,10 @@ export function MediaExplorer({
   return (
     <div className="media-page">
       <SiteHeader
-        active={view === "sounds" ? "sounds" : "art"}
+        active={activeAssetGroup}
         meta={
           <>
-            {artPacks.length} 2D sets · {textureMappings.length} texture groups · {soundOrganizationCounts["user-collection"]} user SFX collections ·{" "}
+            {artPacks.length} 2D sets · {textureGroupLabel} · {soundOrganizationCounts["user-collection"]} user SFX collections ·{" "}
             {soundOrganizationCounts["creator-pack"]} creator SFX packs · {musicTracks.length} music tracks
           </>
         }
@@ -2046,94 +2050,25 @@ export function MediaExplorer({
       <section className="media-hero">
         <div>
           <div className="landing-kicker">GameDev Asset Library</div>
-          <h2>Browse the library by asset type: 3D, sprites, textures, icons, sound effects, and music.</h2>
+          <h2>Browse the library by asset type: 3D, 2D, and sounds.</h2>
         </div>
-        <div className="media-tabs asset-tabs" role="tablist" aria-label="Asset type">
-          <a href="/models" role="tab" aria-selected="false">
-            3D Models
-          </a>
-          <button
-            type="button"
-            role="tab"
-            aria-selected={view === "art" && artTypeFilter === "all"}
-            className={view === "art" && artTypeFilter === "all" ? "active" : ""}
-            onClick={() => {
-              setView("art");
-              selectArtType("all");
-            }}
-          >
-            All 2D
-          </button>
-          <button
-            type="button"
-            role="tab"
-            aria-selected={view === "art" && artTypeFilter === "spritesheets"}
-            className={view === "art" && artTypeFilter === "spritesheets" ? "active" : ""}
-            onClick={() => {
-              setView("art");
-              selectArtType("spritesheets");
-            }}
-          >
-            2D Sprites
-          </button>
-          <button
-            type="button"
-            role="tab"
-            aria-selected={view === "sources"}
-            className={view === "sources" ? "active" : ""}
-            onClick={() => setView("sources")}
-          >
-            Textures
-          </button>
-          <button
-            type="button"
-            role="tab"
-            aria-selected={view === "art" && artTypeFilter === "ui-icons"}
-            className={view === "art" && artTypeFilter === "ui-icons" ? "active" : ""}
-            onClick={() => {
-              setView("art");
-              selectArtType("ui-icons");
-            }}
-          >
-            Icons & UI
-          </button>
-          <button
-            type="button"
-            role="tab"
-            aria-selected={view === "sounds" && soundTypeFilter === "all"}
-            className={view === "sounds" && soundTypeFilter === "all" ? "active" : ""}
-            onClick={() => {
-              setView("sounds");
-              selectSoundType("all");
-            }}
-          >
-            All Sounds
-          </button>
-          <button
-            type="button"
-            role="tab"
-            aria-selected={view === "sounds" && soundTypeFilter === "sfx"}
-            className={view === "sounds" && soundTypeFilter === "sfx" ? "active" : ""}
-            onClick={() => {
-              setView("sounds");
-              selectSoundType("sfx");
-            }}
-          >
-            Sound Effects
-          </button>
-          <button
-            type="button"
-            role="tab"
-            aria-selected={view === "sounds" && soundTypeFilter === "music"}
-            className={view === "sounds" && soundTypeFilter === "music" ? "active" : ""}
-            onClick={() => {
-              setView("sounds");
-              selectSoundType("music");
-            }}
-          >
-            Music
-          </button>
-        </div>
+        <nav className="asset-section-nav top-nav" aria-label="Asset type">
+          {navGroups.map((group) => (
+            <details key={group.key} className="nav-drawer">
+              <summary className="nav-trigger" data-active={activeAssetGroup === group.key ? "" : undefined}>
+                <span>{group.label}</span>
+                <span className="nav-chevron" aria-hidden="true" />
+              </summary>
+              <div className="nav-panel">
+                {group.items.map((child) => (
+                  <Link key={child.href} href={child.href}>
+                    {child.label}
+                  </Link>
+                ))}
+              </div>
+            </details>
+          ))}
+        </nav>
       </section>
 
       <section className="media-tools" aria-label="Catalog filters">
@@ -2150,7 +2085,7 @@ export function MediaExplorer({
           onChange={(event) => setQuery(event.target.value)}
         />
         {view === "sources" ? (
-          <span className="catalog-result-count">Textures are separate from sprites and 3D model assets.</span>
+          <span className="catalog-result-count">Textures live in the 3D group as material and surface sources.</span>
         ) : view === "sounds" ? (
           <>
             <select value={soundTypeFilter} onChange={(event) => selectSoundType(event.target.value as SoundTypeFilter)}>
@@ -2260,7 +2195,7 @@ export function MediaExplorer({
           <section className="media-panel">
             <div className="panel-heading">
               <h3>Textures</h3>
-              <span>{filteredTextureMappings.length} groups</span>
+              <span>{filteredTextureMappings.length} {filteredTextureMappings.length === 1 ? "group" : "groups"}</span>
             </div>
             <div className="media-list">
               {filteredTextureMappings.map((mapping) => (

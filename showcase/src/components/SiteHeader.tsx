@@ -4,48 +4,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { ReactNode } from "react";
 import { useState } from "react";
+import { navItems, type NavKey } from "@/lib/navigation";
 
 type SiteHeaderProps = {
   meta?: ReactNode;
   compact?: boolean;
   active?: NavKey;
 };
-
-const navItems = [
-  { label: "Home", href: "/", key: "library" },
-  {
-    label: "3D",
-    key: "packs",
-    items: [
-      { label: "All models", href: "/models" },
-      { label: "Pack collections", href: "/#3d-collections" },
-      { label: "World viewer", href: "/all" },
-      { label: "Animated", href: "/?model=animated#3d-collections" },
-      { label: "Static", href: "/?model=static#3d-collections" },
-    ],
-  },
-  {
-    label: "2D",
-    key: "art",
-    items: [
-      { label: "All 2D", href: "/media?view=art&type=all" },
-      { label: "Animated", href: "/media?view=art&type=spritesheets&motion=animated" },
-      { label: "Static", href: "/media?view=art&type=spritesheets&motion=static" },
-      { label: "UI", href: "/media?view=art&type=ui-icons" },
-    ],
-  },
-  {
-    label: "Sounds",
-    key: "sounds",
-    items: [
-      { label: "All sounds", href: "/media?view=sounds&type=all" },
-      { label: "Sound effects", href: "/media?view=sounds&type=sfx" },
-      { label: "Music", href: "/media?view=sounds&type=music" },
-    ],
-  },
-] as const;
-
-type NavKey = (typeof navItems)[number]["key"];
 
 function activeKey(pathname: string): NavKey | undefined {
   if (pathname === "/") return "library";
