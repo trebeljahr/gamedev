@@ -1,6 +1,8 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import { SiteHeader } from "@/components/SiteHeader";
+import { manifest } from "@/lib/manifest";
 
 const AllModelsScene = dynamic(
   () => import("@/components/AllModelsScene").then((m) => m.AllModelsScene),
@@ -8,9 +10,22 @@ const AllModelsScene = dynamic(
 );
 
 export default function AllModelsPage() {
+  const totalModels = manifest.packs.reduce((n, p) => n + p.count, 0);
+
   return (
-    <div style={{ position: "fixed", inset: 0 }}>
-      <AllModelsScene />
+    <div className="all-scene-shell">
+      <SiteHeader
+        compact
+        active="world"
+        meta={
+          <>
+            {totalModels.toLocaleString()} models · {manifest.packs.length} packs
+          </>
+        }
+      />
+      <div className="all-scene-canvas">
+        <AllModelsScene />
+      </div>
     </div>
   );
 }

@@ -33,6 +33,7 @@ import {
 } from "@/lib/layout";
 import { assetUrl } from "@/lib/manifest";
 import { licenseForVendor } from "@/lib/license";
+import { ErrorBoundary } from "@/components/ErrorBoundary";
 
 // Load any pack whose nearest edge is within this distance of the camera.
 // Pack-coherent loading: when you approach a pack, the whole pack appears at
@@ -450,15 +451,17 @@ function ActiveModels({
   return (
     <>
       {mounted.map((slot) => (
-        <Suspense key={slot.index} fallback={null}>
-          <GroundedModel
-            slot={slot}
-            playAnimation={
-              selectedIndex === slot.index ? playAnim ?? undefined : undefined
-            }
-            onAnimInfo={onAnimInfo}
-          />
-        </Suspense>
+        <ErrorBoundary key={slot.index} fallback={null}>
+          <Suspense fallback={null}>
+            <GroundedModel
+              slot={slot}
+              playAnimation={
+                selectedIndex === slot.index ? playAnim ?? undefined : undefined
+              }
+              onAnimInfo={onAnimInfo}
+            />
+          </Suspense>
+        </ErrorBoundary>
       ))}
     </>
   );
@@ -674,13 +677,16 @@ function HUD({ panelOpen }: { panelOpen: boolean }) {
     <div
       style={{
         position: "fixed",
-        top: 12,
+        top: "var(--scene-header-offset)",
         left: 12,
+        right: 12,
+        maxWidth: "calc(100vw - 24px)",
         padding: "8px 12px",
         background: "rgba(0,0,0,0.55)",
         color: "white",
         fontSize: 12,
         borderRadius: 6,
+        boxSizing: "border-box",
         pointerEvents: "auto",
         lineHeight: 1.5,
       }}
@@ -690,8 +696,8 @@ function HUD({ panelOpen }: { panelOpen: boolean }) {
       {panelOpen
         ? "Click canvas to resume walking"
         : "Click canvas to lock cursor"}
-      {" · "}WASD walk · Space up · C down · Shift sprint · click a nearby model
-      to inspect
+      <br />
+      WASD walk · Space/C vertical · Shift sprint · click model to inspect
       <br />
       <a href="/#3d-packs" style={{ color: "#ffd84d" }}>
         ← back to packs
@@ -721,7 +727,7 @@ function ModelPanel({
     <div
       style={{
         position: "fixed",
-        top: 12,
+        top: "var(--scene-header-offset)",
         right: 12,
         bottom: 12,
         width: 320,

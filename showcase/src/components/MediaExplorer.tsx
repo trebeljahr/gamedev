@@ -1286,6 +1286,20 @@ export function MediaExplorer({
     soundCollections.find((item) => item.samples.length > 0)?.id ?? soundCollections[0]?.id ?? "",
   );
 
+  useEffect(() => {
+    setView(initialView);
+  }, [initialView]);
+
+  useEffect(() => {
+    setArtTypeFilter(initialArtType);
+    setSpriteSubjectFilter(initialSpriteSubject);
+    setSpriteMotionFilter(initialSpriteMotion);
+  }, [initialArtType, initialSpriteMotion, initialSpriteSubject]);
+
+  useEffect(() => {
+    setSoundTypeFilter(initialSoundType);
+  }, [initialSoundType]);
+
   const soundSources = useMemo(
     () => ["all", ...Array.from(new Set(soundCollections.map((s) => s.source))).sort()],
     [soundCollections],
@@ -1373,6 +1387,7 @@ export function MediaExplorer({
   return (
     <div className="media-page">
       <SiteHeader
+        active={view === "sounds" ? "sounds" : "art"}
         meta={
           <>
             {artPacks.length} 2D packs · {textureMappings.length} texture groups · {soundCollections.length} SFX groups · {musicTracks.length} music tracks
@@ -1386,7 +1401,7 @@ export function MediaExplorer({
           <h2>Browse the library by asset type: 3D, sprites, textures, icons, sound effects, and music.</h2>
         </div>
         <div className="media-tabs asset-tabs" role="tablist" aria-label="Asset type">
-          <a href="/" role="tab" aria-selected="false">
+          <a href="/#3d-packs" role="tab" aria-selected="false">
             3D Models
           </a>
           <button

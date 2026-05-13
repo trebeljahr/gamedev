@@ -1,13 +1,38 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import type { ReactNode } from "react";
 
 type SiteHeaderProps = {
   meta?: ReactNode;
+  compact?: boolean;
+  active?: NavKey;
 };
 
-export function SiteHeader({ meta }: SiteHeaderProps) {
+const navItems = [
+  { label: "Library", href: "/", key: "library" },
+  { label: "3D packs", href: "/#3d-packs", key: "packs" },
+  { label: "2D", href: "/media?view=art", key: "art" },
+  { label: "Sounds", href: "/media?view=sounds", key: "sounds" },
+  { label: "All models", href: "/all", key: "world" },
+] as const;
+
+type NavKey = (typeof navItems)[number]["key"];
+
+function activeKey(pathname: string): NavKey {
+  if (pathname === "/") return "library";
+  if (pathname === "/all") return "world";
+  if (pathname === "/media") return "sounds";
+  return "packs";
+}
+
+export function SiteHeader({ meta, compact = false, active }: SiteHeaderProps) {
+  const pathname = usePathname();
+  const current = active ?? activeKey(pathname);
+
   return (
-    <header className="app-header">
+    <header className={`app-header ${compact ? "compact" : ""}`}>
       <div className="app-header-main">
         <h1>
           <Link className="app-title" href="/landing-page">
@@ -15,11 +40,15 @@ export function SiteHeader({ meta }: SiteHeaderProps) {
           </Link>
         </h1>
         <nav className="top-nav" aria-label="Primary navigation">
-          <Link href="/">Library</Link>
-          <Link href="/#3d-packs">3D packs</Link>
-          <Link href="/media?view=art">2D</Link>
-          <Link href="/media?view=sounds">Sounds</Link>
-          <Link href="/all">All models</Link>
+          {navItems.map((item) => (
+            <Link
+              key={item.key}
+              href={item.href}
+              aria-current={current === item.key ? "page" : undefined}
+            >
+              {item.label}
+            </Link>
+          ))}
         </nav>
       </div>
       {meta && <div className="meta">{meta}</div>}

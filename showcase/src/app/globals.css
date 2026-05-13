@@ -4,9 +4,13 @@
   --surface: #16161a;
   --surface-2: #1f1f25;
   --border: #2a2a31;
+  --border-strong: #3a3a43;
   --text: #e8e6e3;
   --muted: #8a8a93;
   --accent: #ffd84d;
+  --surface-hover: #26262d;
+  --radius: 8px;
+  --scene-header-offset: 82px;
 }
 
 * { box-sizing: border-box; }
@@ -44,6 +48,9 @@ select:focus-visible {
   background: rgba(11,11,13,0.82);
   backdrop-filter: blur(18px);
 }
+.app-header.compact {
+  padding: 12px 14px;
+}
 .app-header-main {
   display: flex;
   align-items: center;
@@ -72,16 +79,43 @@ select:focus-visible {
   display: inline-flex;
   align-items: center;
   padding: 0 9px;
+  border: 1px solid transparent;
   border-radius: 6px;
   color: rgba(232,230,227,0.72);
   font-size: 12px;
   font-weight: 650;
 }
-.top-nav a:hover {
+.top-nav a:hover,
+.top-nav a[aria-current="page"] {
   color: var(--accent);
   background: rgba(255,255,255,0.07);
+  border-color: var(--border-strong);
+}
+.top-nav a[aria-current="page"] {
+  border-color: rgba(255,216,77,0.34);
 }
 .app-header .meta { color: rgba(232,230,227,0.56); font-size: 12px; }
+
+.all-scene-shell {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background: #1a1a20;
+}
+.all-scene-shell .app-header {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  z-index: 30;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius);
+  box-shadow: 0 14px 38px rgba(0,0,0,0.34);
+}
+.all-scene-canvas {
+  position: absolute;
+  inset: 0;
+}
 
 .library-page {
   min-height: 100vh;
@@ -1694,6 +1728,14 @@ select:focus-visible {
   .catalog-tools,
   .vendor-section {
     width: min(100% - 36px, 1180px);
+  }
+  .all-scene-shell {
+    --scene-header-offset: 142px;
+  }
+  .all-scene-shell .app-header {
+    top: 8px;
+    left: 8px;
+    right: 8px;
   }
   .media-section,
   .media-columns {
