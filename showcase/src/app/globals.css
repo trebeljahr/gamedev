@@ -78,7 +78,7 @@ select:focus-visible {
 }
 .asset-type-nav {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
   padding: 0 24px 24px;
   border-bottom: 1px solid var(--border);
@@ -119,6 +119,27 @@ select:focus-visible {
   color: var(--muted);
   font-size: 12px;
   line-height: 1.4;
+}
+.asset-subnav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+.asset-subnav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 8px;
+  color: var(--text);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 12px;
+}
+.asset-subnav a:hover {
+  color: var(--accent);
+  border-color: rgba(255,216,77,0.45);
 }
 .catalog-heading {
   display: flex;
@@ -373,7 +394,8 @@ select:focus-visible {
   padding: 3px;
   min-height: 38px;
 }
-.media-tabs button {
+.media-tabs button,
+.media-tabs a {
   border: 0;
   border-radius: 6px;
   padding: 8px 12px;
@@ -384,7 +406,8 @@ select:focus-visible {
 }
 .media-tabs button.active,
 .media-tabs button[aria-selected="true"],
-.media-tabs button:hover {
+.media-tabs button:hover,
+.media-tabs a:hover {
   background: var(--surface-2);
   color: var(--accent);
 }
@@ -418,11 +441,17 @@ select:focus-visible {
   gap: 20px;
   padding: 24px;
 }
+.media-single-column {
+  padding: 24px;
+}
 .media-panel {
   min-width: 0;
   padding: 0 24px 24px;
 }
 .media-columns .media-panel {
+  padding: 0;
+}
+.media-single-column .media-panel {
   padding: 0;
 }
 .media-panel h3 {

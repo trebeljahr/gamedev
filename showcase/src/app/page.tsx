@@ -34,28 +34,38 @@ export default function HomePage() {
         </section>
 
         <nav className="asset-type-nav" aria-label="Asset type navigation">
-          <Link className="asset-type-link primary" href="#3d-packs">
+          <article className="asset-type-link primary">
             <span>3D</span>
             <strong>{totalModels.toLocaleString()} models</strong>
-            <small>{manifest.packs.length} packs grouped by vendor</small>
-          </Link>
-          <Link className="asset-type-link" href="/media?view=art">
+            <small>{manifest.packs.length} packs grouped by creator</small>
+            <div className="asset-subnav" aria-label="3D creators">
+              <Link href="#creator-kaykit">KayKit</Link>
+              <Link href="#creator-kenney">Kenney</Link>
+              <Link href="#creator-quaternius">Quaternius</Link>
+            </div>
+          </article>
+          <article className="asset-type-link">
             <span>2D</span>
             <strong>{mediaStats.artPackCount} art packs</strong>
-            <small>Filter by theme, creator, and license</small>
-          </Link>
-          <Link className="asset-type-link" href="/media?view=sounds">
+            <small>UI / Icons, then spritesheets by subject and motion</small>
+            <div className="asset-subnav" aria-label="2D categories">
+              <Link href="/media?view=art&type=ui-icons">UI / Icons</Link>
+              <Link href="/media?view=art&type=spritesheets&subject=characters&motion=animated">Animated characters</Link>
+              <Link href="/media?view=art&type=spritesheets&subject=environments">Environments</Link>
+            </div>
+          </article>
+          <article className="asset-type-link">
             <span>Sounds</span>
             <strong>
               {mediaStats.soundCollectionCount} groups · {mediaStats.musicTrackCount} tracks
             </strong>
-            <small>Preview sound effects and music</small>
-          </Link>
-          <Link className="asset-type-link" href="/media?view=sources">
-            <span>Sources</span>
-            <strong>{mediaStats.sourceMappingCount} mappings</strong>
-            <small>Search textures, path groups, licenses, and origins</small>
-          </Link>
+            <small>Music separated from sound effects, with SFX category filters</small>
+            <div className="asset-subnav" aria-label="Sound categories">
+              <Link href="/media?view=sounds&type=sfx">Sound effects</Link>
+              <Link href="/media?view=sounds&type=music">Music</Link>
+              <Link href="/media?view=sounds&type=sfx">Search SFX</Link>
+            </div>
+          </article>
         </nav>
 
         <section className="catalog-heading" id="3d-packs" aria-labelledby="packs-heading">

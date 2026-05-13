@@ -22,6 +22,10 @@ function matchPack(pack: Pack, query: string): { pack: Pack; modelMatches: numbe
   return { pack, modelMatches };
 }
 
+function slug(value: string): string {
+  return value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+}
+
 export function CatalogSearch({ manifest, children, showHeader = true }: CatalogSearchProps) {
   const [query, setQuery] = useState("");
   const normalizedQuery = query.trim().toLowerCase();
@@ -75,7 +79,7 @@ export function CatalogSearch({ manifest, children, showHeader = true }: Catalog
       {children}
 
       {byVendor.map(([vendor, packs]) => (
-        <section className="vendor-section" key={vendor}>
+        <section className="vendor-section" id={`creator-${slug(vendor)}`} key={vendor}>
           <h2>{vendor}</h2>
           <div className="pack-grid">
             {packs.map(({ pack, modelMatches }) => (

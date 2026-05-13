@@ -1,19 +1,26 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import type { ArtPack, ArtSample, MusicTrack, SoundCollection, SoundSample, SourceMapping } from "@/lib/media";
-import { artCreators, artThemes } from "@/lib/media";
+import type { ArtPack, ArtSample, MusicTrack, SoundCollection, SoundSample } from "@/lib/media";
+import { artCreators } from "@/lib/media";
 
 type MediaExplorerProps = {
   soundCollections: SoundCollection[];
   musicTracks: MusicTrack[];
   artPacks: ArtPack[];
-  sourceMappings: SourceMapping[];
   initialView?: View;
+  initialArtType?: ArtTypeFilter;
+  initialSpriteSubject?: SpriteSubjectFilter;
+  initialSpriteMotion?: SpriteMotionFilter;
+  initialSoundType?: SoundTypeFilter;
 };
 
-type View = "sounds" | "art" | "sources";
-type GroupMode = "theme" | "creator";
+type View = "sounds" | "art";
+type GroupMode = "type" | "creator";
+type ArtTypeFilter = "all" | "ui-icons" | "spritesheets";
+type SpriteSubjectFilter = "all" | "characters" | "environments" | "effects-items" | "other";
+type SpriteMotionFilter = "all" | "animated" | "static";
+type SoundTypeFilter = "all" | "sfx" | "music";
 type SpriteGrid = { cols: number; rows: number; confidence: number };
 type SpriteRect = { x: number; y: number; w: number; h: number };
 
@@ -49,6 +56,59 @@ function searchMatches(searchText: string, query: string): boolean {
   if (terms.length === 0) return true;
   return terms.every((term) => searchText.includes(term));
 }
+
+function artTypeFor(pack: ArtPack): Exclude<ArtTypeFilter, "all"> {
+  const sampleKinds = new Set(pack.samples.map((sample) => sample.kind));
+  const uiOrIcons = pack.theme === "UI" || pack.theme === "Icons & Items";
+  if (uiOrIcons || (sampleKinds.size > 0 && [...sampleKinds].every((kind) => kind === "ui" || kind === "icon"))) {
+    return "ui-icons";
+  }
+  return "spritesheets";
+}
+
+function spriteSubjectFor(pack: ArtPack): Exclude<SpriteSubjectFilter, "all"> {
+  const text = `${pack.theme} ${pack.title} ${pack.folder} ${pack.tags.join(" ")} ${pack.samples
+    .map((sample) => `${sample.kind} ${sample.path}`)
+    .join(" ")}`.toLowerCase();
+  if (/(character|characters|enemy|enemies|animal|creature|hero|knight|warrior|mage|archer|monster|dino)/.test(text)) {
+    return "characters";
+  }
+  if (/(environment|environments|tile|tileset|terrain|forest|dungeon|platform|ground|wall|props|nature|town)/.test(text)) {
+    return "environments";
+  }
+  if (/(effect|fx|icon|item|inventory|weapon|coin|pickup|potion|spell|magic)/.test(text)) {
+    return "effects-items";
+  }
+  return "other";
+}
+
+function spriteMotionFor(pack: ArtPack): Exclude<SpriteMotionFilter, "all"> {
+  return pack.samples.some((sample) => sample.animated) ? "animated" : "static";
+}
+
+function artTaxonomyLabel(pack: ArtPack): string {
+  if (artTypeFor(pack) === "ui-icons") return "UI / Icons";
+  const subjects: Record<Exclude<SpriteSubjectFilter, "all">, string> = {
+    characters: "Characters",
+    environments: "Environments",
+    "effects-items": "Effects & Items",
+    other: "Other",
+  };
+  const motion = spriteMotionFor(pack) === "animated" ? "Animated" : "Static";
+  return `Spritesheets / ${subjects[spriteSubjectFor(pack)]} / ${motion}`;
+}
+
+const ART_TAXONOMY_ORDER = [
+  "UI / Icons",
+  "Spritesheets / Characters / Animated",
+  "Spritesheets / Characters / Static",
+  "Spritesheets / Environments / Animated",
+  "Spritesheets / Environments / Static",
+  "Spritesheets / Effects & Items / Animated",
+  "Spritesheets / Effects & Items / Static",
+  "Spritesheets / Other / Animated",
+  "Spritesheets / Other / Static",
+];
 
 function sampleImageBackground(imageData: ImageData) {
   const { width, height, data } = imageData;
@@ -653,15 +713,23 @@ export function MediaExplorer({
   soundCollections,
   musicTracks,
   artPacks,
-  sourceMappings,
   initialView = "sounds",
+  initialArtType = "all",
+  initialSpriteSubject = "all",
+  initialSpriteMotion = "all",
+  initialSoundType = "sfx",
 }: MediaExplorerProps) {
   const [view, setView] = useState<View>(initialView);
   const [query, setQuery] = useState("");
   const [sourceFilter, setSourceFilter] = useState("all");
   const [licenseFilter, setLicenseFilter] = useState("all");
   const [creatorFilter, setCreatorFilter] = useState("all");
-  const [groupMode, setGroupMode] = useState<GroupMode>("theme");
+  const [groupMode, setGroupMode] = useState<GroupMode>("type");
+  const [artTypeFilter, setArtTypeFilter] = useState<ArtTypeFilter>(initialArtType);
+  const [spriteSubjectFilter, setSpriteSubjectFilter] = useState<SpriteSubjectFilter>(initialSpriteSubject);
+  const [spriteMotionFilter, setSpriteMotionFilter] = useState<SpriteMotionFilter>(initialSpriteMotion);
+  const [soundTypeFilter, setSoundTypeFilter] = useState<SoundTypeFilter>(initialSoundType);
+  const [soundCategoryFilter, setSoundCategoryFilter] = useState("all");
   const [selectedArtFolder, setSelectedArtFolder] = useState(artPacks[0]?.folder ?? "");
   const [selectedSoundId, setSelectedSoundId] = useState(
     soundCollections.find((item) => item.samples.length > 0)?.id ?? soundCollections[0]?.id ?? "",
@@ -672,9 +740,9 @@ export function MediaExplorer({
     [soundCollections],
   );
 
-  const sourceMediums = useMemo(
-    () => ["all", ...Array.from(new Set(sourceMappings.map((mapping) => mapping.medium))).sort()],
-    [sourceMappings],
+  const soundCategories = useMemo(
+    () => ["all", ...Array.from(new Set(soundCollections.map((collection) => collection.category))).sort()],
+    [soundCollections],
   );
 
   const artLicenses = useMemo(
@@ -683,44 +751,45 @@ export function MediaExplorer({
   );
 
   const filteredSounds = useMemo(() => {
+    if (soundTypeFilter === "music") return [];
     const q = query.trim().toLowerCase();
     return soundCollections.filter((item) => {
       if (sourceFilter !== "all" && item.source !== sourceFilter) return false;
+      if (soundCategoryFilter !== "all" && item.category !== soundCategoryFilter) return false;
       return searchMatches(item.searchText, q);
     });
-  }, [query, soundCollections, sourceFilter]);
+  }, [query, soundCategoryFilter, soundCollections, soundTypeFilter, sourceFilter]);
 
   const filteredMusic = useMemo(() => {
+    if (soundTypeFilter === "sfx") return [];
     const q = query.trim().toLowerCase();
     return musicTracks.filter((track) => searchMatches(track.searchText, q));
-  }, [musicTracks, query]);
+  }, [musicTracks, query, soundTypeFilter]);
 
   const filteredArt = useMemo(() => {
     const q = query.trim().toLowerCase();
     return artPacks.filter((pack) => {
       if (licenseFilter !== "all" && licenseBucket(pack.license_class) !== licenseFilter) return false;
       if (creatorFilter !== "all" && pack.author !== creatorFilter) return false;
+      const artType = artTypeFor(pack);
+      if (artTypeFilter !== "all" && artType !== artTypeFilter) return false;
+      if (artType === "spritesheets") {
+        if (spriteSubjectFilter !== "all" && spriteSubjectFor(pack) !== spriteSubjectFilter) return false;
+        if (spriteMotionFilter !== "all" && spriteMotionFor(pack) !== spriteMotionFilter) return false;
+      }
       return searchMatches(pack.searchText, q);
     });
-  }, [artPacks, creatorFilter, licenseFilter, query]);
-
-  const filteredSourceMappings = useMemo(() => {
-    const q = query.trim().toLowerCase();
-    return sourceMappings.filter((mapping) => {
-      if (sourceFilter !== "all" && mapping.medium !== sourceFilter) return false;
-      return searchMatches(mapping.searchText, q);
-    });
-  }, [query, sourceFilter, sourceMappings]);
+  }, [artPacks, artTypeFilter, creatorFilter, licenseFilter, query, spriteMotionFilter, spriteSubjectFilter]);
 
   const groupedArt = useMemo(() => {
     const labels =
-      groupMode === "theme"
-        ? artThemes
+      groupMode === "type"
+        ? ART_TAXONOMY_ORDER
         : Array.from(new Set(filteredArt.map((pack) => pack.author))).sort();
     return labels
       .map((label) => ({
         label,
-        packs: filteredArt.filter((pack) => (groupMode === "theme" ? pack.theme === label : pack.author === label)),
+        packs: filteredArt.filter((pack) => (groupMode === "type" ? artTaxonomyLabel(pack) === label : pack.author === label)),
       }))
       .filter((group) => group.packs.length > 0);
   }, [filteredArt, groupMode]);
@@ -745,17 +814,28 @@ export function MediaExplorer({
       <header className="app-header">
         <h1>Game Asset Media</h1>
         <div className="meta">
-          {soundCollections.length} sound groups · {musicTracks.length} music tracks · {artPacks.length} 2D packs ·{" "}
-          {sourceMappings.length} source mappings
+          {artPacks.length} 2D packs · {soundCollections.length} sound effect groups · {musicTracks.length} music tracks
         </div>
       </header>
 
       <section className="media-hero">
         <div>
           <div className="vendor-tag">Library</div>
-          <h2>Explore sound effects, music, and 2D art alongside the 3D packs.</h2>
+          <h2>Browse 2D art and sounds under the same asset taxonomy as the 3D library.</h2>
         </div>
         <div className="media-tabs" role="tablist" aria-label="Media type">
+          <a href="/" role="tab" aria-selected="false">
+            3D
+          </a>
+          <button
+            type="button"
+            role="tab"
+            aria-selected={view === "art"}
+            className={view === "art" ? "active" : ""}
+            onClick={() => setView("art")}
+          >
+            2D
+          </button>
           <button
             type="button"
             role="tab"
@@ -764,24 +844,6 @@ export function MediaExplorer({
             onClick={() => setView("sounds")}
           >
             Sounds
-          </button>
-          <button
-            type="button"
-            role="tab"
-            aria-selected={view === "art"}
-            className={view === "art" ? "active" : ""}
-            onClick={() => setView("art")}
-          >
-            2D art
-          </button>
-          <button
-            type="button"
-            role="tab"
-            aria-selected={view === "sources"}
-            className={view === "sources" ? "active" : ""}
-            onClick={() => setView("sources")}
-          >
-            Sources
           </button>
         </div>
       </section>
@@ -792,23 +854,70 @@ export function MediaExplorer({
           placeholder={
             view === "sounds"
               ? "Search sounds, music, moods, folders, licenses"
-              : view === "art"
-                ? "Search packs, creators, themes, use cases"
-                : "Search sources, textures, folders, licenses"
+              : "Search packs, creators, themes, use cases"
           }
           value={query}
           onChange={(event) => setQuery(event.target.value)}
         />
-        {view === "sounds" || view === "sources" ? (
-          <select value={sourceFilter} onChange={(event) => setSourceFilter(event.target.value)}>
-            {(view === "sounds" ? soundSources : sourceMediums).map((source) => (
-              <option key={source} value={source}>
-                {source === "all" ? (view === "sounds" ? "All sources" : "All media") : source}
-              </option>
-            ))}
-          </select>
+        {view === "sounds" ? (
+          <>
+            <select value={soundTypeFilter} onChange={(event) => setSoundTypeFilter(event.target.value as SoundTypeFilter)}>
+              <option value="sfx">Sound effects</option>
+              <option value="music">Music</option>
+              <option value="all">All sounds</option>
+            </select>
+            {soundTypeFilter !== "music" && (
+              <>
+                <select value={soundCategoryFilter} onChange={(event) => setSoundCategoryFilter(event.target.value)}>
+                  {soundCategories.map((category) => (
+                    <option key={category} value={category}>
+                      {category === "all" ? "All SFX categories" : category}
+                    </option>
+                  ))}
+                </select>
+                <select value={sourceFilter} onChange={(event) => setSourceFilter(event.target.value)}>
+                  {soundSources.map((source) => (
+                    <option key={source} value={source}>
+                      {source === "all" ? "All sources" : source}
+                    </option>
+                  ))}
+                </select>
+              </>
+            )}
+          </>
         ) : (
           <>
+            <select
+              value={artTypeFilter}
+              onChange={(event) => {
+                const value = event.target.value as ArtTypeFilter;
+                setArtTypeFilter(value);
+                if (value === "ui-icons") {
+                  setSpriteSubjectFilter("all");
+                  setSpriteMotionFilter("all");
+                }
+              }}
+            >
+              <option value="all">All 2D</option>
+              <option value="ui-icons">UI / Icons</option>
+              <option value="spritesheets">Spritesheets</option>
+            </select>
+            {artTypeFilter !== "ui-icons" && (
+              <>
+                <select value={spriteSubjectFilter} onChange={(event) => setSpriteSubjectFilter(event.target.value as SpriteSubjectFilter)}>
+                  <option value="all">All sprite subjects</option>
+                  <option value="characters">Characters</option>
+                  <option value="environments">Environments</option>
+                  <option value="effects-items">Effects & items</option>
+                  <option value="other">Other spritesheets</option>
+                </select>
+                <select value={spriteMotionFilter} onChange={(event) => setSpriteMotionFilter(event.target.value as SpriteMotionFilter)}>
+                  <option value="all">Animated + static</option>
+                  <option value="animated">Animated</option>
+                  <option value="static">Static</option>
+                </select>
+              </>
+            )}
             <select value={licenseFilter} onChange={(event) => setLicenseFilter(event.target.value)}>
               {artLicenses.map((license) => (
                 <option key={license} value={license}>
@@ -828,11 +937,11 @@ export function MediaExplorer({
               <button
                 type="button"
                 role="tab"
-                aria-selected={groupMode === "theme"}
-                className={groupMode === "theme" ? "active" : ""}
-                onClick={() => setGroupMode("theme")}
+                aria-selected={groupMode === "type"}
+                className={groupMode === "type" ? "active" : ""}
+                onClick={() => setGroupMode("type")}
               >
-                Themes
+                Types
               </button>
               <button
                 type="button"
@@ -849,51 +958,78 @@ export function MediaExplorer({
       </section>
 
       {view === "sounds" ? (
-        <div className="media-columns">
-          <section className="media-panel">
-            <h3>Sound effect groups</h3>
-            <div className="media-list">
-              {filteredSounds.map((item) => (
-                <article className={`media-row ${item.id === selectedSoundId ? "active" : ""}`} key={item.id}>
-                  <button type="button" className="row-button" onClick={() => setSelectedSoundId(item.id)}>
-                    <div>
-                      <div className="media-title">{item.title}</div>
-                      <div className="media-detail">{item.path}</div>
-                      <p>{item.description}</p>
+        <div className={soundTypeFilter === "music" ? "media-single-column" : "media-columns"}>
+          {soundTypeFilter !== "music" && (
+            <section className="media-panel">
+              <h3>Sound effects</h3>
+              <div className="media-list">
+                {filteredSounds.map((item) => (
+                  <article className={`media-row ${item.id === selectedSoundId ? "active" : ""}`} key={item.id}>
+                    <button type="button" className="row-button" onClick={() => setSelectedSoundId(item.id)}>
+                      <div>
+                        <div className="media-title">{item.title}</div>
+                        <div className="media-detail">{item.category} · {item.path}</div>
+                        <p>{item.description}</p>
+                      </div>
+                    </button>
+                    <div className="media-actions">
+                      <span>{item.samples.length} samples</span>
+                      {item.url && (
+                        <a href={item.url} target="_blank" rel="noreferrer">
+                          source
+                        </a>
+                      )}
                     </div>
-                  </button>
-                  <div className="media-actions">
-                    <span>{item.samples.length} samples</span>
-                    {item.url && (
-                      <a href={item.url} target="_blank" rel="noreferrer">
-                        source
-                      </a>
-                    )}
-                  </div>
-                </article>
-              ))}
-            </div>
-          </section>
+                  </article>
+                ))}
+              </div>
+            </section>
+          )}
 
-          <section className="media-panel sticky-panel">
-            {selectedSound && <SoundPad collection={selectedSound} />}
-            <h3>Music previews</h3>
-            <div className="track-list">
-              {filteredMusic.map((track) => (
-                <article className="track-row" key={track.path}>
-                  <div className="media-title">{track.title}</div>
-                  <div className="media-detail">{track.source} · {track.license}</div>
-                  <p>{track.description}</p>
-                  <div className="inline-tags">
-                    {track.tags.slice(0, 5).map((tag) => (
-                      <span key={tag}>{tag}</span>
+          {soundTypeFilter !== "music" && (
+            <section className="media-panel sticky-panel">
+              {selectedSound && <SoundPad collection={selectedSound} />}
+              {soundTypeFilter === "all" && filteredMusic.length > 0 && (
+                <>
+                  <h3>Music</h3>
+                  <div className="track-list">
+                    {filteredMusic.map((track) => (
+                      <article className="track-row" key={track.path}>
+                        <div className="media-title">{track.title}</div>
+                        <div className="media-detail">{track.source} · {track.license}</div>
+                        <p>{track.description}</p>
+                        <audio controls preload="none" src={track.src} />
+                      </article>
                     ))}
                   </div>
-                  <audio controls preload="none" src={track.src} />
-                </article>
-              ))}
-            </div>
-          </section>
+                </>
+              )}
+            </section>
+          )}
+
+          {soundTypeFilter === "music" && (
+            <section className="media-panel">
+              <div className="panel-heading">
+                <h3>Music</h3>
+                <span>{filteredMusic.length} tracks</span>
+              </div>
+              <div className="track-list">
+                {filteredMusic.map((track) => (
+                  <article className="track-row" key={track.path}>
+                    <div className="media-title">{track.title}</div>
+                    <div className="media-detail">{track.source} · {track.license}</div>
+                    <p>{track.description}</p>
+                    <div className="inline-tags">
+                      {track.tags.slice(0, 5).map((tag) => (
+                        <span key={tag}>{tag}</span>
+                      ))}
+                    </div>
+                    <audio controls preload="none" src={track.src} />
+                  </article>
+                ))}
+              </div>
+            </section>
+          )}
         </div>
       ) : view === "art" ? (
         <div className="art-layout">
@@ -922,39 +1058,7 @@ export function MediaExplorer({
             </div>
           </section>
         </div>
-      ) : (
-        <section className="media-panel sources-panel">
-          <div className="panel-heading">
-            <h3>Source and path mappings</h3>
-            <span>{filteredSourceMappings.length} groups</span>
-          </div>
-          <div className="source-grid">
-            {filteredSourceMappings.map((mapping) => (
-              <article className="source-card" key={mapping.id}>
-                <div>
-                  <div className="vendor-tag">{mapping.medium}</div>
-                  <h4>{mapping.title}</h4>
-                  <p>{mapping.description}</p>
-                </div>
-                <div className="media-detail">{mapping.pathPattern}</div>
-                <div className="inline-tags">
-                  {mapping.tags.slice(0, 6).map((tag) => (
-                    <span key={tag}>{tag}</span>
-                  ))}
-                </div>
-                <div className="media-actions">
-                  <span>{mapping.source}</span>
-                  {mapping.url && (
-                    <a href={mapping.url} target="_blank" rel="noreferrer">
-                      source
-                    </a>
-                  )}
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
-      )}
+      ) : null}
     </div>
   );
 }
