@@ -57,6 +57,12 @@ export type PackLayout = {
   bounds: PackBounds;
 };
 
+export type SceneLayout = {
+  slots: Slot[];
+  packs: PackLayout[];
+  bounds: { min: [number, number, number]; max: [number, number, number] };
+};
+
 /* Shelf-pack a sequence of (w, d) rectangles into a target-width row layout.
    Returns each rect's local (x, z) NW corner plus the overall (w, d). */
 function shelfPack(
@@ -91,11 +97,7 @@ function shelfPack(
 
 /* Pack each pack's models into a roughly-square block, then pack those
    blocks into the world. */
-function computeSlots(): {
-  slots: Slot[];
-  packs: PackLayout[];
-  bounds: { min: [number, number, number]; max: [number, number, number] };
-} {
+function computeSlots(): SceneLayout {
   const slots: Slot[] = [];
   const packs: PackLayout[] = [];
 
@@ -202,6 +204,38 @@ const _data = computeSlots();
 export const allSlots = _data.slots;
 export const packLayouts = _data.packs;
 export const worldBounds = _data.bounds;
+export const allModelsLayout: SceneLayout = _data;
+
+export function layoutForPackId(packId: string): SceneLayout | undefined {
+  const layout = packLayouts.find((pl) => pl.pack.id === packId);
+  if (!layout) return undefined;
+
+  const originX = layout.bounds.minX;
+  const originZ = layout.bounds.minZ;
+  const slots = layout.slots.map((slot) => ({
+    ...slot,
+    position: [
+      slot.position[0] - originX,
+      slot.position[1],
+      slot.position[2] - originZ,
+    ] satisfies [number, number, number],
+  }));
+  const bounds = {
+    minX: 0,
+    maxX: layout.bounds.maxX - layout.bounds.minX,
+    minZ: 0,
+    maxZ: layout.bounds.maxZ - layout.bounds.minZ,
+  };
+
+  return {
+    slots,
+    packs: [{ ...layout, slots, bounds }],
+    bounds: {
+      min: [0, 0, 0],
+      max: [bounds.maxX, 10, bounds.maxZ],
+    },
+  };
+}
 
 /* Distance from (cx,cz) to the nearest point of an axis-aligned rect.
    Zero when the point is inside the rect. */

@@ -24,11 +24,11 @@ import {
 } from "three";
 import { Model, type AnimationInfo } from "./Model";
 import {
-  allSlots,
+  allModelsLayout,
   distToPackXZ,
-  packLayouts,
-  worldBounds,
+  layoutForPackId,
   type PackLayout,
+  type SceneLayout,
   type Slot,
 } from "@/lib/layout";
 import { assetUrl } from "@/lib/manifest";
@@ -59,16 +59,41 @@ const BASE_THICKNESS = 0.2;
 const BASE_CENTER_Y = BASE_THICKNESS / 2;
 const BASE_TOP_Y = BASE_THICKNESS + 0.005; // top of base + tiny lift
 
-export function AllModelsScene() {
-  const start = useMemo<[number, number, number]>(
-    () => [6, WORLD_HEIGHT + 1.5, -4],
-    [],
+export function AllModelsScene({
+  packId,
+}: {
+  packId?: string;
+}) {
+  const sceneLayout = useMemo(
+    () => (packId ? layoutForPackId(packId) ?? allModelsLayout : allModelsLayout),
+    [packId],
   );
+  const start = useMemo<[number, number, number]>(() => {
+    const [width, _height, depth] = sceneLayout.bounds.max;
+    return [
+      Math.min(Math.max(width * 0.18, 4), 18),
+      WORLD_HEIGHT + 1.5,
+      -Math.min(Math.max(depth * 0.08, 4), 14),
+    ];
+  }, [sceneLayout]);
+  const isPackScene = sceneLayout.packs.length === 1 && !!packId;
+  const title = isPackScene ? sceneLayout.packs[0].pack.title : "All models";
+  const backHref = isPackScene
+    ? `/${sceneLayout.packs[0].pack.vendor}/${sceneLayout.packs[0].pack.pack}`
+    : "/#3d-packs";
+  const backLabel = isPackScene ? "back to kit" : "back to packs";
   const [mounted, setMounted] = useState<Slot[]>([]);
   const [selected, setSelected] = useState<Slot | null>(null);
   const [hoverInspect, setHoverInspect] = useState(false);
   const [playAnim, setPlayAnim] = useState<string | null>(null);
   const animsRef = useRef<Map<number, AnimationInfo>>(new Map());
+
+  useEffect(() => {
+    setMounted([]);
+    setSelected(null);
+    setPlayAnim(null);
+    animsRef.current.clear();
+  }, [sceneLayout]);
 
   const onSelect = useCallback((slot: Slot) => {
     setSelected(slot);
@@ -115,23 +140,30 @@ export function AllModelsScene() {
           panelOpen={!!selected}
           onPanelClose={() => setSelected(null)}
         />
-        <Placeholders />
-        <Floor />
+        <Placeholders slots={sceneLayout.slots} />
+        <Floor bounds={sceneLayout.bounds} />
         <ActiveModels
+          layouts={sceneLayout.packs}
           mounted={mounted}
           onMountedChange={setMounted}
           selectedIndex={selected?.index ?? null}
           playAnim={playAnim}
           onAnimInfo={setAnimInfo}
         />
-        <PackLabels />
+        <PackLabels layouts={sceneLayout.packs} />
         <Suspense fallback={null}>
           <Environment preset="warehouse" environmentIntensity={0.35} />
         </Suspense>
         <PointerLockControls selector=".all-scene-canvas canvas" />
       </Canvas>
       <Crosshair hovering={hoverInspect && !selected} />
-      <HUD panelOpen={!!selected} />
+      <HUD
+        title={title}
+        count={sceneLayout.slots.length}
+        panelOpen={!!selected}
+        backHref={backHref}
+        backLabel={backLabel}
+      />
       {selected && (
         <ModelPanel
           slot={selected}
@@ -335,13 +367,13 @@ type CrosshairHit =
    is centred on its cell and scaled to the *model's* raw XZ footprint, NOT
    the padded cell size, so adjacent bases get a CELL_PAD gap between them.
    Geometry is a unit cube; the per-instance scale matrix stretches it. */
-function Placeholders() {
+function Placeholders({ slots }: { slots: Slot[] }) {
   const ref = useRef<InstancedMesh>(null);
   const dummy = useMemo(() => new Object3D(), []);
   useEffect(() => {
     if (!ref.current) return;
-    for (let i = 0; i < allSlots.length; i++) {
-      const slot = allSlots[i];
+    for (let i = 0; i < slots.length; i++) {
+      const slot = slots[i];
       const [x, _y, z] = slot.position;
       const [cw, cd] = slot.cellSize;
       const [mw, _mh, md] = slot.model.size;
@@ -352,11 +384,11 @@ function Placeholders() {
       ref.current.setMatrixAt(i, dummy.matrix);
     }
     ref.current.instanceMatrix.needsUpdate = true;
-  }, [dummy]);
+  }, [dummy, slots]);
   return (
     <instancedMesh
       ref={ref}
-      args={[undefined, undefined, allSlots.length]}
+      args={[undefined, undefined, slots.length]}
       frustumCulled={false}
     >
       <boxGeometry args={[1, 1, 1]} />
@@ -371,12 +403,14 @@ function Placeholders() {
    Each mounted model group carries userData.slot so the raycaster can find
    which slot was clicked. */
 function ActiveModels({
+  layouts,
   mounted,
   onMountedChange,
   selectedIndex,
   playAnim,
   onAnimInfo,
 }: {
+  layouts: PackLayout[];
   mounted: Slot[];
   onMountedChange: (next: Slot[] | ((prev: Slot[]) => Slot[])) => void;
   selectedIndex: number | null;
@@ -395,7 +429,7 @@ function ActiveModels({
       const cx = camera.position.x;
       const cz = camera.position.z;
       const near: Array<{ pl: PackLayout; d: number }> = [];
-      for (const pl of packLayouts) {
+      for (const pl of layouts) {
         const d = distToPackXZ(cx, cz, pl.bounds);
         if (d < PACK_LOAD_BUFFER) near.push({ pl, d });
       }
@@ -514,7 +548,7 @@ function GroundedModel({
 /* Sparse Text labels for packs near the camera (real Text is expensive).
    Visibility tracks pack-rect distance so labels appear consistently for big
    and small packs. */
-function PackLabels() {
+function PackLabels({ layouts }: { layouts: PackLayout[] }) {
   const { camera } = useThree();
   const [visible, setVisible] = useState<PackLayout[]>([]);
   const t = useRef(0);
@@ -525,7 +559,7 @@ function PackLabels() {
     const cx = camera.position.x;
     const cz = camera.position.z;
     const list: PackLayout[] = [];
-    for (const pl of packLayouts) {
+    for (const pl of layouts) {
       if (distToPackXZ(cx, cz, pl.bounds) < PACK_LABEL_BUFFER) list.push(pl);
     }
     setVisible(list);
@@ -598,9 +632,9 @@ function triggerDownload(href: string, filename: string) {
 
 /* Big dark floor stretching across the world bounds. Sits just below y=0 to
    avoid z-fighting with anything placed on the y=0 plane. */
-function Floor() {
-  const w = worldBounds.max[0] + 40;
-  const d = worldBounds.max[2] + 40;
+function Floor({ bounds }: { bounds: SceneLayout["bounds"] }) {
+  const w = bounds.max[0] + 40;
+  const d = bounds.max[2] + 40;
   return (
     <mesh
       rotation={[-Math.PI / 2, 0, 0]}
@@ -673,7 +707,19 @@ function Crosshair({ hovering }: { hovering: boolean }) {
 }
 
 /* On-screen help / status */
-function HUD({ panelOpen }: { panelOpen: boolean }) {
+function HUD({
+  title,
+  count,
+  panelOpen,
+  backHref,
+  backLabel,
+}: {
+  title: string;
+  count: number;
+  panelOpen: boolean;
+  backHref: string;
+  backLabel: string;
+}) {
   return (
     <div
       style={{
@@ -692,7 +738,7 @@ function HUD({ panelOpen }: { panelOpen: boolean }) {
         lineHeight: 1.5,
       }}
     >
-      <strong>All models</strong> — {allSlots.length.toLocaleString()} slots
+      <strong>{title}</strong> — {count.toLocaleString()} slots
       <br />
       {panelOpen
         ? "Click canvas to resume walking"
@@ -700,8 +746,8 @@ function HUD({ panelOpen }: { panelOpen: boolean }) {
       <br />
       WASD walk · Space/C vertical · Shift sprint · click model to inspect
       <br />
-      <a href="/models" style={{ color: "#ffd84d" }}>
-        ← back to models
+      <a href={backHref} style={{ color: "#ffd84d" }}>
+        ← {backLabel}
       </a>
     </div>
   );

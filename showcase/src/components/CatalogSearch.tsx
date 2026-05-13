@@ -166,9 +166,13 @@ export function CatalogSearch({ manifest, children, showHeader = true, modelMoti
                       <div className="pack-count">
                         {(normalizedQuery || modelMotion !== "all") && modelMatches > 0
                           ? `${modelMatches} matching ${modelMatches === 1 ? "model" : "models"}`
-                          : `${pack.count} ${pack.count === 1 ? "model" : "models"}`}
+                        : `${pack.count} ${pack.count === 1 ? "model" : "models"}`}
                       </div>
                     </Link>
+                    <div className="pack-card-actions">
+                      <Link href={packHref}>View</Link>
+                      <Link href={`${packHref}/all`}>Walk kit</Link>
+                    </div>
                   </article>
                 );
               })}

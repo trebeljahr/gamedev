@@ -707,7 +707,7 @@ select:focus-visible {
 }
 .pack-card {
   display: grid;
-  grid-template-rows: 138px auto auto auto auto auto;
+  grid-template-rows: 1fr auto;
   min-height: 374px;
   overflow: hidden;
   padding: 0;
@@ -821,9 +821,34 @@ select:focus-visible {
 .pack-card .pack-count {
   align-self: end;
   margin-top: 12px;
-  padding: 0 16px 14px;
+  padding: 0 16px;
   color: var(--muted);
   font-size: 12px;
+}
+.pack-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 12px 16px 14px;
+}
+.pack-card-actions a,
+.pack-view-actions a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 9px;
+  color: var(--text);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 650;
+}
+.pack-card-actions a:hover,
+.pack-view-actions a:hover {
+  color: #11100b;
+  background: var(--accent);
+  border-color: var(--accent);
 }
 
 .viewer-shell {
@@ -953,6 +978,12 @@ select:focus-visible {
   color: var(--muted);
   font-size: 11px;
   padding: 2px 6px;
+}
+.pack-view-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0 0 12px;
 }
 .model-search {
   width: 100%;
