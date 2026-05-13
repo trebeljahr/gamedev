@@ -128,7 +128,7 @@ export function AllModelsScene() {
         <Suspense fallback={null}>
           <Environment preset="warehouse" environmentIntensity={0.35} />
         </Suspense>
-        <PointerLockControls />
+        <PointerLockControls selector=".all-scene-canvas canvas" />
       </Canvas>
       <Crosshair hovering={hoverInspect && !selected} />
       <HUD panelOpen={!!selected} />
@@ -222,9 +222,9 @@ function Walker() {
 /* Raycaster + panel close handler — single canvas click listener.
    While pointer is locked: raycast from crosshair, open panel if a model
    in range is hit.
-   While pointer is NOT locked AND the panel is open: this click means the
-   user is reaching for the canvas (drei will re-acquire pointer lock on
-   the same event); close the panel so they're back in walking mode. */
+   While pointer is NOT locked AND the panel is open: a direct canvas click
+   means the user is reaching for the scene; close the panel so they're back
+   in walking mode. */
 function Selector({
   onSelect,
   onHoverChange,
@@ -299,8 +299,8 @@ function Selector({
     function onClick(e: MouseEvent) {
       if (e.button !== 0) return;
       if (document.pointerLockElement !== el) {
-        // Not yet locked: drei is about to re-lock on this click. If the panel
-        // was open, that means we're transitioning back to walking — close it.
+        // Not yet locked: this listener is on the canvas only. If the panel was
+        // open, that means we're transitioning back to walking — close it.
         if (panelOpenRef.current) onPanelClose();
         return;
       }
