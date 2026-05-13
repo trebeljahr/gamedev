@@ -95,6 +95,11 @@ select:focus-visible {
   border-color: rgba(255,216,77,0.34);
 }
 .app-header .meta { color: rgba(232,230,227,0.56); font-size: 12px; }
+.header-meta-link {
+  margin-right: 16px;
+  color: var(--accent);
+  font-weight: 700;
+}
 
 .all-scene-shell {
   position: fixed;
@@ -339,6 +344,12 @@ select:focus-visible {
   margin: 0 auto;
   padding: clamp(54px, 9vw, 100px) 0 0;
 }
+.catalog-heading-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+}
 
 .vendor-section {
   width: min(1180px, calc(100% - 44px));
@@ -374,9 +385,155 @@ select:focus-visible {
   color: var(--text);
   font: inherit;
 }
+.catalog-tools select {
+  min-height: 40px;
+  padding: 0 34px 0 10px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font: inherit;
+}
 .catalog-result-count {
   color: var(--muted);
   font-size: 12px;
+}
+
+.model-catalog-page {
+  min-height: 100vh;
+  padding-bottom: 60px;
+  background:
+    linear-gradient(180deg, rgba(255,216,77,0.05), rgba(255,216,77,0) 220px),
+    var(--bg);
+}
+.model-catalog-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 18px;
+  width: min(1180px, calc(100% - 44px));
+  margin: 0 auto;
+  padding: clamp(42px, 7vw, 78px) 0 0;
+}
+.model-catalog-heading h2 {
+  margin: 8px 0 0;
+  font-size: clamp(34px, 5vw, 62px);
+  line-height: 1;
+  letter-spacing: 0;
+}
+.model-catalog-heading p {
+  max-width: 680px;
+  margin: 14px 0 0;
+  color: rgba(232,230,227,0.68);
+  font-size: 15px;
+  line-height: 1.5;
+}
+.model-catalog-tools {
+  align-items: stretch;
+}
+.model-catalog-tools input {
+  flex: 1 1 360px;
+}
+.model-results {
+  display: grid;
+  gap: 10px;
+  width: min(1180px, calc(100% - 44px));
+  margin: 18px auto 0;
+}
+.model-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(230px, 320px);
+  gap: 16px;
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.model-card:hover {
+  border-color: rgba(255,216,77,0.55);
+  transform: translateY(-1px);
+}
+.model-card-kicker,
+.model-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.model-card-kicker span {
+  color: var(--muted);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.model-card h3 {
+  margin: 8px 0 0;
+  font-size: 18px;
+  line-height: 1.18;
+  letter-spacing: 0;
+}
+.model-card p {
+  margin: 8px 0 0;
+  color: rgba(232,230,227,0.68);
+  line-height: 1.45;
+}
+.model-tags {
+  margin-top: 12px;
+}
+.model-tags span {
+  padding: 3px 7px;
+  color: rgba(232,230,227,0.72);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 11px;
+}
+.model-metadata {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  margin: 0;
+  padding-left: 16px;
+  border-left: 1px solid var(--border);
+}
+.model-metadata div {
+  min-width: 0;
+}
+.model-metadata dt {
+  color: var(--muted);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.model-metadata dd {
+  margin: 3px 0 0;
+  overflow: hidden;
+  color: rgba(232,230,227,0.82);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.model-metadata a {
+  color: var(--accent);
+}
+.empty-model-results {
+  padding: 24px;
+  color: var(--muted);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+.model-load-more {
+  min-height: 44px;
+  color: #11100b;
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 750;
+  cursor: pointer;
+}
+.model-load-more:hover {
+  background: #ffe57d;
 }
 
 .media-section {
@@ -1673,9 +1830,31 @@ select:focus-visible {
     min-height: 210px;
   }
   .catalog-heading,
+  .model-catalog-heading,
   .catalog-tools,
-  .vendor-section {
+  .vendor-section,
+  .model-results {
     width: min(100% - 36px, 1180px);
+  }
+  .catalog-heading,
+  .model-catalog-heading,
+  .model-card {
+    grid-template-columns: 1fr;
+  }
+  .catalog-heading {
+    display: grid;
+  }
+  .catalog-heading-actions {
+    justify-content: stretch;
+  }
+  .model-catalog-heading {
+    display: grid;
+  }
+  .model-metadata {
+    padding-top: 14px;
+    padding-left: 0;
+    border-top: 1px solid var(--border);
+    border-left: 0;
   }
   .all-scene-shell {
     --scene-header-offset: 142px;

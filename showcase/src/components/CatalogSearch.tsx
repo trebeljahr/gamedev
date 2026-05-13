@@ -56,7 +56,10 @@ export function CatalogSearch({ manifest, children, showHeader = true }: Catalog
           meta={
             <>
               <Link href="/all" style={{ marginRight: 16, color: "#ffd84d" }}>
-                walk through everything
+                walk-through view
+              </Link>
+              <Link href="/models" style={{ marginRight: 16, color: "#ffd84d" }}>
+                model index
               </Link>
               {manifest.packs.length} packs · {totalModels.toLocaleString()} models
             </>

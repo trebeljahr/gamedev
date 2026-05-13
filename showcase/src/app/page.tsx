@@ -58,8 +58,8 @@ export default function HomePage() {
               <Link className="landing-button primary" href="#3d-packs">
                 Browse 3D packs
               </Link>
-              <Link className="landing-button secondary" href="/media?view=art">
-                Explore 2D and audio
+              <Link className="landing-button secondary" href="/models">
+                Search every model
               </Link>
             </div>
           </div>
@@ -81,6 +81,7 @@ export default function HomePage() {
               <small>{manifest.packs.length} packs grouped by creator</small>
             </Link>
             <div className="asset-subnav" aria-label="3D creators">
+              <Link href="/models">All models</Link>
               <Link href="#creator-kaykit">KayKit</Link>
               <Link href="#creator-kenney">Kenney</Link>
               <Link href="#creator-quaternius">Quaternius</Link>
@@ -144,7 +145,10 @@ export default function HomePage() {
             <div className="landing-kicker">3D catalog</div>
             <h2 id="packs-heading">Model packs</h2>
           </div>
-          <Link href="/all">Open all-model viewer</Link>
+          <div className="catalog-heading-actions">
+            <Link href="/models">Search every model</Link>
+            <Link href="/all">Open world viewer</Link>
+          </div>
         </section>
 
         <CatalogSearch manifest={manifest} showHeader={false} />

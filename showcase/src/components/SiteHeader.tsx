@@ -13,6 +13,7 @@ type SiteHeaderProps = {
 const navItems = [
   { label: "Home", href: "/", key: "library" },
   { label: "3D", href: "/#3d-packs", key: "packs" },
+  { label: "Models", href: "/models", key: "models" },
   { label: "2D", href: "/media?view=art", key: "art" },
   { label: "Sounds", href: "/media?view=sounds", key: "sounds" },
 ] as const;
@@ -21,6 +22,7 @@ type NavKey = (typeof navItems)[number]["key"];
 
 function activeKey(pathname: string): NavKey | undefined {
   if (pathname === "/") return "library";
+  if (pathname === "/models") return "models";
   if (pathname === "/media") return "sounds";
   if (pathname === "/all") return undefined;
   return "packs";
