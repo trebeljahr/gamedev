@@ -1563,22 +1563,33 @@ select:focus-visible {
 }
 .audio-bars {
   display: grid;
-  grid-template-columns: repeat(18, 1fr);
-  gap: 3px;
-  height: 24px;
+  grid-template-columns: repeat(var(--bar-count, 48), minmax(1px, 1fr));
+  gap: clamp(1px, 0.45vw, 3px);
+  height: 28px;
   align-items: end;
+  min-width: 0;
 }
 .audio-bars span {
   height: var(--bar-height);
-  min-height: 4px;
+  min-height: 3px;
   border-radius: 999px;
-  background: rgba(255,216,77,0.28);
+  background: rgba(255,255,255,0.15);
+  opacity: calc(0.56 + var(--bar-level, 0.4) * 0.26);
   transform-origin: bottom;
+  transition: background 0.16s ease, box-shadow 0.16s ease, opacity 0.16s ease, transform 0.16s ease;
 }
-.audio-player.playing .audio-bars span {
-  animation: audioPulse 0.85s ease-in-out infinite alternate;
-  animation-delay: calc(var(--bar-index) * -48ms);
-  background: rgba(255,216,77,0.72);
+.audio-player.compact .audio-bars {
+  height: 23px;
+}
+.audio-bars span.played {
+  background: rgba(255,216,77,0.62);
+  opacity: 0.96;
+}
+.audio-player.playing .audio-bars span.current {
+  animation: audioPulse 0.42s ease-in-out infinite alternate;
+  background: var(--accent);
+  box-shadow: 0 0 14px rgba(255,216,77,0.3);
+  opacity: 1;
 }
 .audio-seeker {
   width: 100%;
@@ -1612,8 +1623,8 @@ select:focus-visible {
   box-shadow: 0 0 0 3px rgba(255,216,77,0.16);
 }
 @keyframes audioPulse {
-  from { transform: scaleY(0.45); }
-  to { transform: scaleY(1); }
+  from { transform: scaleY(0.74); }
+  to { transform: scaleY(1.08); }
 }
 .sound-controls,
 .runner-controls {
