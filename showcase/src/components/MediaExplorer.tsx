@@ -12,6 +12,8 @@ type MediaExplorerProps = {
 
 type View = "sounds" | "art";
 type GroupMode = "theme" | "creator";
+type SpriteGrid = { cols: number; rows: number; confidence: number };
+type SpriteRect = { x: number; y: number; w: number; h: number };
 
 function licenseBucket(license: string): string {
   const lower = license.toLowerCase();
@@ -40,12 +42,197 @@ function sampleForUi(pack: ArtPack): ArtSample | undefined {
   );
 }
 
+function sampleImageBackground(imageData: ImageData) {
+  const { width, height, data } = imageData;
+  const corners = [
+    [0, 0],
+    [width - 1, 0],
+    [0, height - 1],
+    [width - 1, height - 1],
+  ];
+  let r = 0;
+  let g = 0;
+  let b = 0;
+  let a = 0;
+  for (const [x, y] of corners) {
+    const index = (y * width + x) * 4;
+    r += data[index];
+    g += data[index + 1];
+    b += data[index + 2];
+    a += data[index + 3];
+  }
+  return { r: r / 4, g: g / 4, b: b / 4, a: a / 4, transparent: a < 128 };
+}
+
+function isContentPixel(data: Uint8ClampedArray, index: number, bg: ReturnType<typeof sampleImageBackground>): boolean {
+  const alpha = data[index + 3];
+  if (bg.transparent) return alpha >= 32;
+  if (alpha < 32) return false;
+  const threshold = 20;
+  return (
+    Math.abs(data[index] - bg.r) >= threshold ||
+    Math.abs(data[index + 1] - bg.g) >= threshold ||
+    Math.abs(data[index + 2] - bg.b) >= threshold
+  );
+}
+
+function detectPeriod(signal: Float32Array): { lag: number; score: number } {
+  const n = signal.length;
+  if (n < 32) return { lag: 0, score: 0 };
+
+  let mean = 0;
+  for (let i = 0; i < n; i++) mean += signal[i];
+  mean /= n;
+
+  let variance = 0;
+  for (let i = 0; i < n; i++) {
+    const d = signal[i] - mean;
+    variance += d * d;
+  }
+  variance /= n;
+  if (variance < 1e-8) return { lag: 0, score: 0 };
+
+  const minLag = 8;
+  const maxLag = Math.floor(n / 2);
+  if (maxLag < minLag) return { lag: 0, score: 0 };
+
+  const acf = new Float32Array(maxLag - minLag + 1);
+  for (let lag = minLag; lag <= maxLag; lag++) {
+    let sum = 0;
+    const end = n - lag;
+    for (let i = 0; i < end; i++) {
+      sum += (signal[i] - mean) * (signal[i + lag] - mean);
+    }
+    acf[lag - minLag] = sum / (end * variance);
+  }
+
+  const peaks: Array<{ lag: number; score: number }> = [];
+  for (let i = 1; i < acf.length - 1; i++) {
+    if (acf[i] > acf[i - 1] && acf[i] >= acf[i + 1] && acf[i] > 0.2) {
+      peaks.push({ lag: i + minLag, score: acf[i] });
+    }
+  }
+  if (peaks.length === 0) return { lag: 0, score: 0 };
+
+  let best = peaks[0];
+  for (const peak of peaks) if (peak.score > best.score) best = peak;
+
+  for (let div = 2; div <= 8; div++) {
+    const candidate = Math.round(best.lag / div);
+    if (candidate < minLag) break;
+    const idx = candidate - minLag;
+    if (idx < 0 || idx >= acf.length) continue;
+    let localBest = -Infinity;
+    for (let d = -1; d <= 1; d++) {
+      const j = idx + d;
+      if (j >= 0 && j < acf.length) localBest = Math.max(localBest, acf[j]);
+    }
+    if (localBest >= best.score * 0.8) {
+      best = { lag: candidate, score: localBest };
+    }
+  }
+
+  return best;
+}
+
+function detectGridFromImageData(imageData: ImageData): SpriteGrid {
+  const { width, height, data } = imageData;
+  const bg = sampleImageBackground(imageData);
+  const rowActivity = new Float32Array(height);
+  const colActivity = new Float32Array(width);
+
+  for (let y = 0; y < height; y++) {
+    let count = 0;
+    for (let x = 0; x < width; x++) {
+      if (isContentPixel(data, (y * width + x) * 4, bg)) count++;
+    }
+    rowActivity[y] = count / width;
+  }
+  for (let x = 0; x < width; x++) {
+    let count = 0;
+    for (let y = 0; y < height; y++) {
+      if (isContentPixel(data, (y * width + x) * 4, bg)) count++;
+    }
+    colActivity[x] = count / height;
+  }
+
+  const rowPeriod = detectPeriod(rowActivity);
+  const colPeriod = detectPeriod(colActivity);
+  if (rowPeriod.lag > 0 && colPeriod.lag > 0) {
+    const rows = Math.max(1, Math.round(height / rowPeriod.lag));
+    const cols = Math.max(1, Math.round(width / colPeriod.lag));
+    if (rows <= 32 && cols <= 32) {
+      return { cols, rows, confidence: 0.5 + Math.min(rowPeriod.score, colPeriod.score) * 0.4 };
+    }
+  }
+
+  const countCells = (activity: Float32Array): number => {
+    const isGap = Array.from(activity, (value) => value < 0.01);
+    let start = 0;
+    while (start < isGap.length && isGap[start]) start++;
+    let end = isGap.length - 1;
+    while (end >= start && isGap[end]) end--;
+    if (start > end) return 1;
+    const gaps: number[] = [];
+    let gap = 0;
+    for (let i = start; i <= end; i++) {
+      if (isGap[i]) {
+        gap++;
+      } else if (gap > 0) {
+        gaps.push(gap);
+        gap = 0;
+      }
+    }
+    if (gaps.length === 0) return 1;
+    const threshold = Math.max(1, Math.floor(Math.max(...gaps) * 0.5));
+    return gaps.filter((g) => g >= threshold).length + 1;
+  };
+
+  const rows = countCells(rowActivity);
+  const cols = countCells(colActivity);
+  if (rows >= 1 && cols >= 1 && rows <= 32 && cols <= 32) {
+    return { cols, rows, confidence: 0.6 };
+  }
+
+  for (const size of [16, 24, 32, 48, 64, 96, 128, 192, 256]) {
+    if (width % size === 0 && height % size === 0) {
+      return { cols: width / size, rows: height / size, confidence: 0.4 };
+    }
+  }
+
+  return { cols: 1, rows: 1, confidence: 0 };
+}
+
+function computeTrimRect(imageData: ImageData, source: SpriteRect, bg: ReturnType<typeof sampleImageBackground>): SpriteRect {
+  const { width, data } = imageData;
+  let minX = source.x + source.w;
+  let minY = source.y + source.h;
+  let maxX = source.x - 1;
+  let maxY = source.y - 1;
+
+  for (let y = source.y; y < source.y + source.h; y++) {
+    for (let x = source.x; x < source.x + source.w; x++) {
+      if (isContentPixel(data, (y * width + x) * 4, bg)) {
+        if (x < minX) minX = x;
+        if (y < minY) minY = y;
+        if (x > maxX) maxX = x;
+        if (y > maxY) maxY = y;
+      }
+    }
+  }
+
+  if (maxX < minX || maxY < minY) return source;
+  return { x: minX, y: minY, w: maxX - minX + 1, h: maxY - minY + 1 };
+}
+
 function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const [playing, setPlaying] = useState(true);
-  const [fps, setFps] = useState(10);
+  const [speed, setSpeed] = useState(1);
   const [columns, setColumns] = useState(4);
   const [rows, setRows] = useState(1);
+  const [autoDetect, setAutoDetect] = useState(true);
+  const [detectedGrid, setDetectedGrid] = useState<SpriteGrid | null>(null);
   const [scale, setScale] = useState(3);
   const [flip, setFlip] = useState(false);
   const [background, setBackground] = useState("#15171c");
@@ -54,6 +241,8 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
     setPlaying(true);
     setColumns(sample?.animated ? 4 : 1);
     setRows(1);
+    setAutoDetect(true);
+    setDetectedGrid(null);
   }, [sample?.src, sample?.animated]);
 
   useEffect(() => {
@@ -61,16 +250,47 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
+    const drawingCanvas = canvas;
+    const context = ctx;
 
     let raf = 0;
     let frame = 0;
     let lastFrame = 0;
     let imageReady = false;
     let failed = false;
+    let imageData: ImageData | null = null;
+    let bgSample: ReturnType<typeof sampleImageBackground> | null = null;
+    const trimCache = new Map<number, SpriteRect>();
     const image = new Image();
     image.crossOrigin = "anonymous";
     image.onload = () => {
       imageReady = true;
+      try {
+        const scratch = document.createElement("canvas");
+        scratch.width = image.naturalWidth || image.width;
+        scratch.height = image.naturalHeight || image.height;
+        const scratchCtx = scratch.getContext("2d", { willReadFrequently: true });
+        if (!scratchCtx) return;
+        scratchCtx.drawImage(image, 0, 0);
+        imageData = scratchCtx.getImageData(0, 0, scratch.width, scratch.height);
+        bgSample = sampleImageBackground(imageData);
+        const detected = detectGridFromImageData(imageData);
+        const stripFallback = (() => {
+          if (!sample?.animated || detected.cols * detected.rows > 1) return detected;
+          const wide = Math.round(imageData.width / imageData.height);
+          if (wide >= 2 && wide <= 32) return { cols: wide, rows: 1, confidence: 0.45 };
+          const tall = Math.round(imageData.height / imageData.width);
+          if (tall >= 2 && tall <= 32) return { cols: 1, rows: tall, confidence: 0.45 };
+          return detected;
+        })();
+        setDetectedGrid(stripFallback);
+        if (autoDetect && stripFallback.confidence > 0) {
+          setColumns(stripFallback.cols);
+          setRows(stripFallback.rows);
+        }
+      } catch {
+        setDetectedGrid(null);
+      }
     };
     image.onerror = () => {
       failed = true;
@@ -79,74 +299,89 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
     else failed = true;
 
     function drawGrid() {
-      if (!ctx || !canvas) return;
-      ctx.fillStyle = background;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = "rgba(255,255,255,0.035)";
+      context.fillStyle = background;
+      context.fillRect(0, 0, drawingCanvas.width, drawingCanvas.height);
+      context.fillStyle = "rgba(255,255,255,0.035)";
       const cell = 24;
-      for (let x = 0; x < canvas.width; x += cell) ctx.fillRect(x, 0, 1, canvas.height);
-      for (let y = 0; y < canvas.height; y += cell) ctx.fillRect(0, y, canvas.width, 1);
-      ctx.fillStyle = "rgba(255,216,77,0.12)";
-      ctx.fillRect(0, canvas.height - 72, canvas.width, 2);
+      for (let x = 0; x < drawingCanvas.width; x += cell) context.fillRect(x, 0, 1, drawingCanvas.height);
+      for (let y = 0; y < drawingCanvas.height; y += cell) context.fillRect(0, y, drawingCanvas.width, 1);
+      context.fillStyle = "rgba(255,216,77,0.12)";
+      context.fillRect(0, drawingCanvas.height - 72, drawingCanvas.width, 2);
     }
 
     function drawPlaceholder() {
-      if (!ctx || !canvas) return;
-      ctx.fillStyle = "rgba(255,255,255,0.07)";
-      ctx.fillRect(canvas.width / 2 - 48, canvas.height / 2 - 48, 96, 96);
-      ctx.strokeStyle = "rgba(255,216,77,0.65)";
-      ctx.lineWidth = 2;
-      ctx.strokeRect(canvas.width / 2 - 48, canvas.height / 2 - 48, 96, 96);
-      ctx.fillStyle = "rgba(255,255,255,0.82)";
-      ctx.font = "600 18px system-ui";
-      ctx.textAlign = "center";
-      ctx.fillText(initials(pack.title) || "2D", canvas.width / 2, canvas.height / 2 + 6);
+      context.fillStyle = "rgba(255,255,255,0.07)";
+      context.fillRect(drawingCanvas.width / 2 - 48, drawingCanvas.height / 2 - 48, 96, 96);
+      context.strokeStyle = "rgba(255,216,77,0.65)";
+      context.lineWidth = 2;
+      context.strokeRect(drawingCanvas.width / 2 - 48, drawingCanvas.height / 2 - 48, 96, 96);
+      context.fillStyle = "rgba(255,255,255,0.82)";
+      context.font = "600 18px system-ui";
+      context.textAlign = "center";
+      context.fillText(initials(pack.title) || "2D", drawingCanvas.width / 2, drawingCanvas.height / 2 + 6);
     }
 
     function tick(time: number) {
       drawGrid();
       const totalFrames = Math.max(1, columns * rows);
-      if (playing && time - lastFrame >= 1000 / fps) {
+      if (playing && time - lastFrame >= 1000 / (10 * speed)) {
         frame = (frame + 1) % totalFrames;
         lastFrame = time;
       }
 
       if (imageReady && !failed) {
-        ctx.imageSmoothingEnabled = false;
+        context.imageSmoothingEnabled = false;
         const frameWidth = Math.max(1, Math.floor(image.width / columns));
         const frameHeight = Math.max(1, Math.floor(image.height / rows));
-        const sx = (frame % columns) * frameWidth;
-        const sy = Math.floor(frame / columns) * frameHeight;
-        const drawWidth = Math.min(frameWidth * scale, canvas.width * 0.82);
-        const drawHeight = Math.min(frameHeight * scale, canvas.height * 0.74);
-        const ratio = Math.min(drawWidth / frameWidth, drawHeight / frameHeight);
-        const w = frameWidth * ratio;
-        const h = frameHeight * ratio;
-        const x = (canvas.width - w) / 2;
-        const y = (canvas.height - h) / 2 - 8;
-        ctx.save();
+        const source: SpriteRect = {
+          x: (frame % columns) * frameWidth,
+          y: Math.floor(frame / columns) * frameHeight,
+          w: frameWidth,
+          h: frameHeight,
+        };
+        const drawSource =
+          imageData && bgSample
+            ? trimCache.get(frame) ??
+              (() => {
+                const rect = computeTrimRect(imageData, source, bgSample);
+                trimCache.set(frame, rect);
+                return rect;
+              })()
+            : source;
+        const drawWidth = Math.min(drawSource.w * scale, drawingCanvas.width * 0.82);
+        const drawHeight = Math.min(drawSource.h * scale, drawingCanvas.height * 0.74);
+        const ratio = Math.min(drawWidth / drawSource.w, drawHeight / drawSource.h);
+        const w = drawSource.w * ratio;
+        const h = drawSource.h * ratio;
+        const x = (drawingCanvas.width - w) / 2;
+        const y = (drawingCanvas.height - h) / 2 - 8;
+        context.save();
         if (flip) {
-          ctx.translate(canvas.width, 0);
-          ctx.scale(-1, 1);
-          ctx.drawImage(image, sx, sy, frameWidth, frameHeight, canvas.width - x - w, y, w, h);
+          context.translate(drawingCanvas.width, 0);
+          context.scale(-1, 1);
+          context.drawImage(image, drawSource.x, drawSource.y, drawSource.w, drawSource.h, drawingCanvas.width - x - w, y, w, h);
         } else {
-          ctx.drawImage(image, sx, sy, frameWidth, frameHeight, x, y, w, h);
+          context.drawImage(image, drawSource.x, drawSource.y, drawSource.w, drawSource.h, x, y, w, h);
         }
-        ctx.restore();
+        context.restore();
       } else {
         drawPlaceholder();
       }
 
-      ctx.fillStyle = "rgba(255,255,255,0.62)";
-      ctx.font = "12px system-ui";
-      ctx.textAlign = "left";
-      ctx.fillText(`${sample?.label ?? "No sample"} · frame ${frame + 1}/${Math.max(1, columns * rows)}`, 16, canvas.height - 18);
+      context.fillStyle = "rgba(255,255,255,0.62)";
+      context.font = "12px system-ui";
+      context.textAlign = "left";
+      context.fillText(`${sample?.label ?? "No sample"} · frame ${frame + 1}/${Math.max(1, columns * rows)}`, 16, drawingCanvas.height - 18);
       raf = requestAnimationFrame(tick);
     }
 
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [background, columns, flip, fps, pack.title, playing, rows, sample?.label, sample?.src, scale]);
+  }, [autoDetect, background, columns, flip, pack.title, playing, rows, sample?.animated, sample?.label, sample?.src, scale, speed]);
+
+  const detectionLabel = detectedGrid
+    ? `auto ${detectedGrid.cols}x${detectedGrid.rows} (${Math.round(detectedGrid.confidence * 100)}%)`
+    : "auto";
 
   return (
     <div className="art-runner">
@@ -156,23 +391,62 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
           {playing ? "Pause" : "Play"}
         </button>
         <label>
-          FPS
-          <input type="range" min="1" max="24" value={fps} onChange={(event) => setFps(Number(event.target.value))} />
-          <span>{fps}</span>
+          Speed
+          <input
+            aria-label="Animation speed"
+            type="range"
+            min="0.25"
+            max="3"
+            step="0.25"
+            value={speed}
+            onChange={(event) => setSpeed(Number(event.target.value))}
+          />
+          <span>{speed.toFixed(2)}x</span>
+        </label>
+        <label className="inline-check">
+          <input type="checkbox" checked={autoDetect} onChange={(event) => setAutoDetect(event.target.checked)} />
+          {detectionLabel}
         </label>
         <label>
           Columns
-          <input type="range" min="1" max="12" value={columns} onChange={(event) => setColumns(Number(event.target.value))} />
+          <input
+            aria-label="Sprite sheet columns"
+            type="range"
+            min="1"
+            max="12"
+            value={columns}
+            onChange={(event) => {
+              setAutoDetect(false);
+              setColumns(Number(event.target.value));
+            }}
+          />
           <span>{columns}</span>
         </label>
         <label>
           Rows
-          <input type="range" min="1" max="8" value={rows} onChange={(event) => setRows(Number(event.target.value))} />
+          <input
+            aria-label="Sprite sheet rows"
+            type="range"
+            min="1"
+            max="8"
+            value={rows}
+            onChange={(event) => {
+              setAutoDetect(false);
+              setRows(Number(event.target.value));
+            }}
+          />
           <span>{rows}</span>
         </label>
         <label>
           Scale
-          <input type="range" min="1" max="8" value={scale} onChange={(event) => setScale(Number(event.target.value))} />
+          <input
+            aria-label="Sprite preview scale"
+            type="range"
+            min="1"
+            max="8"
+            value={scale}
+            onChange={(event) => setScale(Number(event.target.value))}
+          />
           <span>{scale}x</span>
         </label>
         <label className="inline-check">
