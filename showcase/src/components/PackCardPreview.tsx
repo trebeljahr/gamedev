@@ -97,6 +97,7 @@ export function PackCardPreview({
   const [nearViewport, setNearViewport] = useState(false);
   const [active, setActive] = useState(false);
   const [index, setIndex] = useState(0);
+  const [canvasSettled, setCanvasSettled] = useState(false);
   const pointerStartRef = useRef<{ x: number; y: number } | null>(null);
   const orbitDragRef = useRef(false);
   const urls = useMemo(() => modelFiles.map(assetUrl), [modelFiles]);
@@ -109,6 +110,7 @@ export function PackCardPreview({
 
   useEffect(() => {
     setPreviewImage(url ? cachedPreviewImageFor(url) : undefined);
+    setCanvasSettled(false);
   }, [url]);
 
   useEffect(() => {
@@ -204,11 +206,12 @@ export function PackCardPreview({
     orbitDragRef.current = false;
   };
 
-  const showCachedImage = !!previewImage && !active;
   const hasCanvasSlot = usePreviewCanvasBudget(
     budgetId,
-    nearViewport && !!url && !showCachedImage,
+    nearViewport && !!url,
   );
+  const showCachedImage =
+    !!previewImage && (!active || !canvasSettled || !hasCanvasSlot);
 
   return (
     <div
@@ -224,9 +227,7 @@ export function PackCardPreview({
       aria-label={label ? `${label} preview` : undefined}
       aria-hidden={label ? undefined : true}
     >
-      {showCachedImage ? (
-        <img className="pack-preview-image" src={previewImage} alt="" loading="lazy" decoding="async" />
-      ) : hasCanvasSlot && ready && url ? (
+      {hasCanvasSlot && ready && url ? (
         <Canvas
           camera={{ position: [5.5, 4.2, 7], fov: 40, near: 0.1, far: 500 }}
           dpr={[1, 1.5]}
@@ -243,10 +244,9 @@ export function PackCardPreview({
             shadow-mapSize-width={1024}
             shadow-mapSize-height={1024}
           />
-          <Stage />
           <Suspense fallback={null}>
             <PreviewErrorBoundary resetKey={url}>
-              <Bounds key={url} fit clip observe margin={1.28}>
+              <Bounds key={url} fit clip margin={1.28}>
                 <group rotation={[0, -0.48, 0]}>
                   <Model url={url} autoRotate={active} />
                 </group>
@@ -258,10 +258,24 @@ export function PackCardPreview({
                 makeDefault
                 rotateSpeed={0.7}
               />
-              <PreviewCapture cacheKey={url} disabled={active} onCapture={setPreviewImage} />
+              <PreviewCapture
+                cacheKey={url}
+                disabled={active}
+                onCapture={setPreviewImage}
+                onSettled={() => setCanvasSettled(true)}
+              />
             </PreviewErrorBoundary>
           </Suspense>
         </Canvas>
+      ) : null}
+      {showCachedImage ? (
+        <img
+          className="pack-preview-image"
+          src={previewImage}
+          alt=""
+          loading="lazy"
+          decoding="async"
+        />
       ) : null}
     </div>
   );
@@ -289,47 +303,46 @@ class PreviewErrorBoundary extends Component<
   }
 }
 
-function Stage() {
-  return (
-    <group position={[0, -0.04, 0]}>
-      <mesh rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
-        <circleGeometry args={[2.55, 48]} />
-        <meshStandardMaterial
-          color="#353942"
-          roughness={0.78}
-          metalness={0.02}
-        />
-      </mesh>
-    </group>
-  );
-}
-
 function PreviewCapture({
   cacheKey,
   disabled,
   onCapture,
+  onSettled,
 }: {
   cacheKey: string;
   disabled: boolean;
   onCapture: (image: string) => void;
+  onSettled: () => void;
 }) {
   const { camera, gl, invalidate, scene } = useThree();
   const frame = useRef(0);
+  const captured = useRef(false);
+  const settled = useRef(false);
 
   useEffect(() => {
     frame.current = 0;
+    captured.current = false;
+    settled.current = false;
+    invalidate();
+  }, [cacheKey, invalidate]);
+
+  useEffect(() => {
     if (!disabled) invalidate();
-  }, [cacheKey, disabled, invalidate]);
+  }, [disabled, invalidate]);
 
   useFrame(() => {
-    if (disabled) return;
-    frame.current += 1;
-    // Bounds fits the camera after the model resolves; cache after that zoom settles.
     if (frame.current < PREVIEW_CAPTURE_FRAME) {
+      frame.current += 1;
       invalidate();
       return;
     }
-    if (frame.current > PREVIEW_CAPTURE_FRAME) return;
+    // Bounds fits the camera after the model resolves; reveal/cache after that zoom settles.
+    if (!settled.current) {
+      settled.current = true;
+      onSettled();
+    }
+    if (disabled || captured.current) return;
+    captured.current = true;
 
     try {
       gl.render(scene, camera);
