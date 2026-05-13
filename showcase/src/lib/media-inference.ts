@@ -6,6 +6,7 @@ const CHARACTER_WORDS =
   "character|characters|hero|knight|warrior|mage|witch|dino|frog|cat|skeleton|monster|enemy|creature|samurai|archer|bandit|huntress|wizard|npc|villager|ronin|ship|fighter|bomber";
 const ATLAS_WORDS =
   "atlas|texture|textures|tilesheet|tile sheet|tilemap|tile map|tileset|tiled|terrain|decoration|decorations|objects|props|ground";
+const SHEET_WORDS = "spritesheet|sprite sheet|sheet|strip|allanim|all anim|animation|animated";
 
 function parts(path: string): string[] {
   return path.split(/[\\/]+/).filter(Boolean);
@@ -60,12 +61,24 @@ export function isLikelyTextureAtlasPath(path: string): boolean {
   return !animationHint && !characterHint && !animatedIconHint;
 }
 
+export function isLikelyHybridSpriteAtlasPath(path: string): boolean {
+  const text = tokenText(path);
+  const atlasHint = hasToken(text, ATLAS_WORDS) || /(^|[\\/])(atlases?|textures?|spritesheets?|sheets?)([\\/]|$)/i.test(path);
+  if (!atlasHint) return false;
+
+  const animationHint = hasToken(text, ACTION_WORDS) || hasToken(text, SHEET_WORDS);
+  const characterHint = hasToken(text, CHARACTER_WORDS);
+  const multiSubjectHint = hasToken(text, "characters|enemies|creatures|units|actors|players|npcs|all");
+  return animationHint && (characterHint || multiSubjectHint || hasToken(text, "atlas|atlases"));
+}
+
 export function isLikelySpriteSheetPath(path: string): boolean {
   if (/\.(gif)$/i.test(path)) return true;
+  if (isLikelyHybridSpriteAtlasPath(path)) return true;
   if (isLikelyTextureAtlasPath(path)) return false;
   if (isLikelySeparateFramePath(path)) return false;
   if (/(^|[\\/])(spritesheets?|sheets?|strips?)([\\/]|$)/i.test(path)) return true;
-  if (hasToken(path, "spritesheet|sprite sheet|sheet|strip|allanim|all anim|animation")) return true;
+  if (hasToken(path, SHEET_WORDS)) return true;
 
   const name = basenameWithoutExtension(path);
   if (/\b\d{2,4}x\d{2,4}\b/i.test(name) && hasToken(name, ACTION_WORDS)) return true;

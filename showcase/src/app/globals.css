@@ -964,6 +964,15 @@ select:focus-visible {
 .runner-controls input {
   accent-color: var(--accent);
 }
+.runner-controls select {
+  min-height: 34px;
+  max-width: 180px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface-2);
+  color: var(--text);
+  font: inherit;
+}
 .inline-check {
   grid-auto-flow: column;
   align-items: center;

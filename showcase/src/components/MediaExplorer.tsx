@@ -3,7 +3,7 @@
 import { type CSSProperties, useEffect, useMemo, useRef, useState } from "react";
 import type { ArtPack, ArtSample, MusicTrack, SoundCollection, SoundSample, SourceMapping } from "@/lib/media";
 import { artCreators } from "@/lib/media";
-import { isLikelySpriteSheetPath, isLikelyTextureAtlasPath } from "@/lib/media-inference";
+import { isLikelyHybridSpriteAtlasPath, isLikelySpriteSheetPath, isLikelyTextureAtlasPath } from "@/lib/media-inference";
 import { SiteHeader } from "@/components/SiteHeader";
 
 type MediaExplorerProps = {
@@ -24,9 +24,17 @@ type ArtTypeFilter = "all" | "ui-icons" | "spritesheets";
 type SpriteSubjectFilter = "all" | "characters" | "environments" | "effects-items" | "other";
 type SpriteMotionFilter = "all" | "animated" | "static";
 type SoundTypeFilter = "all" | "sfx" | "music";
-type SpriteLayoutMode = "static" | "grid" | "variable" | "atlas";
-type SpriteGrid = { cols: number; rows: number; confidence: number; mode: SpriteLayoutMode; frames?: SpriteRect[] };
+type SpriteLayoutMode = "static" | "grid" | "variable" | "atlas" | "hybrid-atlas";
+type SpriteGrid = {
+  cols: number;
+  rows: number;
+  confidence: number;
+  mode: SpriteLayoutMode;
+  frames?: SpriteRect[];
+  sequences?: SpriteSequence[];
+};
 type SpriteRect = { x: number; y: number; w: number; h: number };
+type SpriteSequence = { label: string; frames: SpriteRect[]; bounds: SpriteRect };
 type LoadedSpriteImage = {
   src: string;
   image: HTMLImageElement;
@@ -289,6 +297,41 @@ function detectVariableFrames(imageData: ImageData, bg: ReturnType<typeof sample
   return usefulFrames.length >= 2 ? usefulFrames : [];
 }
 
+function rectUnion(rects: SpriteRect[]): SpriteRect {
+  const minX = Math.min(...rects.map((rect) => rect.x));
+  const minY = Math.min(...rects.map((rect) => rect.y));
+  const maxX = Math.max(...rects.map((rect) => rect.x + rect.w));
+  const maxY = Math.max(...rects.map((rect) => rect.y + rect.h));
+  return { x: minX, y: minY, w: maxX - minX, h: maxY - minY };
+}
+
+function detectAnimationSequences(imageData: ImageData, bg: ReturnType<typeof sampleImageBackground>, rowActivity: Float32Array, colActivity: Float32Array): SpriteSequence[] {
+  const rowSpans = detectActiveSpans(rowActivity);
+  const colSpans = detectActiveSpans(colActivity);
+  if (rowSpans.length < 2 || colSpans.length < 2) return [];
+  if (rowSpans.length > 24 || colSpans.length > 40 || rowSpans.length * colSpans.length > 240) return [];
+
+  const imageArea = imageData.width * imageData.height;
+  const minFrameArea = imageArea * 0.0006;
+  const sequences: SpriteSequence[] = [];
+
+  for (const [rowIndex, row] of rowSpans.entries()) {
+    const frames: SpriteRect[] = [];
+    for (const col of colSpans) {
+      const rect = { x: col.start, y: row.start, w: col.end - col.start, h: row.end - row.start };
+      if (contentRatioForRect(imageData, rect, bg) < 0.01) continue;
+      const trimmed = computeTrimRect(imageData, rect, bg);
+      if (trimmed.w * trimmed.h < minFrameArea) continue;
+      frames.push(trimmed);
+    }
+    if (frames.length >= 2) {
+      sequences.push({ label: `row ${rowIndex + 1}`, frames, bounds: rectUnion(frames) });
+    }
+  }
+
+  return sequences.filter((sequence) => sequence.frames.length >= 2);
+}
+
 function hasVariableSpanSizes(spans: Array<{ start: number; end: number }>): boolean {
   if (spans.length <= 1) return false;
   const sizes = spans.map((span) => span.end - span.start);
@@ -324,7 +367,7 @@ function parseGridHint(path: string, imageWidth: number, imageHeight: number): S
   return null;
 }
 
-function detectGridFromImageData(imageData: ImageData): SpriteGrid {
+function detectGridFromImageData(imageData: ImageData, options: { preferSequences?: boolean } = {}): SpriteGrid {
   const { width, height, data } = imageData;
   const bg = sampleImageBackground(imageData);
   const rowActivity = new Float32Array(height);
@@ -347,6 +390,19 @@ function detectGridFromImageData(imageData: ImageData): SpriteGrid {
 
   const rowPeriod = detectPeriod(rowActivity);
   const colPeriod = detectPeriod(colActivity);
+  const sequences = options.preferSequences ? detectAnimationSequences(imageData, bg, rowActivity, colActivity) : [];
+  if (sequences.length > 1) {
+    const first = sequences[0];
+    return {
+      cols: first.frames.length,
+      rows: 1,
+      confidence: 0.72,
+      mode: "hybrid-atlas",
+      frames: first.frames,
+      sequences,
+    };
+  }
+
   if (rowPeriod.lag > 0 && colPeriod.lag > 0) {
     const rows = Math.max(1, Math.round(height / rowPeriod.lag));
     const cols = Math.max(1, Math.round(width / colPeriod.lag));
@@ -478,6 +534,40 @@ function drawSquareFrameGrid(context: CanvasRenderingContext2D, image: HTMLImage
   }
 }
 
+function safeFileStem(value: string): string {
+  return value
+    .toLowerCase()
+    .replace(/\.[^.]+$/i, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 80) || "sprite-sequence";
+}
+
+function downloadCanvasPng(canvas: HTMLCanvasElement, filename: string) {
+  const link = document.createElement("a");
+  link.href = canvas.toDataURL("image/png");
+  link.download = filename;
+  link.click();
+}
+
+function exportFramesAsStrip(image: HTMLImageElement, frames: SpriteRect[], filename: string) {
+  if (frames.length === 0) return;
+  const cellWidth = Math.max(...frames.map((rect) => rect.w));
+  const cellHeight = Math.max(...frames.map((rect) => rect.h));
+  const canvas = document.createElement("canvas");
+  canvas.width = cellWidth * frames.length;
+  canvas.height = cellHeight;
+  const context = canvas.getContext("2d");
+  if (!context) return;
+  context.imageSmoothingEnabled = false;
+  for (const [index, rect] of frames.entries()) {
+    const x = index * cellWidth + Math.floor((cellWidth - rect.w) / 2);
+    const y = Math.floor((cellHeight - rect.h) / 2);
+    context.drawImage(image, rect.x, rect.y, rect.w, rect.h, x, y, rect.w, rect.h);
+  }
+  downloadCanvasPng(canvas, filename);
+}
+
 function SquareArtPreview({ sample, label }: { sample: ArtSample; label: string }) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
@@ -546,6 +636,7 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
   const [autoDetect, setAutoDetect] = useState(true);
   const [detectedGrid, setDetectedGrid] = useState<SpriteGrid | null>(null);
   const [layoutFrames, setLayoutFrames] = useState<SpriteRect[] | null>(null);
+  const [sequenceIndex, setSequenceIndex] = useState(0);
   const [scale, setScale] = useState(3);
   const [flip, setFlip] = useState(false);
   const [background, setBackground] = useState("#15171c");
@@ -561,6 +652,7 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
     setAutoDetect(true);
     setDetectedGrid(null);
     setLayoutFrames(null);
+    setSequenceIndex(0);
     setLoadedImage(null);
     setLoadFailed(false);
   }, [sample?.animated, sample?.path, sample?.src]);
@@ -606,12 +698,14 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
   const resolvedGrid = useMemo(() => {
     if (!sample || !loadedImage?.imageData) return null;
     const imageData = loadedImage.imageData;
-    const detectedFromPixels = detectGridFromImageData(imageData);
-    const canAnimateSample = sample.animated && isLikelySpriteSheetPath(sample.path) && !isLikelyTextureAtlasPath(sample.path);
+    const hybridAtlas = isLikelyHybridSpriteAtlasPath(sample.path);
+    const pureAtlas = isLikelyTextureAtlasPath(sample.path) && !hybridAtlas;
+    const detectedFromPixels = detectGridFromImageData(imageData, { preferSequences: hybridAtlas });
+    const canAnimateSample = sample.animated && isLikelySpriteSheetPath(sample.path) && !pureAtlas;
     const hintedLayout = canAnimateSample
       ? parseSpriteSizeHint(sample.path, imageData.width, imageData.height) ?? parseGridHint(sample.path, imageData.width, imageData.height)
       : null;
-    if (isLikelyTextureAtlasPath(sample.path)) return { cols: 1, rows: 1, confidence: 0.9, mode: "atlas" as const };
+    if (pureAtlas) return { cols: 1, rows: 1, confidence: 0.9, mode: "atlas" as const };
     if (hintedLayout) return hintedLayout;
     if (!canAnimateSample || isUsableSpriteGrid(detectedFromPixels)) return detectedFromPixels;
     const wide = Math.round(imageData.width / imageData.height);
@@ -621,21 +715,27 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
     return detectedFromPixels;
   }, [loadedImage, sample]);
 
-  const canAnimateSample = Boolean(sample?.animated && isLikelySpriteSheetPath(sample.path) && !isLikelyTextureAtlasPath(sample.path));
+  const canAnimateSample = Boolean(
+    sample?.animated &&
+      isLikelySpriteSheetPath(sample.path) &&
+      !(isLikelyTextureAtlasPath(sample.path) && !isLikelyHybridSpriteAtlasPath(sample.path)),
+  );
 
   useEffect(() => {
     setDetectedGrid(resolvedGrid);
     if (autoDetect && canAnimateSample && resolvedGrid && isUsableSpriteGrid(resolvedGrid)) {
-      setColumns(resolvedGrid.cols);
-      setRows(resolvedGrid.rows);
-      setLayoutFrames(resolvedGrid.frames ?? null);
+      const selectedSequence = resolvedGrid.sequences?.[Math.min(sequenceIndex, resolvedGrid.sequences.length - 1)];
+      const selectedFrames = selectedSequence?.frames ?? resolvedGrid.frames ?? null;
+      setColumns(selectedFrames?.length ?? resolvedGrid.cols);
+      setRows(selectedFrames ? 1 : resolvedGrid.rows);
+      setLayoutFrames(selectedFrames);
     } else if (autoDetect) {
       setColumns(1);
       setRows(1);
       setLayoutFrames(null);
       setPlaying(false);
     }
-  }, [autoDetect, canAnimateSample, resolvedGrid]);
+  }, [autoDetect, canAnimateSample, resolvedGrid, sequenceIndex]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -731,12 +831,36 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
   }, [autoDetect, background, columns, flip, layoutFrames, loadFailed, loadedImage, pack.title, playing, rows, sample?.animated, sample?.label, scale, speed]);
 
   const detectionLabel = detectedGrid
-    ? detectedGrid.frames
-      ? `auto ${detectedGrid.frames.length} frames (${Math.round(detectedGrid.confidence * 100)}%)`
-      : detectedGrid.mode === "atlas"
+    ? detectedGrid.mode === "atlas"
         ? "atlas"
-        : `auto ${detectedGrid.cols}x${detectedGrid.rows} (${Math.round(detectedGrid.confidence * 100)}%)`
+        : detectedGrid.mode === "hybrid-atlas"
+          ? `hybrid ${detectedGrid.sequences?.length ?? 0} rows (${Math.round(detectedGrid.confidence * 100)}%)`
+          : detectedGrid.frames
+            ? `auto ${detectedGrid.frames.length} frames (${Math.round(detectedGrid.confidence * 100)}%)`
+            : `auto ${detectedGrid.cols}x${detectedGrid.rows} (${Math.round(detectedGrid.confidence * 100)}%)`
     : "auto";
+
+  const activeSequence = detectedGrid?.sequences?.[Math.min(sequenceIndex, Math.max(0, (detectedGrid.sequences?.length ?? 1) - 1))];
+  const exportFrameCount = Math.max(1, (autoDetect ? layoutFrames?.length : undefined) ?? columns * rows);
+  function exportCurrentSequence() {
+    const image = loadedImage?.image ?? null;
+    if (!image) return;
+    const explicitFrames = autoDetect ? layoutFrames : null;
+    const frames =
+      explicitFrames ??
+      Array.from({ length: columns * rows }, (_, index) => {
+        const frameWidth = Math.max(1, Math.floor(image.width / columns));
+        const frameHeight = Math.max(1, Math.floor(image.height / rows));
+        return {
+          x: (index % columns) * frameWidth,
+          y: Math.floor(index / columns) * frameHeight,
+          w: frameWidth,
+          h: frameHeight,
+        };
+      });
+    const stem = safeFileStem(`${sample?.label ?? pack.title}-${activeSequence?.label ?? "animation"}`);
+    exportFramesAsStrip(image, frames, `${stem}.png`);
+  }
 
   return (
     <div className="art-runner">
@@ -779,13 +903,40 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
           <input type="checkbox" checked={autoDetect} onChange={(event) => setAutoDetect(event.target.checked)} />
           {detectionLabel}
         </label>
+        {detectedGrid?.sequences && detectedGrid.sequences.length > 1 && (
+          <label>
+            Sequence
+            <select
+              value={sequenceIndex}
+              onChange={(event) => {
+                const nextIndex = Number(event.target.value);
+                const nextSequence = detectedGrid?.sequences?.[nextIndex];
+                setSequenceIndex(nextIndex);
+                if (nextSequence) {
+                  setAutoDetect(true);
+                  setColumns(nextSequence.frames.length);
+                  setRows(1);
+                  setLayoutFrames(nextSequence.frames);
+                }
+                frameRef.current = 0;
+                setFrame(0);
+              }}
+            >
+              {detectedGrid.sequences.map((sequence, index) => (
+                <option key={`${sequence.label}-${index}`} value={index}>
+                  {sequence.label} · {sequence.frames.length} frames
+                </option>
+              ))}
+            </select>
+          </label>
+        )}
         <label>
           Columns
           <input
             aria-label="Sprite sheet columns"
             type="range"
             min="1"
-            max="12"
+            max="40"
             value={columns}
             onChange={(event) => {
               setAutoDetect(false);
@@ -826,6 +977,9 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
           Flip
         </label>
         <input aria-label="Canvas background" type="color" value={background} onChange={(event) => setBackground(event.target.value)} />
+        <button type="button" onClick={exportCurrentSequence} disabled={!sample || exportFrameCount <= 1}>
+          Export PNG
+        </button>
       </div>
     </div>
   );

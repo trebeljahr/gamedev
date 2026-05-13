@@ -50,11 +50,26 @@ Tooling implication:
 - Catalogue as atlas/static source art.
 - Future tools should extract named/semantic regions only when metadata or a tile grid is known.
 
+### Hybrid atlas animation sheets
+
+Signals:
+- Path combines atlas/texture/sheet language with animation or character/action language, for example `character-atlas`, `all-animations`, `characters-spritesheet`, or `enemy texture animation`.
+- Image has multiple active row bands and repeated frame-like column bands.
+- Each row/region can be one clean animation, while the whole image contains several characters, actions, or variants.
+
+Tooling implication:
+- Do not reject only because `atlas` or `texture` appears in the path.
+- Classify as a hybrid atlas when atlas hints and animation/character hints both appear.
+- Split non-destructively: detect active row/column spans, trim content rects, group frames by row, preview one row at a time, then export a copied PNG strip per row/animation.
+- Keep original source unchanged. Write exports to a sibling/proposed output folder or browser download, plus rect metadata for review.
+
 ## Current Viewer Behavior
 
-- Rejects atlas-like paths before animation.
+- Rejects pure atlas-like paths before animation.
+- Keeps hybrid atlas animation sheets in the animation path instead of treating them as static textures.
 - Uses file path hints for known cell sizes or explicit grid counts.
 - Falls back to image analysis for variable rects.
+- For hybrid atlas candidates, groups detected frames by active row and lets the user switch/export one row animation at a time.
 - Falls back again to equal-grid slicing only when the image looks grid-like.
 - Shows static preview if no reliable animation layout is found.
 
@@ -63,5 +78,26 @@ Tooling implication:
 - Persist detected frame rects into generated media metadata.
 - Add origin/anchor normalization so variable frames do not jitter.
 - Group separate frame files into synthetic animations.
-- Add atlas extraction separately from animation slicing.
+- Add batch atlas extraction separately from animation slicing.
 - Emit quality warnings: uneven gutters, missing transparent background, inconsistent frame count, and likely atlas mislabeled as spritesheet.
+
+## Porting Prompt For Sprite-Sheet Tools
+
+Port the hybrid atlas animation logic from this viewer into the sprite-sheet cleanup tools:
+
+1. Path classification:
+   - Pure atlas: atlas/texture/tilesheet/tilemap/terrain/props hints with no animation, action, character, or animated pickup hint. Keep static.
+   - Hybrid atlas: atlas/texture/sheet hints plus animation/action/character/multi-subject hints. Keep in animation flow.
+   - Regular sheet: spritesheet/sheet/strip/allanim/animation/action hints with no pure-atlas rejection.
+2. Pixel detection:
+   - Sample transparent/background pixels from corners.
+   - Build row and column activity arrays from non-background pixels.
+   - Detect active spans with a relative threshold, merge tiny gaps, reject huge grids.
+   - For hybrid candidates, treat each active row as one possible animation; each active column is one possible frame.
+   - Trim every frame rect to content, reject tiny cells, keep row groups with at least two useful frames.
+3. Review/export:
+   - Never overwrite source files.
+   - Emit proposed outputs into an explicit output directory, for example `<source-stem>.split/<row-label>.png`.
+   - Normalize each row to a horizontal strip using max frame width/height and centered trimmed frames.
+   - Save metadata with source path, detected mode, confidence, row labels, frame rects, trim rects, and warnings.
+   - Provide a preview grid or contact sheet before applying any write-back.
