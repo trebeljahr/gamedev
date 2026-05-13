@@ -699,8 +699,8 @@ function HUD({ panelOpen }: { panelOpen: boolean }) {
       <br />
       WASD walk · Space/C vertical · Shift sprint · click model to inspect
       <br />
-      <a href="/#3d-packs" style={{ color: "#ffd84d" }}>
-        ← back to packs
+      <a href="/models" style={{ color: "#ffd84d" }}>
+        ← back to models
       </a>
     </div>
   );

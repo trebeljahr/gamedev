@@ -8,11 +8,15 @@ export function generateStaticParams() {
 
 export default async function PackPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ vendor: string; pack: string }>;
+  searchParams?: Promise<{ model?: string | string[] }>;
 }) {
   const { vendor, pack } = await params;
+  const query = await searchParams;
+  const model = Array.isArray(query?.model) ? query?.model[0] : query?.model;
   const data = findPack(vendor, pack);
   if (!data) notFound();
-  return <PackViewer pack={data} />;
+  return <PackViewer pack={data} initialModelFile={model} />;
 }

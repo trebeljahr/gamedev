@@ -18,7 +18,7 @@ export default function AllModelsPage() {
         compact
         meta={
           <>
-            {totalModels.toLocaleString()} models · {manifest.packs.length} packs
+            {totalModels.toLocaleString()} models · {manifest.packs.length} pack collections
           </>
         }
       />

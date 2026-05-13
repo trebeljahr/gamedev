@@ -1438,7 +1438,7 @@ function ArtWorkbench({ pack }: { pack: ArtPack }) {
             </div>
             {pack.url && (
               <a className="source-link" href={pack.url} target="_blank" rel="noreferrer">
-                Pack source
+                Source pack
               </a>
             )}
             <small>{pack.samples.length} preview files</small>
@@ -1834,7 +1834,7 @@ export function MediaExplorer({
         active={view === "sounds" ? "sounds" : "art"}
         meta={
           <>
-            {artPacks.length} 2D packs · {textureMappings.length} texture groups · {soundCollections.length} SFX groups · {musicTracks.length} music tracks
+            {artPacks.length} 2D sets · {textureMappings.length} texture groups · {soundCollections.length} SFX groups · {musicTracks.length} music tracks
           </>
         }
       />
@@ -1845,7 +1845,7 @@ export function MediaExplorer({
           <h2>Browse the library by asset type: 3D, sprites, textures, icons, sound effects, and music.</h2>
         </div>
         <div className="media-tabs asset-tabs" role="tablist" aria-label="Asset type">
-          <a href="/#3d-packs" role="tab" aria-selected="false">
+          <a href="/models" role="tab" aria-selected="false">
             3D Models
           </a>
           <button
@@ -1940,13 +1940,13 @@ export function MediaExplorer({
               ? "Search sounds, music, moods, folders, licenses"
               : view === "sources"
                 ? "Search texture sets, materials, sources"
-                : "Search packs, creators, themes, use cases"
+                : "Search 2D assets, creators, themes, use cases"
           }
           value={query}
           onChange={(event) => setQuery(event.target.value)}
         />
         {view === "sources" ? (
-          <span className="catalog-result-count">Textures are separate from sprites and 3D model packs.</span>
+          <span className="catalog-result-count">Textures are separate from sprites and 3D model assets.</span>
         ) : view === "sounds" ? (
           <>
             <select value={soundTypeFilter} onChange={(event) => selectSoundType(event.target.value as SoundTypeFilter)}>
@@ -2144,8 +2144,8 @@ export function MediaExplorer({
           {selectedArt && <ArtWorkbench pack={selectedArt} />}
           <section className="media-panel">
             <div className="panel-heading">
-              <h3>2D art packs</h3>
-              <span>{filteredArt.length} packs</span>
+              <h3>2D asset sets</h3>
+              <span>{filteredArt.length} sets</span>
             </div>
             <div className="art-groups">
               {groupedArt.map((group) => (

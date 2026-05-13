@@ -28,10 +28,10 @@ export default async function CreatorPage({
         active="packs"
         meta={
           <>
-            <Link href="/#3d-packs" className="header-meta-link">
-              all packs
+            <Link href="/#3d-collections" className="header-meta-link">
+              pack collections
             </Link>
-            {packs.length} packs · {totalModels.toLocaleString()} models
+            {totalModels.toLocaleString()} models · {packs.length} pack collections
           </>
         }
       />
@@ -44,7 +44,7 @@ export default async function CreatorPage({
             <p>{credit.notes ?? "Check the creator source before shipping a project."}</p>
             <div className="creator-stat-grid" aria-label={`${credit.vendorLabel} library stats`}>
               <div>
-                <span>Packs</span>
+                <span>Collections</span>
                 <strong>{packs.length}</strong>
               </div>
               <div>
@@ -78,8 +78,8 @@ export default async function CreatorPage({
         <section className="creator-pack-section" aria-labelledby="creator-packs-heading">
           <div className="creator-pack-heading">
             <div>
-              <div className="landing-kicker">3D packs</div>
-              <h2 id="creator-packs-heading">{credit.vendorLabel} packs</h2>
+              <div className="landing-kicker">Pack context</div>
+              <h2 id="creator-packs-heading">{credit.vendorLabel} collections</h2>
             </div>
             <Link href="/models">Search every model</Link>
           </div>

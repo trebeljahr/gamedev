@@ -17,10 +17,11 @@ const navItems = [
     label: "3D",
     key: "packs",
     items: [
-      { label: "All packs", href: "/#3d-packs" },
-      { label: "Model index", href: "/models" },
-      { label: "Animated", href: "/?model=animated#3d-packs" },
-      { label: "Static", href: "/?model=static#3d-packs" },
+      { label: "All models", href: "/models" },
+      { label: "Pack collections", href: "/#3d-collections" },
+      { label: "World viewer", href: "/all" },
+      { label: "Animated", href: "/?model=animated#3d-collections" },
+      { label: "Static", href: "/?model=static#3d-collections" },
     ],
   },
   {

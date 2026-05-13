@@ -39,6 +39,10 @@ function niceVendor(vendor: string): string {
   return license.vendorLabel || vendor;
 }
 
+function modelViewerHref(entry: ModelEntry): string {
+  return `/${entry.pack.vendor}/${entry.pack.pack}?model=${encodeURIComponent(entry.model.file)}`;
+}
+
 export function ModelCatalog({ manifest }: ModelCatalogProps) {
   const [query, setQuery] = useState("");
   const [vendor, setVendor] = useState(ALL);
@@ -99,7 +103,7 @@ export function ModelCatalog({ manifest }: ModelCatalogProps) {
             <Link href="/all" className="header-meta-link">
               walk-through view
             </Link>
-            {totalModels.toLocaleString()} models · {manifest.packs.length} packs
+            {totalModels.toLocaleString()} models · {manifest.packs.length} pack collections
           </>
         }
       />
@@ -108,13 +112,13 @@ export function ModelCatalog({ manifest }: ModelCatalogProps) {
         <section className="model-catalog-heading" aria-labelledby="models-heading">
           <div>
             <div className="landing-kicker">3D catalog</div>
-            <h2 id="models-heading">Every model</h2>
+            <h2 id="models-heading">Every 3D model</h2>
             <p>
-              Flat model index with pack context, dimensions, categories, style tags, and license metadata.
+              Model-first index with creator, license, dimensions, style tags, and pack context kept visible.
             </p>
           </div>
-          <Link className="all-link" href="/#3d-packs">
-            Browse packs
+          <Link className="all-link" href="/#3d-collections">
+            Pack collections
           </Link>
         </section>
 
@@ -181,6 +185,12 @@ export function ModelCatalog({ manifest }: ModelCatalogProps) {
                       <span key={tag}>{tag}</span>
                     ))}
                 </div>
+                <div className="model-card-actions">
+                  <Link href={modelViewerHref(entry)}>Evaluate asset</Link>
+                  <Link className="secondary" href={`/${entry.pack.vendor}/${entry.pack.pack}`}>
+                    View pack context
+                  </Link>
+                </div>
               </div>
               <dl className="model-metadata">
                 <div>
@@ -202,7 +212,7 @@ export function ModelCatalog({ manifest }: ModelCatalogProps) {
                   </dd>
                 </div>
                 <div>
-                  <dt>Pack</dt>
+                  <dt>Part of pack</dt>
                   <dd>
                     <Link href={`/${entry.pack.vendor}/${entry.pack.pack}`}>{entry.pack.title}</Link>
                   </dd>

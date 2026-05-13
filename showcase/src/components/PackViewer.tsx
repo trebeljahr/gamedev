@@ -12,8 +12,19 @@ const Viewer = dynamic(() => import("./Viewer").then((m) => m.Viewer), {
   loading: () => null,
 });
 
-export function PackViewer({ pack }: { pack: Pack }) {
-  const [index, setIndex] = useState(0);
+function initialIndexFor(pack: Pack, initialModelFile?: string): number {
+  if (!initialModelFile) return 0;
+  const index = pack.models.findIndex((item) => item.file === initialModelFile || item.name === initialModelFile);
+  return index >= 0 ? index : 0;
+}
+
+function formatModelSize(size: Pack["models"][number]["size"]): string {
+  const [width, height, depth] = size;
+  return `${width.toFixed(1)} x ${height.toFixed(1)} x ${depth.toFixed(1)}`;
+}
+
+export function PackViewer({ pack, initialModelFile }: { pack: Pack; initialModelFile?: string }) {
+  const [index, setIndex] = useState(() => initialIndexFor(pack, initialModelFile));
   const [query, setQuery] = useState("");
   const model = pack.models[index];
   const credit = licenseForVendor(pack.vendor);
@@ -33,7 +44,7 @@ export function PackViewer({ pack }: { pack: Pack }) {
     setIndex((i) => (i - 1 + pack.models.length) % pack.models.length);
   }, [pack.models.length]);
 
-  useEffect(() => setIndex(0), [pack.id]);
+  useEffect(() => setIndex(initialIndexFor(pack, initialModelFile)), [initialModelFile, pack]);
 
   useEffect(() => {
     const n = pack.models.length;
@@ -54,14 +65,32 @@ export function PackViewer({ pack }: { pack: Pack }) {
   return (
     <div className="viewer-shell">
       <aside>
-        <Link className="back" href="/#3d-packs">
-          ← all packs
+        <Link className="back" href="/models">
+          ← model index
         </Link>
         <Link className="vendor-tag vendor-link" href={`/${pack.vendor}`}>
           {credit.vendorLabel}
         </Link>
+        <div className="pack-context-label">Part of pack</div>
         <h1>{pack.title}</h1>
         <p className="pack-view-description">{pack.description}</p>
+        {model && (
+          <section className="asset-focus-panel" aria-label="Selected asset">
+            <span>Selected asset</span>
+            <strong>{model.title}</strong>
+            <p>{model.description}</p>
+            <dl>
+              <div>
+                <dt>Category</dt>
+                <dd>{model.category}</dd>
+              </div>
+              <div>
+                <dt>Size</dt>
+                <dd>{formatModelSize(model.size)}</dd>
+              </div>
+            </dl>
+          </section>
+        )}
         <div className="pack-credit-panel">
           <div>
             <span>Creator</span>
@@ -79,6 +108,7 @@ export function PackViewer({ pack }: { pack: Pack }) {
           </div>
           {credit.notes && <p>{credit.notes}</p>}
           <div className="creator-links">
+            <Link href="/#3d-collections">Pack collections</Link>
             {credit.links.map((link) => (
               <a key={link.url} href={link.url} target="_blank" rel="noreferrer">
                 {link.label}
@@ -96,7 +126,7 @@ export function PackViewer({ pack }: { pack: Pack }) {
           type="search"
           value={query}
           onChange={(event) => setQuery(event.target.value)}
-          placeholder="Search models in pack"
+          placeholder="Search assets in this pack"
         />
         <ul className="model-list">
           {visibleModels.map(({ item: m, itemIndex: i }) => (

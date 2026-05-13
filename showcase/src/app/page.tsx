@@ -52,7 +52,7 @@ export default async function HomePage({ searchParams }: HomePageProps) {
       <SiteHeader
         meta={
           <>
-            {manifest.packs.length} 3D packs · {totalModels.toLocaleString()} models ·{" "}
+            {totalModels.toLocaleString()} models · {manifest.packs.length} pack collections ·{" "}
             {totalMediaCollections} media collections
           </>
         }
@@ -65,14 +65,14 @@ export default async function HomePage({ searchParams }: HomePageProps) {
             <h2 id="library-heading">Search the whole asset archive from one place.</h2>
             <p>
               3D models, 2D sprites, textures, icons, sound effects, and music
-              each get their own entry point.
+              each get their own searchable asset entry.
             </p>
             <div className="library-actions" aria-label="Primary catalog actions">
-              <Link className="landing-button primary" href="#3d-packs">
-                Browse 3D packs
-              </Link>
-              <Link className="landing-button secondary" href="/models">
+              <Link className="landing-button primary" href="/models">
                 Search every model
+              </Link>
+              <Link className="landing-button secondary" href="#3d-collections">
+                Browse pack collections
               </Link>
             </div>
           </div>
@@ -88,13 +88,14 @@ export default async function HomePage({ searchParams }: HomePageProps) {
 
         <nav className="asset-type-nav" aria-label="Asset library navigation">
           <section className="asset-type-link primary" aria-labelledby="nav-3d">
-            <Link className="asset-type-main" href="#3d-packs">
+            <Link className="asset-type-main" href="/models">
               <span>3D Models</span>
               <strong id="nav-3d">{totalModels.toLocaleString()} models</strong>
-              <small>{manifest.packs.length} packs grouped by creator</small>
+              <small>Flat asset search with creator, license, and pack context visible</small>
             </Link>
             <div className="asset-subnav" aria-label="3D creators">
               <Link href="/models">All models</Link>
+              <Link href="#3d-collections">Pack collections</Link>
               <Link href="#creator-kaykit">KayKit</Link>
               <Link href="#creator-kenney">Kenney</Link>
               <Link href="#creator-quaternius">Quaternius</Link>
@@ -158,10 +159,10 @@ export default async function HomePage({ searchParams }: HomePageProps) {
           </section>
         </nav>
 
-        <section className="catalog-heading" id="3d-packs" aria-labelledby="packs-heading">
+        <section className="catalog-heading" id="3d-collections" aria-labelledby="packs-heading">
           <div>
-            <div className="landing-kicker">3D catalog</div>
-            <h2 id="packs-heading">Model packs</h2>
+            <div className="landing-kicker">Secondary context</div>
+            <h2 id="packs-heading">Pack collections</h2>
           </div>
           <div className="catalog-heading-actions">
             <Link href="/models">Search every model</Link>

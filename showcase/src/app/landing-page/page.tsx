@@ -33,12 +33,12 @@ const workflow = [
   {
     step: "Discover",
     title: "Browse by intent",
-    text: "Search across model packs, sprites, textures, sounds, and music without knowing which creator folder to open first.",
+    text: "Search across individual models, sprites, textures, sounds, and music without knowing which creator folder to open first.",
   },
   {
     step: "Preview",
     title: "Look before downloading",
-    text: "Spin up 3D packs, scan sprite sheets, audition sounds, and compare options in the browser.",
+    text: "Open a single 3D model, scan sprite sheets, audition sounds, and compare options in the browser.",
   },
   {
     step: "Credit",
@@ -119,7 +119,7 @@ export default function LandingPage() {
           </div>
           <div>
             <dt>{mediaStats.artPackCount}</dt>
-            <dd>2D packs</dd>
+            <dd>2D sets</dd>
           </div>
           <div>
             <dt>{totalCollections}</dt>
@@ -149,7 +149,7 @@ export default function LandingPage() {
         <div className="landing-coverage" aria-label="Asset coverage summary">
           <div>
             <strong>{manifest.packs.length}</strong>
-            <span>3D packs</span>
+            <span>3D collections</span>
           </div>
           <div>
             <strong>{categories.size}</strong>

@@ -612,6 +612,39 @@ select:focus-visible {
   border-radius: 999px;
   font-size: 11px;
 }
+.model-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+.model-card-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  padding: 0 10px;
+  color: #11100b;
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 800;
+}
+.model-card-actions a:hover {
+  color: #11100b;
+  background: #ffe57d;
+}
+.model-card-actions a.secondary {
+  color: rgba(232,230,227,0.84);
+  background: rgba(255,255,255,0.05);
+  border-color: var(--border);
+}
+.model-card-actions a.secondary:hover {
+  color: var(--accent);
+  background: rgba(255,255,255,0.07);
+  border-color: rgba(255,216,77,0.4);
+}
 .model-metadata {
   display: grid;
   align-content: start;
@@ -819,6 +852,13 @@ select:focus-visible {
   color: var(--accent);
   font-weight: 750;
 }
+.pack-context-label {
+  margin-bottom: 5px;
+  color: var(--muted);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
 .viewer-shell .back { font-size: 12px; color: var(--muted); display: block; margin-bottom: 14px; }
 .viewer-shell .back:hover { color: var(--accent); }
 .pack-view-description {
@@ -826,6 +866,49 @@ select:focus-visible {
   color: var(--muted);
   font-size: 12px;
   line-height: 1.45;
+}
+.asset-focus-panel {
+  display: grid;
+  gap: 7px;
+  margin-top: 12px;
+  padding: 12px;
+  background:
+    linear-gradient(135deg, rgba(255,216,77,0.12), rgba(255,216,77,0.02)),
+    rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,216,77,0.3);
+  border-radius: 8px;
+}
+.asset-focus-panel span,
+.asset-focus-panel dt {
+  color: var(--muted);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.asset-focus-panel strong {
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.2;
+}
+.asset-focus-panel p {
+  margin: 0;
+  color: rgba(232,230,227,0.7);
+  font-size: 12px;
+  line-height: 1.4;
+}
+.asset-focus-panel dl {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 2px 0 0;
+}
+.asset-focus-panel dd {
+  margin: 2px 0 0;
+  overflow: hidden;
+  color: rgba(232,230,227,0.86);
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .pack-credit-panel {
   display: grid;

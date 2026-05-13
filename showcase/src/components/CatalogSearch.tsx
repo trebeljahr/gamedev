@@ -76,9 +76,9 @@ export function CatalogSearch({ manifest, children, showHeader = true, modelMoti
                 walk-through view
               </Link>
               <Link href="/models" style={{ marginRight: 16, color: "#ffd84d" }}>
-                model index
+                all models
               </Link>
-              {manifest.packs.length} packs · {totalModels.toLocaleString()} models
+              {totalModels.toLocaleString()} models · {manifest.packs.length} pack collections
             </>
           }
         />
@@ -93,11 +93,11 @@ export function CatalogSearch({ manifest, children, showHeader = true, modelMoti
         />
         <div className="catalog-result-count">
           {normalizedQuery
-            ? `${visiblePacks} packs · ${matchedModels.toLocaleString()} model matches`
+            ? `${matchedModels.toLocaleString()} model matches · ${visiblePacks} pack collections`
             : modelMotion === "animated"
-              ? `${visiblePacks} packs · animated 3D models`
+              ? `Animated 3D models across ${visiblePacks} pack collections`
               : modelMotion === "static"
-                ? `${visiblePacks} packs · static 3D models`
+                ? `Static 3D models across ${visiblePacks} pack collections`
                 : "Search uses titles, descriptions, categories, themes, tags, and paths"}
         </div>
       </section>
@@ -116,7 +116,8 @@ export function CatalogSearch({ manifest, children, showHeader = true, modelMoti
                 <div className="landing-kicker">Creator</div>
                 <h2>{credit.vendorLabel}</h2>
                 <p>
-                  {packCount} {packCount === 1 ? "pack" : "packs"} · {modelCount.toLocaleString()} models ·{" "}
+                  {modelCount.toLocaleString()} models · {packCount} curated{" "}
+                  {packCount === 1 ? "collection" : "collections"} ·{" "}
                   {credit.notes}
                 </p>
               </div>
