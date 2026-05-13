@@ -3,7 +3,7 @@
 import { type CSSProperties, useEffect, useMemo, useRef, useState } from "react";
 import type { ArtPack, ArtSample, MusicTrack, SoundCollection, SoundSample } from "@/lib/media";
 import { artCreators } from "@/lib/media";
-import { isLikelySpriteSheetPath } from "@/lib/media-inference";
+import { isLikelySpriteSheetPath, isLikelyTextureAtlasPath } from "@/lib/media-inference";
 import { SiteHeader } from "@/components/SiteHeader";
 
 type MediaExplorerProps = {
@@ -23,10 +23,13 @@ type ArtTypeFilter = "all" | "ui-icons" | "spritesheets";
 type SpriteSubjectFilter = "all" | "characters" | "environments" | "effects-items" | "other";
 type SpriteMotionFilter = "all" | "animated" | "static";
 type SoundTypeFilter = "all" | "sfx" | "music";
-type SpriteGrid = { cols: number; rows: number; confidence: number };
+type SpriteLayoutMode = "static" | "grid" | "variable" | "atlas";
+type SpriteGrid = { cols: number; rows: number; confidence: number; mode: SpriteLayoutMode; frames?: SpriteRect[] };
 type SpriteRect = { x: number; y: number; w: number; h: number };
 
 function isUsableSpriteGrid(grid: SpriteGrid): boolean {
+  if (grid.mode === "atlas" || grid.mode === "static") return false;
+  if (grid.frames) return grid.frames.length > 1 && grid.confidence >= 0.5;
   return grid.cols * grid.rows > 1 && grid.confidence >= 0.45;
 }
 
@@ -216,6 +219,100 @@ function detectPeriod(signal: Float32Array): { lag: number; score: number } {
   return best;
 }
 
+function contentRatioForRect(imageData: ImageData, source: SpriteRect, bg: ReturnType<typeof sampleImageBackground>): number {
+  const { width, data } = imageData;
+  let count = 0;
+  for (let y = source.y; y < source.y + source.h; y++) {
+    for (let x = source.x; x < source.x + source.w; x++) {
+      if (isContentPixel(data, (y * width + x) * 4, bg)) count++;
+    }
+  }
+  return count / Math.max(1, source.w * source.h);
+}
+
+function detectActiveSpans(activity: Float32Array): Array<{ start: number; end: number }> {
+  let maxActivity = 0;
+  for (let i = 0; i < activity.length; i++) maxActivity = Math.max(maxActivity, activity[i]);
+  const threshold = Math.max(0.005, Math.min(0.035, maxActivity * 0.08));
+  const spans: Array<{ start: number; end: number }> = [];
+  let start = -1;
+  for (let i = 0; i < activity.length; i++) {
+    if (activity[i] > threshold) {
+      if (start < 0) start = i;
+    } else if (start >= 0) {
+      spans.push({ start, end: i });
+      start = -1;
+    }
+  }
+  if (start >= 0) spans.push({ start, end: activity.length });
+
+  const merged: Array<{ start: number; end: number }> = [];
+  for (const span of spans.filter((item) => item.end - item.start >= 2)) {
+    const prev = merged.at(-1);
+    if (prev && span.start - prev.end <= 2) {
+      prev.end = span.end;
+    } else {
+      merged.push({ ...span });
+    }
+  }
+  return merged;
+}
+
+function detectVariableFrames(imageData: ImageData, bg: ReturnType<typeof sampleImageBackground>, rowActivity: Float32Array, colActivity: Float32Array): SpriteRect[] {
+  const rowSpans = detectActiveSpans(rowActivity);
+  const colSpans = detectActiveSpans(colActivity);
+  if (rowSpans.length === 0 || colSpans.length === 0) return [];
+  if (rowSpans.length > 16 || colSpans.length > 32 || rowSpans.length * colSpans.length > 96) return [];
+
+  const frames: SpriteRect[] = [];
+  for (const row of rowSpans) {
+    for (const col of colSpans) {
+      const rect = { x: col.start, y: row.start, w: col.end - col.start, h: row.end - row.start };
+      if (contentRatioForRect(imageData, rect, bg) < 0.01) continue;
+      frames.push(computeTrimRect(imageData, rect, bg));
+    }
+  }
+
+  const imageArea = imageData.width * imageData.height;
+  const usefulFrames = frames.filter((rect) => rect.w * rect.h >= imageArea * 0.001);
+  return usefulFrames.length >= 2 ? usefulFrames : [];
+}
+
+function hasVariableSpanSizes(spans: Array<{ start: number; end: number }>): boolean {
+  if (spans.length <= 1) return false;
+  const sizes = spans.map((span) => span.end - span.start);
+  const min = Math.min(...sizes);
+  const max = Math.max(...sizes);
+  return max - min > Math.max(3, max * 0.18);
+}
+
+function parseSpriteSizeHint(path: string, imageWidth: number, imageHeight: number): SpriteGrid | null {
+  const hints = [...path.matchAll(/(^|[^0-9])(\d{2,4})\s*[x×]\s*(\d{2,4})(?:\s*px)?([^0-9]|$)/gi)];
+  for (const hint of hints) {
+    const w = Number(hint[2]);
+    const h = Number(hint[3]);
+    if (w <= 0 || h <= 0) continue;
+    const cols = imageWidth / w;
+    const rows = imageHeight / h;
+    if (Number.isInteger(cols) && Number.isInteger(rows) && cols * rows > 1 && cols <= 32 && rows <= 32) {
+      return { cols, rows, confidence: 0.82, mode: "grid" };
+    }
+  }
+  return null;
+}
+
+function parseGridHint(path: string, imageWidth: number, imageHeight: number): SpriteGrid | null {
+  const hints = [...path.matchAll(/(^|[^0-9])(\d{1,2})\s*[x×]\s*(\d{1,2})([^0-9]|$)/gi)];
+  for (const hint of hints) {
+    const cols = Number(hint[2]);
+    const rows = Number(hint[3]);
+    if (cols <= 1 && rows <= 1) continue;
+    if (cols > 32 || rows > 32) continue;
+    if (imageWidth % cols === 0 && imageHeight % rows === 0) return { cols, rows, confidence: 0.78, mode: "grid" };
+  }
+  return null;
+}
+
 function detectGridFromImageData(imageData: ImageData): SpriteGrid {
   const { width, height, data } = imageData;
   const bg = sampleImageBackground(imageData);
@@ -243,7 +340,7 @@ function detectGridFromImageData(imageData: ImageData): SpriteGrid {
     const rows = Math.max(1, Math.round(height / rowPeriod.lag));
     const cols = Math.max(1, Math.round(width / colPeriod.lag));
     if (rows <= 32 && cols <= 32) {
-      return { cols, rows, confidence: 0.5 + Math.min(rowPeriod.score, colPeriod.score) * 0.4 };
+      return { cols, rows, confidence: 0.5 + Math.min(rowPeriod.score, colPeriod.score) * 0.4, mode: "grid" };
     }
   }
 
@@ -272,16 +369,22 @@ function detectGridFromImageData(imageData: ImageData): SpriteGrid {
   const rows = countCells(rowActivity);
   const cols = countCells(colActivity);
   if (rows >= 1 && cols >= 1 && rows <= 32 && cols <= 32) {
-    return { cols, rows, confidence: 0.6 };
+    const frames = detectVariableFrames(imageData, bg, rowActivity, colActivity);
+    const rowSpans = detectActiveSpans(rowActivity);
+    const colSpans = detectActiveSpans(colActivity);
+    if (frames.length > 1 && (frames.length !== rows * cols || hasVariableSpanSizes(rowSpans) || hasVariableSpanSizes(colSpans))) {
+      return { cols: frames.length, rows: 1, confidence: 0.62, mode: "variable", frames };
+    }
+    return { cols, rows, confidence: 0.6, mode: "grid" };
   }
 
   for (const size of [16, 24, 32, 48, 64, 96, 128, 192, 256]) {
     if (width % size === 0 && height % size === 0) {
-      return { cols: width / size, rows: height / size, confidence: 0.4 };
+      return { cols: width / size, rows: height / size, confidence: 0.4, mode: "grid" };
     }
   }
 
-  return { cols: 1, rows: 1, confidence: 0 };
+  return { cols: 1, rows: 1, confidence: 0, mode: "static" };
 }
 
 function computeTrimRect(imageData: ImageData, source: SpriteRect, bg: ReturnType<typeof sampleImageBackground>): SpriteRect {
@@ -314,6 +417,7 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
   const [rows, setRows] = useState(1);
   const [autoDetect, setAutoDetect] = useState(true);
   const [detectedGrid, setDetectedGrid] = useState<SpriteGrid | null>(null);
+  const [layoutFrames, setLayoutFrames] = useState<SpriteRect[] | null>(null);
   const [scale, setScale] = useState(3);
   const [flip, setFlip] = useState(false);
   const [background, setBackground] = useState("#15171c");
@@ -324,6 +428,7 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
     setRows(1);
     setAutoDetect(true);
     setDetectedGrid(null);
+    setLayoutFrames(null);
   }, [sample?.animated, sample?.path, sample?.src]);
 
   useEffect(() => {
@@ -355,23 +460,32 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
         scratchCtx.drawImage(image, 0, 0);
         imageData = scratchCtx.getImageData(0, 0, scratch.width, scratch.height);
         bgSample = sampleImageBackground(imageData);
-        const detected = detectGridFromImageData(imageData);
-        const canAnimateSample = sample ? sample.animated && isLikelySpriteSheetPath(sample.path) : false;
+        const detectedFromPixels = detectGridFromImageData(imageData);
+        const canAnimateSample = sample ? sample.animated && isLikelySpriteSheetPath(sample.path) && !isLikelyTextureAtlasPath(sample.path) : false;
+        const hintedLayout =
+          sample && canAnimateSample
+            ? parseSpriteSizeHint(sample.path, imageData.width, imageData.height) ?? parseGridHint(sample.path, imageData.width, imageData.height)
+            : null;
         const stripFallback = (() => {
+          if (sample && isLikelyTextureAtlasPath(sample.path)) return { cols: 1, rows: 1, confidence: 0.9, mode: "atlas" as const };
+          if (hintedLayout) return hintedLayout;
+          const detected = detectedFromPixels;
           if (!canAnimateSample || isUsableSpriteGrid(detected)) return detected;
           const wide = Math.round(imageData.width / imageData.height);
-          if (wide >= 2 && wide <= 32) return { cols: wide, rows: 1, confidence: 0.55 };
+          if (wide >= 2 && wide <= 32) return { cols: wide, rows: 1, confidence: 0.55, mode: "grid" as const };
           const tall = Math.round(imageData.height / imageData.width);
-          if (tall >= 2 && tall <= 32) return { cols: 1, rows: tall, confidence: 0.55 };
+          if (tall >= 2 && tall <= 32) return { cols: 1, rows: tall, confidence: 0.55, mode: "grid" as const };
           return detected;
         })();
         setDetectedGrid(stripFallback);
         if (autoDetect && canAnimateSample && isUsableSpriteGrid(stripFallback)) {
           setColumns(stripFallback.cols);
           setRows(stripFallback.rows);
+          setLayoutFrames(stripFallback.frames ?? null);
         } else if (autoDetect) {
           setColumns(1);
           setRows(1);
+          setLayoutFrames(null);
           setPlaying(false);
         }
       } catch {
@@ -409,7 +523,8 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
 
     function tick(time: number) {
       drawGrid();
-      const totalFrames = Math.max(1, columns * rows);
+      const frames = autoDetect ? layoutFrames : null;
+      const totalFrames = Math.max(1, frames?.length ?? columns * rows);
       const isSpriteSheet = sample?.animated && totalFrames > 1;
       if (playing && time - lastFrame >= 1000 / (10 * speed)) {
         frame = (frame + 1) % totalFrames;
@@ -420,12 +535,15 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
         context.imageSmoothingEnabled = false;
         const frameWidth = isSpriteSheet ? Math.max(1, Math.floor(image.width / columns)) : image.width;
         const frameHeight = isSpriteSheet ? Math.max(1, Math.floor(image.height / rows)) : image.height;
-        const source: SpriteRect = {
-          x: isSpriteSheet ? (frame % columns) * frameWidth : 0,
-          y: isSpriteSheet ? Math.floor(frame / columns) * frameHeight : 0,
-          w: frameWidth,
-          h: frameHeight,
-        };
+        const source: SpriteRect =
+          isSpriteSheet && frames
+            ? frames[frame % frames.length]
+            : {
+                x: isSpriteSheet ? (frame % columns) * frameWidth : 0,
+                y: isSpriteSheet ? Math.floor(frame / columns) * frameHeight : 0,
+                w: frameWidth,
+                h: frameHeight,
+              };
         const drawSource =
           imageData && bgSample
             ? trimCache.get(frame) ??
@@ -465,10 +583,14 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
 
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [autoDetect, background, columns, flip, pack.title, playing, rows, sample?.animated, sample?.label, sample?.path, sample?.src, scale, speed]);
+  }, [autoDetect, background, columns, flip, layoutFrames, pack.title, playing, rows, sample?.animated, sample?.label, sample?.path, sample?.src, scale, speed]);
 
   const detectionLabel = detectedGrid
-    ? `auto ${detectedGrid.cols}x${detectedGrid.rows} (${Math.round(detectedGrid.confidence * 100)}%)`
+    ? detectedGrid.frames
+      ? `auto ${detectedGrid.frames.length} frames (${Math.round(detectedGrid.confidence * 100)}%)`
+      : detectedGrid.mode === "atlas"
+        ? "atlas"
+        : `auto ${detectedGrid.cols}x${detectedGrid.rows} (${Math.round(detectedGrid.confidence * 100)}%)`
     : "auto";
 
   return (

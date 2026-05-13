@@ -2,6 +2,10 @@ export type ArtKind = "character" | "sprite" | "icon" | "tile" | "effect" | "ui"
 
 const ACTION_WORDS =
   "idle|walk|run|jump|fall|attack|attacks|hurt|hit|death|die|move|dash|roll|slide|crouch|sleep|sleeping|damaged|charge|teleport";
+const CHARACTER_WORDS =
+  "character|characters|hero|knight|warrior|mage|witch|dino|frog|cat|skeleton|monster|enemy|creature|samurai|archer|bandit|huntress|wizard|npc|villager|ronin|ship|fighter|bomber";
+const ATLAS_WORDS =
+  "atlas|texture|textures|tilesheet|tile sheet|tilemap|tile map|tileset|tiled|terrain|decoration|decorations|objects|props|ground";
 
 function parts(path: string): string[] {
   return path.split(/[\\/]+/).filter(Boolean);
@@ -45,11 +49,23 @@ export function isLikelySeparateFramePath(path: string): boolean {
   return (frameSuffix && (frameFolder || (actionHint && !onlyActionAndNumber))) || (compactFrameSuffix && frameFolder);
 }
 
+export function isLikelyTextureAtlasPath(path: string): boolean {
+  const text = tokenText(path);
+  const atlasHint = hasToken(text, ATLAS_WORDS) || /(^|[\\/])(tiled_files|tilesets?|tilemaps?|textures?)([\\/]|$)/i.test(path);
+  if (!atlasHint) return false;
+
+  const animationHint = hasToken(text, ACTION_WORDS) || hasToken(text, "animation|animated|allanim|all anim");
+  const characterHint = hasToken(text, CHARACTER_WORDS);
+  const animatedIconHint = hasToken(text, "coin|coins|chest|chests|pickup|gem|gems|potion|potions");
+  return !animationHint && !characterHint && !animatedIconHint;
+}
+
 export function isLikelySpriteSheetPath(path: string): boolean {
   if (/\.(gif)$/i.test(path)) return true;
+  if (isLikelyTextureAtlasPath(path)) return false;
   if (isLikelySeparateFramePath(path)) return false;
   if (/(^|[\\/])(spritesheets?|sheets?|strips?)([\\/]|$)/i.test(path)) return true;
-  if (hasToken(path, "spritesheet|sprite sheet|sheet|strip|atlas|allanim|all anim|animation")) return true;
+  if (hasToken(path, "spritesheet|sprite sheet|sheet|strip|allanim|all anim|animation")) return true;
 
   const name = basenameWithoutExtension(path);
   if (/\b\d{2,4}x\d{2,4}\b/i.test(name) && hasToken(name, ACTION_WORDS)) return true;
@@ -64,7 +80,7 @@ export function inferArtKind(path: string): ArtKind {
   if (hasToken(path, "tile|tiles|tileset|terrain|forest|dungeon|platform|ground|wall|walls|props")) return "tile";
   if (hasToken(path, "effect|effects|fx|fire|smoke|slash|impact|bullet|explosion|spell|magic")) return "effect";
   if (hasToken(path, "button|buttons|ui|hud|panel|cursor|menu|fullscreen|memoryprofiler") || /progress\s*bar/i.test(path)) return "ui";
-  if (hasToken(path, "character|characters|hero|knight|warrior|mage|witch|dino|frog|cat|skeleton|monster|enemy|creature|samurai|archer|bandit|huntress|wizard|npc|villager|ronin|ship|fighter|bomber")) {
+  if (hasToken(path, CHARACTER_WORDS)) {
     return "character";
   }
   if (isLikelySpriteSheetPath(path) || /\bspr(ite)?\b/i.test(name)) return "sprite";
