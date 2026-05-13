@@ -24,7 +24,8 @@ type ArtTypeFilter = "all" | "ui-icons" | "spritesheets";
 type SpriteSubjectFilter = "all" | "characters" | "environments" | "effects-items" | "other";
 type SpriteMotionFilter = "all" | "animated" | "static";
 type SoundTypeFilter = "all" | "sfx" | "music";
-type SpriteLayoutMode = "static" | "grid" | "variable" | "atlas" | "hybrid-atlas";
+type SpriteLayoutMode = "static" | "grid" | "variable" | "atlas" | "hybrid-atlas" | "sequence-pack";
+type SpriteSequenceMode = "off" | "hybrid-atlas" | "sequence-pack";
 type SpriteGrid = {
   cols: number;
   rows: number;
@@ -144,6 +145,35 @@ const ART_TAXONOMY_ORDER = [
 
 function isSpriteSheetCandidate(sample: ArtSample): boolean {
   return sample.animated || isLikelySpriteSheetPath(sample.path) || /(?:sprite|spritesheet|sheet|animation|anim)/i.test(sample.label);
+}
+
+function normalizeSpritePathText(value: string): string {
+  return value
+    .replace(/([a-z])([A-Z])/g, "$1 $2")
+    .replace(/[^a-z0-9]+/gi, " ")
+    .trim()
+    .toLowerCase();
+}
+
+function basenameWithoutExtension(path: string): string {
+  return (path.split(/[\\/]+/).pop() ?? path).replace(/\.[^.]+$/i, "");
+}
+
+const SPRITE_ACTION_NAME_PATTERN =
+  /\b(?:idle|walk|run|jump|fall|attack|attacks|hurt|hit|death|die|move|dash|roll|slide|crouch|sleep|sleeping|damaged|charge|teleport)\b/i;
+const GENERIC_SEQUENCE_SHEET_PATTERN =
+  /\b(?:spritesheet|sprite sheet|sprite sheets|sheet|strip|allanim|all anim|animation|all animation|all animations|animations)\b/i;
+const SEQUENCE_FOLDER_PATTERN = /\b(?:spritesheets|sprite sheets|all animations|all anim)\b/i;
+
+function isLikelySpriteSequencePackPath(path: string): boolean {
+  if (!isLikelySpriteSheetPath(path)) return false;
+
+  const name = normalizeSpritePathText(basenameWithoutExtension(path));
+  if (SPRITE_ACTION_NAME_PATTERN.test(name)) return false;
+  if (GENERIC_SEQUENCE_SHEET_PATTERN.test(name)) return true;
+
+  const parentText = normalizeSpritePathText(path.split(/[\\/]+/).slice(-3, -1).join(" "));
+  return SEQUENCE_FOLDER_PATTERN.test(parentText) && !SPRITE_ACTION_NAME_PATTERN.test(parentText);
 }
 
 function sampleImageBackground(imageData: ImageData) {
@@ -468,7 +498,7 @@ function parseGridHint(path: string, imageWidth: number, imageHeight: number): S
   return null;
 }
 
-function detectGridFromImageData(imageData: ImageData, options: { preferSequences?: boolean } = {}): SpriteGrid {
+function detectGridFromImageData(imageData: ImageData, options: { sequenceMode?: SpriteSequenceMode } = {}): SpriteGrid {
   const { width, height, data } = imageData;
   const bg = sampleImageBackground(imageData);
   const integral = buildContentIntegral(imageData, bg);
@@ -493,14 +523,16 @@ function detectGridFromImageData(imageData: ImageData, options: { preferSequence
 
   const rowPeriod = detectPeriod(rowActivity);
   const colPeriod = detectPeriod(colActivity);
-  const sequences = options.preferSequences ? detectAnimationSequences(imageData, bg, rowActivity, colActivity) : [];
-  if (sequences.length > 1) {
+  const sequenceMode = options.sequenceMode ?? "off";
+  const sequenceLayoutMode = sequenceMode === "off" ? null : sequenceMode;
+  const sequences = sequenceLayoutMode ? detectAnimationSequences(imageData, bg, rowActivity, colActivity) : [];
+  if (sequenceLayoutMode && sequences.length > 1) {
     const first = sequences[0];
     return {
       cols: first.frames.length,
       rows: 1,
       confidence: 0.72,
-      mode: "hybrid-atlas",
+      mode: sequenceLayoutMode,
       frames: first.frames,
       sequences,
     };
@@ -822,13 +854,19 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
     if (!sample || !loadedImage?.imageData) return null;
     const imageData = loadedImage.imageData;
     const hybridAtlas = isLikelyHybridSpriteAtlasPath(sample.path);
+    const sequenceMode: SpriteSequenceMode = hybridAtlas
+      ? "hybrid-atlas"
+      : isLikelySpriteSequencePackPath(sample.path)
+        ? "sequence-pack"
+        : "off";
     const pureAtlas = isLikelyTextureAtlasPath(sample.path) && !hybridAtlas;
-    const detectedFromPixels = detectGridFromImageData(imageData, { preferSequences: hybridAtlas });
+    const detectedFromPixels = detectGridFromImageData(imageData, { sequenceMode });
     const canAnimateSample = sample.animated && isLikelySpriteSheetPath(sample.path) && !pureAtlas;
     const hintedLayout = canAnimateSample
       ? parseSpriteSizeHint(sample.path, imageData.width, imageData.height) ?? parseGridHint(sample.path, imageData.width, imageData.height)
       : null;
     if (pureAtlas) return { cols: 1, rows: 1, confidence: 0.9, mode: "atlas" as const };
+    if (detectedFromPixels.sequences && isUsableSpriteGrid(detectedFromPixels)) return detectedFromPixels;
     if (hintedLayout) return hintedLayout;
     if (!canAnimateSample || isUsableSpriteGrid(detectedFromPixels)) return detectedFromPixels;
     const wide = Math.round(imageData.width / imageData.height);
@@ -962,9 +1000,11 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
         ? "atlas"
         : detectedGrid.mode === "hybrid-atlas"
           ? `hybrid ${detectedGrid.sequences?.length ?? 0} rows (${Math.round(detectedGrid.confidence * 100)}%)`
-          : detectedGrid.frames
-            ? `auto ${detectedGrid.frames.length} frames (${Math.round(detectedGrid.confidence * 100)}%)`
-            : `auto ${detectedGrid.cols}x${detectedGrid.rows} (${Math.round(detectedGrid.confidence * 100)}%)`
+          : detectedGrid.mode === "sequence-pack"
+            ? `sequences ${detectedGrid.sequences?.length ?? 0} rows (${Math.round(detectedGrid.confidence * 100)}%)`
+            : detectedGrid.frames
+              ? `auto ${detectedGrid.frames.length} frames (${Math.round(detectedGrid.confidence * 100)}%)`
+              : `auto ${detectedGrid.cols}x${detectedGrid.rows} (${Math.round(detectedGrid.confidence * 100)}%)`
     : "auto";
 
   const activeSequence = detectedGrid?.sequences?.[Math.min(sequenceIndex, Math.max(0, (detectedGrid.sequences?.length ?? 1) - 1))];
