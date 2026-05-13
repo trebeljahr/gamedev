@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { ArtPack, ArtSample, MusicTrack, SoundCollection, SoundSample } from "@/lib/media";
 import { artCreators } from "@/lib/media";
+import { isLikelySpriteSheetPath } from "@/lib/media-inference";
 
 type MediaExplorerProps = {
   soundCollections: SoundCollection[];
@@ -23,6 +24,10 @@ type SpriteMotionFilter = "all" | "animated" | "static";
 type SoundTypeFilter = "all" | "sfx" | "music";
 type SpriteGrid = { cols: number; rows: number; confidence: number };
 type SpriteRect = { x: number; y: number; w: number; h: number };
+
+function isUsableSpriteGrid(grid: SpriteGrid): boolean {
+  return grid.cols * grid.rows > 1 && grid.confidence >= 0.45;
+}
 
 function licenseBucket(license: string): string {
   const lower = license.toLowerCase();
@@ -306,12 +311,12 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
   const [background, setBackground] = useState("#15171c");
 
   useEffect(() => {
-    setPlaying(true);
-    setColumns(sample?.animated ? 4 : 1);
+    setPlaying(Boolean(sample?.animated && isLikelySpriteSheetPath(sample.path)));
+    setColumns(1);
     setRows(1);
     setAutoDetect(true);
     setDetectedGrid(null);
-  }, [sample?.src, sample?.animated]);
+  }, [sample?.animated, sample?.path, sample?.src]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -343,18 +348,23 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
         imageData = scratchCtx.getImageData(0, 0, scratch.width, scratch.height);
         bgSample = sampleImageBackground(imageData);
         const detected = detectGridFromImageData(imageData);
+        const canAnimateSample = sample ? sample.animated && isLikelySpriteSheetPath(sample.path) : false;
         const stripFallback = (() => {
-          if (!sample?.animated || detected.cols * detected.rows > 1) return detected;
+          if (!canAnimateSample || isUsableSpriteGrid(detected)) return detected;
           const wide = Math.round(imageData.width / imageData.height);
-          if (wide >= 2 && wide <= 32) return { cols: wide, rows: 1, confidence: 0.45 };
+          if (wide >= 2 && wide <= 32) return { cols: wide, rows: 1, confidence: 0.55 };
           const tall = Math.round(imageData.height / imageData.width);
-          if (tall >= 2 && tall <= 32) return { cols: 1, rows: tall, confidence: 0.45 };
+          if (tall >= 2 && tall <= 32) return { cols: 1, rows: tall, confidence: 0.55 };
           return detected;
         })();
         setDetectedGrid(stripFallback);
-        if (autoDetect && stripFallback.confidence > 0) {
+        if (autoDetect && canAnimateSample && isUsableSpriteGrid(stripFallback)) {
           setColumns(stripFallback.cols);
           setRows(stripFallback.rows);
+        } else if (autoDetect) {
+          setColumns(1);
+          setRows(1);
+          setPlaying(false);
         }
       } catch {
         setDetectedGrid(null);
@@ -392,6 +402,7 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
     function tick(time: number) {
       drawGrid();
       const totalFrames = Math.max(1, columns * rows);
+      const isSpriteSheet = sample?.animated && totalFrames > 1;
       if (playing && time - lastFrame >= 1000 / (10 * speed)) {
         frame = (frame + 1) % totalFrames;
         lastFrame = time;
@@ -399,11 +410,11 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
 
       if (imageReady && !failed) {
         context.imageSmoothingEnabled = false;
-        const frameWidth = Math.max(1, Math.floor(image.width / columns));
-        const frameHeight = Math.max(1, Math.floor(image.height / rows));
+        const frameWidth = isSpriteSheet ? Math.max(1, Math.floor(image.width / columns)) : image.width;
+        const frameHeight = isSpriteSheet ? Math.max(1, Math.floor(image.height / rows)) : image.height;
         const source: SpriteRect = {
-          x: (frame % columns) * frameWidth,
-          y: Math.floor(frame / columns) * frameHeight,
+          x: isSpriteSheet ? (frame % columns) * frameWidth : 0,
+          y: isSpriteSheet ? Math.floor(frame / columns) * frameHeight : 0,
           w: frameWidth,
           h: frameHeight,
         };
@@ -439,13 +450,14 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
       context.fillStyle = "rgba(255,255,255,0.62)";
       context.font = "12px system-ui";
       context.textAlign = "left";
-      context.fillText(`${sample?.label ?? "No sample"} · frame ${frame + 1}/${Math.max(1, columns * rows)}`, 16, drawingCanvas.height - 18);
+      const status = totalFrames > 1 ? `frame ${frame + 1}/${totalFrames}` : "static";
+      context.fillText(`${sample?.label ?? "No sample"} · ${status}`, 16, drawingCanvas.height - 18);
       raf = requestAnimationFrame(tick);
     }
 
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [autoDetect, background, columns, flip, pack.title, playing, rows, sample?.animated, sample?.label, sample?.src, scale, speed]);
+  }, [autoDetect, background, columns, flip, pack.title, playing, rows, sample?.animated, sample?.label, sample?.path, sample?.src, scale, speed]);
 
   const detectionLabel = detectedGrid
     ? `auto ${detectedGrid.cols}x${detectedGrid.rows} (${Math.round(detectedGrid.confidence * 100)}%)`

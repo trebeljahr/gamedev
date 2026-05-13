@@ -1,6 +1,7 @@
 import { existsSync } from "node:fs";
 import { mkdir, readdir, writeFile } from "node:fs/promises";
 import { dirname, join, relative } from "node:path";
+import { inferArtKind, isAnimatedArtPath, selectRepresentativeArtSamples } from "../src/lib/media-inference";
 
 const SHOWCASE_DIR = join(__dirname, "..");
 const REPO_ROOT = join(SHOWCASE_DIR, "..");
@@ -63,19 +64,6 @@ function labelFromAssetPath(path: string): string {
   );
 }
 
-function inferArtKind(path: string): ArtSample["kind"] {
-  const lower = path.toLowerCase();
-  if (/(character|hero|knight|warrior|mage|witch|dino|frog|cat|skeleton|monster|enemy|creature|samurai|archer|bandit|huntress|wizard)/.test(lower)) {
-    return "character";
-  }
-  if (/(icon|item|inventory|weapon|coin|chest|pickup|potion|gem)/.test(lower)) return "icon";
-  if (/(tile|tileset|terrain|forest|dungeon|platform|ground|wall|props)/.test(lower)) return "tile";
-  if (/(effect|fx|fire|smoke|slash|impact|bullet|explosion|spell|magic)/.test(lower)) return "effect";
-  if (/(button|ui|hud|panel|cursor|menu)/.test(lower)) return "ui";
-  if (/(sprite|sheet|animation|anim|idle|walk|run|jump|attack|hurt|death)/.test(lower)) return "sprite";
-  return "image";
-}
-
 function inferSoundKind(path: string): SoundSample["kind"] {
   const lower = path.toLowerCase();
   if (/(footstep|step|walk|run|jump|movement|grass|gravel)/.test(lower)) return "movement";
@@ -83,17 +71,6 @@ function inferSoundKind(path: string): SoundSample["kind"] {
   if (/(ui|click|button|select|menu|confirm|coin|pickup|notification)/.test(lower)) return "ui";
   if (/(ambient|ambience|wind|rain|forest|water|loop|room|drone)/.test(lower)) return "ambient";
   return "effect";
-}
-
-function scoreArtSample(path: string): number {
-  const lower = path.toLowerCase();
-  let score = 0;
-  if (/\.(png|webp|gif)$/i.test(path)) score += 8;
-  if (/(preview|sample|demo|sprite|spritesheet|sheet|animation|anim)/.test(lower)) score += 12;
-  if (/(idle|walk|run|jump|attack|hurt|death)/.test(lower)) score += 10;
-  if (/(character|hero|knight|warrior|monster|enemy|icon|item|effect|fx)/.test(lower)) score += 8;
-  if (/(license|readme|credit|cover|banner|thumbnail|__macosx|\/\._)/.test(lower)) score -= 40;
-  return score;
 }
 
 function scoreSoundSample(path: string): number {
@@ -123,10 +100,8 @@ async function main() {
         packDir,
         (path, name) => !isJunkPath(path) && /\.(png|jpe?g|webp|gif)$/i.test(name),
       );
-      for (const abs of images
-        .sort((a, b) => scoreArtSample(b) - scoreArtSample(a) || a.localeCompare(b))
-        .slice(0, 8)) {
-        const rel = relative(ASSETS_ROOT, abs).split("/").join("/");
+      const relImages = images.map((abs) => relative(ASSETS_ROOT, abs).split("/").join("/"));
+      for (const rel of selectRepresentativeArtSamples(relImages, 8)) {
         const kind = inferArtKind(rel);
         artSamples.push({
           packFolder,
@@ -134,7 +109,7 @@ async function main() {
           src: `/${rel.split("/").map(encodeURIComponent).join("/")}`,
           label: labelFromAssetPath(rel),
           kind,
-          animated: kind === "character" || kind === "sprite" || kind === "effect" || /\.(gif)$/i.test(rel),
+          animated: isAnimatedArtPath(rel),
         });
       }
     }
