@@ -392,19 +392,43 @@ export function buildSoundCollectionMetadata(input: {
   path: string;
   license: string;
   notes: string;
+  organization?: "user-collection" | "creator-pack" | "source-pattern";
+  organizationLabel?: string;
 }): MediaMetadata {
   const text = tokenText(input.title, input.source, input.path, input.notes);
-  const category = soundCategory(text);
-  const themes = soundThemes(text);
-  const useCases = soundUseCases(category, text);
-  const tags = mediaTags(inferTags(text, ["sound", "sfx", category, input.source.toLowerCase(), ...themes]));
-  const description = `${input.title} is a ${input.source} ${category} sound collection for ${useCases.join(", ")}. License: ${input.license}. ${input.notes}`.trim();
+  const organization = input.organization ?? "creator-pack";
+  const category = organization === "source-pattern" ? "source-pattern" : soundCategory(text);
+  const themes = organization === "source-pattern" ? ["licensing", "source"] : soundThemes(text);
+  const useCases =
+    organization === "source-pattern"
+      ? ["source verification", "license lookup", "file provenance"]
+      : soundUseCases(category, text);
+  const tags = mediaTags(
+    inferTags(text, [
+      "sound",
+      "sfx",
+      category,
+      organization,
+      input.organizationLabel?.toLowerCase() ?? "",
+      input.source.toLowerCase(),
+      ...themes,
+    ].filter(Boolean)),
+  );
+  const collectionNoun =
+    organization === "user-collection"
+      ? "user-curated sound collection"
+      : organization === "source-pattern"
+        ? "source-identification pattern"
+        : `${input.source} creator pack`;
+  const description = `${input.title} is a ${collectionNoun} for ${useCases.join(", ")}. License: ${input.license}. ${input.notes}`.trim();
   const searchText = unique([
     input.title,
     input.source,
     input.path,
     input.license,
     input.notes,
+    input.organizationLabel ?? "",
+    organization,
     description,
     category,
     ...themes,

@@ -5,6 +5,8 @@ export type SoundCollection = {
   id: string;
   title: string;
   description: string;
+  organization: "user-collection" | "creator-pack" | "source-pattern";
+  organizationLabel: string;
   category: string;
   themes: string[];
   useCases: string[];

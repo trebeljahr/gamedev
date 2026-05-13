@@ -24,6 +24,8 @@ type ArtTypeFilter = "all" | "ui-icons" | "spritesheets";
 type SpriteSubjectFilter = "all" | "characters" | "environments" | "effects-items" | "other";
 type SpriteMotionFilter = "all" | "animated" | "static";
 type SoundTypeFilter = "all" | "sfx" | "music";
+type SoundOrganization = SoundCollection["organization"];
+type SoundOrganizationFilter = "all" | SoundOrganization;
 type SpriteLayoutMode = "static" | "grid" | "variable" | "atlas" | "hybrid-atlas" | "sequence-pack";
 type SpriteSequenceMode = "off" | "hybrid-atlas" | "sequence-pack";
 type SpriteGrid = {
@@ -146,6 +148,13 @@ const ART_TAXONOMY_ORDER = [
   "Spritesheets / Other / Animated",
   "Spritesheets / Other / Static",
 ];
+
+const SOUND_ORGANIZATION_ORDER: SoundOrganization[] = ["user-collection", "creator-pack", "source-pattern"];
+const SOUND_ORGANIZATION_NAMES: Record<SoundOrganization, string> = {
+  "user-collection": "User collections",
+  "creator-pack": "Creator packs",
+  "source-pattern": "Source patterns",
+};
 
 function isSpriteSheetCandidate(sample: ArtSample): boolean {
   return sample.animated || isLikelySpriteSheetPath(sample.path) || /(?:sprite|spritesheet|sheet|animation|anim)/i.test(sample.label);
@@ -1641,7 +1650,7 @@ function SoundPad({ collection }: { collection: SoundCollection }) {
       <div className="sound-pad-head">
         <div>
           <h3>{collection.title}</h3>
-          <div className="media-detail">{collection.source} · {collection.license}</div>
+          <div className="media-detail">{collection.organizationLabel} · {collection.source} · {collection.license}</div>
         </div>
       </div>
       <AudioPlayer
@@ -1704,6 +1713,7 @@ export function MediaExplorer({
   const [spriteSubjectFilter, setSpriteSubjectFilter] = useState<SpriteSubjectFilter>(initialSpriteSubject);
   const [spriteMotionFilter, setSpriteMotionFilter] = useState<SpriteMotionFilter>(initialSpriteMotion);
   const [soundTypeFilter, setSoundTypeFilter] = useState<SoundTypeFilter>(initialSoundType);
+  const [soundOrganizationFilter, setSoundOrganizationFilter] = useState<SoundOrganizationFilter>("all");
   const [soundCategoryFilter, setSoundCategoryFilter] = useState("all");
   const [selectedArtFolder, setSelectedArtFolder] = useState(artPacks[0]?.folder ?? "");
   const [selectedSoundId, setSelectedSoundId] = useState(
@@ -1729,6 +1739,17 @@ export function MediaExplorer({
     [soundCollections],
   );
 
+  const soundOrganizations = useMemo(
+    () =>
+      [
+        "all",
+        ...SOUND_ORGANIZATION_ORDER.filter((organization) =>
+          soundCollections.some((collection) => collection.organization === organization),
+        ),
+      ] as SoundOrganizationFilter[],
+    [soundCollections],
+  );
+
   const soundCategories = useMemo(
     () => ["all", ...Array.from(new Set(soundCollections.map((collection) => collection.category))).sort()],
     [soundCollections],
@@ -1743,11 +1764,12 @@ export function MediaExplorer({
     if (soundTypeFilter === "music") return [];
     const q = query.trim().toLowerCase();
     return soundCollections.filter((item) => {
+      if (soundOrganizationFilter !== "all" && item.organization !== soundOrganizationFilter) return false;
       if (sourceFilter !== "all" && item.source !== sourceFilter) return false;
       if (soundCategoryFilter !== "all" && item.category !== soundCategoryFilter) return false;
       return searchMatches(item.searchText, q);
     });
-  }, [query, soundCategoryFilter, soundCollections, soundTypeFilter, sourceFilter]);
+  }, [query, soundCategoryFilter, soundCollections, soundOrganizationFilter, soundTypeFilter, sourceFilter]);
 
   const filteredMusic = useMemo(() => {
     if (soundTypeFilter === "sfx") return [];
@@ -1787,6 +1809,24 @@ export function MediaExplorer({
       .filter((group) => group.packs.length > 0);
   }, [filteredArt, groupMode]);
 
+  const groupedSounds = useMemo(() => {
+    return SOUND_ORGANIZATION_ORDER.map((organization) => ({
+      organization,
+      label: SOUND_ORGANIZATION_NAMES[organization],
+      collections: filteredSounds.filter((collection) => collection.organization === organization),
+    })).filter((group) => group.collections.length > 0);
+  }, [filteredSounds]);
+
+  const soundOrganizationCounts = useMemo(() => {
+    return soundCollections.reduce<Record<SoundOrganization, number>>(
+      (counts, collection) => {
+        counts[collection.organization] += 1;
+        return counts;
+      },
+      { "user-collection": 0, "creator-pack": 0, "source-pattern": 0 },
+    );
+  }, [soundCollections]);
+
   useEffect(() => {
     if (!filteredArt.some((pack) => pack.folder === selectedArtFolder)) {
       setSelectedArtFolder(filteredArt[0]?.folder ?? "");
@@ -1825,6 +1865,7 @@ export function MediaExplorer({
     if (value === "all") {
       setSoundCategoryFilter("all");
       setSourceFilter("all");
+      setSoundOrganizationFilter("all");
     }
   }
 
@@ -1834,7 +1875,8 @@ export function MediaExplorer({
         active={view === "sounds" ? "sounds" : "art"}
         meta={
           <>
-            {artPacks.length} 2D sets · {textureMappings.length} texture groups · {soundCollections.length} SFX groups · {musicTracks.length} music tracks
+            {artPacks.length} 2D sets · {textureMappings.length} texture groups · {soundOrganizationCounts["user-collection"]} user SFX collections ·{" "}
+            {soundOrganizationCounts["creator-pack"]} creator SFX packs · {musicTracks.length} music tracks
           </>
         }
       />
@@ -1963,6 +2005,16 @@ export function MediaExplorer({
                     </option>
                   ))}
                 </select>
+                <select
+                  value={soundOrganizationFilter}
+                  onChange={(event) => setSoundOrganizationFilter(event.target.value as SoundOrganizationFilter)}
+                >
+                  {soundOrganizations.map((organization) => (
+                    <option key={organization} value={organization}>
+                      {organization === "all" ? "All organization types" : SOUND_ORGANIZATION_NAMES[organization]}
+                    </option>
+                  ))}
+                </select>
                 <select value={sourceFilter} onChange={(event) => setSourceFilter(event.target.value)}>
                   {soundSources.map((source) => (
                     <option key={source} value={source}>
@@ -2073,27 +2125,47 @@ export function MediaExplorer({
         <div className={soundTypeFilter === "music" ? "media-single-column" : "media-columns"}>
           {soundTypeFilter !== "music" && (
             <section className="media-panel">
-              <h3>Sound effects</h3>
-              <div className="media-list">
-                {filteredSounds.map((item) => (
-                  <article className={`media-row ${item.id === selectedSoundId ? "active" : ""}`} key={item.id}>
-                    <button type="button" className="row-button" onClick={() => setSelectedSoundId(item.id)}>
-                      <div>
-                        <div className="media-title">{item.title}</div>
-                        <div className="media-detail">{item.category} · {item.path}</div>
-                        <p>{item.description}</p>
-                      </div>
-                    </button>
-                    <div className="media-actions">
-                      <span>{item.samples.length} samples</span>
-                      {item.url && (
-                        <a href={item.url} target="_blank" rel="noreferrer">
-                          source
-                        </a>
-                      )}
+              <div className="panel-heading">
+                <h3>Sound effects</h3>
+                <span>
+                  {soundOrganizationCounts["user-collection"]} user collections · {soundOrganizationCounts["creator-pack"]} creator packs
+                </span>
+              </div>
+              <div className="sound-groups">
+                {groupedSounds.map((group) => (
+                  <section className="sound-group" key={group.organization}>
+                    <div className="sound-group-heading">
+                      <h4>{group.label}</h4>
+                      <span>{group.collections.length} folders</span>
                     </div>
-                  </article>
+                    <div className="media-list">
+                      {group.collections.map((item) => (
+                        <article className={`media-row ${item.id === selectedSoundId ? "active" : ""}`} key={item.id}>
+                          <button type="button" className="row-button" onClick={() => setSelectedSoundId(item.id)}>
+                            <div>
+                              <div className="media-row-kicker">
+                                <span className={`sound-org sound-org-${item.organization}`}>{item.organizationLabel}</span>
+                                <span>{item.source}</span>
+                              </div>
+                              <div className="media-title">{item.title}</div>
+                              <div className="media-detail">{item.category} · {item.path}</div>
+                              <p>{item.description}</p>
+                            </div>
+                          </button>
+                          <div className="media-actions">
+                            <span>{item.samples.length} samples</span>
+                            {item.url && (
+                              <a href={item.url} target="_blank" rel="noreferrer">
+                                source
+                              </a>
+                            )}
+                          </div>
+                        </article>
+                      ))}
+                    </div>
+                  </section>
                 ))}
+                {groupedSounds.length === 0 && <div className="empty-preview">No sound folders match.</div>}
               </div>
             </section>
           )}

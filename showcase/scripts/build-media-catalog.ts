@@ -21,6 +21,8 @@ type MetadataMapping = {
   likely_creator?: string;
 };
 
+type SoundOrganization = "user-collection" | "creator-pack" | "source-pattern";
+
 type RawArtPack = {
   folder: string;
   title: string;
@@ -193,6 +195,33 @@ function normalizeSource(source: string): string {
   return labelFromPath(source);
 }
 
+const SOUND_ORGANIZATION_LABELS: Record<SoundOrganization, string> = {
+  "user-collection": "User collections",
+  "creator-pack": "Creator packs",
+  "source-pattern": "Source patterns",
+};
+
+function isSourcePattern(pathPattern: string): boolean {
+  return pathPattern.includes("{") || /\*\.[a-z0-9,{}]+$/i.test(pathPattern);
+}
+
+function soundOrganizationForMapping(entry: MetadataMapping): SoundOrganization {
+  if (isSourcePattern(entry.path_pattern)) return "source-pattern";
+  return "creator-pack";
+}
+
+function sourcePatternTitle(entry: MetadataMapping): string {
+  if (entry.path_pattern.includes("freesound_community")) return "Pixabay Freesound Community pattern";
+  if (entry.path_pattern.includes("{name}-{id}")) return "Pixabay ID file pattern";
+  if (entry.path_pattern.includes("{numeric-id}")) return "Freesound ID file pattern";
+  return `${normalizeSource(entry.source)} file pattern`;
+}
+
+function userCollectionNotes(collectionId: string): string {
+  const title = labelFromPath(collectionId);
+  return `${title} is a user-curated, mixed-source sound-effects folder. Individual files may come from Freesound, Pixabay, or other mapped sources; match files against source mappings before shipping.`;
+}
+
 async function main() {
   const metadata = JSON.parse(await readFile(metadataPath, "utf8")) as Metadata;
   const mediaAssets = JSON.parse(await readFile(mediaAssetsPath, "utf8")) as MediaAssets;
@@ -279,13 +308,27 @@ async function main() {
   const soundCollectionsFromMappings = allowedMappings
     .filter((entry) => entry.path_pattern.startsWith("sounds/") && !entry.path_pattern.startsWith("sounds/music/"))
     .map((entry) => {
+      const organization = soundOrganizationForMapping(entry);
       const collection = {
         id: entry.path_pattern,
-        title: entry.pack_url ? labelFromPath(entry.path_pattern) : labelFromPath(entry.source),
+        title:
+          organization === "source-pattern"
+            ? sourcePatternTitle(entry)
+            : entry.pack_url
+              ? labelFromPath(entry.path_pattern)
+              : labelFromPath(entry.source),
+        organization,
+        organizationLabel: SOUND_ORGANIZATION_LABELS[organization],
         source: normalizeSource(entry.source),
         path: entry.path_pattern,
         license: entry.license ?? (entry.source === "pixabay" ? "Pixabay License" : "Varies"),
-        notes: entry.notes ?? (entry.author ? `Pack by ${entry.author}. Check the source before shipping.` : ""),
+        notes:
+          entry.notes ??
+          (entry.author
+            ? `Creator pack by ${entry.author}. Check the source before shipping.`
+            : organization === "source-pattern"
+              ? "Pattern used to identify source files; not an artist pack."
+              : ""),
         url: entry.pack_url,
       };
       const collectionMetadata = buildSoundCollectionMetadata(collection);
@@ -312,10 +355,12 @@ async function main() {
     const collection = {
       id: collectionId,
       title: labelFromPath(collectionId),
-      source: "Local media library",
+      organization: "user-collection" as const,
+      organizationLabel: SOUND_ORGANIZATION_LABELS["user-collection"],
+      source: "Mixed sources",
       path: collectionId,
       license: "Check source mapping",
-      notes: "Generated from the local sounds folder. Match individual files against sourceMappings before shipping.",
+      notes: userCollectionNotes(collectionId),
       url: undefined,
     };
     const collectionMetadata = buildSoundCollectionMetadata(collection);
@@ -336,7 +381,13 @@ async function main() {
     });
   }
 
-  const soundCollections = [...soundCollectionsById.values()].sort((a, b) => a.id.localeCompare(b.id));
+  const soundOrganizationOrder: SoundOrganization[] = ["user-collection", "creator-pack", "source-pattern"];
+  const soundCollections = [...soundCollectionsById.values()].sort((a, b) => {
+    const organizationDelta =
+      soundOrganizationOrder.indexOf(a.organization) - soundOrganizationOrder.indexOf(b.organization);
+    if (organizationDelta !== 0) return organizationDelta;
+    return a.title.localeCompare(b.title) || a.id.localeCompare(b.id);
+  });
 
   const sourceMappings = allowedMappings.map((entry) => ({
     id: entry.path_pattern,

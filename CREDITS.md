@@ -197,6 +197,17 @@ Common patterns:
 
 See each pack's bundled `License.txt` / `Readme` and `sounds/music/_LICENSE_README.md` for guidance.
 
+## Sound Effects — `sounds/`
+
+Sound-effect folders are organized by intent, not all by artist/source:
+
+- `sounds/kenney/<pack>/` — original Kenney creator packs, CC0.
+- `sounds/movement/<freesound-pack-id>__<author>__<pack>/` — original Freesound creator packs where the folder maps to a Freesound pack page.
+- `sounds/ambience/`, `sounds/animals/`, `sounds/cinematic/`, `sounds/combat/`, `sounds/misc/`, `sounds/movement/`, `sounds/negatives/`, `sounds/player-noises/`, `sounds/positives/` — user-curated mixed-source collections. These are practical folders of selected effects, not artist-generated packs.
+- Source-pattern mappings such as `sounds/**/{numeric-id}__{username}__*` and `sounds/**/*-<id>.mp3` exist for provenance/license lookup only.
+
+For user-curated collections, license each individual file through the source mappings before shipping.
+
 
 ## Vector tilesets — `vector-tilesets/`
 
