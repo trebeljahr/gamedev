@@ -36,5 +36,8 @@
     },
     "tokenId": "c1e7a94b18ea92232307a3d3e33fa4d1",
     "accountId": "236db6b7957ea3079844334856fc162e"
+  },
+  "localDev": {
+    "slug": "gamedev"
   }
 }

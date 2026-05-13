@@ -228,7 +228,7 @@ select:focus-visible {
 }
 .asset-type-nav {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   gap: 1px;
   width: min(1180px, calc(100% - 44px));
   margin: clamp(34px, 6vw, 72px) auto 0;
@@ -552,6 +552,11 @@ select:focus-visible {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 8px;
+}
+.asset-tabs {
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  max-width: 760px;
 }
 .media-tabs.compact {
   padding: 3px;

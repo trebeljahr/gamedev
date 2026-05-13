@@ -110,7 +110,7 @@ type SoundSample = {
   kind: "movement" | "combat" | "ui" | "ambient" | "effect";
 };
 
-async function walk(dir: string, predicate: (name: string) => boolean): Promise<string[]> {
+async function walk(dir: string, predicate: (path: string, name: string) => boolean): Promise<string[]> {
   const out: string[] = [];
   if (!existsSync(dir)) return out;
   const stack = [dir];
@@ -119,7 +119,7 @@ async function walk(dir: string, predicate: (name: string) => boolean): Promise<
     for (const entry of await readdir(d, { withFileTypes: true })) {
       const p = join(d, entry.name);
       if (entry.isDirectory()) stack.push(p);
-      else if (entry.isFile() && predicate(entry.name)) out.push(p);
+      else if (entry.isFile() && predicate(p, entry.name)) out.push(p);
     }
   }
   return out;
@@ -131,6 +131,10 @@ function humanize(s: string): string {
 
 function urlFor(absPath: string, base: string, urlPrefix: string): string {
   return `${urlPrefix}/${relative(base, absPath).split("/").map(encodeURIComponent).join("/")}`;
+}
+
+function isJunkMediaPath(path: string): boolean {
+  return /(^|\/)(__MACOSX|\.DS_Store)(\/|$)/i.test(path) || /(^|\/)\._/.test(path);
 }
 
 function labelFromAssetPath(path: string): string {
@@ -181,7 +185,10 @@ async function writeMediaManifest(): Promise<void> {
 
     for (const packFolder of packDirs) {
       const packDir = join(artRoot, packFolder);
-      const images = await walk(packDir, (name) => /\.(png|jpe?g|webp|gif)$/i.test(name));
+      const images = await walk(
+        packDir,
+        (path, name) => !isJunkMediaPath(path) && /\.(png|jpe?g|webp|gif)$/i.test(name),
+      );
       const relImages = images.map((abs) => relative(ASSETS_ROOT, abs).split("/").join("/"));
       for (const rel of selectRepresentativeArtSamples(relImages, 8)) {
         const kind = inferArtKind(rel);
@@ -198,7 +205,10 @@ async function writeMediaManifest(): Promise<void> {
   }
 
   if (existsSync(soundRoot)) {
-    const sounds = await walk(soundRoot, (name) => /\.(mp3|wav|ogg|m4a|flac|opus)$/i.test(name));
+    const sounds = await walk(
+      soundRoot,
+      (path, name) => !isJunkMediaPath(path) && /\.(mp3|wav|ogg|m4a|flac|opus)$/i.test(name),
+    );
     const byCollection = new Map<string, string[]>();
     for (const abs of sounds) {
       const rel = relative(ASSETS_ROOT, abs).split("/").join("/");

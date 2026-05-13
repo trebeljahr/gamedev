@@ -19,7 +19,7 @@ import { fileURLToPath } from "node:url";
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
 
-const ASSETS_PORT = process.env.ASSETS_PORT ?? "9101";
+const ASSETS_PORT = process.env.ASSETS_PORT ?? "9412";
 const SHOWCASE_PORT = process.env.SHOWCASE_PORT ?? "3679";
 const ASSETS_BASE_URL =
   process.env.NEXT_PUBLIC_ASSETS_BASE_URL ?? `http://localhost:${ASSETS_PORT}`;

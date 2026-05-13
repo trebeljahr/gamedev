@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { SiteHeader } from "@/components/SiteHeader";
 import { manifest } from "@/lib/manifest";
-import { catalog, mediaStats } from "@/lib/media";
+import { catalog, mediaStats, sourceMappings } from "@/lib/media";
 import { CatalogSearch } from "@/components/CatalogSearch";
 
 const LANDING_ASSET_BASE_URL = (
@@ -24,8 +24,15 @@ const featuredArt = catalog.artPacks
 
 export default function HomePage() {
   const totalModels = manifest.packs.reduce((n, p) => n + p.count, 0);
+  const iconPackCount = catalog.artPacks.filter((pack) => pack.theme === "UI" || pack.theme === "Icons & Items").length;
+  const spritePackCount = Math.max(mediaStats.artPackCount - iconPackCount, 0);
+  const textureSourceCount = sourceMappings.filter((mapping) => mapping.medium === "texture").length;
   const totalMediaCollections =
-    mediaStats.soundCollectionCount + mediaStats.musicTrackCount + mediaStats.artPackCount;
+    spritePackCount +
+    iconPackCount +
+    textureSourceCount +
+    mediaStats.soundCollectionCount +
+    mediaStats.musicTrackCount;
 
   return (
     <>
@@ -44,8 +51,8 @@ export default function HomePage() {
             <div className="landing-kicker">GameDev Asset Library</div>
             <h2 id="library-heading">Search the whole asset archive from one place.</h2>
             <p>
-              3D models, pixel art, sound effects, music, licenses, and source links
-              share one catalog language.
+              3D models, 2D sprites, textures, icons, sound effects, and music
+              each get their own entry point.
             </p>
             <div className="library-actions" aria-label="Primary catalog actions">
               <Link className="landing-button primary" href="#3d-packs">
@@ -69,7 +76,7 @@ export default function HomePage() {
         <nav className="asset-type-nav" aria-label="Asset library navigation">
           <section className="asset-type-link primary" aria-labelledby="nav-3d">
             <Link className="asset-type-main" href="#3d-packs">
-              <span>3D</span>
+              <span>3D Models</span>
               <strong id="nav-3d">{totalModels.toLocaleString()} models</strong>
               <small>{manifest.packs.length} packs grouped by creator</small>
             </Link>
@@ -79,30 +86,55 @@ export default function HomePage() {
               <Link href="#creator-quaternius">Quaternius</Link>
             </div>
           </section>
-          <section className="asset-type-link" aria-labelledby="nav-2d">
-            <Link className="asset-type-main" href="/media?view=art">
-              <span>2D</span>
-              <strong id="nav-2d">{mediaStats.artPackCount} art packs</strong>
-              <small>UI, icons, spritesheets, characters, environments, and effects</small>
+          <section className="asset-type-link" aria-labelledby="nav-sprites">
+            <Link className="asset-type-main" href="/media?view=art&type=spritesheets">
+              <span>2D Sprites</span>
+              <strong id="nav-sprites">{spritePackCount} packs</strong>
+              <small>Characters, creatures, tiles, FX, props, and spritesheets</small>
             </Link>
-            <div className="asset-subnav" aria-label="2D categories">
-              <Link href="/media?view=art&type=ui-icons">UI / Icons</Link>
+            <div className="asset-subnav" aria-label="2D sprite categories">
               <Link href="/media?view=art&type=spritesheets&subject=characters&motion=animated">Animated characters</Link>
               <Link href="/media?view=art&type=spritesheets&subject=environments">Environments</Link>
             </div>
           </section>
-          <section className="asset-type-link" aria-labelledby="nav-sounds">
-            <Link className="asset-type-main" href="/media?view=sounds">
-              <span>Sounds</span>
-              <strong id="nav-sounds">
-                {mediaStats.soundCollectionCount} groups · {mediaStats.musicTrackCount} tracks
-              </strong>
-              <small>Music separated from sound effects, with category filters</small>
+          <section className="asset-type-link" aria-labelledby="nav-textures">
+            <Link className="asset-type-main" href="/media?view=textures">
+              <span>Textures</span>
+              <strong id="nav-textures">{textureSourceCount || 1} groups</strong>
+              <small>Material and surface sets kept separate from sprites</small>
             </Link>
-            <div className="asset-subnav" aria-label="Sound categories">
-              <Link href="/media?view=sounds&type=sfx">Sound effects</Link>
-              <Link href="/media?view=sounds&type=music">Music</Link>
-              <Link href="/media?view=sounds&type=all">All audio</Link>
+            <div className="asset-subnav" aria-label="Texture categories">
+              <Link href="/media?view=textures">Texture library</Link>
+            </div>
+          </section>
+          <section className="asset-type-link" aria-labelledby="nav-icons">
+            <Link className="asset-type-main" href="/media?view=art&type=ui-icons">
+              <span>Icons & UI</span>
+              <strong id="nav-icons">{iconPackCount} packs</strong>
+              <small>Icons, controls, buttons, GUI sheets, pickups, and item art</small>
+            </Link>
+            <div className="asset-subnav" aria-label="Icon and UI categories">
+              <Link href="/media?view=art&type=ui-icons">UI / Icons</Link>
+            </div>
+          </section>
+          <section className="asset-type-link" aria-labelledby="nav-sfx">
+            <Link className="asset-type-main" href="/media?view=sounds&type=sfx">
+              <span>Sound Effects</span>
+              <strong id="nav-sfx">{mediaStats.soundCollectionCount} groups</strong>
+              <small>Combat, movement, ambience, UI feedback, creature, and misc SFX</small>
+            </Link>
+            <div className="asset-subnav" aria-label="Sound effect categories">
+              <Link href="/media?view=sounds&type=sfx">Browse SFX</Link>
+            </div>
+          </section>
+          <section className="asset-type-link" aria-labelledby="nav-music">
+            <Link className="asset-type-main" href="/media?view=sounds&type=music">
+              <span>Music</span>
+              <strong id="nav-music">{mediaStats.musicTrackCount} tracks</strong>
+              <small>Playable loops, ambient beds, and credited background music</small>
+            </Link>
+            <div className="asset-subnav" aria-label="Music categories">
+              <Link href="/media?view=sounds&type=music">Play music</Link>
             </div>
           </section>
         </nav>

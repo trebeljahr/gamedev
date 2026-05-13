@@ -1,5 +1,5 @@
 import { MediaExplorer } from "@/components/MediaExplorer";
-import { artPacks, musicTracks, soundCollections } from "@/lib/media";
+import { artPacks, musicTracks, soundCollections, sourceMappings } from "@/lib/media";
 
 type MediaPageProps = {
   searchParams?: Promise<{
@@ -16,7 +16,9 @@ function firstParam(value: string | string[] | undefined) {
 
 function mediaViewFromParam(value: string | string[] | undefined) {
   const view = firstParam(value);
-  return view === "art" ? "art" : "sounds";
+  if (view === "art") return "art";
+  if (view === "textures" || view === "sources") return "sources";
+  return "sounds";
 }
 
 export default async function MediaPage({ searchParams }: MediaPageProps) {
@@ -31,6 +33,7 @@ export default async function MediaPage({ searchParams }: MediaPageProps) {
       soundCollections={soundCollections}
       musicTracks={musicTracks}
       artPacks={artPacks}
+      sourceMappings={sourceMappings}
       initialView={view}
       initialArtType={type === "ui-icons" || type === "spritesheets" ? type : "all"}
       initialSpriteSubject={

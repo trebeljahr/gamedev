@@ -1,7 +1,7 @@
 "use client";
 
 import { type CSSProperties, useEffect, useMemo, useRef, useState } from "react";
-import type { ArtPack, ArtSample, MusicTrack, SoundCollection, SoundSample } from "@/lib/media";
+import type { ArtPack, ArtSample, MusicTrack, SoundCollection, SoundSample, SourceMapping } from "@/lib/media";
 import { artCreators } from "@/lib/media";
 import { isLikelySpriteSheetPath, isLikelyTextureAtlasPath } from "@/lib/media-inference";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -10,6 +10,7 @@ type MediaExplorerProps = {
   soundCollections: SoundCollection[];
   musicTracks: MusicTrack[];
   artPacks: ArtPack[];
+  sourceMappings: SourceMapping[];
   initialView?: View;
   initialArtType?: ArtTypeFilter;
   initialSpriteSubject?: SpriteSubjectFilter;
@@ -17,7 +18,7 @@ type MediaExplorerProps = {
   initialSoundType?: SoundTypeFilter;
 };
 
-type View = "sounds" | "art";
+type View = "sounds" | "art" | "sources";
 type GroupMode = "type" | "creator";
 type ArtTypeFilter = "all" | "ui-icons" | "spritesheets";
 type SpriteSubjectFilter = "all" | "characters" | "environments" | "effects-items" | "other";
@@ -1077,6 +1078,7 @@ export function MediaExplorer({
   soundCollections,
   musicTracks,
   artPacks,
+  sourceMappings,
   initialView = "sounds",
   initialArtType = "all",
   initialSpriteSubject = "all",
@@ -1170,6 +1172,16 @@ export function MediaExplorer({
     }
   }, [filteredSounds, selectedSoundId]);
 
+  const textureMappings = useMemo(
+    () => sourceMappings.filter((mapping) => mapping.medium === "texture" || mapping.category === "texture"),
+    [sourceMappings],
+  );
+
+  const filteredTextureMappings = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    return textureMappings.filter((mapping) => searchMatches(mapping.searchText, q));
+  }, [query, textureMappings]);
+
   const selectedArt = filteredArt.find((pack) => pack.folder === selectedArtFolder) ?? filteredArt[0] ?? artPacks[0];
   const selectedSound = filteredSounds.find((item) => item.id === selectedSoundId) ?? filteredSounds[0] ?? soundCollections[0];
 
@@ -1178,7 +1190,7 @@ export function MediaExplorer({
       <SiteHeader
         meta={
           <>
-            {artPacks.length} 2D packs · {soundCollections.length} sound effect groups · {musicTracks.length} music tracks
+            {artPacks.length} 2D packs · {textureMappings.length} texture groups · {soundCollections.length} SFX groups · {musicTracks.length} music tracks
           </>
         }
       />
@@ -1186,29 +1198,68 @@ export function MediaExplorer({
       <section className="media-hero">
         <div>
           <div className="landing-kicker">GameDev Asset Library</div>
-          <h2>Browse 2D art and sounds under the same asset taxonomy as the 3D library.</h2>
+          <h2>Browse the library by asset type: 3D, sprites, textures, icons, sound effects, and music.</h2>
         </div>
-        <div className="media-tabs" role="tablist" aria-label="Media type">
+        <div className="media-tabs asset-tabs" role="tablist" aria-label="Asset type">
           <a href="/" role="tab" aria-selected="false">
-            3D
+            3D Models
           </a>
           <button
             type="button"
             role="tab"
-            aria-selected={view === "art"}
-            className={view === "art" ? "active" : ""}
-            onClick={() => setView("art")}
+            aria-selected={view === "art" && artTypeFilter === "spritesheets"}
+            className={view === "art" && artTypeFilter === "spritesheets" ? "active" : ""}
+            onClick={() => {
+              setView("art");
+              setArtTypeFilter("spritesheets");
+            }}
           >
-            2D
+            2D Sprites
           </button>
           <button
             type="button"
             role="tab"
-            aria-selected={view === "sounds"}
-            className={view === "sounds" ? "active" : ""}
-            onClick={() => setView("sounds")}
+            aria-selected={view === "sources"}
+            className={view === "sources" ? "active" : ""}
+            onClick={() => setView("sources")}
           >
-            Sounds
+            Textures
+          </button>
+          <button
+            type="button"
+            role="tab"
+            aria-selected={view === "art" && artTypeFilter === "ui-icons"}
+            className={view === "art" && artTypeFilter === "ui-icons" ? "active" : ""}
+            onClick={() => {
+              setView("art");
+              setArtTypeFilter("ui-icons");
+            }}
+          >
+            Icons & UI
+          </button>
+          <button
+            type="button"
+            role="tab"
+            aria-selected={view === "sounds" && soundTypeFilter === "sfx"}
+            className={view === "sounds" && soundTypeFilter === "sfx" ? "active" : ""}
+            onClick={() => {
+              setView("sounds");
+              setSoundTypeFilter("sfx");
+            }}
+          >
+            Sound Effects
+          </button>
+          <button
+            type="button"
+            role="tab"
+            aria-selected={view === "sounds" && soundTypeFilter === "music"}
+            className={view === "sounds" && soundTypeFilter === "music" ? "active" : ""}
+            onClick={() => {
+              setView("sounds");
+              setSoundTypeFilter("music");
+            }}
+          >
+            Music
           </button>
         </div>
       </section>
@@ -1219,12 +1270,16 @@ export function MediaExplorer({
           placeholder={
             view === "sounds"
               ? "Search sounds, music, moods, folders, licenses"
-              : "Search packs, creators, themes, use cases"
+              : view === "sources"
+                ? "Search texture sets, materials, sources"
+                : "Search packs, creators, themes, use cases"
           }
           value={query}
           onChange={(event) => setQuery(event.target.value)}
         />
-        {view === "sounds" ? (
+        {view === "sources" ? (
+          <span className="catalog-result-count">Textures are separate from sprites and 3D model packs.</span>
+        ) : view === "sounds" ? (
           <>
             <select value={soundTypeFilter} onChange={(event) => setSoundTypeFilter(event.target.value as SoundTypeFilter)}>
               <option value="sfx">Sound effects</option>
@@ -1322,7 +1377,35 @@ export function MediaExplorer({
         )}
       </section>
 
-      {view === "sounds" ? (
+      {view === "sources" ? (
+        <div className="media-single-column">
+          <section className="media-panel">
+            <div className="panel-heading">
+              <h3>Textures</h3>
+              <span>{filteredTextureMappings.length} groups</span>
+            </div>
+            <div className="media-list">
+              {filteredTextureMappings.map((mapping) => (
+                <article className="media-row" key={mapping.id}>
+                  <div>
+                    <div className="media-title">{mapping.title}</div>
+                    <div className="media-detail">{mapping.source} · {mapping.pathPattern}</div>
+                    <p>{mapping.description}</p>
+                  </div>
+                  <div className="media-actions">
+                    {mapping.license && <span>{mapping.license}</span>}
+                    {mapping.url && (
+                      <a href={mapping.url} target="_blank" rel="noreferrer">
+                        source
+                      </a>
+                    )}
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+        </div>
+      ) : view === "sounds" ? (
         <div className={soundTypeFilter === "music" ? "media-single-column" : "media-columns"}>
           {soundTypeFilter !== "music" && (
             <section className="media-panel">
