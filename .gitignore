@@ -92,6 +92,7 @@
 
 # --- Web/JS tooling --------------------------------------------------------
 node_modules/
+.pnpm-store/
 .next/
 out/
 dist/
