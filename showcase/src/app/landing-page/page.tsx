@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import {
+  LandingModelBackdrop,
+  type LandingModelPreviewItem,
+} from "@/components/LandingModelBackdrop";
 import { manifest } from "@/lib/manifest";
 import { catalog, mediaStats } from "@/lib/media";
 
@@ -28,6 +32,54 @@ const featuredArt = catalog.artPacks
     theme: pack.theme,
     src: landingAssetUrl(pack.samples[0].src),
   }));
+
+const modelPicks = [
+  {
+    packId: "quaternius/spaceships-by-quaternius",
+    name: "Spaceship3",
+    variant: "ship",
+    position: [0.6, 0.92, -0.3],
+    rotation: [-0.1, -0.75, 0.1],
+    scale: 0.22,
+  },
+  {
+    packId: "kaykit/medieval-builder-pack",
+    name: "castle",
+    variant: "castle",
+    position: [-1.5, -0.68, -0.2],
+    rotation: [0, 0.52, 0],
+    scale: 0.86,
+  },
+  {
+    packId: "quaternius/animated-robot-oct-2018",
+    name: "Robot",
+    variant: "robot",
+    position: [1.78, -0.72, 0.55],
+    rotation: [0, -0.35, 0],
+    scale: 0.32,
+  },
+] satisfies Array<{
+  packId: string;
+  name: string;
+  variant: LandingModelPreviewItem["variant"];
+  position: [number, number, number];
+  rotation: [number, number, number];
+  scale: number;
+}>;
+
+const featuredModels: LandingModelPreviewItem[] = modelPicks.flatMap((pick) => {
+  const pack = manifest.packs.find((item) => item.id === pick.packId);
+  const model = pack?.models.find((item) => item.name === pick.name);
+  if (!model) return [];
+
+  return {
+    label: model.label,
+    variant: pick.variant,
+    position: pick.position,
+    rotation: pick.rotation,
+    scale: pick.scale,
+  };
+});
 
 const workflow = [
   {
@@ -74,6 +126,7 @@ export default function LandingPage() {
       <section className="landing-hero" aria-labelledby="landing-title">
         <div className="landing-hero-shade" />
         <div className="landing-visual" aria-hidden="true">
+          <LandingModelBackdrop models={featuredModels} />
           <div className="landing-image-field">
             {featuredArt.map((item, index) => (
               <figure key={`${item.title}-${index}`} className={`landing-art art-${index + 1}`}>
@@ -82,12 +135,12 @@ export default function LandingPage() {
               </figure>
             ))}
           </div>
-          <div className="landing-orbit">
-            <span>3D</span>
-            <span>2D</span>
-            <span>SFX</span>
-          </div>
         </div>
+        <nav className="landing-orbit" aria-label="Asset shortcuts">
+          <Link href="/#3d-packs">3D</Link>
+          <Link href="/media?view=art">2D</Link>
+          <Link href="/media?view=sounds">Sounds</Link>
+        </nav>
 
         <div className="landing-hero-copy">
           <Link className="landing-brand" href="/">

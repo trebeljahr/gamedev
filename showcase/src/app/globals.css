@@ -2086,14 +2086,29 @@ select:focus-visible {
   inset: 0;
   z-index: -2;
   overflow: hidden;
+  pointer-events: none;
+}
+.landing-model-backdrop {
+  position: absolute;
+  inset: -4% -4% 18% 43%;
+  z-index: 1;
+  opacity: 0.95;
+  filter: drop-shadow(0 30px 70px rgba(0,0,0,0.5));
+  animation: landing-model-float 16s ease-in-out infinite alternate;
+}
+.landing-model-backdrop canvas {
+  width: 100%;
+  height: 100%;
 }
 .landing-image-field {
   position: absolute;
   inset: -7% -6% -8% 42%;
+  z-index: 0;
   display: grid;
   grid-template-columns: repeat(4, minmax(120px, 1fr));
   grid-auto-rows: minmax(120px, 1fr);
   gap: clamp(10px, 1.5vw, 18px);
+  opacity: 0.58;
   transform: rotate(-7deg);
   animation: landing-drift 18s ease-in-out infinite alternate;
 }
@@ -2150,16 +2165,17 @@ select:focus-visible {
 }
 .landing-orbit {
   position: absolute;
+  z-index: 3;
   right: clamp(18px, 4vw, 64px);
   top: clamp(20px, 4vw, 54px);
   display: flex;
   gap: 8px;
   animation: landing-enter 700ms ease both 360ms;
 }
-.landing-orbit span {
+.landing-orbit a {
   display: inline-grid;
   place-items: center;
-  min-width: 46px;
+  min-width: 48px;
   min-height: 32px;
   padding: 0 11px;
   color: #11100b;
@@ -2168,6 +2184,12 @@ select:focus-visible {
   font-size: 12px;
   font-weight: 800;
   box-shadow: 0 10px 28px rgba(0,0,0,0.24);
+  transition: transform 0.18s ease, background 0.18s ease;
+}
+.landing-orbit a:hover {
+  color: #11100b;
+  background: #ffe57d;
+  transform: translateY(-2px);
 }
 .landing-hero-copy {
   width: min(760px, 100%);
@@ -2515,6 +2537,14 @@ select:focus-visible {
     transform: rotate(-7deg) translate3d(-22px, 18px, 0);
   }
 }
+@keyframes landing-model-float {
+  from {
+    transform: translate3d(0, -8px, 0) scale(1);
+  }
+  to {
+    transform: translate3d(-18px, 14px, 0) scale(1.03);
+  }
+}
 @keyframes library-drift {
   from {
     transform: rotate(-5deg) translate3d(0, -10px, 0);
@@ -2541,6 +2571,7 @@ select:focus-visible {
   .library-hero-copy,
   .library-visual,
   .landing-image-field,
+  .landing-model-backdrop,
   .landing-orbit,
   .landing-hero-copy,
   .landing-stats,
@@ -2548,6 +2579,7 @@ select:focus-visible {
     animation: none;
   }
   .landing-button,
+  .landing-orbit a,
   .landing-coverage div,
   .landing-credit-links a {
     transition: none;
@@ -2753,11 +2785,15 @@ select:focus-visible {
       linear-gradient(180deg, rgba(11,11,13,0.58) 0%, rgba(11,11,13,0.96) 48%, rgba(11,11,13,1) 100%);
   }
   .landing-image-field {
-    inset: -9% -44% 42% -20%;
+    inset: -8% -46% 44% -28%;
     grid-template-columns: repeat(4, minmax(86px, 1fr));
     grid-auto-rows: minmax(86px, 1fr);
     gap: 8px;
-    opacity: 0.72;
+    opacity: 0.4;
+  }
+  .landing-model-backdrop {
+    inset: 4% -54% 45% 2%;
+    opacity: 0.82;
   }
   .landing-art figcaption {
     display: none;
@@ -2767,8 +2803,8 @@ select:focus-visible {
     right: auto;
     top: 18px;
   }
-  .landing-orbit span {
-    min-width: 38px;
+  .landing-orbit a {
+    min-width: 42px;
     min-height: 28px;
     padding: 0 8px;
     font-size: 11px;
