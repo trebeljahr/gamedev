@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { exactLicenseUrlFor, licenseForVendor } from "@/lib/license";
 import { manifest, findPack } from "@/lib/manifest";
 import { PackViewer } from "@/components/PackViewer";
 import { pageMetadata, routePath } from "@/lib/seo";
+import { findModelRouteRef, modelHref } from "@/lib/model-routes";
 
 type PackPageProps = {
   params: Promise<{ vendor: string; pack: string }>;
@@ -63,6 +64,10 @@ export default async function PackPage({ params, searchParams }: PackPageProps) 
   const model = Array.isArray(query?.model) ? query?.model[0] : query?.model;
   const data = findPack(vendor, pack);
   if (!data) notFound();
-  if (model && !data.models.some((item) => item.file === model || item.name === model)) notFound();
-  return <PackViewer pack={data} initialModelFile={model} />;
+  if (model) {
+    const ref = findModelRouteRef(data, model);
+    if (!ref) notFound();
+    redirect(modelHref(data, ref));
+  }
+  return <PackViewer pack={data} />;
 }

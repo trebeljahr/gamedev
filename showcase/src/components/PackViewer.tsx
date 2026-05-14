@@ -9,6 +9,7 @@ import { PackDownloadButton } from "@/components/PackDownloadButton";
 import { ModelDownloadLinks } from "@/components/ModelDownloadLinks";
 import { licenseForVendor } from "@/lib/license";
 import { assetUrl, type Pack } from "@/lib/manifest";
+import { findModelRouteRef, modelHref, modelRouteRefsForPack, type ModelRouteRef } from "@/lib/model-routes";
 import { uniqueTags } from "@/lib/tags";
 import { useRouter } from "next/navigation";
 
@@ -22,42 +23,31 @@ const Viewer = dynamic(() => import("./Viewer").then((m) => m.Viewer), {
   loading: () => null,
 });
 
-type PackModel = Pack["models"][number];
-
 const MODEL_LIST_PAGE_SIZE = 80;
-
-function modelIndexFor(pack: Pack, initialModelFile: string): number | null {
-  const index = pack.models.findIndex((item) => item.file === initialModelFile || item.name === initialModelFile);
-  return index >= 0 ? index : null;
-}
-
-function modelHref(pack: Pack, model: PackModel): string {
-  return `/${pack.vendor}/${pack.pack}?model=${encodeURIComponent(model.file)}`;
-}
 
 function formatModelSize(size: Pack["models"][number]["size"]): string {
   const [width, height, depth] = size;
   return `${width.toFixed(1)} x ${height.toFixed(1)} x ${depth.toFixed(1)}`;
 }
 
-export function PackViewer({ pack, initialModelFile }: { pack: Pack; initialModelFile?: string }) {
-  const assetIndex = initialModelFile ? modelIndexFor(pack, initialModelFile) : null;
-  if (assetIndex !== null) return <SingleAssetViewer pack={pack} index={assetIndex} />;
-  return <PackGroupViewer pack={pack} />;
+export function PackViewer({ pack, initialModelSlug }: { pack: Pack; initialModelSlug?: string }) {
+  const modelRefs = useMemo(() => modelRouteRefsForPack(pack), [pack]);
+  const assetRef = initialModelSlug ? findModelRouteRef(pack, initialModelSlug) : undefined;
+  if (assetRef) return <SingleAssetViewer pack={pack} modelRefs={modelRefs} activeRef={assetRef} />;
+  return <PackGroupViewer pack={pack} modelRefs={modelRefs} />;
 }
 
-function PackGroupViewer({ pack }: { pack: Pack }) {
+function PackGroupViewer({ pack, modelRefs }: { pack: Pack; modelRefs: ModelRouteRef[] }) {
   const router = useRouter();
   const [query, setQuery] = useState("");
   const credit = licenseForVendor(pack.vendor);
   const license = pack.license || credit.license;
   const normalizedQuery = query.trim().toLowerCase();
   const visibleModels = useMemo(() => {
-    const models = pack.models.map((item, itemIndex) => ({ item, itemIndex }));
-    if (!normalizedQuery) return models;
+    if (!normalizedQuery) return modelRefs;
     const terms = normalizedQuery.split(/\s+/).filter(Boolean);
-    return models.filter(({ item }) => terms.every((term) => item.searchText.includes(term)));
-  }, [normalizedQuery, pack.models]);
+    return modelRefs.filter((ref) => terms.every((term) => ref.model.searchText.includes(term)));
+  }, [modelRefs, normalizedQuery]);
   const modelList = useInfiniteList({
     total: visibleModels.length,
     pageSize: MODEL_LIST_PAGE_SIZE,
@@ -67,10 +57,10 @@ function PackGroupViewer({ pack }: { pack: Pack }) {
 
   const openModel = useCallback(
     (index: number) => {
-      const model = pack.models[index];
-      if (model) router.push(modelHref(pack, model));
+      const ref = modelRefs[index];
+      if (ref) router.push(modelHref(pack, ref));
     },
-    [pack, router],
+    [modelRefs, pack, router],
   );
 
   return (
@@ -120,9 +110,9 @@ function PackGroupViewer({ pack }: { pack: Pack }) {
           placeholder="Search assets in this pack"
         />
         <ul className="model-list">
-          {listedModels.map(({ item: m }) => (
-            <li key={m.file}>
-              <Link href={modelHref(pack, m)}>{m.title}</Link>
+          {listedModels.map((ref) => (
+            <li key={ref.model.file}>
+              <Link href={modelHref(pack, ref)}>{ref.model.title}</Link>
             </li>
           ))}
           {visibleModels.length === 0 && <li className="empty-model-list">No model matches.</li>}
@@ -155,21 +145,29 @@ function PackGroupViewer({ pack }: { pack: Pack }) {
   );
 }
 
-function SingleAssetViewer({ pack, index }: { pack: Pack; index: number }) {
+function SingleAssetViewer({
+  pack,
+  modelRefs,
+  activeRef,
+}: {
+  pack: Pack;
+  modelRefs: ModelRouteRef[];
+  activeRef: ModelRouteRef;
+}) {
   const [query, setQuery] = useState("");
-  const model = pack.models[index];
-  const prevModel = pack.models[(index - 1 + pack.models.length) % pack.models.length];
-  const nextModel = pack.models[(index + 1) % pack.models.length];
+  const index = activeRef.index;
+  const model = activeRef.model;
+  const prevModel = modelRefs[(index - 1 + modelRefs.length) % modelRefs.length];
+  const nextModel = modelRefs[(index + 1) % modelRefs.length];
   const credit = licenseForVendor(pack.vendor);
   const license = pack.license || credit.license;
   const normalizedQuery = query.trim().toLowerCase();
   const visibleModels = useMemo(() => {
-    const models = pack.models.map((item, itemIndex) => ({ item, itemIndex }));
-    if (!normalizedQuery) return models;
+    if (!normalizedQuery) return modelRefs;
     const terms = normalizedQuery.split(/\s+/).filter(Boolean);
-    return models.filter(({ item }) => terms.every((term) => item.searchText.includes(term)));
-  }, [normalizedQuery, pack.models]);
-  const activeModelPosition = visibleModels.findIndex(({ itemIndex }) => itemIndex === index);
+    return modelRefs.filter((ref) => terms.every((term) => ref.model.searchText.includes(term)));
+  }, [modelRefs, normalizedQuery]);
+  const activeModelPosition = visibleModels.findIndex((ref) => ref.index === index);
   const singleListInitialLimit =
     activeModelPosition >= 0 ? Math.max(MODEL_LIST_PAGE_SIZE, activeModelPosition + 1) : MODEL_LIST_PAGE_SIZE;
   const modelList = useInfiniteList({
@@ -184,7 +182,7 @@ function SingleAssetViewer({ pack, index }: { pack: Pack; index: number }) {
     <div className="viewer-shell">
       <aside>
         <Link className="back" href={`/${pack.vendor}/${pack.pack}`}>
-          ← back to group
+          ← pack grid
         </Link>
         <Link className="vendor-tag vendor-link" href={`/${pack.vendor}`}>
           {credit.vendorLabel}
@@ -229,6 +227,10 @@ function SingleAssetViewer({ pack, index }: { pack: Pack; index: number }) {
             <span key={tag}>{tag}</span>
           ))}
         </div>
+        <div className="pack-view-actions">
+          <Link href={`/${pack.vendor}/${pack.pack}`}>View pack grid</Link>
+          <PackDownloadButton pack={pack} />
+        </div>
         <ModelDownloadLinks model={model} className="asset-focus-downloads" compact />
         <input
           className="model-search"
@@ -238,10 +240,10 @@ function SingleAssetViewer({ pack, index }: { pack: Pack; index: number }) {
           placeholder="Search assets in this pack"
         />
         <ul className="model-list">
-          {listedModels.map(({ item: m, itemIndex: i }) => (
-            <li key={m.file}>
-              <Link className={i === index ? "active" : ""} href={modelHref(pack, m)}>
-                {m.title}
+          {listedModels.map((ref) => (
+            <li key={ref.model.file}>
+              <Link className={ref.index === index ? "active" : ""} href={modelHref(pack, ref)}>
+                {ref.model.title}
               </Link>
             </li>
           ))}

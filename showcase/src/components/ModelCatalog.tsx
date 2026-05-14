@@ -9,6 +9,7 @@ import { ModelDownloadLinks } from "@/components/ModelDownloadLinks";
 import { SiteHeader } from "@/components/SiteHeader";
 import { licenseForVendor, type VendorLicense } from "@/lib/license";
 import type { Manifest, Model, Pack } from "@/lib/manifest";
+import { modelHref } from "@/lib/model-routes";
 import { uniqueTags } from "@/lib/tags";
 
 const PackCardPreview = dynamic(
@@ -50,7 +51,7 @@ function niceVendor(vendor: string): string {
 }
 
 function modelViewerHref(entry: ModelEntry): string {
-  return `/${entry.pack.vendor}/${entry.pack.pack}?model=${encodeURIComponent(entry.model.file)}`;
+  return modelHref(entry.pack, entry.model);
 }
 
 function visibleModelTags(model: Model): string[] {
