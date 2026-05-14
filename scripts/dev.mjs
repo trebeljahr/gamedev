@@ -2,8 +2,9 @@
 /**
  * One-stop dev runner. Spawns the local asset HTTP server on
  * :9101 in the background and runs the showcase Next dev server
- * in the foreground (which has its own predev step that rebuilds
- * the manifest). Ctrl+C tears both down.
+ * in the foreground. The generated catalog JSON is committed and
+ * refreshed manually via `pnpm manifest`; dev startup only checks
+ * that those files exist. Ctrl+C tears both down.
  *
  * Why a separate process for assets instead of Next's /public:
  *   - Mirrors the prod URL shape (R2 custom domain at

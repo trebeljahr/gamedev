@@ -7,6 +7,8 @@
     "build": "pnpm --filter 3d-assets-showcase build",
     "start": "pnpm --filter 3d-assets-showcase start",
     "lint": "pnpm --filter 3d-assets-showcase lint",
+    "catalog:check": "pnpm --filter 3d-assets-showcase catalog:check",
+    "catalog:refresh": "pnpm --filter 3d-assets-showcase catalog:refresh",
     "manifest": "pnpm --filter 3d-assets-showcase manifest",
     "media:assets": "pnpm --filter 3d-assets-showcase media:assets",
     "media:catalog": "pnpm --filter 3d-assets-showcase media:catalog",

@@ -104,12 +104,12 @@ build/
 .cache/
 *.tsbuildinfo
 
-# Bbox cache rebuilt on every `pnpm manifest`. Keyed by file mtime, so
+# Bbox cache rebuilt by `pnpm manifest`. Keyed by file mtime, so
 # committing it just causes merge churn.
 .manifest-bbox-cache.json
-# showcase/src/lib/manifest.json is checked in — see build-manifest.ts
-# for the rationale (CI Docker build has no access to assets/ so the
-# committed manifest is what the deployed bundle ships with).
+# Generated catalog JSON under showcase/src/lib is checked in. CI and
+# fresh checkouts do not have assets/, so committed catalogs are the
+# build input until a developer refreshes them manually.
 
 # --- OS / editor -----------------------------------------------------------
 .DS_Store

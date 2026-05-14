@@ -119,6 +119,24 @@ hatchkit dev plugin:
 `HATCHKIT_LOCAL_DEV=0` in the environment disables the plugin entirely;
 the dev server falls back to its default banner.
 
+## Generated catalogs
+
+`pnpm dev` and `pnpm build` use the generated JSON catalogs already
+checked in under `showcase/src/lib/`. They only verify the files exist;
+they do not scan `assets/` or rebuild audio/model/media metadata on
+startup.
+
+Refresh catalogs manually when source assets or catalog metadata change:
+
+```
+pnpm manifest       # 3D model manifest + derived catalog data
+pnpm media:catalog  # 2D/sound/music catalog + audio analysis
+```
+
+Commit the changed generated JSON with the code or asset metadata change.
+Fresh checkouts and CI builds do not have the gitignored `assets/`
+payload, so the committed catalogs are the build input.
+
 ## Cleanup
 
 If you tear down this project:
