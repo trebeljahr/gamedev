@@ -182,3 +182,7 @@ export function selectRepresentativeArtSamples(paths: string[], limit: number): 
 
   return selected;
 }
+
+export function selectDisplayArtSamples(paths: string[]): string[] {
+  return [...paths].sort((a, b) => scoreArtSample(b) - scoreArtSample(a) || a.localeCompare(b));
+}

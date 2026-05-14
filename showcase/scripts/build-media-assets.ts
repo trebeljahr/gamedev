@@ -1,7 +1,7 @@
 import { existsSync } from "node:fs";
 import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
 import { dirname, join, relative } from "node:path";
-import { inferArtKind, isAnimatedArtPath, selectRepresentativeArtSamples } from "../src/lib/media-inference";
+import { inferArtKind, isAnimatedArtPath, selectDisplayArtSamples } from "../src/lib/media-inference";
 
 const SHOWCASE_DIR = join(__dirname, "..");
 const REPO_ROOT = join(SHOWCASE_DIR, "..");
@@ -275,7 +275,7 @@ async function main() {
         (path, name) => !isJunkPath(path) && /\.(png|jpe?g|webp|gif)$/i.test(name),
       );
       const relImages = images.map((abs) => relative(ASSETS_ROOT, abs).split("/").join("/"));
-      for (const rel of selectRepresentativeArtSamples(relImages, 8)) {
+      for (const rel of selectDisplayArtSamples(relImages)) {
         const kind = inferArtKind(rel);
         artSamples.push({
           packFolder,

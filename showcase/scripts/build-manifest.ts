@@ -27,7 +27,7 @@ import {
   cleanAssetTitle,
   type ModelCategory,
 } from "../src/lib/catalog-metadata";
-import { inferArtKind, isAnimatedArtPath, selectRepresentativeArtSamples } from "../src/lib/media-inference";
+import { inferArtKind, isAnimatedArtPath, selectDisplayArtSamples } from "../src/lib/media-inference";
 import { buildPackPreviewMetadata } from "../src/lib/preview-model";
 import type { PackPreview } from "../src/lib/manifest";
 
@@ -239,7 +239,7 @@ async function writeMediaManifest(): Promise<void> {
         (path, name) => !isJunkMediaPath(path) && /\.(png|jpe?g|webp|gif)$/i.test(name),
       );
       const relImages = images.map((abs) => relative(ASSETS_ROOT, abs).split("/").join("/"));
-      for (const rel of selectRepresentativeArtSamples(relImages, 8)) {
+      for (const rel of selectDisplayArtSamples(relImages)) {
         const kind = inferArtKind(rel);
         artSamples.push({
           packFolder,

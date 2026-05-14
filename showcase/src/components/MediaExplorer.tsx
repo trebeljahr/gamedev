@@ -8,8 +8,10 @@ import { InfiniteListSentinel, useInfiniteList } from "@/components/useInfiniteL
 import type { ArtPack, ArtSample, AudioAnalysis, MusicTrack, SoundCollection, SoundSample, SourceMapping } from "@/lib/media";
 import { artCreators } from "@/lib/media";
 import {
+  artDesignKey,
   isLikelyHybridSpriteAtlasPath,
   isLikelyMarketingPreviewPath,
+  isLikelySeparateFramePath,
   isLikelySpriteSheetPath,
   isLikelyTextureAtlasPath,
 } from "@/lib/media-inference";
@@ -57,10 +59,29 @@ type LoadedSpriteImage = {
   imageData: ImageData | null;
   bgSample: ReturnType<typeof sampleImageBackground> | null;
 };
+type ArtSampleGroup = {
+  id: string;
+  label: string;
+  layout: string;
+  primary: ArtSample;
+  samples: ArtSample[];
+  sequence: boolean;
+};
+type LoadedSequenceFrame = {
+  sample: ArtSample;
+  image: HTMLImageElement;
+  source: SpriteRect;
+};
 
 function isUsableSpriteGrid(grid: SpriteGrid): boolean {
   if (grid.mode === "atlas" || grid.mode === "static") return false;
   if (grid.frames) return grid.frames.length > 1 && grid.confidence >= 0.5;
+  return grid.cols * grid.rows > 1 && grid.confidence >= 0.45;
+}
+
+function isUnwrappableSpriteGrid(grid: SpriteGrid): boolean {
+  if (grid.mode === "static") return false;
+  if (grid.frames) return grid.frames.length > 1 && grid.confidence >= 0.45;
   return grid.cols * grid.rows > 1 && grid.confidence >= 0.45;
 }
 
@@ -156,6 +177,104 @@ function sampleForPreview(pack: ArtPack): ArtSample | undefined {
     samples.find((sample) => sample.kind === "tile" || sample.kind === "effect") ??
     samples[0]
   );
+}
+
+function samplePathParent(path: string): string {
+  return path.split("/").slice(0, -1).join("/");
+}
+
+function sampleFrameNumber(sample: ArtSample): number | null {
+  const match = basenameWithoutExtension(sample.path).match(/(?:^|[^0-9])(\d{1,5})$/);
+  return match ? Number(match[1]) : null;
+}
+
+function humanizePathSegment(value: string): string {
+  return value
+    .replace(/([a-z])([A-Z])/g, "$1 $2")
+    .replace(/[-_]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .replace(/\b\w/g, (char) => char.toUpperCase());
+}
+
+function sampleFileName(path: string): string {
+  return path.split("/").pop() ?? path;
+}
+
+function sortSamplesByFrame(a: ArtSample, b: ArtSample): number {
+  const parent = samplePathParent(a.path).localeCompare(samplePathParent(b.path));
+  if (parent !== 0) return parent;
+  const aFrame = sampleFrameNumber(a);
+  const bFrame = sampleFrameNumber(b);
+  if (aFrame !== null && bFrame !== null && aFrame !== bFrame) return aFrame - bFrame;
+  return a.path.localeCompare(b.path);
+}
+
+function sampleLayoutLabel(sample: ArtSample, group?: ArtSampleGroup): string {
+  if (group?.sequence) return `${group.samples.length} frame files`;
+  if (isLikelyHybridSpriteAtlasPath(sample.path)) return "hybrid atlas";
+  if (isLikelyTextureAtlasPath(sample.path)) return "atlas / tiles";
+  if (sample.animated || isLikelySpriteSheetPath(sample.path)) return sample.path.toLowerCase().endsWith(".gif") ? "gif animation" : "sprite sheet";
+  return sample.kind;
+}
+
+function sequenceLabel(samples: ArtSample[]): string {
+  const sorted = [...samples].sort(sortSamplesByFrame);
+  const first = sorted[0];
+  const labelBase = first.label.replace(/\s*(?:frame\s*)?\d{1,5}$/i, "").trim();
+  if (labelBase && !/^\d+$/.test(labelBase)) return labelBase;
+  const folder = samplePathParent(first.path).split("/").pop() ?? first.label;
+  const numericFrames = sorted.map(sampleFrameNumber).filter((value): value is number => value !== null);
+  const range =
+    numericFrames.length === sorted.length
+      ? ` ${Math.min(...numericFrames)}-${Math.max(...numericFrames)}`
+      : "";
+  return `${humanizePathSegment(folder) || "Frame"}${range}`;
+}
+
+function artSampleGroups(samples: ArtSample[]): ArtSampleGroup[] {
+  const designBuckets = new Map<string, ArtSample[]>();
+  for (const sample of samples) {
+    if (!isLikelySeparateFramePath(sample.path)) continue;
+    const key = artDesignKey(sample.path);
+    const list = designBuckets.get(key) ?? [];
+    list.push(sample);
+    designBuckets.set(key, list);
+  }
+
+  const designKeys = new Map<string, string>();
+  for (const [key, list] of designBuckets) {
+    if (list.length < 2) continue;
+    for (const sample of list) designKeys.set(sample.path, `frames:${key}`);
+  }
+
+  const samplesByGroup = new Map<string, ArtSample[]>();
+  for (const sample of samples) {
+    const groupKey = designKeys.get(sample.path) ?? `single:${sample.path}`;
+    const list = samplesByGroup.get(groupKey) ?? [];
+    list.push(sample);
+    samplesByGroup.set(groupKey, list);
+  }
+
+  const emitted = new Set<string>();
+  const groups: ArtSampleGroup[] = [];
+  for (const sample of samples) {
+    const groupKey = designKeys.get(sample.path) ?? `single:${sample.path}`;
+    if (emitted.has(groupKey)) continue;
+    emitted.add(groupKey);
+    const groupedSamples = [...(samplesByGroup.get(groupKey) ?? [sample])].sort(sortSamplesByFrame);
+    const sequence = groupedSamples.length > 1;
+    const primary = groupedSamples[0];
+    groups.push({
+      id: groupKey,
+      label: sequence ? sequenceLabel(groupedSamples) : primary.label,
+      layout: sequence ? `${groupedSamples.length} frame files` : sampleLayoutLabel(primary),
+      primary,
+      samples: groupedSamples,
+      sequence,
+    });
+  }
+  return groups;
 }
 
 function searchMatches(searchText: string, query: string): boolean {
@@ -783,6 +902,31 @@ function fallbackSequenceGridFromImage(path: string, imageWidth: number, imageHe
   return null;
 }
 
+function fallbackStaticSheetGridFromImage(sample: ArtSample, imageWidth: number, imageHeight: number): SpriteGrid | null {
+  const sheetLike =
+    sample.animated ||
+    isLikelySpriteSheetPath(sample.path) ||
+    isLikelyTextureAtlasPath(sample.path) ||
+    /^(character|sprite|effect|tile|icon)$/.test(sample.kind) ||
+    /^\d{1,5}$/.test(basenameWithoutExtension(sample.path));
+  if (!sheetLike) return null;
+
+  const hinted = parseSpriteSizeHint(sample.path, imageWidth, imageHeight) ?? parseGridHint(sample.path, imageWidth, imageHeight);
+  if (hinted && hinted.cols * hinted.rows > 1) return { ...hinted, mode: sample.animated ? hinted.mode : "atlas" };
+
+  for (const cellSize of [64, 32, 48, 96, 128, 24, 16]) {
+    if (imageWidth % cellSize !== 0 || imageHeight % cellSize !== 0) continue;
+    const cols = imageWidth / cellSize;
+    const rows = imageHeight / cellSize;
+    const total = cols * rows;
+    if (total > 1 && total <= 256 && cols <= 32 && rows <= 32) {
+      return { cols, rows, confidence: 0.52, mode: sample.animated ? "grid" : "atlas" };
+    }
+  }
+
+  return null;
+}
+
 function detectGridFromImageData(imageData: ImageData, options: { sequenceMode?: SpriteSequenceMode } = {}): SpriteGrid {
   const { width, height, data } = imageData;
   const bg = sampleImageBackground(imageData);
@@ -968,7 +1112,7 @@ function spriteGridCellRect(imageWidth: number, imageHeight: number, cols: numbe
 
 function framesForGrid(imageData: ImageData, grid: SpriteGrid): SpriteRect[] {
   if (grid.frames) return grid.frames;
-  if (!isUsableSpriteGrid(grid)) return [];
+  if (!isUnwrappableSpriteGrid(grid)) return [];
   return Array.from({ length: grid.cols * grid.rows }, (_, index) =>
     spriteGridCellRect(imageData.width, imageData.height, grid.cols, grid.rows, index),
   );
@@ -1019,7 +1163,11 @@ function safeFileStem(value: string): string {
 
 function downloadCanvasPng(canvas: HTMLCanvasElement, filename: string) {
   const link = document.createElement("a");
-  link.href = canvas.toDataURL("image/png");
+  try {
+    link.href = canvas.toDataURL("image/png");
+  } catch {
+    return;
+  }
   link.download = filename;
   link.click();
 }
@@ -1231,40 +1379,48 @@ function SquareArtPreview({ sample, label }: { sample: ArtSample; label: string 
     if (!canvas || !context) return;
 
     let cancelled = false;
-    const image = new Image();
-    image.crossOrigin = "anonymous";
-    image.onload = () => {
-      if (cancelled) return;
-      const size = canvas.width;
-      context.clearRect(0, 0, size, size);
-      context.imageSmoothingEnabled = false;
+    const loadImage = (useCors: boolean) => {
+      const image = new Image();
+      if (useCors) image.crossOrigin = "anonymous";
+      image.onload = () => {
+        if (cancelled) return;
+        const size = canvas.width;
+        context.clearRect(0, 0, size, size);
+        context.imageSmoothingEnabled = false;
 
-      try {
-        const scratch = document.createElement("canvas");
-        scratch.width = image.naturalWidth || image.width;
-        scratch.height = image.naturalHeight || image.height;
-        const scratchContext = scratch.getContext("2d", { willReadFrequently: true });
-        if (!scratchContext) {
+        try {
+          const scratch = document.createElement("canvas");
+          scratch.width = image.naturalWidth || image.width;
+          scratch.height = image.naturalHeight || image.height;
+          const scratchContext = scratch.getContext("2d", { willReadFrequently: true });
+          if (!scratchContext) {
+            drawImageContained(context, image, size, size);
+            return;
+          }
+          scratchContext.drawImage(image, 0, 0);
+          const imageData = scratchContext.getImageData(0, 0, scratch.width, scratch.height);
+          const grid = detectGridFromImageData(imageData);
+          const frames = framesForGrid(imageData, grid);
+          if (frames.length >= 6 && Math.max(imageData.width / imageData.height, imageData.height / imageData.width) >= 4) {
+            drawSquareFrameGrid(context, image, frames, size);
+          } else {
+            drawImageContained(context, image, size, size);
+          }
+        } catch {
           drawImageContained(context, image, size, size);
+        }
+      };
+      image.onerror = () => {
+        if (cancelled) return;
+        if (useCors) {
+          loadImage(false);
           return;
         }
-        scratchContext.drawImage(image, 0, 0);
-        const imageData = scratchContext.getImageData(0, 0, scratch.width, scratch.height);
-        const grid = detectGridFromImageData(imageData);
-        const frames = framesForGrid(imageData, grid);
-        if (frames.length >= 6 && Math.max(imageData.width / imageData.height, imageData.height / imageData.width) >= 4) {
-          drawSquareFrameGrid(context, image, frames, size);
-        } else {
-          drawImageContained(context, image, size, size);
-        }
-      } catch {
-        drawImageContained(context, image, size, size);
-      }
+        context.clearRect(0, 0, canvas.width, canvas.height);
+      };
+      image.src = sample.src;
     };
-    image.onerror = () => {
-      context.clearRect(0, 0, canvas.width, canvas.height);
-    };
-    image.src = sample.src;
+    loadImage(true);
 
     return () => {
       cancelled = true;
@@ -1315,35 +1471,42 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
 
   useEffect(() => {
     let cancelled = false;
-    const image = new Image();
-    image.crossOrigin = "anonymous";
-    image.onload = () => {
-      if (cancelled) return;
-      let imageData: ImageData | null = null;
-      let bgSample: ReturnType<typeof sampleImageBackground> | null = null;
-      try {
-        const scratch = document.createElement("canvas");
-        scratch.width = image.naturalWidth || image.width;
-        scratch.height = image.naturalHeight || image.height;
-        const scratchCtx = scratch.getContext("2d", { willReadFrequently: true });
-        if (scratchCtx) {
-          scratchCtx.drawImage(image, 0, 0);
-          imageData = scratchCtx.getImageData(0, 0, scratch.width, scratch.height);
-          bgSample = sampleImageBackground(imageData);
+    const loadImage = (useCors: boolean) => {
+      const image = new Image();
+      if (useCors) image.crossOrigin = "anonymous";
+      image.onload = () => {
+        if (cancelled) return;
+        let imageData: ImageData | null = null;
+        let bgSample: ReturnType<typeof sampleImageBackground> | null = null;
+        try {
+          const scratch = document.createElement("canvas");
+          scratch.width = image.naturalWidth || image.width;
+          scratch.height = image.naturalHeight || image.height;
+          const scratchCtx = scratch.getContext("2d", { willReadFrequently: true });
+          if (scratchCtx) {
+            scratchCtx.drawImage(image, 0, 0);
+            imageData = scratchCtx.getImageData(0, 0, scratch.width, scratch.height);
+            bgSample = sampleImageBackground(imageData);
+          }
+        } catch {
+          imageData = null;
+          bgSample = null;
         }
-      } catch {
-        imageData = null;
-        bgSample = null;
-      }
-      setLoadFailed(false);
-      setLoadedImage({ src: sample?.src ?? "", image, imageData, bgSample });
+        setLoadFailed(false);
+        setLoadedImage({ src: sample?.src ?? "", image, imageData, bgSample });
+      };
+      image.onerror = () => {
+        if (cancelled) return;
+        if (useCors) {
+          loadImage(false);
+          return;
+        }
+        setLoadedImage(null);
+        setLoadFailed(true);
+      };
+      image.src = sample?.src ?? "";
     };
-    image.onerror = () => {
-      if (cancelled) return;
-      setLoadedImage(null);
-      setLoadFailed(true);
-    };
-    if (sample?.src) image.src = sample.src;
+    if (sample?.src) loadImage(true);
     else setLoadFailed(true);
 
     return () => {
@@ -1365,13 +1528,23 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
         : "off";
     const pureAtlas = isLikelyTextureAtlasPath(sample.path) && !hybridAtlas;
     const fallbackSequenceGrid = fallbackSequenceGridFromImage(sample.path, imageWidth, imageHeight);
-    if (!imageData) return pureAtlas ? { cols: 1, rows: 1, confidence: 0.9, mode: "atlas" as const } : fallbackSequenceGrid;
+    const fallbackStaticGrid = fallbackStaticSheetGridFromImage(sample, imageWidth, imageHeight);
+    if (!imageData) {
+      return pureAtlas
+        ? fallbackSequenceGrid ?? fallbackStaticGrid ?? { cols: 1, rows: 1, confidence: 0.9, mode: "atlas" as const }
+        : fallbackSequenceGrid ?? fallbackStaticGrid;
+    }
     const detectedFromPixels = detectGridFromImageData(imageData, { sequenceMode });
     const canAnimateSample = sample.animated && isLikelySpriteSheetPath(sample.path) && !pureAtlas;
     const hintedLayout = canAnimateSample
       ? parseSpriteSizeHint(sample.path, imageData.width, imageData.height) ?? parseGridHint(sample.path, imageData.width, imageData.height)
       : null;
-    if (pureAtlas) return { cols: 1, rows: 1, confidence: 0.9, mode: "atlas" as const };
+    if (pureAtlas) {
+      if (isUnwrappableSpriteGrid(detectedFromPixels)) return { ...detectedFromPixels, mode: "atlas" as const };
+      if (fallbackSequenceGrid) return { ...fallbackSequenceGrid, mode: "atlas" as const };
+      if (fallbackStaticGrid) return { ...fallbackStaticGrid, mode: "atlas" as const };
+      return { cols: 1, rows: 1, confidence: 0.9, mode: "atlas" as const };
+    }
     if (detectedFromPixels.sequences && isUsableSpriteGrid(detectedFromPixels)) return detectedFromPixels;
     if (fallbackSequenceGrid && sequenceMode === "sequence-pack" && !detectedFromPixels.sequences) return fallbackSequenceGrid;
     if (hintedLayout) return hintedLayout;
@@ -1388,20 +1561,24 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
       isLikelySpriteSheetPath(sample.path) &&
       !(isLikelyTextureAtlasPath(sample.path) && !isLikelyHybridSpriteAtlasPath(sample.path)),
   );
+  const canUnwrapStaticLayout = Boolean(!canAnimateSample && detectedGrid && isUnwrappableSpriteGrid(detectedGrid));
 
   useEffect(() => {
     setDetectedGrid(resolvedGrid);
-    if (autoDetect && canAnimateSample && resolvedGrid && isUsableSpriteGrid(resolvedGrid)) {
+    const shouldUseFrameLayout =
+      resolvedGrid && ((canAnimateSample && isUsableSpriteGrid(resolvedGrid)) || (!canAnimateSample && isUnwrappableSpriteGrid(resolvedGrid)));
+    if (autoDetect && shouldUseFrameLayout && resolvedGrid) {
       const selectedSequence = resolvedGrid.sequences?.[Math.min(sequenceIndex, resolvedGrid.sequences.length - 1)];
       const detectedFrames =
         loadedImage?.imageData && loadedImage.bgSample ? nonEmptyFramesForGrid(loadedImage.imageData, resolvedGrid, loadedImage.bgSample) : resolvedGrid.frames ?? [];
       const selectedFrames =
         selectedSequence?.frames ??
-        (detectedFrames.length !== resolvedGrid.cols * resolvedGrid.rows ? detectedFrames : resolvedGrid.frames ?? null);
-      setColumns(selectedFrames?.length ?? resolvedGrid.cols);
+        (detectedFrames.length > 0 && detectedFrames.length !== resolvedGrid.cols * resolvedGrid.rows ? detectedFrames : resolvedGrid.frames ?? null);
+      setColumns(Math.max(1, selectedFrames?.length ?? resolvedGrid.cols));
       setRows(selectedFrames ? 1 : resolvedGrid.rows);
       setLayoutFrames(selectedFrames);
       setLayoutFrameBoxes(selectedSequence?.frameBoxes ?? null);
+      setPlaying(canAnimateSample);
     } else if (autoDetect) {
       setColumns(1);
       setRows(1);
@@ -1427,15 +1604,15 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
     const frames = autoDetect ? layoutFrames : null;
     const frameBoxes = autoDetect ? layoutFrameBoxes : null;
     const totalFrames = Math.max(1, frames?.length ?? columns * rows);
-    const isSpriteSheet = Boolean(sample?.animated && totalFrames > 1);
+    const usesFrameLayout = Boolean(totalFrames > 1 && (sample?.animated || (detectedGrid && isUnwrappableSpriteGrid(detectedGrid))));
     const imageWidth = image ? image.naturalWidth || image.width : 0;
     const imageHeight = image ? image.naturalHeight || image.height : 0;
     const frameSources: SpriteRect[] =
       image && imageWidth > 0 && imageHeight > 0
         ? Array.from({ length: totalFrames }, (_, index) =>
-            isSpriteSheet && frames
+            usesFrameLayout && frames
               ? clampRectToImage(frames[index % frames.length], imageWidth, imageHeight)
-              : isSpriteSheet
+              : usesFrameLayout
                 ? spriteGridCellRect(imageWidth, imageHeight, columns, rows, index)
                 : { x: 0, y: 0, w: imageWidth, h: imageHeight },
           )
@@ -1443,17 +1620,19 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
     const sourceBoxes =
       image && imageWidth > 0 && imageHeight > 0
         ? frameSources.map((source, index) =>
-            isSpriteSheet && frameBoxes?.length
+            usesFrameLayout && frameBoxes?.length
               ? clampRectToImage(frameBoxes[index % frameBoxes.length], imageWidth, imageHeight)
               : source,
           )
         : [];
     const drawFrames = spriteDrawFrames(
-      frameSources.map((source, index) =>
-        imageData && bgSample && isSpriteSheet
-          ? computeTrimRect(imageData, sourceBoxes[index] ?? source, bgSample)
-          : source,
-      ),
+      frameSources.map((source, index) => {
+        if (!imageData || !bgSample || !usesFrameLayout) return source;
+        const sourcePadding =
+          frames ? Math.min(16, Math.max(2, Math.ceil(Math.max(source.w, source.h) * 0.04))) : 0;
+        const trimSource = expandRectWithinImage(sourceBoxes[index] ?? source, imageData.width, imageData.height, sourcePadding);
+        return computeTrimRect(imageData, trimSource, bgSample, 2);
+      }),
       sourceBoxes,
     );
     const stageWidth = Math.max(1, ...drawFrames.map((source) => source.box.w));
@@ -1473,7 +1652,7 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
 
     function tick(time: number) {
       drawCheckerboard(context, drawingCanvas.width, drawingCanvas.height, background);
-      if (playing && time - lastFrame >= 1000 / (10 * speed)) {
+      if (playing && sample?.animated && time - lastFrame >= 1000 / (10 * speed)) {
         frameRef.current = (frameRef.current + 1) % totalFrames;
         setFrame(frameRef.current);
         lastFrame = time;
@@ -1514,18 +1693,20 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
       context.fillStyle = "rgba(255,255,255,0.62)";
       context.font = "12px system-ui";
       context.textAlign = "left";
-      const status = totalFrames > 1 ? `frame ${currentFrame + 1}/${totalFrames}` : "static";
+      const status = totalFrames > 1 ? `${sample?.animated ? "frame" : "piece"} ${currentFrame + 1}/${totalFrames}` : "static";
       context.fillText(`${sample?.label ?? "No sample"} · ${status}`, 16, drawingCanvas.height - 18);
       raf = requestAnimationFrame(tick);
     }
 
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [autoDetect, background, columns, flip, layoutFrameBoxes, layoutFrames, loadFailed, loadedImage, pack.title, playing, rows, sample?.animated, sample?.label, scale, speed]);
+  }, [autoDetect, background, columns, detectedGrid, flip, layoutFrameBoxes, layoutFrames, loadFailed, loadedImage, pack.title, playing, rows, sample?.animated, sample?.label, scale, speed]);
 
   const detectionLabel = detectedGrid
     ? detectedGrid.mode === "atlas"
-        ? "atlas"
+        ? isUnwrappableSpriteGrid(detectedGrid)
+          ? `atlas ${detectedGrid.frames?.length ?? detectedGrid.cols * detectedGrid.rows} pieces (${Math.round(detectedGrid.confidence * 100)}%)`
+          : "atlas"
         : detectedGrid.mode === "hybrid-atlas"
           ? `hybrid ${detectedGrid.sequences?.length ?? 0} rows (${Math.round(detectedGrid.confidence * 100)}%)`
           : detectedGrid.mode === "sequence-pack"
@@ -1539,6 +1720,8 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
   const activeSequenceIndex = Math.min(sequenceIndex, Math.max(0, sequences.length - 1));
   const activeSequence = sequences[activeSequenceIndex];
   const exportFrameCount = Math.max(1, (autoDetect ? layoutFrames?.length : undefined) ?? columns * rows);
+  const canPlaySample = canAnimateSample && exportFrameCount > 1;
+  const canExportFrames = exportFrameCount > 1 && (canAnimateSample || canUnwrapStaticLayout || Boolean(layoutFrames));
 
   function selectSequence(nextIndex: number) {
     const nextSequence = sequences[nextIndex];
@@ -1618,7 +1801,7 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
         )}
       </div>
       <div className="runner-controls">
-        <button type="button" onClick={() => setPlaying((value) => !value)}>
+        <button type="button" onClick={() => setPlaying((value) => !value)} disabled={!canPlaySample}>
           {playing ? "Pause" : "Play"}
         </button>
         <label className="frame-control">
@@ -1717,7 +1900,7 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
           Flip
         </label>
         <input aria-label="Canvas background" type="color" value={background} onChange={(event) => setBackground(event.target.value)} />
-        <button type="button" onClick={exportCurrentSequence} disabled={!sample || exportFrameCount <= 1}>
+        <button type="button" onClick={exportCurrentSequence} disabled={!sample || !canExportFrames}>
           Export PNG
         </button>
       </div>
@@ -1725,9 +1908,341 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
   );
 }
 
+function loadSequenceFrame(sample: ArtSample): Promise<LoadedSequenceFrame | null> {
+  return new Promise((resolve) => {
+    const loadImage = (useCors: boolean) => {
+      const image = new Image();
+      if (useCors) image.crossOrigin = "anonymous";
+      image.onload = () => {
+        const width = image.naturalWidth || image.width;
+        const height = image.naturalHeight || image.height;
+        let source = { x: 0, y: 0, w: width, h: height };
+        try {
+          const scratch = document.createElement("canvas");
+          scratch.width = width;
+          scratch.height = height;
+          const context = scratch.getContext("2d", { willReadFrequently: true });
+          if (context) {
+            context.drawImage(image, 0, 0);
+            const imageData = context.getImageData(0, 0, width, height);
+            source = computeTrimRect(imageData, source, sampleImageBackground(imageData), 2);
+          }
+        } catch {
+          source = { x: 0, y: 0, w: width, h: height };
+        }
+        resolve({ sample, image, source });
+      };
+      image.onerror = () => {
+        if (useCors) {
+          loadImage(false);
+          return;
+        }
+        resolve(null);
+      };
+      image.src = sample.src;
+    };
+    loadImage(true);
+  });
+}
+
+function exportLoadedSequenceFramesAsStrip(frames: LoadedSequenceFrame[], filename: string) {
+  if (frames.length === 0) return;
+  const cellWidth = Math.max(...frames.map((frame) => frame.source.w));
+  const cellHeight = Math.max(...frames.map((frame) => frame.source.h));
+  const canvas = document.createElement("canvas");
+  canvas.width = cellWidth * frames.length;
+  canvas.height = cellHeight;
+  const context = canvas.getContext("2d");
+  if (!context) return;
+  context.imageSmoothingEnabled = false;
+  for (const [index, frame] of frames.entries()) {
+    const x = index * cellWidth + Math.floor((cellWidth - frame.source.w) / 2);
+    const y = Math.floor((cellHeight - frame.source.h) / 2);
+    context.drawImage(
+      frame.image,
+      frame.source.x,
+      frame.source.y,
+      frame.source.w,
+      frame.source.h,
+      x,
+      y,
+      frame.source.w,
+      frame.source.h,
+    );
+  }
+  downloadCanvasPng(canvas, filename);
+}
+
+function FrameSequenceRunner({ pack, group }: { pack: ArtPack; group: ArtSampleGroup }) {
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const frameRef = useRef(0);
+  const [loadedFrames, setLoadedFrames] = useState<LoadedSequenceFrame[]>([]);
+  const [frame, setFrame] = useState(0);
+  const [playing, setPlaying] = useState(true);
+  const [speed, setSpeed] = useState(1);
+  const [scale, setScale] = useState(3);
+  const [flip, setFlip] = useState(false);
+  const [background, setBackground] = useState("#15171c");
+  const [loadFailed, setLoadFailed] = useState(false);
+
+  useEffect(() => {
+    frameRef.current = 0;
+    setFrame(0);
+    setPlaying(true);
+    setLoadedFrames([]);
+    setLoadFailed(false);
+  }, [group.id]);
+
+  useEffect(() => {
+    let cancelled = false;
+    Promise.all(group.samples.map(loadSequenceFrame)).then((frames) => {
+      if (cancelled) return;
+      const loaded = frames.filter((item): item is LoadedSequenceFrame => Boolean(item));
+      setLoadedFrames(loaded);
+      setLoadFailed(loaded.length === 0);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [group.samples]);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const context = canvas?.getContext("2d");
+    if (!canvas || !context) return;
+    const drawingCanvas = canvas;
+    const drawingContext = context;
+    let raf = 0;
+    let lastFrame = 0;
+    const totalFrames = Math.max(1, loadedFrames.length);
+    const stageWidth = Math.max(1, ...loadedFrames.map((item) => item.source.w));
+    const stageHeight = Math.max(1, ...loadedFrames.map((item) => item.source.h));
+
+    function drawPlaceholder() {
+      drawingContext.fillStyle = "rgba(255,255,255,0.07)";
+      drawingContext.fillRect(drawingCanvas.width / 2 - 48, drawingCanvas.height / 2 - 48, 96, 96);
+      drawingContext.strokeStyle = "rgba(255,216,77,0.65)";
+      drawingContext.lineWidth = 2;
+      drawingContext.strokeRect(drawingCanvas.width / 2 - 48, drawingCanvas.height / 2 - 48, 96, 96);
+      drawingContext.fillStyle = "rgba(255,255,255,0.82)";
+      drawingContext.font = "600 18px system-ui";
+      drawingContext.textAlign = "center";
+      drawingContext.fillText(initials(pack.title) || "2D", drawingCanvas.width / 2, drawingCanvas.height / 2 + 6);
+    }
+
+    function tick(time: number) {
+      drawCheckerboard(drawingContext, drawingCanvas.width, drawingCanvas.height, background);
+      if (playing && loadedFrames.length > 1 && time - lastFrame >= 1000 / (10 * speed)) {
+        frameRef.current = (frameRef.current + 1) % totalFrames;
+        setFrame(frameRef.current);
+        lastFrame = time;
+      }
+      const currentFrame = Math.min(frameRef.current, totalFrames - 1);
+      const loadedFrame = loadedFrames[currentFrame];
+
+      if (loadedFrame && !loadFailed) {
+        const source = loadedFrame.source;
+        const ratio = Math.min(
+          scale,
+          (drawingCanvas.width * 0.82) / stageWidth,
+          (drawingCanvas.height * 0.74) / stageHeight,
+        );
+        const stageW = stageWidth * ratio;
+        const stageH = stageHeight * ratio;
+        const w = source.w * ratio;
+        const h = source.h * ratio;
+        const stageX = (drawingCanvas.width - stageW) / 2;
+        const stageY = (drawingCanvas.height - stageH) / 2 - 8;
+        const x = stageX + (stageW - w) / 2;
+        const y = stageY + stageH - h;
+        drawingContext.imageSmoothingEnabled = false;
+        drawingContext.save();
+        if (flip) {
+          drawingContext.translate(drawingCanvas.width, 0);
+          drawingContext.scale(-1, 1);
+          drawingContext.drawImage(
+            loadedFrame.image,
+            source.x,
+            source.y,
+            source.w,
+            source.h,
+            drawingCanvas.width - x - w,
+            y,
+            w,
+            h,
+          );
+        } else {
+          drawingContext.drawImage(loadedFrame.image, source.x, source.y, source.w, source.h, x, y, w, h);
+        }
+        drawingContext.restore();
+      } else {
+        drawPlaceholder();
+      }
+
+      drawingContext.fillStyle = "rgba(255,255,255,0.62)";
+      drawingContext.font = "12px system-ui";
+      drawingContext.textAlign = "left";
+      drawingContext.fillText(`${group.label} · frame ${currentFrame + 1}/${totalFrames}`, 16, drawingCanvas.height - 18);
+      raf = requestAnimationFrame(tick);
+    }
+
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [background, flip, group.label, loadFailed, loadedFrames, pack.title, playing, scale, speed]);
+
+  const frameCount = Math.max(1, loadedFrames.length || group.samples.length);
+
+  function exportSequence() {
+    const stem = safeFileStem(`${pack.title}-${group.label}-sequence`);
+    exportLoadedSequenceFramesAsStrip(loadedFrames, `${stem}.png`);
+  }
+
+  return (
+    <div className="art-runner">
+      <div className="art-runner-stage sequence-stage">
+        <canvas ref={canvasRef} width={720} height={420} />
+        <aside className="animation-overview" aria-label="Frame sequence files">
+          <div className="animation-overview-head">
+            <span>{group.samples.length} files</span>
+            <strong>{group.label}</strong>
+          </div>
+          <div className="sequence-file-list">
+            {group.samples.map((sample, index) => (
+              <button
+                key={sample.path}
+                type="button"
+                className={index === Math.min(frame, group.samples.length - 1) ? "active" : ""}
+                onClick={() => {
+                  frameRef.current = index;
+                  setFrame(index);
+                  setPlaying(false);
+                }}
+              >
+                <span>{index + 1}</span>
+                <strong>{sampleFileName(sample.path)}</strong>
+              </button>
+            ))}
+          </div>
+        </aside>
+      </div>
+      <div className="runner-controls">
+        <button type="button" onClick={() => setPlaying((value) => !value)} disabled={frameCount <= 1}>
+          {playing ? "Pause" : "Play"}
+        </button>
+        <label className="frame-control">
+          Frame
+          <input
+            aria-label="Animation frame"
+            type="range"
+            min="0"
+            max={frameCount - 1}
+            value={Math.min(frame, frameCount - 1)}
+            onChange={(event) => {
+              const nextFrame = Number(event.target.value);
+              frameRef.current = nextFrame;
+              setFrame(nextFrame);
+              setPlaying(false);
+            }}
+          />
+          <span>{Math.min(frame, frameCount - 1) + 1}/{frameCount}</span>
+        </label>
+        <label>
+          Speed
+          <input
+            aria-label="Animation speed"
+            type="range"
+            min="0.25"
+            max="3"
+            step="0.25"
+            value={speed}
+            onChange={(event) => setSpeed(Number(event.target.value))}
+          />
+          <span>{speed.toFixed(2)}x</span>
+        </label>
+        <label>
+          Scale
+          <input
+            aria-label="Sprite preview scale"
+            type="range"
+            min="1"
+            max="8"
+            value={scale}
+            onChange={(event) => setScale(Number(event.target.value))}
+          />
+          <span>{scale}x</span>
+        </label>
+        <label className="inline-check">
+          <input type="checkbox" checked={flip} onChange={(event) => setFlip(event.target.checked)} />
+          Flip
+        </label>
+        <input aria-label="Canvas background" type="color" value={background} onChange={(event) => setBackground(event.target.value)} />
+        <button type="button" onClick={exportSequence} disabled={loadedFrames.length <= 1}>
+          Export PNG
+        </button>
+      </div>
+    </div>
+  );
+}
+
+function ArtSampleGroupPreview({ group }: { group: ArtSampleGroup }) {
+  return (
+    <div className="sample-group-thumb">
+      <ArtSamplePreview sample={group.primary} />
+      {group.sequence && <span>{group.samples.length}</span>}
+    </div>
+  );
+}
+
+function ArtSampleBrowser({
+  groups,
+  activeId,
+  onSelect,
+}: {
+  groups: ArtSampleGroup[];
+  activeId: string;
+  onSelect: (id: string) => void;
+}) {
+  if (groups.length <= 1) return null;
+  return (
+    <div className="sample-browser" aria-label="Pack files">
+      <div className="sample-browser-head">
+        <span>{groups.length} visible items</span>
+        <strong>{groups.reduce((total, group) => total + group.samples.length, 0)} files</strong>
+      </div>
+      <div className="sample-group-grid">
+        {groups.map((group) => (
+          <button
+            key={group.id}
+            type="button"
+            className={group.id === activeId ? "active" : ""}
+            aria-pressed={group.id === activeId}
+            onClick={() => onSelect(group.id)}
+          >
+            <ArtSampleGroupPreview group={group} />
+            <span>
+              <strong>{group.label}</strong>
+              <small>{group.layout}</small>
+            </span>
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function ArtWorkbench({ pack }: { pack: ArtPack }) {
-  const selectedSample = sampleForPreview(pack);
-  const materialCount = materialSamplesFor(pack).length;
+  const materialSamples = useMemo(() => materialSamplesFor(pack), [pack]);
+  const groups = useMemo(() => artSampleGroups(materialSamples), [materialSamples]);
+  const [selectedGroupId, setSelectedGroupId] = useState(groups[0]?.id ?? "");
+  const selectedGroup = groups.find((group) => group.id === selectedGroupId) ?? groups[0];
+  const selectedSample = selectedGroup?.primary;
+  const materialCount = materialSamples.length;
+
+  useEffect(() => {
+    if (!groups.some((group) => group.id === selectedGroupId)) {
+      setSelectedGroupId(groups[0]?.id ?? "");
+    }
+  }, [groups, selectedGroupId]);
 
   return (
     <section className="art-workbench">
@@ -1766,7 +2281,12 @@ function ArtWorkbench({ pack }: { pack: ArtPack }) {
             <small>{materialCount} material files</small>
           </div>
         </div>
-        <ArtCanvasRunner pack={pack} sample={selectedSample} />
+        <ArtSampleBrowser groups={groups} activeId={selectedGroup?.id ?? ""} onSelect={setSelectedGroupId} />
+        {selectedGroup?.sequence ? (
+          <FrameSequenceRunner pack={pack} group={selectedGroup} />
+        ) : (
+          <ArtCanvasRunner pack={pack} sample={selectedSample} />
+        )}
       </div>
     </section>
   );
