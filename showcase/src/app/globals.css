@@ -83,15 +83,15 @@ select:focus-visible {
   padding: 0 9px;
   border: 1px solid transparent;
   border-radius: 6px;
+  background: transparent;
   color: rgba(232,230,227,0.72);
   font-size: 12px;
   font-weight: 650;
+  font-family: inherit;
   cursor: pointer;
   list-style: none;
+  text-align: left;
   user-select: none;
-}
-.nav-trigger::-webkit-details-marker {
-  display: none;
 }
 .top-nav > a:hover,
 .top-nav > a[aria-current="page"],
@@ -108,6 +108,10 @@ select:focus-visible {
 }
 .nav-drawer {
   position: relative;
+}
+.dropdown-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .nav-chevron {
   width: 6px;
@@ -145,21 +149,33 @@ select:focus-visible {
   overflow: auto;
   overscroll-behavior: contain;
 }
-.nav-panel a {
+.nav-panel[hidden] {
+  display: none;
+}
+.nav-panel a,
+.nav-panel button {
   min-height: 32px;
   max-width: 100%;
   display: flex;
   align-items: center;
+  width: 100%;
   padding: 0 10px;
+  border: 0;
   border-radius: 6px;
+  background: transparent;
   color: rgba(232,230,227,0.76);
   font-size: 12px;
   font-weight: 650;
+  font-family: inherit;
+  text-align: left;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  cursor: pointer;
 }
-.nav-panel a:hover {
+.nav-panel a:hover,
+.nav-panel button:hover,
+.nav-panel button[data-selected] {
   color: var(--accent);
   background: rgba(255,255,255,0.08);
 }
@@ -686,14 +702,8 @@ select:focus-visible {
   color: var(--text);
   font: inherit;
 }
-.catalog-tools select {
+.catalog-tools .filter-dropdown .nav-trigger {
   min-height: 40px;
-  padding: 0 34px 0 10px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  color: var(--text);
-  font: inherit;
 }
 .catalog-result-count {
   color: var(--muted);
@@ -1816,8 +1826,31 @@ select:focus-visible {
   width: min(520px, 100%);
   padding: 0 12px;
 }
-.media-tools select {
-  padding: 0 32px 0 10px;
+.media-tools .filter-dropdown .nav-trigger {
+  min-height: 38px;
+}
+.filter-dropdown {
+  flex: 0 1 190px;
+  min-width: 150px;
+}
+.filter-dropdown .nav-trigger {
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 10px;
+  background: var(--surface);
+  border-color: var(--border);
+  color: var(--text);
+}
+.filter-dropdown .nav-panel {
+  z-index: 25;
+  min-width: max(100%, 190px);
+  max-width: min(360px, calc(100vw - 32px));
+  max-height: min(340px, 70vh);
+  overflow: auto;
+}
+.filter-dropdown .nav-panel button {
+  min-height: 34px;
+  white-space: normal;
 }
 .media-columns {
   display: grid;
@@ -3435,6 +3468,10 @@ select:focus-visible {
     position: static;
     max-width: 100%;
     max-height: none;
+  }
+  .filter-dropdown {
+    width: 100%;
+    flex-basis: auto;
   }
   .library-hero {
     display: grid;

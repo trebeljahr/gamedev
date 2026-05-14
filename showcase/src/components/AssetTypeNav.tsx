@@ -22,17 +22,12 @@ export function AssetTypeNav({ active = "packs", note }: AssetTypeNavProps) {
           active={active === group.key}
           open={openKey === group.key}
           onOpenChange={(isOpen) =>
-            setOpenKey((currentOpen) =>
-              isOpen ? group.key : currentOpen === group.key ? null : currentOpen,
-            )
+            setOpenKey((currentOpen) => (isOpen ? group.key : currentOpen === group.key ? null : currentOpen))
           }
+          ariaLabel={`${group.label} assets`}
         >
           {group.items.map((child) => (
-            <Link
-              key={child.href}
-              href={child.href}
-              onClick={() => setOpenKey(null)}
-            >
+            <Link key={child.href} href={child.href}>
               {child.label}
             </Link>
           ))}

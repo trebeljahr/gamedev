@@ -98,11 +98,10 @@ export function SiteHeader({ meta, compact = false, active }: SiteHeaderProps) {
                 label={item.label}
                 active={current === item.key}
                 open={openKey === item.key}
-                onOpenChange={(isOpen) => {
-                  setOpenKey((currentOpen) =>
-                    isOpen ? item.key : currentOpen === item.key ? null : currentOpen,
-                  );
-                }}
+                onOpenChange={(isOpen) =>
+                  setOpenKey((currentOpen) => (isOpen ? item.key : currentOpen === item.key ? null : currentOpen))
+                }
+                ariaLabel={`${item.label} navigation`}
               >
                 {item.items.map((child) => (
                   <Link

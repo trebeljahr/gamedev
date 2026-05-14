@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { type CSSProperties, type ReactNode, useEffect, useId, useMemo, useRef, useState } from "react";
 import { LicenseLink } from "@/components/LicenseLink";
-import { NavDrawer } from "@/components/NavDrawer";
+import { NavDrawer, SelectDropdown } from "@/components/NavDrawer";
 import { InfiniteListSentinel, useInfiniteList } from "@/components/useInfiniteList";
 import type { ArtPack, ArtSample, AudioAnalysis, MusicTrack, SoundCollection, SoundSample, SourceMapping } from "@/lib/media";
 import { artCreators, mediaPackHref } from "@/lib/media";
@@ -2950,7 +2950,7 @@ export function MediaExplorer({
         </div>
         <nav className="asset-section-nav top-nav" aria-label="Asset type">
           {navGroups.map((group) => (
-            <NavDrawer key={group.key} label={group.label} active={activeAssetGroup === group.key}>
+            <NavDrawer key={group.key} label={group.label} active={activeAssetGroup === group.key} ariaLabel={`${group.label} assets`}>
               {group.items.map((child) => (
                 <Link key={child.href} href={child.href}>
                   {child.label}
@@ -2978,74 +2978,92 @@ export function MediaExplorer({
           <span className="catalog-result-count">Textures live in the 3D group as material and surface sources.</span>
         ) : view === "sounds" ? (
           <>
-            <select value={soundTypeFilter} onChange={(event) => selectSoundType(event.target.value as SoundTypeFilter)}>
-              <option value="all">All sounds</option>
-              <option value="sfx">Sound effects</option>
-              <option value="music">Music</option>
-            </select>
+            <SelectDropdown<SoundTypeFilter>
+              ariaLabel="Sound type"
+              value={soundTypeFilter}
+              onChange={selectSoundType}
+              options={[
+                { value: "all", label: "All sounds" },
+                { value: "sfx", label: "Sound effects" },
+                { value: "music", label: "Music" },
+              ]}
+            />
             {soundTypeFilter !== "music" && (
               <>
-                <select value={soundCategoryFilter} onChange={(event) => setSoundCategoryFilter(event.target.value)}>
-                  {soundCategories.map((category) => (
-                    <option key={category} value={category}>
-                      {category === "all" ? "All SFX categories" : soundCategoryLabel(category)}
-                    </option>
-                  ))}
-                </select>
-                <select value={sourceFilter} onChange={(event) => setSourceFilter(event.target.value)}>
-                  {soundSources.map((source) => (
-                    <option key={source} value={source}>
-                      {source === "all" ? "All sources" : source}
-                    </option>
-                  ))}
-                </select>
+                <SelectDropdown
+                  ariaLabel="Sound category"
+                  value={soundCategoryFilter}
+                  onChange={setSoundCategoryFilter}
+                  options={soundCategories.map((category) => ({
+                    value: category,
+                    label: category === "all" ? "All SFX categories" : soundCategoryLabel(category),
+                  }))}
+                />
+                <SelectDropdown
+                  ariaLabel="Sound source"
+                  value={sourceFilter}
+                  onChange={setSourceFilter}
+                  options={soundSources.map((source) => ({
+                    value: source,
+                    label: source === "all" ? "All sources" : source,
+                  }))}
+                />
               </>
             )}
           </>
         ) : (
           <>
-            <select
+            <SelectDropdown<ArtTypeFilter>
+              ariaLabel="2D type"
               value={artTypeFilter}
-              onChange={(event) => {
-                const value = event.target.value as ArtTypeFilter;
-                selectArtType(value);
-              }}
-            >
-              <option value="all">All 2D</option>
-              <option value="ui-icons">UI / Icons</option>
-              <option value="spritesheets">Spritesheets</option>
-            </select>
+              onChange={selectArtType}
+              options={[
+                { value: "all", label: "All 2D" },
+                { value: "ui-icons", label: "UI / Icons" },
+                { value: "spritesheets", label: "Spritesheets" },
+              ]}
+            />
             {artTypeFilter !== "ui-icons" && (
               <>
-                <select value={spriteSubjectFilter} onChange={(event) => setSpriteSubjectFilter(event.target.value as SpriteSubjectFilter)}>
-                  <option value="all">All sprite subjects</option>
-                  <option value="characters">Characters</option>
-                  <option value="environments">Environments</option>
-                  <option value="effects-items">Effects & items</option>
-                  <option value="other">Other spritesheets</option>
-                </select>
-                <select value={spriteMotionFilter} onChange={(event) => setSpriteMotionFilter(event.target.value as SpriteMotionFilter)}>
-                  <option value="all">Animated + static</option>
-                  <option value="animated">Animated</option>
-                  <option value="static">Static</option>
-                </select>
+                <SelectDropdown<SpriteSubjectFilter>
+                  ariaLabel="Sprite subject"
+                  value={spriteSubjectFilter}
+                  onChange={setSpriteSubjectFilter}
+                  options={[
+                    { value: "all", label: "All sprite subjects" },
+                    { value: "characters", label: "Characters" },
+                    { value: "environments", label: "Environments" },
+                    { value: "effects-items", label: "Effects & items" },
+                    { value: "other", label: "Other spritesheets" },
+                  ]}
+                />
+                <SelectDropdown<SpriteMotionFilter>
+                  ariaLabel="Sprite motion"
+                  value={spriteMotionFilter}
+                  onChange={setSpriteMotionFilter}
+                  options={[
+                    { value: "all", label: "Animated + static" },
+                    { value: "animated", label: "Animated" },
+                    { value: "static", label: "Static" },
+                  ]}
+                />
               </>
             )}
-            <select value={licenseFilter} onChange={(event) => setLicenseFilter(event.target.value)}>
-              {artLicenses.map((license) => (
-                <option key={license} value={license}>
-                  {license === "all" ? "All licenses" : license}
-                </option>
-              ))}
-            </select>
-            <select value={creatorFilter} onChange={(event) => setCreatorFilter(event.target.value)}>
-              <option value="all">All creators</option>
-              {artCreators.map((creator) => (
-                <option key={creator} value={creator}>
-                  {creator}
-                </option>
-              ))}
-            </select>
+            <SelectDropdown
+              ariaLabel="Art license"
+              value={licenseFilter}
+              onChange={setLicenseFilter}
+              options={artLicenses.map((license) => ({
+                value: license,
+                label: license === "all" ? "All licenses" : license,
+              }))}
+            />
+            <SelectDropdown
+              ariaLabel="Art creator"
+              value={creatorFilter}
+              onChange={setCreatorFilter}
+              options={[{ value: "all", label: "All creators" }, ...artCreators.map((creator) => ({ value: creator, label: creator }))]}
+            />
             <div className="media-tabs compact" role="tablist" aria-label="Grouping">
               <button
                 type="button"

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { useMemo, useState } from "react";
+import { SelectDropdown } from "@/components/NavDrawer";
 import { InfiniteListSentinel, useInfiniteList } from "@/components/useInfiniteList";
 import { LicenseLink } from "@/components/LicenseLink";
 import { ModelDownloadLinks } from "@/components/ModelDownloadLinks";
@@ -139,38 +140,30 @@ export function ModelCatalog({ manifest }: ModelCatalogProps) {
             onChange={(event) => setQuery(event.target.value)}
             placeholder="Search models: knight, cactus, door, idle, modular wall..."
           />
-          <select value={vendor} onChange={(event) => setVendor(event.target.value)} aria-label="Vendor">
-            <option value={ALL}>All creators</option>
-            {vendors.map((item) => (
-              <option key={item} value={item}>
-                {niceVendor(item)}
-              </option>
-            ))}
-          </select>
-          <select value={category} onChange={(event) => setCategory(event.target.value)} aria-label="Category">
-            <option value={ALL}>All categories</option>
-            {categories.map((item) => (
-              <option key={item} value={item}>
-                {item}
-              </option>
-            ))}
-          </select>
-          <select value={style} onChange={(event) => setStyle(event.target.value)} aria-label="Style">
-            <option value={ALL}>All styles</option>
-            {styles.map((item) => (
-              <option key={item} value={item}>
-                {item}
-              </option>
-            ))}
-          </select>
-          <select value={theme} onChange={(event) => setTheme(event.target.value)} aria-label="Theme">
-            <option value={ALL}>All themes</option>
-            {themes.map((item) => (
-              <option key={item} value={item}>
-                {item}
-              </option>
-            ))}
-          </select>
+          <SelectDropdown
+            ariaLabel="Vendor"
+            value={vendor}
+            onChange={setVendor}
+            options={[{ value: ALL, label: "All creators" }, ...vendors.map((item) => ({ value: item, label: niceVendor(item) }))]}
+          />
+          <SelectDropdown
+            ariaLabel="Category"
+            value={category}
+            onChange={setCategory}
+            options={[{ value: ALL, label: "All categories" }, ...categories.map((item) => ({ value: item, label: item }))]}
+          />
+          <SelectDropdown
+            ariaLabel="Style"
+            value={style}
+            onChange={setStyle}
+            options={[{ value: ALL, label: "All styles" }, ...styles.map((item) => ({ value: item, label: item }))]}
+          />
+          <SelectDropdown
+            ariaLabel="Theme"
+            value={theme}
+            onChange={setTheme}
+            options={[{ value: ALL, label: "All themes" }, ...themes.map((item) => ({ value: item, label: item }))]}
+          />
           <div className="catalog-result-count">
             {filtered.length.toLocaleString()} of {totalModels.toLocaleString()} models
           </div>
