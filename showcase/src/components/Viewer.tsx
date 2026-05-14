@@ -1,17 +1,11 @@
 "use client";
 
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import { Canvas } from "@react-three/fiber";
 import { Bounds, Environment, OrbitControls } from "@react-three/drei";
-import { Suspense, useRef, useState, type ElementRef } from "react";
+import { Suspense, useState } from "react";
 import { ErrorBoundary } from "./ErrorBoundary";
 import { Model, type AnimationInfo } from "./Model";
 import { AnimationPicker } from "./AnimationPicker";
-import {
-  CAMERA_FLOOR_CLEARANCE,
-  ORBIT_FLOOR_POLAR_LIMIT,
-  clampCameraAboveFloor,
-  polarLimitForCameraFloor,
-} from "./CameraFloorGuard";
 
 export function Viewer({ url }: { url: string }) {
   const [anim, setAnim] = useState<AnimationInfo | null>(null);
@@ -46,46 +40,12 @@ export function Viewer({ url }: { url: string }) {
             <Environment preset="city" environmentIntensity={0.5} />
           </ErrorBoundary>
         </Suspense>
-        <FloorAwareOrbitControls />
+        <OrbitControls makeDefault enableDamping dampingFactor={0.1} />
       </Canvas>
       {anim && anim.names.length > 0 && (
         <AnimationPicker names={anim.names} onChange={setPlayAnim} />
       )}
     </>
-  );
-}
-
-function FloorAwareOrbitControls() {
-  const controlsRef = useRef<ElementRef<typeof OrbitControls>>(null);
-  const { camera } = useThree();
-
-  useFrame(() => {
-    const controls = controlsRef.current;
-    if (!controls) return;
-
-    // Keep OrbitControls in charge of floor limits; an external position clamp
-    // fights damping and creates visible snap-back.
-    const clamped = clampCameraAboveFloor(camera, CAMERA_FLOOR_CLEARANCE);
-    const nextMaxPolarAngle = polarLimitForCameraFloor(
-      camera,
-      controls.target,
-      CAMERA_FLOOR_CLEARANCE,
-    );
-    const changed =
-      Math.abs(controls.maxPolarAngle - nextMaxPolarAngle) > 0.0001;
-    if (changed) controls.maxPolarAngle = nextMaxPolarAngle;
-
-    if (changed || clamped) controls.update();
-  });
-
-  return (
-    <OrbitControls
-      ref={controlsRef}
-      makeDefault
-      enableDamping
-      dampingFactor={0.1}
-      maxPolarAngle={ORBIT_FLOOR_POLAR_LIMIT}
-    />
   );
 }
 
