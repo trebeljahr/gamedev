@@ -65,6 +65,10 @@ function loudnessFromPcm(buffer: Buffer, bucketCount: number): { loudness: numbe
   let totalSquares = 0;
   let totalPeak = 0;
 
+  if (sampleCount === 0) {
+    return { loudness: raw, peak: 0, rms: 0 };
+  }
+
   for (let bucket = 0; bucket < bucketCount; bucket += 1) {
     const start = Math.floor((bucket / bucketCount) * sampleCount);
     const end = Math.max(start + 1, Math.floor(((bucket + 1) / bucketCount) * sampleCount));
@@ -118,6 +122,27 @@ async function decodePcm(file: string, sampleRate: number): Promise<Buffer> {
   return stdout;
 }
 
+function chooseDecodeSampleRate({
+  duration,
+  sourceSampleRate,
+  analysisSampleRate,
+  bucketCount,
+}: {
+  duration: number | null;
+  sourceSampleRate: number | null;
+  analysisSampleRate: number;
+  bucketCount: number;
+}): number {
+  let decodeSampleRate = analysisSampleRate;
+  if (duration && duration > 0) {
+    decodeSampleRate = Math.max(decodeSampleRate, Math.ceil(bucketCount / duration));
+  }
+  if (sourceSampleRate && sourceSampleRate > 0) {
+    decodeSampleRate = Math.min(decodeSampleRate, sourceSampleRate);
+  }
+  return Math.max(1, decodeSampleRate);
+}
+
 export async function hashFile(file: string): Promise<string> {
   const hash = createHash("sha256");
   await new Promise<void>((resolve, reject) => {
@@ -157,11 +182,22 @@ export async function analyzeAudioFile({
   bucketCount?: number;
   analysisSampleRate?: number;
 }): Promise<AudioAnalysisItem> {
-  const [probe, pcm] = await Promise.all([ffprobe(file), decodePcm(file, analysisSampleRate)]);
+  const probe = await ffprobe(file);
   const firstStream = probe.streams?.[0];
   const sourceSampleRate = firstStream?.sample_rate ? Number(firstStream.sample_rate) : null;
   const byteLength = probe.format?.size ? Number(probe.format.size) : 0;
-  const duration = probe.format?.duration ? Number(probe.format.duration) : pcm.length / 4 / analysisSampleRate;
+  const probeDuration = probe.format?.duration ? Number(probe.format.duration) : null;
+  const decodeSampleRate = chooseDecodeSampleRate({
+    duration: Number.isFinite(probeDuration) ? probeDuration : null,
+    sourceSampleRate: Number.isFinite(sourceSampleRate) ? sourceSampleRate : null,
+    analysisSampleRate,
+    bucketCount,
+  });
+  let pcm = await decodePcm(file, decodeSampleRate);
+  if (pcm.length === 0 && sourceSampleRate && sourceSampleRate !== decodeSampleRate) {
+    pcm = await decodePcm(file, sourceSampleRate);
+  }
+  const duration = probeDuration ?? pcm.length / 4 / decodeSampleRate;
   const envelope = loudnessFromPcm(pcm, bucketCount);
 
   return {
