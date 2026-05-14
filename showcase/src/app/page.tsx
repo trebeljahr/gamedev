@@ -4,7 +4,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { manifest } from "@/lib/manifest";
 import { catalog, mediaStats, sourceMappings } from "@/lib/media";
 import { CatalogSearch } from "@/components/CatalogSearch";
-import { navGroups } from "@/lib/navigation";
+import { AssetTypeNav } from "@/components/AssetTypeNav";
 import { pageMetadata } from "@/lib/seo";
 import {
   LibraryHeroShowreel,
@@ -184,26 +184,7 @@ export default async function HomePage({ searchParams }: HomePageProps) {
           <LibraryHeroShowreel sprites={featuredSprites} sounds={featuredSounds} />
         </section>
 
-        <nav className="asset-type-nav" aria-label="Asset library navigation">
-          {navGroups.map((group) => (
-            <details key={group.key} className="nav-drawer">
-              <summary className="nav-trigger" data-active={group.key === "packs" ? "" : undefined}>
-                <span>{group.label}</span>
-                <span className="nav-chevron" aria-hidden="true" />
-              </summary>
-              <div className="nav-panel">
-                {group.items.map((child) => (
-                  <Link key={child.href} href={child.href}>
-                    {child.label}
-                  </Link>
-                ))}
-              </div>
-            </details>
-          ))}
-          <span className="asset-nav-note">
-            {totalModels.toLocaleString()} models · {textureGroupLabel} · {totalMediaCollections} media collections
-          </span>
-        </nav>
+        <AssetTypeNav note={`${totalModels.toLocaleString()} models · ${textureGroupLabel} · ${totalMediaCollections} media collections`} />
 
         <section className="catalog-heading" id="3d-collections" aria-labelledby="packs-heading">
           <div>

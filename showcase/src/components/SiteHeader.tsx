@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import type { ReactNode } from "react";
+import type { MouseEvent, ReactNode } from "react";
 import { navItems, type NavKey } from "@/lib/navigation";
 
 type SiteHeaderProps = {
@@ -28,7 +28,7 @@ function activeKey(pathname: string, search: string, hash: string): NavKey | und
   return "packs";
 }
 
-function shouldUsePendingActive(event: React.MouseEvent): boolean {
+function shouldUsePendingActive(event: MouseEvent): boolean {
   return (
     !event.defaultPrevented &&
     event.button === 0 &&
@@ -96,12 +96,16 @@ export function SiteHeader({ meta, compact = false, active }: SiteHeaderProps) {
                 key={item.key}
                 className="nav-drawer"
                 open={openKey === item.key}
-                onToggle={(event) => {
-                  const isOpen = event.currentTarget.open;
-                  setOpenKey((currentOpen) => (isOpen ? item.key : currentOpen === item.key ? null : currentOpen));
-                }}
               >
-                <summary className="nav-trigger" data-active={current === item.key ? "" : undefined}>
+                <summary
+                  className="nav-trigger"
+                  data-active={current === item.key ? "" : undefined}
+                  onClick={(event) => {
+                    event.preventDefault();
+                    setOpenKey((currentOpen) => (currentOpen === item.key ? null : item.key));
+                  }}
+                  aria-expanded={openKey === item.key}
+                >
                   <span>{item.label}</span>
                   <span className="nav-chevron" aria-hidden="true" />
                 </summary>
