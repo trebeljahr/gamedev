@@ -51,7 +51,7 @@ export default async function MediaPage({ searchParams }: MediaPageProps) {
           : "all"
       }
       initialSpriteMotion={motion === "animated" || motion === "static" ? motion : "all"}
-      initialSoundType={type === "music" || type === "all" ? type : "sfx"}
+      initialSoundType={type === "music" || type === "sfx" || type === "all" ? type : "all"}
     />
   );
 }

@@ -6,7 +6,7 @@ import { LicenseLink } from "@/components/LicenseLink";
 import { NavDrawer } from "@/components/NavDrawer";
 import { InfiniteListSentinel, useInfiniteList } from "@/components/useInfiniteList";
 import type { ArtPack, ArtSample, AudioAnalysis, MusicTrack, SoundCollection, SoundSample, SourceMapping } from "@/lib/media";
-import { artCreators } from "@/lib/media";
+import { artCreators, mediaPackHref } from "@/lib/media";
 import {
   artDesignKey,
   isLikelyHybridSpriteAtlasPath,
@@ -38,9 +38,16 @@ type SpriteSubjectFilter = "all" | "characters" | "environments" | "effects-item
 type SpriteMotionFilter = "all" | "animated" | "static";
 type SoundTypeFilter = "all" | "sfx" | "music";
 type SoundOrganization = SoundCollection["organization"];
-type SoundOrganizationFilter = "all" | SoundOrganization;
 type SpriteLayoutMode = "static" | "grid" | "variable" | "atlas" | "hybrid-atlas" | "sequence-pack";
 type SpriteSequenceMode = "off" | "hybrid-atlas" | "sequence-pack";
+type SoundEffectItem = SoundSample & {
+  collection: SoundCollection;
+  source: string;
+  license: string;
+  organization: SoundOrganization;
+  organizationLabel: string;
+  packHref: string;
+};
 type SpriteGrid = {
   cols: number;
   rows: number;
@@ -278,9 +285,10 @@ function artSampleGroups(samples: ArtSample[]): ArtSampleGroup[] {
 }
 
 function searchMatches(searchText: string, query: string): boolean {
+  const normalizedSearchText = `${searchText} ${searchText.replace(/\bkrab\b/gi, "crab").replace(/alkakrab/gi, "alkacrab")}`;
   const terms = query.trim().toLowerCase().split(/\s+/).filter(Boolean);
   if (terms.length === 0) return true;
-  return terms.every((term) => searchText.includes(term));
+  return terms.every((term) => normalizedSearchText.includes(term));
 }
 
 function creatorUrlForPacks(packs: ArtPack[]): string | undefined {
@@ -342,16 +350,41 @@ const ART_TAXONOMY_ORDER = [
   "Spritesheets / Other / Static",
 ];
 
-const SOUND_ORGANIZATION_ORDER: SoundOrganization[] = ["user-collection", "creator-pack", "source-pattern"];
-const SOUND_ORGANIZATION_NAMES: Record<SoundOrganization, string> = {
-  "user-collection": "User collections",
-  "creator-pack": "Creator packs",
+const SOUND_CATEGORY_ORDER = ["movement", "combat", "ui", "ambient", "effect", "source-pattern"];
+const SOUND_CATEGORY_NAMES: Record<string, string> = {
+  movement: "Movement",
+  combat: "Combat",
+  ui: "UI",
+  ambient: "Ambience",
+  effect: "Effects",
   "source-pattern": "Source patterns",
 };
 const TEXTURE_LIST_PAGE_SIZE = 80;
 const SOUND_LIST_PAGE_SIZE = 32;
 const MUSIC_LIST_PAGE_SIZE = 60;
 const ART_LIST_PAGE_SIZE = 48;
+
+function soundCategoryLabel(category: string): string {
+  return (
+    SOUND_CATEGORY_NAMES[category] ??
+    category
+      .replace(/[-_]+/g, " ")
+      .replace(/\b\w/g, (character) => character.toUpperCase())
+  );
+}
+
+function compareSoundCategories(a: string, b: string): number {
+  const aIndex = SOUND_CATEGORY_ORDER.indexOf(a);
+  const bIndex = SOUND_CATEGORY_ORDER.indexOf(b);
+  if (aIndex !== -1 || bIndex !== -1) {
+    return (aIndex === -1 ? Number.MAX_SAFE_INTEGER : aIndex) - (bIndex === -1 ? Number.MAX_SAFE_INTEGER : bIndex);
+  }
+  return soundCategoryLabel(a).localeCompare(soundCategoryLabel(b));
+}
+
+function musicTrackPackId(track: MusicTrack): string {
+  return track.packId ?? track.path.split("/").slice(0, -1).join("/");
+}
 
 function isSpriteSheetCandidate(sample: ArtSample): boolean {
   return sample.animated || isLikelySpriteSheetPath(sample.path) || /(?:sprite|spritesheet|sheet|animation|anim)/i.test(sample.label);
@@ -2489,17 +2522,64 @@ function AudioPlayer({
   );
 }
 
-function SoundPad({ collection }: { collection: SoundCollection }) {
-  const [sample, setSample] = useState<SoundSample | undefined>(collection.samples[0]);
+function MusicTrackRow({ track }: { track: MusicTrack }) {
+  const packId = musicTrackPackId(track);
+  return (
+    <article className="track-row">
+      <div className="media-row-kicker">
+        <span className="sound-org sound-org-music">Music</span>
+        <span>{track.source}</span>
+        {track.packTitle && <span>{track.packTitle}</span>}
+      </div>
+      <AudioPlayer
+        src={track.src}
+        title={track.title}
+        detail={
+          <>
+            {track.source} ·{" "}
+            <LicenseLink
+              license={track.license}
+              source={track.source}
+              fallbackUrl={track.url}
+              className="inline-license-link"
+              fallbackElement="span"
+            />
+          </>
+        }
+        compact
+        audio={track.audio}
+      />
+      <p>{track.description}</p>
+      <div className="media-actions">
+        <Link href={mediaPackHref("music", packId)}>{track.packTitle ? "pack" : "group"}</Link>
+        {track.url && (
+          <a href={track.url} target="_blank" rel="noreferrer">
+            source
+          </a>
+        )}
+      </div>
+      <div className="inline-tags">
+        {uniqueTags(track.tags).slice(0, 5).map((tag) => (
+          <span key={tag}>{tag}</span>
+        ))}
+      </div>
+    </article>
+  );
+}
+
+function SoundPad({ collection, initialSamplePath }: { collection: SoundCollection; initialSamplePath?: string }) {
+  const [sample, setSample] = useState<SoundSample | undefined>(
+    collection.samples.find((item) => item.path === initialSamplePath) ?? collection.samples[0],
+  );
   const [volume, setVolume] = useState(0.8);
   const [rate, setRate] = useState(1);
   const [loop, setLoop] = useState(false);
   const [playSignal, setPlaySignal] = useState(0);
 
   useEffect(() => {
-    setSample(collection.samples[0]);
+    setSample(collection.samples.find((item) => item.path === initialSamplePath) ?? collection.samples[0]);
     setPlaySignal(0);
-  }, [collection.id, collection.samples]);
+  }, [collection.id, collection.samples, initialSamplePath]);
 
   function play(next: SoundSample | undefined = sample) {
     if (!next) return;
@@ -2520,7 +2600,8 @@ function SoundPad({ collection }: { collection: SoundCollection }) {
               fallbackUrl={collection.url}
               className="inline-license-link"
               fallbackElement="span"
-            />
+            />{" "}
+            · <Link href={mediaPackHref("sound", collection.id)}>Pack page</Link>
           </div>
         </div>
       </div>
@@ -2573,7 +2654,7 @@ export function MediaExplorer({
   initialArtType = "all",
   initialSpriteSubject = "all",
   initialSpriteMotion = "all",
-  initialSoundType = "sfx",
+  initialSoundType = "all",
 }: MediaExplorerProps) {
   const [view, setView] = useState<View>(initialView);
   const [query, setQuery] = useState("");
@@ -2585,11 +2666,10 @@ export function MediaExplorer({
   const [spriteSubjectFilter, setSpriteSubjectFilter] = useState<SpriteSubjectFilter>(initialSpriteSubject);
   const [spriteMotionFilter, setSpriteMotionFilter] = useState<SpriteMotionFilter>(initialSpriteMotion);
   const [soundTypeFilter, setSoundTypeFilter] = useState<SoundTypeFilter>(initialSoundType);
-  const [soundOrganizationFilter, setSoundOrganizationFilter] = useState<SoundOrganizationFilter>("all");
   const [soundCategoryFilter, setSoundCategoryFilter] = useState("all");
   const [selectedArtFolder, setSelectedArtFolder] = useState(artPacks[0]?.folder ?? "");
-  const [selectedSoundId, setSelectedSoundId] = useState(
-    soundCollections.find((item) => item.samples.length > 0)?.id ?? soundCollections[0]?.id ?? "",
+  const [selectedSoundPath, setSelectedSoundPath] = useState(
+    soundCollections.find((item) => item.samples.length > 0)?.samples[0]?.path ?? "",
   );
 
   useEffect(() => {
@@ -2611,25 +2691,30 @@ export function MediaExplorer({
     [soundCollections],
   );
 
-  const soundOrganizations = useMemo(
+  const soundEffectItems = useMemo<SoundEffectItem[]>(
     () =>
-      [
-        "all",
-        ...SOUND_ORGANIZATION_ORDER.filter((organization) =>
-          soundEffectCollections.some((collection) => collection.organization === organization),
-        ),
-      ] as SoundOrganizationFilter[],
+      soundEffectCollections.flatMap((collection) =>
+        collection.samples.map((sample) => ({
+          ...sample,
+          collection,
+          source: collection.source,
+          license: collection.license,
+          organization: collection.organization,
+          organizationLabel: collection.organizationLabel,
+          packHref: mediaPackHref("sound", collection.id),
+        })),
+      ),
     [soundEffectCollections],
   );
 
   const soundSources = useMemo(
-    () => ["all", ...Array.from(new Set(soundEffectCollections.map((s) => s.source))).sort()],
-    [soundEffectCollections],
+    () => ["all", ...Array.from(new Set(soundEffectItems.map((item) => item.source))).sort()],
+    [soundEffectItems],
   );
 
   const soundCategories = useMemo(
-    () => ["all", ...Array.from(new Set(soundEffectCollections.map((collection) => collection.category))).sort()],
-    [soundEffectCollections],
+    () => ["all", ...Array.from(new Set(soundEffectItems.map((item) => item.category))).sort(compareSoundCategories)],
+    [soundEffectItems],
   );
 
   useEffect(() => {
@@ -2637,12 +2722,6 @@ export function MediaExplorer({
       setSoundCategoryFilter("all");
     }
   }, [soundCategories, soundCategoryFilter]);
-
-  useEffect(() => {
-    if (!soundOrganizations.includes(soundOrganizationFilter)) {
-      setSoundOrganizationFilter("all");
-    }
-  }, [soundOrganizationFilter, soundOrganizations]);
 
   const artLicenses = useMemo(
     () => ["all", ...Array.from(new Set(artPacks.map((p) => licenseBucket(p.license_class))))],
@@ -2652,13 +2731,12 @@ export function MediaExplorer({
   const filteredSounds = useMemo(() => {
     if (soundTypeFilter === "music") return [];
     const q = query.trim().toLowerCase();
-    return soundEffectCollections.filter((item) => {
-      if (soundOrganizationFilter !== "all" && item.organization !== soundOrganizationFilter) return false;
+    return soundEffectItems.filter((item) => {
       if (sourceFilter !== "all" && item.source !== sourceFilter) return false;
       if (soundCategoryFilter !== "all" && item.category !== soundCategoryFilter) return false;
-      return searchMatches(item.searchText, q);
+      return searchMatches(`${item.searchText} ${item.collection.searchText}`.toLowerCase(), q);
     });
-  }, [query, soundCategoryFilter, soundEffectCollections, soundOrganizationFilter, soundTypeFilter, sourceFilter]);
+  }, [query, soundCategoryFilter, soundEffectItems, soundTypeFilter, sourceFilter]);
 
   const filteredMusic = useMemo(() => {
     if (soundTypeFilter === "sfx") return [];
@@ -2699,38 +2777,33 @@ export function MediaExplorer({
   }, [filteredArt, groupMode]);
 
   const groupedSounds = useMemo(() => {
-    return SOUND_ORGANIZATION_ORDER.map((organization) => ({
-      organization,
-      label: SOUND_ORGANIZATION_NAMES[organization],
-      collections: filteredSounds.filter((collection) => collection.organization === organization),
-    })).filter((group) => group.collections.length > 0);
+    return Array.from(new Set(filteredSounds.map((item) => item.category)))
+      .sort(compareSoundCategories)
+      .map((category) => ({
+        category,
+        label: soundCategoryLabel(category),
+        items: filteredSounds.filter((item) => item.category === category),
+      }))
+      .filter((group) => group.items.length > 0);
   }, [filteredSounds]);
 
   const soundList = useInfiniteList({
     total: filteredSounds.length,
     pageSize: SOUND_LIST_PAGE_SIZE,
-    resetKey: ["sounds", query, soundCategoryFilter, soundOrganizationFilter, soundTypeFilter, sourceFilter].join("|"),
+    resetKey: ["sounds", query, soundCategoryFilter, soundTypeFilter, sourceFilter].join("|"),
   });
 
   const visibleGroupedSounds = useMemo(() => {
     let remaining = soundList.visibleCount;
     return groupedSounds.flatMap((group) => {
       if (remaining <= 0) return [];
-      const collections = group.collections.slice(0, remaining);
-      remaining -= collections.length;
-      return collections.length > 0 ? [{ ...group, collections, totalCollections: group.collections.length }] : [];
+      const items = group.items.slice(0, remaining);
+      remaining -= items.length;
+      return items.length > 0 ? [{ ...group, items, totalItems: group.items.length }] : [];
     });
   }, [groupedSounds, soundList.visibleCount]);
 
-  const soundOrganizationCounts = useMemo(() => {
-    return soundEffectCollections.reduce<Record<SoundOrganization, number>>(
-      (counts, collection) => {
-        counts[collection.organization] += 1;
-        return counts;
-      },
-      { "user-collection": 0, "creator-pack": 0, "source-pattern": 0 },
-    );
-  }, [soundEffectCollections]);
+  const musicPackCount = useMemo(() => new Set(musicTracks.map((track) => musicTrackPackId(track))).size, [musicTracks]);
 
   useEffect(() => {
     if (!filteredArt.some((pack) => pack.folder === selectedArtFolder)) {
@@ -2739,10 +2812,10 @@ export function MediaExplorer({
   }, [filteredArt, selectedArtFolder]);
 
   useEffect(() => {
-    if (!filteredSounds.some((item) => item.id === selectedSoundId)) {
-      setSelectedSoundId(filteredSounds.find((item) => item.samples.length > 0)?.id ?? filteredSounds[0]?.id ?? "");
+    if (!filteredSounds.some((item) => item.path === selectedSoundPath)) {
+      setSelectedSoundPath(filteredSounds[0]?.path ?? "");
     }
-  }, [filteredSounds, selectedSoundId]);
+  }, [filteredSounds, selectedSoundPath]);
 
   const textureMappings = useMemo(
     () => sourceMappings.filter((mapping) => mapping.medium === "texture" || mapping.category === "texture"),
@@ -2785,7 +2858,8 @@ export function MediaExplorer({
 
   const activeAssetGroup: NavKey = view === "sounds" ? "sounds" : view === "sources" ? "packs" : "art";
   const selectedArt = filteredArt.find((pack) => pack.folder === selectedArtFolder) ?? filteredArt[0] ?? artPacks[0];
-  const selectedSound = filteredSounds.find((item) => item.id === selectedSoundId) ?? filteredSounds[0] ?? soundCollections[0];
+  const selectedSound = filteredSounds.find((item) => item.path === selectedSoundPath) ?? filteredSounds[0] ?? soundEffectItems[0];
+  const selectedSoundCollection = selectedSound?.collection;
 
   function selectArtType(value: ArtTypeFilter) {
     setArtTypeFilter(value);
@@ -2800,7 +2874,6 @@ export function MediaExplorer({
     if (value === "all") {
       setSoundCategoryFilter("all");
       setSourceFilter("all");
-      setSoundOrganizationFilter("all");
     }
   }
 
@@ -2810,8 +2883,8 @@ export function MediaExplorer({
         active={activeAssetGroup}
         meta={
           <>
-            {artPacks.length} 2D sets · {textureGroupLabel} · {soundOrganizationCounts["user-collection"]} user SFX collections ·{" "}
-            {soundOrganizationCounts["creator-pack"]} creator SFX packs · {musicTracks.length} music tracks
+            {artPacks.length} 2D sets · {textureGroupLabel} · {soundEffectItems.length} SFX previews ·{" "}
+            {musicTracks.length} music tracks · {soundEffectCollections.length + musicPackCount} audio packs
           </>
         }
       />
@@ -2861,17 +2934,7 @@ export function MediaExplorer({
                 <select value={soundCategoryFilter} onChange={(event) => setSoundCategoryFilter(event.target.value)}>
                   {soundCategories.map((category) => (
                     <option key={category} value={category}>
-                      {category === "all" ? "All SFX categories" : category}
-                    </option>
-                  ))}
-                </select>
-                <select
-                  value={soundOrganizationFilter}
-                  onChange={(event) => setSoundOrganizationFilter(event.target.value as SoundOrganizationFilter)}
-                >
-                  {soundOrganizations.map((organization) => (
-                    <option key={organization} value={organization}>
-                      {organization === "all" ? "All organization types" : SOUND_ORGANIZATION_NAMES[organization]}
+                      {category === "all" ? "All SFX categories" : soundCategoryLabel(category)}
                     </option>
                   ))}
                 </select>
@@ -3000,152 +3063,89 @@ export function MediaExplorer({
         </div>
       ) : view === "sounds" ? (
         <div className={soundTypeFilter === "music" ? "media-single-column" : "media-columns"}>
-          {soundTypeFilter !== "music" && (
-            <section className="media-panel">
-              <div className="panel-heading">
-                <h3>Sound effects</h3>
-                <span>
-                  {soundOrganizationCounts["user-collection"]} user collections · {soundOrganizationCounts["creator-pack"]} creator packs
-                </span>
-              </div>
-              <div className="sound-groups">
-                {visibleGroupedSounds.map((group) => (
-                  <section className="sound-group" key={group.organization}>
-                    <div className="sound-group-heading">
-                      <h4>{group.label}</h4>
-                      <span>{group.totalCollections} folders</span>
-                    </div>
-                    <div className="media-list">
-                      {group.collections.map((item) => (
-                        <article className={`media-row ${item.id === selectedSoundId ? "active" : ""}`} key={item.id}>
-                          <button type="button" className="row-button" onClick={() => setSelectedSoundId(item.id)}>
-                            <div>
-                              <div className="media-row-kicker">
-                                <span className={`sound-org sound-org-${item.organization}`}>{item.organizationLabel}</span>
-                                <span>{item.source}</span>
+          <section className="media-panel">
+            {soundTypeFilter !== "music" && (
+              <>
+                <div className="panel-heading">
+                  <h3>Sound effects</h3>
+                  <span>{filteredSounds.length} sounds · {soundEffectCollections.length} packs</span>
+                </div>
+                <div className="sound-groups">
+                  {visibleGroupedSounds.map((group) => (
+                    <section className="sound-group" key={group.category}>
+                      <div className="sound-group-heading">
+                        <h4>{group.label}</h4>
+                        <span>{group.totalItems} sounds</span>
+                      </div>
+                      <div className="media-list">
+                        {group.items.map((item) => (
+                          <article className={`media-row ${item.path === selectedSoundPath ? "active" : ""}`} key={item.path}>
+                            <button type="button" className="row-button" onClick={() => setSelectedSoundPath(item.path)}>
+                              <div>
+                                <div className="media-row-kicker">
+                                  <span className={`sound-org sound-org-${item.organization}`}>
+                                    {item.organization === "creator-pack" ? "Pack" : "Collection"}
+                                  </span>
+                                  <span>{item.source}</span>
+                                </div>
+                                <div className="media-title">{item.label}</div>
+                                <div className="media-detail">{soundCategoryLabel(item.category)} · {item.collection.title}</div>
+                                <p>{item.description}</p>
                               </div>
-                              <div className="media-title">{item.title}</div>
-                              <div className="media-detail">{item.category} · {item.path}</div>
-                              <p>{item.description}</p>
+                            </button>
+                            <div className="media-actions">
+                              <Link href={item.packHref}>pack</Link>
+                              {item.collection.url && (
+                                <a href={item.collection.url} target="_blank" rel="noreferrer">
+                                  source
+                                </a>
+                              )}
                             </div>
-                          </button>
-                          <div className="media-actions">
-                            <span>{item.samples.length} samples</span>
-                            {item.url && (
-                              <a href={item.url} target="_blank" rel="noreferrer">
-                                source
-                              </a>
-                            )}
-                          </div>
-                        </article>
-                      ))}
-                    </div>
-                  </section>
-                ))}
-                <InfiniteListSentinel
-                  className="media-list-sentinel"
-                  hasMore={soundList.hasMore}
-                  label="Loading sounds"
-                  onLoadMore={soundList.loadMore}
-                  pageSize={SOUND_LIST_PAGE_SIZE}
-                  remaining={soundList.remaining}
-                  sentinelRef={soundList.sentinelRef}
-                />
-                {groupedSounds.length === 0 && <div className="empty-preview">No sound folders match.</div>}
-              </div>
-            </section>
-          )}
+                          </article>
+                        ))}
+                      </div>
+                    </section>
+                  ))}
+                  <InfiniteListSentinel
+                    className="media-list-sentinel"
+                    hasMore={soundList.hasMore}
+                    label="Loading sounds"
+                    onLoadMore={soundList.loadMore}
+                    pageSize={SOUND_LIST_PAGE_SIZE}
+                    remaining={soundList.remaining}
+                    sentinelRef={soundList.sentinelRef}
+                  />
+                  {groupedSounds.length === 0 && <div className="empty-preview">No sound effects match.</div>}
+                </div>
+              </>
+            )}
+
+            {soundTypeFilter !== "sfx" && (
+              <section className="sound-group sound-music-group">
+                <div className="panel-heading">
+                  <h3>Music</h3>
+                  <span>{filteredMusic.length} tracks · {musicPackCount} packs</span>
+                </div>
+                <div className="track-list">
+                  {visibleMusic.map((track) => <MusicTrackRow key={track.path} track={track} />)}
+                  <InfiniteListSentinel
+                    className="media-list-sentinel"
+                    hasMore={musicList.hasMore}
+                    label="Loading tracks"
+                    onLoadMore={musicList.loadMore}
+                    pageSize={MUSIC_LIST_PAGE_SIZE}
+                    remaining={musicList.remaining}
+                    sentinelRef={musicList.sentinelRef}
+                  />
+                  {filteredMusic.length === 0 && <div className="empty-preview">No music tracks match.</div>}
+                </div>
+              </section>
+            )}
+          </section>
 
           {soundTypeFilter !== "music" && (
             <section className="media-panel sticky-panel">
-              {selectedSound && <SoundPad collection={selectedSound} />}
-              {soundTypeFilter === "all" && filteredMusic.length > 0 && (
-                <>
-                  <h3>Music</h3>
-                  <div className="track-list">
-                    {visibleMusic.map((track) => (
-                      <article className="track-row" key={track.path}>
-                        <AudioPlayer
-                          src={track.src}
-                          title={track.title}
-                          detail={
-                            <>
-                              {track.source} ·{" "}
-                              <LicenseLink
-                                license={track.license}
-                                source={track.source}
-                                fallbackUrl={track.url}
-                                className="inline-license-link"
-                                fallbackElement="span"
-                              />
-                            </>
-                          }
-                          compact
-                          audio={track.audio}
-                        />
-                        <p>{track.description}</p>
-                      </article>
-                    ))}
-                    <InfiniteListSentinel
-                      className="media-list-sentinel"
-                      hasMore={musicList.hasMore}
-                      label="Loading tracks"
-                      onLoadMore={musicList.loadMore}
-                      pageSize={MUSIC_LIST_PAGE_SIZE}
-                      remaining={musicList.remaining}
-                      sentinelRef={musicList.sentinelRef}
-                    />
-                  </div>
-                </>
-              )}
-            </section>
-          )}
-
-          {soundTypeFilter === "music" && (
-            <section className="media-panel">
-              <div className="panel-heading">
-                <h3>Music</h3>
-                <span>{filteredMusic.length} tracks</span>
-              </div>
-              <div className="track-list">
-                {visibleMusic.map((track) => (
-                  <article className="track-row" key={track.path}>
-                    <AudioPlayer
-                      src={track.src}
-                      title={track.title}
-                      detail={
-                        <>
-                          {track.source} ·{" "}
-                          <LicenseLink
-                            license={track.license}
-                            source={track.source}
-                            fallbackUrl={track.url}
-                            className="inline-license-link"
-                            fallbackElement="span"
-                          />
-                        </>
-                      }
-                      compact
-                      audio={track.audio}
-                    />
-                    <p>{track.description}</p>
-                    <div className="inline-tags">
-                      {uniqueTags(track.tags).slice(0, 5).map((tag) => (
-                        <span key={tag}>{tag}</span>
-                      ))}
-                    </div>
-                  </article>
-                ))}
-                <InfiniteListSentinel
-                  className="media-list-sentinel"
-                  hasMore={musicList.hasMore}
-                  label="Loading tracks"
-                  onLoadMore={musicList.loadMore}
-                  pageSize={MUSIC_LIST_PAGE_SIZE}
-                  remaining={musicList.remaining}
-                  sentinelRef={musicList.sentinelRef}
-                />
-              </div>
+              {selectedSoundCollection && <SoundPad collection={selectedSoundCollection} initialSamplePath={selectedSound?.path} />}
             </section>
           )}
         </div>

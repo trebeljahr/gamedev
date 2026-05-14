@@ -1755,6 +1755,11 @@ select:focus-visible {
 .sound-org-source-pattern {
   border-color: rgba(160,160,170,0.24);
 }
+.sound-org-music {
+  border-color: rgba(117,218,169,0.28);
+  color: #9ee6c4;
+  background: rgba(117,218,169,0.08);
+}
 .media-actions {
   display: flex;
   align-items: center;
@@ -2495,6 +2500,9 @@ select:focus-visible {
   display: grid;
   gap: 22px;
 }
+.sound-music-group {
+  margin-top: 28px;
+}
 .sound-group-heading {
   display: flex;
   align-items: baseline;
@@ -2513,6 +2521,23 @@ select:focus-visible {
 .sound-group-heading span {
   color: var(--muted);
   font-size: 12px;
+}
+.media-pack-panel {
+  display: grid;
+  gap: 16px;
+}
+.media-pack-notes {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+.media-pack-list {
+  margin-top: 4px;
+}
+.media-pack-audio {
+  width: 100%;
+  margin-top: 10px;
 }
 .art-groups {
   display: grid;

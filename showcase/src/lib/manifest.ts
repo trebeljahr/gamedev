@@ -62,6 +62,10 @@ export function findPack(vendor: string, pack: string): Pack | undefined {
   return manifest.packs.find((p) => p.vendor === vendor && p.pack === pack);
 }
 
+export function displayPackTitle(pack: Pack): string {
+  return pack.title || pack.label || pack.pack;
+}
+
 /**
  * Prefix a manifest-relative URL (`/glb/<vendor>/...` or `/raw/<vendor>/...`)
  * with the configured asset base URL. `NEXT_PUBLIC_ASSETS_BASE_URL` is
