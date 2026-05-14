@@ -6,7 +6,12 @@ import { LicenseLink } from "@/components/LicenseLink";
 import { InfiniteListSentinel, useInfiniteList } from "@/components/useInfiniteList";
 import type { ArtPack, ArtSample, AudioAnalysis, MusicTrack, SoundCollection, SoundSample, SourceMapping } from "@/lib/media";
 import { artCreators } from "@/lib/media";
-import { isLikelyHybridSpriteAtlasPath, isLikelySpriteSheetPath, isLikelyTextureAtlasPath } from "@/lib/media-inference";
+import {
+  isLikelyHybridSpriteAtlasPath,
+  isLikelyMarketingPreviewPath,
+  isLikelySpriteSheetPath,
+  isLikelyTextureAtlasPath,
+} from "@/lib/media-inference";
 import { SiteHeader } from "@/components/SiteHeader";
 import { navGroups, type NavKey } from "@/lib/navigation";
 import { uniqueTags } from "@/lib/tags";
@@ -137,11 +142,18 @@ function initials(value: string): string {
     .join("");
 }
 
+function materialSamplesFor(pack: ArtPack): ArtSample[] {
+  const materialSamples = pack.samples.filter((sample) => !isLikelyMarketingPreviewPath(sample.path));
+  return materialSamples.length > 0 ? materialSamples : pack.samples;
+}
+
 function sampleForPreview(pack: ArtPack): ArtSample | undefined {
+  const samples = materialSamplesFor(pack);
   return (
-    pack.samples.find((sample) => sample.kind === "icon" || sample.kind === "ui") ??
-    pack.samples.find((sample) => sample.kind === "character" || sample.kind === "sprite") ??
-    pack.samples[0]
+    samples.find((sample) => sample.kind === "icon" || sample.kind === "ui") ??
+    samples.find((sample) => sample.kind === "character" || sample.kind === "sprite") ??
+    samples.find((sample) => sample.kind === "tile" || sample.kind === "effect") ??
+    samples[0]
   );
 }
 
@@ -156,7 +168,8 @@ function creatorUrlForPacks(packs: ArtPack[]): string | undefined {
 }
 
 function artTypeFor(pack: ArtPack): Exclude<ArtTypeFilter, "all"> {
-  const sampleKinds = new Set(pack.samples.map((sample) => sample.kind));
+  const samples = materialSamplesFor(pack);
+  const sampleKinds = new Set(samples.map((sample) => sample.kind));
   const uiOrIcons = pack.theme === "UI" || pack.theme === "Icons & Items";
   if (uiOrIcons || (sampleKinds.size > 0 && [...sampleKinds].every((kind) => kind === "ui" || kind === "icon"))) {
     return "ui-icons";
@@ -165,7 +178,8 @@ function artTypeFor(pack: ArtPack): Exclude<ArtTypeFilter, "all"> {
 }
 
 function spriteSubjectFor(pack: ArtPack): Exclude<SpriteSubjectFilter, "all"> {
-  const text = `${pack.theme} ${pack.title} ${pack.folder} ${pack.tags.join(" ")} ${pack.samples
+  const samples = materialSamplesFor(pack);
+  const text = `${pack.theme} ${pack.title} ${pack.folder} ${pack.tags.join(" ")} ${samples
     .map((sample) => `${sample.kind} ${sample.path}`)
     .join(" ")}`.toLowerCase();
   if (/(character|characters|enemy|enemies|animal|creature|hero|knight|warrior|mage|archer|monster|dino)/.test(text)) {
@@ -181,7 +195,7 @@ function spriteSubjectFor(pack: ArtPack): Exclude<SpriteSubjectFilter, "all"> {
 }
 
 function spriteMotionFor(pack: ArtPack): Exclude<SpriteMotionFilter, "all"> {
-  return pack.samples.some((sample) => sample.animated) ? "animated" : "static";
+  return materialSamplesFor(pack).some((sample) => sample.animated) ? "animated" : "static";
 }
 
 function artTaxonomyLabel(pack: ArtPack): string {
@@ -1711,7 +1725,8 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
 }
 
 function ArtWorkbench({ pack }: { pack: ArtPack }) {
-  const selectedSample = pack.samples[0];
+  const selectedSample = sampleForPreview(pack);
+  const materialCount = materialSamplesFor(pack).length;
 
   return (
     <section className="art-workbench">
@@ -1747,7 +1762,7 @@ function ArtWorkbench({ pack }: { pack: ArtPack }) {
                 Source pack
               </a>
             )}
-            <small>{pack.samples.length} preview files</small>
+            <small>{materialCount} material files</small>
           </div>
         </div>
         <ArtCanvasRunner pack={pack} sample={selectedSample} />
@@ -1766,6 +1781,7 @@ function ArtPackCard({
   onSelect: () => void;
 }) {
   const sample = sampleForPreview(pack);
+  const materialCount = materialSamplesFor(pack).length;
   return (
     <article className={`art-card ${active ? "active" : ""}`}>
       <button type="button" onClick={onSelect}>
@@ -1774,7 +1790,7 @@ function ArtPackCard({
         </div>
         <div className="art-card-body">
           <strong>{pack.title}</strong>
-          <span>{pack.theme} · {pack.samples.length} previews</span>
+          <span>{pack.theme} · {materialCount} materials</span>
           <small>{pack.tags.slice(0, 3).join(" · ")}</small>
         </div>
       </button>

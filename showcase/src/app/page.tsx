@@ -11,7 +11,7 @@ import {
   type LibrarySoundPreview,
   type LibrarySpritePreview,
 } from "@/components/LibraryHeroShowreel";
-import { isLikelySpriteSheetPath } from "@/lib/media-inference";
+import { isLikelyMarketingPreviewPath, isLikelySpriteSheetPath } from "@/lib/media-inference";
 import type { ArtPack, ArtSample, ArtTheme } from "@/lib/media";
 
 type HomePageProps = {
@@ -54,7 +54,7 @@ function landingSpriteScore(pack: ArtPack, sample: ArtSample): number {
   if (/strip[\s_-]*\d{1,2}/i.test(sample.path)) score += 28;
   if (/\b(idle|walk|run|attack|move|loop|death|coin|fire|vfx|impact|explosion)\b/i.test(text)) score += 18;
   if (sample.kind === "effect" || sample.kind === "icon") score += 8;
-  if (/preview|sample|all free|all animations|all attacks/i.test(text)) score -= 24;
+  if (isLikelyMarketingPreviewPath(sample.path) || /all free|all animations|all attacks/i.test(text)) score -= 50;
   if (/\.gif($|[?#])/i.test(sample.path)) score -= 12;
   return score;
 }

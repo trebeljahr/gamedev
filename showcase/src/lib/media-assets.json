@@ -66,38 +66,6 @@
     },
     {
       "packFolder": "2D/kenney/1-bit-platformer-pack",
-      "path": "2D/kenney/1-bit-platformer-pack/extracted/Preview.png",
-      "src": "/2D/kenney/1-bit-platformer-pack/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/1-bit-platformer-pack",
-      "path": "2D/kenney/1-bit-platformer-pack/extracted/Sample.png",
-      "src": "/2D/kenney/1-bit-platformer-pack/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/1-bit-platformer-pack",
-      "path": "2D/kenney/1-bit-platformer-pack/Preview.png",
-      "src": "/2D/kenney/1-bit-platformer-pack/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/1-bit-platformer-pack",
-      "path": "2D/kenney/1-bit-platformer-pack/Sample.png",
-      "src": "/2D/kenney/1-bit-platformer-pack/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/1-bit-platformer-pack",
       "path": "2D/kenney/1-bit-platformer-pack/extracted/Tilemap/monochrome_tilemap_packed.png",
       "src": "/2D/kenney/1-bit-platformer-pack/extracted/Tilemap/monochrome_tilemap_packed.png",
       "label": "Monochrome Tilemap Packed",
@@ -177,22 +145,6 @@
       "animated": true
     },
     {
-      "packFolder": "2D/kenney/abstract-platformer",
-      "path": "2D/kenney/abstract-platformer/extracted/Preview_KenneyNL.png",
-      "src": "/2D/kenney/abstract-platformer/extracted/Preview_KenneyNL.png",
-      "label": "Preview KenneyNL",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/abstract-platformer",
-      "path": "2D/kenney/abstract-platformer/extracted/Preview.png",
-      "src": "/2D/kenney/abstract-platformer/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
       "packFolder": "2D/kenney/alien-ufo-pack",
       "path": "2D/kenney/alien-ufo-pack/extracted/Spritesheets/spritesheet_spaceships.png",
       "src": "/2D/kenney/alien-ufo-pack/extracted/Spritesheets/spritesheet_spaceships.png",
@@ -223,38 +175,6 @@
       "label": "Spritesheet Lasers",
       "kind": "sprite",
       "animated": true
-    },
-    {
-      "packFolder": "2D/kenney/alien-ufo-pack",
-      "path": "2D/kenney/alien-ufo-pack/extracted/Preview.png",
-      "src": "/2D/kenney/alien-ufo-pack/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/alien-ufo-pack",
-      "path": "2D/kenney/alien-ufo-pack/extracted/Sample.png",
-      "src": "/2D/kenney/alien-ufo-pack/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/alien-ufo-pack",
-      "path": "2D/kenney/alien-ufo-pack/Preview.png",
-      "src": "/2D/kenney/alien-ufo-pack/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/alien-ufo-pack",
-      "path": "2D/kenney/alien-ufo-pack/Sample.png",
-      "src": "/2D/kenney/alien-ufo-pack/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
     },
     {
       "packFolder": "2D/kenney/animal-pack",
@@ -401,54 +321,6 @@
       "animated": true
     },
     {
-      "packFolder": "2D/kenney/background-elements",
-      "path": "2D/kenney/background-elements/extracted/Preview.png",
-      "src": "/2D/kenney/background-elements/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/background-elements",
-      "path": "2D/kenney/background-elements/extracted/Sample.png",
-      "src": "/2D/kenney/background-elements/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/background-elements",
-      "path": "2D/kenney/background-elements/extracted/Samples/colored_castle.png",
-      "src": "/2D/kenney/background-elements/extracted/Samples/colored_castle.png",
-      "label": "Colored Castle",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/background-elements",
-      "path": "2D/kenney/background-elements/extracted/Samples/colored_desert.png",
-      "src": "/2D/kenney/background-elements/extracted/Samples/colored_desert.png",
-      "label": "Colored Desert",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/background-elements",
-      "path": "2D/kenney/background-elements/extracted/Samples/colored_forest.png",
-      "src": "/2D/kenney/background-elements/extracted/Samples/colored_forest.png",
-      "label": "Colored Forest",
-      "kind": "tile",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/background-elements",
-      "path": "2D/kenney/background-elements/extracted/Samples/colored_talltrees.png",
-      "src": "/2D/kenney/background-elements/extracted/Samples/colored_talltrees.png",
-      "label": "Colored Talltrees",
-      "kind": "image",
-      "animated": false
-    },
-    {
       "packFolder": "2D/kenney/background-elements-redux",
       "path": "2D/kenney/background-elements-redux/extracted/Backgrounds/backgroundColorFall.png",
       "src": "/2D/kenney/background-elements-redux/extracted/Backgrounds/backgroundColorFall.png",
@@ -471,22 +343,6 @@
       "label": "Spritesheet Retina",
       "kind": "sprite",
       "animated": true
-    },
-    {
-      "packFolder": "2D/kenney/background-elements-redux",
-      "path": "2D/kenney/background-elements-redux/extracted/Preview.png",
-      "src": "/2D/kenney/background-elements-redux/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/background-elements-redux",
-      "path": "2D/kenney/background-elements-redux/extracted/Sample.png",
-      "src": "/2D/kenney/background-elements-redux/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
     },
     {
       "packFolder": "2D/kenney/background-elements-redux",
@@ -561,22 +417,6 @@
       "animated": true
     },
     {
-      "packFolder": "2D/kenney/background-elements-remastered",
-      "path": "2D/kenney/background-elements-remastered/extracted/Preview.png",
-      "src": "/2D/kenney/background-elements-remastered/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/background-elements-remastered",
-      "path": "2D/kenney/background-elements-remastered/extracted/Sample.png",
-      "src": "/2D/kenney/background-elements-remastered/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
       "packFolder": "2D/kenney/block-pack",
       "path": "2D/kenney/block-pack/extracted/Spritesheet/blockPack_spritesheet.png",
       "src": "/2D/kenney/block-pack/extracted/Spritesheet/blockPack_spritesheet.png",
@@ -594,38 +434,6 @@
     },
     {
       "packFolder": "2D/kenney/block-pack",
-      "path": "2D/kenney/block-pack/extracted/Preview.png",
-      "src": "/2D/kenney/block-pack/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/block-pack",
-      "path": "2D/kenney/block-pack/extracted/Sample.png",
-      "src": "/2D/kenney/block-pack/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/block-pack",
-      "path": "2D/kenney/block-pack/Preview.png",
-      "src": "/2D/kenney/block-pack/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/block-pack",
-      "path": "2D/kenney/block-pack/Sample.png",
-      "src": "/2D/kenney/block-pack/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/block-pack",
       "path": "2D/kenney/block-pack/extracted/PNG/Default (64px)/character_horse.png",
       "src": "/2D/kenney/block-pack/extracted/PNG/Default%20(64px)/character_horse.png",
       "label": "Character Horse",
@@ -638,22 +446,6 @@
       "src": "/2D/kenney/block-pack/extracted/PNG/Default%20(64px)/character_man.png",
       "label": "Character Man",
       "kind": "character",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/board-game-icons",
-      "path": "2D/kenney/board-game-icons/extracted/Preview.png",
-      "src": "/2D/kenney/board-game-icons/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "icon",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/board-game-icons",
-      "path": "2D/kenney/board-game-icons/Preview.png",
-      "src": "/2D/kenney/board-game-icons/Preview.png",
-      "label": "Preview",
-      "kind": "icon",
       "animated": false
     },
     {
@@ -702,22 +494,6 @@
       "src": "/2D/kenney/board-game-icons/extracted/PNG/Default%20(64px)/arrow_diagonal_cross.png",
       "label": "Arrow Diagonal Cross",
       "kind": "icon",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/board-game-info",
-      "path": "2D/kenney/board-game-info/extracted/Preview.png",
-      "src": "/2D/kenney/board-game-info/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/board-game-info",
-      "path": "2D/kenney/board-game-info/Preview.png",
-      "src": "/2D/kenney/board-game-info/Preview.png",
-      "label": "Preview",
-      "kind": "image",
       "animated": false
     },
     {
@@ -834,22 +610,6 @@
     },
     {
       "packFolder": "2D/kenney/brick-pack",
-      "path": "2D/kenney/brick-pack/Preview.png",
-      "src": "/2D/kenney/brick-pack/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/brick-pack",
-      "path": "2D/kenney/brick-pack/Sample.png",
-      "src": "/2D/kenney/brick-pack/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/brick-pack",
       "path": "2D/kenney/brick-pack/PNG/Default/Special/extra_character_a.png",
       "src": "/2D/kenney/brick-pack/PNG/Default/Special/extra_character_a.png",
       "label": "Extra Character A",
@@ -929,57 +689,9 @@
       "animated": true
     },
     {
-      "packFolder": "2D/kenney/cartography-pack",
-      "path": "2D/kenney/cartography-pack/extracted/Preview.png",
-      "src": "/2D/kenney/cartography-pack/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/cartography-pack",
-      "path": "2D/kenney/cartography-pack/extracted/Sample.png",
-      "src": "/2D/kenney/cartography-pack/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/cartography-pack",
-      "path": "2D/kenney/cartography-pack/Preview.png",
-      "src": "/2D/kenney/cartography-pack/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/cartography-pack",
-      "path": "2D/kenney/cartography-pack/Sample.png",
-      "src": "/2D/kenney/cartography-pack/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
       "packFolder": "2D/kenney/construct-game-sources",
       "path": "2D/kenney/construct-game-sources/extracted/Preview.png",
       "src": "/2D/kenney/construct-game-sources/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/crosshair-pack",
-      "path": "2D/kenney/crosshair-pack/extracted/Preview.png",
-      "src": "/2D/kenney/crosshair-pack/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/crosshair-pack",
-      "path": "2D/kenney/crosshair-pack/Preview.png",
-      "src": "/2D/kenney/crosshair-pack/Preview.png",
       "label": "Preview",
       "kind": "image",
       "animated": false
@@ -1034,22 +746,6 @@
     },
     {
       "packFolder": "2D/kenney/cursor-pack",
-      "path": "2D/kenney/cursor-pack/extracted/Preview.png",
-      "src": "/2D/kenney/cursor-pack/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "ui",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/cursor-pack",
-      "path": "2D/kenney/cursor-pack/Preview.png",
-      "src": "/2D/kenney/cursor-pack/Preview.png",
-      "label": "Preview",
-      "kind": "ui",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/cursor-pack",
       "path": "2D/kenney/cursor-pack/extracted/PNG/Basic/Default/arrow_e.png",
       "src": "/2D/kenney/cursor-pack/extracted/PNG/Basic/Default/arrow_e.png",
       "label": "Arrow E",
@@ -1093,22 +789,6 @@
       "path": "2D/kenney/cursor-pack/extracted/PNG/Basic/Default/arrow_se.png",
       "src": "/2D/kenney/cursor-pack/extracted/PNG/Basic/Default/arrow_se.png",
       "label": "Arrow Se",
-      "kind": "ui",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/cursor-pixel-pack",
-      "path": "2D/kenney/cursor-pixel-pack/extracted/Preview.png",
-      "src": "/2D/kenney/cursor-pixel-pack/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "ui",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/cursor-pixel-pack",
-      "path": "2D/kenney/cursor-pixel-pack/Preview.png",
-      "src": "/2D/kenney/cursor-pixel-pack/Preview.png",
-      "label": "Preview",
       "kind": "ui",
       "animated": false
     },
@@ -1162,54 +842,6 @@
     },
     {
       "packFolder": "2D/kenney/desert-shooter-pack",
-      "path": "2D/kenney/desert-shooter-pack/extracted/Preview.png",
-      "src": "/2D/kenney/desert-shooter-pack/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/desert-shooter-pack",
-      "path": "2D/kenney/desert-shooter-pack/extracted/Sample A.png",
-      "src": "/2D/kenney/desert-shooter-pack/extracted/Sample%20A.png",
-      "label": "Sample A",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/desert-shooter-pack",
-      "path": "2D/kenney/desert-shooter-pack/extracted/Sample B.png",
-      "src": "/2D/kenney/desert-shooter-pack/extracted/Sample%20B.png",
-      "label": "Sample B",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/desert-shooter-pack",
-      "path": "2D/kenney/desert-shooter-pack/Preview.png",
-      "src": "/2D/kenney/desert-shooter-pack/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/desert-shooter-pack",
-      "path": "2D/kenney/desert-shooter-pack/Sample A.png",
-      "src": "/2D/kenney/desert-shooter-pack/Sample%20A.png",
-      "label": "Sample A",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/desert-shooter-pack",
-      "path": "2D/kenney/desert-shooter-pack/Sample B.png",
-      "src": "/2D/kenney/desert-shooter-pack/Sample%20B.png",
-      "label": "Sample B",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/desert-shooter-pack",
       "path": "2D/kenney/desert-shooter-pack/extracted/PNG/Enemies/Tilemap/tilemap_packed.png",
       "src": "/2D/kenney/desert-shooter-pack/extracted/PNG/Enemies/Tilemap/tilemap_packed.png",
       "label": "Tilemap Packed",
@@ -1222,14 +854,6 @@
       "src": "/2D/kenney/desert-shooter-pack/extracted/PNG/Enemies/Tilemap/tilemap.png",
       "label": "Tilemap",
       "kind": "character",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/development-essentials",
-      "path": "2D/kenney/development-essentials/extracted/Preview.png",
-      "src": "/2D/kenney/development-essentials/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
       "animated": false
     },
     {
@@ -1354,38 +978,6 @@
     },
     {
       "packFolder": "2D/kenney/fantasy-ui-borders",
-      "path": "2D/kenney/fantasy-ui-borders/extracted/Preview.png",
-      "src": "/2D/kenney/fantasy-ui-borders/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "ui",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/fantasy-ui-borders",
-      "path": "2D/kenney/fantasy-ui-borders/extracted/Sample.png",
-      "src": "/2D/kenney/fantasy-ui-borders/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "ui",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/fantasy-ui-borders",
-      "path": "2D/kenney/fantasy-ui-borders/Preview.png",
-      "src": "/2D/kenney/fantasy-ui-borders/Preview.png",
-      "label": "Preview",
-      "kind": "ui",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/fantasy-ui-borders",
-      "path": "2D/kenney/fantasy-ui-borders/Sample.png",
-      "src": "/2D/kenney/fantasy-ui-borders/Sample.png",
-      "label": "Sample",
-      "kind": "ui",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/fantasy-ui-borders",
       "path": "2D/kenney/fantasy-ui-borders/extracted/PNG/Default/Border/panel-border-000.png",
       "src": "/2D/kenney/fantasy-ui-borders/extracted/PNG/Default/Border/panel-border-000.png",
       "label": "Panel Border 000",
@@ -1442,38 +1034,6 @@
     },
     {
       "packFolder": "2D/kenney/fish-pack",
-      "path": "2D/kenney/fish-pack/extracted/Preview.png",
-      "src": "/2D/kenney/fish-pack/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "character",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/fish-pack",
-      "path": "2D/kenney/fish-pack/extracted/Sample.png",
-      "src": "/2D/kenney/fish-pack/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "character",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/fish-pack",
-      "path": "2D/kenney/fish-pack/Preview.png",
-      "src": "/2D/kenney/fish-pack/Preview.png",
-      "label": "Preview",
-      "kind": "character",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/fish-pack",
-      "path": "2D/kenney/fish-pack/Sample.png",
-      "src": "/2D/kenney/fish-pack/Sample.png",
-      "label": "Sample",
-      "kind": "character",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/fish-pack",
       "path": "2D/kenney/fish-pack/extracted/Tilesheet/fishTilesheet.png",
       "src": "/2D/kenney/fish-pack/extracted/Tilesheet/fishTilesheet.png",
       "label": "FishTilesheet",
@@ -1513,70 +1073,6 @@
       "animated": true
     },
     {
-      "packFolder": "2D/kenney/foliage-pack",
-      "path": "2D/kenney/foliage-pack/extracted/Preview_KenneyNL.png",
-      "src": "/2D/kenney/foliage-pack/extracted/Preview_KenneyNL.png",
-      "label": "Preview KenneyNL",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/foliage-pack",
-      "path": "2D/kenney/foliage-pack/extracted/Preview.png",
-      "src": "/2D/kenney/foliage-pack/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/foliage-pack",
-      "path": "2D/kenney/foliage-pack/extracted/Sample.png",
-      "src": "/2D/kenney/foliage-pack/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/foliage-pack",
-      "path": "2D/kenney/foliage-pack/Preview_KenneyNL.png",
-      "src": "/2D/kenney/foliage-pack/Preview_KenneyNL.png",
-      "label": "Preview KenneyNL",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/foliage-sprites",
-      "path": "2D/kenney/foliage-sprites/extracted/Preview.png",
-      "src": "/2D/kenney/foliage-sprites/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/foliage-sprites",
-      "path": "2D/kenney/foliage-sprites/extracted/Sample.png",
-      "src": "/2D/kenney/foliage-sprites/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/foliage-sprites",
-      "path": "2D/kenney/foliage-sprites/Preview.png",
-      "src": "/2D/kenney/foliage-sprites/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/foliage-sprites",
-      "path": "2D/kenney/foliage-sprites/Sample.png",
-      "src": "/2D/kenney/foliage-sprites/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
       "packFolder": "2D/kenney/foliage-sprites",
       "path": "2D/kenney/foliage-sprites/extracted/PNG/Flat/sprite_0001.png",
       "src": "/2D/kenney/foliage-sprites/extracted/PNG/Flat/sprite_0001.png",
@@ -1606,22 +1102,6 @@
       "src": "/2D/kenney/foliage-sprites/extracted/PNG/Flat/sprite_0004.png",
       "label": "Sprite 0004",
       "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/game-icons",
-      "path": "2D/kenney/game-icons/extracted/preview.png",
-      "src": "/2D/kenney/game-icons/extracted/preview.png",
-      "label": "Preview",
-      "kind": "icon",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/game-icons",
-      "path": "2D/kenney/game-icons/preview.png",
-      "src": "/2D/kenney/game-icons/preview.png",
-      "label": "Preview",
-      "kind": "icon",
       "animated": false
     },
     {
@@ -1674,38 +1154,6 @@
     },
     {
       "packFolder": "2D/kenney/game-icons-expansion",
-      "path": "2D/kenney/game-icons-expansion/extracted/Game icons (base)/preview.png",
-      "src": "/2D/kenney/game-icons-expansion/extracted/Game%20icons%20(base)/preview.png",
-      "label": "Preview",
-      "kind": "icon",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/game-icons-expansion",
-      "path": "2D/kenney/game-icons-expansion/extracted/preview.png",
-      "src": "/2D/kenney/game-icons-expansion/extracted/preview.png",
-      "label": "Preview",
-      "kind": "icon",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/game-icons-expansion",
-      "path": "2D/kenney/game-icons-expansion/Game icons (base)/preview.png",
-      "src": "/2D/kenney/game-icons-expansion/Game%20icons%20(base)/preview.png",
-      "label": "Preview",
-      "kind": "icon",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/game-icons-expansion",
-      "path": "2D/kenney/game-icons-expansion/preview.png",
-      "src": "/2D/kenney/game-icons-expansion/preview.png",
-      "label": "Preview",
-      "kind": "icon",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/game-icons-expansion",
       "path": "2D/kenney/game-icons-expansion/extracted/Game icons (base)/PNG/Black/1x/arrowDown.png",
       "src": "/2D/kenney/game-icons-expansion/extracted/Game%20icons%20(base)/PNG/Black/1x/arrowDown.png",
       "label": "ArrowDown",
@@ -1733,38 +1181,6 @@
       "path": "2D/kenney/game-icons-expansion/extracted/Game icons (base)/PNG/Black/1x/arrowUp.png",
       "src": "/2D/kenney/game-icons-expansion/extracted/Game%20icons%20(base)/PNG/Black/1x/arrowUp.png",
       "label": "ArrowUp",
-      "kind": "icon",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/generic-items",
-      "path": "2D/kenney/generic-items/extracted/Preview_KenneyNL.png",
-      "src": "/2D/kenney/generic-items/extracted/Preview_KenneyNL.png",
-      "label": "Preview KenneyNL",
-      "kind": "icon",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/generic-items",
-      "path": "2D/kenney/generic-items/extracted/Preview.png",
-      "src": "/2D/kenney/generic-items/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "icon",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/generic-items",
-      "path": "2D/kenney/generic-items/Preview_KenneyNL.png",
-      "src": "/2D/kenney/generic-items/Preview_KenneyNL.png",
-      "label": "Preview KenneyNL",
-      "kind": "icon",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/generic-items",
-      "path": "2D/kenney/generic-items/Preview.png",
-      "src": "/2D/kenney/generic-items/Preview.png",
-      "label": "Preview",
       "kind": "icon",
       "animated": false
     },
@@ -1798,22 +1214,6 @@
       "src": "/2D/kenney/generic-items/Spritesheet/genericItems_spritesheet_white.png",
       "label": "GenericItems Spritesheet White",
       "kind": "icon",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/googly-eyes",
-      "path": "2D/kenney/googly-eyes/extracted/Preview.png",
-      "src": "/2D/kenney/googly-eyes/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/googly-eyes",
-      "path": "2D/kenney/googly-eyes/Preview.png",
-      "src": "/2D/kenney/googly-eyes/Preview.png",
-      "label": "Preview",
-      "kind": "image",
       "animated": false
     },
     {
@@ -1861,38 +1261,6 @@
       "path": "2D/kenney/googly-eyes/extracted/PNG/googly-c.png",
       "src": "/2D/kenney/googly-eyes/extracted/PNG/googly-c.png",
       "label": "Googly C",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/hexagon-buildings",
-      "path": "2D/kenney/hexagon-buildings/extracted/preview.png",
-      "src": "/2D/kenney/hexagon-buildings/extracted/preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/hexagon-buildings",
-      "path": "2D/kenney/hexagon-buildings/extracted/sample.png",
-      "src": "/2D/kenney/hexagon-buildings/extracted/sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/hexagon-buildings",
-      "path": "2D/kenney/hexagon-buildings/preview.png",
-      "src": "/2D/kenney/hexagon-buildings/preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/hexagon-buildings",
-      "path": "2D/kenney/hexagon-buildings/sample.png",
-      "src": "/2D/kenney/hexagon-buildings/sample.png",
-      "label": "Sample",
       "kind": "image",
       "animated": false
     },
@@ -1946,38 +1314,6 @@
     },
     {
       "packFolder": "2D/kenney/hexagon-pack",
-      "path": "2D/kenney/hexagon-pack/extracted/Preview.png",
-      "src": "/2D/kenney/hexagon-pack/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/hexagon-pack",
-      "path": "2D/kenney/hexagon-pack/extracted/Sample.png",
-      "src": "/2D/kenney/hexagon-pack/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/hexagon-pack",
-      "path": "2D/kenney/hexagon-pack/Preview.png",
-      "src": "/2D/kenney/hexagon-pack/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/hexagon-pack",
-      "path": "2D/kenney/hexagon-pack/Sample.png",
-      "src": "/2D/kenney/hexagon-pack/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/hexagon-pack",
       "path": "2D/kenney/hexagon-pack/extracted/PNG/Objects/scifi_ship.png",
       "src": "/2D/kenney/hexagon-pack/extracted/PNG/Objects/scifi_ship.png",
       "label": "Scifi Ship",
@@ -2007,38 +1343,6 @@
       "label": "Aliens",
       "kind": "character",
       "animated": true
-    },
-    {
-      "packFolder": "2D/kenney/hexagon-tiles",
-      "path": "2D/kenney/hexagon-tiles/extracted/preview.png",
-      "src": "/2D/kenney/hexagon-tiles/extracted/preview.png",
-      "label": "Preview",
-      "kind": "tile",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/hexagon-tiles",
-      "path": "2D/kenney/hexagon-tiles/extracted/sample.png",
-      "src": "/2D/kenney/hexagon-tiles/extracted/sample.png",
-      "label": "Sample",
-      "kind": "tile",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/hexagon-tiles",
-      "path": "2D/kenney/hexagon-tiles/preview.png",
-      "src": "/2D/kenney/hexagon-tiles/preview.png",
-      "label": "Preview",
-      "kind": "tile",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/hexagon-tiles",
-      "path": "2D/kenney/hexagon-tiles/sample.png",
-      "src": "/2D/kenney/hexagon-tiles/sample.png",
-      "label": "Sample",
-      "kind": "tile",
-      "animated": false
     },
     {
       "packFolder": "2D/kenney/hexagon-tiles",
@@ -2186,22 +1490,6 @@
     },
     {
       "packFolder": "2D/kenney/input-prompts-pixel",
-      "path": "2D/kenney/input-prompts-pixel/extracted/Preview.png",
-      "src": "/2D/kenney/input-prompts-pixel/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/input-prompts-pixel",
-      "path": "2D/kenney/input-prompts-pixel/Preview.png",
-      "src": "/2D/kenney/input-prompts-pixel/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/input-prompts-pixel",
       "path": "2D/kenney/input-prompts-pixel/extracted/Tilemap/tilemap_packed.png",
       "src": "/2D/kenney/input-prompts-pixel/extracted/Tilemap/tilemap_packed.png",
       "label": "Tilemap Packed",
@@ -2246,22 +1534,6 @@
       "src": "/2D/kenney/input-prompts-pixel/Tiles/tile_0000.png",
       "label": "Tile 0000",
       "kind": "tile",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/input-prompts-pixel-1-bit",
-      "path": "2D/kenney/input-prompts-pixel-1-bit/extracted/Preview.png",
-      "src": "/2D/kenney/input-prompts-pixel-1-bit/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/input-prompts-pixel-1-bit",
-      "path": "2D/kenney/input-prompts-pixel-1-bit/Preview.png",
-      "src": "/2D/kenney/input-prompts-pixel-1-bit/Preview.png",
-      "label": "Preview",
-      "kind": "image",
       "animated": false
     },
     {
@@ -2314,54 +1586,6 @@
     },
     {
       "packFolder": "2D/kenney/isometric-blocks",
-      "path": "2D/kenney/isometric-blocks/extracted/Preview_KenneyNL.png",
-      "src": "/2D/kenney/isometric-blocks/extracted/Preview_KenneyNL.png",
-      "label": "Preview KenneyNL",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/isometric-blocks",
-      "path": "2D/kenney/isometric-blocks/extracted/Preview.png",
-      "src": "/2D/kenney/isometric-blocks/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/isometric-blocks",
-      "path": "2D/kenney/isometric-blocks/extracted/Sample.png",
-      "src": "/2D/kenney/isometric-blocks/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/isometric-blocks",
-      "path": "2D/kenney/isometric-blocks/Preview_KenneyNL.png",
-      "src": "/2D/kenney/isometric-blocks/Preview_KenneyNL.png",
-      "label": "Preview KenneyNL",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/isometric-blocks",
-      "path": "2D/kenney/isometric-blocks/Preview.png",
-      "src": "/2D/kenney/isometric-blocks/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/isometric-blocks",
-      "path": "2D/kenney/isometric-blocks/Sample.png",
-      "src": "/2D/kenney/isometric-blocks/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/isometric-blocks",
       "path": "2D/kenney/isometric-blocks/extracted/Spritesheet/abstractTiles_sheet.png",
       "src": "/2D/kenney/isometric-blocks/extracted/Spritesheet/abstractTiles_sheet.png",
       "label": "AbstractTiles Sheet",
@@ -2374,22 +1598,6 @@
       "src": "/2D/kenney/isometric-blocks/extracted/Spritesheet/allTiles_sheet.png",
       "label": "AllTiles Sheet",
       "kind": "tile",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/isometric-buildings",
-      "path": "2D/kenney/isometric-buildings/extracted/Preview.png",
-      "src": "/2D/kenney/isometric-buildings/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/isometric-buildings",
-      "path": "2D/kenney/isometric-buildings/extracted/Sample.png",
-      "src": "/2D/kenney/isometric-buildings/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
       "animated": false
     },
     {
@@ -2438,14 +1646,6 @@
       "src": "/2D/kenney/isometric-buildings/extracted/PNG/buildingTiles_004.png",
       "label": "BuildingTiles 004",
       "kind": "tile",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/isometric-city",
-      "path": "2D/kenney/isometric-city/extracted/Preview.png",
-      "src": "/2D/kenney/isometric-city/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
       "animated": false
     },
     {
@@ -2501,14 +1701,6 @@
       "path": "2D/kenney/isometric-city/extracted/Details/cityDetails_003.png",
       "src": "/2D/kenney/isometric-city/extracted/Details/cityDetails_003.png",
       "label": "CityDetails 003",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/isometric-landscape",
-      "path": "2D/kenney/isometric-landscape/extracted/Preview.png",
-      "src": "/2D/kenney/isometric-landscape/extracted/Preview.png",
-      "label": "Preview",
       "kind": "image",
       "animated": false
     },
@@ -2570,38 +1762,6 @@
     },
     {
       "packFolder": "2D/kenney/isometric-miniature-bases",
-      "path": "2D/kenney/isometric-miniature-bases/extracted/Preview.png",
-      "src": "/2D/kenney/isometric-miniature-bases/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/isometric-miniature-bases",
-      "path": "2D/kenney/isometric-miniature-bases/extracted/Sample.png",
-      "src": "/2D/kenney/isometric-miniature-bases/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/isometric-miniature-bases",
-      "path": "2D/kenney/isometric-miniature-bases/Preview.png",
-      "src": "/2D/kenney/isometric-miniature-bases/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/isometric-miniature-bases",
-      "path": "2D/kenney/isometric-miniature-bases/Sample.png",
-      "src": "/2D/kenney/isometric-miniature-bases/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/isometric-miniature-bases",
       "path": "2D/kenney/isometric-miniature-bases/Angle/base_dirt_detail_E.png",
       "src": "/2D/kenney/isometric-miniature-bases/Angle/base_dirt_detail_E.png",
       "label": "Base Dirt Detail E",
@@ -2630,38 +1790,6 @@
       "src": "/2D/kenney/isometric-miniature-bases/Angle/base_dirt_detail_W.png",
       "label": "Base Dirt Detail W",
       "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/isometric-miniature-dungeon",
-      "path": "2D/kenney/isometric-miniature-dungeon/extracted/Preview.png",
-      "src": "/2D/kenney/isometric-miniature-dungeon/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "tile",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/isometric-miniature-dungeon",
-      "path": "2D/kenney/isometric-miniature-dungeon/extracted/Sample.png",
-      "src": "/2D/kenney/isometric-miniature-dungeon/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "tile",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/isometric-miniature-dungeon",
-      "path": "2D/kenney/isometric-miniature-dungeon/Preview.png",
-      "src": "/2D/kenney/isometric-miniature-dungeon/Preview.png",
-      "label": "Preview",
-      "kind": "tile",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/isometric-miniature-dungeon",
-      "path": "2D/kenney/isometric-miniature-dungeon/Sample.png",
-      "src": "/2D/kenney/isometric-miniature-dungeon/Sample.png",
-      "label": "Sample",
-      "kind": "tile",
       "animated": false
     },
     {
@@ -2698,38 +1826,6 @@
     },
     {
       "packFolder": "2D/kenney/isometric-miniature-farm",
-      "path": "2D/kenney/isometric-miniature-farm/extracted/Preview.png",
-      "src": "/2D/kenney/isometric-miniature-farm/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/isometric-miniature-farm",
-      "path": "2D/kenney/isometric-miniature-farm/extracted/Sample.png",
-      "src": "/2D/kenney/isometric-miniature-farm/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/isometric-miniature-farm",
-      "path": "2D/kenney/isometric-miniature-farm/Preview.png",
-      "src": "/2D/kenney/isometric-miniature-farm/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/isometric-miniature-farm",
-      "path": "2D/kenney/isometric-miniature-farm/Sample.png",
-      "src": "/2D/kenney/isometric-miniature-farm/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/isometric-miniature-farm",
       "path": "2D/kenney/isometric-miniature-farm/Angle/chimneyBase_E.png",
       "src": "/2D/kenney/isometric-miniature-farm/Angle/chimneyBase_E.png",
       "label": "ChimneyBase E",
@@ -2757,38 +1853,6 @@
       "path": "2D/kenney/isometric-miniature-farm/Angle/chimneyBase_W.png",
       "src": "/2D/kenney/isometric-miniature-farm/Angle/chimneyBase_W.png",
       "label": "ChimneyBase W",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/isometric-miniature-library",
-      "path": "2D/kenney/isometric-miniature-library/extracted/Preview.png",
-      "src": "/2D/kenney/isometric-miniature-library/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/isometric-miniature-library",
-      "path": "2D/kenney/isometric-miniature-library/extracted/Sample.png",
-      "src": "/2D/kenney/isometric-miniature-library/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/isometric-miniature-library",
-      "path": "2D/kenney/isometric-miniature-library/Preview.png",
-      "src": "/2D/kenney/isometric-miniature-library/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/isometric-miniature-library",
-      "path": "2D/kenney/isometric-miniature-library/Sample.png",
-      "src": "/2D/kenney/isometric-miniature-library/Sample.png",
-      "label": "Sample",
       "kind": "image",
       "animated": false
     },
@@ -2826,38 +1890,6 @@
     },
     {
       "packFolder": "2D/kenney/isometric-miniature-prototype",
-      "path": "2D/kenney/isometric-miniature-prototype/extracted/Preview.png",
-      "src": "/2D/kenney/isometric-miniature-prototype/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/isometric-miniature-prototype",
-      "path": "2D/kenney/isometric-miniature-prototype/extracted/Sample.png",
-      "src": "/2D/kenney/isometric-miniature-prototype/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/isometric-miniature-prototype",
-      "path": "2D/kenney/isometric-miniature-prototype/Preview.png",
-      "src": "/2D/kenney/isometric-miniature-prototype/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/isometric-miniature-prototype",
-      "path": "2D/kenney/isometric-miniature-prototype/Sample.png",
-      "src": "/2D/kenney/isometric-miniature-prototype/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/isometric-miniature-prototype",
       "path": "2D/kenney/isometric-miniature-prototype/Characters/Human/Human_0_Pickup0.png",
       "src": "/2D/kenney/isometric-miniature-prototype/Characters/Human/Human_0_Pickup0.png",
       "label": "Human 0 Pickup0",
@@ -2886,22 +1918,6 @@
       "src": "/2D/kenney/isometric-miniature-prototype/Characters/Human/Human_3_Pickup0.png",
       "label": "Human 3 Pickup0",
       "kind": "icon",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/isometric-roads",
-      "path": "2D/kenney/isometric-roads/extracted/preview.jpg",
-      "src": "/2D/kenney/isometric-roads/extracted/preview.jpg",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/isometric-roads",
-      "path": "2D/kenney/isometric-roads/preview.jpg",
-      "src": "/2D/kenney/isometric-roads/preview.jpg",
-      "label": "Preview",
-      "kind": "image",
       "animated": false
     },
     {
@@ -2949,22 +1965,6 @@
       "path": "2D/kenney/isometric-roads/extracted/png/beachE.png",
       "src": "/2D/kenney/isometric-roads/extracted/png/beachE.png",
       "label": "BeachE",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/isometric-roads-water",
-      "path": "2D/kenney/isometric-roads-water/extracted/preview.jpg",
-      "src": "/2D/kenney/isometric-roads-water/extracted/preview.jpg",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/isometric-roads-water",
-      "path": "2D/kenney/isometric-roads-water/preview.jpg",
-      "src": "/2D/kenney/isometric-roads-water/preview.jpg",
-      "label": "Preview",
       "kind": "image",
       "animated": false
     },
@@ -3018,22 +2018,6 @@
     },
     {
       "packFolder": "2D/kenney/isometric-tiles-buildings",
-      "path": "2D/kenney/isometric-tiles-buildings/Preview.png",
-      "src": "/2D/kenney/isometric-tiles-buildings/Preview.png",
-      "label": "Preview",
-      "kind": "tile",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/isometric-tiles-buildings",
-      "path": "2D/kenney/isometric-tiles-buildings/Sample.png",
-      "src": "/2D/kenney/isometric-tiles-buildings/Sample.png",
-      "label": "Sample",
-      "kind": "tile",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/isometric-tiles-buildings",
       "path": "2D/kenney/isometric-tiles-buildings/Spritesheet/buildingTiles_sheet.png",
       "src": "/2D/kenney/isometric-tiles-buildings/Spritesheet/buildingTiles_sheet.png",
       "label": "BuildingTiles Sheet",
@@ -3077,14 +2061,6 @@
       "path": "2D/kenney/isometric-tiles-buildings/PNG/buildingTiles_004.png",
       "src": "/2D/kenney/isometric-tiles-buildings/PNG/buildingTiles_004.png",
       "label": "BuildingTiles 004",
-      "kind": "tile",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/isometric-tiles-city",
-      "path": "2D/kenney/isometric-tiles-city/Preview.png",
-      "src": "/2D/kenney/isometric-tiles-city/Preview.png",
-      "label": "Preview",
       "kind": "tile",
       "animated": false
     },
@@ -3146,14 +2122,6 @@
     },
     {
       "packFolder": "2D/kenney/isometric-tiles-landscape",
-      "path": "2D/kenney/isometric-tiles-landscape/Preview.png",
-      "src": "/2D/kenney/isometric-tiles-landscape/Preview.png",
-      "label": "Preview",
-      "kind": "tile",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/isometric-tiles-landscape",
       "path": "2D/kenney/isometric-tiles-landscape/Spritesheet/landscapeTiles_sheet.png",
       "src": "/2D/kenney/isometric-tiles-landscape/Spritesheet/landscapeTiles_sheet.png",
       "label": "LandscapeTiles Sheet",
@@ -3210,22 +2178,6 @@
     },
     {
       "packFolder": "2D/kenney/isometric-tiles-vehicles",
-      "path": "2D/kenney/isometric-tiles-vehicles/Preview.png",
-      "src": "/2D/kenney/isometric-tiles-vehicles/Preview.png",
-      "label": "Preview",
-      "kind": "tile",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/isometric-tiles-vehicles",
-      "path": "2D/kenney/isometric-tiles-vehicles/Sample.png",
-      "src": "/2D/kenney/isometric-tiles-vehicles/Sample.png",
-      "label": "Sample",
-      "kind": "tile",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/isometric-tiles-vehicles",
       "path": "2D/kenney/isometric-tiles-vehicles/PNG/Ambulance/ambulance_E.png",
       "src": "/2D/kenney/isometric-tiles-vehicles/PNG/Ambulance/ambulance_E.png",
       "label": "Ambulance E",
@@ -3270,22 +2222,6 @@
       "src": "/2D/kenney/isometric-tiles-vehicles/PNG/Ambulance/ambulance_NW.png",
       "label": "Ambulance NW",
       "kind": "tile",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/isometric-vehicles",
-      "path": "2D/kenney/isometric-vehicles/extracted/Preview.png",
-      "src": "/2D/kenney/isometric-vehicles/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/isometric-vehicles",
-      "path": "2D/kenney/isometric-vehicles/extracted/Sample.png",
-      "src": "/2D/kenney/isometric-vehicles/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
       "animated": false
     },
     {
@@ -3402,38 +2338,6 @@
     },
     {
       "packFolder": "2D/kenney/letter-tiles",
-      "path": "2D/kenney/letter-tiles/extracted/Preview.png",
-      "src": "/2D/kenney/letter-tiles/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "tile",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/letter-tiles",
-      "path": "2D/kenney/letter-tiles/extracted/Sample.png",
-      "src": "/2D/kenney/letter-tiles/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "tile",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/letter-tiles",
-      "path": "2D/kenney/letter-tiles/Preview.png",
-      "src": "/2D/kenney/letter-tiles/Preview.png",
-      "label": "Preview",
-      "kind": "tile",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/letter-tiles",
-      "path": "2D/kenney/letter-tiles/Sample.png",
-      "src": "/2D/kenney/letter-tiles/Sample.png",
-      "label": "Sample",
-      "kind": "tile",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/letter-tiles",
       "path": "2D/kenney/letter-tiles/extracted/PNG/Blue/letter_A.png",
       "src": "/2D/kenney/letter-tiles/extracted/PNG/Blue/letter_A.png",
       "label": "Letter A",
@@ -3462,22 +2366,6 @@
       "src": "/2D/kenney/letter-tiles/extracted/PNG/Blue/letter_D.png",
       "label": "Letter D",
       "kind": "tile",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/light-masks",
-      "path": "2D/kenney/light-masks/extracted/Preview.png",
-      "src": "/2D/kenney/light-masks/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/light-masks",
-      "path": "2D/kenney/light-masks/Preview.png",
-      "src": "/2D/kenney/light-masks/Preview.png",
-      "label": "Preview",
-      "kind": "image",
       "animated": false
     },
     {
@@ -3545,54 +2433,6 @@
       "animated": true
     },
     {
-      "packFolder": "2D/kenney/map-pack",
-      "path": "2D/kenney/map-pack/extracted/Preview_KenneyNL.png",
-      "src": "/2D/kenney/map-pack/extracted/Preview_KenneyNL.png",
-      "label": "Preview KenneyNL",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/map-pack",
-      "path": "2D/kenney/map-pack/extracted/Preview.png",
-      "src": "/2D/kenney/map-pack/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/map-pack",
-      "path": "2D/kenney/map-pack/extracted/Sample.png",
-      "src": "/2D/kenney/map-pack/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/map-pack",
-      "path": "2D/kenney/map-pack/Preview_KenneyNL.png",
-      "src": "/2D/kenney/map-pack/Preview_KenneyNL.png",
-      "label": "Preview KenneyNL",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/map-pack",
-      "path": "2D/kenney/map-pack/Preview.png",
-      "src": "/2D/kenney/map-pack/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/map-pack",
-      "path": "2D/kenney/map-pack/Sample.png",
-      "src": "/2D/kenney/map-pack/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
       "packFolder": "2D/kenney/medals",
       "path": "2D/kenney/medals/extracted/Spritesheet/flat.png",
       "src": "/2D/kenney/medals/extracted/Spritesheet/flat.png",
@@ -3641,22 +2481,6 @@
       "animated": true
     },
     {
-      "packFolder": "2D/kenney/medals",
-      "path": "2D/kenney/medals/extracted/Preview.png",
-      "src": "/2D/kenney/medals/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/medals",
-      "path": "2D/kenney/medals/Preview.png",
-      "src": "/2D/kenney/medals/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
       "packFolder": "2D/kenney/medieval-rts",
       "path": "2D/kenney/medieval-rts/extracted/Spritesheet/medievalRTS_spritesheet.png",
       "src": "/2D/kenney/medieval-rts/extracted/Spritesheet/medievalRTS_spritesheet.png",
@@ -3671,86 +2495,6 @@
       "label": "MedievalRTS Spritesheet",
       "kind": "sprite",
       "animated": true
-    },
-    {
-      "packFolder": "2D/kenney/medieval-rts",
-      "path": "2D/kenney/medieval-rts/extracted/Preview_KenneyNL.png",
-      "src": "/2D/kenney/medieval-rts/extracted/Preview_KenneyNL.png",
-      "label": "Preview KenneyNL",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/medieval-rts",
-      "path": "2D/kenney/medieval-rts/extracted/Preview.png",
-      "src": "/2D/kenney/medieval-rts/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/medieval-rts",
-      "path": "2D/kenney/medieval-rts/extracted/Sample.png",
-      "src": "/2D/kenney/medieval-rts/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/medieval-rts",
-      "path": "2D/kenney/medieval-rts/Preview_KenneyNL.png",
-      "src": "/2D/kenney/medieval-rts/Preview_KenneyNL.png",
-      "label": "Preview KenneyNL",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/medieval-rts",
-      "path": "2D/kenney/medieval-rts/Preview.png",
-      "src": "/2D/kenney/medieval-rts/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/medieval-rts",
-      "path": "2D/kenney/medieval-rts/Sample.png",
-      "src": "/2D/kenney/medieval-rts/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/micro-roguelike",
-      "path": "2D/kenney/micro-roguelike/extracted/Preview.png",
-      "src": "/2D/kenney/micro-roguelike/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/micro-roguelike",
-      "path": "2D/kenney/micro-roguelike/extracted/Sample.png",
-      "src": "/2D/kenney/micro-roguelike/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/micro-roguelike",
-      "path": "2D/kenney/micro-roguelike/Preview.png",
-      "src": "/2D/kenney/micro-roguelike/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/micro-roguelike",
-      "path": "2D/kenney/micro-roguelike/Sample.png",
-      "src": "/2D/kenney/micro-roguelike/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
     },
     {
       "packFolder": "2D/kenney/micro-roguelike",
@@ -3781,38 +2525,6 @@
       "path": "2D/kenney/micro-roguelike/extracted/Tilemap/monochrome_tilemap.png",
       "src": "/2D/kenney/micro-roguelike/extracted/Tilemap/monochrome_tilemap.png",
       "label": "Monochrome Tilemap",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/minimap-pack",
-      "path": "2D/kenney/minimap-pack/extracted/Preview.png",
-      "src": "/2D/kenney/minimap-pack/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/minimap-pack",
-      "path": "2D/kenney/minimap-pack/extracted/Sample.png",
-      "src": "/2D/kenney/minimap-pack/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/minimap-pack",
-      "path": "2D/kenney/minimap-pack/Preview.png",
-      "src": "/2D/kenney/minimap-pack/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/minimap-pack",
-      "path": "2D/kenney/minimap-pack/Sample.png",
-      "src": "/2D/kenney/minimap-pack/Sample.png",
-      "label": "Sample",
       "kind": "image",
       "animated": false
     },
@@ -3854,22 +2566,6 @@
       "src": "/2D/kenney/mobile-controls/Sprites/Icons/Default/icon_jump.png",
       "label": "Icon Jump",
       "kind": "icon",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/mobile-controls",
-      "path": "2D/kenney/mobile-controls/Preview.png",
-      "src": "/2D/kenney/mobile-controls/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/mobile-controls",
-      "path": "2D/kenney/mobile-controls/Sample.png",
-      "src": "/2D/kenney/mobile-controls/Sample.png",
-      "label": "Sample",
-      "kind": "image",
       "animated": false
     },
     {
@@ -3978,54 +2674,6 @@
     },
     {
       "packFolder": "2D/kenney/monochrome-pirates",
-      "path": "2D/kenney/monochrome-pirates/extracted/Preview.png",
-      "src": "/2D/kenney/monochrome-pirates/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/monochrome-pirates",
-      "path": "2D/kenney/monochrome-pirates/extracted/Sample A.png",
-      "src": "/2D/kenney/monochrome-pirates/extracted/Sample%20A.png",
-      "label": "Sample A",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/monochrome-pirates",
-      "path": "2D/kenney/monochrome-pirates/extracted/Sample B.png",
-      "src": "/2D/kenney/monochrome-pirates/extracted/Sample%20B.png",
-      "label": "Sample B",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/monochrome-pirates",
-      "path": "2D/kenney/monochrome-pirates/Preview.png",
-      "src": "/2D/kenney/monochrome-pirates/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/monochrome-pirates",
-      "path": "2D/kenney/monochrome-pirates/Sample A.png",
-      "src": "/2D/kenney/monochrome-pirates/Sample%20A.png",
-      "label": "Sample A",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/monochrome-pirates",
-      "path": "2D/kenney/monochrome-pirates/Sample B.png",
-      "src": "/2D/kenney/monochrome-pirates/Sample%20B.png",
-      "label": "Sample B",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/monochrome-pirates",
       "path": "2D/kenney/monochrome-pirates/Default/Tilemap/tilemap_packed.png",
       "src": "/2D/kenney/monochrome-pirates/Default/Tilemap/tilemap_packed.png",
       "label": "Tilemap Packed",
@@ -4037,38 +2685,6 @@
       "path": "2D/kenney/monochrome-pirates/Default/Tilemap/tilemap.png",
       "src": "/2D/kenney/monochrome-pirates/Default/Tilemap/tilemap.png",
       "label": "Tilemap",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/monochrome-rpg",
-      "path": "2D/kenney/monochrome-rpg/extracted/Preview.png",
-      "src": "/2D/kenney/monochrome-rpg/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/monochrome-rpg",
-      "path": "2D/kenney/monochrome-rpg/extracted/Sample.png",
-      "src": "/2D/kenney/monochrome-rpg/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/monochrome-rpg",
-      "path": "2D/kenney/monochrome-rpg/Preview.png",
-      "src": "/2D/kenney/monochrome-rpg/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/monochrome-rpg",
-      "path": "2D/kenney/monochrome-rpg/Sample.png",
-      "src": "/2D/kenney/monochrome-rpg/Sample.png",
-      "label": "Sample",
       "kind": "image",
       "animated": false
     },
@@ -4137,38 +2753,6 @@
       "animated": true
     },
     {
-      "packFolder": "2D/kenney/monster-builder-pack",
-      "path": "2D/kenney/monster-builder-pack/extracted/Preview.png",
-      "src": "/2D/kenney/monster-builder-pack/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "character",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/monster-builder-pack",
-      "path": "2D/kenney/monster-builder-pack/extracted/Sample.png",
-      "src": "/2D/kenney/monster-builder-pack/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "character",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/monster-builder-pack",
-      "path": "2D/kenney/monster-builder-pack/Preview.png",
-      "src": "/2D/kenney/monster-builder-pack/Preview.png",
-      "label": "Preview",
-      "kind": "character",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/monster-builder-pack",
-      "path": "2D/kenney/monster-builder-pack/Sample.png",
-      "src": "/2D/kenney/monster-builder-pack/Sample.png",
-      "label": "Sample",
-      "kind": "character",
-      "animated": false
-    },
-    {
       "packFolder": "2D/kenney/new-platformer-pack",
       "path": "2D/kenney/new-platformer-pack/extracted/Sprites/Characters/Default/character_beige_hit.png",
       "src": "/2D/kenney/new-platformer-pack/extracted/Sprites/Characters/Default/character_beige_hit.png",
@@ -4234,22 +2818,6 @@
     },
     {
       "packFolder": "2D/kenney/particle-pack",
-      "path": "2D/kenney/particle-pack/extracted/Preview.png",
-      "src": "/2D/kenney/particle-pack/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/particle-pack",
-      "path": "2D/kenney/particle-pack/Preview.png",
-      "src": "/2D/kenney/particle-pack/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/particle-pack",
       "path": "2D/kenney/particle-pack/extracted/PNG (Black background)/circle_01.png",
       "src": "/2D/kenney/particle-pack/extracted/PNG%20(Black%20background)/circle_01.png",
       "label": "Circle 01",
@@ -4298,22 +2866,6 @@
     },
     {
       "packFolder": "2D/kenney/pattern-pack",
-      "path": "2D/kenney/pattern-pack/extracted/Preview.png",
-      "src": "/2D/kenney/pattern-pack/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pattern-pack",
-      "path": "2D/kenney/pattern-pack/Preview.png",
-      "src": "/2D/kenney/pattern-pack/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pattern-pack",
       "path": "2D/kenney/pattern-pack/extracted/Tilesheet/patternPack_tilesheet.png",
       "src": "/2D/kenney/pattern-pack/extracted/Tilesheet/patternPack_tilesheet.png",
       "label": "PatternPack Tilesheet",
@@ -4357,14 +2909,6 @@
       "path": "2D/kenney/pattern-pack/Tilesheet/patternPack_tilesheet@2.png",
       "src": "/2D/kenney/pattern-pack/Tilesheet/patternPack_tilesheet%402.png",
       "label": "PatternPack Tilesheet@2",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pattern-pack-lines",
-      "path": "2D/kenney/pattern-pack-lines/extracted/Preview.png",
-      "src": "/2D/kenney/pattern-pack-lines/extracted/Preview.png",
-      "label": "Preview",
       "kind": "image",
       "animated": false
     },
@@ -4421,22 +2965,6 @@
       "path": "2D/kenney/pattern-pack-lines/extracted/PNG/Thin/Default (256px)/pattern_0000.png",
       "src": "/2D/kenney/pattern-pack-lines/extracted/PNG/Thin/Default%20(256px)/pattern_0000.png",
       "label": "Pattern 0000",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pattern-pack-pixel",
-      "path": "2D/kenney/pattern-pack-pixel/extracted/Preview.png",
-      "src": "/2D/kenney/pattern-pack-pixel/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pattern-pack-pixel",
-      "path": "2D/kenney/pattern-pack-pixel/Preview.png",
-      "src": "/2D/kenney/pattern-pack-pixel/Preview.png",
-      "label": "Preview",
       "kind": "image",
       "animated": false
     },
@@ -4554,38 +3082,6 @@
     },
     {
       "packFolder": "2D/kenney/pico-8-city",
-      "path": "2D/kenney/pico-8-city/extracted/Preview.png",
-      "src": "/2D/kenney/pico-8-city/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pico-8-city",
-      "path": "2D/kenney/pico-8-city/extracted/Sample.png",
-      "src": "/2D/kenney/pico-8-city/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pico-8-city",
-      "path": "2D/kenney/pico-8-city/Preview.png",
-      "src": "/2D/kenney/pico-8-city/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pico-8-city",
-      "path": "2D/kenney/pico-8-city/Sample.png",
-      "src": "/2D/kenney/pico-8-city/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pico-8-city",
       "path": "2D/kenney/pico-8-city/extracted/Tilemap/tilemap_packed.png",
       "src": "/2D/kenney/pico-8-city/extracted/Tilemap/tilemap_packed.png",
       "label": "Tilemap Packed",
@@ -4613,38 +3109,6 @@
       "path": "2D/kenney/pico-8-city/Tilemap/tilemap_packed.png",
       "src": "/2D/kenney/pico-8-city/Tilemap/tilemap_packed.png",
       "label": "Tilemap Packed",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pico-8-platformer",
-      "path": "2D/kenney/pico-8-platformer/extracted/Preview.png",
-      "src": "/2D/kenney/pico-8-platformer/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pico-8-platformer",
-      "path": "2D/kenney/pico-8-platformer/extracted/Sample.png",
-      "src": "/2D/kenney/pico-8-platformer/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pico-8-platformer",
-      "path": "2D/kenney/pico-8-platformer/Preview.png",
-      "src": "/2D/kenney/pico-8-platformer/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pico-8-platformer",
-      "path": "2D/kenney/pico-8-platformer/Sample.png",
-      "src": "/2D/kenney/pico-8-platformer/Sample.png",
-      "label": "Sample",
       "kind": "image",
       "animated": false
     },
@@ -4697,86 +3161,6 @@
       "animated": true
     },
     {
-      "packFolder": "2D/kenney/pirate-pack",
-      "path": "2D/kenney/pirate-pack/extracted/Preview_KenneyNL.png",
-      "src": "/2D/kenney/pirate-pack/extracted/Preview_KenneyNL.png",
-      "label": "Preview KenneyNL",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pirate-pack",
-      "path": "2D/kenney/pirate-pack/extracted/Preview.png",
-      "src": "/2D/kenney/pirate-pack/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pirate-pack",
-      "path": "2D/kenney/pirate-pack/extracted/Sample.png",
-      "src": "/2D/kenney/pirate-pack/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pirate-pack",
-      "path": "2D/kenney/pirate-pack/Preview_KenneyNL.png",
-      "src": "/2D/kenney/pirate-pack/Preview_KenneyNL.png",
-      "label": "Preview KenneyNL",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pirate-pack",
-      "path": "2D/kenney/pirate-pack/Preview.png",
-      "src": "/2D/kenney/pirate-pack/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pirate-pack",
-      "path": "2D/kenney/pirate-pack/Sample.png",
-      "src": "/2D/kenney/pirate-pack/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pixel-line-platformer",
-      "path": "2D/kenney/pixel-line-platformer/extracted/Preview.png",
-      "src": "/2D/kenney/pixel-line-platformer/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pixel-line-platformer",
-      "path": "2D/kenney/pixel-line-platformer/extracted/Sample.png",
-      "src": "/2D/kenney/pixel-line-platformer/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pixel-line-platformer",
-      "path": "2D/kenney/pixel-line-platformer/Preview.png",
-      "src": "/2D/kenney/pixel-line-platformer/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pixel-line-platformer",
-      "path": "2D/kenney/pixel-line-platformer/Sample.png",
-      "src": "/2D/kenney/pixel-line-platformer/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
       "packFolder": "2D/kenney/pixel-line-platformer",
       "path": "2D/kenney/pixel-line-platformer/extracted/Tilemap/tilemap_packed.png",
       "src": "/2D/kenney/pixel-line-platformer/extracted/Tilemap/tilemap_packed.png",
@@ -4810,54 +3194,6 @@
     },
     {
       "packFolder": "2D/kenney/pixel-platformer",
-      "path": "2D/kenney/pixel-platformer/extracted/Preview.png",
-      "src": "/2D/kenney/pixel-platformer/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pixel-platformer",
-      "path": "2D/kenney/pixel-platformer/extracted/SampleA.png",
-      "src": "/2D/kenney/pixel-platformer/extracted/SampleA.png",
-      "label": "SampleA",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pixel-platformer",
-      "path": "2D/kenney/pixel-platformer/extracted/SampleB.png",
-      "src": "/2D/kenney/pixel-platformer/extracted/SampleB.png",
-      "label": "SampleB",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pixel-platformer",
-      "path": "2D/kenney/pixel-platformer/Preview.png",
-      "src": "/2D/kenney/pixel-platformer/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pixel-platformer",
-      "path": "2D/kenney/pixel-platformer/SampleA.png",
-      "src": "/2D/kenney/pixel-platformer/SampleA.png",
-      "label": "SampleA",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pixel-platformer",
-      "path": "2D/kenney/pixel-platformer/SampleB.png",
-      "src": "/2D/kenney/pixel-platformer/SampleB.png",
-      "label": "SampleB",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pixel-platformer",
       "path": "2D/kenney/pixel-platformer/extracted/Tilemap/tilemap-characters_packed.png",
       "src": "/2D/kenney/pixel-platformer/extracted/Tilemap/tilemap-characters_packed.png",
       "label": "Tilemap Characters Packed",
@@ -4870,38 +3206,6 @@
       "src": "/2D/kenney/pixel-platformer/extracted/Tilemap/tilemap-characters.png",
       "label": "Tilemap Characters",
       "kind": "character",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pixel-platformer-blocks",
-      "path": "2D/kenney/pixel-platformer-blocks/extracted/Preview.png",
-      "src": "/2D/kenney/pixel-platformer-blocks/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pixel-platformer-blocks",
-      "path": "2D/kenney/pixel-platformer-blocks/extracted/Sample.png",
-      "src": "/2D/kenney/pixel-platformer-blocks/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pixel-platformer-blocks",
-      "path": "2D/kenney/pixel-platformer-blocks/Preview.png",
-      "src": "/2D/kenney/pixel-platformer-blocks/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pixel-platformer-blocks",
-      "path": "2D/kenney/pixel-platformer-blocks/Sample.png",
-      "src": "/2D/kenney/pixel-platformer-blocks/Sample.png",
-      "label": "Sample",
-      "kind": "image",
       "animated": false
     },
     {
@@ -4933,38 +3237,6 @@
       "path": "2D/kenney/pixel-platformer-blocks/extracted/Tilemap/rock.png",
       "src": "/2D/kenney/pixel-platformer-blocks/extracted/Tilemap/rock.png",
       "label": "Rock",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pixel-platformer-farm-expansion",
-      "path": "2D/kenney/pixel-platformer-farm-expansion/extracted/Preview.png",
-      "src": "/2D/kenney/pixel-platformer-farm-expansion/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pixel-platformer-farm-expansion",
-      "path": "2D/kenney/pixel-platformer-farm-expansion/extracted/Sample.png",
-      "src": "/2D/kenney/pixel-platformer-farm-expansion/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pixel-platformer-farm-expansion",
-      "path": "2D/kenney/pixel-platformer-farm-expansion/Preview.png",
-      "src": "/2D/kenney/pixel-platformer-farm-expansion/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pixel-platformer-farm-expansion",
-      "path": "2D/kenney/pixel-platformer-farm-expansion/Sample.png",
-      "src": "/2D/kenney/pixel-platformer-farm-expansion/Sample.png",
-      "label": "Sample",
       "kind": "image",
       "animated": false
     },
@@ -5002,38 +3274,6 @@
     },
     {
       "packFolder": "2D/kenney/pixel-platformer-food-expansion",
-      "path": "2D/kenney/pixel-platformer-food-expansion/extracted/Preview.png",
-      "src": "/2D/kenney/pixel-platformer-food-expansion/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pixel-platformer-food-expansion",
-      "path": "2D/kenney/pixel-platformer-food-expansion/extracted/Sample.png",
-      "src": "/2D/kenney/pixel-platformer-food-expansion/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pixel-platformer-food-expansion",
-      "path": "2D/kenney/pixel-platformer-food-expansion/Preview.png",
-      "src": "/2D/kenney/pixel-platformer-food-expansion/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pixel-platformer-food-expansion",
-      "path": "2D/kenney/pixel-platformer-food-expansion/Sample.png",
-      "src": "/2D/kenney/pixel-platformer-food-expansion/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pixel-platformer-food-expansion",
       "path": "2D/kenney/pixel-platformer-food-expansion/extracted/Tilemap/tilemap_packed.png",
       "src": "/2D/kenney/pixel-platformer-food-expansion/extracted/Tilemap/tilemap_packed.png",
       "label": "Tilemap Packed",
@@ -5061,38 +3301,6 @@
       "path": "2D/kenney/pixel-platformer-food-expansion/Tilemap/tilemap_packed.png",
       "src": "/2D/kenney/pixel-platformer-food-expansion/Tilemap/tilemap_packed.png",
       "label": "Tilemap Packed",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pixel-platformer-industrial-expansion",
-      "path": "2D/kenney/pixel-platformer-industrial-expansion/extracted/Preview.png",
-      "src": "/2D/kenney/pixel-platformer-industrial-expansion/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pixel-platformer-industrial-expansion",
-      "path": "2D/kenney/pixel-platformer-industrial-expansion/extracted/Sample.png",
-      "src": "/2D/kenney/pixel-platformer-industrial-expansion/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pixel-platformer-industrial-expansion",
-      "path": "2D/kenney/pixel-platformer-industrial-expansion/Preview.png",
-      "src": "/2D/kenney/pixel-platformer-industrial-expansion/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pixel-platformer-industrial-expansion",
-      "path": "2D/kenney/pixel-platformer-industrial-expansion/Sample.png",
-      "src": "/2D/kenney/pixel-platformer-industrial-expansion/Sample.png",
-      "label": "Sample",
       "kind": "image",
       "animated": false
     },
@@ -5130,38 +3338,6 @@
     },
     {
       "packFolder": "2D/kenney/pixel-shmup",
-      "path": "2D/kenney/pixel-shmup/extracted/Preview.png",
-      "src": "/2D/kenney/pixel-shmup/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pixel-shmup",
-      "path": "2D/kenney/pixel-shmup/extracted/Sample.png",
-      "src": "/2D/kenney/pixel-shmup/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pixel-shmup",
-      "path": "2D/kenney/pixel-shmup/Preview.png",
-      "src": "/2D/kenney/pixel-shmup/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pixel-shmup",
-      "path": "2D/kenney/pixel-shmup/Sample.png",
-      "src": "/2D/kenney/pixel-shmup/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pixel-shmup",
       "path": "2D/kenney/pixel-shmup/extracted/Ships/ship_0000.png",
       "src": "/2D/kenney/pixel-shmup/extracted/Ships/ship_0000.png",
       "label": "Ship 0000",
@@ -5190,22 +3366,6 @@
       "src": "/2D/kenney/pixel-shmup/Ships/ship_0000.png",
       "label": "Ship 0000",
       "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pixel-ui-pack",
-      "path": "2D/kenney/pixel-ui-pack/extracted/Preview.png",
-      "src": "/2D/kenney/pixel-ui-pack/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "ui",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pixel-ui-pack",
-      "path": "2D/kenney/pixel-ui-pack/Preview.png",
-      "src": "/2D/kenney/pixel-ui-pack/Preview.png",
-      "label": "Preview",
-      "kind": "ui",
       "animated": false
     },
     {
@@ -5290,22 +3450,6 @@
     },
     {
       "packFolder": "2D/kenney/pixel-vehicle-pack",
-      "path": "2D/kenney/pixel-vehicle-pack/extracted/Preview.png",
-      "src": "/2D/kenney/pixel-vehicle-pack/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pixel-vehicle-pack",
-      "path": "2D/kenney/pixel-vehicle-pack/Preview.png",
-      "src": "/2D/kenney/pixel-vehicle-pack/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/pixel-vehicle-pack",
       "path": "2D/kenney/pixel-vehicle-pack/extracted/PNG/Characters/man_convertible.png",
       "src": "/2D/kenney/pixel-vehicle-pack/extracted/PNG/Characters/man_convertible.png",
       "label": "Man Convertible",
@@ -5318,38 +3462,6 @@
       "src": "/2D/kenney/pixel-vehicle-pack/extracted/PNG/Characters/man_cycle.png",
       "label": "Man Cycle",
       "kind": "character",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/planets",
-      "path": "2D/kenney/planets/extracted/Preview.png",
-      "src": "/2D/kenney/planets/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/planets",
-      "path": "2D/kenney/planets/extracted/Sample.png",
-      "src": "/2D/kenney/planets/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/planets",
-      "path": "2D/kenney/planets/Preview.png",
-      "src": "/2D/kenney/planets/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/planets",
-      "path": "2D/kenney/planets/Sample.png",
-      "src": "/2D/kenney/planets/Sample.png",
-      "label": "Sample",
-      "kind": "image",
       "animated": false
     },
     {
@@ -5386,38 +3498,6 @@
     },
     {
       "packFolder": "2D/kenney/platformer-art-buildings",
-      "path": "2D/kenney/platformer-art-buildings/extracted/preview.png",
-      "src": "/2D/kenney/platformer-art-buildings/extracted/preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/platformer-art-buildings",
-      "path": "2D/kenney/platformer-art-buildings/extracted/sample.png",
-      "src": "/2D/kenney/platformer-art-buildings/extracted/sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/platformer-art-buildings",
-      "path": "2D/kenney/platformer-art-buildings/preview.png",
-      "src": "/2D/kenney/platformer-art-buildings/preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/platformer-art-buildings",
-      "path": "2D/kenney/platformer-art-buildings/sample.png",
-      "src": "/2D/kenney/platformer-art-buildings/sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/platformer-art-buildings",
       "path": "2D/kenney/platformer-art-buildings/extracted/sheet.png",
       "src": "/2D/kenney/platformer-art-buildings/extracted/sheet.png",
       "label": "Sheet",
@@ -5446,38 +3526,6 @@
       "src": "/2D/kenney/platformer-art-buildings/extracted/Tiles/awningGreenRed.png",
       "label": "AwningGreenRed",
       "kind": "tile",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/platformer-art-candy",
-      "path": "2D/kenney/platformer-art-candy/extracted/preview.png",
-      "src": "/2D/kenney/platformer-art-candy/extracted/preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/platformer-art-candy",
-      "path": "2D/kenney/platformer-art-candy/extracted/sample.png",
-      "src": "/2D/kenney/platformer-art-candy/extracted/sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/platformer-art-candy",
-      "path": "2D/kenney/platformer-art-candy/preview.png",
-      "src": "/2D/kenney/platformer-art-candy/preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/platformer-art-candy",
-      "path": "2D/kenney/platformer-art-candy/sample.png",
-      "src": "/2D/kenney/platformer-art-candy/sample.png",
-      "label": "Sample",
-      "kind": "image",
       "animated": false
     },
     {
@@ -5642,38 +3690,6 @@
     },
     {
       "packFolder": "2D/kenney/platformer-art-extended-tileset",
-      "path": "2D/kenney/platformer-art-extended-tileset/extracted/preview.png",
-      "src": "/2D/kenney/platformer-art-extended-tileset/extracted/preview.png",
-      "label": "Preview",
-      "kind": "tile",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/platformer-art-extended-tileset",
-      "path": "2D/kenney/platformer-art-extended-tileset/extracted/sample.png",
-      "src": "/2D/kenney/platformer-art-extended-tileset/extracted/sample.png",
-      "label": "Sample",
-      "kind": "tile",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/platformer-art-extended-tileset",
-      "path": "2D/kenney/platformer-art-extended-tileset/preview.png",
-      "src": "/2D/kenney/platformer-art-extended-tileset/preview.png",
-      "label": "Preview",
-      "kind": "tile",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/platformer-art-extended-tileset",
-      "path": "2D/kenney/platformer-art-extended-tileset/sample.png",
-      "src": "/2D/kenney/platformer-art-extended-tileset/sample.png",
-      "label": "Sample",
-      "kind": "tile",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/platformer-art-extended-tileset",
       "path": "2D/kenney/platformer-art-extended-tileset/extracted/PNG Cake/cakeHalf.png",
       "src": "/2D/kenney/platformer-art-extended-tileset/extracted/PNG%20Cake/cakeHalf.png",
       "label": "CakeHalf",
@@ -5706,38 +3722,6 @@
     },
     {
       "packFolder": "2D/kenney/platformer-art-mushrooms",
-      "path": "2D/kenney/platformer-art-mushrooms/extracted/preview.png",
-      "src": "/2D/kenney/platformer-art-mushrooms/extracted/preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/platformer-art-mushrooms",
-      "path": "2D/kenney/platformer-art-mushrooms/extracted/sample.png",
-      "src": "/2D/kenney/platformer-art-mushrooms/extracted/sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/platformer-art-mushrooms",
-      "path": "2D/kenney/platformer-art-mushrooms/preview.png",
-      "src": "/2D/kenney/platformer-art-mushrooms/preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/platformer-art-mushrooms",
-      "path": "2D/kenney/platformer-art-mushrooms/sample.png",
-      "src": "/2D/kenney/platformer-art-mushrooms/sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/platformer-art-mushrooms",
       "path": "2D/kenney/platformer-art-mushrooms/Backgrounds/bg_castle.png",
       "src": "/2D/kenney/platformer-art-mushrooms/Backgrounds/bg_castle.png",
       "label": "Bg Castle",
@@ -5765,22 +3749,6 @@
       "path": "2D/kenney/platformer-art-mushrooms/Backgrounds/bg_shroom.png",
       "src": "/2D/kenney/platformer-art-mushrooms/Backgrounds/bg_shroom.png",
       "label": "Bg Shroom",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/platformer-art-pixel",
-      "path": "2D/kenney/platformer-art-pixel/extracted/Sample.png",
-      "src": "/2D/kenney/platformer-art-pixel/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/platformer-art-pixel",
-      "path": "2D/kenney/platformer-art-pixel/Sample.png",
-      "src": "/2D/kenney/platformer-art-pixel/Sample.png",
-      "label": "Sample",
       "kind": "image",
       "animated": false
     },
@@ -5834,38 +3802,6 @@
     },
     {
       "packFolder": "2D/kenney/platformer-art-requests",
-      "path": "2D/kenney/platformer-art-requests/extracted/preview.png",
-      "src": "/2D/kenney/platformer-art-requests/extracted/preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/platformer-art-requests",
-      "path": "2D/kenney/platformer-art-requests/extracted/sample.png",
-      "src": "/2D/kenney/platformer-art-requests/extracted/sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/platformer-art-requests",
-      "path": "2D/kenney/platformer-art-requests/preview.png",
-      "src": "/2D/kenney/platformer-art-requests/preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/platformer-art-requests",
-      "path": "2D/kenney/platformer-art-requests/sample.png",
-      "src": "/2D/kenney/platformer-art-requests/sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/platformer-art-requests",
       "path": "2D/kenney/platformer-art-requests/extracted/sheet.png",
       "src": "/2D/kenney/platformer-art-requests/extracted/sheet.png",
       "label": "Sheet",
@@ -5898,38 +3834,6 @@
     },
     {
       "packFolder": "2D/kenney/platformer-art-winter",
-      "path": "2D/kenney/platformer-art-winter/extracted/preview.png",
-      "src": "/2D/kenney/platformer-art-winter/extracted/preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/platformer-art-winter",
-      "path": "2D/kenney/platformer-art-winter/extracted/sample.png",
-      "src": "/2D/kenney/platformer-art-winter/extracted/sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/platformer-art-winter",
-      "path": "2D/kenney/platformer-art-winter/preview.png",
-      "src": "/2D/kenney/platformer-art-winter/preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/platformer-art-winter",
-      "path": "2D/kenney/platformer-art-winter/sample.png",
-      "src": "/2D/kenney/platformer-art-winter/sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/platformer-art-winter",
       "path": "2D/kenney/platformer-art-winter/extracted/sheet.png",
       "src": "/2D/kenney/platformer-art-winter/extracted/sheet.png",
       "label": "Sheet",
@@ -5958,38 +3862,6 @@
       "src": "/2D/kenney/platformer-art-winter/extracted/Tiles/caneGreenTop.png",
       "label": "CaneGreenTop",
       "kind": "tile",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/platformer-bricks",
-      "path": "2D/kenney/platformer-bricks/extracted/Preview.png",
-      "src": "/2D/kenney/platformer-bricks/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/platformer-bricks",
-      "path": "2D/kenney/platformer-bricks/extracted/Sample.png",
-      "src": "/2D/kenney/platformer-bricks/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/platformer-bricks",
-      "path": "2D/kenney/platformer-bricks/Preview.png",
-      "src": "/2D/kenney/platformer-bricks/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/platformer-bricks",
-      "path": "2D/kenney/platformer-bricks/Sample.png",
-      "src": "/2D/kenney/platformer-bricks/Sample.png",
-      "label": "Sample",
-      "kind": "image",
       "animated": false
     },
     {
@@ -6090,54 +3962,6 @@
     },
     {
       "packFolder": "2D/kenney/platformer-pack-industrial",
-      "path": "2D/kenney/platformer-pack-industrial/extracted/Preview_KenneyNL.png",
-      "src": "/2D/kenney/platformer-pack-industrial/extracted/Preview_KenneyNL.png",
-      "label": "Preview KenneyNL",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/platformer-pack-industrial",
-      "path": "2D/kenney/platformer-pack-industrial/extracted/Preview.png",
-      "src": "/2D/kenney/platformer-pack-industrial/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/platformer-pack-industrial",
-      "path": "2D/kenney/platformer-pack-industrial/extracted/Sample.png",
-      "src": "/2D/kenney/platformer-pack-industrial/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/platformer-pack-industrial",
-      "path": "2D/kenney/platformer-pack-industrial/Preview_KenneyNL.png",
-      "src": "/2D/kenney/platformer-pack-industrial/Preview_KenneyNL.png",
-      "label": "Preview KenneyNL",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/platformer-pack-industrial",
-      "path": "2D/kenney/platformer-pack-industrial/Preview.png",
-      "src": "/2D/kenney/platformer-pack-industrial/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/platformer-pack-industrial",
-      "path": "2D/kenney/platformer-pack-industrial/Sample.png",
-      "src": "/2D/kenney/platformer-pack-industrial/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/platformer-pack-industrial",
       "path": "2D/kenney/platformer-pack-industrial/extracted/Spritesheet/platformIndustrial_sheet.png",
       "src": "/2D/kenney/platformer-pack-industrial/extracted/Spritesheet/platformIndustrial_sheet.png",
       "label": "PlatformIndustrial Sheet",
@@ -6149,54 +3973,6 @@
       "path": "2D/kenney/platformer-pack-industrial/extracted/Tilesheet/platformerPack_industrial_tilesheet.png",
       "src": "/2D/kenney/platformer-pack-industrial/extracted/Tilesheet/platformerPack_industrial_tilesheet.png",
       "label": "PlatformerPack Industrial Tilesheet",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/platformer-pack-medieval",
-      "path": "2D/kenney/platformer-pack-medieval/extracted/Preview_KenneyNL.png",
-      "src": "/2D/kenney/platformer-pack-medieval/extracted/Preview_KenneyNL.png",
-      "label": "Preview KenneyNL",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/platformer-pack-medieval",
-      "path": "2D/kenney/platformer-pack-medieval/extracted/Preview.png",
-      "src": "/2D/kenney/platformer-pack-medieval/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/platformer-pack-medieval",
-      "path": "2D/kenney/platformer-pack-medieval/extracted/Sample.png",
-      "src": "/2D/kenney/platformer-pack-medieval/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/platformer-pack-medieval",
-      "path": "2D/kenney/platformer-pack-medieval/Preview_KenneyNL.png",
-      "src": "/2D/kenney/platformer-pack-medieval/Preview_KenneyNL.png",
-      "label": "Preview KenneyNL",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/platformer-pack-medieval",
-      "path": "2D/kenney/platformer-pack-medieval/Preview.png",
-      "src": "/2D/kenney/platformer-pack-medieval/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/platformer-pack-medieval",
-      "path": "2D/kenney/platformer-pack-medieval/Sample.png",
-      "src": "/2D/kenney/platformer-pack-medieval/Sample.png",
-      "label": "Sample",
       "kind": "image",
       "animated": false
     },
@@ -6282,54 +4058,6 @@
     },
     {
       "packFolder": "2D/kenney/playing-cards-pack",
-      "path": "2D/kenney/playing-cards-pack/extracted/Preview A.png",
-      "src": "/2D/kenney/playing-cards-pack/extracted/Preview%20A.png",
-      "label": "Preview A",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/playing-cards-pack",
-      "path": "2D/kenney/playing-cards-pack/extracted/Preview B.png",
-      "src": "/2D/kenney/playing-cards-pack/extracted/Preview%20B.png",
-      "label": "Preview B",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/playing-cards-pack",
-      "path": "2D/kenney/playing-cards-pack/extracted/Preview.png",
-      "src": "/2D/kenney/playing-cards-pack/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/playing-cards-pack",
-      "path": "2D/kenney/playing-cards-pack/Preview A.png",
-      "src": "/2D/kenney/playing-cards-pack/Preview%20A.png",
-      "label": "Preview A",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/playing-cards-pack",
-      "path": "2D/kenney/playing-cards-pack/Preview B.png",
-      "src": "/2D/kenney/playing-cards-pack/Preview%20B.png",
-      "label": "Preview B",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/playing-cards-pack",
-      "path": "2D/kenney/playing-cards-pack/Preview.png",
-      "src": "/2D/kenney/playing-cards-pack/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/playing-cards-pack",
       "path": "2D/kenney/playing-cards-pack/extracted/PNG/Cards (large)/card_back.png",
       "src": "/2D/kenney/playing-cards-pack/extracted/PNG/Cards%20(large)/card_back.png",
       "label": "Card Back",
@@ -6341,22 +4069,6 @@
       "path": "2D/kenney/playing-cards-pack/extracted/PNG/Cards (large)/card_clubs_A.png",
       "src": "/2D/kenney/playing-cards-pack/extracted/PNG/Cards%20(large)/card_clubs_A.png",
       "label": "Card Clubs A",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/prototype-textures",
-      "path": "2D/kenney/prototype-textures/extracted/Preview.png",
-      "src": "/2D/kenney/prototype-textures/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/prototype-textures",
-      "path": "2D/kenney/prototype-textures/extracted/Sample.png",
-      "src": "/2D/kenney/prototype-textures/extracted/Sample.png",
-      "label": "Sample",
       "kind": "image",
       "animated": false
     },
@@ -6426,22 +4138,6 @@
     },
     {
       "packFolder": "2D/kenney/puzzle-pack",
-      "path": "2D/kenney/puzzle-pack/extracted/Preview.png",
-      "src": "/2D/kenney/puzzle-pack/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/puzzle-pack",
-      "path": "2D/kenney/puzzle-pack/extracted/Sample.png",
-      "src": "/2D/kenney/puzzle-pack/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/puzzle-pack",
       "path": "2D/kenney/puzzle-pack/extracted/PNG/Default/ballBlue.png",
       "src": "/2D/kenney/puzzle-pack/extracted/PNG/Default/ballBlue.png",
       "label": "BallBlue",
@@ -6487,22 +4183,6 @@
       "label": "Spritesheet Double",
       "kind": "sprite",
       "animated": true
-    },
-    {
-      "packFolder": "2D/kenney/puzzle-pack-1",
-      "path": "2D/kenney/puzzle-pack-1/Preview.png",
-      "src": "/2D/kenney/puzzle-pack-1/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/puzzle-pack-1",
-      "path": "2D/kenney/puzzle-pack-1/Sample.png",
-      "src": "/2D/kenney/puzzle-pack-1/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
     },
     {
       "packFolder": "2D/kenney/puzzle-pack-1",
@@ -6578,22 +4258,6 @@
     },
     {
       "packFolder": "2D/kenney/puzzle-pack-2",
-      "path": "2D/kenney/puzzle-pack-2/Preview.png",
-      "src": "/2D/kenney/puzzle-pack-2/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/puzzle-pack-2",
-      "path": "2D/kenney/puzzle-pack-2/Sample1.png",
-      "src": "/2D/kenney/puzzle-pack-2/Sample1.png",
-      "label": "Sample1",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/puzzle-pack-2",
       "path": "2D/kenney/puzzle-pack-2/Spritesheet/spritesheet_coins.png",
       "src": "/2D/kenney/puzzle-pack-2/Spritesheet/spritesheet_coins.png",
       "label": "Spritesheet Coins",
@@ -6618,38 +4282,6 @@
     },
     {
       "packFolder": "2D/kenney/racing-pack",
-      "path": "2D/kenney/racing-pack/extracted/Preview.png",
-      "src": "/2D/kenney/racing-pack/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/racing-pack",
-      "path": "2D/kenney/racing-pack/extracted/Sample.png",
-      "src": "/2D/kenney/racing-pack/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/racing-pack",
-      "path": "2D/kenney/racing-pack/Preview.png",
-      "src": "/2D/kenney/racing-pack/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/racing-pack",
-      "path": "2D/kenney/racing-pack/Sample.png",
-      "src": "/2D/kenney/racing-pack/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/racing-pack",
       "path": "2D/kenney/racing-pack/extracted/PNG/Characters/character_black_blue.png",
       "src": "/2D/kenney/racing-pack/extracted/PNG/Characters/character_black_blue.png",
       "label": "Character Black Blue",
@@ -6662,22 +4294,6 @@
       "src": "/2D/kenney/racing-pack/extracted/PNG/Characters/character_black_green.png",
       "label": "Character Black Green",
       "kind": "character",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/ranks-pack",
-      "path": "2D/kenney/ranks-pack/extracted/Preview.png",
-      "src": "/2D/kenney/ranks-pack/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/ranks-pack",
-      "path": "2D/kenney/ranks-pack/Preview.png",
-      "src": "/2D/kenney/ranks-pack/Preview.png",
-      "label": "Preview",
-      "kind": "image",
       "animated": false
     },
     {
@@ -6730,22 +4346,6 @@
     },
     {
       "packFolder": "2D/kenney/retro-textures-fantasy",
-      "path": "2D/kenney/retro-textures-fantasy/extracted/Preview.png",
-      "src": "/2D/kenney/retro-textures-fantasy/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/retro-textures-fantasy",
-      "path": "2D/kenney/retro-textures-fantasy/extracted/Sample.png",
-      "src": "/2D/kenney/retro-textures-fantasy/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/retro-textures-fantasy",
       "path": "2D/kenney/retro-textures-fantasy/extracted/PNG/door_metal_frame.png",
       "src": "/2D/kenney/retro-textures-fantasy/extracted/PNG/door_metal_frame.png",
       "label": "Door Metal Frame",
@@ -6789,22 +4389,6 @@
       "path": "2D/kenney/retro-textures-fantasy/extracted/PNG/door_wood_window_lit.png",
       "src": "/2D/kenney/retro-textures-fantasy/extracted/PNG/door_wood_window_lit.png",
       "label": "Door Wood Window Lit",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/road-textures",
-      "path": "2D/kenney/road-textures/extracted/Legacy/Preview.png",
-      "src": "/2D/kenney/road-textures/extracted/Legacy/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/road-textures",
-      "path": "2D/kenney/road-textures/extracted/Preview.png",
-      "src": "/2D/kenney/road-textures/extracted/Preview.png",
-      "label": "Preview",
       "kind": "image",
       "animated": false
     },
@@ -6922,38 +4506,6 @@
     },
     {
       "packFolder": "2D/kenney/roguelike-caves-dungeons",
-      "path": "2D/kenney/roguelike-caves-dungeons/extracted/Preview.png",
-      "src": "/2D/kenney/roguelike-caves-dungeons/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/roguelike-caves-dungeons",
-      "path": "2D/kenney/roguelike-caves-dungeons/extracted/Sample.png",
-      "src": "/2D/kenney/roguelike-caves-dungeons/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/roguelike-caves-dungeons",
-      "path": "2D/kenney/roguelike-caves-dungeons/Preview.png",
-      "src": "/2D/kenney/roguelike-caves-dungeons/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/roguelike-caves-dungeons",
-      "path": "2D/kenney/roguelike-caves-dungeons/Sample.png",
-      "src": "/2D/kenney/roguelike-caves-dungeons/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/roguelike-caves-dungeons",
       "path": "2D/kenney/roguelike-caves-dungeons/extracted/Spritesheet/roguelikeDungeon_magenta.png",
       "src": "/2D/kenney/roguelike-caves-dungeons/extracted/Spritesheet/roguelikeDungeon_magenta.png",
       "label": "RoguelikeDungeon Magenta",
@@ -7017,70 +4569,6 @@
       "animated": true
     },
     {
-      "packFolder": "2D/kenney/roguelike-characters",
-      "path": "2D/kenney/roguelike-characters/extracted/Preview.png",
-      "src": "/2D/kenney/roguelike-characters/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "character",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/roguelike-characters",
-      "path": "2D/kenney/roguelike-characters/extracted/Sample.png",
-      "src": "/2D/kenney/roguelike-characters/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "character",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/roguelike-characters",
-      "path": "2D/kenney/roguelike-characters/Preview.png",
-      "src": "/2D/kenney/roguelike-characters/Preview.png",
-      "label": "Preview",
-      "kind": "character",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/roguelike-characters",
-      "path": "2D/kenney/roguelike-characters/Sample.png",
-      "src": "/2D/kenney/roguelike-characters/Sample.png",
-      "label": "Sample",
-      "kind": "character",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/roguelike-indoors",
-      "path": "2D/kenney/roguelike-indoors/extracted/Preview.png",
-      "src": "/2D/kenney/roguelike-indoors/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/roguelike-indoors",
-      "path": "2D/kenney/roguelike-indoors/extracted/Sample.png",
-      "src": "/2D/kenney/roguelike-indoors/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/roguelike-indoors",
-      "path": "2D/kenney/roguelike-indoors/Preview.png",
-      "src": "/2D/kenney/roguelike-indoors/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/roguelike-indoors",
-      "path": "2D/kenney/roguelike-indoors/Sample.png",
-      "src": "/2D/kenney/roguelike-indoors/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
       "packFolder": "2D/kenney/roguelike-indoors",
       "path": "2D/kenney/roguelike-indoors/extracted/Tilesheets/roguelikeIndoor_magenta.png",
       "src": "/2D/kenney/roguelike-indoors/extracted/Tilesheets/roguelikeIndoor_magenta.png",
@@ -7114,38 +4602,6 @@
     },
     {
       "packFolder": "2D/kenney/roguelike-modern-city",
-      "path": "2D/kenney/roguelike-modern-city/extracted/Preview.png",
-      "src": "/2D/kenney/roguelike-modern-city/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/roguelike-modern-city",
-      "path": "2D/kenney/roguelike-modern-city/extracted/Sample.png",
-      "src": "/2D/kenney/roguelike-modern-city/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/roguelike-modern-city",
-      "path": "2D/kenney/roguelike-modern-city/Preview.png",
-      "src": "/2D/kenney/roguelike-modern-city/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/roguelike-modern-city",
-      "path": "2D/kenney/roguelike-modern-city/Sample.png",
-      "src": "/2D/kenney/roguelike-modern-city/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/roguelike-modern-city",
       "path": "2D/kenney/roguelike-modern-city/extracted/Tilemap/tilemap_packed.png",
       "src": "/2D/kenney/roguelike-modern-city/extracted/Tilemap/tilemap_packed.png",
       "label": "Tilemap Packed",
@@ -7173,38 +4629,6 @@
       "path": "2D/kenney/roguelike-modern-city/Tilemap/tilemap_packed.png",
       "src": "/2D/kenney/roguelike-modern-city/Tilemap/tilemap_packed.png",
       "label": "Tilemap Packed",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/roguelike-rpg-pack",
-      "path": "2D/kenney/roguelike-rpg-pack/extracted/Preview.png",
-      "src": "/2D/kenney/roguelike-rpg-pack/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/roguelike-rpg-pack",
-      "path": "2D/kenney/roguelike-rpg-pack/extracted/Sample1.png",
-      "src": "/2D/kenney/roguelike-rpg-pack/extracted/Sample1.png",
-      "label": "Sample1",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/roguelike-rpg-pack",
-      "path": "2D/kenney/roguelike-rpg-pack/Preview.png",
-      "src": "/2D/kenney/roguelike-rpg-pack/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/roguelike-rpg-pack",
-      "path": "2D/kenney/roguelike-rpg-pack/Sample1.png",
-      "src": "/2D/kenney/roguelike-rpg-pack/Sample1.png",
-      "label": "Sample1",
       "kind": "image",
       "animated": false
     },
@@ -7258,38 +4682,6 @@
     },
     {
       "packFolder": "2D/kenney/rolling-ball-assets",
-      "path": "2D/kenney/rolling-ball-assets/extracted/Preview.png",
-      "src": "/2D/kenney/rolling-ball-assets/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/rolling-ball-assets",
-      "path": "2D/kenney/rolling-ball-assets/extracted/Sample.png",
-      "src": "/2D/kenney/rolling-ball-assets/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/rolling-ball-assets",
-      "path": "2D/kenney/rolling-ball-assets/Preview.png",
-      "src": "/2D/kenney/rolling-ball-assets/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/rolling-ball-assets",
-      "path": "2D/kenney/rolling-ball-assets/Sample.png",
-      "src": "/2D/kenney/rolling-ball-assets/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/rolling-ball-assets",
       "path": "2D/kenney/rolling-ball-assets/extracted/PNG/Default/background_blue.png",
       "src": "/2D/kenney/rolling-ball-assets/extracted/PNG/Default/background_blue.png",
       "label": "Background Blue",
@@ -7335,70 +4727,6 @@
       "label": "RPGpack Sheet",
       "kind": "sprite",
       "animated": true
-    },
-    {
-      "packFolder": "2D/kenney/rpg-base",
-      "path": "2D/kenney/rpg-base/extracted/preview.png",
-      "src": "/2D/kenney/rpg-base/extracted/preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/rpg-base",
-      "path": "2D/kenney/rpg-base/extracted/sample.png",
-      "src": "/2D/kenney/rpg-base/extracted/sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/rpg-base",
-      "path": "2D/kenney/rpg-base/preview.png",
-      "src": "/2D/kenney/rpg-base/preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/rpg-base",
-      "path": "2D/kenney/rpg-base/sample.png",
-      "src": "/2D/kenney/rpg-base/sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/rpg-urban-pack",
-      "path": "2D/kenney/rpg-urban-pack/extracted/Preview.png",
-      "src": "/2D/kenney/rpg-urban-pack/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/rpg-urban-pack",
-      "path": "2D/kenney/rpg-urban-pack/extracted/Sample.png",
-      "src": "/2D/kenney/rpg-urban-pack/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/rpg-urban-pack",
-      "path": "2D/kenney/rpg-urban-pack/Preview.png",
-      "src": "/2D/kenney/rpg-urban-pack/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/rpg-urban-pack",
-      "path": "2D/kenney/rpg-urban-pack/Sample.png",
-      "src": "/2D/kenney/rpg-urban-pack/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
     },
     {
       "packFolder": "2D/kenney/rpg-urban-pack",
@@ -7513,54 +4841,6 @@
       "animated": true
     },
     {
-      "packFolder": "2D/kenney/sci-fi-rts",
-      "path": "2D/kenney/sci-fi-rts/extracted/Preview_KenneyNL.png",
-      "src": "/2D/kenney/sci-fi-rts/extracted/Preview_KenneyNL.png",
-      "label": "Preview KenneyNL",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/sci-fi-rts",
-      "path": "2D/kenney/sci-fi-rts/extracted/Preview.png",
-      "src": "/2D/kenney/sci-fi-rts/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/sci-fi-rts",
-      "path": "2D/kenney/sci-fi-rts/extracted/Sample.png",
-      "src": "/2D/kenney/sci-fi-rts/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/sci-fi-rts",
-      "path": "2D/kenney/sci-fi-rts/Preview_KenneyNL.png",
-      "src": "/2D/kenney/sci-fi-rts/Preview_KenneyNL.png",
-      "label": "Preview KenneyNL",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/sci-fi-rts",
-      "path": "2D/kenney/sci-fi-rts/Preview.png",
-      "src": "/2D/kenney/sci-fi-rts/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/sci-fi-rts",
-      "path": "2D/kenney/sci-fi-rts/Sample.png",
-      "src": "/2D/kenney/sci-fi-rts/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
       "packFolder": "2D/kenney/scribble-dungeons",
       "path": "2D/kenney/scribble-dungeons/extracted/PNG/Default (64px)/floor_wall_demolished.png",
       "src": "/2D/kenney/scribble-dungeons/extracted/PNG/Default%20(64px)/floor_wall_demolished.png",
@@ -7590,70 +4870,6 @@
       "src": "/2D/kenney/scribble-dungeons/extracted/PNG/Double%20(128px)/wall_demolished.png",
       "label": "Wall Demolished",
       "kind": "tile",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/scribble-dungeons",
-      "path": "2D/kenney/scribble-dungeons/extracted/Preview.png",
-      "src": "/2D/kenney/scribble-dungeons/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/scribble-dungeons",
-      "path": "2D/kenney/scribble-dungeons/extracted/Sample.png",
-      "src": "/2D/kenney/scribble-dungeons/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/scribble-dungeons",
-      "path": "2D/kenney/scribble-dungeons/Preview.png",
-      "src": "/2D/kenney/scribble-dungeons/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/scribble-dungeons",
-      "path": "2D/kenney/scribble-dungeons/Sample.png",
-      "src": "/2D/kenney/scribble-dungeons/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/scribble-platformer",
-      "path": "2D/kenney/scribble-platformer/extracted/Preview.png",
-      "src": "/2D/kenney/scribble-platformer/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/scribble-platformer",
-      "path": "2D/kenney/scribble-platformer/extracted/Sample.png",
-      "src": "/2D/kenney/scribble-platformer/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/scribble-platformer",
-      "path": "2D/kenney/scribble-platformer/Preview.png",
-      "src": "/2D/kenney/scribble-platformer/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/scribble-platformer",
-      "path": "2D/kenney/scribble-platformer/Sample.png",
-      "src": "/2D/kenney/scribble-platformer/Sample.png",
-      "label": "Sample",
-      "kind": "image",
       "animated": false
     },
     {
@@ -7721,38 +4937,6 @@
       "animated": true
     },
     {
-      "packFolder": "2D/kenney/shape-characters",
-      "path": "2D/kenney/shape-characters/extracted/Preview.png",
-      "src": "/2D/kenney/shape-characters/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "character",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/shape-characters",
-      "path": "2D/kenney/shape-characters/extracted/Sample.png",
-      "src": "/2D/kenney/shape-characters/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "character",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/shape-characters",
-      "path": "2D/kenney/shape-characters/Preview.png",
-      "src": "/2D/kenney/shape-characters/Preview.png",
-      "label": "Preview",
-      "kind": "character",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/shape-characters",
-      "path": "2D/kenney/shape-characters/Sample.png",
-      "src": "/2D/kenney/shape-characters/Sample.png",
-      "label": "Sample",
-      "kind": "character",
-      "animated": false
-    },
-    {
       "packFolder": "2D/kenney/shooting-gallery",
       "path": "2D/kenney/shooting-gallery/extracted/Spritesheets/spritesheet_stall.png",
       "src": "/2D/kenney/shooting-gallery/extracted/Spritesheets/spritesheet_stall.png",
@@ -7767,38 +4951,6 @@
       "label": "Spritesheet Stall",
       "kind": "sprite",
       "animated": true
-    },
-    {
-      "packFolder": "2D/kenney/shooting-gallery",
-      "path": "2D/kenney/shooting-gallery/extracted/Preview.png",
-      "src": "/2D/kenney/shooting-gallery/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/shooting-gallery",
-      "path": "2D/kenney/shooting-gallery/extracted/Sample.png",
-      "src": "/2D/kenney/shooting-gallery/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/shooting-gallery",
-      "path": "2D/kenney/shooting-gallery/Preview.png",
-      "src": "/2D/kenney/shooting-gallery/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/shooting-gallery",
-      "path": "2D/kenney/shooting-gallery/Sample.png",
-      "src": "/2D/kenney/shooting-gallery/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
     },
     {
       "packFolder": "2D/kenney/shooting-gallery",
@@ -7834,38 +4986,6 @@
     },
     {
       "packFolder": "2D/kenney/simple-space",
-      "path": "2D/kenney/simple-space/extracted/Preview.png",
-      "src": "/2D/kenney/simple-space/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/simple-space",
-      "path": "2D/kenney/simple-space/extracted/Sample.png",
-      "src": "/2D/kenney/simple-space/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/simple-space",
-      "path": "2D/kenney/simple-space/Preview.png",
-      "src": "/2D/kenney/simple-space/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/simple-space",
-      "path": "2D/kenney/simple-space/Sample.png",
-      "src": "/2D/kenney/simple-space/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/simple-space",
       "path": "2D/kenney/simple-space/extracted/PNG/Default/effect_purple.png",
       "src": "/2D/kenney/simple-space/extracted/PNG/Default/effect_purple.png",
       "label": "Effect Purple",
@@ -7887,22 +5007,6 @@
       "label": "PlatformChar Idle",
       "kind": "character",
       "animated": true
-    },
-    {
-      "packFolder": "2D/kenney/simplified-platformer-pack",
-      "path": "2D/kenney/simplified-platformer-pack/extracted/Preview.png",
-      "src": "/2D/kenney/simplified-platformer-pack/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/simplified-platformer-pack",
-      "path": "2D/kenney/simplified-platformer-pack/Preview.png",
-      "src": "/2D/kenney/simplified-platformer-pack/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
     },
     {
       "packFolder": "2D/kenney/simplified-platformer-pack",
@@ -8074,38 +5178,6 @@
     },
     {
       "packFolder": "2D/kenney/sketch-town-expansion",
-      "path": "2D/kenney/sketch-town-expansion/extracted/Preview.png",
-      "src": "/2D/kenney/sketch-town-expansion/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/sketch-town-expansion",
-      "path": "2D/kenney/sketch-town-expansion/extracted/Sample.png",
-      "src": "/2D/kenney/sketch-town-expansion/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/sketch-town-expansion",
-      "path": "2D/kenney/sketch-town-expansion/Preview.png",
-      "src": "/2D/kenney/sketch-town-expansion/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/sketch-town-expansion",
-      "path": "2D/kenney/sketch-town-expansion/Sample.png",
-      "src": "/2D/kenney/sketch-town-expansion/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/sketch-town-expansion",
       "path": "2D/kenney/sketch-town-expansion/extracted/Tiles/balcony_stone_E.png",
       "src": "/2D/kenney/sketch-town-expansion/extracted/Tiles/balcony_stone_E.png",
       "label": "Balcony Stone E",
@@ -8134,38 +5206,6 @@
       "src": "/2D/kenney/sketch-town-expansion/extracted/Tiles/balcony_stone_W.png",
       "label": "Balcony Stone W",
       "kind": "tile",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/smoke-particles",
-      "path": "2D/kenney/smoke-particles/extracted/preview.png",
-      "src": "/2D/kenney/smoke-particles/extracted/preview.png",
-      "label": "Preview",
-      "kind": "effect",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/smoke-particles",
-      "path": "2D/kenney/smoke-particles/extracted/sample.png",
-      "src": "/2D/kenney/smoke-particles/extracted/sample.png",
-      "label": "Sample",
-      "kind": "effect",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/smoke-particles",
-      "path": "2D/kenney/smoke-particles/preview.png",
-      "src": "/2D/kenney/smoke-particles/preview.png",
-      "label": "Preview",
-      "kind": "effect",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/smoke-particles",
-      "path": "2D/kenney/smoke-particles/sample.png",
-      "src": "/2D/kenney/smoke-particles/sample.png",
-      "label": "Sample",
-      "kind": "effect",
       "animated": false
     },
     {
@@ -8210,30 +5250,6 @@
     },
     {
       "packFolder": "2D/kenney/sokoban",
-      "path": "2D/kenney/sokoban/Preview_KenneyNL.png",
-      "src": "/2D/kenney/sokoban/Preview_KenneyNL.png",
-      "label": "Preview KenneyNL",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/sokoban",
-      "path": "2D/kenney/sokoban/Preview.png",
-      "src": "/2D/kenney/sokoban/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/sokoban",
-      "path": "2D/kenney/sokoban/Sample.png",
-      "src": "/2D/kenney/sokoban/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/sokoban",
       "path": "2D/kenney/sokoban/PNG/Default size/playerFace_dark.png",
       "src": "/2D/kenney/sokoban/PNG/Default%20size/playerFace_dark.png",
       "label": "PlayerFace Dark",
@@ -8271,30 +5287,6 @@
       "label": "Sokoban Spritesheet",
       "kind": "sprite",
       "animated": true
-    },
-    {
-      "packFolder": "2D/kenney/sokoban-pack",
-      "path": "2D/kenney/sokoban-pack/extracted/Preview_KenneyNL.png",
-      "src": "/2D/kenney/sokoban-pack/extracted/Preview_KenneyNL.png",
-      "label": "Preview KenneyNL",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/sokoban-pack",
-      "path": "2D/kenney/sokoban-pack/extracted/Preview.png",
-      "src": "/2D/kenney/sokoban-pack/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/sokoban-pack",
-      "path": "2D/kenney/sokoban-pack/extracted/Sample.png",
-      "src": "/2D/kenney/sokoban-pack/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
     },
     {
       "packFolder": "2D/kenney/sokoban-pack",
@@ -8361,38 +5353,6 @@
       "animated": true
     },
     {
-      "packFolder": "2D/kenney/space-shooter-extension",
-      "path": "2D/kenney/space-shooter-extension/extracted/Preview_KenneyNL.png",
-      "src": "/2D/kenney/space-shooter-extension/extracted/Preview_KenneyNL.png",
-      "label": "Preview KenneyNL",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/space-shooter-extension",
-      "path": "2D/kenney/space-shooter-extension/extracted/Preview.png",
-      "src": "/2D/kenney/space-shooter-extension/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/space-shooter-extension",
-      "path": "2D/kenney/space-shooter-extension/extracted/Sample.png",
-      "src": "/2D/kenney/space-shooter-extension/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/space-shooter-extension",
-      "path": "2D/kenney/space-shooter-extension/Preview_KenneyNL.png",
-      "src": "/2D/kenney/space-shooter-extension/Preview_KenneyNL.png",
-      "label": "Preview KenneyNL",
-      "kind": "image",
-      "animated": false
-    },
-    {
       "packFolder": "2D/kenney/space-shooter-remastered",
       "path": "2D/kenney/space-shooter-remastered/extracted/Spritesheet/sheet.png",
       "src": "/2D/kenney/space-shooter-remastered/extracted/Spritesheet/sheet.png",
@@ -8410,38 +5370,6 @@
     },
     {
       "packFolder": "2D/kenney/space-shooter-remastered",
-      "path": "2D/kenney/space-shooter-remastered/extracted/preview.png",
-      "src": "/2D/kenney/space-shooter-remastered/extracted/preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/space-shooter-remastered",
-      "path": "2D/kenney/space-shooter-remastered/extracted/sample.png",
-      "src": "/2D/kenney/space-shooter-remastered/extracted/sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/space-shooter-remastered",
-      "path": "2D/kenney/space-shooter-remastered/preview.png",
-      "src": "/2D/kenney/space-shooter-remastered/preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/space-shooter-remastered",
-      "path": "2D/kenney/space-shooter-remastered/sample.png",
-      "src": "/2D/kenney/space-shooter-remastered/sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/space-shooter-remastered",
       "path": "2D/kenney/space-shooter-remastered/extracted/PNG/Effects/speed.png",
       "src": "/2D/kenney/space-shooter-remastered/extracted/PNG/Effects/speed.png",
       "label": "Speed",
@@ -8453,22 +5381,6 @@
       "path": "2D/kenney/space-shooter-remastered/extracted/PNG/playerShip1_blue.png",
       "src": "/2D/kenney/space-shooter-remastered/extracted/PNG/playerShip1_blue.png",
       "label": "PlayerShip1 Blue",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/splat-pack",
-      "path": "2D/kenney/splat-pack/extracted/Preview.png",
-      "src": "/2D/kenney/splat-pack/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/splat-pack",
-      "path": "2D/kenney/splat-pack/Preview.png",
-      "src": "/2D/kenney/splat-pack/Preview.png",
-      "label": "Preview",
       "kind": "image",
       "animated": false
     },
@@ -8569,22 +5481,6 @@
       "animated": true
     },
     {
-      "packFolder": "2D/kenney/sports-pack",
-      "path": "2D/kenney/sports-pack/extracted/Preview.png",
-      "src": "/2D/kenney/sports-pack/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/sports-pack",
-      "path": "2D/kenney/sports-pack/extracted/Sample1.png",
-      "src": "/2D/kenney/sports-pack/extracted/Sample1.png",
-      "label": "Sample1",
-      "kind": "image",
-      "animated": false
-    },
-    {
       "packFolder": "2D/kenney/tanks",
       "path": "2D/kenney/tanks/extracted/Spritesheet/tanks_spritesheetDefault.png",
       "src": "/2D/kenney/tanks/extracted/Spritesheet/tanks_spritesheetDefault.png",
@@ -8615,38 +5511,6 @@
       "label": "Tanks SpritesheetRetina",
       "kind": "sprite",
       "animated": true
-    },
-    {
-      "packFolder": "2D/kenney/tanks",
-      "path": "2D/kenney/tanks/extracted/Preview_KenneyNL.png",
-      "src": "/2D/kenney/tanks/extracted/Preview_KenneyNL.png",
-      "label": "Preview KenneyNL",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/tanks",
-      "path": "2D/kenney/tanks/extracted/Preview.png",
-      "src": "/2D/kenney/tanks/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/tanks",
-      "path": "2D/kenney/tanks/extracted/Sample.png",
-      "src": "/2D/kenney/tanks/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/tanks",
-      "path": "2D/kenney/tanks/Preview_KenneyNL.png",
-      "src": "/2D/kenney/tanks/Preview_KenneyNL.png",
-      "label": "Preview KenneyNL",
-      "kind": "image",
-      "animated": false
     },
     {
       "packFolder": "2D/kenney/tappy-plane",
@@ -8681,70 +5545,6 @@
       "animated": true
     },
     {
-      "packFolder": "2D/kenney/tappy-plane",
-      "path": "2D/kenney/tappy-plane/extracted/Preview.png",
-      "src": "/2D/kenney/tappy-plane/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/tappy-plane",
-      "path": "2D/kenney/tappy-plane/extracted/Sample.png",
-      "src": "/2D/kenney/tappy-plane/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/tappy-plane",
-      "path": "2D/kenney/tappy-plane/Preview.png",
-      "src": "/2D/kenney/tappy-plane/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/tappy-plane",
-      "path": "2D/kenney/tappy-plane/Sample.png",
-      "src": "/2D/kenney/tappy-plane/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/tiny-battle",
-      "path": "2D/kenney/tiny-battle/extracted/Preview.png",
-      "src": "/2D/kenney/tiny-battle/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/tiny-battle",
-      "path": "2D/kenney/tiny-battle/extracted/Sample.png",
-      "src": "/2D/kenney/tiny-battle/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/tiny-battle",
-      "path": "2D/kenney/tiny-battle/Preview.png",
-      "src": "/2D/kenney/tiny-battle/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/tiny-battle",
-      "path": "2D/kenney/tiny-battle/Sample.png",
-      "src": "/2D/kenney/tiny-battle/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
       "packFolder": "2D/kenney/tiny-battle",
       "path": "2D/kenney/tiny-battle/extracted/Tilemap/tilemap_packed.png",
       "src": "/2D/kenney/tiny-battle/extracted/Tilemap/tilemap_packed.png",
@@ -8774,38 +5574,6 @@
       "src": "/2D/kenney/tiny-battle/Tilemap/tilemap_packed.png",
       "label": "Tilemap Packed",
       "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/tiny-dungeon",
-      "path": "2D/kenney/tiny-dungeon/extracted/Preview.png",
-      "src": "/2D/kenney/tiny-dungeon/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "tile",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/tiny-dungeon",
-      "path": "2D/kenney/tiny-dungeon/extracted/Sample.png",
-      "src": "/2D/kenney/tiny-dungeon/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "tile",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/tiny-dungeon",
-      "path": "2D/kenney/tiny-dungeon/Preview.png",
-      "src": "/2D/kenney/tiny-dungeon/Preview.png",
-      "label": "Preview",
-      "kind": "tile",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/tiny-dungeon",
-      "path": "2D/kenney/tiny-dungeon/Sample.png",
-      "src": "/2D/kenney/tiny-dungeon/Sample.png",
-      "label": "Sample",
-      "kind": "tile",
       "animated": false
     },
     {
@@ -8842,38 +5610,6 @@
     },
     {
       "packFolder": "2D/kenney/tiny-ski",
-      "path": "2D/kenney/tiny-ski/extracted/Preview.png",
-      "src": "/2D/kenney/tiny-ski/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/tiny-ski",
-      "path": "2D/kenney/tiny-ski/extracted/Sample.png",
-      "src": "/2D/kenney/tiny-ski/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/tiny-ski",
-      "path": "2D/kenney/tiny-ski/Preview.png",
-      "src": "/2D/kenney/tiny-ski/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/tiny-ski",
-      "path": "2D/kenney/tiny-ski/Sample.png",
-      "src": "/2D/kenney/tiny-ski/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/tiny-ski",
       "path": "2D/kenney/tiny-ski/extracted/Tilemap/tilemap_packed.png",
       "src": "/2D/kenney/tiny-ski/extracted/Tilemap/tilemap_packed.png",
       "label": "Tilemap Packed",
@@ -8901,38 +5637,6 @@
       "path": "2D/kenney/tiny-ski/Tilemap/tilemap_packed.png",
       "src": "/2D/kenney/tiny-ski/Tilemap/tilemap_packed.png",
       "label": "Tilemap Packed",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/tiny-town",
-      "path": "2D/kenney/tiny-town/extracted/Preview.png",
-      "src": "/2D/kenney/tiny-town/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/tiny-town",
-      "path": "2D/kenney/tiny-town/extracted/Sample.png",
-      "src": "/2D/kenney/tiny-town/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/tiny-town",
-      "path": "2D/kenney/tiny-town/Preview.png",
-      "src": "/2D/kenney/tiny-town/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/tiny-town",
-      "path": "2D/kenney/tiny-town/Sample.png",
-      "src": "/2D/kenney/tiny-town/Sample.png",
-      "label": "Sample",
       "kind": "image",
       "animated": false
     },
@@ -9050,38 +5754,6 @@
     },
     {
       "packFolder": "2D/kenney/top-down-shooter",
-      "path": "2D/kenney/top-down-shooter/extracted/Preview.png",
-      "src": "/2D/kenney/top-down-shooter/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/top-down-shooter",
-      "path": "2D/kenney/top-down-shooter/extracted/Sample.png",
-      "src": "/2D/kenney/top-down-shooter/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/top-down-shooter",
-      "path": "2D/kenney/top-down-shooter/Preview.png",
-      "src": "/2D/kenney/top-down-shooter/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/top-down-shooter",
-      "path": "2D/kenney/top-down-shooter/Sample.png",
-      "src": "/2D/kenney/top-down-shooter/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/top-down-shooter",
       "path": "2D/kenney/top-down-shooter/extracted/PNG/Hitman 1/hitman1_gun.png",
       "src": "/2D/kenney/top-down-shooter/extracted/PNG/Hitman%201/hitman1_gun.png",
       "label": "Hitman1 Gun",
@@ -9111,38 +5783,6 @@
       "label": "Sheet Tanks",
       "kind": "sprite",
       "animated": true
-    },
-    {
-      "packFolder": "2D/kenney/top-down-tanks",
-      "path": "2D/kenney/top-down-tanks/extracted/preview.png",
-      "src": "/2D/kenney/top-down-tanks/extracted/preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/top-down-tanks",
-      "path": "2D/kenney/top-down-tanks/extracted/sample.png",
-      "src": "/2D/kenney/top-down-tanks/extracted/sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/top-down-tanks",
-      "path": "2D/kenney/top-down-tanks/preview.png",
-      "src": "/2D/kenney/top-down-tanks/preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/top-down-tanks",
-      "path": "2D/kenney/top-down-tanks/sample.png",
-      "src": "/2D/kenney/top-down-tanks/sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
     },
     {
       "packFolder": "2D/kenney/top-down-tanks",
@@ -9193,38 +5833,6 @@
       "animated": true
     },
     {
-      "packFolder": "2D/kenney/top-down-tanks-remastered",
-      "path": "2D/kenney/top-down-tanks-remastered/extracted/Preview.png",
-      "src": "/2D/kenney/top-down-tanks-remastered/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/top-down-tanks-remastered",
-      "path": "2D/kenney/top-down-tanks-remastered/extracted/Sample.png",
-      "src": "/2D/kenney/top-down-tanks-remastered/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/top-down-tanks-remastered",
-      "path": "2D/kenney/top-down-tanks-remastered/Preview.png",
-      "src": "/2D/kenney/top-down-tanks-remastered/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/top-down-tanks-remastered",
-      "path": "2D/kenney/top-down-tanks-remastered/Sample.png",
-      "src": "/2D/kenney/top-down-tanks-remastered/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
       "packFolder": "2D/kenney/tower-defense",
       "path": "2D/kenney/tower-defense/extracted/Spritesheet/towers_brown_sheet.png",
       "src": "/2D/kenney/tower-defense/extracted/Spritesheet/towers_brown_sheet.png",
@@ -9273,70 +5881,6 @@
       "animated": true
     },
     {
-      "packFolder": "2D/kenney/tower-defense",
-      "path": "2D/kenney/tower-defense/extracted/Preview.png",
-      "src": "/2D/kenney/tower-defense/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/tower-defense",
-      "path": "2D/kenney/tower-defense/extracted/Sample.png",
-      "src": "/2D/kenney/tower-defense/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/tower-defense-top-down",
-      "path": "2D/kenney/tower-defense-top-down/extracted/Preview_KenneyNL.png",
-      "src": "/2D/kenney/tower-defense-top-down/extracted/Preview_KenneyNL.png",
-      "label": "Preview KenneyNL",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/tower-defense-top-down",
-      "path": "2D/kenney/tower-defense-top-down/extracted/Preview.png",
-      "src": "/2D/kenney/tower-defense-top-down/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/tower-defense-top-down",
-      "path": "2D/kenney/tower-defense-top-down/extracted/Sample.png",
-      "src": "/2D/kenney/tower-defense-top-down/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/tower-defense-top-down",
-      "path": "2D/kenney/tower-defense-top-down/Preview_KenneyNL.png",
-      "src": "/2D/kenney/tower-defense-top-down/Preview_KenneyNL.png",
-      "label": "Preview KenneyNL",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/tower-defense-top-down",
-      "path": "2D/kenney/tower-defense-top-down/Preview.png",
-      "src": "/2D/kenney/tower-defense-top-down/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/tower-defense-top-down",
-      "path": "2D/kenney/tower-defense-top-down/Sample.png",
-      "src": "/2D/kenney/tower-defense-top-down/Sample.png",
-      "label": "Sample",
-      "kind": "image",
-      "animated": false
-    },
-    {
       "packFolder": "2D/kenney/tower-defense-top-down",
       "path": "2D/kenney/tower-defense-top-down/extracted/Tilesheet/towerDefense_tilesheet.png",
       "src": "/2D/kenney/tower-defense-top-down/extracted/Tilesheet/towerDefense_tilesheet.png",
@@ -9349,22 +5893,6 @@
       "path": "2D/kenney/tower-defense-top-down/Tilesheet/towerDefense_tilesheet.png",
       "src": "/2D/kenney/tower-defense-top-down/Tilesheet/towerDefense_tilesheet.png",
       "label": "TowerDefense Tilesheet",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/toy-brick-pack",
-      "path": "2D/kenney/toy-brick-pack/extracted/Preview.png",
-      "src": "/2D/kenney/toy-brick-pack/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/toy-brick-pack",
-      "path": "2D/kenney/toy-brick-pack/extracted/Sample.png",
-      "src": "/2D/kenney/toy-brick-pack/extracted/Sample.png",
-      "label": "Sample",
       "kind": "image",
       "animated": false
     },
@@ -9418,38 +5946,6 @@
     },
     {
       "packFolder": "2D/kenney/ui-pack",
-      "path": "2D/kenney/ui-pack/extracted/Preview.png",
-      "src": "/2D/kenney/ui-pack/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "ui",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/ui-pack",
-      "path": "2D/kenney/ui-pack/extracted/Sample.png",
-      "src": "/2D/kenney/ui-pack/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "ui",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/ui-pack",
-      "path": "2D/kenney/ui-pack/Preview.png",
-      "src": "/2D/kenney/ui-pack/Preview.png",
-      "label": "Preview",
-      "kind": "ui",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/ui-pack",
-      "path": "2D/kenney/ui-pack/Sample.png",
-      "src": "/2D/kenney/ui-pack/Sample.png",
-      "label": "Sample",
-      "kind": "ui",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/ui-pack",
       "path": "2D/kenney/ui-pack/extracted/PNG/Blue/Default/icon_checkmark.png",
       "src": "/2D/kenney/ui-pack/extracted/PNG/Blue/Default/icon_checkmark.png",
       "label": "Icon Checkmark",
@@ -9478,38 +5974,6 @@
       "src": "/2D/kenney/ui-pack/extracted/PNG/Blue/Default/icon_outline_checkmark.png",
       "label": "Icon Outline Checkmark",
       "kind": "icon",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/ui-pack-adventure",
-      "path": "2D/kenney/ui-pack-adventure/extracted/Preview.png",
-      "src": "/2D/kenney/ui-pack-adventure/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "ui",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/ui-pack-adventure",
-      "path": "2D/kenney/ui-pack-adventure/extracted/Sample.png",
-      "src": "/2D/kenney/ui-pack-adventure/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "ui",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/ui-pack-adventure",
-      "path": "2D/kenney/ui-pack-adventure/Preview.png",
-      "src": "/2D/kenney/ui-pack-adventure/Preview.png",
-      "label": "Preview",
-      "kind": "ui",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/ui-pack-adventure",
-      "path": "2D/kenney/ui-pack-adventure/Sample.png",
-      "src": "/2D/kenney/ui-pack-adventure/Sample.png",
-      "label": "Sample",
-      "kind": "ui",
       "animated": false
     },
     {
@@ -9546,38 +6010,6 @@
     },
     {
       "packFolder": "2D/kenney/ui-pack-pixel-adventure",
-      "path": "2D/kenney/ui-pack-pixel-adventure/extracted/Preview.png",
-      "src": "/2D/kenney/ui-pack-pixel-adventure/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "ui",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/ui-pack-pixel-adventure",
-      "path": "2D/kenney/ui-pack-pixel-adventure/extracted/Sample.png",
-      "src": "/2D/kenney/ui-pack-pixel-adventure/extracted/Sample.png",
-      "label": "Sample",
-      "kind": "ui",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/ui-pack-pixel-adventure",
-      "path": "2D/kenney/ui-pack-pixel-adventure/Preview.png",
-      "src": "/2D/kenney/ui-pack-pixel-adventure/Preview.png",
-      "label": "Preview",
-      "kind": "ui",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/ui-pack-pixel-adventure",
-      "path": "2D/kenney/ui-pack-pixel-adventure/Sample.png",
-      "src": "/2D/kenney/ui-pack-pixel-adventure/Sample.png",
-      "label": "Sample",
-      "kind": "ui",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/ui-pack-pixel-adventure",
       "path": "2D/kenney/ui-pack-pixel-adventure/extracted/Tiles/Large tiles/Thick outline/tile_0000.png",
       "src": "/2D/kenney/ui-pack-pixel-adventure/extracted/Tiles/Large%20tiles/Thick%20outline/tile_0000.png",
       "label": "Tile 0000",
@@ -9605,38 +6037,6 @@
       "path": "2D/kenney/ui-pack-pixel-adventure/extracted/Tiles/Small tiles/Thin outline/tile_0000.png",
       "src": "/2D/kenney/ui-pack-pixel-adventure/extracted/Tiles/Small%20tiles/Thin%20outline/tile_0000.png",
       "label": "Tile 0000",
-      "kind": "ui",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/ui-pack-rpg-expansion",
-      "path": "2D/kenney/ui-pack-rpg-expansion/extracted/preview.png",
-      "src": "/2D/kenney/ui-pack-rpg-expansion/extracted/preview.png",
-      "label": "Preview",
-      "kind": "ui",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/ui-pack-rpg-expansion",
-      "path": "2D/kenney/ui-pack-rpg-expansion/extracted/sample.png",
-      "src": "/2D/kenney/ui-pack-rpg-expansion/extracted/sample.png",
-      "label": "Sample",
-      "kind": "ui",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/ui-pack-rpg-expansion",
-      "path": "2D/kenney/ui-pack-rpg-expansion/preview.png",
-      "src": "/2D/kenney/ui-pack-rpg-expansion/preview.png",
-      "label": "Preview",
-      "kind": "ui",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/ui-pack-rpg-expansion",
-      "path": "2D/kenney/ui-pack-rpg-expansion/sample.png",
-      "src": "/2D/kenney/ui-pack-rpg-expansion/sample.png",
-      "label": "Sample",
       "kind": "ui",
       "animated": false
     },
@@ -9670,22 +6070,6 @@
       "src": "/2D/kenney/ui-pack-rpg-expansion/extracted/PNG/iconCheck_grey.png",
       "label": "IconCheck Grey",
       "kind": "icon",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/ui-pack-sci-fi",
-      "path": "2D/kenney/ui-pack-sci-fi/Preview.png",
-      "src": "/2D/kenney/ui-pack-sci-fi/Preview.png",
-      "label": "Preview",
-      "kind": "ui",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/ui-pack-sci-fi",
-      "path": "2D/kenney/ui-pack-sci-fi/Sample.png",
-      "src": "/2D/kenney/ui-pack-sci-fi/Sample.png",
-      "label": "Sample",
-      "kind": "ui",
       "animated": false
     },
     {
@@ -9733,22 +6117,6 @@
       "path": "2D/kenney/ui-pack-sci-fi/PNG/Blue/Default/bar_round_gloss_small_l.png",
       "src": "/2D/kenney/ui-pack-sci-fi/PNG/Blue/Default/bar_round_gloss_small_l.png",
       "label": "Bar Round Gloss Small L",
-      "kind": "ui",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/ui-pack-space-expansion",
-      "path": "2D/kenney/ui-pack-space-expansion/extracted/Preview.png",
-      "src": "/2D/kenney/ui-pack-space-expansion/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "ui",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/ui-pack-space-expansion",
-      "path": "2D/kenney/ui-pack-space-expansion/extracted/Sample.png",
-      "src": "/2D/kenney/ui-pack-space-expansion/extracted/Sample.png",
-      "label": "Sample",
       "kind": "ui",
       "animated": false
     },
@@ -9831,54 +6199,6 @@
       "label": "Spritesheet Particles",
       "kind": "sprite",
       "animated": true
-    },
-    {
-      "packFolder": "2D/kenney/voxel-pack",
-      "path": "2D/kenney/voxel-pack/extracted/Preview.png",
-      "src": "/2D/kenney/voxel-pack/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/voxel-pack",
-      "path": "2D/kenney/voxel-pack/extracted/Sample_2D.png",
-      "src": "/2D/kenney/voxel-pack/extracted/Sample_2D.png",
-      "label": "Sample 2D",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/voxel-pack",
-      "path": "2D/kenney/voxel-pack/extracted/Sample_3D.png",
-      "src": "/2D/kenney/voxel-pack/extracted/Sample_3D.png",
-      "label": "Sample 3D",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/voxel-pack",
-      "path": "2D/kenney/voxel-pack/Preview.png",
-      "src": "/2D/kenney/voxel-pack/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/yellow-paint-pack",
-      "path": "2D/kenney/yellow-paint-pack/extracted/Preview.png",
-      "src": "/2D/kenney/yellow-paint-pack/extracted/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
-    },
-    {
-      "packFolder": "2D/kenney/yellow-paint-pack",
-      "path": "2D/kenney/yellow-paint-pack/Preview.png",
-      "src": "/2D/kenney/yellow-paint-pack/Preview.png",
-      "label": "Preview",
-      "kind": "image",
-      "animated": false
     },
     {
       "packFolder": "2D/kenney/yellow-paint-pack",
@@ -10049,14 +6369,6 @@
       "animated": true
     },
     {
-      "packFolder": "au-pixel__heroes99-demochar",
-      "path": "2D/au-pixel__heroes99-demochar/extracted/Heroes99_free/Heroes99_free/demochar_cover.gif",
-      "src": "/2D/au-pixel__heroes99-demochar/extracted/Heroes99_free/Heroes99_free/demochar_cover.gif",
-      "label": "Demochar Cover",
-      "kind": "character",
-      "animated": true
-    },
-    {
       "packFolder": "bdragon1727__1050-rpg-effects-64x64",
       "path": "2D/bdragon1727__1050-rpg-effects-64x64/extracted/RPG Effect All Free/Free/Part 16/Preview 16 Free.gif",
       "src": "/2D/bdragon1727__1050-rpg-effects-64x64/extracted/RPG%20Effect%20All%20Free/Free/Part%2016/Preview%2016%20Free.gif",
@@ -10117,14 +6429,6 @@
       "path": "2D/bdragon1727__1050-rpg-effects-64x64/extracted/RPG Effect All Free/Free/Part 23/Preview 23 Free.gif",
       "src": "/2D/bdragon1727__1050-rpg-effects-64x64/extracted/RPG%20Effect%20All%20Free/Free/Part%2023/Preview%2023%20Free.gif",
       "label": "Preview 23 Free",
-      "kind": "effect",
-      "animated": true
-    },
-    {
-      "packFolder": "bdragon1727__64x64-pixel-effect-rpg-part-16",
-      "path": "2D/bdragon1727__64x64-pixel-effect-rpg-part-16/extracted/Pixel Effect RPG Part 16 Free/Free/Preview 31 Free.gif",
-      "src": "/2D/bdragon1727__64x64-pixel-effect-rpg-part-16/extracted/Pixel%20Effect%20RPG%20Part%2016%20Free/Free/Preview%2031%20Free.gif",
-      "label": "Preview 31 Free",
       "kind": "effect",
       "animated": true
     },
@@ -10250,14 +6554,6 @@
     },
     {
       "packFolder": "bdragon1727__effect-and-fx-pixel-part-14",
-      "path": "2D/bdragon1727__effect-and-fx-pixel-part-14/extracted/Effect and FX Pixel Part 14 Free/Free/Free Preview 14.gif",
-      "src": "/2D/bdragon1727__effect-and-fx-pixel-part-14/extracted/Effect%20and%20FX%20Pixel%20Part%2014%20Free/Free/Free%20Preview%2014.gif",
-      "label": "Free Preview 14",
-      "kind": "effect",
-      "animated": true
-    },
-    {
-      "packFolder": "bdragon1727__effect-and-fx-pixel-part-14",
       "path": "2D/bdragon1727__effect-and-fx-pixel-part-14/extracted/Effect and FX Pixel Part 14 Free/Free/652.png",
       "src": "/2D/bdragon1727__effect-and-fx-pixel-part-14/extracted/Effect%20and%20FX%20Pixel%20Part%2014%20Free/Free/652.png",
       "label": "652",
@@ -10314,14 +6610,6 @@
     },
     {
       "packFolder": "bdragon1727__effect-and-fx-pixel-part-5",
-      "path": "2D/bdragon1727__effect-and-fx-pixel-part-5/extracted/Effect and FX Pixel Part 5 Free/Free/Preview Free.gif",
-      "src": "/2D/bdragon1727__effect-and-fx-pixel-part-5/extracted/Effect%20and%20FX%20Pixel%20Part%205%20Free/Free/Preview%20Free.gif",
-      "label": "Preview Free",
-      "kind": "effect",
-      "animated": true
-    },
-    {
-      "packFolder": "bdragon1727__effect-and-fx-pixel-part-5",
       "path": "2D/bdragon1727__effect-and-fx-pixel-part-5/extracted/Effect and FX Pixel Part 5 Free/Free/220.png",
       "src": "/2D/bdragon1727__effect-and-fx-pixel-part-5/extracted/Effect%20and%20FX%20Pixel%20Part%205%20Free/Free/220.png",
       "label": "220",
@@ -10375,14 +6663,6 @@
       "label": "232",
       "kind": "effect",
       "animated": false
-    },
-    {
-      "packFolder": "bdragon1727__effect-and-fx-pixel-part-9",
-      "path": "2D/bdragon1727__effect-and-fx-pixel-part-9/extracted/Effect and FX Pixel Part 9 Free/Free/Preview Free.gif",
-      "src": "/2D/bdragon1727__effect-and-fx-pixel-part-9/extracted/Effect%20and%20FX%20Pixel%20Part%209%20Free/Free/Preview%20Free.gif",
-      "label": "Preview Free",
-      "kind": "effect",
-      "animated": true
     },
     {
       "packFolder": "bdragon1727__effect-and-fx-pixel-part-9",
@@ -10533,14 +6813,6 @@
       "path": "2D/creativekind__bloodmoon-tower-free/extracted/BloodMoonTower_free_version/RedMoonTower_free_idle_animation..png",
       "src": "/2D/creativekind__bloodmoon-tower-free/extracted/BloodMoonTower_free_version/RedMoonTower_free_idle_animation..png",
       "label": "RedMoonTower Free Idle Animation.",
-      "kind": "sprite",
-      "animated": true
-    },
-    {
-      "packFolder": "creativekind__bloodmoon-tower-free",
-      "path": "2D/creativekind__bloodmoon-tower-free/extracted/BloodMoonTower_free_version/BloodMoonTower_cover_free_version.gif",
-      "src": "/2D/creativekind__bloodmoon-tower-free/extracted/BloodMoonTower_free_version/BloodMoonTower_cover_free_version.gif",
-      "label": "BloodMoonTower Cover Free Version",
       "kind": "sprite",
       "animated": true
     },
@@ -11175,38 +7447,6 @@
       "label": "SHADOW Series Abyssal Gate",
       "kind": "image",
       "animated": false
-    },
-    {
-      "packFolder": "foozlecc__critters-enemy-pack-3",
-      "path": "2D/foozlecc__critters-enemy-pack-3/extracted/Foozle_2DC0026_Critters_EnemyPack3_Pixel_Art/Foozle_2DC0026_Critters_EnemyPack3_Pixel_Art/Catfish Warrior Preview Final.gif",
-      "src": "/2D/foozlecc__critters-enemy-pack-3/extracted/Foozle_2DC0026_Critters_EnemyPack3_Pixel_Art/Foozle_2DC0026_Critters_EnemyPack3_Pixel_Art/Catfish%20Warrior%20Preview%20Final.gif",
-      "label": "Catfish Warrior Preview Final",
-      "kind": "character",
-      "animated": true
-    },
-    {
-      "packFolder": "foozlecc__critters-enemy-pack-3",
-      "path": "2D/foozlecc__critters-enemy-pack-3/extracted/Foozle_2DC0026_Critters_EnemyPack3_Pixel_Art/Foozle_2DC0026_Critters_EnemyPack3_Pixel_Art/Newt Slinger Preview Final.gif",
-      "src": "/2D/foozlecc__critters-enemy-pack-3/extracted/Foozle_2DC0026_Critters_EnemyPack3_Pixel_Art/Foozle_2DC0026_Critters_EnemyPack3_Pixel_Art/Newt%20Slinger%20Preview%20Final.gif",
-      "label": "Newt Slinger Preview Final",
-      "kind": "character",
-      "animated": true
-    },
-    {
-      "packFolder": "foozlecc__critters-enemy-pack-3",
-      "path": "2D/foozlecc__critters-enemy-pack-3/extracted/Foozle_2DC0026_Critters_EnemyPack3_Pixel_Art/Foozle_2DC0026_Critters_EnemyPack3_Pixel_Art/Turtle King Preview Final.gif",
-      "src": "/2D/foozlecc__critters-enemy-pack-3/extracted/Foozle_2DC0026_Critters_EnemyPack3_Pixel_Art/Foozle_2DC0026_Critters_EnemyPack3_Pixel_Art/Turtle%20King%20Preview%20Final.gif",
-      "label": "Turtle King Preview Final",
-      "kind": "character",
-      "animated": true
-    },
-    {
-      "packFolder": "foozlecc__critters-enemy-pack-3",
-      "path": "2D/foozlecc__critters-enemy-pack-3/extracted/Foozle_2DC0026_Critters_EnemyPack3_Pixel_Art/Foozle_2DC0026_Critters_EnemyPack3_Pixel_Art/Weasel Fisherman Preview Final.gif",
-      "src": "/2D/foozlecc__critters-enemy-pack-3/extracted/Foozle_2DC0026_Critters_EnemyPack3_Pixel_Art/Foozle_2DC0026_Critters_EnemyPack3_Pixel_Art/Weasel%20Fisherman%20Preview%20Final.gif",
-      "label": "Weasel Fisherman Preview Final",
-      "kind": "character",
-      "animated": true
     },
     {
       "packFolder": "foozlecc__critters-enemy-pack-3",
@@ -12594,14 +8834,6 @@
     },
     {
       "packFolder": "luizmelo__fire-worm",
-      "path": "2D/luizmelo__fire-worm/extracted/Fire Worm/Fire Worm/Preview.png",
-      "src": "/2D/luizmelo__fire-worm/extracted/Fire%20Worm/Fire%20Worm/Preview.png",
-      "label": "Preview",
-      "kind": "effect",
-      "animated": false
-    },
-    {
-      "packFolder": "luizmelo__fire-worm",
       "path": "2D/luizmelo__fire-worm/extracted/Fire Worm/Fire Worm/Sprites/Fire Ball/Explosion.png",
       "src": "/2D/luizmelo__fire-worm/extracted/Fire%20Worm/Fire%20Worm/Sprites/Fire%20Ball/Explosion.png",
       "label": "Explosion",
@@ -13026,14 +9258,6 @@
     },
     {
       "packFolder": "luizmelo__martial-hero-3",
-      "path": "2D/luizmelo__martial-hero-3/extracted/Martial Hero 3/Martial Hero 3/Preview.png",
-      "src": "/2D/luizmelo__martial-hero-3/extracted/Martial%20Hero%203/Martial%20Hero%203/Preview.png",
-      "label": "Preview",
-      "kind": "character",
-      "animated": false
-    },
-    {
-      "packFolder": "luizmelo__martial-hero-3",
       "path": "2D/luizmelo__martial-hero-3/extracted/Martial Hero 3/Martial Hero 3/Sprite/Going Down.png",
       "src": "/2D/luizmelo__martial-hero-3/extracted/Martial%20Hero%203/Martial%20Hero%203/Sprite/Going%20Down.png",
       "label": "Going Down",
@@ -13290,14 +9514,6 @@
     },
     {
       "packFolder": "luizmelo__medieval-warrior-pack-3",
-      "path": "2D/luizmelo__medieval-warrior-pack-3/extracted/Medieval Warrior Pack 3/Medieval Warrior Pack 3/Preview.gif",
-      "src": "/2D/luizmelo__medieval-warrior-pack-3/extracted/Medieval%20Warrior%20Pack%203/Medieval%20Warrior%20Pack%203/Preview.gif",
-      "label": "Preview",
-      "kind": "character",
-      "animated": true
-    },
-    {
-      "packFolder": "luizmelo__medieval-warrior-pack-3",
       "path": "2D/luizmelo__medieval-warrior-pack-3/extracted/Medieval Warrior Pack 3/Medieval Warrior Pack 3/Sprites/Death.png",
       "src": "/2D/luizmelo__medieval-warrior-pack-3/extracted/Medieval%20Warrior%20Pack%203/Medieval%20Warrior%20Pack%203/Sprites/Death.png",
       "label": "Death",
@@ -13463,14 +9679,6 @@
       "label": "Cat 6 Idle",
       "kind": "character",
       "animated": true
-    },
-    {
-      "packFolder": "luizmelo__pet-cat-pack",
-      "path": "2D/luizmelo__pet-cat-pack/extracted/Pet Cats Pack/Pet Cats Pack/preview.png",
-      "src": "/2D/luizmelo__pet-cat-pack/extracted/Pet%20Cats%20Pack/Pet%20Cats%20Pack/preview.png",
-      "label": "Preview",
-      "kind": "character",
-      "animated": false
     },
     {
       "packFolder": "luizmelo__pet-cat-pack",
@@ -14041,14 +10249,6 @@
       "animated": true
     },
     {
-      "packFolder": "penusbmic__monster-pack-i--tooth-walker",
-      "path": "2D/penusbmic__monster-pack-i--tooth-walker/extracted/tooth walker/tooth walker/cover.gif",
-      "src": "/2D/penusbmic__monster-pack-i--tooth-walker/extracted/tooth%20walker/tooth%20walker/cover.gif",
-      "label": "Cover",
-      "kind": "character",
-      "animated": true
-    },
-    {
       "packFolder": "penusbmic__monster-pack-i--trash-monster",
       "path": "2D/penusbmic__monster-pack-i--trash-monster/extracted/Trash Monster/Trash Monster/death.gif",
       "src": "/2D/penusbmic__monster-pack-i--trash-monster/extracted/Trash%20Monster/Trash%20Monster/death.gif",
@@ -14093,14 +10293,6 @@
       "path": "2D/penusbmic__monster-pack-i--trash-monster/extracted/Trash Monster/Trash Monster/Trash Monster-Sprite V2.png",
       "src": "/2D/penusbmic__monster-pack-i--trash-monster/extracted/Trash%20Monster/Trash%20Monster/Trash%20Monster-Sprite%20V2.png",
       "label": "Trash Monster Sprite V2",
-      "kind": "character",
-      "animated": false
-    },
-    {
-      "packFolder": "penusbmic__monster-pack-i--trash-monster",
-      "path": "2D/penusbmic__monster-pack-i--trash-monster/extracted/Trash Monster/Trash Monster/cover.png",
-      "src": "/2D/penusbmic__monster-pack-i--trash-monster/extracted/Trash%20Monster/Trash%20Monster/cover.png",
-      "label": "Cover",
       "kind": "character",
       "animated": false
     },
@@ -14735,22 +10927,6 @@
       "label": "SprDragon",
       "kind": "character",
       "animated": true
-    },
-    {
-      "packFolder": "schwarnhild__summer-plains-tileset-and-asset-pack-32x32-pixels",
-      "path": "2D/schwarnhild__summer-plains-tileset-and-asset-pack-32x32-pixels/extracted/water_animation_demo/water_animation_demo/water_animation_demo.png",
-      "src": "/2D/schwarnhild__summer-plains-tileset-and-asset-pack-32x32-pixels/extracted/water_animation_demo/water_animation_demo/water_animation_demo.png",
-      "label": "Water Animation Demo",
-      "kind": "tile",
-      "animated": true
-    },
-    {
-      "packFolder": "schwarnhild__summer-plains-tileset-and-asset-pack-32x32-pixels",
-      "path": "2D/schwarnhild__summer-plains-tileset-and-asset-pack-32x32-pixels/extracted/character_demo/character_demo/character_demo.png",
-      "src": "/2D/schwarnhild__summer-plains-tileset-and-asset-pack-32x32-pixels/extracted/character_demo/character_demo/character_demo.png",
-      "label": "Character Demo",
-      "kind": "character",
-      "animated": false
     },
     {
       "packFolder": "schwarnhild__summer-plains-tileset-and-asset-pack-32x32-pixels",

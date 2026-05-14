@@ -6,6 +6,7 @@ import {
 } from "@/components/LandingModelBackdrop";
 import { manifest } from "@/lib/manifest";
 import { catalog, mediaStats } from "@/lib/media";
+import { isLikelyMarketingPreviewPath } from "@/lib/media-inference";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
@@ -21,6 +22,11 @@ const LANDING_ASSET_BASE_URL = (
 const GITHUB_URL = "https://github.com/trebeljahr/gamedev";
 const CREDITS_URL = `${GITHUB_URL}/blob/main/CREDITS.md`;
 
+function sampleForLandingArt(pack: (typeof catalog.artPacks)[number]) {
+  const materialSamples = pack.samples.filter((sample) => !isLikelyMarketingPreviewPath(sample.path));
+  return materialSamples[0] ?? pack.samples[0];
+}
+
 function landingAssetUrl(src: string) {
   if (/^[a-z][a-z0-9+.-]*:\/\//i.test(src)) return src;
   return `${LANDING_ASSET_BASE_URL}${src.startsWith("/") ? src : `/${src}`}`;
@@ -32,7 +38,7 @@ const featuredArt = catalog.artPacks
   .map((pack) => ({
     title: pack.title,
     theme: pack.theme,
-    src: landingAssetUrl(pack.samples[0].src),
+    src: landingAssetUrl(sampleForLandingArt(pack).src),
   }));
 
 const modelPicks = [
@@ -224,7 +230,7 @@ export default function LandingPage() {
           </div>
           <div>
             <strong>{mediaStats.artSampleCount}</strong>
-            <span>art previews</span>
+            <span>art materials</span>
           </div>
         </div>
       </section>

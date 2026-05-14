@@ -11,6 +11,9 @@ const ATLAS_WORDS =
 const SHEET_WORDS = "spritesheet|sprite sheet|sheet|strip|allanim|all anim|animation|animated";
 const STATIC_SHEET_WORDS =
   "ui|hud|button|buttons|panel|panels|cursor|cursors|crosshair|crosshairs|icon|icons|item|items|coin|coins|controls|tile|tiles|tilesheet|tilemap|tileset|terrain|platform|platformer|dungeon|dungeons|cave|caves|industrial|roguelike|landscape|building|buildings|city|road|roads|vehicle|vehicles|car|cars|object|objects|prop|props";
+const MARKETING_PREVIEW_WORDS =
+  "preview|previews|sample|samples|demo|demos|screenshot|screenshots|cover|covers|thumbnail|thumbnails|promo|promotion|marketing|banner|banners";
+const MARKETING_PREVIEW_FOLDERS = "previews|samples|screenshots|captures|marketing|promo|promotional";
 
 function parts(path: string): string[] {
   return path.split(/[\\/]+/).filter(Boolean);
@@ -36,6 +39,15 @@ function tokenText(value: string): string {
 
 function hasToken(text: string, pattern: string): boolean {
   return new RegExp(`(^|\\s)(${pattern})(\\s|$)`, "i").test(tokenText(text));
+}
+
+export function isLikelyMarketingPreviewPath(path: string): boolean {
+  const pathParts = parts(path);
+  const name = tokenText(basenameWithoutExtension(path));
+  if (hasToken(name, MARKETING_PREVIEW_WORDS)) return true;
+
+  const folders = pathParts.slice(0, -1).map(tokenText);
+  return folders.some((folder) => hasToken(folder, MARKETING_PREVIEW_FOLDERS));
 }
 
 export function isLikelySeparateFramePath(path: string): boolean {
@@ -139,16 +151,19 @@ export function scoreArtSample(path: string): number {
   let score = 0;
   if (/\.(png|webp|gif)$/i.test(path)) score += 8;
   if (isLikelySpriteSheetPath(path)) score += 18;
-  if (/(preview|sample|demo)/.test(lower)) score += 10;
+  if (isLikelyTextureAtlasPath(path)) score += 12;
   if (hasToken(path, ACTION_WORDS)) score += 4;
   if (/(character|hero|knight|warrior|monster|enemy|icon|item|effect|fx|npc|ship)/.test(lower)) score += 8;
   if (isLikelySeparateFramePath(path)) score -= 10;
+  if (isLikelyMarketingPreviewPath(path)) score -= 45;
   if (/(license|readme|credit|cover|banner|thumbnail|__macosx|[\\/]\._)/.test(lower)) score -= 40;
   return score;
 }
 
 export function selectRepresentativeArtSamples(paths: string[], limit: number): string[] {
-  const sorted = [...paths].sort((a, b) => scoreArtSample(b) - scoreArtSample(a) || a.localeCompare(b));
+  const materialPaths = paths.filter((path) => !isLikelyMarketingPreviewPath(path));
+  const candidates = materialPaths.length > 0 ? materialPaths : paths;
+  const sorted = [...candidates].sort((a, b) => scoreArtSample(b) - scoreArtSample(a) || a.localeCompare(b));
   const selected: string[] = [];
   const seenDesigns = new Set<string>();
 
