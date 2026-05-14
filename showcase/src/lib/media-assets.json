@@ -101,32 +101,32 @@
       "path": "2D/kenney/abstract-platformer/extracted/PNG/Players/Player Blue/playerBlue_fall.png",
       "src": "/2D/kenney/abstract-platformer/extracted/PNG/Players/Player%20Blue/playerBlue_fall.png",
       "label": "PlayerBlue Fall",
-      "kind": "sprite",
-      "animated": true
+      "kind": "character",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/abstract-platformer",
       "path": "2D/kenney/abstract-platformer/extracted/PNG/Players/Player Green/playerGreen_fall.png",
       "src": "/2D/kenney/abstract-platformer/extracted/PNG/Players/Player%20Green/playerGreen_fall.png",
       "label": "PlayerGreen Fall",
-      "kind": "sprite",
-      "animated": true
+      "kind": "character",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/abstract-platformer",
       "path": "2D/kenney/abstract-platformer/extracted/PNG/Players/Player Grey/playerGrey_fall.png",
       "src": "/2D/kenney/abstract-platformer/extracted/PNG/Players/Player%20Grey/playerGrey_fall.png",
       "label": "PlayerGrey Fall",
-      "kind": "sprite",
-      "animated": true
+      "kind": "character",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/abstract-platformer",
       "path": "2D/kenney/abstract-platformer/extracted/PNG/Players/Player Red/playerRed_fall.png",
       "src": "/2D/kenney/abstract-platformer/extracted/PNG/Players/Player%20Red/playerRed_fall.png",
       "label": "PlayerRed Fall",
-      "kind": "sprite",
-      "animated": true
+      "kind": "character",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/abstract-platformer",
@@ -134,7 +134,7 @@
       "src": "/2D/kenney/abstract-platformer/extracted/Spritesheet/spritesheet_enemies.png",
       "label": "Spritesheet Enemies",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/abstract-platformer",
@@ -142,7 +142,7 @@
       "src": "/2D/kenney/abstract-platformer/Spritesheet/spritesheet_enemies.png",
       "label": "Spritesheet Enemies",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/alien-ufo-pack",
@@ -150,7 +150,7 @@
       "src": "/2D/kenney/alien-ufo-pack/extracted/Spritesheets/spritesheet_spaceships.png",
       "label": "Spritesheet Spaceships",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/alien-ufo-pack",
@@ -158,191 +158,191 @@
       "src": "/2D/kenney/alien-ufo-pack/Spritesheets/spritesheet_spaceships.png",
       "label": "Spritesheet Spaceships",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/alien-ufo-pack",
       "path": "2D/kenney/alien-ufo-pack/extracted/Spritesheets/spritesheet_lasers.png",
       "src": "/2D/kenney/alien-ufo-pack/extracted/Spritesheets/spritesheet_lasers.png",
       "label": "Spritesheet Lasers",
-      "kind": "sprite",
-      "animated": true
+      "kind": "effect",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/alien-ufo-pack",
       "path": "2D/kenney/alien-ufo-pack/Spritesheets/spritesheet_lasers.png",
       "src": "/2D/kenney/alien-ufo-pack/Spritesheets/spritesheet_lasers.png",
       "label": "Spritesheet Lasers",
-      "kind": "sprite",
-      "animated": true
+      "kind": "effect",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/animal-pack",
       "path": "2D/kenney/animal-pack/extracted/Spritesheet/round_nodetails_outline.png",
       "src": "/2D/kenney/animal-pack/extracted/Spritesheet/round_nodetails_outline.png",
       "label": "Round Nodetails Outline",
-      "kind": "sprite",
-      "animated": true
+      "kind": "character",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/animal-pack",
       "path": "2D/kenney/animal-pack/extracted/Spritesheet/round_nodetails.png",
       "src": "/2D/kenney/animal-pack/extracted/Spritesheet/round_nodetails.png",
       "label": "Round Nodetails",
-      "kind": "sprite",
-      "animated": true
+      "kind": "character",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/animal-pack",
       "path": "2D/kenney/animal-pack/extracted/Spritesheet/round_outline.png",
       "src": "/2D/kenney/animal-pack/extracted/Spritesheet/round_outline.png",
       "label": "Round Outline",
-      "kind": "sprite",
-      "animated": true
+      "kind": "character",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/animal-pack",
       "path": "2D/kenney/animal-pack/extracted/Spritesheet/round.png",
       "src": "/2D/kenney/animal-pack/extracted/Spritesheet/round.png",
       "label": "Round",
-      "kind": "sprite",
-      "animated": true
+      "kind": "character",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/animal-pack",
       "path": "2D/kenney/animal-pack/extracted/Spritesheet/square_nodetails_outline.png",
       "src": "/2D/kenney/animal-pack/extracted/Spritesheet/square_nodetails_outline.png",
       "label": "Square Nodetails Outline",
-      "kind": "sprite",
-      "animated": true
+      "kind": "character",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/animal-pack",
       "path": "2D/kenney/animal-pack/extracted/Spritesheet/square_nodetails.png",
       "src": "/2D/kenney/animal-pack/extracted/Spritesheet/square_nodetails.png",
       "label": "Square Nodetails",
-      "kind": "sprite",
-      "animated": true
+      "kind": "character",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/animal-pack",
       "path": "2D/kenney/animal-pack/extracted/Spritesheet/square_outline.png",
       "src": "/2D/kenney/animal-pack/extracted/Spritesheet/square_outline.png",
       "label": "Square Outline",
-      "kind": "sprite",
-      "animated": true
+      "kind": "character",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/animal-pack",
       "path": "2D/kenney/animal-pack/extracted/Spritesheet/square.png",
       "src": "/2D/kenney/animal-pack/extracted/Spritesheet/square.png",
       "label": "Square",
-      "kind": "sprite",
-      "animated": true
+      "kind": "character",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/animal-pack-remastered",
       "path": "2D/kenney/animal-pack-remastered/extracted/Spritesheet/round_nodetails.png",
       "src": "/2D/kenney/animal-pack-remastered/extracted/Spritesheet/round_nodetails.png",
       "label": "Round Nodetails",
-      "kind": "sprite",
-      "animated": true
+      "kind": "character",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/animal-pack-remastered",
       "path": "2D/kenney/animal-pack-remastered/extracted/Spritesheet/round_nodetailsOutline.png",
       "src": "/2D/kenney/animal-pack-remastered/extracted/Spritesheet/round_nodetailsOutline.png",
       "label": "Round NodetailsOutline",
-      "kind": "sprite",
-      "animated": true
+      "kind": "character",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/animal-pack-remastered",
       "path": "2D/kenney/animal-pack-remastered/extracted/Spritesheet/round.png",
       "src": "/2D/kenney/animal-pack-remastered/extracted/Spritesheet/round.png",
       "label": "Round",
-      "kind": "sprite",
-      "animated": true
+      "kind": "character",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/animal-pack-remastered",
       "path": "2D/kenney/animal-pack-remastered/extracted/Spritesheet/roundOutline.png",
       "src": "/2D/kenney/animal-pack-remastered/extracted/Spritesheet/roundOutline.png",
       "label": "RoundOutline",
-      "kind": "sprite",
-      "animated": true
+      "kind": "character",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/animal-pack-remastered",
       "path": "2D/kenney/animal-pack-remastered/extracted/Spritesheet/square_nodetails.png",
       "src": "/2D/kenney/animal-pack-remastered/extracted/Spritesheet/square_nodetails.png",
       "label": "Square Nodetails",
-      "kind": "sprite",
-      "animated": true
+      "kind": "character",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/animal-pack-remastered",
       "path": "2D/kenney/animal-pack-remastered/extracted/Spritesheet/square_nodetailsOutline.png",
       "src": "/2D/kenney/animal-pack-remastered/extracted/Spritesheet/square_nodetailsOutline.png",
       "label": "Square NodetailsOutline",
-      "kind": "sprite",
-      "animated": true
+      "kind": "character",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/animal-pack-remastered",
       "path": "2D/kenney/animal-pack-remastered/extracted/Spritesheet/square.png",
       "src": "/2D/kenney/animal-pack-remastered/extracted/Spritesheet/square.png",
       "label": "Square",
-      "kind": "sprite",
-      "animated": true
+      "kind": "character",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/animal-pack-remastered",
       "path": "2D/kenney/animal-pack-remastered/extracted/Spritesheet/squareOutline.png",
       "src": "/2D/kenney/animal-pack-remastered/extracted/Spritesheet/squareOutline.png",
       "label": "SquareOutline",
-      "kind": "sprite",
-      "animated": true
+      "kind": "character",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/background-elements",
       "path": "2D/kenney/background-elements/extracted/Spritesheet/bgElements_spritesheet.png",
       "src": "/2D/kenney/background-elements/extracted/Spritesheet/bgElements_spritesheet.png",
       "label": "BgElements Spritesheet",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/background-elements",
       "path": "2D/kenney/background-elements/Spritesheet/bgElements_spritesheet.png",
       "src": "/2D/kenney/background-elements/Spritesheet/bgElements_spritesheet.png",
       "label": "BgElements Spritesheet",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/background-elements-redux",
       "path": "2D/kenney/background-elements-redux/extracted/Backgrounds/backgroundColorFall.png",
       "src": "/2D/kenney/background-elements-redux/extracted/Backgrounds/backgroundColorFall.png",
       "label": "BackgroundColorFall",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/background-elements-redux",
       "path": "2D/kenney/background-elements-redux/extracted/Spritesheet/spritesheet_default.png",
       "src": "/2D/kenney/background-elements-redux/extracted/Spritesheet/spritesheet_default.png",
       "label": "Spritesheet Default",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/background-elements-redux",
       "path": "2D/kenney/background-elements-redux/extracted/Spritesheet/spritesheet_retina.png",
       "src": "/2D/kenney/background-elements-redux/extracted/Spritesheet/spritesheet_retina.png",
       "label": "Spritesheet Retina",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/background-elements-redux",
@@ -373,48 +373,48 @@
       "path": "2D/kenney/background-elements-remastered/Backgrounds/backgroundColorFall.png",
       "src": "/2D/kenney/background-elements-remastered/Backgrounds/backgroundColorFall.png",
       "label": "BackgroundColorFall",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/background-elements-remastered",
       "path": "2D/kenney/background-elements-remastered/extracted/Backgrounds/backgroundColorFall.png",
       "src": "/2D/kenney/background-elements-remastered/extracted/Backgrounds/backgroundColorFall.png",
       "label": "BackgroundColorFall",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/background-elements-remastered",
       "path": "2D/kenney/background-elements-remastered/extracted/Spritesheet/spritesheet_default.png",
       "src": "/2D/kenney/background-elements-remastered/extracted/Spritesheet/spritesheet_default.png",
       "label": "Spritesheet Default",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/background-elements-remastered",
       "path": "2D/kenney/background-elements-remastered/extracted/Spritesheet/spritesheet_retina.png",
       "src": "/2D/kenney/background-elements-remastered/extracted/Spritesheet/spritesheet_retina.png",
       "label": "Spritesheet Retina",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/background-elements-remastered",
       "path": "2D/kenney/background-elements-remastered/Spritesheet/spritesheet_default.png",
       "src": "/2D/kenney/background-elements-remastered/Spritesheet/spritesheet_default.png",
       "label": "Spritesheet Default",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/background-elements-remastered",
       "path": "2D/kenney/background-elements-remastered/Spritesheet/spritesheet_retina.png",
       "src": "/2D/kenney/background-elements-remastered/Spritesheet/spritesheet_retina.png",
       "label": "Spritesheet Retina",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/block-pack",
@@ -422,7 +422,7 @@
       "src": "/2D/kenney/block-pack/extracted/Spritesheet/blockPack_spritesheet.png",
       "label": "BlockPack Spritesheet",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/block-pack",
@@ -430,7 +430,7 @@
       "src": "/2D/kenney/block-pack/Spritesheet/blockPack_spritesheet.png",
       "label": "BlockPack Spritesheet",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/block-pack",
@@ -533,7 +533,7 @@
       "path": "2D/kenney/board-game-info/extracted/PNG/Default (128px)/cards_text.png",
       "src": "/2D/kenney/board-game-info/extracted/PNG/Default%20(128px)/cards_text.png",
       "label": "Cards Text",
-      "kind": "image",
+      "kind": "icon",
       "animated": false
     },
     {
@@ -541,7 +541,7 @@
       "path": "2D/kenney/board-game-info/extracted/PNG/Default (128px)/cards.png",
       "src": "/2D/kenney/board-game-info/extracted/PNG/Default%20(128px)/cards.png",
       "label": "Cards",
-      "kind": "image",
+      "kind": "icon",
       "animated": false
     },
     {
@@ -549,64 +549,64 @@
       "path": "2D/kenney/boardgame-pack/extracted/Spritesheets/chips.png",
       "src": "/2D/kenney/boardgame-pack/extracted/Spritesheets/chips.png",
       "label": "Chips",
-      "kind": "sprite",
-      "animated": true
+      "kind": "icon",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/boardgame-pack",
       "path": "2D/kenney/boardgame-pack/extracted/Spritesheets/diceRed_border.png",
       "src": "/2D/kenney/boardgame-pack/extracted/Spritesheets/diceRed_border.png",
       "label": "DiceRed Border",
-      "kind": "sprite",
-      "animated": true
+      "kind": "icon",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/boardgame-pack",
       "path": "2D/kenney/boardgame-pack/extracted/Spritesheets/diceRed.png",
       "src": "/2D/kenney/boardgame-pack/extracted/Spritesheets/diceRed.png",
       "label": "DiceRed",
-      "kind": "sprite",
-      "animated": true
+      "kind": "icon",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/boardgame-pack",
       "path": "2D/kenney/boardgame-pack/extracted/Spritesheets/diceWhite_border.png",
       "src": "/2D/kenney/boardgame-pack/extracted/Spritesheets/diceWhite_border.png",
       "label": "DiceWhite Border",
-      "kind": "sprite",
-      "animated": true
+      "kind": "icon",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/boardgame-pack",
       "path": "2D/kenney/boardgame-pack/extracted/Spritesheets/diceWhite.png",
       "src": "/2D/kenney/boardgame-pack/extracted/Spritesheets/diceWhite.png",
       "label": "DiceWhite",
-      "kind": "sprite",
-      "animated": true
+      "kind": "icon",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/boardgame-pack",
       "path": "2D/kenney/boardgame-pack/extracted/Spritesheets/piecesBlack.png",
       "src": "/2D/kenney/boardgame-pack/extracted/Spritesheets/piecesBlack.png",
       "label": "PiecesBlack",
-      "kind": "sprite",
-      "animated": true
+      "kind": "icon",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/boardgame-pack",
       "path": "2D/kenney/boardgame-pack/extracted/Spritesheets/piecesBlue.png",
       "src": "/2D/kenney/boardgame-pack/extracted/Spritesheets/piecesBlue.png",
       "label": "PiecesBlue",
-      "kind": "sprite",
-      "animated": true
+      "kind": "icon",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/boardgame-pack",
       "path": "2D/kenney/boardgame-pack/extracted/Spritesheets/piecesGreen.png",
       "src": "/2D/kenney/boardgame-pack/extracted/Spritesheets/piecesGreen.png",
       "label": "PiecesGreen",
-      "kind": "sprite",
-      "animated": true
+      "kind": "icon",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/brick-pack",
@@ -661,32 +661,32 @@
       "path": "2D/kenney/cartography-pack/extracted/Spritesheet/spritesheet_default.png",
       "src": "/2D/kenney/cartography-pack/extracted/Spritesheet/spritesheet_default.png",
       "label": "Spritesheet Default",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/cartography-pack",
       "path": "2D/kenney/cartography-pack/extracted/Spritesheet/spritesheet_retina.png",
       "src": "/2D/kenney/cartography-pack/extracted/Spritesheet/spritesheet_retina.png",
       "label": "Spritesheet Retina",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/cartography-pack",
       "path": "2D/kenney/cartography-pack/Spritesheet/spritesheet_default.png",
       "src": "/2D/kenney/cartography-pack/Spritesheet/spritesheet_default.png",
       "label": "Spritesheet Default",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/cartography-pack",
       "path": "2D/kenney/cartography-pack/Spritesheet/spritesheet_retina.png",
       "src": "/2D/kenney/cartography-pack/Spritesheet/spritesheet_retina.png",
       "label": "Spritesheet Retina",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/construct-game-sources",
@@ -917,64 +917,64 @@
       "path": "2D/kenney/emotes-pack/extracted/PNG/Pixel/Style 1/emote_sleep.png",
       "src": "/2D/kenney/emotes-pack/extracted/PNG/Pixel/Style%201/emote_sleep.png",
       "label": "Emote Sleep",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/emotes-pack",
       "path": "2D/kenney/emotes-pack/extracted/PNG/Pixel/Style 2/emote_sleep.png",
       "src": "/2D/kenney/emotes-pack/extracted/PNG/Pixel/Style%202/emote_sleep.png",
       "label": "Emote Sleep",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/emotes-pack",
       "path": "2D/kenney/emotes-pack/extracted/PNG/Pixel/Style 3/emote_sleep.png",
       "src": "/2D/kenney/emotes-pack/extracted/PNG/Pixel/Style%203/emote_sleep.png",
       "label": "Emote Sleep",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/emotes-pack",
       "path": "2D/kenney/emotes-pack/extracted/PNG/Pixel/Style 4/emote_sleep.png",
       "src": "/2D/kenney/emotes-pack/extracted/PNG/Pixel/Style%204/emote_sleep.png",
       "label": "Emote Sleep",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/emotes-pack",
       "path": "2D/kenney/emotes-pack/extracted/PNG/Pixel/Style 5/emote_sleep.png",
       "src": "/2D/kenney/emotes-pack/extracted/PNG/Pixel/Style%205/emote_sleep.png",
       "label": "Emote Sleep",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/emotes-pack",
       "path": "2D/kenney/emotes-pack/extracted/PNG/Pixel/Style 6/emote_sleep.png",
       "src": "/2D/kenney/emotes-pack/extracted/PNG/Pixel/Style%206/emote_sleep.png",
       "label": "Emote Sleep",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/emotes-pack",
       "path": "2D/kenney/emotes-pack/extracted/PNG/Pixel/Style 7/emote_sleep.png",
       "src": "/2D/kenney/emotes-pack/extracted/PNG/Pixel/Style%207/emote_sleep.png",
       "label": "Emote Sleep",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/emotes-pack",
       "path": "2D/kenney/emotes-pack/extracted/PNG/Pixel/Style 8/emote_sleep.png",
       "src": "/2D/kenney/emotes-pack/extracted/PNG/Pixel/Style%208/emote_sleep.png",
       "label": "Emote Sleep",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/fantasy-ui-borders",
@@ -1014,7 +1014,7 @@
       "src": "/2D/kenney/fish-pack/extracted/Spritesheet/fishSpritesheet.png",
       "label": "FishSpritesheet",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/fish-pack",
@@ -1022,7 +1022,7 @@
       "src": "/2D/kenney/fish-pack/Spritesheet/spritesheet-double.png",
       "label": "Spritesheet Double",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/fish-pack",
@@ -1030,7 +1030,7 @@
       "src": "/2D/kenney/fish-pack/Spritesheet/spritesheet.png",
       "label": "Spritesheet",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/fish-pack",
@@ -1045,32 +1045,32 @@
       "path": "2D/kenney/foliage-pack/extracted/Spritesheet/foliagePack_default.png",
       "src": "/2D/kenney/foliage-pack/extracted/Spritesheet/foliagePack_default.png",
       "label": "FoliagePack Default",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/foliage-pack",
       "path": "2D/kenney/foliage-pack/extracted/Spritesheet/foliagePack_retina.png",
       "src": "/2D/kenney/foliage-pack/extracted/Spritesheet/foliagePack_retina.png",
       "label": "FoliagePack Retina",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/foliage-pack",
       "path": "2D/kenney/foliage-pack/Spritesheet/foliagePack_default.png",
       "src": "/2D/kenney/foliage-pack/Spritesheet/foliagePack_default.png",
       "label": "FoliagePack Default",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/foliage-pack",
       "path": "2D/kenney/foliage-pack/Spritesheet/foliagePack_retina.png",
       "src": "/2D/kenney/foliage-pack/Spritesheet/foliagePack_retina.png",
       "label": "FoliagePack Retina",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/foliage-sprites",
@@ -1301,16 +1301,16 @@
       "path": "2D/kenney/hexagon-pack/extracted/Spritesheets/hexagonAll_sheet.png",
       "src": "/2D/kenney/hexagon-pack/extracted/Spritesheets/hexagonAll_sheet.png",
       "label": "HexagonAll Sheet",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/hexagon-pack",
       "path": "2D/kenney/hexagon-pack/Spritesheets/hexagonAll_sheet.png",
       "src": "/2D/kenney/hexagon-pack/Spritesheets/hexagonAll_sheet.png",
       "label": "HexagonAll Sheet",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/hexagon-pack",
@@ -1334,7 +1334,7 @@
       "src": "/2D/kenney/hexagon-tiles/extracted/Spritesheet/aliens.png",
       "label": "Aliens",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/hexagon-tiles",
@@ -1342,7 +1342,7 @@
       "src": "/2D/kenney/hexagon-tiles/Spritesheet/aliens.png",
       "label": "Aliens",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/hexagon-tiles",
@@ -1365,135 +1365,135 @@
       "path": "2D/kenney/holiday-extras/extracted/Spritesheet/foliagePack_sheet.png",
       "src": "/2D/kenney/holiday-extras/extracted/Spritesheet/foliagePack_sheet.png",
       "label": "FoliagePack Sheet",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/holiday-extras",
       "path": "2D/kenney/holiday-extras/extracted/Spritesheet/hexagonPack_sheet.png",
       "src": "/2D/kenney/holiday-extras/extracted/Spritesheet/hexagonPack_sheet.png",
       "label": "HexagonPack Sheet",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/holiday-extras",
       "path": "2D/kenney/holiday-extras/extracted/Spritesheet/RTSpack_sheet.png",
       "src": "/2D/kenney/holiday-extras/extracted/Spritesheet/RTSpack_sheet.png",
       "label": "RTSpack Sheet",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/holiday-extras",
       "path": "2D/kenney/holiday-extras/extracted/Spritesheet/topdownPack_sheet.png",
       "src": "/2D/kenney/holiday-extras/extracted/Spritesheet/topdownPack_sheet.png",
       "label": "TopdownPack Sheet",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/holiday-extras",
       "path": "2D/kenney/holiday-extras/Spritesheet/foliagePack_sheet.png",
       "src": "/2D/kenney/holiday-extras/Spritesheet/foliagePack_sheet.png",
       "label": "FoliagePack Sheet",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/holiday-extras",
       "path": "2D/kenney/holiday-extras/Spritesheet/hexagonPack_sheet.png",
       "src": "/2D/kenney/holiday-extras/Spritesheet/hexagonPack_sheet.png",
       "label": "HexagonPack Sheet",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/holiday-extras",
       "path": "2D/kenney/holiday-extras/Spritesheet/RTSpack_sheet.png",
       "src": "/2D/kenney/holiday-extras/Spritesheet/RTSpack_sheet.png",
       "label": "RTSpack Sheet",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/holiday-extras",
       "path": "2D/kenney/holiday-extras/Spritesheet/topdownPack_sheet.png",
       "src": "/2D/kenney/holiday-extras/Spritesheet/topdownPack_sheet.png",
       "label": "TopdownPack Sheet",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/input-prompts",
       "path": "2D/kenney/input-prompts/extracted/Keyboard & Mouse/Default/mouse_move.png",
       "src": "/2D/kenney/input-prompts/extracted/Keyboard%20%26%20Mouse/Default/mouse_move.png",
       "label": "Mouse Move",
-      "kind": "sprite",
-      "animated": true
+      "kind": "ui",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/input-prompts",
       "path": "2D/kenney/input-prompts/extracted/Keyboard & Mouse/Double/mouse_move.png",
       "src": "/2D/kenney/input-prompts/extracted/Keyboard%20%26%20Mouse/Double/mouse_move.png",
       "label": "Mouse Move",
-      "kind": "sprite",
-      "animated": true
+      "kind": "ui",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/input-prompts",
       "path": "2D/kenney/input-prompts/extracted/Touch/Default/touch_swipe_move.png",
       "src": "/2D/kenney/input-prompts/extracted/Touch/Default/touch_swipe_move.png",
       "label": "Touch Swipe Move",
-      "kind": "sprite",
-      "animated": true
+      "kind": "ui",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/input-prompts",
       "path": "2D/kenney/input-prompts/extracted/Touch/Default/touch_swipe_two_move.png",
       "src": "/2D/kenney/input-prompts/extracted/Touch/Default/touch_swipe_two_move.png",
       "label": "Touch Swipe Two Move",
-      "kind": "sprite",
-      "animated": true
+      "kind": "ui",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/input-prompts",
       "path": "2D/kenney/input-prompts/extracted/Touch/Double/touch_swipe_move.png",
       "src": "/2D/kenney/input-prompts/extracted/Touch/Double/touch_swipe_move.png",
       "label": "Touch Swipe Move",
-      "kind": "sprite",
-      "animated": true
+      "kind": "ui",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/input-prompts",
       "path": "2D/kenney/input-prompts/extracted/Touch/Double/touch_swipe_two_move.png",
       "src": "/2D/kenney/input-prompts/extracted/Touch/Double/touch_swipe_two_move.png",
       "label": "Touch Swipe Two Move",
-      "kind": "sprite",
-      "animated": true
+      "kind": "ui",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/input-prompts",
       "path": "2D/kenney/input-prompts/extracted/Flairs/flairs_sheet_default.png",
       "src": "/2D/kenney/input-prompts/extracted/Flairs/flairs_sheet_default.png",
       "label": "Flairs Sheet Default",
-      "kind": "sprite",
-      "animated": true
+      "kind": "ui",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/input-prompts",
       "path": "2D/kenney/input-prompts/extracted/Flairs/flairs_sheet_double.png",
       "src": "/2D/kenney/input-prompts/extracted/Flairs/flairs_sheet_double.png",
       "label": "Flairs Sheet Double",
-      "kind": "sprite",
-      "animated": true
+      "kind": "ui",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/input-prompts-pixel",
       "path": "2D/kenney/input-prompts-pixel/extracted/Tilemap/tilemap_packed.png",
       "src": "/2D/kenney/input-prompts-pixel/extracted/Tilemap/tilemap_packed.png",
       "label": "Tilemap Packed",
-      "kind": "image",
+      "kind": "ui",
       "animated": false
     },
     {
@@ -1501,7 +1501,7 @@
       "path": "2D/kenney/input-prompts-pixel/extracted/Tilemap/tilemap.png",
       "src": "/2D/kenney/input-prompts-pixel/extracted/Tilemap/tilemap.png",
       "label": "Tilemap",
-      "kind": "image",
+      "kind": "ui",
       "animated": false
     },
     {
@@ -1509,7 +1509,7 @@
       "path": "2D/kenney/input-prompts-pixel/extracted/Tiles/tile_0000.png",
       "src": "/2D/kenney/input-prompts-pixel/extracted/Tiles/tile_0000.png",
       "label": "Tile 0000",
-      "kind": "tile",
+      "kind": "ui",
       "animated": false
     },
     {
@@ -1517,7 +1517,7 @@
       "path": "2D/kenney/input-prompts-pixel/Tilemap/tilemap_packed.png",
       "src": "/2D/kenney/input-prompts-pixel/Tilemap/tilemap_packed.png",
       "label": "Tilemap Packed",
-      "kind": "image",
+      "kind": "ui",
       "animated": false
     },
     {
@@ -1525,7 +1525,7 @@
       "path": "2D/kenney/input-prompts-pixel/Tilemap/tilemap.png",
       "src": "/2D/kenney/input-prompts-pixel/Tilemap/tilemap.png",
       "label": "Tilemap",
-      "kind": "image",
+      "kind": "ui",
       "animated": false
     },
     {
@@ -1533,7 +1533,7 @@
       "path": "2D/kenney/input-prompts-pixel/Tiles/tile_0000.png",
       "src": "/2D/kenney/input-prompts-pixel/Tiles/tile_0000.png",
       "label": "Tile 0000",
-      "kind": "tile",
+      "kind": "ui",
       "animated": false
     },
     {
@@ -1541,7 +1541,7 @@
       "path": "2D/kenney/input-prompts-pixel-1-bit/extracted/Tilemap/tilemap_black_packed.png",
       "src": "/2D/kenney/input-prompts-pixel-1-bit/extracted/Tilemap/tilemap_black_packed.png",
       "label": "Tilemap Black Packed",
-      "kind": "image",
+      "kind": "ui",
       "animated": false
     },
     {
@@ -1549,7 +1549,7 @@
       "path": "2D/kenney/input-prompts-pixel-1-bit/extracted/Tilemap/tilemap_black.png",
       "src": "/2D/kenney/input-prompts-pixel-1-bit/extracted/Tilemap/tilemap_black.png",
       "label": "Tilemap Black",
-      "kind": "image",
+      "kind": "ui",
       "animated": false
     },
     {
@@ -1557,7 +1557,7 @@
       "path": "2D/kenney/input-prompts-pixel-1-bit/extracted/Tilemap/tilemap_white_packed.png",
       "src": "/2D/kenney/input-prompts-pixel-1-bit/extracted/Tilemap/tilemap_white_packed.png",
       "label": "Tilemap White Packed",
-      "kind": "image",
+      "kind": "ui",
       "animated": false
     },
     {
@@ -1565,7 +1565,7 @@
       "path": "2D/kenney/input-prompts-pixel-1-bit/extracted/Tilemap/tilemap_white.png",
       "src": "/2D/kenney/input-prompts-pixel-1-bit/extracted/Tilemap/tilemap_white.png",
       "label": "Tilemap White",
-      "kind": "image",
+      "kind": "ui",
       "animated": false
     },
     {
@@ -1573,7 +1573,7 @@
       "path": "2D/kenney/input-prompts-pixel-1-bit/extracted/Tiles (Black)/tile_0000.png",
       "src": "/2D/kenney/input-prompts-pixel-1-bit/extracted/Tiles%20(Black)/tile_0000.png",
       "label": "Tile 0000",
-      "kind": "tile",
+      "kind": "ui",
       "animated": false
     },
     {
@@ -1581,7 +1581,7 @@
       "path": "2D/kenney/input-prompts-pixel-1-bit/extracted/Tiles (White)/tile_0000.png",
       "src": "/2D/kenney/input-prompts-pixel-1-bit/extracted/Tiles%20(White)/tile_0000.png",
       "label": "Tile 0000",
-      "kind": "tile",
+      "kind": "ui",
       "animated": false
     },
     {
@@ -2278,7 +2278,7 @@
       "src": "/2D/kenney/jumper-pack/extracted/PNG/Enemies/flyMan_jump.png",
       "label": "FlyMan Jump",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/jumper-pack",
@@ -2286,7 +2286,7 @@
       "src": "/2D/kenney/jumper-pack/extracted/PNG/Enemies/flyMan_still_jump.png",
       "label": "FlyMan Still Jump",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/jumper-pack",
@@ -2294,7 +2294,7 @@
       "src": "/2D/kenney/jumper-pack/extracted/PNG/Enemies/spikeMan_jump.png",
       "label": "SpikeMan Jump",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/jumper-pack",
@@ -2302,23 +2302,23 @@
       "src": "/2D/kenney/jumper-pack/extracted/PNG/Enemies/springMan_hurt.png",
       "label": "SpringMan Hurt",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/jumper-pack",
       "path": "2D/kenney/jumper-pack/extracted/PNG/Players/bunny1_hurt.png",
       "src": "/2D/kenney/jumper-pack/extracted/PNG/Players/bunny1_hurt.png",
       "label": "Bunny1 Hurt",
-      "kind": "sprite",
-      "animated": true
+      "kind": "character",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/jumper-pack",
       "path": "2D/kenney/jumper-pack/extracted/PNG/Players/bunny2_hurt.png",
       "src": "/2D/kenney/jumper-pack/extracted/PNG/Players/bunny2_hurt.png",
       "label": "Bunny2 Hurt",
-      "kind": "sprite",
-      "animated": true
+      "kind": "character",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/jumper-pack",
@@ -2326,7 +2326,7 @@
       "src": "/2D/kenney/jumper-pack/extracted/Spritesheets/spritesheet_jumper.png",
       "label": "Spritesheet Jumper",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/jumper-pack",
@@ -2334,7 +2334,7 @@
       "src": "/2D/kenney/jumper-pack/Spritesheets/spritesheet_jumper.png",
       "label": "Spritesheet Jumper",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/letter-tiles",
@@ -2421,80 +2421,80 @@
       "path": "2D/kenney/map-pack/extracted/Spritesheet/mapPack_spritesheet.png",
       "src": "/2D/kenney/map-pack/extracted/Spritesheet/mapPack_spritesheet.png",
       "label": "MapPack Spritesheet",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/map-pack",
       "path": "2D/kenney/map-pack/Spritesheet/mapPack_spritesheet.png",
       "src": "/2D/kenney/map-pack/Spritesheet/mapPack_spritesheet.png",
       "label": "MapPack Spritesheet",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/medals",
       "path": "2D/kenney/medals/extracted/Spritesheet/flat.png",
       "src": "/2D/kenney/medals/extracted/Spritesheet/flat.png",
       "label": "Flat",
-      "kind": "sprite",
-      "animated": true
+      "kind": "icon",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/medals",
       "path": "2D/kenney/medals/extracted/Spritesheet/flatshadow.png",
       "src": "/2D/kenney/medals/extracted/Spritesheet/flatshadow.png",
       "label": "Flatshadow",
-      "kind": "sprite",
-      "animated": true
+      "kind": "icon",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/medals",
       "path": "2D/kenney/medals/extracted/Spritesheet/shaded.png",
       "src": "/2D/kenney/medals/extracted/Spritesheet/shaded.png",
       "label": "Shaded",
-      "kind": "sprite",
-      "animated": true
+      "kind": "icon",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/medals",
       "path": "2D/kenney/medals/Spritesheet/flat.png",
       "src": "/2D/kenney/medals/Spritesheet/flat.png",
       "label": "Flat",
-      "kind": "sprite",
-      "animated": true
+      "kind": "icon",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/medals",
       "path": "2D/kenney/medals/Spritesheet/flatshadow.png",
       "src": "/2D/kenney/medals/Spritesheet/flatshadow.png",
       "label": "Flatshadow",
-      "kind": "sprite",
-      "animated": true
+      "kind": "icon",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/medals",
       "path": "2D/kenney/medals/Spritesheet/shaded.png",
       "src": "/2D/kenney/medals/Spritesheet/shaded.png",
       "label": "Shaded",
-      "kind": "sprite",
-      "animated": true
+      "kind": "icon",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/medieval-rts",
       "path": "2D/kenney/medieval-rts/extracted/Spritesheet/medievalRTS_spritesheet.png",
       "src": "/2D/kenney/medieval-rts/extracted/Spritesheet/medievalRTS_spritesheet.png",
       "label": "MedievalRTS Spritesheet",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/medieval-rts",
       "path": "2D/kenney/medieval-rts/Spritesheet/medievalRTS_spritesheet.png",
       "src": "/2D/kenney/medieval-rts/Spritesheet/medievalRTS_spritesheet.png",
       "label": "MedievalRTS Spritesheet",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/micro-roguelike",
@@ -2614,7 +2614,7 @@
       "src": "/2D/kenney/modular-characters/extracted/Spritesheet/sheet_face.png",
       "label": "Sheet Face",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/modular-characters",
@@ -2622,7 +2622,7 @@
       "src": "/2D/kenney/modular-characters/extracted/Spritesheet/sheet_hair.png",
       "label": "Sheet Hair",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/modular-characters",
@@ -2630,7 +2630,7 @@
       "src": "/2D/kenney/modular-characters/extracted/Spritesheet/sheet_pants.png",
       "label": "Sheet Pants",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/modular-characters",
@@ -2638,7 +2638,7 @@
       "src": "/2D/kenney/modular-characters/extracted/Spritesheet/sheet_shirts.png",
       "label": "Sheet Shirts",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/modular-characters",
@@ -2646,7 +2646,7 @@
       "src": "/2D/kenney/modular-characters/extracted/Spritesheet/sheet_shoes.png",
       "label": "Sheet Shoes",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/modular-characters",
@@ -2654,7 +2654,7 @@
       "src": "/2D/kenney/modular-characters/extracted/Spritesheet/sheet_skin.png",
       "label": "Sheet Skin",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/modular-characters",
@@ -2662,7 +2662,7 @@
       "src": "/2D/kenney/modular-characters/Spritesheet/sheet_face.png",
       "label": "Sheet Face",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/modular-characters",
@@ -2670,14 +2670,14 @@
       "src": "/2D/kenney/modular-characters/Spritesheet/sheet_hair.png",
       "label": "Sheet Hair",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/monochrome-pirates",
       "path": "2D/kenney/monochrome-pirates/Default/Tilemap/tilemap_packed.png",
       "src": "/2D/kenney/monochrome-pirates/Default/Tilemap/tilemap_packed.png",
       "label": "Tilemap Packed",
-      "kind": "image",
+      "kind": "character",
       "animated": false
     },
     {
@@ -2685,7 +2685,7 @@
       "path": "2D/kenney/monochrome-pirates/Default/Tilemap/tilemap.png",
       "src": "/2D/kenney/monochrome-pirates/Default/Tilemap/tilemap.png",
       "label": "Tilemap",
-      "kind": "image",
+      "kind": "character",
       "animated": false
     },
     {
@@ -2726,7 +2726,7 @@
       "src": "/2D/kenney/monster-builder-pack/extracted/Spritesheet/spritesheet_default.png",
       "label": "Spritesheet Default",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/monster-builder-pack",
@@ -2734,7 +2734,7 @@
       "src": "/2D/kenney/monster-builder-pack/extracted/Spritesheet/spritesheet_double.png",
       "label": "Spritesheet Double",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/monster-builder-pack",
@@ -2742,7 +2742,7 @@
       "src": "/2D/kenney/monster-builder-pack/Spritesheet/spritesheet_default.png",
       "label": "Spritesheet Default",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/monster-builder-pack",
@@ -2750,7 +2750,7 @@
       "src": "/2D/kenney/monster-builder-pack/Spritesheet/spritesheet_double.png",
       "label": "Spritesheet Double",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/new-platformer-pack",
@@ -2758,7 +2758,7 @@
       "src": "/2D/kenney/new-platformer-pack/extracted/Sprites/Characters/Default/character_beige_hit.png",
       "label": "Character Beige Hit",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/new-platformer-pack",
@@ -2766,7 +2766,7 @@
       "src": "/2D/kenney/new-platformer-pack/extracted/Sprites/Characters/Default/character_beige_walk_a.png",
       "label": "Character Beige Walk A",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/new-platformer-pack",
@@ -2774,7 +2774,7 @@
       "src": "/2D/kenney/new-platformer-pack/extracted/Sprites/Characters/Default/character_beige_walk_b.png",
       "label": "Character Beige Walk B",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/new-platformer-pack",
@@ -2782,7 +2782,7 @@
       "src": "/2D/kenney/new-platformer-pack/extracted/Sprites/Characters/Default/character_green_hit.png",
       "label": "Character Green Hit",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/new-platformer-pack",
@@ -2790,7 +2790,7 @@
       "src": "/2D/kenney/new-platformer-pack/extracted/Sprites/Characters/Default/character_green_walk_a.png",
       "label": "Character Green Walk A",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/new-platformer-pack",
@@ -2798,7 +2798,7 @@
       "src": "/2D/kenney/new-platformer-pack/extracted/Sprites/Characters/Default/character_green_walk_b.png",
       "label": "Character Green Walk B",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/new-platformer-pack",
@@ -2806,7 +2806,7 @@
       "src": "/2D/kenney/new-platformer-pack/extracted/Sprites/Characters/Default/character_pink_hit.png",
       "label": "Character Pink Hit",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/new-platformer-pack",
@@ -2814,14 +2814,14 @@
       "src": "/2D/kenney/new-platformer-pack/extracted/Sprites/Characters/Default/character_pink_walk_a.png",
       "label": "Character Pink Walk A",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/particle-pack",
       "path": "2D/kenney/particle-pack/extracted/PNG (Black background)/circle_01.png",
       "src": "/2D/kenney/particle-pack/extracted/PNG%20(Black%20background)/circle_01.png",
       "label": "Circle 01",
-      "kind": "image",
+      "kind": "effect",
       "animated": false
     },
     {
@@ -2829,7 +2829,7 @@
       "path": "2D/kenney/particle-pack/extracted/PNG (Black background)/dirt_01.png",
       "src": "/2D/kenney/particle-pack/extracted/PNG%20(Black%20background)/dirt_01.png",
       "label": "Dirt 01",
-      "kind": "image",
+      "kind": "effect",
       "animated": false
     },
     {
@@ -2845,7 +2845,7 @@
       "path": "2D/kenney/particle-pack/extracted/PNG (Black background)/flame_01.png",
       "src": "/2D/kenney/particle-pack/extracted/PNG%20(Black%20background)/flame_01.png",
       "label": "Flame 01",
-      "kind": "image",
+      "kind": "effect",
       "animated": false
     },
     {
@@ -2853,7 +2853,7 @@
       "path": "2D/kenney/particle-pack/extracted/PNG (Black background)/flare_01.png",
       "src": "/2D/kenney/particle-pack/extracted/PNG%20(Black%20background)/flare_01.png",
       "label": "Flare 01",
-      "kind": "image",
+      "kind": "effect",
       "animated": false
     },
     {
@@ -2861,7 +2861,7 @@
       "path": "2D/kenney/particle-pack/extracted/PNG (Black background)/light_01.png",
       "src": "/2D/kenney/particle-pack/extracted/PNG%20(Black%20background)/light_01.png",
       "label": "Light 01",
-      "kind": "image",
+      "kind": "effect",
       "animated": false
     },
     {
@@ -3022,63 +3022,63 @@
       "src": "/2D/kenney/physics-assets/extracted/Spritesheet/spritesheet_aliens.png",
       "label": "Spritesheet Aliens",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/physics-assets",
       "path": "2D/kenney/physics-assets/extracted/Spritesheet/spritesheet_debris.png",
       "src": "/2D/kenney/physics-assets/extracted/Spritesheet/spritesheet_debris.png",
       "label": "Spritesheet Debris",
-      "kind": "sprite",
-      "animated": true
+      "kind": "effect",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/physics-assets",
       "path": "2D/kenney/physics-assets/extracted/Spritesheet/spritesheet_elements.png",
       "src": "/2D/kenney/physics-assets/extracted/Spritesheet/spritesheet_elements.png",
       "label": "Spritesheet Elements",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/physics-assets",
       "path": "2D/kenney/physics-assets/extracted/Spritesheet/spritesheet_explosive.png",
       "src": "/2D/kenney/physics-assets/extracted/Spritesheet/spritesheet_explosive.png",
       "label": "Spritesheet Explosive",
-      "kind": "sprite",
-      "animated": true
+      "kind": "effect",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/physics-assets",
       "path": "2D/kenney/physics-assets/extracted/Spritesheet/spritesheet_glass.png",
       "src": "/2D/kenney/physics-assets/extracted/Spritesheet/spritesheet_glass.png",
       "label": "Spritesheet Glass",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/physics-assets",
       "path": "2D/kenney/physics-assets/extracted/Spritesheet/spritesheet_metal.png",
       "src": "/2D/kenney/physics-assets/extracted/Spritesheet/spritesheet_metal.png",
       "label": "Spritesheet Metal",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/physics-assets",
       "path": "2D/kenney/physics-assets/extracted/Spritesheet/spritesheet_stone.png",
       "src": "/2D/kenney/physics-assets/extracted/Spritesheet/spritesheet_stone.png",
       "label": "Spritesheet Stone",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/physics-assets",
       "path": "2D/kenney/physics-assets/extracted/Spritesheet/spritesheet_wood.png",
       "src": "/2D/kenney/physics-assets/extracted/Spritesheet/spritesheet_wood.png",
       "label": "Spritesheet Wood",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/pico-8-city",
@@ -3150,7 +3150,7 @@
       "src": "/2D/kenney/pirate-pack/extracted/Spritesheet/shipsMiscellaneous_sheet.png",
       "label": "ShipsMiscellaneous Sheet",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/pirate-pack",
@@ -3158,7 +3158,7 @@
       "src": "/2D/kenney/pirate-pack/Spritesheet/shipsMiscellaneous_sheet.png",
       "label": "ShipsMiscellaneous Sheet",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/pixel-line-platformer",
@@ -3422,7 +3422,7 @@
       "src": "/2D/kenney/pixel-vehicle-pack/extracted/PNG/Characters/man_fall.png",
       "label": "Man Fall",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/pixel-vehicle-pack",
@@ -3430,7 +3430,7 @@
       "src": "/2D/kenney/pixel-vehicle-pack/extracted/PNG/Characters/woman_fall.png",
       "label": "Woman Fall",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/pixel-vehicle-pack",
@@ -3438,7 +3438,7 @@
       "src": "/2D/kenney/pixel-vehicle-pack/extracted/Spritesheet/spritesheet_characters.png",
       "label": "Spritesheet Characters",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/pixel-vehicle-pack",
@@ -3446,7 +3446,7 @@
       "src": "/2D/kenney/pixel-vehicle-pack/Spritesheet/spritesheet_characters.png",
       "label": "Spritesheet Characters",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/pixel-vehicle-pack",
@@ -3630,7 +3630,7 @@
       "src": "/2D/kenney/platformer-art-extended-enemies/Enemy%20sprites/barnacle_hit.png",
       "label": "Barnacle Hit",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/platformer-art-extended-enemies",
@@ -3638,7 +3638,7 @@
       "src": "/2D/kenney/platformer-art-extended-enemies/Enemy%20sprites/bat_hit.png",
       "label": "Bat Hit",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/platformer-art-extended-enemies",
@@ -3646,7 +3646,7 @@
       "src": "/2D/kenney/platformer-art-extended-enemies/Enemy%20sprites/bee_hit.png",
       "label": "Bee Hit",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/platformer-art-extended-enemies",
@@ -3654,7 +3654,7 @@
       "src": "/2D/kenney/platformer-art-extended-enemies/Enemy%20sprites/fishGreen_hit.png",
       "label": "FishGreen Hit",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/platformer-art-extended-enemies",
@@ -3662,7 +3662,7 @@
       "src": "/2D/kenney/platformer-art-extended-enemies/Enemy%20sprites/fishPink_hit.png",
       "label": "FishPink Hit",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/platformer-art-extended-enemies",
@@ -3670,7 +3670,7 @@
       "src": "/2D/kenney/platformer-art-extended-enemies/Enemy%20sprites/fly_hit.png",
       "label": "Fly Hit",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/platformer-art-extended-enemies",
@@ -3678,7 +3678,7 @@
       "src": "/2D/kenney/platformer-art-extended-enemies/Enemy%20sprites/frog_hit.png",
       "label": "Frog Hit",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/platformer-art-extended-enemies",
@@ -3686,7 +3686,7 @@
       "src": "/2D/kenney/platformer-art-extended-enemies/Enemy%20sprites/ghost_hit.png",
       "label": "Ghost Hit",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/platformer-art-extended-tileset",
@@ -3902,7 +3902,7 @@
       "src": "/2D/kenney/platformer-characters/extracted/PNG/Adventurer/Limbs/head_hurt.png",
       "label": "Head Hurt",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/platformer-characters",
@@ -3910,7 +3910,7 @@
       "src": "/2D/kenney/platformer-characters/extracted/PNG/Adventurer/Poses/adventurer_fall.png",
       "label": "Adventurer Fall",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/platformer-characters",
@@ -3918,7 +3918,7 @@
       "src": "/2D/kenney/platformer-characters/extracted/PNG/Female/Limbs/head_hurt.png",
       "label": "Head Hurt",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/platformer-characters",
@@ -3926,7 +3926,7 @@
       "src": "/2D/kenney/platformer-characters/extracted/PNG/Female/Poses/female_fall.png",
       "label": "Female Fall",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/platformer-characters",
@@ -3934,7 +3934,7 @@
       "src": "/2D/kenney/platformer-characters/extracted/PNG/Player/Limbs/head_hurt.png",
       "label": "Head Hurt",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/platformer-characters",
@@ -3942,7 +3942,7 @@
       "src": "/2D/kenney/platformer-characters/extracted/PNG/Player/Poses/player_fall.png",
       "label": "Player Fall",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/platformer-characters",
@@ -3950,7 +3950,7 @@
       "src": "/2D/kenney/platformer-characters/extracted/PNG/Soldier/Limbs/head_hurt.png",
       "label": "Head Hurt",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/platformer-characters",
@@ -3958,7 +3958,7 @@
       "src": "/2D/kenney/platformer-characters/extracted/PNG/Soldier/Poses/soldier_fall.png",
       "label": "Soldier Fall",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/platformer-pack-industrial",
@@ -3998,7 +3998,7 @@
       "src": "/2D/kenney/platformer-pack-remastered/extracted/PNG/Enemies/barnacle_attack.png",
       "label": "Barnacle Attack",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/platformer-pack-remastered",
@@ -4006,7 +4006,7 @@
       "src": "/2D/kenney/platformer-pack-remastered/extracted/PNG/Enemies/bee_move.png",
       "label": "Bee Move",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/platformer-pack-remastered",
@@ -4014,7 +4014,7 @@
       "src": "/2D/kenney/platformer-pack-remastered/extracted/PNG/Enemies/fishBlue_fall.png",
       "label": "FishBlue Fall",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/platformer-pack-remastered",
@@ -4022,7 +4022,7 @@
       "src": "/2D/kenney/platformer-pack-remastered/extracted/PNG/Enemies/fishGreen_move.png",
       "label": "FishGreen Move",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/platformer-pack-remastered",
@@ -4030,7 +4030,7 @@
       "src": "/2D/kenney/platformer-pack-remastered/extracted/PNG/Enemies/fishPink_move.png",
       "label": "FishPink Move",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/platformer-pack-remastered",
@@ -4038,7 +4038,7 @@
       "src": "/2D/kenney/platformer-pack-remastered/extracted/PNG/Enemies/fly_move.png",
       "label": "Fly Move",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/platformer-pack-remastered",
@@ -4046,7 +4046,7 @@
       "src": "/2D/kenney/platformer-pack-remastered/extracted/PNG/Enemies/frog_move.png",
       "label": "Frog Move",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/platformer-pack-remastered",
@@ -4054,14 +4054,14 @@
       "src": "/2D/kenney/platformer-pack-remastered/extracted/PNG/Enemies/ladybug_move.png",
       "label": "Ladybug Move",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/playing-cards-pack",
       "path": "2D/kenney/playing-cards-pack/extracted/PNG/Cards (large)/card_back.png",
       "src": "/2D/kenney/playing-cards-pack/extracted/PNG/Cards%20(large)/card_back.png",
       "label": "Card Back",
-      "kind": "image",
+      "kind": "icon",
       "animated": false
     },
     {
@@ -4069,7 +4069,7 @@
       "path": "2D/kenney/playing-cards-pack/extracted/PNG/Cards (large)/card_clubs_A.png",
       "src": "/2D/kenney/playing-cards-pack/extracted/PNG/Cards%20(large)/card_clubs_A.png",
       "label": "Card Clubs A",
-      "kind": "image",
+      "kind": "icon",
       "animated": false
     },
     {
@@ -4125,16 +4125,16 @@
       "path": "2D/kenney/puzzle-pack/extracted/Spritesheet/spritesheet_default.png",
       "src": "/2D/kenney/puzzle-pack/extracted/Spritesheet/spritesheet_default.png",
       "label": "Spritesheet Default",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/puzzle-pack",
       "path": "2D/kenney/puzzle-pack/extracted/Spritesheet/spritesheet_double.png",
       "src": "/2D/kenney/puzzle-pack/extracted/Spritesheet/spritesheet_double.png",
       "label": "Spritesheet Double",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/puzzle-pack",
@@ -4173,16 +4173,16 @@
       "path": "2D/kenney/puzzle-pack-1/Spritesheet/spritesheet_default.png",
       "src": "/2D/kenney/puzzle-pack-1/Spritesheet/spritesheet_default.png",
       "label": "Spritesheet Default",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/puzzle-pack-1",
       "path": "2D/kenney/puzzle-pack-1/Spritesheet/spritesheet_double.png",
       "src": "/2D/kenney/puzzle-pack-1/Spritesheet/spritesheet_double.png",
       "label": "Spritesheet Double",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/puzzle-pack-1",
@@ -4221,40 +4221,40 @@
       "path": "2D/kenney/puzzle-pack-2/Spritesheet/spritesheet_backtiles.png",
       "src": "/2D/kenney/puzzle-pack-2/Spritesheet/spritesheet_backtiles.png",
       "label": "Spritesheet Backtiles",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/puzzle-pack-2",
       "path": "2D/kenney/puzzle-pack-2/Spritesheet/spritesheet_balls.png",
       "src": "/2D/kenney/puzzle-pack-2/Spritesheet/spritesheet_balls.png",
       "label": "Spritesheet Balls",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/puzzle-pack-2",
       "path": "2D/kenney/puzzle-pack-2/Spritesheet/spritesheet_paddles.png",
       "src": "/2D/kenney/puzzle-pack-2/Spritesheet/spritesheet_paddles.png",
       "label": "Spritesheet Paddles",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/puzzle-pack-2",
       "path": "2D/kenney/puzzle-pack-2/Spritesheet/spritesheet_particles.png",
       "src": "/2D/kenney/puzzle-pack-2/Spritesheet/spritesheet_particles.png",
       "label": "Spritesheet Particles",
-      "kind": "sprite",
-      "animated": true
+      "kind": "effect",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/puzzle-pack-2",
       "path": "2D/kenney/puzzle-pack-2/Spritesheet/spritesheet_pipes.png",
       "src": "/2D/kenney/puzzle-pack-2/Spritesheet/spritesheet_pipes.png",
       "label": "Spritesheet Pipes",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/puzzle-pack-2",
@@ -4270,7 +4270,7 @@
       "src": "/2D/kenney/racing-pack/extracted/Spritesheets/spritesheet_characters.png",
       "label": "Spritesheet Characters",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/racing-pack",
@@ -4278,7 +4278,7 @@
       "src": "/2D/kenney/racing-pack/Spritesheets/spritesheet_characters.png",
       "label": "Spritesheet Characters",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/racing-pack",
@@ -4445,32 +4445,32 @@
       "path": "2D/kenney/robot-pack/extracted/PNG/Side view/robot_blueHurt.png",
       "src": "/2D/kenney/robot-pack/extracted/PNG/Side%20view/robot_blueHurt.png",
       "label": "Robot BlueHurt",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/robot-pack",
       "path": "2D/kenney/robot-pack/extracted/PNG/Side view/robot_greenHurt.png",
       "src": "/2D/kenney/robot-pack/extracted/PNG/Side%20view/robot_greenHurt.png",
       "label": "Robot GreenHurt",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/robot-pack",
       "path": "2D/kenney/robot-pack/extracted/PNG/Side view/robot_redHurt.png",
       "src": "/2D/kenney/robot-pack/extracted/PNG/Side%20view/robot_redHurt.png",
       "label": "Robot RedHurt",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/robot-pack",
       "path": "2D/kenney/robot-pack/extracted/PNG/Side view/robot_yellowHurt.png",
       "src": "/2D/kenney/robot-pack/extracted/PNG/Side%20view/robot_yellowHurt.png",
       "label": "Robot YellowHurt",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/robot-pack",
@@ -4478,7 +4478,7 @@
       "src": "/2D/kenney/robot-pack/extracted/Spritesheet/spritesheet_robotsSide.png",
       "label": "Spritesheet RobotsSide",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/robot-pack",
@@ -4486,7 +4486,7 @@
       "src": "/2D/kenney/robot-pack/extracted/Spritesheet/spritesheet_robotsTop.png",
       "label": "Spritesheet RobotsTop",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/robot-pack",
@@ -4494,7 +4494,7 @@
       "src": "/2D/kenney/robot-pack/Spritesheet/spritesheet_robotsSide.png",
       "label": "Spritesheet RobotsSide",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/robot-pack",
@@ -4502,14 +4502,14 @@
       "src": "/2D/kenney/robot-pack/Spritesheet/spritesheet_robotsTop.png",
       "label": "Spritesheet RobotsTop",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/roguelike-caves-dungeons",
       "path": "2D/kenney/roguelike-caves-dungeons/extracted/Spritesheet/roguelikeDungeon_magenta.png",
       "src": "/2D/kenney/roguelike-caves-dungeons/extracted/Spritesheet/roguelikeDungeon_magenta.png",
       "label": "RoguelikeDungeon Magenta",
-      "kind": "tile",
+      "kind": "character",
       "animated": false
     },
     {
@@ -4525,7 +4525,7 @@
       "path": "2D/kenney/roguelike-caves-dungeons/Spritesheet/roguelikeDungeon_magenta.png",
       "src": "/2D/kenney/roguelike-caves-dungeons/Spritesheet/roguelikeDungeon_magenta.png",
       "label": "RoguelikeDungeon Magenta",
-      "kind": "tile",
+      "kind": "character",
       "animated": false
     },
     {
@@ -4542,7 +4542,7 @@
       "src": "/2D/kenney/roguelike-characters/extracted/Spritesheet/roguelikeChar_magenta.png",
       "label": "RoguelikeChar Magenta",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/roguelike-characters",
@@ -4550,7 +4550,7 @@
       "src": "/2D/kenney/roguelike-characters/extracted/Spritesheet/roguelikeChar_transparent.png",
       "label": "RoguelikeChar Transparent",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/roguelike-characters",
@@ -4558,7 +4558,7 @@
       "src": "/2D/kenney/roguelike-characters/Spritesheet/roguelikeChar_magenta.png",
       "label": "RoguelikeChar Magenta",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/roguelike-characters",
@@ -4566,14 +4566,14 @@
       "src": "/2D/kenney/roguelike-characters/Spritesheet/roguelikeChar_transparent.png",
       "label": "RoguelikeChar Transparent",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/roguelike-indoors",
       "path": "2D/kenney/roguelike-indoors/extracted/Tilesheets/roguelikeIndoor_magenta.png",
       "src": "/2D/kenney/roguelike-indoors/extracted/Tilesheets/roguelikeIndoor_magenta.png",
       "label": "RoguelikeIndoor Magenta",
-      "kind": "image",
+      "kind": "character",
       "animated": false
     },
     {
@@ -4589,7 +4589,7 @@
       "path": "2D/kenney/roguelike-indoors/Tilesheets/roguelikeIndoor_magenta.png",
       "src": "/2D/kenney/roguelike-indoors/Tilesheets/roguelikeIndoor_magenta.png",
       "label": "RoguelikeIndoor Magenta",
-      "kind": "image",
+      "kind": "character",
       "animated": false
     },
     {
@@ -4637,7 +4637,7 @@
       "path": "2D/kenney/roguelike-rpg-pack/extracted/Spritesheet/roguelikeSheet_magenta.png",
       "src": "/2D/kenney/roguelike-rpg-pack/extracted/Spritesheet/roguelikeSheet_magenta.png",
       "label": "RoguelikeSheet Magenta",
-      "kind": "image",
+      "kind": "character",
       "animated": false
     },
     {
@@ -4653,7 +4653,7 @@
       "path": "2D/kenney/roguelike-rpg-pack/Spritesheet/roguelikeSheet_magenta.png",
       "src": "/2D/kenney/roguelike-rpg-pack/Spritesheet/roguelikeSheet_magenta.png",
       "label": "RoguelikeSheet Magenta",
-      "kind": "image",
+      "kind": "character",
       "animated": false
     },
     {
@@ -4670,7 +4670,7 @@
       "src": "/2D/kenney/rolling-ball-assets/extracted/Spritesheet/rollingBall_sheet.png",
       "label": "RollingBall Sheet",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/rolling-ball-assets",
@@ -4678,7 +4678,7 @@
       "src": "/2D/kenney/rolling-ball-assets/Spritesheet/rollingBall_sheet.png",
       "label": "RollingBall Sheet",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/rolling-ball-assets",
@@ -4702,7 +4702,7 @@
       "src": "/2D/kenney/rpg-base/extracted/Spritesheet/RPGpack_sheet_2X.png",
       "label": "RPGpack Sheet 2X",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/rpg-base",
@@ -4710,7 +4710,7 @@
       "src": "/2D/kenney/rpg-base/extracted/Spritesheet/RPGpack_sheet.png",
       "label": "RPGpack Sheet",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/rpg-base",
@@ -4718,7 +4718,7 @@
       "src": "/2D/kenney/rpg-base/Spritesheet/RPGpack_sheet_2X.png",
       "label": "RPGpack Sheet 2X",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/rpg-base",
@@ -4726,7 +4726,7 @@
       "src": "/2D/kenney/rpg-base/Spritesheet/RPGpack_sheet.png",
       "label": "RPGpack Sheet",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/rpg-urban-pack",
@@ -4765,80 +4765,80 @@
       "path": "2D/kenney/rune-pack/extracted/Spritesheet/Black/runeBlack_rectangle_sheet.png",
       "src": "/2D/kenney/rune-pack/extracted/Spritesheet/Black/runeBlack_rectangle_sheet.png",
       "label": "RuneBlack Rectangle Sheet",
-      "kind": "sprite",
-      "animated": true
+      "kind": "icon",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/rune-pack",
       "path": "2D/kenney/rune-pack/extracted/Spritesheet/Black/runeBlack_rectangleOutline_sheet.png",
       "src": "/2D/kenney/rune-pack/extracted/Spritesheet/Black/runeBlack_rectangleOutline_sheet.png",
       "label": "RuneBlack RectangleOutline Sheet",
-      "kind": "sprite",
-      "animated": true
+      "kind": "icon",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/rune-pack",
       "path": "2D/kenney/rune-pack/extracted/Spritesheet/Black/runeBlack_slab_sheet.png",
       "src": "/2D/kenney/rune-pack/extracted/Spritesheet/Black/runeBlack_slab_sheet.png",
       "label": "RuneBlack Slab Sheet",
-      "kind": "sprite",
-      "animated": true
+      "kind": "icon",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/rune-pack",
       "path": "2D/kenney/rune-pack/extracted/Spritesheet/Black/runeBlack_slabOutline_sheet.png",
       "src": "/2D/kenney/rune-pack/extracted/Spritesheet/Black/runeBlack_slabOutline_sheet.png",
       "label": "RuneBlack SlabOutline Sheet",
-      "kind": "sprite",
-      "animated": true
+      "kind": "icon",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/rune-pack",
       "path": "2D/kenney/rune-pack/extracted/Spritesheet/Blue/runeBlue_rectangle_sheet.png",
       "src": "/2D/kenney/rune-pack/extracted/Spritesheet/Blue/runeBlue_rectangle_sheet.png",
       "label": "RuneBlue Rectangle Sheet",
-      "kind": "sprite",
-      "animated": true
+      "kind": "icon",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/rune-pack",
       "path": "2D/kenney/rune-pack/extracted/Spritesheet/Blue/runeBlue_rectangleOutline_sheet.png",
       "src": "/2D/kenney/rune-pack/extracted/Spritesheet/Blue/runeBlue_rectangleOutline_sheet.png",
       "label": "RuneBlue RectangleOutline Sheet",
-      "kind": "sprite",
-      "animated": true
+      "kind": "icon",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/rune-pack",
       "path": "2D/kenney/rune-pack/extracted/Spritesheet/Blue/runeBlue_slab_sheet.png",
       "src": "/2D/kenney/rune-pack/extracted/Spritesheet/Blue/runeBlue_slab_sheet.png",
       "label": "RuneBlue Slab Sheet",
-      "kind": "sprite",
-      "animated": true
+      "kind": "icon",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/rune-pack",
       "path": "2D/kenney/rune-pack/extracted/Spritesheet/Blue/runeBlue_slabOutline_sheet.png",
       "src": "/2D/kenney/rune-pack/extracted/Spritesheet/Blue/runeBlue_slabOutline_sheet.png",
       "label": "RuneBlue SlabOutline Sheet",
-      "kind": "sprite",
-      "animated": true
+      "kind": "icon",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/sci-fi-rts",
       "path": "2D/kenney/sci-fi-rts/extracted/Spritesheet/scifiRTS_spritesheet.png",
       "src": "/2D/kenney/sci-fi-rts/extracted/Spritesheet/scifiRTS_spritesheet.png",
       "label": "ScifiRTS Spritesheet",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/sci-fi-rts",
       "path": "2D/kenney/sci-fi-rts/Spritesheet/scifiRTS_spritesheet.png",
       "src": "/2D/kenney/sci-fi-rts/Spritesheet/scifiRTS_spritesheet.png",
       "label": "ScifiRTS Spritesheet",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/scribble-dungeons",
@@ -4910,7 +4910,7 @@
       "src": "/2D/kenney/shape-characters/extracted/Spritesheet/spritesheet_default.png",
       "label": "Spritesheet Default",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/shape-characters",
@@ -4918,7 +4918,7 @@
       "src": "/2D/kenney/shape-characters/extracted/Spritesheet/spritesheet_double.png",
       "label": "Spritesheet Double",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/shape-characters",
@@ -4926,7 +4926,7 @@
       "src": "/2D/kenney/shape-characters/Spritesheet/spritesheet_default.png",
       "label": "Spritesheet Default",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/shape-characters",
@@ -4934,7 +4934,7 @@
       "src": "/2D/kenney/shape-characters/Spritesheet/spritesheet_double.png",
       "label": "Spritesheet Double",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/shooting-gallery",
@@ -4942,7 +4942,7 @@
       "src": "/2D/kenney/shooting-gallery/extracted/Spritesheets/spritesheet_stall.png",
       "label": "Spritesheet Stall",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/shooting-gallery",
@@ -4950,7 +4950,7 @@
       "src": "/2D/kenney/shooting-gallery/Spritesheets/spritesheet_stall.png",
       "label": "Spritesheet Stall",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/shooting-gallery",
@@ -4974,7 +4974,7 @@
       "src": "/2D/kenney/simple-space/extracted/Spritesheet/simpleSpace_sheet.png",
       "label": "SimpleSpace Sheet",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/simple-space",
@@ -4982,7 +4982,7 @@
       "src": "/2D/kenney/simple-space/Spritesheet/simpleSpace_sheet.png",
       "label": "SimpleSpace Sheet",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/simple-space",
@@ -5006,7 +5006,7 @@
       "src": "/2D/kenney/simplified-platformer-pack/extracted/PNG/Characters/platformChar_idle.png",
       "label": "PlatformChar Idle",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/simplified-platformer-pack",
@@ -5053,128 +5053,128 @@
       "path": "2D/kenney/sketch-desert/extracted/Tiles/water_fall_E.png",
       "src": "/2D/kenney/sketch-desert/extracted/Tiles/water_fall_E.png",
       "label": "Water Fall E",
-      "kind": "sprite",
-      "animated": true
+      "kind": "tile",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/sketch-desert",
       "path": "2D/kenney/sketch-desert/extracted/Tiles/water_fall_N.png",
       "src": "/2D/kenney/sketch-desert/extracted/Tiles/water_fall_N.png",
       "label": "Water Fall N",
-      "kind": "sprite",
-      "animated": true
+      "kind": "tile",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/sketch-desert",
       "path": "2D/kenney/sketch-desert/extracted/Tiles/water_fall_S.png",
       "src": "/2D/kenney/sketch-desert/extracted/Tiles/water_fall_S.png",
       "label": "Water Fall S",
-      "kind": "sprite",
-      "animated": true
+      "kind": "tile",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/sketch-desert",
       "path": "2D/kenney/sketch-desert/extracted/Tiles/water_fall_W.png",
       "src": "/2D/kenney/sketch-desert/extracted/Tiles/water_fall_W.png",
       "label": "Water Fall W",
-      "kind": "sprite",
-      "animated": true
+      "kind": "tile",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/sketch-desert",
       "path": "2D/kenney/sketch-desert/Tiles/water_fall_E.png",
       "src": "/2D/kenney/sketch-desert/Tiles/water_fall_E.png",
       "label": "Water Fall E",
-      "kind": "sprite",
-      "animated": true
+      "kind": "tile",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/sketch-desert",
       "path": "2D/kenney/sketch-desert/Tiles/water_fall_N.png",
       "src": "/2D/kenney/sketch-desert/Tiles/water_fall_N.png",
       "label": "Water Fall N",
-      "kind": "sprite",
-      "animated": true
+      "kind": "tile",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/sketch-desert",
       "path": "2D/kenney/sketch-desert/Tiles/water_fall_S.png",
       "src": "/2D/kenney/sketch-desert/Tiles/water_fall_S.png",
       "label": "Water Fall S",
-      "kind": "sprite",
-      "animated": true
+      "kind": "tile",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/sketch-desert",
       "path": "2D/kenney/sketch-desert/Tiles/water_fall_W.png",
       "src": "/2D/kenney/sketch-desert/Tiles/water_fall_W.png",
       "label": "Water Fall W",
-      "kind": "sprite",
-      "animated": true
+      "kind": "tile",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/sketch-town",
       "path": "2D/kenney/sketch-town/extracted/Tiles/water_fall_E.png",
       "src": "/2D/kenney/sketch-town/extracted/Tiles/water_fall_E.png",
       "label": "Water Fall E",
-      "kind": "sprite",
-      "animated": true
+      "kind": "tile",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/sketch-town",
       "path": "2D/kenney/sketch-town/extracted/Tiles/water_fall_N.png",
       "src": "/2D/kenney/sketch-town/extracted/Tiles/water_fall_N.png",
       "label": "Water Fall N",
-      "kind": "sprite",
-      "animated": true
+      "kind": "tile",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/sketch-town",
       "path": "2D/kenney/sketch-town/extracted/Tiles/water_fall_S.png",
       "src": "/2D/kenney/sketch-town/extracted/Tiles/water_fall_S.png",
       "label": "Water Fall S",
-      "kind": "sprite",
-      "animated": true
+      "kind": "tile",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/sketch-town",
       "path": "2D/kenney/sketch-town/extracted/Tiles/water_fall_W.png",
       "src": "/2D/kenney/sketch-town/extracted/Tiles/water_fall_W.png",
       "label": "Water Fall W",
-      "kind": "sprite",
-      "animated": true
+      "kind": "tile",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/sketch-town",
       "path": "2D/kenney/sketch-town/Tiles/water_fall_E.png",
       "src": "/2D/kenney/sketch-town/Tiles/water_fall_E.png",
       "label": "Water Fall E",
-      "kind": "sprite",
-      "animated": true
+      "kind": "tile",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/sketch-town",
       "path": "2D/kenney/sketch-town/Tiles/water_fall_N.png",
       "src": "/2D/kenney/sketch-town/Tiles/water_fall_N.png",
       "label": "Water Fall N",
-      "kind": "sprite",
-      "animated": true
+      "kind": "tile",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/sketch-town",
       "path": "2D/kenney/sketch-town/Tiles/water_fall_S.png",
       "src": "/2D/kenney/sketch-town/Tiles/water_fall_S.png",
       "label": "Water Fall S",
-      "kind": "sprite",
-      "animated": true
+      "kind": "tile",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/sketch-town",
       "path": "2D/kenney/sketch-town/Tiles/water_fall_W.png",
       "src": "/2D/kenney/sketch-town/Tiles/water_fall_W.png",
       "label": "Water Fall W",
-      "kind": "sprite",
-      "animated": true
+      "kind": "tile",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/sketch-town-expansion",
@@ -5246,14 +5246,14 @@
       "src": "/2D/kenney/sokoban/Spritesheet/sokoban_spritesheet.png",
       "label": "Sokoban Spritesheet",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/sokoban",
       "path": "2D/kenney/sokoban/PNG/Default size/playerFace_dark.png",
       "src": "/2D/kenney/sokoban/PNG/Default%20size/playerFace_dark.png",
       "label": "PlayerFace Dark",
-      "kind": "image",
+      "kind": "character",
       "animated": false
     },
     {
@@ -5261,7 +5261,7 @@
       "path": "2D/kenney/sokoban/PNG/Default size/playerFace_outline.png",
       "src": "/2D/kenney/sokoban/PNG/Default%20size/playerFace_outline.png",
       "label": "PlayerFace Outline",
-      "kind": "image",
+      "kind": "character",
       "animated": false
     },
     {
@@ -5269,7 +5269,7 @@
       "path": "2D/kenney/sokoban/PNG/Default size/playerFace.png",
       "src": "/2D/kenney/sokoban/PNG/Default%20size/playerFace.png",
       "label": "PlayerFace",
-      "kind": "image",
+      "kind": "character",
       "animated": false
     },
     {
@@ -5277,7 +5277,7 @@
       "path": "2D/kenney/sokoban/PNG/Retina/playerFace_dark.png",
       "src": "/2D/kenney/sokoban/PNG/Retina/playerFace_dark.png",
       "label": "PlayerFace Dark",
-      "kind": "image",
+      "kind": "character",
       "animated": false
     },
     {
@@ -5286,14 +5286,14 @@
       "src": "/2D/kenney/sokoban-pack/extracted/Spritesheet/sokoban_spritesheet.png",
       "label": "Sokoban Spritesheet",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/sokoban-pack",
       "path": "2D/kenney/sokoban-pack/extracted/PNG/Default size/playerFace_dark.png",
       "src": "/2D/kenney/sokoban-pack/extracted/PNG/Default%20size/playerFace_dark.png",
       "label": "PlayerFace Dark",
-      "kind": "image",
+      "kind": "character",
       "animated": false
     },
     {
@@ -5301,7 +5301,7 @@
       "path": "2D/kenney/sokoban-pack/extracted/PNG/Default size/playerFace_outline.png",
       "src": "/2D/kenney/sokoban-pack/extracted/PNG/Default%20size/playerFace_outline.png",
       "label": "PlayerFace Outline",
-      "kind": "image",
+      "kind": "character",
       "animated": false
     },
     {
@@ -5309,7 +5309,7 @@
       "path": "2D/kenney/sokoban-pack/extracted/PNG/Default size/playerFace.png",
       "src": "/2D/kenney/sokoban-pack/extracted/PNG/Default%20size/playerFace.png",
       "label": "PlayerFace",
-      "kind": "image",
+      "kind": "character",
       "animated": false
     },
     {
@@ -5317,7 +5317,7 @@
       "path": "2D/kenney/sokoban-pack/extracted/PNG/Retina/playerFace_dark.png",
       "src": "/2D/kenney/sokoban-pack/extracted/PNG/Retina/playerFace_dark.png",
       "label": "PlayerFace Dark",
-      "kind": "image",
+      "kind": "character",
       "animated": false
     },
     {
@@ -5326,7 +5326,7 @@
       "src": "/2D/kenney/space-shooter-extension/extracted/Spritesheet/spaceShooter2_spritesheet_2X.png",
       "label": "SpaceShooter2 Spritesheet 2X",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/space-shooter-extension",
@@ -5334,7 +5334,7 @@
       "src": "/2D/kenney/space-shooter-extension/extracted/Spritesheet/spaceShooter2_spritesheet.png",
       "label": "SpaceShooter2 Spritesheet",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/space-shooter-extension",
@@ -5342,7 +5342,7 @@
       "src": "/2D/kenney/space-shooter-extension/Spritesheet/spaceShooter2_spritesheet_2X.png",
       "label": "SpaceShooter2 Spritesheet 2X",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/space-shooter-extension",
@@ -5350,7 +5350,7 @@
       "src": "/2D/kenney/space-shooter-extension/Spritesheet/spaceShooter2_spritesheet.png",
       "label": "SpaceShooter2 Spritesheet",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/space-shooter-remastered",
@@ -5358,7 +5358,7 @@
       "src": "/2D/kenney/space-shooter-remastered/extracted/Spritesheet/sheet.png",
       "label": "Sheet",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/space-shooter-remastered",
@@ -5366,7 +5366,7 @@
       "src": "/2D/kenney/space-shooter-remastered/Spritesheet/sheet.png",
       "label": "Sheet",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/space-shooter-remastered",
@@ -5438,7 +5438,7 @@
       "src": "/2D/kenney/sports-pack/extracted/Spritesheet/sheet_characters.png",
       "label": "Sheet Characters",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/sports-pack",
@@ -5446,7 +5446,7 @@
       "src": "/2D/kenney/sports-pack/extracted/Spritesheet/sheet_charactersEquipment.png",
       "label": "Sheet CharactersEquipment",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/sports-pack",
@@ -5454,7 +5454,7 @@
       "src": "/2D/kenney/sports-pack/Spritesheet/sheet_characters.png",
       "label": "Sheet Characters",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/sports-pack",
@@ -5462,23 +5462,23 @@
       "src": "/2D/kenney/sports-pack/Spritesheet/sheet_charactersEquipment.png",
       "label": "Sheet CharactersEquipment",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/sports-pack",
       "path": "2D/kenney/sports-pack/extracted/Spritesheet/sheet_equipment.png",
       "src": "/2D/kenney/sports-pack/extracted/Spritesheet/sheet_equipment.png",
       "label": "Sheet Equipment",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/sports-pack",
       "path": "2D/kenney/sports-pack/Spritesheet/sheet_equipment.png",
       "src": "/2D/kenney/sports-pack/Spritesheet/sheet_equipment.png",
       "label": "Sheet Equipment",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/tanks",
@@ -5486,7 +5486,7 @@
       "src": "/2D/kenney/tanks/extracted/Spritesheet/tanks_spritesheetDefault.png",
       "label": "Tanks SpritesheetDefault",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/tanks",
@@ -5494,7 +5494,7 @@
       "src": "/2D/kenney/tanks/extracted/Spritesheet/tanks_spritesheetRetina.png",
       "label": "Tanks SpritesheetRetina",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/tanks",
@@ -5502,7 +5502,7 @@
       "src": "/2D/kenney/tanks/Spritesheet/tanks_spritesheetDefault.png",
       "label": "Tanks SpritesheetDefault",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/tanks",
@@ -5510,7 +5510,7 @@
       "src": "/2D/kenney/tanks/Spritesheet/tanks_spritesheetRetina.png",
       "label": "Tanks SpritesheetRetina",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/tappy-plane",
@@ -5518,7 +5518,7 @@
       "src": "/2D/kenney/tappy-plane/extracted/Spritesheet/planes.png",
       "label": "Planes",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/tappy-plane",
@@ -5526,7 +5526,7 @@
       "src": "/2D/kenney/tappy-plane/extracted/Spritesheet/sheet.png",
       "label": "Sheet",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/tappy-plane",
@@ -5534,7 +5534,7 @@
       "src": "/2D/kenney/tappy-plane/Spritesheet/planes.png",
       "label": "Planes",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/tappy-plane",
@@ -5542,7 +5542,7 @@
       "src": "/2D/kenney/tappy-plane/Spritesheet/sheet.png",
       "label": "Sheet",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/tiny-battle",
@@ -5678,7 +5678,7 @@
       "src": "/2D/kenney/toon-characters/extracted/Female%20adventurer/PNG/Poses%20HD/character_femaleAdventurer_attackKick.png",
       "label": "Character FemaleAdventurer AttackKick",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/toon-characters",
@@ -5686,7 +5686,7 @@
       "src": "/2D/kenney/toon-characters/extracted/Female%20adventurer/PNG/Poses%20HD/character_femaleAdventurer_fall.png",
       "label": "Character FemaleAdventurer Fall",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/toon-characters",
@@ -5694,7 +5694,7 @@
       "src": "/2D/kenney/toon-characters/extracted/Female%20adventurer/PNG/Poses%20HD/character_femaleAdventurer_fallDown.png",
       "label": "Character FemaleAdventurer FallDown",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/toon-characters",
@@ -5702,7 +5702,7 @@
       "src": "/2D/kenney/toon-characters/extracted/Female%20adventurer/PNG/Poses/character_femaleAdventurer_attackKick.png",
       "label": "Character FemaleAdventurer AttackKick",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/toon-characters",
@@ -5710,7 +5710,7 @@
       "src": "/2D/kenney/toon-characters/extracted/Female%20adventurer/PNG/Poses/character_femaleAdventurer_fall.png",
       "label": "Character FemaleAdventurer Fall",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/toon-characters",
@@ -5718,7 +5718,7 @@
       "src": "/2D/kenney/toon-characters/extracted/Female%20adventurer/PNG/Poses/character_femaleAdventurer_fallDown.png",
       "label": "Character FemaleAdventurer FallDown",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/toon-characters",
@@ -5726,7 +5726,7 @@
       "src": "/2D/kenney/toon-characters/extracted/Female%20person/PNG/Poses%20HD/character_femalePerson_attackKick.png",
       "label": "Character FemalePerson AttackKick",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/toon-characters",
@@ -5734,7 +5734,7 @@
       "src": "/2D/kenney/toon-characters/extracted/Female%20person/PNG/Poses%20HD/character_femalePerson_fall.png",
       "label": "Character FemalePerson Fall",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/top-down-shooter",
@@ -5742,7 +5742,7 @@
       "src": "/2D/kenney/top-down-shooter/extracted/Spritesheet/spritesheet_characters.png",
       "label": "Spritesheet Characters",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/top-down-shooter",
@@ -5750,7 +5750,7 @@
       "src": "/2D/kenney/top-down-shooter/Spritesheet/spritesheet_characters.png",
       "label": "Spritesheet Characters",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/top-down-shooter",
@@ -5774,7 +5774,7 @@
       "src": "/2D/kenney/top-down-tanks/extracted/Spritesheet/sheet_tanks.png",
       "label": "Sheet Tanks",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/top-down-tanks",
@@ -5782,7 +5782,7 @@
       "src": "/2D/kenney/top-down-tanks/Spritesheet/sheet_tanks.png",
       "label": "Sheet Tanks",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/top-down-tanks",
@@ -5806,7 +5806,7 @@
       "src": "/2D/kenney/top-down-tanks-remastered/extracted/Spritesheet/allSprites_default.png",
       "label": "AllSprites Default",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/top-down-tanks-remastered",
@@ -5814,7 +5814,7 @@
       "src": "/2D/kenney/top-down-tanks-remastered/extracted/Spritesheet/allSprites_retina.png",
       "label": "AllSprites Retina",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/top-down-tanks-remastered",
@@ -5822,7 +5822,7 @@
       "src": "/2D/kenney/top-down-tanks-remastered/Spritesheet/allSprites_default.png",
       "label": "AllSprites Default",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/top-down-tanks-remastered",
@@ -5830,7 +5830,7 @@
       "src": "/2D/kenney/top-down-tanks-remastered/Spritesheet/allSprites_retina.png",
       "label": "AllSprites Retina",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/tower-defense",
@@ -5838,7 +5838,7 @@
       "src": "/2D/kenney/tower-defense/extracted/Spritesheet/towers_brown_sheet.png",
       "label": "Towers Brown Sheet",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/tower-defense",
@@ -5846,7 +5846,7 @@
       "src": "/2D/kenney/tower-defense/extracted/Spritesheet/towers_grey_sheet.png",
       "label": "Towers Grey Sheet",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/tower-defense",
@@ -5854,7 +5854,7 @@
       "src": "/2D/kenney/tower-defense/extracted/Spritesheet/towers_red_sheet.png",
       "label": "Towers Red Sheet",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/tower-defense",
@@ -5862,7 +5862,7 @@
       "src": "/2D/kenney/tower-defense/Spritesheet/towers_brown_sheet.png",
       "label": "Towers Brown Sheet",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/tower-defense",
@@ -5870,7 +5870,7 @@
       "src": "/2D/kenney/tower-defense/Spritesheet/towers_grey_sheet.png",
       "label": "Towers Grey Sheet",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/tower-defense",
@@ -5878,7 +5878,7 @@
       "src": "/2D/kenney/tower-defense/Spritesheet/towers_red_sheet.png",
       "label": "Towers Red Sheet",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/tower-defense-top-down",
@@ -6174,7 +6174,7 @@
       "src": "/2D/kenney/voxel-pack/extracted/Spritesheets/spritesheet_characters.png",
       "label": "Spritesheet Characters",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/voxel-pack",
@@ -6182,23 +6182,23 @@
       "src": "/2D/kenney/voxel-pack/Spritesheets/spritesheet_characters.png",
       "label": "Spritesheet Characters",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/voxel-pack",
       "path": "2D/kenney/voxel-pack/extracted/Spritesheets/spritesheet_particles.png",
       "src": "/2D/kenney/voxel-pack/extracted/Spritesheets/spritesheet_particles.png",
       "label": "Spritesheet Particles",
-      "kind": "sprite",
-      "animated": true
+      "kind": "effect",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/voxel-pack",
       "path": "2D/kenney/voxel-pack/Spritesheets/spritesheet_particles.png",
       "src": "/2D/kenney/voxel-pack/Spritesheets/spritesheet_particles.png",
       "label": "Spritesheet Particles",
-      "kind": "sprite",
-      "animated": true
+      "kind": "effect",
+      "animated": false
     },
     {
       "packFolder": "2D/kenney/yellow-paint-pack",
@@ -6333,7 +6333,7 @@
       "path": "2D/atari-boy__oldherocharacter/extracted/Jotem/Jotem spritesheet.png",
       "src": "/2D/atari-boy__oldherocharacter/extracted/Jotem/Jotem%20spritesheet.png",
       "label": "Jotem Spritesheet",
-      "kind": "sprite",
+      "kind": "character",
       "animated": true
     },
     {
@@ -6366,7 +6366,7 @@
       "src": "/2D/au-pixel__heroes99-demochar/extracted/Heroes99_free/Heroes99_free/demochar_portrait_spritesheet.png",
       "label": "Demochar Portrait Spritesheet",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "bdragon1727__1050-rpg-effects-64x64",
@@ -6830,7 +6830,7 @@
       "src": "/2D/creativekind__necromancer/Necromancer_creativekind-Sheet.png",
       "label": "Necromancer Creativekind Sheet",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "creativekind__nightborne-warrior",
@@ -6885,31 +6885,31 @@
       "path": "2D/darkpixel-kronovi__undead-executioner/extracted/Undead executioner/Undead executioner puppet/png/death.png",
       "src": "/2D/darkpixel-kronovi__undead-executioner/extracted/Undead%20executioner/Undead%20executioner%20puppet/png/death.png",
       "label": "Death",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "darkpixel-kronovi__undead-executioner",
       "path": "2D/darkpixel-kronovi__undead-executioner/extracted/Undead executioner/Undead executioner puppet/png/idle.png",
       "src": "/2D/darkpixel-kronovi__undead-executioner/extracted/Undead%20executioner/Undead%20executioner%20puppet/png/idle.png",
       "label": "Idle",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "darkpixel-kronovi__undead-executioner",
       "path": "2D/darkpixel-kronovi__undead-executioner/extracted/Undead executioner/Undead executioner puppet/png/summonDeath.png",
       "src": "/2D/darkpixel-kronovi__undead-executioner/extracted/Undead%20executioner/Undead%20executioner%20puppet/png/summonDeath.png",
       "label": "SummonDeath",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "darkpixel-kronovi__undead-executioner",
       "path": "2D/darkpixel-kronovi__undead-executioner/extracted/Undead executioner/Undead executioner puppet/png/attacking.png",
       "src": "/2D/darkpixel-kronovi__undead-executioner/extracted/Undead%20executioner/Undead%20executioner%20puppet/png/attacking.png",
       "label": "Attacking",
-      "kind": "image",
+      "kind": "character",
       "animated": false
     },
     {
@@ -6941,8 +6941,8 @@
       "path": "2D/darkpixel-kronovi__undead-executioner/extracted/Undead executioner/Undead executioner puppet/png/summonIdle.png",
       "src": "/2D/darkpixel-kronovi__undead-executioner/extracted/Undead%20executioner/Undead%20executioner%20puppet/png/summonIdle.png",
       "label": "SummonIdle",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "devkidd__pixel-fire-asset-pack",
@@ -7126,7 +7126,7 @@
       "src": "/2D/eduardscarpato__toxic-frog-animations-pixel-art-2d-free/extracted/ToxicFrog/BlueBlue/ToxicFrogBlueBlue_Explosion.png",
       "label": "ToxicFrogBlueBlue Explosion",
       "kind": "effect",
-      "animated": false
+      "animated": true
     },
     {
       "packFolder": "eduardscarpato__toxic-frog-animations-pixel-art-2d-free",
@@ -7134,7 +7134,7 @@
       "src": "/2D/eduardscarpato__toxic-frog-animations-pixel-art-2d-free/extracted/ToxicFrog/BlueBlue/ToxicFrogBlueBlue_Hop.png",
       "label": "ToxicFrogBlueBlue Hop",
       "kind": "character",
-      "animated": false
+      "animated": true
     },
     {
       "packFolder": "elesrech__pixel-monsters-enemies-asset-pack",
@@ -7205,80 +7205,80 @@
       "path": "2D/escape-pixel__shadow-series-duskclaw/extracted/SHADOW Series - Duskclaw (Free)/SHADOW Series - Duskclaw (Free)/png/idle-break.png",
       "src": "/2D/escape-pixel__shadow-series-duskclaw/extracted/SHADOW%20Series%20-%20Duskclaw%20(Free)/SHADOW%20Series%20-%20Duskclaw%20(Free)/png/idle-break.png",
       "label": "Idle Break",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "escape-pixel__shadow-series-duskclaw",
       "path": "2D/escape-pixel__shadow-series-duskclaw/extracted/SHADOW Series - Duskclaw (Free)/SHADOW Series - Duskclaw (Free)/png/idle.png",
       "src": "/2D/escape-pixel__shadow-series-duskclaw/extracted/SHADOW%20Series%20-%20Duskclaw%20(Free)/SHADOW%20Series%20-%20Duskclaw%20(Free)/png/idle.png",
       "label": "Idle",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "escape-pixel__shadow-series-hallokin",
       "path": "2D/escape-pixel__shadow-series-hallokin/extracted/png (free)/attack up.png",
       "src": "/2D/escape-pixel__shadow-series-hallokin/extracted/png%20(free)/attack%20up.png",
       "label": "Attack Up",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "escape-pixel__shadow-series-hallokin",
       "path": "2D/escape-pixel__shadow-series-hallokin/extracted/png (free)/attack-2.png",
       "src": "/2D/escape-pixel__shadow-series-hallokin/extracted/png%20(free)/attack-2.png",
       "label": "Attack 2",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "escape-pixel__shadow-series-hallokin",
       "path": "2D/escape-pixel__shadow-series-hallokin/extracted/png (free)/fall.png",
       "src": "/2D/escape-pixel__shadow-series-hallokin/extracted/png%20(free)/fall.png",
       "label": "Fall",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "escape-pixel__shadow-series-hallokin",
       "path": "2D/escape-pixel__shadow-series-hallokin/extracted/png (free)/hit.png",
       "src": "/2D/escape-pixel__shadow-series-hallokin/extracted/png%20(free)/hit.png",
       "label": "Hit",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "escape-pixel__shadow-series-hallokin",
       "path": "2D/escape-pixel__shadow-series-hallokin/extracted/png (free)/idle.png",
       "src": "/2D/escape-pixel__shadow-series-hallokin/extracted/png%20(free)/idle.png",
       "label": "Idle",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "escape-pixel__shadow-series-hallokin",
       "path": "2D/escape-pixel__shadow-series-hallokin/extracted/png (free)/jump - attack forwared.png",
       "src": "/2D/escape-pixel__shadow-series-hallokin/extracted/png%20(free)/jump%20-%20attack%20forwared.png",
       "label": "Jump Attack Forwared",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "escape-pixel__shadow-series-hallokin",
       "path": "2D/escape-pixel__shadow-series-hallokin/extracted/png (free)/jump.png",
       "src": "/2D/escape-pixel__shadow-series-hallokin/extracted/png%20(free)/jump.png",
       "label": "Jump",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "escape-pixel__shadow-series-hallokin",
       "path": "2D/escape-pixel__shadow-series-hallokin/extracted/png (free)/run.png",
       "src": "/2D/escape-pixel__shadow-series-hallokin/extracted/png%20(free)/run.png",
       "label": "Run",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "escape-pixel__shadow-series-pixel-tile-map-asset-pack-3",
@@ -7293,24 +7293,24 @@
       "path": "2D/escape-pixel__shadow-series-shadeflit/extracted/idle.png",
       "src": "/2D/escape-pixel__shadow-series-shadeflit/extracted/idle.png",
       "label": "Idle",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "escape-pixel__shadow-series-shadeflit",
       "path": "2D/escape-pixel__shadow-series-shadeflit/extracted/run-turn.png",
       "src": "/2D/escape-pixel__shadow-series-shadeflit/extracted/run-turn.png",
       "label": "Run Turn",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "escape-pixel__shadow-series-shadeflit",
       "path": "2D/escape-pixel__shadow-series-shadeflit/extracted/run.png",
       "src": "/2D/escape-pixel__shadow-series-shadeflit/extracted/run.png",
       "label": "Run",
-      "kind": "sprite",
-      "animated": true
+      "kind": "image",
+      "animated": false
     },
     {
       "packFolder": "escape-pixel__shadow-series-the-blind-huntress",
@@ -7454,7 +7454,7 @@
       "src": "/2D/foozlecc__critters-enemy-pack-3/extracted/Foozle_2DC0026_Critters_EnemyPack3_Pixel_Art/Foozle_2DC0026_Critters_EnemyPack3_Pixel_Art/Catfish%20Warrior/PNGs/Catfish%20Warrior%20Death.png",
       "label": "Catfish Warrior Death",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "foozlecc__critters-enemy-pack-3",
@@ -7462,7 +7462,7 @@
       "src": "/2D/foozlecc__critters-enemy-pack-3/extracted/Foozle_2DC0026_Critters_EnemyPack3_Pixel_Art/Foozle_2DC0026_Critters_EnemyPack3_Pixel_Art/Newt%20Slinger/PNGs/Newt%20Slinger%20Attack.png",
       "label": "Newt Slinger Attack",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "foozlecc__critters-enemy-pack-3",
@@ -7470,7 +7470,7 @@
       "src": "/2D/foozlecc__critters-enemy-pack-3/extracted/Foozle_2DC0026_Critters_EnemyPack3_Pixel_Art/Foozle_2DC0026_Critters_EnemyPack3_Pixel_Art/Turtle%20King/PNGs/Turtle%20King%20Death.png",
       "label": "Turtle King Death",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "foozlecc__critters-enemy-pack-3",
@@ -7478,7 +7478,7 @@
       "src": "/2D/foozlecc__critters-enemy-pack-3/extracted/Foozle_2DC0026_Critters_EnemyPack3_Pixel_Art/Foozle_2DC0026_Critters_EnemyPack3_Pixel_Art/Weasel%20Fisherman/PNGs/Weasel%20Fisherman%20Attack.png",
       "label": "Weasel Fisherman Attack",
       "kind": "character",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "foozlecc__void-fleet-pack-1",
@@ -8013,7 +8013,7 @@
       "path": "2D/immortal-burrito__blood-demons/extracted/Demon_sword/Sword/eg/sowrd_eg2.gif",
       "src": "/2D/immortal-burrito__blood-demons/extracted/Demon_sword/Sword/eg/sowrd_eg2.gif",
       "label": "Sowrd Eg2",
-      "kind": "sprite",
+      "kind": "character",
       "animated": true
     },
     {
@@ -8021,7 +8021,7 @@
       "path": "2D/immortal-burrito__blood-demons/extracted/Demon_sword/Sword/eg/Sword_eg.gif",
       "src": "/2D/immortal-burrito__blood-demons/extracted/Demon_sword/Sword/eg/Sword_eg.gif",
       "label": "Sword Eg",
-      "kind": "sprite",
+      "kind": "character",
       "animated": true
     },
     {
@@ -8029,7 +8029,7 @@
       "path": "2D/immortal-burrito__blood-demons/extracted/Demon_sword/Sword/Sword.png",
       "src": "/2D/immortal-burrito__blood-demons/extracted/Demon_sword/Sword/Sword.png",
       "label": "Sword",
-      "kind": "image",
+      "kind": "character",
       "animated": false
     },
     {
@@ -9285,7 +9285,7 @@
       "path": "2D/luizmelo__medieval-king-pack/extracted/Medieval King Pack/Medieval King Pack/Attack_1.png",
       "src": "/2D/luizmelo__medieval-king-pack/extracted/Medieval%20King%20Pack/Medieval%20King%20Pack/Attack_1.png",
       "label": "Attack 1",
-      "kind": "sprite",
+      "kind": "character",
       "animated": true
     },
     {
@@ -9293,7 +9293,7 @@
       "path": "2D/luizmelo__medieval-king-pack/extracted/Medieval King Pack/Medieval King Pack/Attack_2.png",
       "src": "/2D/luizmelo__medieval-king-pack/extracted/Medieval%20King%20Pack/Medieval%20King%20Pack/Attack_2.png",
       "label": "Attack 2",
-      "kind": "sprite",
+      "kind": "character",
       "animated": true
     },
     {
@@ -9301,7 +9301,7 @@
       "path": "2D/luizmelo__medieval-king-pack/extracted/Medieval King Pack/Medieval King Pack/Death.png",
       "src": "/2D/luizmelo__medieval-king-pack/extracted/Medieval%20King%20Pack/Medieval%20King%20Pack/Death.png",
       "label": "Death",
-      "kind": "sprite",
+      "kind": "character",
       "animated": true
     },
     {
@@ -9309,7 +9309,7 @@
       "path": "2D/luizmelo__medieval-king-pack/extracted/Medieval King Pack/Medieval King Pack/Fall.png",
       "src": "/2D/luizmelo__medieval-king-pack/extracted/Medieval%20King%20Pack/Medieval%20King%20Pack/Fall.png",
       "label": "Fall",
-      "kind": "sprite",
+      "kind": "character",
       "animated": true
     },
     {
@@ -9317,7 +9317,7 @@
       "path": "2D/luizmelo__medieval-king-pack/extracted/Medieval King Pack/Medieval King Pack/Hit.png",
       "src": "/2D/luizmelo__medieval-king-pack/extracted/Medieval%20King%20Pack/Medieval%20King%20Pack/Hit.png",
       "label": "Hit",
-      "kind": "sprite",
+      "kind": "character",
       "animated": true
     },
     {
@@ -9325,7 +9325,7 @@
       "path": "2D/luizmelo__medieval-king-pack/extracted/Medieval King Pack/Medieval King Pack/Idle.png",
       "src": "/2D/luizmelo__medieval-king-pack/extracted/Medieval%20King%20Pack/Medieval%20King%20Pack/Idle.png",
       "label": "Idle",
-      "kind": "sprite",
+      "kind": "character",
       "animated": true
     },
     {
@@ -9333,7 +9333,7 @@
       "path": "2D/luizmelo__medieval-king-pack/extracted/Medieval King Pack/Medieval King Pack/Jump.png",
       "src": "/2D/luizmelo__medieval-king-pack/extracted/Medieval%20King%20Pack/Medieval%20King%20Pack/Jump.png",
       "label": "Jump",
-      "kind": "sprite",
+      "kind": "character",
       "animated": true
     },
     {
@@ -9341,7 +9341,7 @@
       "path": "2D/luizmelo__medieval-king-pack/extracted/Medieval King Pack/Medieval King Pack/Run.png",
       "src": "/2D/luizmelo__medieval-king-pack/extracted/Medieval%20King%20Pack/Medieval%20King%20Pack/Run.png",
       "label": "Run",
-      "kind": "sprite",
+      "kind": "character",
       "animated": true
     },
     {
@@ -9349,7 +9349,7 @@
       "path": "2D/luizmelo__medieval-king-pack-2/extracted/Medieval King Pack 2/Medieval King Pack 2/Sprites/Death.png",
       "src": "/2D/luizmelo__medieval-king-pack-2/extracted/Medieval%20King%20Pack%202/Medieval%20King%20Pack%202/Sprites/Death.png",
       "label": "Death",
-      "kind": "sprite",
+      "kind": "character",
       "animated": true
     },
     {
@@ -9357,7 +9357,7 @@
       "path": "2D/luizmelo__medieval-king-pack-2/extracted/Medieval King Pack 2/Medieval King Pack 2/Sprites/Fall.png",
       "src": "/2D/luizmelo__medieval-king-pack-2/extracted/Medieval%20King%20Pack%202/Medieval%20King%20Pack%202/Sprites/Fall.png",
       "label": "Fall",
-      "kind": "sprite",
+      "kind": "character",
       "animated": true
     },
     {
@@ -9365,7 +9365,7 @@
       "path": "2D/luizmelo__medieval-king-pack-2/extracted/Medieval King Pack 2/Medieval King Pack 2/Sprites/Idle.png",
       "src": "/2D/luizmelo__medieval-king-pack-2/extracted/Medieval%20King%20Pack%202/Medieval%20King%20Pack%202/Sprites/Idle.png",
       "label": "Idle",
-      "kind": "sprite",
+      "kind": "character",
       "animated": true
     },
     {
@@ -9373,7 +9373,7 @@
       "path": "2D/luizmelo__medieval-king-pack-2/extracted/Medieval King Pack 2/Medieval King Pack 2/Sprites/Jump.png",
       "src": "/2D/luizmelo__medieval-king-pack-2/extracted/Medieval%20King%20Pack%202/Medieval%20King%20Pack%202/Sprites/Jump.png",
       "label": "Jump",
-      "kind": "sprite",
+      "kind": "character",
       "animated": true
     },
     {
@@ -9381,7 +9381,7 @@
       "path": "2D/luizmelo__medieval-king-pack-2/extracted/Medieval King Pack 2/Medieval King Pack 2/Sprites/Run.png",
       "src": "/2D/luizmelo__medieval-king-pack-2/extracted/Medieval%20King%20Pack%202/Medieval%20King%20Pack%202/Sprites/Run.png",
       "label": "Run",
-      "kind": "sprite",
+      "kind": "character",
       "animated": true
     },
     {
@@ -9389,7 +9389,7 @@
       "path": "2D/luizmelo__medieval-king-pack-2/extracted/Medieval King Pack 2/Medieval King Pack 2/Sprites/Take Hit - white silhouette.png",
       "src": "/2D/luizmelo__medieval-king-pack-2/extracted/Medieval%20King%20Pack%202/Medieval%20King%20Pack%202/Sprites/Take%20Hit%20-%20white%20silhouette.png",
       "label": "Take Hit White Silhouette",
-      "kind": "sprite",
+      "kind": "character",
       "animated": true
     },
     {
@@ -9397,7 +9397,7 @@
       "path": "2D/luizmelo__medieval-king-pack-2/extracted/Medieval King Pack 2/Medieval King Pack 2/Sprites/Take Hit.png",
       "src": "/2D/luizmelo__medieval-king-pack-2/extracted/Medieval%20King%20Pack%202/Medieval%20King%20Pack%202/Sprites/Take%20Hit.png",
       "label": "Take Hit",
-      "kind": "sprite",
+      "kind": "character",
       "animated": true
     },
     {
@@ -9405,7 +9405,7 @@
       "path": "2D/luizmelo__medieval-king-pack-2/extracted/Medieval King Pack 2/Medieval King Pack 2/Sprites/Attack1.png",
       "src": "/2D/luizmelo__medieval-king-pack-2/extracted/Medieval%20King%20Pack%202/Medieval%20King%20Pack%202/Sprites/Attack1.png",
       "label": "Attack1",
-      "kind": "image",
+      "kind": "character",
       "animated": false
     },
     {
@@ -9758,7 +9758,7 @@
       "src": "/2D/lukyaforge__ancientforest/extracted/Ancient%20Forest%201.4/Ancient%20Forest%201.5/Ruby%20V4%20-%20Demo/Attack/attack_1-Sheet.png",
       "label": "Attack 1 Sheet",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "lukyaforge__ancientforest",
@@ -9782,7 +9782,7 @@
       "src": "/2D/lukyaforge__ancientforest/extracted/Ancient%20Forest%201.4/Ancient%20Forest%201.5/Ruby%20V4%20-%20Demo/Death/deatht-Sheet.png",
       "label": "Deatht Sheet",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "lukyaforge__ancientforest",
@@ -9790,7 +9790,7 @@
       "src": "/2D/lukyaforge__ancientforest/extracted/Ancient%20Forest%201.4/Ancient%20Forest%201.5/Ruby%20V4%20-%20Demo/Hurt/hurt-Sheet.png",
       "label": "Hurt Sheet",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "lukyaforge__ancientforest",
@@ -9806,7 +9806,7 @@
       "src": "/2D/lukyaforge__ancientforest/extracted/Ancient%20Forest%201.4/Ancient%20Forest%201.5/Ruby%20V4%20-%20Demo/Idle/ruby_idle-Sheet.png",
       "label": "Ruby Idle Sheet",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "lukyaforge__ancientforest",
@@ -9910,7 +9910,7 @@
       "src": "/2D/marinesosa__mech-assets/extracted/Mechs%20Assets%20Pack%20-%20Free/Mechs%20Assets%20Pack%20-%20Free/SpriteSheets/Blue_1/B1_Full.png",
       "label": "B1 Full",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "monopixelart__flying-enemies",
@@ -10629,7 +10629,7 @@
       "path": "2D/pidroudays__theforestcharacterpack/extracted/TheForestCP_Mushroom_Pumpkin/TheForestCP_Mushroom_Pumpkin/Mushroom/M_Death.png",
       "src": "/2D/pidroudays__theforestcharacterpack/extracted/TheForestCP_Mushroom_Pumpkin/TheForestCP_Mushroom_Pumpkin/Mushroom/M_Death.png",
       "label": "M Death",
-      "kind": "sprite",
+      "kind": "character",
       "animated": true
     },
     {
@@ -10637,7 +10637,7 @@
       "path": "2D/pidroudays__theforestcharacterpack/extracted/TheForestCP_Mushroom_Pumpkin/TheForestCP_Mushroom_Pumpkin/Mushroom/M_Hurt.png",
       "src": "/2D/pidroudays__theforestcharacterpack/extracted/TheForestCP_Mushroom_Pumpkin/TheForestCP_Mushroom_Pumpkin/Mushroom/M_Hurt.png",
       "label": "M Hurt",
-      "kind": "sprite",
+      "kind": "character",
       "animated": true
     },
     {
@@ -10645,7 +10645,7 @@
       "path": "2D/pidroudays__theforestcharacterpack/extracted/TheForestCP_Mushroom_Pumpkin/TheForestCP_Mushroom_Pumpkin/Mushroom/M_Idle.png",
       "src": "/2D/pidroudays__theforestcharacterpack/extracted/TheForestCP_Mushroom_Pumpkin/TheForestCP_Mushroom_Pumpkin/Mushroom/M_Idle.png",
       "label": "M Idle",
-      "kind": "sprite",
+      "kind": "character",
       "animated": true
     },
     {
@@ -10653,7 +10653,7 @@
       "path": "2D/pidroudays__theforestcharacterpack/extracted/TheForestCP_Mushroom_Pumpkin/TheForestCP_Mushroom_Pumpkin/Mushroom/M_Walk.png",
       "src": "/2D/pidroudays__theforestcharacterpack/extracted/TheForestCP_Mushroom_Pumpkin/TheForestCP_Mushroom_Pumpkin/Mushroom/M_Walk.png",
       "label": "M Walk",
-      "kind": "sprite",
+      "kind": "character",
       "animated": true
     },
     {
@@ -10661,7 +10661,7 @@
       "path": "2D/pidroudays__theforestcharacterpack/extracted/TheForestCP_Mushroom_Pumpkin/TheForestCP_Mushroom_Pumpkin/Pumpkin/P_Death.png",
       "src": "/2D/pidroudays__theforestcharacterpack/extracted/TheForestCP_Mushroom_Pumpkin/TheForestCP_Mushroom_Pumpkin/Pumpkin/P_Death.png",
       "label": "P Death",
-      "kind": "sprite",
+      "kind": "character",
       "animated": true
     },
     {
@@ -10669,7 +10669,7 @@
       "path": "2D/pidroudays__theforestcharacterpack/extracted/TheForestCP_Mushroom_Pumpkin/TheForestCP_Mushroom_Pumpkin/Pumpkin/P_Hurt.png",
       "src": "/2D/pidroudays__theforestcharacterpack/extracted/TheForestCP_Mushroom_Pumpkin/TheForestCP_Mushroom_Pumpkin/Pumpkin/P_Hurt.png",
       "label": "P Hurt",
-      "kind": "sprite",
+      "kind": "character",
       "animated": true
     },
     {
@@ -10677,7 +10677,7 @@
       "path": "2D/pidroudays__theforestcharacterpack/extracted/TheForestCP_Mushroom_Pumpkin/TheForestCP_Mushroom_Pumpkin/Pumpkin/P_Idle.png",
       "src": "/2D/pidroudays__theforestcharacterpack/extracted/TheForestCP_Mushroom_Pumpkin/TheForestCP_Mushroom_Pumpkin/Pumpkin/P_Idle.png",
       "label": "P Idle",
-      "kind": "sprite",
+      "kind": "character",
       "animated": true
     },
     {
@@ -10685,7 +10685,7 @@
       "path": "2D/pidroudays__theforestcharacterpack/extracted/TheForestCP_Mushroom_Pumpkin/TheForestCP_Mushroom_Pumpkin/Pumpkin/P_Walk.png",
       "src": "/2D/pidroudays__theforestcharacterpack/extracted/TheForestCP_Mushroom_Pumpkin/TheForestCP_Mushroom_Pumpkin/Pumpkin/P_Walk.png",
       "label": "P Walk",
-      "kind": "sprite",
+      "kind": "character",
       "animated": true
     },
     {
@@ -10765,7 +10765,7 @@
       "path": "2D/pixelfrog-assets__tiny-swords/extracted/Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/Units/Black Units/Lancer/Lancer_Down_Attack.png",
       "src": "/2D/pixelfrog-assets__tiny-swords/extracted/Tiny%20Swords%20(Free%20Pack)/Tiny%20Swords%20(Free%20Pack)/Units/Black%20Units/Lancer/Lancer_Down_Attack.png",
       "label": "Lancer Down Attack",
-      "kind": "sprite",
+      "kind": "character",
       "animated": true
     },
     {
@@ -11021,7 +11021,7 @@
       "path": "2D/strangefew__pixel-platformer-pack/extracted/Pixel Platformer Pack/Pixel Platformer Pack/Raw Files/Player Die.png",
       "src": "/2D/strangefew__pixel-platformer-pack/extracted/Pixel%20Platformer%20Pack/Pixel%20Platformer%20Pack/Raw%20Files/Player%20Die.png",
       "label": "Player Die",
-      "kind": "sprite",
+      "kind": "character",
       "animated": true
     },
     {
@@ -11045,7 +11045,7 @@
       "path": "2D/strangefew__pixel-platformer-pack/extracted/Pixel Platformer Pack/Pixel Platformer Pack/Raw Files/Decoration Spritesheet.png",
       "src": "/2D/strangefew__pixel-platformer-pack/extracted/Pixel%20Platformer%20Pack/Pixel%20Platformer%20Pack/Raw%20Files/Decoration%20Spritesheet.png",
       "label": "Decoration Spritesheet",
-      "kind": "image",
+      "kind": "character",
       "animated": false
     },
     {
@@ -11086,7 +11086,7 @@
       "src": "/2D/studios2m__2dpixeleunitpack-1/extracted/PixelUnitPack_1_Sample/PixelUnitPack_1_Sample/Ace/SpriteSheet/Ace_Breathing.png",
       "label": "Ace Breathing",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "studios2m__2dpixeleunitpack-1",
@@ -11094,7 +11094,7 @@
       "src": "/2D/studios2m__2dpixeleunitpack-1/extracted/PixelUnitPack_1_Sample/PixelUnitPack_1_Sample/Ace/SpriteSheet/Ace_Projectile.png",
       "label": "Ace Projectile",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "studios2m__2dpixeleunitpack-1",
@@ -11206,7 +11206,7 @@
       "src": "/2D/szadiart__hero-and-opponents-animation/extracted/HeroandOpponents_v1/HeroandOpponents_v1/1%20Enemy/PNG/attack-A1.png",
       "label": "Attack A1",
       "kind": "character",
-      "animated": false
+      "animated": true
     },
     {
       "packFolder": "szadiart__hero-and-opponents-animation",
@@ -11214,7 +11214,7 @@
       "src": "/2D/szadiart__hero-and-opponents-animation/extracted/HeroandOpponents_v1/HeroandOpponents_v1/1%20Enemy/PNG/attack-A2.png",
       "label": "Attack A2",
       "kind": "character",
-      "animated": false
+      "animated": true
     },
     {
       "packFolder": "szadiart__hero-and-opponents-animation",
@@ -11222,7 +11222,7 @@
       "src": "/2D/szadiart__hero-and-opponents-animation/extracted/HeroandOpponents_v1/HeroandOpponents_v1/1%20Enemy/PNG/attack-A3.png",
       "label": "Attack A3",
       "kind": "character",
-      "animated": false
+      "animated": true
     },
     {
       "packFolder": "szadiart__hero-and-opponents-animation",
@@ -11230,7 +11230,7 @@
       "src": "/2D/szadiart__hero-and-opponents-animation/extracted/HeroandOpponents_v1/HeroandOpponents_v1/1%20Enemy/PNG/attack-A4.png",
       "label": "Attack A4",
       "kind": "character",
-      "animated": false
+      "animated": true
     },
     {
       "packFolder": "szadiart__hero-and-opponents-animation",
@@ -11238,7 +11238,7 @@
       "src": "/2D/szadiart__hero-and-opponents-animation/extracted/HeroandOpponents_v1/HeroandOpponents_v1/1%20Enemy/PNG/attack-A5.png",
       "label": "Attack A5",
       "kind": "character",
-      "animated": false
+      "animated": true
     },
     {
       "packFolder": "szadiart__hero-and-opponents-animation",
@@ -11246,7 +11246,7 @@
       "src": "/2D/szadiart__hero-and-opponents-animation/extracted/HeroandOpponents_v1/HeroandOpponents_v1/1%20Enemy/PNG/attack-A6.png",
       "label": "Attack A6",
       "kind": "character",
-      "animated": false
+      "animated": true
     },
     {
       "packFolder": "szadiart__hero-and-opponents-animation",
@@ -11254,7 +11254,7 @@
       "src": "/2D/szadiart__hero-and-opponents-animation/extracted/HeroandOpponents_v1/HeroandOpponents_v1/1%20Enemy/PNG/attack-A7.png",
       "label": "Attack A7",
       "kind": "character",
-      "animated": false
+      "animated": true
     },
     {
       "packFolder": "szadiart__hero-and-opponents-animation",
@@ -11262,7 +11262,7 @@
       "src": "/2D/szadiart__hero-and-opponents-animation/extracted/HeroandOpponents_v1/HeroandOpponents_v1/1%20Enemy/PNG/attack-A8.png",
       "label": "Attack A8",
       "kind": "character",
-      "animated": false
+      "animated": true
     },
     {
       "packFolder": "toffeecraft__cat-sleeping-animation-free",
@@ -11270,7 +11270,7 @@
       "src": "/2D/toffeecraft__cat-sleeping-animation-free/extracted/SleepingCatFree/SleepingCatFree/sleepingcat1.png",
       "label": "Sleepingcat1",
       "kind": "character",
-      "animated": false
+      "animated": true
     },
     {
       "packFolder": "toffeecraft__cat-sleeping-animation-free",
@@ -11278,7 +11278,7 @@
       "src": "/2D/toffeecraft__cat-sleeping-animation-free/extracted/SleepingCatFree/SleepingCatFree/sleepingcat2.png",
       "label": "Sleepingcat2",
       "kind": "character",
-      "animated": false
+      "animated": true
     },
     {
       "packFolder": "toffeecraft__cat-sleeping-animation-free",
@@ -11286,7 +11286,7 @@
       "src": "/2D/toffeecraft__cat-sleeping-animation-free/extracted/SleepingCatFree/SleepingCatFree/sleepingcat3.png",
       "label": "Sleepingcat3",
       "kind": "character",
-      "animated": false
+      "animated": true
     },
     {
       "packFolder": "toffeecraft__cat-sleeping-animation-free",
@@ -11294,7 +11294,7 @@
       "src": "/2D/toffeecraft__cat-sleeping-animation-free/extracted/SleepingCatFree/SleepingCatFree/sleepingcat4.png",
       "label": "Sleepingcat4",
       "kind": "character",
-      "animated": false
+      "animated": true
     },
     {
       "packFolder": "toffeecraft__cat-sleeping-animation-free",
@@ -11302,7 +11302,7 @@
       "src": "/2D/toffeecraft__cat-sleeping-animation-free/extracted/SleepingCatFree/SleepingCatFree/sleepingcat5.png",
       "label": "Sleepingcat5",
       "kind": "character",
-      "animated": false
+      "animated": true
     },
     {
       "packFolder": "unverified__assets-32x32-nature",
@@ -11406,7 +11406,7 @@
       "src": "/2D/unverified__mech3-walk-spritesheet/Mech3-Walk-200%C3%97150px-SpriteSheet-76e3.png",
       "label": "Mech3 Walk 200×150px SpriteSheet 76e3",
       "kind": "sprite",
-      "animated": true
+      "animated": false
     },
     {
       "packFolder": "unverified__small-monster",
