@@ -1,18 +1,20 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { SiteHeader } from "@/components/SiteHeader";
-import { manifest } from "@/lib/manifest";
+import { downloadsForModel, manifest } from "@/lib/manifest";
+import audioAnalysisData from "@/lib/audio-analysis.json";
 import { catalog, mediaStats, sourceMappings } from "@/lib/media";
 import { CatalogSearch } from "@/components/CatalogSearch";
 import { AssetTypeNav } from "@/components/AssetTypeNav";
 import { pageMetadata } from "@/lib/seo";
 import {
   LibraryHeroShowreel,
+  type LibraryModelPreview,
   type LibrarySoundPreview,
   type LibrarySpritePreview,
 } from "@/components/LibraryHeroShowreel";
 import { isLikelyMarketingPreviewPath, isLikelySpriteSheetPath } from "@/lib/media-inference";
-import type { ArtPack, ArtSample, ArtTheme } from "@/lib/media";
+import type { ArtPack, ArtSample, ArtTheme, MusicTrack } from "@/lib/media";
 
 type HomePageProps = {
   searchParams?: Promise<{
@@ -44,6 +46,65 @@ const FEATURED_SPRITE_THEMES: ArtTheme[] = [
   "Icons & Items",
   "Environments",
 ];
+
+const audioAnalysisItems = (audioAnalysisData as {
+  items?: Record<string, { duration?: number; loudness?: number[] }>;
+}).items ?? {};
+
+const FEATURED_MODEL_PICKS = [
+  {
+    packId: "kaykit/medieval-builder-pack",
+    name: "castle",
+    position: [-1.2, -0.74, -0.08],
+    rotation: [0, 0.5, 0],
+    scale: 0.62,
+  },
+  {
+    packId: "quaternius/spaceships-by-quaternius",
+    name: "Spaceship3",
+    position: [0.82, 0.44, -0.3],
+    rotation: [-0.12, -0.72, 0.08],
+    scale: 0.16,
+  },
+  {
+    packId: "quaternius/animated-robot-oct-2018",
+    name: "Robot",
+    position: [1.38, -0.74, 0.48],
+    rotation: [0, -0.35, 0],
+    scale: 0.27,
+  },
+] satisfies Array<{
+  packId: string;
+  name: string;
+  position: [number, number, number];
+  rotation: [number, number, number];
+  scale: number;
+}>;
+
+const FEATURED_MUSIC_TITLES = [
+  "Bittersweet",
+  "Black Vortex",
+  "Comfortable Mystery 2",
+];
+
+function selectFeaturedModels(): LibraryModelPreview[] {
+  return FEATURED_MODEL_PICKS.flatMap((pick) => {
+    const pack = manifest.packs.find((item) => item.id === pick.packId);
+    const model = pack?.models.find((item) => item.name === pick.name);
+    if (!pack || !model) return [];
+    const optimized = downloadsForModel(model).find((download) => download.optimized);
+
+    return {
+      label: model.label,
+      file: optimized?.file ?? model.file,
+      source: pack.source,
+      minY: model.minY,
+      position: pick.position,
+      rotation: pick.rotation,
+      scale: pick.scale,
+    };
+  });
+}
 
 function landingSpriteScore(pack: ArtPack, sample: ArtSample): number {
   const text = `${pack.title} ${pack.theme} ${sample.label} ${sample.path}`.toLowerCase();
@@ -90,40 +151,44 @@ function selectFeaturedSprites(): LibrarySpritePreview[] {
   return selected;
 }
 
+function soundPreviewForTrack(track: MusicTrack): LibrarySoundPreview | undefined {
+  const audio = audioAnalysisItems[track.path];
+  if (!audio?.loudness?.length) return undefined;
+
+  return {
+    title: track.title,
+    source: track.source,
+    path: track.path,
+    duration: audio.duration ?? 0,
+    loudness: audio.loudness,
+  };
+}
+
 function selectFeaturedSounds(): LibrarySoundPreview[] {
-  const soundSamples = catalog.soundCollections
-    .filter((collection) => collection.samples.length > 0)
-    .flatMap((collection) =>
-      collection.samples.map((sample) => ({
-        title: collection.title,
-        label: sample.label,
-        kind: sample.kind,
-        category: collection.category,
-        searchText: `${collection.title} ${collection.category} ${sample.kind} ${sample.label}`.toLowerCase(),
-      })),
-    );
-  const picks = [
-    soundSamples.find((sample) => /combat|impact|spell|explosion|hit/.test(sample.searchText)),
-    soundSamples.find((sample) => /movement|footstep|jump|land/.test(sample.searchText)),
-    soundSamples.find((sample) => /ui|coin|positive|click|menu/.test(sample.searchText)),
-    catalog.musicTracks[0]
-      ? {
-          title: "Music",
-          label: catalog.musicTracks[0].title,
-          kind: "music",
-          category: "music",
-          searchText: "music",
-        }
-      : undefined,
-  ].filter(Boolean) as LibrarySoundPreview[];
+  const byTitle = new Map(catalog.musicTracks.map((track) => [track.title, track]));
+  const picks = FEATURED_MUSIC_TITLES
+    .map((title) => byTitle.get(title))
+    .filter(Boolean)
+    .map((track) => soundPreviewForTrack(track as MusicTrack))
+    .filter(Boolean) as LibrarySoundPreview[];
+
+  if (picks.length < 3) {
+    for (const track of catalog.musicTracks) {
+      if (picks.some((pick) => pick.path === track.path)) continue;
+      const preview = soundPreviewForTrack(track);
+      if (!preview) continue;
+      picks.push(preview);
+      if (picks.length === 3) break;
+    }
+  }
 
   const seen = new Set<string>();
   return picks.filter((sample) => {
-    const key = `${sample.kind}:${sample.label}`;
+    const key = sample.path;
     if (seen.has(key)) return false;
     seen.add(key);
     return true;
-  });
+  }).slice(0, 3);
 }
 
 function firstParam(value: string | string[] | undefined) {
@@ -134,6 +199,7 @@ export default async function HomePage({ searchParams }: HomePageProps) {
   const params = await searchParams;
   const modelParam = firstParam(params?.model);
   const modelMotion = modelParam === "animated" || modelParam === "static" ? modelParam : "all";
+  const featuredModels = selectFeaturedModels();
   const featuredSprites = selectFeaturedSprites();
   const featuredSounds = selectFeaturedSounds();
   const totalModels = manifest.packs.reduce((n, p) => n + p.count, 0);
@@ -181,7 +247,7 @@ export default async function HomePage({ searchParams }: HomePageProps) {
               </Link>
             </div>
           </div>
-          <LibraryHeroShowreel sprites={featuredSprites} sounds={featuredSounds} />
+          <LibraryHeroShowreel models={featuredModels} sprites={featuredSprites} sounds={featuredSounds} />
         </section>
 
         <AssetTypeNav note={`${totalModels.toLocaleString()} models · ${textureGroupLabel} · ${totalMediaCollections} media collections`} />

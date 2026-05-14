@@ -6,6 +6,8 @@ import {
   type LandingModelPreviewItem,
 } from "@/components/LandingModelBackdrop";
 
+export type LibraryModelPreview = LandingModelPreviewItem;
+
 export type LibrarySpritePreview = {
   title: string;
   theme: string;
@@ -17,58 +19,11 @@ export type LibrarySpritePreview = {
 
 export type LibrarySoundPreview = {
   title: string;
-  label: string;
-  kind: string;
-  category: string;
+  source: string;
+  path: string;
+  duration: number;
+  loudness: number[];
 };
-
-const MODEL_PREVIEWS: LandingModelPreviewItem[] = [
-  {
-    label: "Spaceship",
-    variant: "ship",
-    position: [0.58, 0.82, -0.34],
-    rotation: [-0.1, -0.76, 0.08],
-    scale: 0.22,
-  },
-  {
-    label: "Castle kit",
-    variant: "castle",
-    position: [-1.42, -0.7, -0.14],
-    rotation: [0, 0.5, 0],
-    scale: 0.78,
-  },
-  {
-    label: "Robot",
-    variant: "robot",
-    position: [1.62, -0.74, 0.48],
-    rotation: [0, -0.32, 0],
-    scale: 0.3,
-  },
-];
-
-function hashString(value: string): number {
-  let hash = 2166136261;
-  for (let index = 0; index < value.length; index += 1) {
-    hash ^= value.charCodeAt(index);
-    hash = Math.imul(hash, 16777619);
-  }
-  return hash >>> 0;
-}
-
-function soundEnvelope(seed: string, count: number): number[] {
-  let noise = hashString(seed || "sound");
-  const phase = (noise % 360) * (Math.PI / 180);
-  const beat = 5 + (noise % 7);
-
-  return Array.from({ length: count }, (_, index) => {
-    noise = Math.imul(noise, 1664525) + 1013904223;
-    const position = count <= 1 ? 0 : index / (count - 1);
-    const arc = Math.sin(Math.PI * position);
-    const pulse = 0.5 + Math.sin(position * Math.PI * beat + phase) * 0.5;
-    const jitter = ((noise >>> 0) / 0xffffffff) * 0.22;
-    return Math.min(0.98, Math.max(0.12, 0.16 + arc * 0.34 + pulse * 0.34 + jitter));
-  });
-}
 
 function parseFrameLayout(
   path: string,
@@ -229,30 +184,30 @@ function SpriteLoop({ sample, index }: { sample: LibrarySpritePreview; index: nu
 
 function SoundSignal({ sounds }: { sounds: LibrarySoundPreview[] }) {
   const rows = sounds.slice(0, 3);
+  if (rows.length === 0) return null;
 
   return (
-    <div className="library-sound-signal" aria-label="Sound and music preview representation">
+    <div className="library-sound-signal" aria-label="Static waveform previews from analyzed music tracks">
       <div className="library-signal-head">
-        <span>SFX / Music</span>
-        <strong>sound design</strong>
+        <span>Music waveforms</span>
+        <strong>analyzed tracks</strong>
       </div>
       <div className="library-signal-rows">
         {rows.map((sound) => {
-          const levels = soundEnvelope(`${sound.title}|${sound.label}|${sound.kind}`, 34);
           return (
-            <div className="library-signal-row" key={`${sound.title}-${sound.label}`}>
+            <div className="library-signal-row" key={sound.path}>
               <div>
-                <span>{sound.kind}</span>
-                <strong>{sound.label || sound.title}</strong>
+                <span>{sound.source}</span>
+                <strong>{sound.title}</strong>
+                <small>{formatDuration(sound.duration)}</small>
               </div>
               <div className="library-signal-bars" aria-hidden="true">
-                {levels.map((level, index) => (
+                {sound.loudness.map((level, index) => (
                   <i
                     key={index}
                     style={
                       {
                         "--bar-height": `${Math.round(level * 100)}%`,
-                        "--bar-delay": `${index * 28}ms`,
                       } as CSSProperties
                     }
                   />
@@ -266,43 +221,42 @@ function SoundSignal({ sounds }: { sounds: LibrarySoundPreview[] }) {
   );
 }
 
+function formatDuration(seconds: number): string {
+  if (!Number.isFinite(seconds) || seconds <= 0) return "analyzed";
+  const minutes = Math.floor(seconds / 60);
+  const remaining = Math.round(seconds % 60).toString().padStart(2, "0");
+  return `${minutes}:${remaining}`;
+}
+
 export function LibraryHeroShowreel({
+  models,
   sprites,
   sounds,
 }: {
+  models: LibraryModelPreview[];
   sprites: LibrarySpritePreview[];
   sounds: LibrarySoundPreview[];
 }) {
-  const visibleSprites = sprites.slice(0, 4);
-  const vfxSprite =
-    sprites.find((sample) => /vfx|effect|fx|impact|explosion/i.test(`${sample.theme} ${sample.label} ${sample.path}`)) ??
-    visibleSprites[0];
+  const visibleSprites = sprites.slice(0, 2);
 
   return (
     <div className="library-showreel" aria-hidden="true">
       <div className="library-model-plane">
-        <LandingModelBackdrop models={MODEL_PREVIEWS} />
+        <LandingModelBackdrop models={models} />
         <div className="library-model-label">
           <span>3D</span>
-          <strong>models + kits</strong>
+          <strong>real GLB assets</strong>
         </div>
       </div>
 
-      <div className="library-sprite-rack">
-        {visibleSprites.map((sample, index) => (
-          <SpriteLoop key={`${sample.path}-${index}`} sample={sample} index={index} />
-        ))}
+      <div className="library-demo-footer">
+        <div className="library-sprite-rack">
+          {visibleSprites.map((sample, index) => (
+            <SpriteLoop key={`${sample.path}-${index}`} sample={sample} index={index} />
+          ))}
+        </div>
+        <SoundSignal sounds={sounds} />
       </div>
-
-      <div className="library-vfx-burst">
-        <span />
-        <span />
-        <span />
-        <span />
-        <strong>{vfxSprite?.label ?? "VFX"}</strong>
-      </div>
-
-      <SoundSignal sounds={sounds} />
     </div>
   );
 }

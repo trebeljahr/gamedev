@@ -4,7 +4,7 @@ import {
   LandingModelBackdrop,
   type LandingModelPreviewItem,
 } from "@/components/LandingModelBackdrop";
-import { manifest } from "@/lib/manifest";
+import { downloadsForModel, manifest } from "@/lib/manifest";
 import { catalog, mediaStats } from "@/lib/media";
 import { isLikelyMarketingPreviewPath } from "@/lib/media-inference";
 import { pageMetadata } from "@/lib/seo";
@@ -45,7 +45,6 @@ const modelPicks = [
   {
     packId: "quaternius/spaceships-by-quaternius",
     name: "Spaceship3",
-    variant: "ship",
     position: [0.6, 0.92, -0.3],
     rotation: [-0.1, -0.75, 0.1],
     scale: 0.22,
@@ -53,7 +52,6 @@ const modelPicks = [
   {
     packId: "kaykit/medieval-builder-pack",
     name: "castle",
-    variant: "castle",
     position: [-1.5, -0.68, -0.2],
     rotation: [0, 0.52, 0],
     scale: 0.86,
@@ -61,7 +59,6 @@ const modelPicks = [
   {
     packId: "quaternius/animated-robot-oct-2018",
     name: "Robot",
-    variant: "robot",
     position: [1.78, -0.72, 0.55],
     rotation: [0, -0.35, 0],
     scale: 0.32,
@@ -69,7 +66,6 @@ const modelPicks = [
 ] satisfies Array<{
   packId: string;
   name: string;
-  variant: LandingModelPreviewItem["variant"];
   position: [number, number, number];
   rotation: [number, number, number];
   scale: number;
@@ -78,11 +74,14 @@ const modelPicks = [
 const featuredModels: LandingModelPreviewItem[] = modelPicks.flatMap((pick) => {
   const pack = manifest.packs.find((item) => item.id === pick.packId);
   const model = pack?.models.find((item) => item.name === pick.name);
-  if (!model) return [];
+  if (!pack || !model) return [];
+  const optimized = downloadsForModel(model).find((download) => download.optimized);
 
   return {
     label: model.label,
-    variant: pick.variant,
+    file: optimized?.file ?? model.file,
+    source: pack.source,
+    minY: model.minY,
     position: pick.position,
     rotation: pick.rotation,
     scale: pick.scale,
