@@ -6,7 +6,7 @@ import type { ReactNode } from "react";
 import { InfiniteListSentinel, useInfiniteList } from "@/components/useInfiniteList";
 import { LicenseLink } from "@/components/LicenseLink";
 import type { VendorLicense } from "@/lib/license";
-import type { Pack } from "@/lib/manifest";
+import { displayPackDescription, displayPackTitle, type Pack } from "@/lib/manifest";
 import { uniqueTags } from "@/lib/tags";
 
 const PackCardPreview = dynamic(
@@ -57,6 +57,7 @@ export function PackGrid({
         {visibleItems.map((item) => {
           const { pack } = item;
           const packHref = `/${pack.vendor}/${pack.pack}`;
+          const packTitle = displayPackTitle(pack);
 
           return (
             <article key={pack.id} className="pack-card">
@@ -64,7 +65,7 @@ export function PackGrid({
                 <PackCardPreview modelFiles={item.previewModelFiles} label={pack.preview?.modelTitle} />
               </Link>
               <Link className="pack-label pack-label-link" href={packHref}>
-                {pack.title}
+                {packTitle}
               </Link>
               <div className="pack-credit-row">
                 <span>{credit.vendorLabel}</span>
@@ -75,7 +76,7 @@ export function PackGrid({
                 />
               </div>
               <Link className="pack-card-body-link" href={packHref}>
-                <p>{pack.description}</p>
+                <p>{displayPackDescription(pack)}</p>
                 <div className="pack-tags">
                   {uniqueTags(pack.tags).slice(0, 5).map((tag) => (
                     <span key={tag}>{tag}</span>

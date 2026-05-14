@@ -8,7 +8,7 @@ import { LicenseLink } from "@/components/LicenseLink";
 import { PackDownloadButton } from "@/components/PackDownloadButton";
 import { ModelDownloadLinks } from "@/components/ModelDownloadLinks";
 import { licenseForVendor } from "@/lib/license";
-import { assetUrl, type Pack } from "@/lib/manifest";
+import { assetUrl, displayPackDescription, displayPackTitle, type Pack } from "@/lib/manifest";
 import { findModelRouteRef, modelHref, modelRouteRefsForPack, type ModelRouteRef } from "@/lib/model-routes";
 import { uniqueTags } from "@/lib/tags";
 import { useRouter } from "next/navigation";
@@ -42,6 +42,7 @@ function PackGroupViewer({ pack, modelRefs }: { pack: Pack; modelRefs: ModelRout
   const [query, setQuery] = useState("");
   const credit = licenseForVendor(pack.vendor);
   const license = pack.license || credit.license;
+  const packTitle = displayPackTitle(pack);
   const normalizedQuery = query.trim().toLowerCase();
   const visibleModels = useMemo(() => {
     if (!normalizedQuery) return modelRefs;
@@ -73,8 +74,8 @@ function PackGroupViewer({ pack, modelRefs }: { pack: Pack; modelRefs: ModelRout
           {credit.vendorLabel}
         </Link>
         <div className="pack-context-label">Part of pack</div>
-        <h1>{pack.title}</h1>
-        <p className="pack-view-description">{pack.description}</p>
+        <h1>{packTitle}</h1>
+        <p className="pack-view-description">{displayPackDescription(pack)}</p>
         <div className="pack-credit-panel">
           <div>
             <span>Creator</span>
@@ -133,7 +134,7 @@ function PackGroupViewer({ pack, modelRefs }: { pack: Pack; modelRefs: ModelRout
         />
         <div className="viewer-bar">
           <div className="name">
-            {pack.title}{" "}
+            {packTitle}{" "}
             <span style={{ color: "rgba(255,255,255,0.6)", fontSize: 12 }}>
               ({pack.models.length})
             </span>
@@ -161,6 +162,7 @@ function SingleAssetViewer({
   const nextModel = modelRefs[(index + 1) % modelRefs.length];
   const credit = licenseForVendor(pack.vendor);
   const license = pack.license || credit.license;
+  const packTitle = displayPackTitle(pack);
   const normalizedQuery = query.trim().toLowerCase();
   const visibleModels = useMemo(() => {
     if (!normalizedQuery) return modelRefs;
@@ -191,7 +193,7 @@ function SingleAssetViewer({
         <h1>{model.title}</h1>
         <section className="asset-focus-panel" aria-label="Asset metadata">
           <span>Part of pack</span>
-          <strong>{pack.title}</strong>
+          <strong>{packTitle}</strong>
           <dl>
             <div>
               <dt>Category</dt>

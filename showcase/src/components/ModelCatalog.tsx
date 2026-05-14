@@ -8,7 +8,7 @@ import { LicenseLink } from "@/components/LicenseLink";
 import { ModelDownloadLinks } from "@/components/ModelDownloadLinks";
 import { SiteHeader } from "@/components/SiteHeader";
 import { licenseForVendor, type VendorLicense } from "@/lib/license";
-import type { Manifest, Model, Pack } from "@/lib/manifest";
+import { displayPackTitle, type Manifest, type Model, type Pack } from "@/lib/manifest";
 import { modelHref } from "@/lib/model-routes";
 import { uniqueTags } from "@/lib/tags";
 
@@ -38,11 +38,6 @@ function slug(value: string): string {
 
 function uniqueSorted(values: string[]): string[] {
   return Array.from(new Set(values.filter(Boolean))).sort((a, b) => a.localeCompare(b));
-}
-
-function formatSize(model: Model): string {
-  const [width, height, depth] = model.size;
-  return `${width.toFixed(1)} x ${height.toFixed(1)} x ${depth.toFixed(1)}`;
 }
 
 function niceVendor(vendor: string): string {
@@ -129,7 +124,7 @@ export function ModelCatalog({ manifest }: ModelCatalogProps) {
             <div className="landing-kicker">3D catalog</div>
             <h2 id="models-heading">Every 3D model</h2>
             <p>
-              Model-first index with creator, license, dimensions, style tags, and pack context kept visible.
+              Model-first index with creator, license, style tags, and pack context kept visible.
             </p>
           </div>
           <Link className="all-link" href="/#3d-collections">
@@ -231,12 +226,8 @@ export function ModelCatalog({ manifest }: ModelCatalogProps) {
                 <div>
                   <dt>Part of pack</dt>
                   <dd>
-                    <Link href={`/${entry.pack.vendor}/${entry.pack.pack}`}>{entry.pack.title}</Link>
+                    <Link href={`/${entry.pack.vendor}/${entry.pack.pack}`}>{displayPackTitle(entry.pack)}</Link>
                   </dd>
-                </div>
-                <div>
-                  <dt>Size</dt>
-                  <dd>{formatSize(entry.model)}</dd>
                 </div>
                 <div>
                   <dt>File</dt>
