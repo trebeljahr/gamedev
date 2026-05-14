@@ -1340,6 +1340,123 @@ select:focus-visible {
 .pack-credit-panel .creator-links {
   justify-content: flex-start;
 }
+.creator-attribution-panel {
+  display: grid;
+  gap: 10px;
+  margin-top: 8px;
+  padding: 14px 0 16px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.side-section-label,
+.side-list-heading {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 750;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.side-list-heading {
+  margin: 16px 0 7px;
+}
+.attribution-copy-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 7px;
+  align-items: stretch;
+}
+.attribution-text {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  min-height: 36px;
+  padding: 0 10px;
+  overflow: hidden;
+  color: var(--text);
+  background: rgba(255,255,255,0.045);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  user-select: all;
+  white-space: nowrap;
+}
+.attribution-copy-button,
+.creator-source-links a,
+.creator-browse-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 0 10px;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 750;
+}
+.attribution-copy-button {
+  color: var(--text);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  cursor: pointer;
+}
+.attribution-copy-button:hover {
+  color: #11100b;
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.attribution-license-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.attribution-license-row span {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 750;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.attribution-license-row a,
+.attribution-license-row strong {
+  color: var(--accent);
+  font-size: 12px;
+}
+.creator-attribution-panel p {
+  margin: 0;
+  color: rgba(232,230,227,0.66);
+  font-size: 12px;
+  line-height: 1.35;
+}
+.creator-source-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 7px;
+}
+.creator-source-links a {
+  color: rgba(232,230,227,0.84);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+}
+.creator-source-links a:hover {
+  color: var(--accent);
+  border-color: rgba(255,216,77,0.42);
+}
+.creator-browse-button {
+  color: #11100b;
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  text-align: center;
+}
+.creator-browse-button:hover {
+  color: #11100b;
+  background: #ffe57d;
+  border-color: #ffe57d;
+}
 .pack-view-tags {
   display: flex;
   flex-wrap: wrap;
@@ -1439,6 +1556,62 @@ select:focus-visible {
 .viewer-bar .nav button:hover,
 .viewer-bar .nav a:hover { background: rgba(0,0,0,0.7); }
 .viewer-bar .nav { display: flex; gap: 6px; }
+.viewer-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  min-width: 0;
+}
+.model-download-control {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+.model-download-primary,
+.model-download-select {
+  min-height: 36px;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 800;
+}
+.model-download-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 0 11px;
+  color: #11100b;
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  white-space: nowrap;
+}
+.model-download-primary svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.model-download-primary:hover {
+  color: #11100b;
+  background: #ffe57d;
+  border-color: #ffe57d;
+}
+.model-download-select {
+  max-width: 174px;
+  padding: 0 30px 0 10px;
+  color: white;
+  background: rgba(0,0,0,0.5);
+  border: 1px solid rgba(255,255,255,0.15);
+}
+.model-download-select:hover {
+  background: rgba(0,0,0,0.7);
+}
 
 .creator-page {
   min-height: 100vh;
@@ -3411,6 +3584,27 @@ select:focus-visible {
   .viewer-shell main {
     grid-row: 1;
     min-height: 0;
+  }
+  .viewer-bar {
+    flex-wrap: wrap;
+    align-items: flex-end;
+    padding: 9px;
+  }
+  .viewer-bar .name {
+    min-width: 160px;
+  }
+  .viewer-controls {
+    gap: 6px;
+  }
+  .model-download-primary {
+    width: 36px;
+    padding: 0;
+  }
+  .model-download-primary span {
+    display: none;
+  }
+  .model-download-select {
+    max-width: min(46vw, 154px);
   }
   .all-scene-shell {
     --scene-header-offset: 142px;
