@@ -6,12 +6,14 @@ import {
 } from "@/components/LandingModelBackdrop";
 import { manifest } from "@/lib/manifest";
 import { catalog, mediaStats } from "@/lib/media";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "GameDev Asset Library",
+export const metadata: Metadata = pageMetadata({
+  title: "Free Game Assets Catalog",
   description:
     "Browse a curated, one-stop catalog of free community-made game assets with previews, source links, and credits.",
-};
+  pathname: "/landing-page",
+});
 
 const LANDING_ASSET_BASE_URL = (
   process.env.NEXT_PUBLIC_LANDING_ASSETS_BASE_URL ?? "https://assets.gamedev.trebeljahr.com"

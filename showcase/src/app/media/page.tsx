@@ -1,5 +1,7 @@
+import type { Metadata } from "next";
 import { MediaExplorer } from "@/components/MediaExplorer";
 import { artPacks, musicTracks, soundCollections, sourceMappings } from "@/lib/media";
+import { pageMetadata } from "@/lib/seo";
 
 type MediaPageProps = {
   searchParams?: Promise<{
@@ -9,6 +11,13 @@ type MediaPageProps = {
     motion?: string | string[];
   }>;
 };
+
+export const metadata: Metadata = pageMetadata({
+  title: "2D, Sound, and Music Assets",
+  description:
+    "Explore pixel art, sprites, textures, sound effects, and music collections with source and license context for game projects.",
+  pathname: "/media",
+});
 
 function firstParam(value: string | string[] | undefined) {
   return Array.isArray(value) ? value[0] : value;

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LicenseLink } from "@/components/LicenseLink";
@@ -6,18 +7,62 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { licenseForVendor } from "@/lib/license";
 import { manifest } from "@/lib/manifest";
 import { previewModelFilesFor } from "@/lib/preview-model";
+import { pageMetadata, routePath } from "@/lib/seo";
+
+type CreatorPageProps = {
+  params: Promise<{ vendor: string }>;
+};
+
+function packsForVendor(vendor: string) {
+  return manifest.packs.filter((pack) => pack.vendor === vendor);
+}
 
 export function generateStaticParams() {
   return Array.from(new Set(manifest.packs.map((pack) => pack.vendor))).map((vendor) => ({ vendor }));
 }
 
-export default async function CreatorPage({
-  params,
-}: {
-  params: Promise<{ vendor: string }>;
-}) {
+export async function generateMetadata({ params }: CreatorPageProps): Promise<Metadata> {
   const { vendor } = await params;
-  const packs = manifest.packs.filter((pack) => pack.vendor === vendor);
+  const packs = packsForVendor(vendor);
+  if (packs.length === 0) notFound();
+
+  const credit = licenseForVendor(vendor);
+  const totalModels = packs.reduce((sum, pack) => sum + pack.count, 0);
+  const description = [
+    `${credit.vendorLabel} asset collections: ${packs.length} packs and ${totalModels.toLocaleString("en-US")} 3D models.`,
+    `License: ${credit.license}.`,
+    credit.notes ?? "Check creator source before shipping a project.",
+  ].join(" ");
+  const metadata = pageMetadata({
+    title: `${credit.vendorLabel} Game Asset Packs`,
+    description,
+    pathname: routePath(vendor),
+  });
+
+  return {
+    ...metadata,
+    authors: credit.vendorUrl
+      ? [{ name: credit.vendorLabel, url: credit.vendorUrl }]
+      : [{ name: credit.vendorLabel }],
+    keywords: Array.from(
+      new Set([
+        credit.vendorLabel,
+        "game assets",
+        "3D models",
+        "free game assets",
+        credit.license,
+        ...packs.flatMap((pack) => pack.tags),
+      ]),
+    ),
+    other: {
+      license: credit.licenseUrl ?? credit.license,
+    },
+  };
+}
+
+export default async function CreatorPage({ params }: CreatorPageProps) {
+  const { vendor } = await params;
+  const packs = packsForVendor(vendor);
   if (packs.length === 0) notFound();
 
   const credit = licenseForVendor(vendor);
