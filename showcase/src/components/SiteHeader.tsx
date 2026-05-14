@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import type { MouseEvent, ReactNode } from "react";
+import { NavDrawer } from "@/components/NavDrawer";
 import { navItems, type NavKey } from "@/lib/navigation";
 
 type SiteHeaderProps = {
@@ -92,38 +93,30 @@ export function SiteHeader({ meta, compact = false, active }: SiteHeaderProps) {
                 {item.label}
               </Link>
             ) : (
-              <details
+              <NavDrawer
                 key={item.key}
-                className="nav-drawer"
+                label={item.label}
+                active={current === item.key}
                 open={openKey === item.key}
+                onOpenChange={(isOpen) => {
+                  setOpenKey((currentOpen) =>
+                    isOpen ? item.key : currentOpen === item.key ? null : currentOpen,
+                  );
+                }}
               >
-                <summary
-                  className="nav-trigger"
-                  data-active={current === item.key ? "" : undefined}
-                  onClick={(event) => {
-                    event.preventDefault();
-                    setOpenKey((currentOpen) => (currentOpen === item.key ? null : item.key));
-                  }}
-                  aria-expanded={openKey === item.key}
-                >
-                  <span>{item.label}</span>
-                  <span className="nav-chevron" aria-hidden="true" />
-                </summary>
-                <div className="nav-panel">
-                  {item.items.map((child) => (
-                    <Link
-                      key={child.href}
-                      href={child.href}
-                      onClick={(event) => {
-                        setOpenKey(null);
-                        if (shouldUsePendingActive(event)) setPendingActive(item.key);
-                      }}
-                    >
-                      {child.label}
-                    </Link>
-                  ))}
-                </div>
-              </details>
+                {item.items.map((child) => (
+                  <Link
+                    key={child.href}
+                    href={child.href}
+                    onClick={(event) => {
+                      setOpenKey(null);
+                      if (shouldUsePendingActive(event)) setPendingActive(item.key);
+                    }}
+                  >
+                    {child.label}
+                  </Link>
+                ))}
+              </NavDrawer>
             ),
           )}
         </nav>

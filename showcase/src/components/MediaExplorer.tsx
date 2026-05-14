@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { type CSSProperties, type ReactNode, useEffect, useMemo, useRef, useState } from "react";
 import { LicenseLink } from "@/components/LicenseLink";
+import { NavDrawer } from "@/components/NavDrawer";
 import { InfiniteListSentinel, useInfiniteList } from "@/components/useInfiniteList";
 import type { ArtPack, ArtSample, AudioAnalysis, MusicTrack, SoundCollection, SoundSample, SourceMapping } from "@/lib/media";
 import { artCreators } from "@/lib/media";
@@ -2302,19 +2303,13 @@ export function MediaExplorer({
         </div>
         <nav className="asset-section-nav top-nav" aria-label="Asset type">
           {navGroups.map((group) => (
-            <details key={group.key} className="nav-drawer">
-              <summary className="nav-trigger" data-active={activeAssetGroup === group.key ? "" : undefined}>
-                <span>{group.label}</span>
-                <span className="nav-chevron" aria-hidden="true" />
-              </summary>
-              <div className="nav-panel">
-                {group.items.map((child) => (
-                  <Link key={child.href} href={child.href}>
-                    {child.label}
-                  </Link>
-                ))}
-              </div>
-            </details>
+            <NavDrawer key={group.key} label={group.label} active={activeAssetGroup === group.key}>
+              {group.items.map((child) => (
+                <Link key={child.href} href={child.href}>
+                  {child.label}
+                </Link>
+              ))}
+            </NavDrawer>
           ))}
         </nav>
       </section>
