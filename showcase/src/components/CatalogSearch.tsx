@@ -3,6 +3,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { useMemo, useState } from "react";
+import { InfiniteListSentinel, useInfiniteList } from "@/components/useInfiniteList";
 import { LicenseLink } from "@/components/LicenseLink";
 import { PackGrid } from "@/components/PackGrid";
 import { PackDownloadButton } from "@/components/PackDownloadButton";
@@ -19,6 +20,9 @@ type CatalogSearchProps = {
 };
 
 type ModelMotionFilter = "all" | "animated" | "static";
+type PackMatch = { pack: Pack; modelMatches: number };
+
+const PACK_LIST_PAGE_SIZE = 36;
 
 function modelMatchesMotion(model: Pack["models"][number], motion: ModelMotionFilter): boolean {
   if (motion === "all") return true;
@@ -26,13 +30,21 @@ function modelMatchesMotion(model: Pack["models"][number], motion: ModelMotionFi
   return motion === "animated" ? animated : !animated;
 }
 
-function matchPack(pack: Pack, query: string, motion: ModelMotionFilter): { pack: Pack; modelMatches: number } | null {
-  const eligibleModels = pack.models.filter((model) => modelMatchesMotion(model, motion));
-  if (eligibleModels.length === 0) return null;
-  if (!query && motion === "all") return { pack, modelMatches: 0 };
-  const terms = query.split(/\s+/).filter(Boolean);
+function matchPack(pack: Pack, terms: string[], motion: ModelMotionFilter): PackMatch | null {
+  let eligibleCount = 0;
+  let modelMatches = 0;
+
+  for (const model of pack.models) {
+    if (!modelMatchesMotion(model, motion)) continue;
+    eligibleCount += 1;
+    if (terms.length === 0 || terms.every((term) => model.searchText.includes(term))) {
+      modelMatches += 1;
+    }
+  }
+
+  if (eligibleCount === 0) return null;
+  if (terms.length === 0 && motion === "all") return { pack, modelMatches: 0 };
   const packHit = motion === "all" && terms.every((term) => pack.searchText.includes(term));
-  const modelMatches = eligibleModels.filter((model) => terms.every((term) => model.searchText.includes(term))).length;
   if (!packHit && modelMatches === 0) return null;
   return { pack, modelMatches };
 }
@@ -44,22 +56,54 @@ function slug(value: string): string {
 export function CatalogSearch({ manifest, children, showHeader = true, modelMotion = "all" }: CatalogSearchProps) {
   const [query, setQuery] = useState("");
   const normalizedQuery = query.trim().toLowerCase();
+  const terms = useMemo(() => normalizedQuery.split(/\s+/).filter(Boolean), [normalizedQuery]);
 
-  const byVendor = useMemo(() => {
-    const groups = new Map<string, Array<{ pack: Pack; modelMatches: number }>>();
+  const matches = useMemo(() => {
+    const items: PackMatch[] = [];
     for (const pack of manifest.packs) {
-      const match = matchPack(pack, normalizedQuery, modelMotion);
+      const match = matchPack(pack, terms, modelMotion);
       if (!match) continue;
-      if (!groups.has(pack.vendor)) groups.set(pack.vendor, []);
-      groups.get(pack.vendor)!.push(match);
+      items.push(match);
+    }
+    return items;
+  }, [manifest.packs, modelMotion, terms]);
+
+  const listResetKey = [normalizedQuery, modelMotion].join("|");
+  const infinite = useInfiniteList({
+    total: matches.length,
+    pageSize: PACK_LIST_PAGE_SIZE,
+    resetKey: listResetKey,
+  });
+  const visibleMatches = useMemo(
+    () => matches.slice(0, infinite.visibleCount),
+    [infinite.visibleCount, matches],
+  );
+
+  const visibleByVendor = useMemo(() => {
+    const groups = new Map<string, PackMatch[]>();
+    for (const match of visibleMatches) {
+      const vendor = match.pack.vendor;
+      if (!groups.has(vendor)) groups.set(vendor, []);
+      groups.get(vendor)!.push(match);
     }
     return [...groups.entries()];
-  }, [manifest.packs, modelMotion, normalizedQuery]);
+  }, [visibleMatches]);
+
+  const vendorStats = useMemo(() => {
+    const stats = new Map<string, { modelCount: number; packCount: number }>();
+    for (const { pack } of matches) {
+      const current = stats.get(pack.vendor) ?? { modelCount: 0, packCount: 0 };
+      current.modelCount += pack.count;
+      current.packCount += 1;
+      stats.set(pack.vendor, current);
+    }
+    return stats;
+  }, [matches]);
 
   const totalModels = manifest.packs.reduce((n, pack) => n + pack.count, 0);
-  const visiblePacks = byVendor.reduce((n, [, packs]) => n + packs.length, 0);
-  const matchedModels = byVendor.reduce(
-    (n, [, packs]) => n + packs.reduce((sum, item) => sum + item.modelMatches, 0),
+  const visiblePacks = matches.length;
+  const matchedModels = matches.reduce(
+    (n, item) => n + item.modelMatches,
     0,
   );
 
@@ -101,10 +145,11 @@ export function CatalogSearch({ manifest, children, showHeader = true, modelMoti
 
       {children}
 
-      {byVendor.map(([vendor, packs]) => {
+      {visibleByVendor.map(([vendor, packs]) => {
         const credit = licenseForVendor(vendor);
-        const packCount = packs.length;
-        const modelCount = packs.reduce((sum, item) => sum + item.pack.count, 0);
+        const stats = vendorStats.get(vendor);
+        const packCount = stats?.packCount ?? packs.length;
+        const modelCount = stats?.modelCount ?? packs.reduce((sum, item) => sum + item.pack.count, 0);
 
         return (
           <section className="vendor-section" id={`creator-${slug(vendor)}`} key={vendor}>
@@ -141,6 +186,7 @@ export function CatalogSearch({ manifest, children, showHeader = true, modelMoti
                 previewModelFiles: previewModelFilesFor(pack),
                 modelMatches,
               }))}
+              paginate={false}
               resetKey={`${vendor}:${normalizedQuery}:${modelMotion}`}
               renderCount={({ pack, modelMatches = 0 }) =>
                 (normalizedQuery || modelMotion !== "all") && modelMatches > 0
@@ -151,6 +197,20 @@ export function CatalogSearch({ manifest, children, showHeader = true, modelMoti
           </section>
         );
       })}
+      <InfiniteListSentinel
+        className="pack-grid-sentinel"
+        hasMore={infinite.hasMore}
+        label="Loading collections"
+        onLoadMore={infinite.loadMore}
+        pageSize={PACK_LIST_PAGE_SIZE}
+        remaining={infinite.remaining}
+        sentinelRef={infinite.sentinelRef}
+      />
+      {matches.length === 0 && (
+        <div className="empty-model-results">
+          No pack collections match this search.
+        </div>
+      )}
     </>
   );
 }

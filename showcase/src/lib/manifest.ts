@@ -104,6 +104,29 @@ export function modelDownloadLabel(download: ModelDownload): string {
   return `${formatted} source`;
 }
 
+const QUATERNIUS_DATE_STAMP =
+  /\b(?:jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|jun(?:e)?|jul(?:y)?|aug(?:ust)?|sep(?:t|tember)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?)\.?\s+(?:19|20)\d{2}\b/gi;
+
+export function displayPackTitle(pack: Pick<Pack, "title" | "vendor">): string {
+  if (pack.vendor !== "quaternius") return pack.title;
+
+  return (
+    pack.title
+      .replace(QUATERNIUS_DATE_STAMP, "")
+      .replace(/\b(?:19|20)\d{2}\b/g, "")
+      .replace(/\s{2,}/g, " ")
+      .replace(/\s+([,.:])/g, "$1")
+      .replace(/[-,.:]\s*$/g, "")
+      .trim() || pack.title
+  );
+}
+
+export function displayPackDescription(pack: Pick<Pack, "description" | "title" | "vendor">): string {
+  const title = displayPackTitle(pack);
+  if (title === pack.title) return pack.description;
+  return pack.description.split(pack.title).join(title);
+}
+
 export function downloadsForModel(model: Model): ModelDownload[] {
   const rawDownloads =
     model.downloads && model.downloads.length > 0

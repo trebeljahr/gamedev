@@ -25,6 +25,7 @@ type PackGridProps = {
   credit: VendorLicense;
   items: PackGridItem[];
   pageSize?: number;
+  paginate?: boolean;
   renderCount?: (item: PackGridItem) => ReactNode;
   resetKey: string;
   showActions?: boolean;
@@ -38,6 +39,7 @@ export function PackGrid({
   credit,
   items,
   pageSize = 36,
+  paginate = true,
   renderCount = defaultCountLabel,
   resetKey,
   showActions = true,
@@ -47,7 +49,7 @@ export function PackGrid({
     pageSize,
     resetKey,
   });
-  const visibleItems = items.slice(0, infinite.visibleCount);
+  const visibleItems = paginate ? items.slice(0, infinite.visibleCount) : items;
 
   return (
     <>
@@ -91,15 +93,17 @@ export function PackGrid({
           );
         })}
       </div>
-      <InfiniteListSentinel
-        className="pack-grid-sentinel"
-        hasMore={infinite.hasMore}
-        label="Loading collections"
-        onLoadMore={infinite.loadMore}
-        pageSize={pageSize}
-        remaining={infinite.remaining}
-        sentinelRef={infinite.sentinelRef}
-      />
+      {paginate && (
+        <InfiniteListSentinel
+          className="pack-grid-sentinel"
+          hasMore={infinite.hasMore}
+          label="Loading collections"
+          onLoadMore={infinite.loadMore}
+          pageSize={pageSize}
+          remaining={infinite.remaining}
+          sentinelRef={infinite.sentinelRef}
+        />
+      )}
     </>
   );
 }
