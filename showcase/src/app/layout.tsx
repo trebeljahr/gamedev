@@ -19,25 +19,25 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: SITE_NAME,
+    title: "Free Game Assets Library",
     description: SITE_DESCRIPTION,
     url: "/",
     siteName: SITE_NAME,
     type: "website",
     images: [
       {
-        url: "/favicon.png",
-        width: 512,
-        height: 512,
-        alt: SITE_NAME,
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "GameDev Asset Library preview",
       },
     ],
   },
   twitter: {
-    card: "summary",
-    title: SITE_NAME,
+    card: "summary_large_image",
+    title: "Free Game Assets Library",
     description: SITE_DESCRIPTION,
-    images: ["/favicon.png"],
+    images: ["/twitter-image"],
   },
 };
 

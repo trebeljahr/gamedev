@@ -11,7 +11,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata: Metadata = pageMetadata({
   title: "Free Game Assets Catalog",
   description:
-    "Browse a curated, one-stop catalog of free community-made game assets with previews, source links, and credits.",
+    "Browse a curated catalog of free community-made game assets with 3D previews, sprite samples, source links, license notes, and credits.",
   pathname: "/landing-page",
 });
 

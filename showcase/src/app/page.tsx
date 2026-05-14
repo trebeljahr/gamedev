@@ -1,9 +1,11 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { SiteHeader } from "@/components/SiteHeader";
 import { manifest } from "@/lib/manifest";
 import { catalog, mediaStats, sourceMappings } from "@/lib/media";
 import { CatalogSearch } from "@/components/CatalogSearch";
 import { navGroups } from "@/lib/navigation";
+import { pageMetadata } from "@/lib/seo";
 import {
   LibraryHeroShowreel,
   type LibrarySoundPreview,
@@ -17,6 +19,13 @@ type HomePageProps = {
     model?: string | string[];
   }>;
 };
+
+export const metadata: Metadata = pageMetadata({
+  title: "Free Game Assets Library for Prototypes",
+  description:
+    "Search 7,000+ free game-ready 3D models, pixel art, sounds, music, textures, license notes, and creator credits in one fast browser catalog.",
+  pathname: "/",
+});
 
 const LANDING_ASSET_BASE_URL = (
   process.env.NEXT_PUBLIC_LANDING_ASSETS_BASE_URL ?? "https://assets.gamedev.trebeljahr.com"

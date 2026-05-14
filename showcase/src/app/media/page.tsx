@@ -13,9 +13,9 @@ type MediaPageProps = {
 };
 
 export const metadata: Metadata = pageMetadata({
-  title: "2D, Sound, and Music Assets",
+  title: "2D Sprites, Sound Effects, and Game Music",
   description:
-    "Explore pixel art, sprites, textures, sound effects, and music collections with source and license context for game projects.",
+    "Explore free pixel art, sprite sheets, textures, sound effects, and music collections with source and license context for games.",
   pathname: "/media",
 });
 

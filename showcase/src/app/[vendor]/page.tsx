@@ -28,15 +28,13 @@ export async function generateMetadata({ params }: CreatorPageProps): Promise<Me
 
   const credit = licenseForVendor(vendor);
   const totalModels = packs.reduce((sum, pack) => sum + pack.count, 0);
-  const description = [
-    `${credit.vendorLabel} asset collections: ${packs.length} packs and ${totalModels.toLocaleString("en-US")} 3D models.`,
-    `License: ${credit.license}.`,
-    credit.notes ?? "Check creator source before shipping a project.",
-  ].join(" ");
+  const description = `${credit.vendorLabel} game asset library: ${packs.length} packs and ${totalModels.toLocaleString("en-US")} downloadable 3D models with source links and ${credit.license} license context.`;
   const metadata = pageMetadata({
     title: `${credit.vendorLabel} Game Asset Packs`,
     description,
     pathname: routePath(vendor),
+    imagePathname: routePath(vendor),
+    imageAlt: `${credit.vendorLabel} game asset packs`,
   });
 
   return {

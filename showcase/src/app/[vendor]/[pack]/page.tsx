@@ -24,11 +24,14 @@ export async function generateMetadata({ params }: PackPageProps): Promise<Metad
     source: data.source,
     fallbackUrl: credit.licenseUrl,
   });
-  const description = `${data.description} Includes ${data.count.toLocaleString("en-US")} models. License: ${data.license}.`;
+  const categories = data.categories.slice(0, 3).join(", ");
+  const description = `${data.title} includes ${data.count.toLocaleString("en-US")} game-ready ${categories} models by ${credit.vendorLabel}. Preview, download, and check ${data.license} license notes.`;
   const metadata = pageMetadata({
-    title: `${data.title} 3D Models`,
+    title: `${data.title} 3D Models by ${credit.vendorLabel}`,
     description,
     pathname: routePath(data.vendor, data.pack),
+    imagePathname: routePath(data.vendor, data.pack),
+    imageAlt: `${data.title} 3D model pack`,
   });
 
   return {
