@@ -42,7 +42,8 @@ type SpriteGrid = {
   sequences?: SpriteSequence[];
 };
 type SpriteRect = { x: number; y: number; w: number; h: number };
-type SpriteSequence = { label: string; frames: SpriteRect[]; bounds: SpriteRect };
+type SpriteSequence = { label: string; frames: SpriteRect[]; bounds: SpriteRect; frameBoxes?: SpriteRect[] };
+type SpriteDrawFrame = { source: SpriteRect; box: SpriteRect };
 type ContentIntegral = { width: number; height: number; stride: number; sums: Uint32Array };
 type LoadedSpriteImage = {
   src: string;
@@ -454,15 +455,17 @@ function detectAnimationSequences(imageData: ImageData, bg: ReturnType<typeof sa
 
   for (const [rowIndex, row] of rowSpans.entries()) {
     const frames: SpriteRect[] = [];
+    const frameBoxes: SpriteRect[] = [];
     for (const col of colSpans) {
       const rect = { x: col.start, y: row.start, w: col.end - col.start, h: row.end - row.start };
       if (contentRatioForRect(imageData, rect, bg) < 0.01) continue;
       const trimmed = computeTrimRect(imageData, rect, bg);
       if (trimmed.w * trimmed.h < minFrameArea) continue;
       frames.push(trimmed);
+      frameBoxes.push(rect);
     }
     if (frames.length >= 2) {
-      sequences.push({ label: `row ${rowIndex + 1}`, frames, bounds: rectUnion(frames) });
+      sequences.push({ label: `row ${rowIndex + 1}`, frames, frameBoxes, bounds: rectUnion(frameBoxes) });
     }
   }
 
@@ -589,6 +592,7 @@ function buildRowSequenceGrid(cols: number, rows: number, imageWidth: number, im
     return {
       label: `row ${row + 1}`,
       frames,
+      frameBoxes: frames,
       bounds: { x: 0, y: row * frameHeight, w: imageWidth, h: frameHeight },
     };
   });
@@ -880,23 +884,66 @@ function displaySequenceLabel(sequence: SpriteSequence, index: number): string {
   return sequence.label || `Animation ${index + 1}`;
 }
 
-function drawSpriteFrame(
+function frameBoxForSource(source: SpriteRect, width: number, height: number): SpriteRect {
+  return {
+    x: source.x - Math.round((width - source.w) / 2),
+    y: source.y - Math.round(height - source.h),
+    w: width,
+    h: height,
+  };
+}
+
+function spriteDrawFrames(sources: SpriteRect[], boxes?: SpriteRect[] | null): SpriteDrawFrame[] {
+  if (sources.length === 0) return [];
+  if (boxes?.length === sources.length) {
+    return sources.map((source, index) => ({ source, box: boxes[index] }));
+  }
+
+  const width = Math.max(...sources.map((source) => source.w));
+  const height = Math.max(...sources.map((source) => source.h));
+  return sources.map((source) => ({ source, box: frameBoxForSource(source, width, height) }));
+}
+
+function drawSpriteFrameInStage(
   context: CanvasRenderingContext2D,
   image: HTMLImageElement,
-  source: SpriteRect,
+  frame: SpriteDrawFrame,
+  stageWidth: number,
+  stageHeight: number,
   width: number,
   height: number,
   offsetX = 0,
   offsetY = 0,
+  verticalAlign: "center" | "bottom" = "center",
 ) {
-  const ratio = Math.min(width / source.w, height / source.h);
-  const w = source.w * ratio;
-  const h = source.h * ratio;
+  const ratio = Math.min(width / stageWidth, height / stageHeight);
+  const stageW = stageWidth * ratio;
+  const stageH = stageHeight * ratio;
+  const stageX = offsetX + (width - stageW) / 2;
+  const stageY = offsetY + (height - stageH) / 2;
+  const boxX = stageX + ((stageWidth - frame.box.w) / 2) * ratio;
+  const boxY =
+    stageY +
+    (verticalAlign === "bottom" ? stageHeight - frame.box.h : (stageHeight - frame.box.h) / 2) * ratio;
+  const w = frame.source.w * ratio;
+  const h = frame.source.h * ratio;
+  const x = boxX + (frame.source.x - frame.box.x) * ratio;
+  const y = boxY + (frame.source.y - frame.box.y) * ratio;
   context.imageSmoothingEnabled = false;
-  context.drawImage(image, source.x, source.y, source.w, source.h, offsetX + (width - w) / 2, offsetY + (height - h) / 2, w, h);
+  context.drawImage(image, frame.source.x, frame.source.y, frame.source.w, frame.source.h, x, y, w, h);
 }
 
-function SequencePreviewCanvas({ image, frames, label }: { image: HTMLImageElement | null; frames: SpriteRect[]; label: string }) {
+function SequencePreviewCanvas({
+  image,
+  frames,
+  frameBoxes,
+  label,
+}: {
+  image: HTMLImageElement | null;
+  frames: SpriteRect[];
+  frameBoxes?: SpriteRect[];
+  label: string;
+}) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   useEffect(() => {
@@ -906,6 +953,9 @@ function SequencePreviewCanvas({ image, frames, label }: { image: HTMLImageEleme
     const previewCanvas = canvas;
     const previewContext = context;
     const previewImage = image;
+    const drawFrames = spriteDrawFrames(frames, frameBoxes);
+    const stageWidth = Math.max(1, ...drawFrames.map((frame) => frame.box.w));
+    const stageHeight = Math.max(1, ...drawFrames.map((frame) => frame.box.h));
 
     let raf = 0;
     let lastFrame = 0;
@@ -917,13 +967,24 @@ function SequencePreviewCanvas({ image, frames, label }: { image: HTMLImageEleme
         frameIndex = (frameIndex + 1) % frames.length;
         lastFrame = time;
       }
-      drawSpriteFrame(previewContext, previewImage, frames[frameIndex], previewCanvas.width - 10, previewCanvas.height - 10, 5, 5);
+      drawSpriteFrameInStage(
+        previewContext,
+        previewImage,
+        drawFrames[frameIndex],
+        stageWidth,
+        stageHeight,
+        previewCanvas.width - 10,
+        previewCanvas.height - 10,
+        5,
+        5,
+        "bottom",
+      );
       raf = requestAnimationFrame(tick);
     }
 
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [frames, image]);
+  }, [frameBoxes, frames, image]);
 
   return <canvas ref={canvasRef} width={92} height={58} aria-label={label} />;
 }
@@ -1065,6 +1126,7 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
   const [autoDetect, setAutoDetect] = useState(true);
   const [detectedGrid, setDetectedGrid] = useState<SpriteGrid | null>(null);
   const [layoutFrames, setLayoutFrames] = useState<SpriteRect[] | null>(null);
+  const [layoutFrameBoxes, setLayoutFrameBoxes] = useState<SpriteRect[] | null>(null);
   const [sequenceIndex, setSequenceIndex] = useState(0);
   const [scale, setScale] = useState(3);
   const [flip, setFlip] = useState(false);
@@ -1081,6 +1143,7 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
     setAutoDetect(true);
     setDetectedGrid(null);
     setLayoutFrames(null);
+    setLayoutFrameBoxes(null);
     setSequenceIndex(0);
     setLoadedImage(null);
     setLoadFailed(false);
@@ -1174,10 +1237,12 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
       setColumns(selectedFrames?.length ?? resolvedGrid.cols);
       setRows(selectedFrames ? 1 : resolvedGrid.rows);
       setLayoutFrames(selectedFrames);
+      setLayoutFrameBoxes(selectedSequence?.frameBoxes ?? null);
     } else if (autoDetect) {
       setColumns(1);
       setRows(1);
       setLayoutFrames(null);
+      setLayoutFrameBoxes(null);
       setPlaying(false);
     }
   }, [autoDetect, canAnimateSample, loadedImage?.bgSample, loadedImage?.imageData, resolvedGrid, sequenceIndex]);
@@ -1196,6 +1261,7 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
     const imageData = loadedImage?.imageData ?? null;
     const bgSample = loadedImage?.bgSample ?? null;
     const frames = autoDetect ? layoutFrames : null;
+    const frameBoxes = autoDetect ? layoutFrameBoxes : null;
     const totalFrames = Math.max(1, frames?.length ?? columns * rows);
     const isSpriteSheet = Boolean(sample?.animated && totalFrames > 1);
     const imageWidth = image ? image.naturalWidth || image.width : 0;
@@ -1210,19 +1276,24 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
                 : { x: 0, y: 0, w: imageWidth, h: imageHeight },
           )
         : [];
-    const drawSources =
-      imageData && bgSample
-        ? frameSources.map((source) => {
-            const sourcePadding =
-              isSpriteSheet && frames
-                ? Math.min(16, Math.max(2, Math.ceil(Math.max(source.w, source.h) * 0.04)))
-                : 0;
-            const trimSource = expandRectWithinImage(source, imageData.width, imageData.height, sourcePadding);
-            return computeTrimRect(imageData, trimSource, bgSample, isSpriteSheet ? 2 : 0);
-          })
-        : frameSources;
-    const stageWidth = Math.max(1, ...drawSources.map((source) => source.w));
-    const stageHeight = Math.max(1, ...drawSources.map((source) => source.h));
+    const sourceBoxes =
+      image && imageWidth > 0 && imageHeight > 0
+        ? frameSources.map((source, index) =>
+            isSpriteSheet && frameBoxes?.length
+              ? clampRectToImage(frameBoxes[index % frameBoxes.length], imageWidth, imageHeight)
+              : source,
+          )
+        : [];
+    const drawFrames = spriteDrawFrames(
+      frameSources.map((source, index) =>
+        imageData && bgSample && isSpriteSheet
+          ? computeTrimRect(imageData, sourceBoxes[index] ?? source, bgSample)
+          : source,
+      ),
+      sourceBoxes,
+    );
+    const stageWidth = Math.max(1, ...drawFrames.map((source) => source.box.w));
+    const stageHeight = Math.max(1, ...drawFrames.map((source) => source.box.h));
 
     function drawPlaceholder() {
       context.fillStyle = "rgba(255,255,255,0.07)";
@@ -1245,9 +1316,9 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
       }
       const currentFrame = Math.min(frameRef.current, totalFrames - 1);
 
-      if (image && !loadFailed && drawSources.length > 0) {
+      if (image && !loadFailed && drawFrames.length > 0) {
         context.imageSmoothingEnabled = false;
-        const drawSource = drawSources[currentFrame % drawSources.length];
+        const drawFrame = drawFrames[currentFrame % drawFrames.length];
         const ratio = Math.min(
           scale,
           (drawingCanvas.width * 0.82) / stageWidth,
@@ -1255,19 +1326,21 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
         );
         const stageW = stageWidth * ratio;
         const stageH = stageHeight * ratio;
-        const w = drawSource.w * ratio;
-        const h = drawSource.h * ratio;
+        const w = drawFrame.source.w * ratio;
+        const h = drawFrame.source.h * ratio;
         const stageX = (drawingCanvas.width - stageW) / 2;
         const stageY = (drawingCanvas.height - stageH) / 2 - 8;
-        const x = stageX + (stageW - w) / 2;
-        const y = stageY + stageH - h;
+        const boxX = stageX + ((stageWidth - drawFrame.box.w) / 2) * ratio;
+        const boxY = stageY + (stageHeight - drawFrame.box.h) * ratio;
+        const x = boxX + (drawFrame.source.x - drawFrame.box.x) * ratio;
+        const y = boxY + (drawFrame.source.y - drawFrame.box.y) * ratio;
         context.save();
         if (flip) {
           context.translate(drawingCanvas.width, 0);
           context.scale(-1, 1);
-          context.drawImage(image, drawSource.x, drawSource.y, drawSource.w, drawSource.h, drawingCanvas.width - x - w, y, w, h);
+          context.drawImage(image, drawFrame.source.x, drawFrame.source.y, drawFrame.source.w, drawFrame.source.h, drawingCanvas.width - x - w, y, w, h);
         } else {
-          context.drawImage(image, drawSource.x, drawSource.y, drawSource.w, drawSource.h, x, y, w, h);
+          context.drawImage(image, drawFrame.source.x, drawFrame.source.y, drawFrame.source.w, drawFrame.source.h, x, y, w, h);
         }
         context.restore();
       } else {
@@ -1284,7 +1357,7 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
 
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [autoDetect, background, columns, flip, layoutFrames, loadFailed, loadedImage, pack.title, playing, rows, sample?.animated, sample?.label, scale, speed]);
+  }, [autoDetect, background, columns, flip, layoutFrameBoxes, layoutFrames, loadFailed, loadedImage, pack.title, playing, rows, sample?.animated, sample?.label, scale, speed]);
 
   const detectionLabel = detectedGrid
     ? detectedGrid.mode === "atlas"
@@ -1311,6 +1384,7 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
       setColumns(nextSequence.frames.length);
       setRows(1);
       setLayoutFrames(nextSequence.frames);
+      setLayoutFrameBoxes(nextSequence.frameBoxes ?? null);
     }
     frameRef.current = 0;
     setFrame(0);
@@ -1321,7 +1395,9 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
     const image = loadedImage?.image ?? null;
     if (!image) return;
     const explicitFrames = autoDetect ? layoutFrames : null;
+    const explicitFrameBoxes = autoDetect ? layoutFrameBoxes : null;
     const frames =
+      explicitFrameBoxes ??
       explicitFrames ??
       Array.from({ length: columns * rows }, (_, index) => {
         const imageWidth = image.naturalWidth || image.width;
@@ -1360,7 +1436,12 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
                     aria-pressed={active}
                     onClick={() => selectSequence(index)}
                   >
-                    <SequencePreviewCanvas image={loadedImage?.image ?? null} frames={sequence.frames} label={label} />
+                    <SequencePreviewCanvas
+                      image={loadedImage?.image ?? null}
+                      frames={sequence.frames}
+                      frameBoxes={sequence.frameBoxes}
+                      label={label}
+                    />
                     <span>
                       <strong>{label}</strong>
                       <small>{sequence.frames.length} frames</small>

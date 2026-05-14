@@ -2126,12 +2126,14 @@ select:focus-visible {
 .art-runner-stage {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(220px, 300px);
-  align-items: stretch;
+  align-items: start;
   min-width: 0;
 }
 .art-runner-stage > canvas {
+  align-self: start;
   display: block;
   width: 100%;
+  height: auto;
   aspect-ratio: 12 / 7;
   background: #15171c;
   image-rendering: pixelated;
