@@ -11,6 +11,7 @@ import {
   Suspense,
   useCallback,
   useEffect,
+  useLayoutEffect,
   useMemo,
   useRef,
   useState,
@@ -32,7 +33,7 @@ import {
   type Slot,
   type WorldBounds,
 } from "@/lib/layout";
-import { assetUrl, type Pack } from "@/lib/manifest";
+import { assetUrl, displayPackTitle, type Pack } from "@/lib/manifest";
 import { downloadPackZip } from "@/lib/download-pack-zip";
 import { licenseForVendor } from "@/lib/license";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
@@ -116,6 +117,7 @@ type ModelGridSceneProps = {
   backLabel: string;
   theme: SceneTheme;
   start?: [number, number, number];
+  lookAt?: [number, number, number];
   loadAll?: boolean;
   showHud?: boolean;
   showPackLabels?: boolean;
@@ -123,6 +125,11 @@ type ModelGridSceneProps = {
   allowArrowWalk?: boolean;
   selectedIndex?: number | null;
   onSelectedIndexChange?: (index: number) => void;
+};
+
+type CameraPose = {
+  position: [number, number, number];
+  lookAt: [number, number, number];
 };
 
 function startForBounds(bounds: WorldBounds): [number, number, number] {
@@ -134,6 +141,37 @@ function startForBounds(bounds: WorldBounds): [number, number, number] {
   ];
 }
 
+function walkthroughCameraForBounds(bounds: WorldBounds): CameraPose {
+  const position = startForBounds(bounds);
+  return {
+    position,
+    lookAt: [
+      position[0],
+      WORLD_HEIGHT + 0.25,
+      Math.min(Math.max(bounds.max[2] * 0.12, 8), 28),
+    ],
+  };
+}
+
+function packOverviewCameraForBounds(bounds: WorldBounds): CameraPose {
+  const [width, _height, depth] = bounds.max;
+  const longest = Math.max(width, depth, 1);
+  const centerX = width / 2;
+  const centerZ = depth / 2;
+
+  return {
+    position: [
+      centerX,
+      Math.min(
+        Math.max(longest * 0.28 + WORLD_HEIGHT, WORLD_HEIGHT + 4),
+        WORLD_HEIGHT + 16,
+      ),
+      depth + Math.min(Math.max(depth * 0.72 + width * 0.08, 7), 30),
+    ],
+    lookAt: [centerX, 1.25, centerZ],
+  };
+}
+
 export function AllModelsScene({
   packId,
 }: {
@@ -143,9 +181,15 @@ export function AllModelsScene({
     () => (packId ? layoutForPackId(packId) ?? allModelsLayout : allModelsLayout),
     [packId],
   );
-  const start = useMemo(() => startForBounds(sceneLayout.bounds), [sceneLayout]);
   const isPackScene = sceneLayout.packs.length === 1 && !!packId;
-  const title = isPackScene ? sceneLayout.packs[0].pack.title : "All models";
+  const cameraPose = useMemo(
+    () =>
+      isPackScene
+        ? packOverviewCameraForBounds(sceneLayout.bounds)
+        : walkthroughCameraForBounds(sceneLayout.bounds),
+    [isPackScene, sceneLayout],
+  );
+  const title = isPackScene ? displayPackTitle(sceneLayout.packs[0].pack) : "All models";
   const backHref = isPackScene
     ? `/${sceneLayout.packs[0].pack.vendor}/${sceneLayout.packs[0].pack.pack}`
     : "/#3d-packs";
@@ -160,7 +204,8 @@ export function AllModelsScene({
       backHref={backHref}
       backLabel={backLabel}
       theme={isPackScene ? PACK_STUDIO_THEME : ARCHIVE_THEME}
-      start={start}
+      start={cameraPose.position}
+      lookAt={cameraPose.lookAt}
       loadAll={isPackScene}
       showHud
       showPackLabels={!isPackScene}
@@ -179,17 +224,18 @@ export function PackModelsScene({
   onSelectedIndexChange?: (index: number) => void;
 }) {
   const layout = useMemo(() => layoutPackModels(pack), [pack]);
-  const start = useMemo(() => startForBounds(layout.bounds), [layout]);
+  const cameraPose = useMemo(() => packOverviewCameraForBounds(layout.bounds), [layout]);
   return (
     <ModelGridScene
       slots={layout.slots}
       layouts={[layout.packLayout]}
       bounds={layout.bounds}
-      title={pack.title}
+      title={displayPackTitle(pack)}
       backHref="/#3d-packs"
       backLabel="back to packs"
       theme={PACK_STUDIO_THEME}
-      start={start}
+      start={cameraPose.position}
+      lookAt={cameraPose.lookAt}
       loadAll
       showHud={false}
       showPackLabels={false}
@@ -210,6 +256,7 @@ function ModelGridScene({
   backLabel,
   theme,
   start = [6, WORLD_HEIGHT + 1.5, -4],
+  lookAt,
   loadAll = false,
   showHud = false,
   showPackLabels = false,
@@ -278,6 +325,7 @@ function ModelGridScene({
           shadow-mapSize-height={1024}
         />
         <hemisphereLight args={theme.hemisphere} />
+        <InitialCameraView position={start} lookAt={lookAt} />
         <Walker allowArrowKeys={allowArrowWalk} />
         <Selector
           onSelect={onSelect}
@@ -330,6 +378,36 @@ function ModelGridScene({
       )}
     </div>
   );
+}
+
+function InitialCameraView({
+  position,
+  lookAt,
+}: {
+  position: [number, number, number];
+  lookAt?: [number, number, number];
+}) {
+  const { camera } = useThree();
+  const syncFrames = useRef(0);
+
+  const syncCamera = useCallback(() => {
+    camera.position.set(...position);
+    if (lookAt) camera.lookAt(...lookAt);
+    camera.updateMatrixWorld();
+  }, [camera, position, lookAt]);
+
+  useLayoutEffect(() => {
+    syncFrames.current = 2;
+    syncCamera();
+  }, [syncCamera]);
+
+  useFrame(() => {
+    if (syncFrames.current <= 0) return;
+    syncFrames.current -= 1;
+    syncCamera();
+  });
+
+  return null;
 }
 
 /* Camera walker — WASD + Space (up) / C (down), Shift held = sprint.
@@ -748,7 +826,7 @@ function PackLabels({ layouts }: { layouts: PackLayout[] }) {
                 outlineWidth={0.02}
                 outlineColor="#0a0a10"
               >
-                {`${pl.pack.vendor} · ${pl.pack.label} (${pl.pack.count})`}
+                {`${pl.pack.vendor} · ${displayPackTitle(pl.pack)} (${pl.pack.count})`}
               </Text>
               <group
                 position={[0, -0.5, 0]}
@@ -1011,7 +1089,7 @@ function ModelPanel({
               letterSpacing: 0.05,
             }}
           >
-            {slot.pack.vendor} · {slot.pack.label}
+            {slot.pack.vendor} · {displayPackTitle(slot.pack)}
           </div>
           <div
             style={{
