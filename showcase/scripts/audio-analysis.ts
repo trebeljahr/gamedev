@@ -5,8 +5,8 @@ import { promisify } from "node:util";
 
 const execFileAsync = promisify(execFile);
 
-export const AUDIO_ANALYSIS_SCHEMA = "gamedev.audio-analysis.v1";
-export const DEFAULT_AUDIO_BUCKET_COUNT = 64;
+export const AUDIO_ANALYSIS_SCHEMA = "gamedev.audio-analysis.v2";
+export const DEFAULT_AUDIO_BUCKET_COUNT = 192;
 export const DEFAULT_AUDIO_SAMPLE_RATE = 1000;
 
 export type AudioAnalysisItem = {
@@ -52,10 +52,10 @@ function round(value: number, digits = 4): number {
 
 function normalizeLoudness(values: number[]): number[] {
   const sorted = values.filter((value) => Number.isFinite(value)).sort((a, b) => a - b);
-  const reference = sorted[Math.max(0, Math.floor(sorted.length * 0.95) - 1)] || sorted.at(-1) || 1;
+  const reference = sorted[Math.max(0, Math.floor(sorted.length * 0.98) - 1)] || sorted.at(-1) || 1;
   return values.map((value) => {
     const normalized = clamp(value / reference, 0, 1);
-    return round(clamp(0.1 + Math.pow(normalized, 0.56) * 0.9, 0.1, 1));
+    return round(clamp(0.018 + Math.pow(normalized, 0.62) * 0.982, 0.018, 1));
   });
 }
 
@@ -84,7 +84,7 @@ function loudnessFromPcm(buffer: Buffer, bucketCount: number): { loudness: numbe
     totalSquares += sumSquares;
     totalPeak = Math.max(totalPeak, peak);
     const rms = Math.sqrt(sumSquares / Math.max(1, end - start));
-    raw[bucket] = rms * 0.78 + peak * 0.22;
+    raw[bucket] = rms * 0.35 + peak * 0.65;
   }
 
   return {

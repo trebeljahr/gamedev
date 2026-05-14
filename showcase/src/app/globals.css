@@ -2147,72 +2147,96 @@ select:focus-visible {
 }
 .audio-strip {
   display: grid;
-  gap: 7px;
+  gap: 0;
 }
-.audio-bars {
-  display: grid;
-  grid-template-columns: repeat(var(--bar-count, 48), minmax(1px, 1fr));
-  gap: clamp(1px, 0.45vw, 3px);
-  height: 28px;
-  align-items: end;
+.audio-waveform-shell {
+  position: relative;
+  height: 34px;
   min-width: 0;
+  cursor: pointer;
 }
-.audio-bars span {
-  height: var(--bar-height);
-  min-height: 3px;
-  border-radius: 999px;
-  background: rgba(255,255,255,0.15);
-  opacity: calc(0.56 + var(--bar-level, 0.4) * 0.26);
-  transform-origin: bottom;
-  transition: background 0.16s ease, box-shadow 0.16s ease, opacity 0.16s ease, transform 0.16s ease;
+.audio-waveform-shell::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  left: var(--progress, 0%);
+  width: 1px;
+  background: rgba(255,255,255,0.64);
+  opacity: 0;
+  transform: translateX(-0.5px);
+  transition: opacity 0.16s ease;
+  pointer-events: none;
 }
-.audio-player.compact .audio-bars {
-  height: 23px;
+.audio-player.playing .audio-waveform-shell::after {
+  opacity: 0.85;
 }
-.audio-bars span.played {
-  background: rgba(255,216,77,0.62);
-  opacity: 0.96;
+.audio-waveform-shell:focus-within {
+  outline: 2px solid rgba(255,216,77,0.44);
+  outline-offset: 4px;
+  border-radius: 6px;
 }
-.audio-player.playing .audio-bars span.current {
-  animation: audioPulse 0.42s ease-in-out infinite alternate;
-  background: var(--accent);
-  box-shadow: 0 0 14px rgba(255,216,77,0.3);
-  opacity: 1;
+.audio-waveform {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.audio-waveform-midline {
+  stroke: rgba(255,255,255,0.18);
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+}
+.audio-waveform-path {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: fill 0.16s ease, opacity 0.16s ease;
+}
+.audio-waveform-base {
+  fill: rgba(238,241,244,0.28);
+}
+.audio-waveform-played {
+  fill: rgba(255,216,77,0.78);
+}
+.audio-player.playing .audio-waveform-played {
+  fill: var(--accent);
+}
+.audio-player.compact .audio-waveform-shell {
+  height: 28px;
 }
 .audio-seeker {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  height: 6px;
+  height: 100%;
   margin: 0;
   appearance: none;
   cursor: pointer;
   accent-color: var(--accent);
-  border-radius: 999px;
-  background: linear-gradient(90deg, var(--accent) 0 var(--progress), rgba(255,255,255,0.12) var(--progress) 100%);
+  opacity: 0;
 }
 .audio-seeker:disabled {
   cursor: not-allowed;
-  opacity: 0.45;
+}
+.audio-seeker::-webkit-slider-runnable-track {
+  height: 100%;
+  background: transparent;
+}
+.audio-seeker::-moz-range-track {
+  height: 100%;
+  background: transparent;
 }
 .audio-seeker::-webkit-slider-thumb {
-  width: 14px;
-  height: 14px;
+  width: 1px;
+  height: 34px;
   appearance: none;
-  border: 2px solid #11100a;
-  border-radius: 999px;
-  background: var(--accent);
-  box-shadow: 0 0 0 3px rgba(255,216,77,0.16);
+  background: transparent;
 }
 .audio-seeker::-moz-range-thumb {
-  width: 12px;
-  height: 12px;
-  border: 2px solid #11100a;
-  border-radius: 999px;
-  background: var(--accent);
-  box-shadow: 0 0 0 3px rgba(255,216,77,0.16);
-}
-@keyframes audioPulse {
-  from { transform: scaleY(0.74); }
-  to { transform: scaleY(1.08); }
+  width: 1px;
+  height: 34px;
+  border: 0;
+  background: transparent;
 }
 .sound-controls,
 .runner-controls {

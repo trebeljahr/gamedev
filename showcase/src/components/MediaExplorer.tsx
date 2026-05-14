@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { type CSSProperties, type ReactNode, useEffect, useMemo, useRef, useState } from "react";
+import { type CSSProperties, type ReactNode, useEffect, useId, useMemo, useRef, useState } from "react";
 import { LicenseLink } from "@/components/LicenseLink";
 import { NavDrawer } from "@/components/NavDrawer";
 import { InfiniteListSentinel, useInfiniteList } from "@/components/useInfiniteList";
@@ -115,33 +115,48 @@ function hashString(value: string): number {
 function fallbackLoudnessEnvelope(seed: string, bucketCount: number): number[] {
   let noiseSeed = hashString(seed || "audio");
   const phase = (noiseSeed % 360) * (Math.PI / 180);
-  const phraseCount = 2 + (noiseSeed % 4);
-  const beatCount = 8 + ((noiseSeed >>> 5) % 9);
+  const phraseCount = 2 + (noiseSeed % 5);
+  const beatCount = 14 + ((noiseSeed >>> 5) % 18);
+  const burstCount = 3 + ((noiseSeed >>> 9) % 5);
 
   function nextNoise() {
     noiseSeed = Math.imul(noiseSeed, 1664525) + 1013904223;
     return ((noiseSeed >>> 0) / 0xffffffff) * 2 - 1;
   }
 
+  const bursts = Array.from({ length: burstCount }, (_, index) => {
+    const center = (index + 0.45 + Math.abs(nextNoise()) * 0.28) / burstCount;
+    return {
+      center: clamp(center, 0.05, 0.95),
+      width: 0.025 + Math.abs(nextNoise()) * 0.12,
+      strength: 0.34 + Math.abs(nextNoise()) * 0.64,
+    };
+  });
+
   return Array.from({ length: bucketCount }, (_, index) => {
     const position = bucketCount <= 1 ? 0 : index / (bucketCount - 1);
     const arc = Math.sin(Math.PI * position);
     const phrase = 0.5 + Math.sin(position * Math.PI * 2 * phraseCount + phase) * 0.5;
-    const beat = 0.5 + Math.sin(position * Math.PI * 2 * beatCount + phase * 0.37) * 0.5;
-    const level = 0.12 + arc * 0.24 + phrase * 0.32 + beat * 0.16 + nextNoise() * 0.09;
-    return clamp(level, 0.1, 0.96);
+    const transient = Math.max(0, Math.sin(position * Math.PI * 2 * beatCount + phase * 0.37));
+    const micro = Math.abs(nextNoise()) * 0.72 + Math.abs(nextNoise()) * 0.28;
+    const burstEnergy = bursts.reduce((sum, burst) => {
+      const distance = (position - burst.center) / burst.width;
+      return sum + Math.exp(-distance * distance) * burst.strength;
+    }, 0);
+    const level = 0.018 + arc * 0.035 + burstEnergy * (0.24 + micro * 0.5) + phrase * arc * 0.05 + Math.pow(transient, 8) * 0.22;
+    return clamp(level, 0.018, 0.98);
   });
 }
 
 function resampleLoudnessEnvelope(values: number[], bucketCount: number): number[] {
-  if (values.length === bucketCount) return values.map((value) => clamp(value, 0.1, 1));
+  if (values.length === bucketCount) return values.map((value) => clamp(value, 0.018, 1));
   if (values.length === 0) return [];
   return Array.from({ length: bucketCount }, (_, index) => {
     const position = bucketCount <= 1 ? 0 : (index / (bucketCount - 1)) * (values.length - 1);
     const left = Math.floor(position);
     const right = Math.min(values.length - 1, left + 1);
     const mix = position - left;
-    return clamp(values[left] * (1 - mix) + values[right] * mix, 0.1, 1);
+    return clamp(values[left] * (1 - mix) + values[right] * mix, 0.018, 1);
   });
 }
 
@@ -150,6 +165,25 @@ function useLoudnessEnvelope(seed: string, bucketCount: number, audio?: AudioAna
     if (audio?.loudness?.length) return resampleLoudnessEnvelope(audio.loudness, bucketCount);
     return fallbackLoudnessEnvelope(seed, bucketCount);
   }, [audio, bucketCount, seed]);
+}
+
+function waveformPath(values: number[]): string {
+  if (values.length === 0) return "";
+  const width = 1000;
+  const center = 50;
+  const maxAmplitude = 46;
+  const points = values.map((level, index) => {
+    const x = values.length <= 1 ? 0 : (index / (values.length - 1)) * width;
+    const amplitude = 1.4 + clamp(level, 0, 1) * maxAmplitude;
+    return {
+      x: Number(x.toFixed(2)),
+      top: Number((center - amplitude).toFixed(2)),
+      bottom: Number((center + amplitude).toFixed(2)),
+    };
+  });
+  const top = points.map((point, index) => `${index === 0 ? "M" : "L"}${point.x} ${point.top}`).join(" ");
+  const bottom = [...points].reverse().map((point) => `L${point.x} ${point.bottom}`).join(" ");
+  return `${top} ${bottom} Z`;
 }
 
 function licenseBucket(license: string): string {
@@ -2402,18 +2436,20 @@ function AudioPlayer({
   audio?: AudioAnalysis;
 }) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const waveformClipId = `audio-waveform-${useId().replace(/:/g, "")}`;
   const [playing, setPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
-  const barCount = compact ? 48 : 56;
-  const loudnessEnvelope = useLoudnessEnvelope(`${src ?? ""}|${title}`, barCount, audio);
-  const progress = duration > 0 ? (currentTime / duration) * 100 : 0;
+  const waveBucketCount = compact ? 160 : 224;
+  const loudnessEnvelope = useLoudnessEnvelope(`${src ?? ""}|${title}`, waveBucketCount, audio);
+  const waveform = useMemo(() => waveformPath(loudnessEnvelope), [loudnessEnvelope]);
+  const progress = duration > 0 ? clamp((currentTime / duration) * 100, 0, 100) : 0;
   const progressStyle = { "--progress": `${progress}%` } as CSSProperties;
-  const activeBar =
-    duration > 0 && currentTime > 0 && loudnessEnvelope.length > 0
-      ? Math.min(loudnessEnvelope.length - 1, Math.floor((currentTime / duration) * loudnessEnvelope.length))
-      : -1;
-  const barsStyle = { "--bar-count": `${loudnessEnvelope.length}` } as CSSProperties;
+  const waveformClipWidth = (progress / 100) * 1000;
+
+  function setMediaDuration(value: number) {
+    setDuration(Number.isFinite(value) && value > 0 ? value : 0);
+  }
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -2436,6 +2472,24 @@ function AudioPlayer({
     const playPromise = audio.play();
     void playPromise?.catch(() => setPlaying(false));
   }, [playSignal, src]);
+
+  useEffect(() => {
+    if (!playing) return;
+    let raf = 0;
+    const tick = () => {
+      const audio = audioRef.current;
+      if (!audio || audio.paused || audio.ended) return;
+      const target = audio.currentTime || 0;
+      setCurrentTime((previous) => {
+        if (!Number.isFinite(previous) || Math.abs(target - previous) > 0.35) return target;
+        const eased = previous + (target - previous) * 0.45;
+        return Math.abs(eased - target) < 0.004 ? target : eased;
+      });
+      raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [playing]);
 
   function togglePlay() {
     const audio = audioRef.current;
@@ -2460,15 +2514,23 @@ function AudioPlayer({
         ref={audioRef}
         preload="none"
         src={src}
-        onDurationChange={(event) => setDuration(event.currentTarget.duration || 0)}
-        onLoadedMetadata={(event) => setDuration(event.currentTarget.duration || 0)}
-        onPlay={() => setPlaying(true)}
-        onPause={() => setPlaying(false)}
+        onDurationChange={(event) => setMediaDuration(event.currentTarget.duration)}
+        onLoadedMetadata={(event) => setMediaDuration(event.currentTarget.duration)}
+        onPlay={(event) => {
+          setCurrentTime(event.currentTarget.currentTime || 0);
+          setPlaying(true);
+        }}
+        onPause={(event) => {
+          setCurrentTime(event.currentTarget.currentTime || 0);
+          setPlaying(false);
+        }}
         onEnded={() => {
           setPlaying(false);
           setCurrentTime(0);
         }}
-        onTimeUpdate={(event) => setCurrentTime(event.currentTarget.currentTime)}
+        onTimeUpdate={(event) => {
+          if (!playing) setCurrentTime(event.currentTarget.currentTime || 0);
+        }}
       />
       <button className="transport-button" type="button" onClick={togglePlay} disabled={!src} aria-label={playing ? "Pause audio" : "Play audio"}>
         <span className={playing ? "pause-glyph" : "play-glyph"} aria-hidden="true" />
@@ -2485,37 +2547,29 @@ function AudioPlayer({
           </div>
         </div>
         <div className="audio-strip">
-          <div className="audio-bars" style={barsStyle} aria-hidden="true">
-            {loudnessEnvelope.map((level, index) => {
-              const played = activeBar >= 0 && index <= activeBar;
-              const current = playing && index === activeBar;
-              return (
-                <span
-                  className={`${played ? "played" : ""} ${current ? "current" : ""}`.trim() || undefined}
-                  key={index}
-                  style={
-                    {
-                      "--bar-height": `${Math.round(level * 100)}%`,
-                      "--bar-index": `${index}`,
-                      "--bar-level": level.toFixed(4),
-                    } as CSSProperties
-                  }
-                />
-              );
-            })}
+          <div className="audio-waveform-shell" style={progressStyle}>
+            <svg className="audio-waveform" viewBox="0 0 1000 100" preserveAspectRatio="none" aria-hidden="true">
+              <defs>
+                <clipPath id={waveformClipId}>
+                  <rect x="0" y="0" width={waveformClipWidth} height="100" />
+                </clipPath>
+              </defs>
+              <line className="audio-waveform-midline" x1="0" y1="50" x2="1000" y2="50" />
+              <path className="audio-waveform-path audio-waveform-base" d={waveform} />
+              <path className="audio-waveform-path audio-waveform-played" clipPath={`url(#${waveformClipId})`} d={waveform} />
+            </svg>
+            <input
+              aria-label={`Seek ${title}`}
+              className="audio-seeker"
+              type="range"
+              min="0"
+              max={duration || 0}
+              step="0.01"
+              value={duration ? currentTime : 0}
+              onChange={(event) => seek(Number(event.target.value))}
+              disabled={!src || duration <= 0}
+            />
           </div>
-          <input
-            aria-label={`Seek ${title}`}
-            className="audio-seeker"
-            type="range"
-            min="0"
-            max={duration || 0}
-            step="0.01"
-            value={duration ? currentTime : 0}
-            style={progressStyle}
-            onChange={(event) => seek(Number(event.target.value))}
-            disabled={!src || duration <= 0}
-          />
         </div>
       </div>
     </div>
