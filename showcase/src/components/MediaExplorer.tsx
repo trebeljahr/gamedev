@@ -387,6 +387,154 @@ function isEmptyFrameRect(integral: ContentIntegral, source: SpriteRect): boolea
   return contentPixelsInRect(integral, source) < minPixels;
 }
 
+function cellSizeCandidates(length: number): number[] {
+  const preferred = [16, 24, 32, 48, 64, 80, 96, 128, 192, 256];
+  const sizes = new Set<number>();
+  for (const size of preferred) {
+    if (length % size === 0) sizes.add(size);
+  }
+  for (let divisions = 2; divisions <= 32; divisions++) {
+    if (length % divisions === 0) sizes.add(length / divisions);
+  }
+  return [...sizes].filter((size) => size >= 8 && size <= length / 2).sort((a, b) => a - b);
+}
+
+function fitRectToCell(
+  rect: SpriteRect,
+  axis: "x" | "y",
+  cellSize: number,
+  imageSize: number,
+): { slot: number; error: number } | null {
+  const start = axis === "x" ? rect.x : rect.y;
+  const size = axis === "x" ? rect.w : rect.h;
+  const slots = imageSize / cellSize;
+  if (!Number.isInteger(slots) || slots < 2 || size > cellSize * 0.95) return null;
+
+  const center = start + size / 2;
+  const slot = Math.max(0, Math.min(slots - 1, Math.floor(center / cellSize)));
+  const slotStart = slot * cellSize;
+  const slotEnd = slotStart + cellSize;
+  const outside = Math.max(0, slotStart - start) + Math.max(0, start + size - slotEnd);
+  const centerError = Math.abs(center - (slotStart + cellSize / 2)) / cellSize;
+  if (outside > Math.max(2, cellSize * 0.06) || centerError > 0.42) return null;
+  return { slot, error: centerError + outside / cellSize };
+}
+
+function scoreSequenceCellWidth(sequences: SpriteSequence[], cellSize: number, imageWidth: number): number {
+  let error = 0;
+  let frames = 0;
+  let weakSequences = 0;
+
+  for (const sequence of sequences) {
+    const slots = new Set<number>();
+    for (const frame of sequence.frames) {
+      const fit = fitRectToCell(frame, "x", cellSize, imageWidth);
+      if (!fit) return Number.POSITIVE_INFINITY;
+      slots.add(fit.slot);
+      error += fit.error;
+      frames++;
+    }
+    if (slots.size < Math.max(2, Math.ceil(sequence.frames.length * 0.75))) weakSequences++;
+  }
+
+  if (frames === 0 || weakSequences > Math.max(0, Math.floor(sequences.length * 0.15))) {
+    return Number.POSITIVE_INFINITY;
+  }
+  return error / frames;
+}
+
+function scoreSequenceCellHeight(sequences: SpriteSequence[], cellSize: number, imageHeight: number): number {
+  const slots = new Set<number>();
+  let error = 0;
+
+  for (const sequence of sequences) {
+    const rowFit = fitRectToCell(sequence.bounds, "y", cellSize, imageHeight);
+    if (!rowFit) return Number.POSITIVE_INFINITY;
+    slots.add(rowFit.slot);
+    error += rowFit.error;
+
+    for (const frame of sequence.frames) {
+      const frameFit = fitRectToCell(frame, "y", cellSize, imageHeight);
+      if (!frameFit || frameFit.slot !== rowFit.slot) return Number.POSITIVE_INFINITY;
+      error += frameFit.error * 0.15;
+    }
+  }
+
+  if (slots.size < Math.ceil(sequences.length * 0.75)) return Number.POSITIVE_INFINITY;
+  return error / Math.max(1, sequences.length);
+}
+
+function inferSequenceCellSize(
+  candidates: number[],
+  score: (cellSize: number) => number,
+): number | null {
+  let best: { size: number; score: number } | null = null;
+  for (const size of candidates) {
+    const candidateScore = score(size);
+    if (!Number.isFinite(candidateScore)) continue;
+    if (!best || candidateScore < best.score) best = { size, score: candidateScore };
+  }
+  return best && best.score <= 0.22 ? best.size : null;
+}
+
+function snapRectToCell(rect: SpriteRect, cellWidth: number, cellHeight: number, imageWidth: number, imageHeight: number): SpriteRect | null {
+  const xFit = fitRectToCell(rect, "x", cellWidth, imageWidth);
+  const yFit = fitRectToCell(rect, "y", cellHeight, imageHeight);
+  if (!xFit || !yFit) return null;
+  return {
+    x: xFit.slot * cellWidth,
+    y: yFit.slot * cellHeight,
+    w: cellWidth,
+    h: cellHeight,
+  };
+}
+
+function snapSequencesToRegularCells(
+  imageData: ImageData,
+  integral: ContentIntegral,
+  sequences: SpriteSequence[],
+): SpriteSequence[] {
+  if (sequences.length < 2) return sequences;
+
+  const cellWidth = inferSequenceCellSize(
+    cellSizeCandidates(imageData.width),
+    (cellSize) => scoreSequenceCellWidth(sequences, cellSize, imageData.width),
+  );
+  const cellHeight = inferSequenceCellSize(
+    cellSizeCandidates(imageData.height),
+    (cellSize) => scoreSequenceCellHeight(sequences, cellSize, imageData.height),
+  );
+  if (!cellWidth || !cellHeight) return sequences;
+
+  const snapped: SpriteSequence[] = [];
+  let weakSequences = 0;
+  for (const sequence of sequences) {
+    const frames: SpriteRect[] = [];
+    const seen = new Set<string>();
+    for (const frame of sequence.frames) {
+      const cell = snapRectToCell(frame, cellWidth, cellHeight, imageData.width, imageData.height);
+      if (!cell || isEmptyFrameRect(integral, cell)) continue;
+      const key = `${cell.x}:${cell.y}`;
+      if (seen.has(key)) continue;
+      seen.add(key);
+      frames.push(cell);
+    }
+
+    if (frames.length < Math.max(2, Math.ceil(sequence.frames.length * 0.75))) weakSequences++;
+    if (frames.length >= 2) {
+      snapped.push({ ...sequence, frames, frameBoxes: frames, bounds: rectUnion(frames) });
+    }
+  }
+
+  if (
+    snapped.length < Math.max(2, Math.floor(sequences.length * 0.75)) ||
+    weakSequences > Math.max(0, Math.floor(sequences.length * 0.15))
+  ) {
+    return sequences;
+  }
+  return snapped;
+}
+
 function detectActiveSpans(activity: Float32Array): Array<{ start: number; end: number }> {
   let maxActivity = 0;
   for (let i = 0; i < activity.length; i++) maxActivity = Math.max(maxActivity, activity[i]);
@@ -647,7 +795,8 @@ function detectGridFromImageData(imageData: ImageData, options: { sequenceMode?:
   const colPeriod = detectPeriod(colActivity);
   const sequenceMode = options.sequenceMode ?? "off";
   const sequenceLayoutMode = sequenceMode === "off" ? null : sequenceMode;
-  const sequences = sequenceLayoutMode ? detectAnimationSequences(imageData, bg, rowActivity, colActivity) : [];
+  const rawSequences = sequenceLayoutMode ? detectAnimationSequences(imageData, bg, rowActivity, colActivity) : [];
+  const sequences = sequenceLayoutMode ? snapSequencesToRegularCells(imageData, integral, rawSequences) : [];
   if (sequenceLayoutMode && sequences.length > 1) {
     const first = sequences[0];
     return {
