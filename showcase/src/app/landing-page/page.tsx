@@ -194,7 +194,7 @@ export default function LandingPage() {
           <h2 id="proof-title">A curated doorway into free assets from the wider community.</h2>
         </div>
         <p>
-          Not a marketplace, not a claim of authorship, and not a replacement for each creator's
+          Not a marketplace, not a claim of authorship, and not a replacement for each creator&apos;s
           source page. This is a convenience layer: assets I liked, grouped so you can explore
           them fast and then follow the credits back to the original people and places.
         </p>

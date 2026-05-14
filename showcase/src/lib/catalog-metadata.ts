@@ -256,7 +256,7 @@ function sizeWords(size?: AssetSize): string[] {
   return tags;
 }
 
-function usePhrase(category: ModelCategory): string {
+function usagePhrase(category: ModelCategory): string {
   switch (category) {
     case "character":
       return "NPCs, player stand-ins, crowd dressing, or animation tests";
@@ -297,7 +297,7 @@ export function buildModelMetadata(input: ModelInput): ModelMetadata {
   const tags = inferTags(text, [category, subcategory, ...themes, ...sizeWords(input.size)]);
   const style = inferStyle(input.vendor, text);
   const source = VENDOR_LABELS[input.vendor] ?? cleanAssetTitle(input.vendor);
-  const description = `${title} is a ${style.join(", ")} ${subcategory} from ${source}'s ${packTitle} pack. Useful for ${usePhrase(category)}.`;
+  const description = `${title} is a ${style.join(", ")} ${subcategory} from ${source}'s ${packTitle} pack. Useful for ${usagePhrase(category)}.`;
   const searchText = unique([
     title,
     input.name,

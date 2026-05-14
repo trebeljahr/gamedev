@@ -2,12 +2,14 @@ packages:
   - showcase
 # pnpm 11 errors on ignored build scripts (strictDepBuilds=true by
 # default). sharp powers next/image runtime image optimization;
-# esbuild is pulled in by the toolchain. Approve both so install
-# completes cleanly. pnpm 11.1+ reads `allowBuilds` here; the older
+# esbuild and unrs-resolver are pulled in by the toolchain. Approve
+# them so install completes cleanly. pnpm 11.1+ reads `allowBuilds`; the older
 # `onlyBuiltDependencies` is kept for back-compat.
 allowBuilds:
   esbuild: true
   sharp: true
+  unrs-resolver: true
 onlyBuiltDependencies:
   - esbuild
   - sharp
+  - unrs-resolver

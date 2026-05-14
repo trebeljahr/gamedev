@@ -1,10 +1,8 @@
 const path = require("node:path");
 const fs = require("node:fs");
+const { PHASE_DEVELOPMENT_SERVER } = require("next/constants");
 
 const DEV_LOCK = path.join(__dirname, ".next-dev.lock.json");
-const isDevServer =
-  process.argv.some((arg) => arg === "dev") ||
-  Boolean(process.env.NEXT_DEV_LOCK_TOKEN && process.env.NEXT_PRIVATE_WORKER);
 
 function isPidAlive(pid) {
   if (!Number.isInteger(pid) || pid <= 0) return false;
@@ -29,7 +27,7 @@ function removeDevLock(token) {
   if (lock?.token === token) fs.rmSync(DEV_LOCK, { force: true });
 }
 
-function ensureSingleDevServer() {
+function ensureSingleDevServer(isDevServer) {
   if (!isDevServer) return;
 
   const token = process.env.NEXT_DEV_LOCK_TOKEN ?? `${process.pid}-${Date.now()}`;
@@ -51,28 +49,20 @@ function ensureSingleDevServer() {
   if (!process.env.NEXT_PRIVATE_WORKER) process.once("exit", () => removeDevLock(token));
 }
 
-ensureSingleDevServer();
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: false,
-  webpack(config) {
-    // pnpm + webpack can resolve `three` through multiple symlink paths,
-    // producing two module instances and breaking R3F's `<primitive>` (instanceof checks).
-    // Pin to a single path.
-    config.resolve.alias = {
-      ...(config.resolve.alias || {}),
-      three: path.resolve(__dirname, "node_modules/three"),
-    };
-    config.module.rules.push({ test: /\.(glb|gltf)$/, type: "asset/resource" });
-    return config;
-  },
 };
 
 // Tailscale dev URL wiring (https://gamedev.local.ricoslabs.com/).
 // hatchkit's auto-patcher only handles ESM `export default` shapes; this
 // file is CJS, so the wrap goes here by hand.
-module.exports = async () => {
+module.exports = async (phase) => {
+  const isDevWorker = Boolean(process.env.NEXT_DEV_LOCK_TOKEN && process.env.NEXT_PRIVATE_WORKER);
+  ensureSingleDevServer(
+    phase === PHASE_DEVELOPMENT_SERVER || isDevWorker,
+  );
+
   const { withLocalDev } = await import("@hatchkit/dev-plugin-next");
   return withLocalDev(nextConfig, { slug: "gamedev" });
 };

@@ -9,6 +9,7 @@ import {
   type AnimationAction,
   type AnimationClip,
   Box3,
+  type Color,
   DoubleSide,
   FrontSide,
   type Group,
@@ -28,6 +29,18 @@ export type AnimationInfo = {
 };
 
 const FADE = 0.3;
+
+type SourceMaterial = Material & {
+  alphaMap?: Texture | null;
+  alphaTest?: number;
+  color?: Color;
+  emissiveMap?: Texture | null;
+  isMeshPhysicalMaterial?: boolean;
+  isMeshStandardMaterial?: boolean;
+  map?: Texture | null;
+  normalMap?: Texture | null;
+  vertexColors?: boolean;
+};
 
 /**
  * Quaternius/Kaykit/Kenney GLBs typically declare KHR_materials_unlit, which
@@ -49,8 +62,7 @@ function sideFor(src: { transparent?: boolean; alphaMap?: unknown; alphaTest?: n
 }
 
 function liftMaterial(src: Material): Material {
-  // biome-ignore lint/suspicious/noExplicitAny: we're sniffing three's material shape
-  const s = src as any;
+  const s = src as SourceMaterial;
   if (s.isMeshStandardMaterial || s.isMeshPhysicalMaterial) {
     const material = src.clone();
     material.side = sideFor(s);

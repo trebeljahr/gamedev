@@ -15,27 +15,29 @@
     "dev": "next dev --port 3679",
     "build": "next build",
     "start": "next start --port 3679",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
-    "@hatchkit/dev-plugin-next": "^0.1.43",
-    "@react-three/drei": "^10.0.0",
-    "@react-three/fiber": "^9.0.0",
+    "@hatchkit/dev-plugin-next": "^0.2.2",
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.6.1",
     "case": "^1.6.3",
     "fflate": "^0.8.2",
     "leva": "^0.10.1",
-    "next": "^15.0.3",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "three": "^0.169.0"
+    "next": "^16.2.6",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "three": "^0.184.0"
   },
   "devDependencies": {
     "@gltf-transform/core": "^4.3.0",
-    "@types/node": "^22.9.0",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
-    "@types/three": "^0.169.0",
-    "tsx": "^4.19.2",
-    "typescript": "^5.6.3"
+    "@types/node": "^25.7.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@types/three": "^0.184.1",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "^16.2.6",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3"
   }
 }
