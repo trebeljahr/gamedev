@@ -5,7 +5,6 @@ import "./globals.css";
 const plausibleDomain = "gamedev.trebeljahr.com";
 const plausibleScriptUrl =
   "https://plausible.trebeljahr.com/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js";
-const shouldLoadPlausible = process.env.NODE_ENV === "production";
 
 export const metadata: Metadata = {
   title: "GameDev Asset Library",
@@ -17,9 +16,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
-        {shouldLoadPlausible ? (
-          <Script id="plausible-loader" strategy="afterInteractive">
-            {`
+        <Script id="plausible-loader" strategy="afterInteractive">
+          {`
               (function () {
                 var domain = ${JSON.stringify(plausibleDomain)};
                 if (location.hostname !== domain) return;
@@ -33,8 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 document.head.appendChild(script);
               })();
             `}
-          </Script>
-        ) : null}
+        </Script>
         {children}
       </body>
     </html>
