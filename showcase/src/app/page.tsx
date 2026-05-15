@@ -38,13 +38,36 @@ function assetUrl(src: string) {
   return `${LANDING_ASSET_BASE_URL}${src.startsWith("/") ? src : `/${src}`}`;
 }
 
-const FEATURED_SPRITE_THEMES: ArtTheme[] = [
-  "Characters",
-  "Enemies",
-  "Effects",
-  "Vehicles & Sci-Fi",
-  "Icons & Items",
-  "Environments",
+type FeaturedSpriteCategory = "character" | "environment" | "icons";
+
+const FEATURED_SPRITE_SLOTS: Array<{
+  category: FeaturedSpriteCategory;
+  themes: ArtTheme[];
+  label: string;
+  requireAnimated: boolean;
+  preferKinds?: ArtSample["kind"][];
+}> = [
+  {
+    category: "character",
+    themes: ["Characters"],
+    label: "Character",
+    requireAnimated: true,
+    preferKinds: ["character", "sprite"],
+  },
+  {
+    category: "environment",
+    themes: ["Environments"],
+    label: "Environment",
+    requireAnimated: false,
+    preferKinds: ["tile", "sprite", "image"],
+  },
+  {
+    category: "icons",
+    themes: ["Icons & Items", "UI"],
+    label: "Icons & UI",
+    requireAnimated: false,
+    preferKinds: ["icon", "ui"],
+  },
 ];
 
 const audioAnalysisItems = (audioAnalysisData as {
@@ -106,17 +129,40 @@ function selectFeaturedModels(): LibraryModelPreview[] {
   });
 }
 
-function landingSpriteScore(pack: ArtPack, sample: ArtSample): number {
+function landingSpriteScore(
+  pack: ArtPack,
+  sample: ArtSample,
+  slot: (typeof FEATURED_SPRITE_SLOTS)[number],
+): number {
   const text = `${pack.title} ${pack.theme} ${sample.label} ${sample.path}`.toLowerCase();
   let score = 0;
-  if (sample.animated) score += 60;
-  if (isLikelySpriteSheetPath(sample.path)) score += 30;
-  if (/\.png($|[?#])/i.test(sample.path)) score += 20;
-  if (/strip[\s_-]*\d{1,2}/i.test(sample.path)) score += 28;
-  if (/\b(idle|walk|run|attack|move|loop|death|coin|fire|vfx|impact|explosion)\b/i.test(text)) score += 18;
-  if (sample.kind === "effect" || sample.kind === "icon") score += 8;
-  if (isLikelyMarketingPreviewPath(sample.path) || /all free|all animations|all attacks/i.test(text)) score -= 50;
-  if (/\.gif($|[?#])/i.test(sample.path)) score -= 12;
+  if (slot.requireAnimated && !sample.animated) return -Infinity;
+  if (sample.animated) score += 40;
+  if (slot.preferKinds?.includes(sample.kind)) score += 50;
+  if (slot.category === "character") {
+    if (isLikelySpriteSheetPath(sample.path)) score += 40;
+    if (/strip[\s_-]*\d{1,2}/i.test(sample.path)) score += 24;
+    if (/\b(idle|walk|run|hero|knight|archer|warrior|character)\b/i.test(text)) score += 18;
+  }
+  if (slot.category === "environment") {
+    if (/\b(background|parallax|tileset|tilemap|scene|biome|plains|forest|cave|mine|mountain|island|town|city)\b/i.test(text))
+      score += 40;
+    if (/\b(front|mid|midground|foreground)\b/i.test(text)) score += 30;
+    if (/back[\s_-]?\d.*(front|mid)/i.test(sample.path)) score += 20;
+    if (/\b(sky|cloud|stars|moon)\b/i.test(text)) score -= 18;
+    if (/preview|sprite|animation|attack|idle|walk|run|jump|crouch|hurt|roll/i.test(text)) score -= 30;
+    if (/coupon|sale|promo|trap|pedestal|supplies|object|item|prop|full\.png/i.test(text)) score -= 40;
+    if (sample.animated) score -= 18;
+    if (/\.gif($|[?#])/i.test(sample.path)) score -= 30;
+  }
+  if (slot.category === "icons") {
+    if (/\b(icon|coin|gem|diamond|heart|potion|key|item|inventory|hud|button)\b/i.test(text))
+      score += 22;
+    if (/\.gif($|[?#])/i.test(sample.path)) score += 8;
+  }
+  if (/\.png($|[?#])/i.test(sample.path)) score += 12;
+  if (isLikelyMarketingPreviewPath(sample.path) || /all free|all animations|all attacks/i.test(text))
+    score -= 50;
   return score;
 }
 
@@ -124,25 +170,30 @@ function selectFeaturedSprites(): LibrarySpritePreview[] {
   const selected: LibrarySpritePreview[] = [];
   const usedPacks = new Set<string>();
 
-  for (const theme of FEATURED_SPRITE_THEMES) {
+  for (const slot of FEATURED_SPRITE_SLOTS) {
     const candidates = catalog.artPacks
-      .filter((pack) => pack.theme === theme)
+      .filter((pack) => slot.themes.includes(pack.theme))
       .flatMap((pack) =>
-        pack.samples
-          .filter((sample) => sample.animated && isLikelySpriteSheetPath(sample.path))
-          .map((sample) => ({ pack, sample, score: landingSpriteScore(pack, sample) })),
+        pack.samples.map((sample) => ({ pack, sample, score: landingSpriteScore(pack, sample, slot) })),
       )
+      .filter((item) => Number.isFinite(item.score))
       .sort((a, b) => b.score - a.score || a.sample.path.localeCompare(b.sample.path));
     const candidate =
       candidates.find((item) => !usedPacks.has(item.pack.folder)) ?? candidates[0];
     if (!candidate) continue;
 
     usedPacks.add(candidate.pack.folder);
+    const rawLabel = candidate.sample.label?.trim() ?? "";
+    const isGenericLabel = /^(sprite\s*sheet|spritesheet|character[\s_-]*spritesheet|tiles?|assets?|full|sheet)$/i.test(rawLabel);
+    const displayLabel = isGenericLabel || rawLabel.length === 0 ? candidate.pack.title : rawLabel;
     selected.push({
+      category: slot.category,
+      categoryLabel: slot.label,
       title: candidate.pack.title,
       theme: candidate.pack.theme,
-      label: candidate.sample.label,
+      label: displayLabel,
       kind: candidate.sample.kind,
+      animated: candidate.sample.animated,
       path: candidate.sample.path,
       src: assetUrl(candidate.sample.src),
     });

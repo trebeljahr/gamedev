@@ -8,11 +8,16 @@ import {
 
 export type LibraryModelPreview = LandingModelPreviewItem;
 
+export type LibrarySpriteCategory = "character" | "environment" | "icons";
+
 export type LibrarySpritePreview = {
+  category: LibrarySpriteCategory;
+  categoryLabel: string;
   title: string;
   theme: string;
   label: string;
   kind: string;
+  animated: boolean;
   src: string;
   path: string;
 };
@@ -89,8 +94,8 @@ function drawFrame(
   const sourceHeight = Math.floor(imageHeight / layout.rows);
   const sourceX = col * sourceWidth;
   const sourceY = row * sourceHeight;
-  const maxWidth = width * 0.78;
-  const maxHeight = height * 0.7;
+  const maxWidth = width * 0.92;
+  const maxHeight = height * 0.88;
   const scale = Math.min(maxWidth / sourceWidth, maxHeight / sourceHeight);
   const drawWidth = sourceWidth * scale;
   const drawHeight = sourceHeight * scale;
@@ -116,9 +121,10 @@ function SpriteLoop({ sample, index }: { sample: LibrarySpritePreview; index: nu
   const [failed, setFailed] = useState(false);
   const [frameCount, setFrameCount] = useState(1);
   const gif = /\.gif($|[?#])/i.test(sample.path);
+  const renderAsImage = gif || !sample.animated;
 
   useEffect(() => {
-    if (gif) return;
+    if (renderAsImage) return;
 
     const canvas = canvasRef.current;
     const context = canvas?.getContext("2d");
@@ -162,21 +168,42 @@ function SpriteLoop({ sample, index }: { sample: LibrarySpritePreview; index: nu
       cancelled = true;
       cancelAnimationFrame(raf);
     };
-  }, [gif, sample.kind, sample.path, sample.src]);
+  }, [renderAsImage, sample.kind, sample.path, sample.src]);
+
+  const animatedFlag =
+    sample.animated && (sample.category === "character" || sample.category === "icons");
+  const subline = animatedFlag
+    ? frameCount > 1
+      ? `${frameCount} frames`
+      : "Animated"
+    : sample.theme;
 
   return (
-    <article className="library-sprite-card" style={{ "--sprite-delay": `${index * 110}ms` } as CSSProperties}>
-      <div className="library-sprite-stage">
-        {gif || failed ? (
+    <article
+      className="library-tile"
+      data-category={sample.category}
+      style={{ "--sprite-delay": `${index * 120}ms` } as CSSProperties}
+    >
+      <div className="library-tile-chip">
+        <span>2D</span>
+        <strong>{sample.categoryLabel}</strong>
+      </div>
+      <div className="library-tile-stage">
+        {renderAsImage || failed ? (
           <img src={sample.src} alt="" />
         ) : (
-          <canvas ref={canvasRef} width={240} height={156} aria-label={`${sample.label} animated sprite preview`} />
+          <canvas
+            ref={canvasRef}
+            width={240}
+            height={156}
+            aria-label={`${sample.label} animated sprite preview`}
+          />
         )}
+        {animatedFlag ? <i className="library-tile-pulse" aria-hidden="true" /> : null}
       </div>
-      <div className="library-sprite-meta">
-        <span>{sample.theme}</span>
+      <div className="library-tile-meta">
         <strong>{sample.label}</strong>
-        <small>{frameCount > 1 ? `${frameCount} frames` : sample.title}</small>
+        <small>{subline}</small>
       </div>
     </article>
   );
@@ -188,18 +215,19 @@ function SoundSignal({ sounds }: { sounds: LibrarySoundPreview[] }) {
 
   return (
     <div className="library-sound-signal" aria-label="Static waveform previews from analyzed music tracks">
-      <div className="library-signal-head">
-        <span>Music waveforms</span>
-        <strong>analyzed tracks</strong>
+      <div className="library-tile-chip" data-tone="music">
+        <span>Audio</span>
+        <strong>Music & SFX</strong>
       </div>
       <div className="library-signal-rows">
         {rows.map((sound) => {
           return (
             <div className="library-signal-row" key={sound.path}>
               <div>
-                <span>{sound.source}</span>
                 <strong>{sound.title}</strong>
-                <small>{formatDuration(sound.duration)}</small>
+                <small>
+                  {sound.source} · {formatDuration(sound.duration)}
+                </small>
               </div>
               <div className="library-signal-bars" aria-hidden="true">
                 {sound.loudness.map((level, index) => (
@@ -237,26 +265,33 @@ export function LibraryHeroShowreel({
   sprites: LibrarySpritePreview[];
   sounds: LibrarySoundPreview[];
 }) {
-  const visibleSprites = sprites.slice(0, 2);
+  const visibleSprites = sprites.slice(0, 3);
+  const modelCount = models.length;
 
   return (
     <div className="library-showreel" aria-hidden="true">
-      <div className="library-model-plane">
+      <div className="library-model-stage">
         <LandingModelBackdrop models={models} />
-        <div className="library-model-label">
+        <div className="library-tile-chip library-tile-chip--floating" data-tone="model">
           <span>3D</span>
-          <strong>real GLB assets</strong>
+          <strong>GLB models</strong>
         </div>
+        {modelCount > 0 ? (
+          <div className="library-model-foot">
+            <span>{modelCount} live</span>
+            <small>shadows · lights · animations</small>
+          </div>
+        ) : null}
+        <div className="library-model-glow" aria-hidden="true" />
       </div>
 
-      <div className="library-demo-footer">
-        <div className="library-sprite-rack">
-          {visibleSprites.map((sample, index) => (
-            <SpriteLoop key={`${sample.path}-${index}`} sample={sample} index={index} />
-          ))}
-        </div>
-        <SoundSignal sounds={sounds} />
+      <div className="library-tile-rack">
+        {visibleSprites.map((sample, index) => (
+          <SpriteLoop key={`${sample.path}-${index}`} sample={sample} index={index} />
+        ))}
       </div>
+
+      <SoundSignal sounds={sounds} />
     </div>
   );
 }
