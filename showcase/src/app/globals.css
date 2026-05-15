@@ -212,6 +212,54 @@ select:focus-visible {
   overflow: hidden;
 }
 
+/* ── Mobile scene joysticks ────────────────────────────────────────
+   joystick-controller writes its own per-instance scoped styles via a
+   <style> tag with high-specificity selectors, so we use !important on
+   the few properties we override. Library defaults render at low alpha
+   against light pages; the scene background is dark, so the defaults
+   read as nearly invisible — these overrides give the pad a darker
+   washed surface with a bright outline, and the knob a cream highlight
+   so it pops as the touchable element. */
+@keyframes showcase-joystick-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.showcase-joystick-pad {
+  background: radial-gradient(
+    circle,
+    rgba(20, 16, 12, 0.55),
+    rgba(8, 6, 4, 0.4)
+  ) !important;
+  outline: 2px solid rgba(255, 245, 220, 0.7) !important;
+  animation: showcase-joystick-fade-in 260ms ease-out;
+}
+
+.showcase-joystick-knob {
+  background: radial-gradient(
+    rgba(250, 240, 220, 0.98),
+    rgba(200, 185, 155, 0.92)
+  ) !important;
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+/* Without `touch-action: none` mobile browsers reinterpret finger-drag
+   as scroll/zoom, fire pointercancel, and the joystick snaps back to
+   centre. */
+.showcase-joystick-container,
+.showcase-joystick-pad,
+.showcase-joystick-knob {
+  touch-action: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .showcase-joystick-pad {
+    animation: none;
+  }
+}
+
 .library-page {
   min-height: 100vh;
   overflow-x: hidden;

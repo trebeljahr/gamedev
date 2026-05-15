@@ -17,12 +17,14 @@ import {
   useState,
 } from "react";
 import {
+  Euler,
   type InstancedMesh,
   Object3D,
   Raycaster,
   Vector2,
   Vector3,
 } from "three";
+import type { JoystickOnMove } from "joystick-controller";
 import { Model, type AnimationInfo } from "./Model";
 import {
   allModelsLayout,
@@ -45,6 +47,8 @@ import {
   CameraFloorGuard,
   clampCameraAboveFloor,
 } from "@/components/CameraFloorGuard";
+import { useJoystick } from "@/hooks/use-joystick";
+import { useTouchDevice } from "@/hooks/use-touch-device";
 
 // Load any pack whose nearest edge is within this distance of the camera.
 // Pack-coherent loading: when you approach a pack, the whole pack appears at
@@ -62,6 +66,17 @@ const MAX_MODELS = 500; // safety cap on concurrent loaded models
 const MOUNT_PER_TICK = 6;
 const MOVE_SPEED = 12; // units/sec
 const WORLD_HEIGHT = 2;
+// Joystick max-range in pixels — must match `defaultParameters.maxRange`
+// in `use-joystick.ts`. Used to normalise the library's raw x/y back
+// into [-1, 1].
+const JOYSTICK_MAX_RANGE = 60;
+const MOVE_DEADZONE = 0.15;
+const LOOK_DEADZONE = 0.15;
+// Look stick → angular velocity (rad/s). Binary above the deadzone:
+// any drag past LOOK_DEADZONE turns at LOOK_SPEED in the stick's
+// direction, so fine aim is a short tap, full turn is a sustained hold.
+const LOOK_SPEED = 1.6;
+const PITCH_LIMIT = Math.PI / 2 - 0.05;
 
 // Placeholder base: a thin slab whose XZ footprint matches each model's
 // actual bbox (from the manifest). Y is constant; X and Z scale per-instance.
@@ -276,6 +291,23 @@ function ModelGridScene({
   const selected = controlledSelected ?? internalSelected;
   const panelOpen = showModelPanel && !!selected;
 
+  // Mobile UX: replace pointer-lock + WASD with two on-screen joysticks
+  // (movement on the left, look on the right). Pointer lock is unreliable
+  // on touch — joysticks own look there instead.
+  const sceneHostRef = useRef<HTMLDivElement | null>(null);
+  const isTouch = useTouchDevice() === true;
+  const joysticksActive = isTouch && !panelOpen;
+  const moveJoystick = useJoystick({
+    enabled: joysticksActive,
+    params: { x: "14%", y: "18%" },
+    parentRef: sceneHostRef,
+  });
+  const lookJoystick = useJoystick({
+    enabled: joysticksActive,
+    params: { x: "86%", y: "18%" },
+    parentRef: sceneHostRef,
+  });
+
   const onSelect = useCallback((slot: Slot) => {
     if (onSelectedIndexChange) onSelectedIndexChange(slot.index);
     else setInternalSelected(slot);
@@ -302,7 +334,7 @@ function ModelGridScene({
   }, [selected?.index]);
 
   return (
-    <div className="model-grid-scene all-scene-canvas">
+    <div className="model-grid-scene all-scene-canvas" ref={sceneHostRef}>
       <Canvas
         // near=0.5 (not 0.1) + logarithmicDepthBuffer drastically improves
         // depth precision at distance. Without this, packs with many
@@ -326,7 +358,11 @@ function ModelGridScene({
         />
         <hemisphereLight args={theme.hemisphere} />
         <InitialCameraView position={start} lookAt={lookAt} />
-        <Walker allowArrowKeys={allowArrowWalk} />
+        <Walker
+          allowArrowKeys={allowArrowWalk}
+          moveGetter={isTouch ? moveJoystick.getData : undefined}
+          lookGetter={isTouch ? lookJoystick.getData : undefined}
+        />
         <Selector
           onSelect={onSelect}
           onHoverChange={setHoverInspect}
@@ -354,7 +390,7 @@ function ModelGridScene({
             environmentIntensity={theme.environmentIntensity}
           />
         </Suspense>
-        <PointerLockControls selector=".all-scene-canvas canvas" />
+        {!isTouch && <PointerLockControls selector=".all-scene-canvas canvas" />}
         <CameraFloorGuard minY={WORLD_HEIGHT} />
       </Canvas>
       <Crosshair hovering={hoverInspect && !panelOpen} />
@@ -365,6 +401,7 @@ function ModelGridScene({
           panelOpen={panelOpen}
           backHref={backHref}
           backLabel={backLabel}
+          isTouch={isTouch}
         />
       )}
       {showModelPanel && selected && (
@@ -411,8 +448,24 @@ function InitialCameraView({
 }
 
 /* Camera walker — WASD + Space (up) / C (down), Shift held = sprint.
+   On touch devices a movement joystick contributes to the same vector
+   and a look joystick rotates the camera (proxy for mouse-look since
+   pointer lock is unreliable on mobile).
    Uses raw window listeners to avoid drei API drift. */
-function Walker({ allowArrowKeys = true }: { allowArrowKeys?: boolean }) {
+const _walkerLookEuler = new Euler(0, 0, 0, "YXZ");
+const _walkerForward = new Vector3();
+const _walkerRight = new Vector3();
+const _walkerUp = new Vector3(0, 1, 0);
+
+function Walker({
+  allowArrowKeys = true,
+  moveGetter,
+  lookGetter,
+}: {
+  allowArrowKeys?: boolean;
+  moveGetter?: () => JoystickOnMove;
+  lookGetter?: () => JoystickOnMove;
+}) {
   const { camera } = useThree();
   const keys = useRef<Record<string, boolean>>({});
   useEffect(() => {
@@ -443,14 +496,31 @@ function Walker({ allowArrowKeys = true }: { allowArrowKeys?: boolean }) {
     };
   }, []);
   useFrame((_, delta) => {
+    if (lookGetter) {
+      const look = lookGetter();
+      const lx = look.x / JOYSTICK_MAX_RANGE;
+      const ly = look.y / JOYSTICK_MAX_RANGE;
+      const lmag = Math.hypot(lx, ly);
+      if (lmag > LOOK_DEADZONE) {
+        const nx = lx / lmag;
+        const ny = ly / lmag;
+        _walkerLookEuler.setFromQuaternion(camera.quaternion, "YXZ");
+        _walkerLookEuler.y -= nx * LOOK_SPEED * delta;
+        _walkerLookEuler.x += ny * LOOK_SPEED * delta;
+        if (_walkerLookEuler.x > PITCH_LIMIT) _walkerLookEuler.x = PITCH_LIMIT;
+        if (_walkerLookEuler.x < -PITCH_LIMIT) _walkerLookEuler.x = -PITCH_LIMIT;
+        _walkerLookEuler.z = 0;
+        camera.quaternion.setFromEuler(_walkerLookEuler);
+      }
+    }
+
     const k = keys.current;
-    const fwd = new Vector3();
+    const fwd = _walkerForward;
     camera.getWorldDirection(fwd);
     fwd.y = 0;
-    fwd.normalize();
-    const right = new Vector3()
-      .crossVectors(fwd, new Vector3(0, 1, 0))
-      .normalize();
+    if (fwd.lengthSq() > 0) fwd.normalize();
+    const right = _walkerRight.crossVectors(fwd, _walkerUp);
+    if (right.lengthSq() > 0) right.normalize();
     let dx = 0,
       dy = 0,
       dz = 0;
@@ -472,10 +542,35 @@ function Walker({ allowArrowKeys = true }: { allowArrowKeys?: boolean }) {
     }
     if (k[" "]) dy += 1;
     if (k.c) dy -= 1;
+
+    // Movement joystick contributes proportionally past the deadzone.
+    // Diagonal keyboard + fully deflected stick must not double the speed,
+    // so we track the joystick contribution and cap the combined planar
+    // magnitude at 1 below.
+    let stickT = 0;
+    if (moveGetter) {
+      const m = moveGetter();
+      const mx = m.x / JOYSTICK_MAX_RANGE;
+      const my = m.y / JOYSTICK_MAX_RANGE;
+      const mmag = Math.hypot(mx, my);
+      if (mmag > MOVE_DEADZONE) {
+        const fx = my / mmag;
+        const sx = mx / mmag;
+        stickT = Math.min(1, (mmag - MOVE_DEADZONE) / (1 - MOVE_DEADZONE));
+        dx += (fwd.x * fx + right.x * sx) * stickT;
+        dz += (fwd.z * fx + right.z * sx) * stickT;
+      }
+    }
+
+    const planarMag = Math.hypot(dx, dz);
+    if (planarMag > 1) {
+      dx /= planarMag;
+      dz /= planarMag;
+    }
     const mag = Math.hypot(dx, dy, dz);
     if (mag > 0) {
       const speed = k.shift ? MOVE_SPEED * 3 : MOVE_SPEED;
-      const s = (speed * delta) / mag;
+      const s = speed * delta;
       camera.position.x += dx * s;
       camera.position.y += dy * s;
       camera.position.z += dz * s;
@@ -552,8 +647,13 @@ function Selector({
     sinceHoverCheck.current = 0;
     const el = gl.domElement;
     const locked = document.pointerLockElement === el;
+    // On touch there's no pointer lock — surface the hover cue whenever
+    // a model sits under the screen centre so the inspect crosshair still
+    // hints what a tap will pick.
+    const isTouch = window.matchMedia("(pointer: coarse)").matches;
+    const active = locked || isTouch;
     const hovering =
-      locked && !panelOpenRef.current && pickHit()?.kind === "slot";
+      active && !panelOpenRef.current && pickHit()?.kind === "slot";
     if (hovering !== hoverRef.current) {
       hoverRef.current = hovering;
       onHoverChange?.(hovering);
@@ -562,11 +662,17 @@ function Selector({
 
   useEffect(() => {
     const el = gl.domElement;
+    // Touch detection has to live inside the handler because the same
+    // canvas can receive both kinds of input (e.g. desktop with a touch
+    // screen). On touch we have no pointer lock — taps at the screen
+    // centre raycast straight away through the crosshair.
     function onClick(e: MouseEvent) {
       if (e.button !== 0) return;
-      if (document.pointerLockElement !== el) {
-        // Not yet locked: this listener is on the canvas only. If the panel was
-        // open, that means we're transitioning back to walking — close it.
+      const isTouch = window.matchMedia("(pointer: coarse)").matches;
+      if (!isTouch && document.pointerLockElement !== el) {
+        // Desktop, not yet locked: this listener is on the canvas only.
+        // If the panel was open, we're transitioning back to walking —
+        // close it.
         if (panelOpenRef.current) onPanelClose();
         return;
       }
@@ -1002,12 +1108,14 @@ function HUD({
   panelOpen,
   backHref,
   backLabel,
+  isTouch,
 }: {
   title: string;
   count: number;
   panelOpen: boolean;
   backHref: string;
   backLabel: string;
+  isTouch: boolean;
 }) {
   return (
     <div
@@ -1029,11 +1137,23 @@ function HUD({
     >
       <strong>{title}</strong> — {count.toLocaleString()} slots
       <br />
-      {panelOpen
-        ? "Click canvas to resume walking"
-        : "Click canvas to lock cursor"}
-      <br />
-      WASD walk · Space/C vertical · Shift sprint · click model to inspect
+      {isTouch ? (
+        <>
+          {panelOpen
+            ? "Tap canvas to resume walking"
+            : "Left stick: walk · Right stick: look"}
+          <br />
+          Tap model at crosshair to inspect
+        </>
+      ) : (
+        <>
+          {panelOpen
+            ? "Click canvas to resume walking"
+            : "Click canvas to lock cursor"}
+          <br />
+          WASD walk · Space/C vertical · Shift sprint · click model to inspect
+        </>
+      )}
       <br />
       <a href={backHref} style={{ color: "#ffd84d" }}>
         ← {backLabel}

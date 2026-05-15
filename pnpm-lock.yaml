@@ -25,6 +25,9 @@ importers:
       fflate:
         specifier: ^0.8.2
         version: 0.8.2
+      joystick-controller:
+        specifier: ^2.0.0
+        version: 2.0.0
       leva:
         specifier: ^0.10.1
         version: 0.10.1(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
@@ -1912,6 +1915,9 @@ packages:
     resolution: {integrity: sha512-KLViCmWx94zOvpLwSlsx6yOCeMhZYaxrJV87Po5k/FoZzcPSahvK5qJ7fYhS61sZi5ikmh2S3Hz55A2l3U69ng==}
     peerDependencies:
       react: ^19.0.0
+
+  joystick-controller@2.0.0:
+    resolution: {integrity: sha512-MZTU/FUCQxVPCHFFTI4hiWH8q8+9MwI7rlGxyeU+mBsXZQmtBemuZqwlmkzSWdPEg12ZNVovrdUuBy64OGBZ8A==}
 
   js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
@@ -4464,6 +4470,8 @@ snapshots:
       react: 19.2.6
     transitivePeerDependencies:
       - '@types/react'
+
+  joystick-controller@2.0.0: {}
 
   js-tokens@4.0.0: {}
 
