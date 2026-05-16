@@ -574,9 +574,13 @@ function Walker({
       const speed = k.shift ? MOVE_SPEED * 3 : MOVE_SPEED;
       // Clamp delta so a long stall (GLB parse, GC pause, tab refocus) does
       // not multiply into a teleport-sized step that reads as a camera hop.
-      // 100ms cap = at most ~1.2 units (or ~3.6 sprinting) lost to a single
-      // bad frame instead of unbounded leaps.
-      const s = speed * Math.min(delta, 0.1);
+      // The earlier 100ms cap still allowed ~1.2-unit jumps which the user
+      // feels as a teleport. 33ms (≈ two 60fps frames) limits a recovery
+      // frame to ~0.4 units (walk) / ~1.2 units (sprint) — the cost is that
+      // a long stall "loses" some forward motion, but the camera no longer
+      // hops. Pair with the mount-on-fast-frames gate in ActiveModels so
+      // stalls become rare in the first place.
+      const s = speed * Math.min(delta, 0.033);
       camera.position.x += dx * s;
       camera.position.y += dy * s;
       camera.position.z += dz * s;
@@ -820,6 +824,16 @@ function ActiveModels({
       target.current = next;
       targetIds.current = nextIds;
     }
+
+    // Frame-health gate. Each new GroundedModel mount triggers a synchronous
+    // GLTF parse + clone + Box3.setFromObject + material-lift traverse — easy
+    // 30-150ms on a dense pack. If the previous render already overshot the
+    // frame budget, piling 2 more parses onto this render compounds the
+    // stall, and the Walker's next `delta` reads as a teleport-sized hop
+    // (the visible "jitter"). Skipping mount/unmount work on slow frames
+    // lets the framerate recover before we add more synchronous load. The
+    // pack scan above stays in — it's cheap (a few hundred AABB checks).
+    if (delta > 0.030) return;
 
     onMountedChange((prev) => {
       const ids = targetIds.current;
