@@ -21,6 +21,8 @@ import { existsSync } from "node:fs";
 import { readdir, readFile, stat, writeFile, mkdir } from "node:fs/promises";
 import { dirname, join, relative } from "node:path";
 import { NodeIO, getBounds } from "@gltf-transform/core";
+import { KHRDracoMeshCompression } from "@gltf-transform/extensions";
+import draco3d from "draco3d";
 import {
   buildModelMetadata,
   buildPackMetadata,
@@ -298,7 +300,10 @@ function modelKey(file: string): string {
 
 // Bump when the bbox computation changes (clamp ratios, min dims, etc.) so
 // existing caches are invalidated automatically without rm/mv.
-const CACHE_VERSION = 3;
+// v4: register Draco decoder so `-transformed.glb` files (Draco-compressed,
+// most Quaternius packs) compute real bboxes instead of falling back to
+// [1,1,1] — was making pedestals undersized and models overlap.
+const CACHE_VERSION = 4;
 
 type CacheEntry = {
   v: number;
@@ -478,7 +483,17 @@ async function main() {
     return;
   }
 
-  const io = new NodeIO();
+  // Register the Draco decoder so we can read `*-transformed.glb` files
+  // emitted by the glb-optimize pipeline (most Quaternius packs use Draco
+  // mesh compression). Without this, `io.read` throws "Missing required
+  // extension, KHR_draco_mesh_compression" and every bbox falls back to
+  // [1,1,1] — visible as pedestals one unit wide under multi-metre models,
+  // which overlap into neighbouring cells on the pack/all overviews.
+  const io = new NodeIO()
+    .registerExtensions([KHRDracoMeshCompression])
+    .registerDependencies({
+      "draco3d.decoder": await draco3d.createDecoderModule(),
+    });
   const cache = await loadCache();
   const nextCache: Cache = {};
 
