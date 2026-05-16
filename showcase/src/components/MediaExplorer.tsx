@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { type CSSProperties, type ReactNode, useEffect, useId, useMemo, useRef, useState } from "react";
+import { type CSSProperties, type PointerEvent as ReactPointerEvent, type ReactNode, useEffect, useId, useMemo, useRef, useState } from "react";
 import { LicenseLink } from "@/components/LicenseLink";
 import { NavDrawer, SelectDropdown } from "@/components/NavDrawer";
 import { InfiniteListSentinel, useInfiniteList } from "@/components/useInfiniteList";
@@ -1125,44 +1125,6 @@ function drawSquareFrameGrid(context: CanvasRenderingContext2D, image: HTMLImage
   }
 }
 
-function safeFileStem(value: string): string {
-  return value
-    .toLowerCase()
-    .replace(/\.[^.]+$/i, "")
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "")
-    .slice(0, 80) || "sprite-sequence";
-}
-
-function downloadCanvasPng(canvas: HTMLCanvasElement, filename: string) {
-  const link = document.createElement("a");
-  try {
-    link.href = canvas.toDataURL("image/png");
-  } catch {
-    return;
-  }
-  link.download = filename;
-  link.click();
-}
-
-function exportFramesAsStrip(image: HTMLImageElement, frames: SpriteRect[], filename: string) {
-  if (frames.length === 0) return;
-  const cellWidth = Math.max(...frames.map((rect) => rect.w));
-  const cellHeight = Math.max(...frames.map((rect) => rect.h));
-  const canvas = document.createElement("canvas");
-  canvas.width = cellWidth * frames.length;
-  canvas.height = cellHeight;
-  const context = canvas.getContext("2d");
-  if (!context) return;
-  context.imageSmoothingEnabled = false;
-  for (const [index, rect] of frames.entries()) {
-    const x = index * cellWidth + Math.floor((cellWidth - rect.w) / 2);
-    const y = Math.floor((cellHeight - rect.h) / 2);
-    context.drawImage(image, rect.x, rect.y, rect.w, rect.h, x, y, rect.w, rect.h);
-  }
-  downloadCanvasPng(canvas, filename);
-}
-
 function displaySequenceLabel(sequence: SpriteSequence, index: number): string {
   const rowMatch = sequence.label.match(/^row\s+(\d+)$/i);
   if (rowMatch) return `Animation ${rowMatch[1]}`;
@@ -1421,11 +1383,13 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
   const [layoutFrames, setLayoutFrames] = useState<SpriteRect[] | null>(null);
   const [layoutFrameBoxes, setLayoutFrameBoxes] = useState<SpriteRect[] | null>(null);
   const [sequenceIndex, setSequenceIndex] = useState(0);
-  const [scale, setScale] = useState(3);
   const [flip, setFlip] = useState(false);
-  const [background, setBackground] = useState("#15171c");
   const [loadedImage, setLoadedImage] = useState<LoadedSpriteImage | null>(null);
   const [loadFailed, setLoadFailed] = useState(false);
+  const zoomRef = useRef(1);
+  const panRef = useRef({ x: 0, y: 0 });
+  const dragRef = useRef<{ startX: number; startY: number; startPanX: number; startPanY: number } | null>(null);
+  const background = "#15171c";
 
   useEffect(() => {
     setPlaying(Boolean(sample?.animated && isLikelySpriteSheetPath(sample.path)));
@@ -1440,7 +1404,67 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
     setSequenceIndex(0);
     setLoadedImage(null);
     setLoadFailed(false);
+    zoomRef.current = 1;
+    panRef.current = { x: 0, y: 0 };
   }, [sample?.animated, sample?.path, sample?.src]);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const handleWheel = (event: WheelEvent) => {
+      event.preventDefault();
+      const rect = canvas.getBoundingClientRect();
+      const scaleX = canvas.width / rect.width;
+      const scaleY = canvas.height / rect.height;
+      const cursorX = (event.clientX - rect.left) * scaleX - canvas.width / 2;
+      const cursorY = (event.clientY - rect.top) * scaleY - canvas.height / 2;
+      const factor = event.deltaY < 0 ? 1.1 : 1 / 1.1;
+      const oldZoom = zoomRef.current;
+      const newZoom = Math.min(16, Math.max(0.2, oldZoom * factor));
+      const actual = newZoom / oldZoom;
+      zoomRef.current = newZoom;
+      panRef.current = {
+        x: (panRef.current.x - cursorX) * actual + cursorX,
+        y: (panRef.current.y - cursorY) * actual + cursorY,
+      };
+    };
+    canvas.addEventListener("wheel", handleWheel, { passive: false });
+    return () => canvas.removeEventListener("wheel", handleWheel);
+  }, []);
+
+  function handlePointerDown(event: ReactPointerEvent<HTMLCanvasElement>) {
+    event.currentTarget.setPointerCapture(event.pointerId);
+    dragRef.current = {
+      startX: event.clientX,
+      startY: event.clientY,
+      startPanX: panRef.current.x,
+      startPanY: panRef.current.y,
+    };
+  }
+
+  function handlePointerMove(event: ReactPointerEvent<HTMLCanvasElement>) {
+    if (!dragRef.current) return;
+    const canvas = event.currentTarget;
+    const rect = canvas.getBoundingClientRect();
+    const scaleX = canvas.width / rect.width;
+    const scaleY = canvas.height / rect.height;
+    panRef.current = {
+      x: dragRef.current.startPanX + (event.clientX - dragRef.current.startX) * scaleX,
+      y: dragRef.current.startPanY + (event.clientY - dragRef.current.startY) * scaleY,
+    };
+  }
+
+  function handlePointerUp(event: ReactPointerEvent<HTMLCanvasElement>) {
+    if (event.currentTarget.hasPointerCapture(event.pointerId)) {
+      event.currentTarget.releasePointerCapture(event.pointerId);
+    }
+    dragRef.current = null;
+  }
+
+  function resetView() {
+    zoomRef.current = 1;
+    panRef.current = { x: 0, y: 0 };
+  }
 
   useEffect(() => {
     let cancelled = false;
@@ -1538,8 +1562,6 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
         !isLikelyHybridSpriteAtlasPath(sample.path)
       ),
   );
-  const canUnwrapStaticLayout = Boolean(!canAnimateSample && detectedGrid && isUnwrappableSpriteGrid(detectedGrid));
-
   useEffect(() => {
     setDetectedGrid(resolvedGrid);
     const shouldUseFrameLayout =
@@ -1639,17 +1661,17 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
       if (image && !loadFailed && drawFrames.length > 0) {
         context.imageSmoothingEnabled = false;
         const drawFrame = drawFrames[currentFrame % drawFrames.length];
-        const ratio = Math.min(
-          scale,
+        const fitRatio = Math.min(
           (drawingCanvas.width * 0.82) / stageWidth,
           (drawingCanvas.height * 0.74) / stageHeight,
         );
+        const ratio = fitRatio * zoomRef.current;
         const stageW = stageWidth * ratio;
         const stageH = stageHeight * ratio;
         const w = drawFrame.source.w * ratio;
         const h = drawFrame.source.h * ratio;
-        const stageX = (drawingCanvas.width - stageW) / 2;
-        const stageY = (drawingCanvas.height - stageH) / 2 - 8;
+        const stageX = (drawingCanvas.width - stageW) / 2 + panRef.current.x;
+        const stageY = (drawingCanvas.height - stageH) / 2 - 8 + panRef.current.y;
         const boxX = stageX + ((stageWidth - drawFrame.box.w) / 2) * ratio;
         const boxY = stageY + (stageHeight - drawFrame.box.h) * ratio;
         const x = boxX + (drawFrame.source.x - drawFrame.box.x) * ratio;
@@ -1677,7 +1699,7 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
 
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [autoDetect, background, columns, detectedGrid, flip, layoutFrameBoxes, layoutFrames, loadFailed, loadedImage, pack.title, playing, rows, sample?.animated, sample?.label, scale, speed]);
+  }, [autoDetect, columns, detectedGrid, flip, layoutFrameBoxes, layoutFrames, loadFailed, loadedImage, pack.title, playing, rows, sample?.animated, sample?.label, speed]);
 
   const detectionLabel = detectedGrid
     ? detectedGrid.mode === "atlas"
@@ -1696,9 +1718,7 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
   const sequences = detectedGrid?.sequences ?? [];
   const activeSequenceIndex = Math.min(sequenceIndex, Math.max(0, sequences.length - 1));
   const activeSequence = sequences[activeSequenceIndex];
-  const exportFrameCount = Math.max(1, (autoDetect ? layoutFrames?.length : undefined) ?? columns * rows);
-  const canPlaySample = canAnimateSample && exportFrameCount > 1;
-  const canExportFrames = exportFrameCount > 1 && (canAnimateSample || canUnwrapStaticLayout || Boolean(layoutFrames));
+  const canPlaySample = canAnimateSample && Math.max(1, (autoDetect ? layoutFrames?.length : undefined) ?? columns * rows) > 1;
 
   function selectSequence(nextIndex: number) {
     const nextSequence = sequences[nextIndex];
@@ -1715,27 +1735,20 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
     setPlaying(Boolean(nextSequence));
   }
 
-  function exportCurrentSequence() {
-    const image = loadedImage?.image ?? null;
-    if (!image) return;
-    const explicitFrames = autoDetect ? layoutFrames : null;
-    const explicitFrameBoxes = autoDetect ? layoutFrameBoxes : null;
-    const frames =
-      explicitFrameBoxes ??
-      explicitFrames ??
-      Array.from({ length: columns * rows }, (_, index) => {
-        const imageWidth = image.naturalWidth || image.width;
-        const imageHeight = image.naturalHeight || image.height;
-        return spriteGridCellRect(imageWidth, imageHeight, columns, rows, index);
-      });
-    const stem = safeFileStem(`${sample?.label ?? pack.title}-${activeSequence?.label ?? "animation"}`);
-    exportFramesAsStrip(image, frames, `${stem}.png`);
-  }
-
   return (
     <div className="art-runner">
       <div className="art-runner-stage">
-        <canvas ref={canvasRef} width={720} height={420} />
+        <canvas
+          ref={canvasRef}
+          width={720}
+          height={420}
+          className="zoomable-canvas"
+          onPointerDown={handlePointerDown}
+          onPointerMove={handlePointerMove}
+          onPointerUp={handlePointerUp}
+          onPointerCancel={handlePointerUp}
+          onDoubleClick={resetView}
+        />
         {sequences.length > 1 && (
           <aside className="animation-overview" aria-label="Detected animations">
             <div className="animation-overview-head">
@@ -1813,7 +1826,7 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
         </label>
         <label className="inline-check">
           <input type="checkbox" checked={autoDetect} onChange={(event) => setAutoDetect(event.target.checked)} />
-          {detectionLabel}
+          Auto-detect grid <small>({detectionLabel})</small>
         </label>
         {sequences.length > 1 && (
           <label>
@@ -1860,25 +1873,12 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
           />
           <span>{rows}</span>
         </label>
-        <label>
-          Scale
-          <input
-            aria-label="Sprite preview scale"
-            type="range"
-            min="1"
-            max="8"
-            value={scale}
-            onChange={(event) => setScale(Number(event.target.value))}
-          />
-          <span>{scale}x</span>
-        </label>
         <label className="inline-check">
           <input type="checkbox" checked={flip} onChange={(event) => setFlip(event.target.checked)} />
           Flip
         </label>
-        <input aria-label="Canvas background" type="color" value={background} onChange={(event) => setBackground(event.target.value)} />
-        <button type="button" onClick={exportCurrentSequence} disabled={!sample || !canExportFrames}>
-          Export PNG
+        <button type="button" onClick={resetView}>
+          Reset view
         </button>
       </div>
     </div>
@@ -1922,34 +1922,6 @@ function loadSequenceFrame(sample: ArtSample): Promise<LoadedSequenceFrame | nul
   });
 }
 
-function exportLoadedSequenceFramesAsStrip(frames: LoadedSequenceFrame[], filename: string) {
-  if (frames.length === 0) return;
-  const cellWidth = Math.max(...frames.map((frame) => frame.source.w));
-  const cellHeight = Math.max(...frames.map((frame) => frame.source.h));
-  const canvas = document.createElement("canvas");
-  canvas.width = cellWidth * frames.length;
-  canvas.height = cellHeight;
-  const context = canvas.getContext("2d");
-  if (!context) return;
-  context.imageSmoothingEnabled = false;
-  for (const [index, frame] of frames.entries()) {
-    const x = index * cellWidth + Math.floor((cellWidth - frame.source.w) / 2);
-    const y = Math.floor((cellHeight - frame.source.h) / 2);
-    context.drawImage(
-      frame.image,
-      frame.source.x,
-      frame.source.y,
-      frame.source.w,
-      frame.source.h,
-      x,
-      y,
-      frame.source.w,
-      frame.source.h,
-    );
-  }
-  downloadCanvasPng(canvas, filename);
-}
-
 function FrameSequenceRunner({ pack, group }: { pack: ArtPack; group: ArtSampleGroup }) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const frameRef = useRef(0);
@@ -1957,10 +1929,12 @@ function FrameSequenceRunner({ pack, group }: { pack: ArtPack; group: ArtSampleG
   const [frame, setFrame] = useState(0);
   const [playing, setPlaying] = useState(true);
   const [speed, setSpeed] = useState(1);
-  const [scale, setScale] = useState(3);
   const [flip, setFlip] = useState(false);
-  const [background, setBackground] = useState("#15171c");
   const [loadFailed, setLoadFailed] = useState(false);
+  const zoomRef = useRef(1);
+  const panRef = useRef({ x: 0, y: 0 });
+  const dragRef = useRef<{ startX: number; startY: number; startPanX: number; startPanY: number } | null>(null);
+  const background = "#15171c";
 
   useEffect(() => {
     frameRef.current = 0;
@@ -1968,7 +1942,67 @@ function FrameSequenceRunner({ pack, group }: { pack: ArtPack; group: ArtSampleG
     setPlaying(true);
     setLoadedFrames([]);
     setLoadFailed(false);
+    zoomRef.current = 1;
+    panRef.current = { x: 0, y: 0 };
   }, [group.id]);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const handleWheel = (event: WheelEvent) => {
+      event.preventDefault();
+      const rect = canvas.getBoundingClientRect();
+      const scaleX = canvas.width / rect.width;
+      const scaleY = canvas.height / rect.height;
+      const cursorX = (event.clientX - rect.left) * scaleX - canvas.width / 2;
+      const cursorY = (event.clientY - rect.top) * scaleY - canvas.height / 2;
+      const factor = event.deltaY < 0 ? 1.1 : 1 / 1.1;
+      const oldZoom = zoomRef.current;
+      const newZoom = Math.min(16, Math.max(0.2, oldZoom * factor));
+      const actual = newZoom / oldZoom;
+      zoomRef.current = newZoom;
+      panRef.current = {
+        x: (panRef.current.x - cursorX) * actual + cursorX,
+        y: (panRef.current.y - cursorY) * actual + cursorY,
+      };
+    };
+    canvas.addEventListener("wheel", handleWheel, { passive: false });
+    return () => canvas.removeEventListener("wheel", handleWheel);
+  }, []);
+
+  function handlePointerDown(event: ReactPointerEvent<HTMLCanvasElement>) {
+    event.currentTarget.setPointerCapture(event.pointerId);
+    dragRef.current = {
+      startX: event.clientX,
+      startY: event.clientY,
+      startPanX: panRef.current.x,
+      startPanY: panRef.current.y,
+    };
+  }
+
+  function handlePointerMove(event: ReactPointerEvent<HTMLCanvasElement>) {
+    if (!dragRef.current) return;
+    const canvas = event.currentTarget;
+    const rect = canvas.getBoundingClientRect();
+    const scaleX = canvas.width / rect.width;
+    const scaleY = canvas.height / rect.height;
+    panRef.current = {
+      x: dragRef.current.startPanX + (event.clientX - dragRef.current.startX) * scaleX,
+      y: dragRef.current.startPanY + (event.clientY - dragRef.current.startY) * scaleY,
+    };
+  }
+
+  function handlePointerUp(event: ReactPointerEvent<HTMLCanvasElement>) {
+    if (event.currentTarget.hasPointerCapture(event.pointerId)) {
+      event.currentTarget.releasePointerCapture(event.pointerId);
+    }
+    dragRef.current = null;
+  }
+
+  function resetView() {
+    zoomRef.current = 1;
+    panRef.current = { x: 0, y: 0 };
+  }
 
   useEffect(() => {
     let cancelled = false;
@@ -2019,17 +2053,17 @@ function FrameSequenceRunner({ pack, group }: { pack: ArtPack; group: ArtSampleG
 
       if (loadedFrame && !loadFailed) {
         const source = loadedFrame.source;
-        const ratio = Math.min(
-          scale,
+        const fitRatio = Math.min(
           (drawingCanvas.width * 0.82) / stageWidth,
           (drawingCanvas.height * 0.74) / stageHeight,
         );
+        const ratio = fitRatio * zoomRef.current;
         const stageW = stageWidth * ratio;
         const stageH = stageHeight * ratio;
         const w = source.w * ratio;
         const h = source.h * ratio;
-        const stageX = (drawingCanvas.width - stageW) / 2;
-        const stageY = (drawingCanvas.height - stageH) / 2 - 8;
+        const stageX = (drawingCanvas.width - stageW) / 2 + panRef.current.x;
+        const stageY = (drawingCanvas.height - stageH) / 2 - 8 + panRef.current.y;
         const x = stageX + (stageW - w) / 2;
         const y = stageY + stageH - h;
         drawingContext.imageSmoothingEnabled = false;
@@ -2065,19 +2099,24 @@ function FrameSequenceRunner({ pack, group }: { pack: ArtPack; group: ArtSampleG
 
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [background, flip, group.label, loadFailed, loadedFrames, pack.title, playing, scale, speed]);
+  }, [flip, group.label, loadFailed, loadedFrames, pack.title, playing, speed]);
 
   const frameCount = Math.max(1, loadedFrames.length || group.samples.length);
-
-  function exportSequence() {
-    const stem = safeFileStem(`${pack.title}-${group.label}-sequence`);
-    exportLoadedSequenceFramesAsStrip(loadedFrames, `${stem}.png`);
-  }
 
   return (
     <div className="art-runner">
       <div className="art-runner-stage sequence-stage">
-        <canvas ref={canvasRef} width={720} height={420} />
+        <canvas
+          ref={canvasRef}
+          width={720}
+          height={420}
+          className="zoomable-canvas"
+          onPointerDown={handlePointerDown}
+          onPointerMove={handlePointerMove}
+          onPointerUp={handlePointerUp}
+          onPointerCancel={handlePointerUp}
+          onDoubleClick={resetView}
+        />
         <aside className="animation-overview" aria-label="Frame sequence files">
           <div className="animation-overview-head">
             <span>{group.samples.length} files</span>
@@ -2136,25 +2175,12 @@ function FrameSequenceRunner({ pack, group }: { pack: ArtPack; group: ArtSampleG
           />
           <span>{speed.toFixed(2)}x</span>
         </label>
-        <label>
-          Scale
-          <input
-            aria-label="Sprite preview scale"
-            type="range"
-            min="1"
-            max="8"
-            value={scale}
-            onChange={(event) => setScale(Number(event.target.value))}
-          />
-          <span>{scale}x</span>
-        </label>
         <label className="inline-check">
           <input type="checkbox" checked={flip} onChange={(event) => setFlip(event.target.checked)} />
           Flip
         </label>
-        <input aria-label="Canvas background" type="color" value={background} onChange={(event) => setBackground(event.target.value)} />
-        <button type="button" onClick={exportSequence} disabled={loadedFrames.length <= 1}>
-          Export PNG
+        <button type="button" onClick={resetView}>
+          Reset view
         </button>
       </div>
     </div>
