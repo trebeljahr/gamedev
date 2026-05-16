@@ -15,7 +15,7 @@ import {
 } from "@/components/LibraryHeroShowreel";
 import { LibraryAssetTracks } from "@/components/LibraryAssetTracks";
 import { isLikelyMarketingPreviewPath, isLikelySpriteSheetPath } from "@/lib/media-inference";
-import type { ArtPack, ArtSample, ArtTheme, MusicTrack } from "@/lib/media";
+import type { ArtPack, ArtSample, ArtTheme, MusicTrack, SoundCollection, SoundSample } from "@/lib/media";
 
 export const metadata: Metadata = pageMetadata({
   title: "Free Game Assets Library for Prototypes",
@@ -126,23 +126,58 @@ const FEATURED_MODEL_PICKS = [
   {
     packId: "kaykit/medieval-builder-pack",
     name: "castle",
-    position: [-1.2, -0.74, -0.08],
-    rotation: [0, 0.5, 0],
-    scale: 0.62,
+    position: [-0.4, -0.78, -1.6],
+    rotation: [0, 0.45, 0],
+    scale: 0.4,
+  },
+  {
+    packId: "kaykit/medieval-builder-pack",
+    name: "barracks",
+    position: [-2.9, -0.78, -0.4],
+    rotation: [0, 0.95, 0],
+    scale: 0.42,
+  },
+  {
+    packId: "kaykit/adventurers",
+    name: "Barbarian",
+    position: [1.6, -0.78, 0.5],
+    rotation: [0, -0.55, 0],
+    scale: 0.34,
+  },
+  {
+    packId: "kenney/cube-pets",
+    name: "animal-bunny",
+    position: [-1.7, -0.78, 1.7],
+    rotation: [0, 0.6, 0],
+    scale: 0.35,
+  },
+  {
+    packId: "kenney/cube-pets",
+    name: "animal-cat",
+    position: [2.85, -0.78, 1.85],
+    rotation: [0, -0.85, 0],
+    scale: 0.38,
   },
   {
     packId: "quaternius/spaceships-by-quaternius",
     name: "Spaceship3",
-    position: [0.82, 0.44, -0.3],
-    rotation: [-0.12, -0.72, 0.08],
+    position: [3.3, 1.5, -0.1],
+    rotation: [-0.18, -0.85, 0.08],
     scale: 0.16,
   },
   {
     packId: "quaternius/animated-robot-oct-2018",
     name: "Robot",
-    position: [1.38, -0.74, 0.48],
-    rotation: [0, -0.35, 0],
-    scale: 0.27,
+    position: [3.8, -0.78, 0.6],
+    rotation: [0, -0.55, 0],
+    scale: 0.24,
+  },
+  {
+    packId: "kaykit/adventurers",
+    name: "Mage",
+    position: [-2.2, -0.78, 1.0],
+    rotation: [0, 0.55, 0],
+    scale: 0.32,
   },
 ] satisfies Array<{
   packId: string;
@@ -152,10 +187,34 @@ const FEATURED_MODEL_PICKS = [
   scale: number;
 }>;
 
-const FEATURED_MUSIC_TITLES = [
-  "Bittersweet",
-  "Black Vortex",
-  "Comfortable Mystery 2",
+type FeaturedSoundPick = {
+  kind: "music" | "sfx";
+  tone: "music" | "jingle" | "sfx";
+  collectionLabel: string;
+  matchTitle?: string;
+  matchSource?: string;
+  matchPath?: string;
+};
+
+const FEATURED_SOUND_PICKS: FeaturedSoundPick[] = [
+  {
+    kind: "music",
+    tone: "music",
+    collectionLabel: "Kevin MacLeod",
+    matchTitle: "Black Vortex",
+  },
+  {
+    kind: "music",
+    tone: "jingle",
+    collectionLabel: "Kenney Jingles",
+    matchSource: "Kenney",
+  },
+  {
+    kind: "sfx",
+    tone: "sfx",
+    collectionLabel: "Combat SFX",
+    matchPath: "sounds/combat/",
+  },
 ];
 
 const TRACK_MODEL_PICKS = [
@@ -326,52 +385,122 @@ function selectTrackSprites(): LibrarySpritePreview[] {
   return selectSpritesForSlots(TRACK_SPRITE_SLOTS);
 }
 
-function soundPreviewForTrack(track: MusicTrack): LibrarySoundPreview | undefined {
-  const audio = audioAnalysisItems[track.path];
-  if (!audio?.loudness?.length) return undefined;
+function audioFor(path: string): { duration: number; loudness: number[] } | undefined {
+  const entry = audioAnalysisItems[path];
+  if (!entry?.loudness?.length) return undefined;
+  return { duration: entry.duration ?? 0, loudness: entry.loudness };
+}
 
+function previewFromMusic(
+  track: MusicTrack,
+  tone: "music" | "jingle",
+  collectionLabel: string,
+): LibrarySoundPreview | undefined {
+  const audio = audioFor(track.path);
+  if (!audio) return undefined;
   return {
     title: track.title,
     source: track.source,
     path: track.path,
-    duration: audio.duration ?? 0,
+    duration: audio.duration,
     loudness: audio.loudness,
+    tone,
+    collectionLabel,
   };
 }
 
-function selectSoundsFromTitles(titles: readonly string[], limit: number): LibrarySoundPreview[] {
-  const byTitle = new Map(catalog.musicTracks.map((track) => [track.title, track]));
-  const picks = titles
-    .map((title) => byTitle.get(title))
-    .filter(Boolean)
-    .map((track) => soundPreviewForTrack(track as MusicTrack))
-    .filter(Boolean) as LibrarySoundPreview[];
+function previewFromSound(
+  sample: SoundSample,
+  collection: SoundCollection,
+  collectionLabel: string,
+): LibrarySoundPreview | undefined {
+  const audio = audioFor(sample.path);
+  if (!audio) return undefined;
+  return {
+    title: sample.label,
+    source: collection.source,
+    path: sample.path,
+    duration: audio.duration,
+    loudness: audio.loudness,
+    tone: "sfx",
+    collectionLabel,
+  };
+}
 
-  if (picks.length < limit) {
-    for (const track of catalog.musicTracks) {
-      if (picks.some((pick) => pick.path === track.path)) continue;
-      const preview = soundPreviewForTrack(track);
-      if (!preview) continue;
-      picks.push(preview);
-      if (picks.length === limit) break;
+function pickMusic(pick: FeaturedSoundPick): LibrarySoundPreview | undefined {
+  const tracks = catalog.musicTracks;
+  const candidates = pick.matchTitle
+    ? tracks.filter((track) => track.title === pick.matchTitle)
+    : pick.matchSource
+      ? tracks.filter((track) => track.source === pick.matchSource)
+      : tracks;
+  for (const track of candidates) {
+    const preview = previewFromMusic(track, pick.tone === "jingle" ? "jingle" : "music", pick.collectionLabel);
+    if (preview) return preview;
+  }
+  return undefined;
+}
+
+function pickSfx(pick: FeaturedSoundPick): LibrarySoundPreview | undefined {
+  for (const collection of catalog.soundCollections) {
+    if (pick.matchPath && !collection.path.includes(pick.matchPath)) continue;
+    for (const sample of collection.samples) {
+      const preview = previewFromSound(sample, collection, pick.collectionLabel);
+      if (preview) return preview;
     }
   }
-
-  const seen = new Set<string>();
-  return picks.filter((sample) => {
-    const key = sample.path;
-    if (seen.has(key)) return false;
-    seen.add(key);
-    return true;
-  }).slice(0, limit);
+  return undefined;
 }
 
 function selectFeaturedSounds(): LibrarySoundPreview[] {
-  return selectSoundsFromTitles(FEATURED_MUSIC_TITLES, 3);
+  const picks: LibrarySoundPreview[] = [];
+  const seen = new Set<string>();
+
+  for (const pick of FEATURED_SOUND_PICKS) {
+    const preview = pick.kind === "music" ? pickMusic(pick) : pickSfx(pick);
+    if (preview && !seen.has(preview.path)) {
+      seen.add(preview.path);
+      picks.push(preview);
+    }
+  }
+
+  if (picks.length < 3) {
+    for (const track of catalog.musicTracks) {
+      if (seen.has(track.path)) continue;
+      const preview = previewFromMusic(track, "music", track.source);
+      if (!preview) continue;
+      seen.add(track.path);
+      picks.push(preview);
+      if (picks.length === 3) break;
+    }
+  }
+
+  return picks.slice(0, 3);
 }
 
 function selectTrackSounds(): LibrarySoundPreview[] {
-  return selectSoundsFromTitles(TRACK_MUSIC_TITLES, 5);
+  const picks: LibrarySoundPreview[] = [];
+  const seen = new Set<string>();
+  const byTitle = new Map(catalog.musicTracks.map((track) => [track.title, track]));
+  for (const title of TRACK_MUSIC_TITLES) {
+    const track = byTitle.get(title);
+    if (!track) continue;
+    const preview = previewFromMusic(track, "music", track.source);
+    if (!preview || seen.has(preview.path)) continue;
+    seen.add(preview.path);
+    picks.push(preview);
+  }
+  if (picks.length < 5) {
+    for (const track of catalog.musicTracks) {
+      if (seen.has(track.path)) continue;
+      const preview = previewFromMusic(track, "music", track.source);
+      if (!preview) continue;
+      seen.add(track.path);
+      picks.push(preview);
+      if (picks.length === 5) break;
+    }
+  }
+  return picks.slice(0, 5);
 }
 
 export default function HomePage() {

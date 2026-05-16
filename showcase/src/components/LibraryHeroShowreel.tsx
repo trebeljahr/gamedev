@@ -1,10 +1,11 @@
 "use client";
 
-import { useEffect, useRef, useState, type CSSProperties } from "react";
+import { useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import {
   LandingModelBackdrop,
   type LandingModelPreviewItem,
 } from "@/components/LandingModelBackdrop";
+import { waveformPath } from "@/lib/loudness";
 
 export type LibraryModelPreview = LandingModelPreviewItem;
 
@@ -22,46 +23,71 @@ export type LibrarySpritePreview = {
   path: string;
 };
 
+export type LibrarySoundTone = "music" | "sfx" | "jingle";
+
 export type LibrarySoundPreview = {
   title: string;
   source: string;
   path: string;
   duration: number;
   loudness: number[];
+  tone: LibrarySoundTone;
+  collectionLabel: string;
 };
 
-function parseFrameLayout(
+function parseSingleRowLayout(
   path: string,
   image: HTMLImageElement,
-): { cols: number; rows: number } {
+): { cols: number; row: number; rows: number } {
   const width = image.naturalWidth || image.width;
   const height = image.naturalHeight || image.height;
   const lower = path.toLowerCase();
+
   const strip = lower.match(/strip[\s_-]*(\d{1,2})/);
-  if (strip) return { cols: Math.max(2, Number(strip[1])), rows: 1 };
+  if (strip) {
+    const cols = Math.max(2, Number(strip[1]));
+    return { cols, rows: 1, row: 0 };
+  }
 
   const sizeHint = lower.match(/(^|[^0-9])(\d{2,4})\s*x\s*(\d{2,4})([^0-9]|$)/);
   if (sizeHint) {
     const frameWidth = Number(sizeHint[2]);
     const frameHeight = Number(sizeHint[3]);
     if (frameWidth > 0 && frameHeight > 0 && width % frameWidth === 0 && height % frameHeight === 0) {
-      return {
-        cols: Math.max(1, Math.min(32, width / frameWidth)),
-        rows: Math.max(1, Math.min(24, height / frameHeight)),
-      };
+      const cols = Math.max(1, Math.min(32, width / frameWidth));
+      const rows = Math.max(1, Math.min(24, height / frameHeight));
+      return { cols, rows, row: pickDemoRow(rows, path) };
     }
   }
 
   const wideRatio = width / Math.max(1, height);
   const tallRatio = height / Math.max(1, width);
-  if (wideRatio >= 1.75) return { cols: Math.max(2, Math.min(32, Math.round(wideRatio))), rows: 1 };
-  if (tallRatio >= 1.75) return { cols: 1, rows: Math.max(2, Math.min(24, Math.round(tallRatio))) };
-
-  if (/sprite\s*sheet|spritesheet|sheet/.test(lower)) {
-    return width >= height ? { cols: 4, rows: 2 } : { cols: 2, rows: 4 };
+  if (wideRatio >= 1.75) {
+    return { cols: Math.max(2, Math.min(32, Math.round(wideRatio))), rows: 1, row: 0 };
+  }
+  if (tallRatio >= 1.75) {
+    const rows = Math.max(2, Math.min(24, Math.round(tallRatio)));
+    return { cols: 1, rows, row: pickDemoRow(rows, path) };
   }
 
-  return { cols: 1, rows: 1 };
+  if (/sprite\s*sheet|spritesheet|sheet/.test(lower)) {
+    const wide = width >= height;
+    const cols = wide ? 4 : 2;
+    const rows = wide ? 2 : 4;
+    return { cols, rows, row: pickDemoRow(rows, path) };
+  }
+
+  return { cols: 1, rows: 1, row: 0 };
+}
+
+function pickDemoRow(rows: number, path: string): number {
+  if (rows <= 1) return 0;
+  let hash = 2166136261;
+  for (let i = 0; i < path.length; i += 1) {
+    hash ^= path.charCodeAt(i);
+    hash = Math.imul(hash, 16777619);
+  }
+  return (hash >>> 0) % rows;
 }
 
 function drawChecker(context: CanvasRenderingContext2D, width: number, height: number) {
@@ -79,21 +105,18 @@ function drawChecker(context: CanvasRenderingContext2D, width: number, height: n
 function drawFrame(
   context: CanvasRenderingContext2D,
   image: HTMLImageElement,
-  layout: { cols: number; rows: number },
+  layout: { cols: number; row: number; rows: number },
   frame: number,
   width: number,
   height: number,
 ) {
   const imageWidth = image.naturalWidth || image.width;
   const imageHeight = image.naturalHeight || image.height;
-  const total = Math.max(1, layout.cols * layout.rows);
-  const safeFrame = frame % total;
-  const col = safeFrame % layout.cols;
-  const row = Math.floor(safeFrame / layout.cols);
+  const safeFrame = ((frame % layout.cols) + layout.cols) % layout.cols;
   const sourceWidth = Math.floor(imageWidth / layout.cols);
   const sourceHeight = Math.floor(imageHeight / layout.rows);
-  const sourceX = col * sourceWidth;
-  const sourceY = row * sourceHeight;
+  const sourceX = safeFrame * sourceWidth;
+  const sourceY = layout.row * sourceHeight;
   const maxWidth = width * 0.92;
   const maxHeight = height * 0.88;
   const scale = Math.min(maxWidth / sourceWidth, maxHeight / sourceHeight);
@@ -140,15 +163,14 @@ export function SpriteLoop({ sample, index }: { sample: LibrarySpritePreview; in
 
     image.onload = () => {
       if (cancelled) return;
-      const layout = parseFrameLayout(sample.path, image);
-      const total = Math.max(1, layout.cols * layout.rows);
-      setFrameCount(total);
+      const layout = parseSingleRowLayout(sample.path, image);
+      setFrameCount(layout.cols);
       setFailed(false);
 
       function tick(time: number) {
         drawChecker(drawingContext, drawingCanvas.width, drawingCanvas.height);
         if (time - lastFrame > 1000 / (sample.kind === "effect" ? 14 : 10)) {
-          frame = (frame + 1) % total;
+          frame = (frame + 1) % layout.cols;
           lastFrame = time;
         }
         drawFrame(drawingContext, image, layout, frame, drawingCanvas.width, drawingCanvas.height);
@@ -209,6 +231,31 @@ export function SpriteLoop({ sample, index }: { sample: LibrarySpritePreview; in
   );
 }
 
+function SoundEnvelope({ sound, index }: { sound: LibrarySoundPreview; index: number }) {
+  const path = useMemo(() => waveformPath(sound.loudness), [sound.loudness]);
+
+  return (
+    <div
+      className="library-signal-row"
+      data-tone={sound.tone}
+      style={{ "--signal-delay": `${index * 140}ms` } as CSSProperties}
+    >
+      <div className="library-signal-meta">
+        <strong>{sound.title}</strong>
+        <small>
+          {sound.collectionLabel} · {formatDuration(sound.duration)}
+        </small>
+      </div>
+      <div className="library-signal-envelope" aria-hidden="true">
+        <svg viewBox="0 0 1000 100" preserveAspectRatio="none">
+          <line className="library-signal-midline" x1="0" y1="50" x2="1000" y2="50" />
+          <path className="library-signal-fill" d={path} />
+        </svg>
+      </div>
+    </div>
+  );
+}
+
 export function SoundSignal({
   sounds,
   limit = 3,
@@ -222,36 +269,15 @@ export function SoundSignal({
   if (rows.length === 0) return null;
 
   return (
-    <div className="library-sound-signal" aria-label="Static waveform previews from analyzed music tracks">
+    <div className="library-sound-signal" aria-label="Music and sound effect loudness envelopes">
       <div className="library-tile-chip" data-tone="music">
         <span>Audio</span>
         <strong>{chipLabel}</strong>
       </div>
       <div className="library-signal-rows">
-        {rows.map((sound) => {
-          return (
-            <div className="library-signal-row" key={sound.path}>
-              <div>
-                <strong>{sound.title}</strong>
-                <small>
-                  {sound.source} · {formatDuration(sound.duration)}
-                </small>
-              </div>
-              <div className="library-signal-bars" aria-hidden="true">
-                {sound.loudness.map((level, index) => (
-                  <i
-                    key={index}
-                    style={
-                      {
-                        "--bar-height": `${Math.round(level * 100)}%`,
-                      } as CSSProperties
-                    }
-                  />
-                ))}
-              </div>
-            </div>
-          );
-        })}
+        {rows.map((sound, index) => (
+          <SoundEnvelope key={sound.path} sound={sound} index={index} />
+        ))}
       </div>
     </div>
   );
@@ -259,6 +285,8 @@ export function SoundSignal({
 
 function formatDuration(seconds: number): string {
   if (!Number.isFinite(seconds) || seconds <= 0) return "analyzed";
+  if (seconds < 10) return `${seconds.toFixed(1)}s`;
+  if (seconds < 60) return `${Math.round(seconds)}s`;
   const minutes = Math.floor(seconds / 60);
   const remaining = Math.round(seconds % 60).toString().padStart(2, "0");
   return `${minutes}:${remaining}`;

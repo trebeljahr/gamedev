@@ -1,6 +1,6 @@
 "use client";
 
-import { Bounds, ContactShadows, Environment } from "@react-three/drei";
+import { ContactShadows, Environment } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Component, Suspense, useRef, type ReactNode } from "react";
 import type { Group } from "three";
@@ -27,7 +27,7 @@ export function LandingModelBackdrop({
   return (
     <div className="landing-model-backdrop" aria-hidden="true">
       <Canvas
-        camera={{ position: [4.4, 3.1, 7.6], fov: 34, near: 0.1, far: 80 }}
+        camera={{ position: [3.4, 2.4, 5.6], fov: 38, near: 0.1, far: 80 }}
         dpr={[1, 1.75]}
         shadows
         gl={{ antialias: true, alpha: true }}
@@ -42,15 +42,13 @@ export function LandingModelBackdrop({
         />
         <hemisphereLight args={["#f7f0d4", "#242025", 0.55]} />
         <Suspense fallback={null}>
-          <Bounds fit clip margin={1.18}>
-            <ModelCluster models={models} />
-          </Bounds>
+          <ModelCluster models={models} />
           <ContactShadows
             position={[0, -0.78, 0]}
-            opacity={0.34}
-            scale={8}
-            blur={2.7}
-            far={3}
+            opacity={0.32}
+            scale={14}
+            blur={2.9}
+            far={3.4}
           />
           <Environment preset="warehouse" environmentIntensity={0.45} />
         </Suspense>
