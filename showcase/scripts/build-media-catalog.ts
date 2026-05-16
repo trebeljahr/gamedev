@@ -103,13 +103,13 @@ const audioAnalysisPath = join(__dirname, "..", "public", "audio-analysis.json")
 const outPath = join(__dirname, "..", "public", "media-catalog.json");
 
 const NON_COMMERCIAL_ART_PACKS = new Set([
-  "bdragon1727__fire-pixel-bullet-16x16",
-  "bdragon1727__free-smoke-fx-pixel-2",
+  "bdragon1727-fire-pixel-bullet-16x16",
+  "bdragon1727-free-smoke-fx-pixel-2",
 ]);
 
 const NON_COMMERCIAL_PATH_PATTERNS = new Set([
-  "3D/gltf/buster_drone/**",
-  "3D/glb/model_{number}{letter}_-_*.glb",
+  "3D/gltf/buster-drone/**",
+  "3D/glb/model-{number}{letter}-*.glb",
 ]);
 
 async function readOptionalJson<T>(path: string, fallback: T): Promise<T> {

@@ -56,7 +56,7 @@
     "mixamo": {
       "name": "Mixamo (Adobe)",
       "url": "https://www.mixamo.com/",
-      "license": "Adobe Mixamo Terms \u2014 free for commercial use with an Adobe account. No redistribution of raw assets.",
+      "license": "Adobe Mixamo Terms — free for commercial use with an Adobe account. No redistribution of raw assets.",
       "license_url": "https://helpx.adobe.com/creative-cloud/faq/mixamo-faq.html",
       "attribution_required": false,
       "commercial_use": true,
@@ -66,7 +66,7 @@
     "adobe-fuse": {
       "name": "Adobe Fuse CC (discontinued)",
       "url": "https://www.adobe.com/products/fuse.html",
-      "license": "Adobe Fuse Terms \u2014 free for commercial use in projects; the product is discontinued but previously generated characters remain usable.",
+      "license": "Adobe Fuse Terms — free for commercial use in projects; the product is discontinued but previously generated characters remain usable.",
       "license_url": "https://helpx.adobe.com/fuse/kb/discontinued-features-fuse.html",
       "attribution_required": false,
       "commercial_use": true,
@@ -101,7 +101,7 @@
       "attribution_required": "depends_on_sound",
       "commercial_use": "depends_on_sound",
       "notes": "Freesound files are uploaded by individual users with varying CC licenses. Each sound must be looked up individually at https://freesound.org/s/{ID}/ where {ID} is the numeric prefix in the filename. _readme_and_license.txt files in some pack folders provide the exact license per sound.",
-      "identification": "Sounds with the pattern {numeric-id}__{username}__{description}.{ext} come from Freesound. Example: '384912__ali_6868__arrow-impact-3.mp3' \u2192 https://freesound.org/s/384912/ by user ali_6868."
+      "identification": "Sounds with the pattern {numeric-id}__{username}__{description}.{ext} come from Freesound. Example: '384912__ali_6868__arrow-impact-3.mp3' → https://freesound.org/s/384912/ by user ali_6868."
     },
     "pixabay": {
       "name": "Pixabay",
@@ -120,7 +120,7 @@
       "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
       "attribution_required": true,
       "commercial_use": true,
-      "notes": "Kevin MacLeod's royalty-free music is free for commercial use with attribution. Standard attribution format: '\"{Song Title}\" Kevin MacLeod (incompetech.com) \u2014 Licensed under Creative Commons: By Attribution 4.0 License \u2014 http://creativecommons.org/licenses/by/4.0/'. Verify each title at incompetech.com.",
+      "notes": "Kevin MacLeod's royalty-free music is free for commercial use with attribution. Standard attribution format: '\"{Song Title}\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License — http://creativecommons.org/licenses/by/4.0/'. Verify each title at incompetech.com.",
       "identification": "Named music tracks with title-case filenames and no trailing numeric IDs: 'Ancient Winds.mp3', 'Bittersweet.mp3', 'Black Vortex.mp3', 'Clash Defiant.mp3', 'Comfortable Mystery 2.mp3', 'Corruption.mp3', 'Magic Forest.mp3', 'Midnight Tale.mp3', 'Peppers Theme.mp3', 'Stay the Course.mp3'."
     },
     "unknown": {
@@ -130,7 +130,7 @@
       "license_url": null,
       "attribution_required": "unknown",
       "commercial_use": "unknown",
-      "notes": "A handful of files don't match a known pattern. Verify each source before using commercially. Common fallbacks: search the filename on Google, Sketchfab, Poly Pizza, Freesound. CC0-prefixed filenames (e.g. 'cc0__smooth_hammerhead_shark.glb') are self-declared CC0 \u2014 still worth confirming the original upload."
+      "notes": "A handful of files don't match a known pattern. Verify each source before using commercially. Common fallbacks: search the filename on Google, Sketchfab, Poly Pizza, Freesound. CC0-prefixed filenames (e.g. 'cc0__smooth_hammerhead_shark.glb') are self-declared CC0 — still worth confirming the original upload."
     }
   },
   "mappings": [
@@ -178,9 +178,9 @@
       "source": "cmu-mocap"
     },
     {
-      "path_pattern": "3D/fbx/Some Animals-fbx/**",
+      "path_pattern": "3D/fbx/some-animals-fbx/**",
       "source": "poly-pizza",
-      "notes": "Low-poly animals (Chicken, Deer, Dog, Kitty, Penguin, Tiger) named with '_001' suffix. These are by Quaternius (Some Animals pack) \u2014 https://poly.pizza/bundle/Some-Animals-xVD2C1hxdo \u2014 CC0.",
+      "notes": "Low-poly animals (Chicken, Deer, Dog, Kitty, Penguin, Tiger) named with '_001' suffix. These are by Quaternius (Some Animals pack) — https://poly.pizza/bundle/Some-Animals-xVD2C1hxdo — CC0.",
       "likely_creator": "Quaternius"
     },
     {
@@ -222,7 +222,7 @@
     {
       "path_pattern": "3D/glb/animals-glb/cc0__*.glb",
       "source": "unknown",
-      "notes": "Self-declared CC0 via the filename prefix. Likely from Sketchfab's CC0 collection \u2014 search the title to confirm author. Common example: 'CC0 Smooth Hammerhead Shark' and similar fish by Digital Life on Sketchfab."
+      "notes": "Self-declared CC0 via the filename prefix. Likely from Sketchfab's CC0 collection — search the title to confirm author. Common example: 'CC0 Smooth Hammerhead Shark' and similar fish by Digital Life on Sketchfab."
     },
     {
       "path_pattern": "3D/glb/animals-glb/baryonix-_walkeri.glb",
@@ -240,192 +240,192 @@
       "notes": "Files with UUID/hex filenames are Sketchfab asset IDs. Search the ID on Sketchfab to find the original page."
     },
     {
-      "path_pattern": "3D/fbx/Ultimate Space Kit/**",
+      "path_pattern": "3D/fbx/ultimate-space-kit/**",
       "source": "quaternius",
-      "notes": "Ultimate Space Kit by Quaternius \u2014 https://quaternius.com/packs/ultimatespacekit.html \u2014 CC0."
+      "notes": "Ultimate Space Kit by Quaternius — https://quaternius.com/packs/ultimatespacekit.html — CC0."
     },
     {
-      "path_pattern": "3D/gltf/Ultimate Space Kit/**",
+      "path_pattern": "3D/gltf/ultimate-space-kit/**",
       "source": "quaternius"
     },
     {
-      "path_pattern": "3D/obj/Ultimate Space Kit/**",
+      "path_pattern": "3D/obj/ultimate-space-kit/**",
       "source": "quaternius"
     },
     {
-      "path_pattern": "3D/glb/Ultimate Space Kit-glb/**",
+      "path_pattern": "3D/glb/ultimate-space-kit-glb/**",
       "source": "poly-pizza",
       "likely_creator": "Quaternius",
       "notes": "Poly Pizza bundle URL: https://poly.pizza/bundle/Ultimate-Space-Kit-hugfwnFCg5 (CC0)."
     },
     {
-      "path_pattern": "3D/glb/100 Avatars R1-glb/**",
+      "path_pattern": "3D/glb/100-avatars-r1-glb/**",
       "source": "poly-pizza",
       "likely_creator": "Quaternius",
-      "notes": "100 Avatars Pack by Quaternius \u2014 CC0. https://quaternius.com/packs/100avatars.html"
+      "notes": "100 Avatars Pack by Quaternius — CC0. https://quaternius.com/packs/100avatars.html"
     },
     {
-      "path_pattern": "3D/glb/Animal Kit-glb/**",
+      "path_pattern": "3D/glb/animal-kit-glb/**",
       "source": "poly-pizza",
       "likely_creator": "Quaternius",
-      "notes": "Animal Kit by Quaternius \u2014 CC0. https://quaternius.com/packs/animalpackultimate.html"
+      "notes": "Animal Kit by Quaternius — CC0. https://quaternius.com/packs/animalpackultimate.html"
     },
     {
-      "path_pattern": "3D/glb/City Kit-glb/**",
+      "path_pattern": "3D/glb/city-kit-glb/**",
       "source": "poly-pizza",
       "likely_creator": "Quaternius or Kenney",
-      "notes": "Verify on poly.pizza \u2014 there's a Quaternius City Kit and Kenney's City Kit."
+      "notes": "Verify on poly.pizza — there's a Quaternius City Kit and Kenney's City Kit."
     },
     {
-      "path_pattern": "3D/glb/City Pack-glb/**",
+      "path_pattern": "3D/glb/city-pack-glb/**",
       "source": "poly-pizza",
       "likely_creator": "Kay Lousberg",
-      "notes": "City Pack / KayKit - City Builder by Kay Lousberg \u2014 CC0. https://kaylousberg.itch.io/kaykit-city"
+      "notes": "City Pack / KayKit - City Builder by Kay Lousberg — CC0. https://kaylousberg.itch.io/kaykit-city"
     },
     {
-      "path_pattern": "3D/glb/Coral Reef Kit-glb/**",
+      "path_pattern": "3D/glb/coral-reef-kit-glb/**",
       "source": "poly-pizza",
       "likely_creator": "Quaternius",
-      "notes": "Coral Reef Pack by Quaternius \u2014 CC0."
+      "notes": "Coral Reef Pack by Quaternius — CC0."
     },
     {
-      "path_pattern": "3D/glb/Cosmetic Pack Two-glb/**",
+      "path_pattern": "3D/glb/cosmetic-pack-two-glb/**",
       "source": "poly-pizza",
       "likely_creator": "Kay Lousberg",
-      "notes": "Likely Kay Lousberg's cosmetic pack \u2014 CC0. Verify on poly.pizza."
+      "notes": "Likely Kay Lousberg's cosmetic pack — CC0. Verify on poly.pizza."
     },
     {
-      "path_pattern": "3D/glb/Crystal Pack-glb/**",
+      "path_pattern": "3D/glb/crystal-pack-glb/**",
       "source": "poly-pizza",
       "likely_creator": "Quaternius",
-      "notes": "Crystal Pack by Quaternius \u2014 CC0."
+      "notes": "Crystal Pack by Quaternius — CC0."
     },
     {
-      "path_pattern": "3D/glb/Cube World Kit-glb/**",
+      "path_pattern": "3D/glb/cube-world-kit-glb/**",
       "source": "poly-pizza",
       "likely_creator": "Quaternius",
-      "notes": "Cube World Kit \u2014 CC0. https://quaternius.com/packs/cubeworld.html"
+      "notes": "Cube World Kit — CC0. https://quaternius.com/packs/cubeworld.html"
     },
     {
-      "path_pattern": "3D/glb/Exploded Card pack-glb/**",
+      "path_pattern": "3D/glb/exploded-card-pack-glb/**",
       "source": "poly-pizza",
       "likely_creator": "Kay Lousberg",
-      "notes": "Exploded Card Pack \u2014 likely Kay Lousberg. Verify on poly.pizza."
+      "notes": "Exploded Card Pack — likely Kay Lousberg. Verify on poly.pizza."
     },
     {
-      "path_pattern": "3D/glb/FPS pack-glb/**",
+      "path_pattern": "3D/glb/fps-pack-glb/**",
       "source": "poly-pizza",
       "likely_creator": "Quaternius",
-      "notes": "FPS Pack by Quaternius \u2014 CC0."
+      "notes": "FPS Pack by Quaternius — CC0."
     },
     {
-      "path_pattern": "3D/glb/Furniture Kit-glb/**",
+      "path_pattern": "3D/glb/furniture-kit-glb/**",
       "source": "poly-pizza",
       "likely_creator": "Kay Lousberg or Quaternius",
       "notes": "Verify on poly.pizza."
     },
     {
-      "path_pattern": "3D/glb/Office Pack-glb/**",
+      "path_pattern": "3D/glb/office-pack-glb/**",
       "source": "poly-pizza",
       "likely_creator": "Kay Lousberg",
-      "notes": "KayKit Office Pack \u2014 CC0. https://kaylousberg.itch.io/"
+      "notes": "KayKit Office Pack — CC0. https://kaylousberg.itch.io/"
     },
     {
-      "path_pattern": "3D/glb/Pirate kit-glb/**",
+      "path_pattern": "3D/glb/pirate-kit-glb/**",
       "source": "poly-pizza",
       "likely_creator": "Kay Lousberg",
-      "notes": "KayKit Pirate Kit \u2014 CC0."
+      "notes": "KayKit Pirate Kit — CC0."
     },
     {
-      "path_pattern": "3D/glb/Platform Kit Revamped-glb/**",
+      "path_pattern": "3D/glb/platform-kit-revamped-glb/**",
       "source": "poly-pizza",
       "likely_creator": "Quaternius",
-      "notes": "Platformer Kit Revamped by Quaternius \u2014 CC0."
+      "notes": "Platformer Kit Revamped by Quaternius — CC0."
     },
     {
-      "path_pattern": "3D/glb/Premium Models-glb/**",
+      "path_pattern": "3D/glb/premium-models-glb/**",
       "source": "poly-pizza",
       "likely_creator": "Quaternius (Patreon Premium)",
-      "notes": "Quaternius has 'Premium' models available to Patreon supporters \u2014 still CC0 once released."
+      "notes": "Quaternius has 'Premium' models available to Patreon supporters — still CC0 once released."
     },
     {
-      "path_pattern": "3D/glb/Race kit-glb/**",
+      "path_pattern": "3D/glb/race-kit-glb/**",
       "source": "poly-pizza",
       "likely_creator": "Quaternius",
-      "notes": "Race Kit \u2014 CC0. Verify on poly.pizza."
+      "notes": "Race Kit — CC0. Verify on poly.pizza."
     },
     {
-      "path_pattern": "3D/glb/Scifi Turrets-glb/**",
+      "path_pattern": "3D/glb/scifi-turrets-glb/**",
       "source": "poly-pizza",
       "likely_creator": "Quaternius",
-      "notes": "Sci-fi Turrets Pack by Quaternius \u2014 CC0."
+      "notes": "Sci-fi Turrets Pack by Quaternius — CC0."
     },
     {
-      "path_pattern": "3D/glb/Signs pack-glb/**",
+      "path_pattern": "3D/glb/signs-pack-glb/**",
       "source": "poly-pizza",
       "likely_creator": "Kay Lousberg",
-      "notes": "Signs Pack \u2014 CC0."
+      "notes": "Signs Pack — CC0."
     },
     {
-      "path_pattern": "3D/glb/Small Camping Bundle-glb/**",
+      "path_pattern": "3D/glb/small-camping-bundle-glb/**",
       "source": "poly-pizza",
       "likely_creator": "Quaternius"
     },
     {
-      "path_pattern": "3D/glb/Small Platformer Kit-glb/**",
+      "path_pattern": "3D/glb/small-platformer-kit-glb/**",
       "source": "poly-pizza",
       "likely_creator": "Quaternius"
     },
     {
-      "path_pattern": "3D/glb/Stylized Nature MegaKit-glb/**",
+      "path_pattern": "3D/glb/stylized-nature-megakit-glb/**",
       "source": "poly-pizza",
       "likely_creator": "Quaternius",
-      "notes": "Stylized Nature MegaKit by Quaternius \u2014 CC0. https://quaternius.com/packs/stylizednaturemegakit.html"
+      "notes": "Stylized Nature MegaKit by Quaternius — CC0. https://quaternius.com/packs/stylizednaturemegakit.html"
     },
     {
-      "path_pattern": "3D/glb/Survival Kit-glb/**",
+      "path_pattern": "3D/glb/survival-kit-glb/**",
       "source": "poly-pizza",
       "likely_creator": "Quaternius",
-      "notes": "Survival Kit by Quaternius \u2014 CC0."
+      "notes": "Survival Kit by Quaternius — CC0."
     },
     {
-      "path_pattern": "3D/glb/Ultimate Food Pack-glb/**",
+      "path_pattern": "3D/glb/ultimate-food-pack-glb/**",
       "source": "poly-pizza",
       "likely_creator": "Quaternius",
-      "notes": "Ultimate Food Pack by Quaternius \u2014 CC0. https://quaternius.com/packs/ultimatefoodpack.html"
+      "notes": "Ultimate Food Pack by Quaternius — CC0. https://quaternius.com/packs/ultimatefoodpack.html"
     },
     {
-      "path_pattern": "3D/glb/Ultimate Guns Pack-glb/**",
+      "path_pattern": "3D/glb/ultimate-guns-pack-glb/**",
       "source": "poly-pizza",
       "likely_creator": "Quaternius",
-      "notes": "Ultimate Guns Pack by Quaternius \u2014 CC0. https://quaternius.com/packs/ultimategunspack.html"
+      "notes": "Ultimate Guns Pack by Quaternius — CC0. https://quaternius.com/packs/ultimategunspack.html"
     },
     {
-      "path_pattern": "3D/glb/Ultimate Interior Props Pack-glb/**",
+      "path_pattern": "3D/glb/ultimate-interior-props-pack-glb/**",
       "source": "poly-pizza",
       "likely_creator": "Quaternius",
-      "notes": "Ultimate Interior Props by Quaternius \u2014 CC0."
+      "notes": "Ultimate Interior Props by Quaternius — CC0."
     },
     {
-      "path_pattern": "3D/glb/Ultimate Modular Men Pack-glb/**",
+      "path_pattern": "3D/glb/ultimate-modular-men-pack-glb/**",
       "source": "poly-pizza",
       "likely_creator": "Quaternius",
-      "notes": "Ultimate Modular Men Pack by Quaternius \u2014 CC0. https://quaternius.com/packs/ultimatemodularmen.html"
+      "notes": "Ultimate Modular Men Pack by Quaternius — CC0. https://quaternius.com/packs/ultimatemodularmen.html"
     },
     {
-      "path_pattern": "3D/glb/Ultimate Modular Women Pack-glb/**",
+      "path_pattern": "3D/glb/ultimate-modular-women-pack-glb/**",
       "source": "poly-pizza",
       "likely_creator": "Quaternius",
-      "notes": "Ultimate Modular Women Pack by Quaternius \u2014 CC0."
+      "notes": "Ultimate Modular Women Pack by Quaternius — CC0."
     },
     {
-      "path_pattern": "3D/glb/Weapons Pack In Case Of Zombies-glb/**",
+      "path_pattern": "3D/glb/weapons-pack-in-case-of-zombies-glb/**",
       "source": "poly-pizza",
       "likely_creator": "Quaternius or Kenney",
       "notes": "Verify on poly.pizza."
     },
     {
-      "path_pattern": "3D/glb/Wood Frame Base Build Set-glb/**",
+      "path_pattern": "3D/glb/wood-frame-base-build-set-glb/**",
       "source": "poly-pizza",
       "likely_creator": "Kenney or Quaternius",
       "notes": "Verify on poly.pizza."
@@ -434,12 +434,12 @@
       "path_pattern": "3D/glb/Hex Kit.glb",
       "source": "poly-pizza",
       "likely_creator": "Quaternius",
-      "notes": "Hex Kit by Quaternius \u2014 CC0."
+      "notes": "Hex Kit by Quaternius — CC0."
     },
     {
       "path_pattern": "3D/glb/characters-glb/**",
       "source": "poly-pizza",
-      "notes": "Character Animated, Hooded Adventurer, Witch, Wizardus Maximus \u2014 individual Poly Pizza assets. Verify per-asset license."
+      "notes": "Character Animated, Hooded Adventurer, Witch, Wizardus Maximus — individual Poly Pizza assets. Verify per-asset license."
     },
     {
       "path_pattern": "3D/glb/enemies/**",
@@ -485,7 +485,7 @@
     {
       "path_pattern": "3D/gltf/fire-axe/**",
       "source": "unknown",
-      "notes": "Fire-axe with PNG textures. No license.txt present \u2014 verify source. Could be Sketchfab or Poly Haven."
+      "notes": "Fire-axe with PNG textures. No license.txt present — verify source. Could be Sketchfab or Poly Haven."
     },
     {
       "path_pattern": "3D/glb/star_wars_*.glb",
@@ -495,7 +495,7 @@
     {
       "path_pattern": "3D/glb/fortnite_x_star_wars_encrypted_skin.glb",
       "source": "sketchfab",
-      "notes": "Star Wars \u00d7 Fortnite fan-made model from Sketchfab. Epic Games and Lucasfilm IP \u2014 don't use commercially."
+      "notes": "Star Wars × Fortnite fan-made model from Sketchfab. Epic Games and Lucasfilm IP — don't use commercially."
     },
     {
       "path_pattern": "3D/glb/at-at.glb",
@@ -632,7 +632,7 @@
     {
       "path_pattern": "3D/glb/wands.glb",
       "source": "sketchfab",
-      "notes": "Also could be Poly Pizza \u2014 verify by searching 'wands' on both."
+      "notes": "Also could be Poly Pizza — verify by searching 'wands' on both."
     },
     {
       "path_pattern": "3D/glb/metal-boots-armor.glb",
@@ -701,7 +701,7 @@
     {
       "path_pattern": "3D/glb/robot.glb",
       "source": "sketchfab",
-      "notes": "Generic name \u2014 verify."
+      "notes": "Generic name — verify."
     },
     {
       "path_pattern": "3D/glb/tower-big.glb",
@@ -714,7 +714,7 @@
     {
       "path_pattern": "3D/glb/Human hand.glb",
       "source": "sketchfab",
-      "notes": "Uses 'lambert2SG' material (Maya default) \u2014 almost certainly Sketchfab. Verify."
+      "notes": "Uses 'lambert2SG' material (Maya default) — almost certainly Sketchfab. Verify."
     },
     {
       "path_pattern": "3D/glb/Human hand-transformed.glb",
@@ -729,7 +729,7 @@
     {
       "path_pattern": "3D/glb/nav_test*.glb",
       "source": "custom",
-      "notes": "Test/navigation meshes \u2014 likely custom-authored."
+      "notes": "Test/navigation meshes — likely custom-authored."
     },
     {
       "path_pattern": "3D/obj/cat.{obj,mtl,fbx}",
@@ -752,7 +752,7 @@
       "notes": "Pixabay sound effects and music. IDs (4-7 digits, trailing before .mp3) map to Pixabay asset pages."
     },
     {
-      "path_pattern": "sounds/movement/21607__ali_6868__grassy-footsteps/**",
+      "path_pattern": "sounds/movement/21607-ali-6868-grassy-footsteps/**",
       "source": "freesound",
       "author": "Ali_6868",
       "pack_url": "https://freesound.org/people/Ali_6868/packs/21607/",
@@ -760,90 +760,90 @@
       "attribution_required": false
     },
     {
-      "path_pattern": "sounds/movement/21608__ali_6868__gravel-footsteps/**",
+      "path_pattern": "sounds/movement/21608-ali-6868-gravel-footsteps/**",
       "source": "freesound",
       "author": "Ali_6868",
       "pack_url": "https://freesound.org/people/Ali_6868/packs/21608/",
       "license": "CC0 1.0"
     },
     {
-      "path_pattern": "sounds/movement/21610__ali_6868__knights-forest-footsteps/**",
+      "path_pattern": "sounds/movement/21610-ali-6868-knights-forest-footsteps/**",
       "source": "freesound",
       "author": "Ali_6868",
       "pack_url": "https://freesound.org/people/Ali_6868/packs/21610/",
       "license": "CC0 1.0"
     },
     {
-      "path_pattern": "sounds/movement/27652__falcospizaetus__steps/**",
+      "path_pattern": "sounds/movement/27652-falcospizaetus-steps/**",
       "source": "freesound",
       "author": "falcospizaetus",
       "pack_url": "https://freesound.org/people/falcospizaetus/packs/27652/",
       "license": "See bundled _readme_and_license.txt"
     },
     {
-      "path_pattern": "sounds/music/Ancient Winds.mp3",
+      "path_pattern": "sounds/music/ancient-winds.mp3",
       "source": "kevin-macleod",
       "track_title": "Ancient Winds",
       "url": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1500052"
     },
     {
-      "path_pattern": "sounds/music/Bittersweet.mp3",
+      "path_pattern": "sounds/music/bittersweet.mp3",
       "source": "kevin-macleod",
       "track_title": "Bittersweet"
     },
     {
-      "path_pattern": "sounds/music/Black Vortex.mp3",
+      "path_pattern": "sounds/music/black-vortex.mp3",
       "source": "kevin-macleod",
       "track_title": "Black Vortex"
     },
     {
-      "path_pattern": "sounds/music/Clash Defiant.mp3",
+      "path_pattern": "sounds/music/clash-defiant.mp3",
       "source": "kevin-macleod",
       "track_title": "Clash Defiant"
     },
     {
-      "path_pattern": "sounds/music/Comfortable Mystery 2.mp3",
+      "path_pattern": "sounds/music/comfortable-mystery-2.mp3",
       "source": "kevin-macleod",
       "track_title": "Comfortable Mystery 2"
     },
     {
-      "path_pattern": "sounds/music/Corruption.mp3",
+      "path_pattern": "sounds/music/corruption.mp3",
       "source": "kevin-macleod",
       "track_title": "Corruption"
     },
     {
-      "path_pattern": "sounds/music/Magic Forest.mp3",
+      "path_pattern": "sounds/music/magic-forest.mp3",
       "source": "kevin-macleod",
       "track_title": "Magic Forest"
     },
     {
-      "path_pattern": "sounds/music/Midnight Tale.mp3",
+      "path_pattern": "sounds/music/midnight-tale.mp3",
       "source": "kevin-macleod",
       "track_title": "Midnight Tale"
     },
     {
-      "path_pattern": "sounds/music/Peppers Theme.mp3",
+      "path_pattern": "sounds/music/peppers-theme.mp3",
       "source": "kevin-macleod",
       "track_title": "Peppers Theme"
     },
     {
-      "path_pattern": "sounds/music/Stay the Course.mp3",
+      "path_pattern": "sounds/music/stay-the-course.mp3",
       "source": "kevin-macleod",
       "track_title": "Stay the Course"
     }
   ],
   "attribution_block_templates": {
     "_description": "Copy-paste strings you'd typically drop into a game's credits screen or a project README.",
-    "poly-haven": "Textures from Poly Haven (polyhaven.com) \u2014 CC0.",
-    "quaternius": "3D models by Quaternius (quaternius.com) \u2014 CC0. Support the creator at https://www.patreon.com/quaternius",
-    "kay-lousberg": "3D kits by Kay Lousberg / KayKit (kaylousberg.com) \u2014 CC0.",
-    "kenney": "Assets by Kenney (kenney.nl) \u2014 CC0.",
+    "poly-haven": "Textures from Poly Haven (polyhaven.com) — CC0.",
+    "quaternius": "3D models by Quaternius (quaternius.com) — CC0. Support the creator at https://www.patreon.com/quaternius",
+    "kay-lousberg": "3D kits by Kay Lousberg / KayKit (kaylousberg.com) — CC0.",
+    "kenney": "Assets by Kenney (kenney.nl) — CC0.",
     "poly-pizza": "3D models sourced from Poly Pizza (poly.pizza). Individual creators credited per asset.",
     "mixamo": "Character animations and rigs from Mixamo (mixamo.com) by Adobe.",
     "sketchfab-by": "This work uses \"{TITLE}\" (https://sketchfab.com/3d-models/{slug}) by {AUTHOR} (https://sketchfab.com/{author_handle}) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
     "freesound": "Sound effects from Freesound.org contributors. Per-sound license info: https://freesound.org/s/{id}/",
-    "pixabay": "Sound effects and music from Pixabay (pixabay.com) \u2014 Pixabay Content License.",
-    "kevin-macleod": "\"{TRACK}\" by Kevin MacLeod (incompetech.com) \u2014 Licensed under Creative Commons: By Attribution 4.0 \u2014 http://creativecommons.org/licenses/by/4.0/"
+    "pixabay": "Sound effects and music from Pixabay (pixabay.com) — Pixabay Content License.",
+    "kevin-macleod": "\"{TRACK}\" by Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 — http://creativecommons.org/licenses/by/4.0/"
   },
   "2d_packs": {
     "source": "itch.io",
@@ -857,7 +857,7 @@
     },
     "packs": [
       {
-        "folder": "ansimuz__sunny-land-pixel-game-art",
+        "folder": "ansimuz-sunny-land-pixel-game-art",
         "title": "Sunny Land - Pixel Game Art Collection",
         "author": "ansimuz",
         "author_url": "https://ansimuz.itch.io",
@@ -867,7 +867,7 @@
         "attribution": "Optional"
       },
       {
-        "folder": "astrobob__arcane-archer",
+        "folder": "astrobob-arcane-archer",
         "title": "Arcane Archer",
         "author": "astrobob",
         "author_url": "https://astrobob.itch.io",
@@ -877,7 +877,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "atari-boy__oldherocharacter",
+        "folder": "atari-boy-oldherocharacter",
         "title": "Old hero Pixel Art character",
         "author": "atari_boy",
         "author_url": "https://atari-boy.itch.io",
@@ -887,7 +887,7 @@
         "attribution": "Optional"
       },
       {
-        "folder": "atari-boy__skull-wolf-pixel-art",
+        "folder": "atari-boy-skull-wolf-pixel-art",
         "title": "Skull Wolf Pixel art",
         "author": "atari_boy",
         "author_url": "https://atari-boy.itch.io",
@@ -897,7 +897,7 @@
         "attribution": "Optional"
       },
       {
-        "folder": "au-pixel__heroes99-demochar",
+        "folder": "au-pixel-heroes99-demochar",
         "title": "HEROES 99 - FREE Animated Pixel Art Character",
         "author": "AU_pixel",
         "author_url": "https://au-pixel.itch.io",
@@ -907,7 +907,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "bdragon1727__1050-rpg-effects-64x64",
+        "folder": "bdragon1727-1050-rpg-effects-64x64",
         "title": "1050 RPG Effects 64x64",
         "author": "bdragon1727",
         "author_url": "https://bdragon1727.itch.io",
@@ -917,7 +917,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "bdragon1727__64x64-pixel-effect-rpg-part-16",
+        "folder": "bdragon1727-64x64-pixel-effect-rpg-part-16",
         "title": "64x64 Pixel Effect RPG Part 16",
         "author": "BDragon1727",
         "author_url": "https://bdragon1727.itch.io",
@@ -927,7 +927,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "bdragon1727__750-effect-and-fx-pixel-all",
+        "folder": "bdragon1727-750-effect-and-fx-pixel-all",
         "title": "750 Effect and FX Pixel All",
         "author": "bdragon1727",
         "author_url": "https://bdragon1727.itch.io",
@@ -937,7 +937,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "bdragon1727__effect-and-fx-pixel-part-14",
+        "folder": "bdragon1727-effect-and-fx-pixel-part-14",
         "title": "Effect and FX Pixel Part 14",
         "author": "BDragon1727",
         "author_url": "https://bdragon1727.itch.io",
@@ -947,7 +947,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "bdragon1727__effect-and-fx-pixel-part-5",
+        "folder": "bdragon1727-effect-and-fx-pixel-part-5",
         "title": "Effect and FX Pixel Part 5",
         "author": "BDragon1727",
         "author_url": "https://bdragon1727.itch.io",
@@ -957,7 +957,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "bdragon1727__effect-and-fx-pixel-part-9",
+        "folder": "bdragon1727-effect-and-fx-pixel-part-9",
         "title": "Effect and FX Pixel Part 9",
         "author": "BDragon1727",
         "author_url": "https://bdragon1727.itch.io",
@@ -967,7 +967,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "c1b0rg0101__little-witch-pixel-character-animation",
+        "folder": "c1b0rg0101-little-witch-pixel-character-animation",
         "title": "Little Witch Pixel Character Animation",
         "author": "c1b0rg0101",
         "author_url": "https://c1b0rg0101.itch.io",
@@ -977,7 +977,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "carysaurus__bird-sprites",
+        "folder": "carysaurus-bird-sprites",
         "title": "Bird Sprites with Animations",
         "author": "carysaurus",
         "author_url": "https://carysaurus.itch.io",
@@ -987,7 +987,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "creativekind__bloodmoon-tower-free",
+        "folder": "creativekind-bloodmoon-tower-free",
         "title": "Bloodmoon Tower Free",
         "author": "creativekind",
         "author_url": "https://creativekind.itch.io",
@@ -997,7 +997,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "creativekind__flying-obelisk",
+        "folder": "creativekind-flying-obelisk",
         "title": "Flying Obelisk",
         "author": "creativekind",
         "author_url": "https://creativekind.itch.io",
@@ -1007,7 +1007,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "creativekind__nightborne-warrior",
+        "folder": "creativekind-nightborne-warrior",
         "title": "Nightborne Warrior",
         "author": "creativekind",
         "author_url": "https://creativekind.itch.io",
@@ -1017,7 +1017,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "darkpixel-kronovi__undead-executioner",
+        "folder": "darkpixel-kronovi-undead-executioner",
         "title": "Undead Executioner",
         "author": "darkpixel-kronovi",
         "author_url": "https://darkpixel-kronovi.itch.io",
@@ -1027,7 +1027,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "devkidd__pixel-fire-asset-pack",
+        "folder": "devkidd-pixel-fire-asset-pack",
         "title": "Pixel Art Fire Asset Pack",
         "author": "devkidd",
         "author_url": "https://devkidd.itch.io",
@@ -1037,7 +1037,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "dinosdouisen__prehistoric-dino-game-sprites",
+        "folder": "dinosdouisen-prehistoric-dino-game-sprites",
         "title": "Prehistoric Dino Game Sprites",
         "author": "dinosDouisen",
         "author_url": "https://dinosdouisen.itch.io",
@@ -1047,7 +1047,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "eduardscarpato__toxic-frog-animations-pixel-art-2d-free",
+        "folder": "eduardscarpato-toxic-frog-animations-pixel-art-2d-free",
         "title": "Toxic Frog Animations Pixel Art 2D FREE",
         "author": "EduardScarpato",
         "author_url": "https://eduardscarpato.itch.io",
@@ -1057,7 +1057,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "elesrech__pixel-monsters-enemies-asset-pack",
+        "folder": "elesrech-pixel-monsters-enemies-asset-pack",
         "title": "Pixel Monsters & Enemies Asset Pack",
         "author": "elesrech",
         "author_url": "https://elesrech.itch.io",
@@ -1067,7 +1067,7 @@
         "attribution": "Optional"
       },
       {
-        "folder": "escape-pixel__shadow-series-duskclaw",
+        "folder": "escape-pixel-shadow-series-duskclaw",
         "title": "SHADOW Series - Duskclaw",
         "author": "escape-pixel",
         "author_url": "https://escape-pixel.itch.io",
@@ -1077,7 +1077,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "escape-pixel__shadow-series-the-blind-huntress",
+        "folder": "escape-pixel-shadow-series-the-blind-huntress",
         "title": "SHADOW Series - The Blind Huntress",
         "author": "escape-pixel",
         "author_url": "https://escape-pixel.itch.io",
@@ -1087,7 +1087,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "foozlecc__critters-enemy-pack-3",
+        "folder": "foozlecc-critters-enemy-pack-3",
         "title": "Critters - Enemy Pack 3",
         "author": "FoozleCC",
         "author_url": "https://foozlecc.itch.io",
@@ -1097,7 +1097,7 @@
         "attribution": "Optional"
       },
       {
-        "folder": "foozlecc__void-fleet-pack-1",
+        "folder": "foozlecc-void-fleet-pack-1",
         "title": "Void - Fleet Pack 1 - Kla'ed",
         "author": "FoozleCC",
         "author_url": "https://foozlecc.itch.io",
@@ -1107,7 +1107,7 @@
         "attribution": "Optional"
       },
       {
-        "folder": "foozlecc__void-fleet-pack-2",
+        "folder": "foozlecc-void-fleet-pack-2",
         "title": "Void - Fleet Pack 2 - Nairan",
         "author": "FoozleCC",
         "author_url": "https://foozlecc.itch.io",
@@ -1117,7 +1117,7 @@
         "attribution": "Optional"
       },
       {
-        "folder": "foozlecc__void-fleet-pack-3",
+        "folder": "foozlecc-void-fleet-pack-3",
         "title": "Void - Fleet Pack 3 - Nautolan",
         "author": "FoozleCC",
         "author_url": "https://foozlecc.itch.io",
@@ -1127,7 +1127,7 @@
         "attribution": "Optional"
       },
       {
-        "folder": "foozlecc__void-pickups-pack",
+        "folder": "foozlecc-void-pickups-pack",
         "title": "Void - Pickups Pack",
         "author": "FoozleCC",
         "author_url": "https://foozlecc.itch.io",
@@ -1137,7 +1137,7 @@
         "attribution": "Optional"
       },
       {
-        "folder": "frakassets__free-blue-dino",
+        "folder": "frakassets-free-blue-dino",
         "title": "Free Blue Dino - Animated Pixel Art",
         "author": "Frakassets",
         "author_url": "https://frakassets.itch.io",
@@ -1147,7 +1147,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "free-game-assets__free-pixel-art-dungeon-objects-asset-pack",
+        "folder": "free-game-assets-free-pixel-art-dungeon-objects-asset-pack",
         "title": "Free Dungeon Objects Pixel Assets",
         "author": "free game assets",
         "author_url": "https://free-game-assets.itch.io",
@@ -1157,7 +1157,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "free-game-assets__octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art",
+        "folder": "free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art",
         "title": "Octopus, Jellyfish, Shark and Turtle Pixel Art",
         "author": "free game assets",
         "author_url": "https://free-game-assets.itch.io",
@@ -1167,7 +1167,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "furaz__lost-mine-free",
+        "folder": "furaz-lost-mine-free",
         "title": "Lost Mine - Free Tileset and Animated Cratures",
         "author": "Furaz",
         "author_url": "https://furaz.itch.io",
@@ -1177,7 +1177,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "ginkgogames__animated-pixel-character-for-prototyping",
+        "folder": "ginkgogames-animated-pixel-character-for-prototyping",
         "title": "Animated Pixel Character for Prototyping!",
         "author": "ginkgoGames",
         "author_url": "https://ginkgogames.itch.io",
@@ -1187,7 +1187,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "immortal-burrito__blood-demons",
+        "folder": "immortal-burrito-blood-demons",
         "title": "Blood Demons",
         "author": "immortal-burrito",
         "author_url": "https://immortal-burrito.itch.io",
@@ -1197,7 +1197,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "immortal-burrito__forrest-mage-pixel-art",
+        "folder": "immortal-burrito-forrest-mage-pixel-art",
         "title": "Forrest Mage Pixel Art",
         "author": "immortal-burrito",
         "author_url": "https://immortal-burrito.itch.io",
@@ -1207,7 +1207,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "immortal-burrito__sickle-warrior",
+        "folder": "immortal-burrito-sickle-warrior",
         "title": "Sickle Warrior",
         "author": "immortal-burrito",
         "author_url": "https://immortal-burrito.itch.io",
@@ -1217,7 +1217,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "immortal-burrito__skull-knighthero",
+        "folder": "immortal-burrito-skull-knighthero",
         "title": "Skull Knighthero",
         "author": "immortal-burrito",
         "author_url": "https://immortal-burrito.itch.io",
@@ -1227,8 +1227,8 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "ivelsoul__pf-freeicons",
-        "title": "Pixel Fable \u2014 Free Animated Icons",
+        "folder": "ivelsoul-pf-freeicons",
+        "title": "Pixel Fable — Free Animated Icons",
         "author": "ivelsoul",
         "author_url": "https://ivelsoul.itch.io",
         "url": "https://ivelsoul.itch.io/pf-freeicons",
@@ -1237,7 +1237,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "jesse-m__skeleton-pack",
+        "folder": "jesse-m-skeleton-pack",
         "title": "Skeleton Pack",
         "author": "jesse-m",
         "author_url": "https://jesse-m.itch.io",
@@ -1247,7 +1247,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "jordon-games__animated-gold-coin",
+        "folder": "jordon-games-animated-gold-coin",
         "title": "Animated Gold Coin",
         "author": "jordon_games",
         "author_url": "https://jordon-games.itch.io",
@@ -1257,7 +1257,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "kaboff__120-items-psx-rotation-animation-pack",
+        "folder": "kaboff-120-items-psx-rotation-animation-pack",
         "title": "120+ Items PSX Rotation - Pack (32x32)",
         "author": "kaboff",
         "author_url": "https://kaboff.itch.io",
@@ -1267,7 +1267,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "karsiori__pixel-art-chest-pack-animated",
+        "folder": "karsiori-pixel-art-chest-pack-animated",
         "title": "FREE Pixel Art Chest Pack - Animated",
         "author": "karsiori",
         "author_url": "https://karsiori.itch.io",
@@ -1277,7 +1277,7 @@
         "attribution": "Optional"
       },
       {
-        "folder": "karsiori__spruce-tree-pack-pixel-art-animated",
+        "folder": "karsiori-spruce-tree-pack-pixel-art-animated",
         "title": "FREE Pixel Art Spruce Tree Pack - Animated",
         "author": "karsiori",
         "author_url": "https://karsiori.itch.io",
@@ -1287,7 +1287,7 @@
         "attribution": "Optional"
       },
       {
-        "folder": "kbpixelart__main-character-knight",
+        "folder": "kbpixelart-main-character-knight",
         "title": "Main Character - Knight",
         "author": "KBPixelArt",
         "author_url": "https://kbpixelart.itch.io",
@@ -1297,7 +1297,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "lionheart963__axe-bandit",
+        "folder": "lionheart963-axe-bandit",
         "title": "Axe Bandit",
         "author": "lionheart963",
         "author_url": "https://lionheart963.itch.io",
@@ -1307,7 +1307,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "lorisc__alienshootergb",
+        "folder": "lorisc-alienshootergb",
         "title": "[FREE] Alien Shooter GB - Asset Pack",
         "author": "LorisC",
         "author_url": "https://lorisc.itch.io",
@@ -1317,7 +1317,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "luizmelo__evil-wizard",
+        "folder": "luizmelo-evil-wizard",
         "title": "Evil Wizard",
         "author": "luizmelo",
         "author_url": "https://luizmelo.itch.io",
@@ -1327,7 +1327,7 @@
         "attribution": "Optional"
       },
       {
-        "folder": "luizmelo__evil-wizard-2",
+        "folder": "luizmelo-evil-wizard-2",
         "title": "Evil Wizard 2",
         "author": "luizmelo",
         "author_url": "https://luizmelo.itch.io",
@@ -1337,7 +1337,7 @@
         "attribution": "Optional"
       },
       {
-        "folder": "luizmelo__fantasy-warrior",
+        "folder": "luizmelo-fantasy-warrior",
         "title": "Fantasy Warrior",
         "author": "LuizMelo",
         "author_url": "https://luizmelo.itch.io",
@@ -1347,7 +1347,7 @@
         "attribution": "Optional"
       },
       {
-        "folder": "luizmelo__fire-worm",
+        "folder": "luizmelo-fire-worm",
         "title": "Fire Worm",
         "author": "luizmelo",
         "author_url": "https://luizmelo.itch.io",
@@ -1357,7 +1357,7 @@
         "attribution": "Optional"
       },
       {
-        "folder": "luizmelo__hero-knight",
+        "folder": "luizmelo-hero-knight",
         "title": "Hero Knight",
         "author": "luizmelo",
         "author_url": "https://luizmelo.itch.io",
@@ -1367,7 +1367,7 @@
         "attribution": "Optional"
       },
       {
-        "folder": "luizmelo__hero-knight-2",
+        "folder": "luizmelo-hero-knight-2",
         "title": "Hero Knight 2",
         "author": "luizmelo",
         "author_url": "https://luizmelo.itch.io",
@@ -1377,7 +1377,7 @@
         "attribution": "Optional"
       },
       {
-        "folder": "luizmelo__huntress",
+        "folder": "luizmelo-huntress",
         "title": "Huntress",
         "author": "luizmelo",
         "author_url": "https://luizmelo.itch.io",
@@ -1387,7 +1387,7 @@
         "attribution": "Optional"
       },
       {
-        "folder": "luizmelo__huntress-2",
+        "folder": "luizmelo-huntress-2",
         "title": "Huntress 2",
         "author": "luizmelo",
         "author_url": "https://luizmelo.itch.io",
@@ -1397,7 +1397,7 @@
         "attribution": "Optional"
       },
       {
-        "folder": "luizmelo__martial-hero",
+        "folder": "luizmelo-martial-hero",
         "title": "Martial Hero",
         "author": "luizmelo",
         "author_url": "https://luizmelo.itch.io",
@@ -1407,7 +1407,7 @@
         "attribution": "Optional"
       },
       {
-        "folder": "luizmelo__martial-hero-2",
+        "folder": "luizmelo-martial-hero-2",
         "title": "Martial Hero 2",
         "author": "luizmelo",
         "author_url": "https://luizmelo.itch.io",
@@ -1417,7 +1417,7 @@
         "attribution": "Optional"
       },
       {
-        "folder": "luizmelo__martial-hero-3",
+        "folder": "luizmelo-martial-hero-3",
         "title": "Martial Hero 3",
         "author": "luizmelo",
         "author_url": "https://luizmelo.itch.io",
@@ -1427,7 +1427,7 @@
         "attribution": "Optional"
       },
       {
-        "folder": "luizmelo__medieval-king-pack",
+        "folder": "luizmelo-medieval-king-pack",
         "title": "Medieval King Pack",
         "author": "luizmelo",
         "author_url": "https://luizmelo.itch.io",
@@ -1437,7 +1437,7 @@
         "attribution": "Optional"
       },
       {
-        "folder": "luizmelo__medieval-king-pack-2",
+        "folder": "luizmelo-medieval-king-pack-2",
         "title": "Medieval King Pack 2",
         "author": "luizmelo",
         "author_url": "https://luizmelo.itch.io",
@@ -1447,7 +1447,7 @@
         "attribution": "Optional"
       },
       {
-        "folder": "luizmelo__medieval-warrior-pack",
+        "folder": "luizmelo-medieval-warrior-pack",
         "title": "Medieval Warrior Pack",
         "author": "luizmelo",
         "author_url": "https://luizmelo.itch.io",
@@ -1457,7 +1457,7 @@
         "attribution": "Optional"
       },
       {
-        "folder": "luizmelo__medieval-warrior-pack-2",
+        "folder": "luizmelo-medieval-warrior-pack-2",
         "title": "Medieval Warrior Pack 2",
         "author": "luizmelo",
         "author_url": "https://luizmelo.itch.io",
@@ -1467,7 +1467,7 @@
         "attribution": "Optional"
       },
       {
-        "folder": "luizmelo__medieval-warrior-pack-3",
+        "folder": "luizmelo-medieval-warrior-pack-3",
         "title": "Medieval Warrior Pack 3",
         "author": "luizmelo",
         "author_url": "https://luizmelo.itch.io",
@@ -1477,7 +1477,7 @@
         "attribution": "Optional"
       },
       {
-        "folder": "luizmelo__monsters-creatures-fantasy",
+        "folder": "luizmelo-monsters-creatures-fantasy",
         "title": "Monsters Creatures Fantasy",
         "author": "luizmelo",
         "author_url": "https://luizmelo.itch.io",
@@ -1487,7 +1487,7 @@
         "attribution": "Optional"
       },
       {
-        "folder": "luizmelo__pet-cat-pack",
+        "folder": "luizmelo-pet-cat-pack",
         "title": "Pet Cats Pack",
         "author": "LuizMelo",
         "author_url": "https://luizmelo.itch.io",
@@ -1497,7 +1497,7 @@
         "attribution": "Optional"
       },
       {
-        "folder": "luizmelo__wizard-pack",
+        "folder": "luizmelo-wizard-pack",
         "title": "Wizard Pack",
         "author": "luizmelo",
         "author_url": "https://luizmelo.itch.io",
@@ -1507,7 +1507,7 @@
         "attribution": "Optional"
       },
       {
-        "folder": "lukyaforge__ancientforest",
+        "folder": "lukyaforge-ancientforest",
         "title": "FREE: Ancient Forest 1.6",
         "author": "lukyaforge",
         "author_url": "https://lukyaforge.itch.io",
@@ -1517,7 +1517,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "lyniadesign__tiny-pixel-japan-male-character-pack",
+        "folder": "lyniadesign-tiny-pixel-japan-male-character-pack",
         "title": "Tiny Pixel Japan Male Character Pack",
         "author": "LyniaDesign",
         "author_url": "https://lyniadesign.itch.io",
@@ -1527,7 +1527,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "marinesosa__mech-assets",
+        "folder": "marinesosa-mech-assets",
         "title": "Mechs Assets - Asset Pack",
         "author": "Marinesosa",
         "author_url": "https://marinesosa.itch.io",
@@ -1537,7 +1537,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "monopixelart__flying-enemies",
+        "folder": "monopixelart-flying-enemies",
         "title": "Flying Forest Monsters 2D Pixel Art",
         "author": "MonoPixelArt",
         "author_url": "https://monopixelart.itch.io",
@@ -1547,7 +1547,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "monopixelart__forest-monsters-pixel-art",
+        "folder": "monopixelart-forest-monsters-pixel-art",
         "title": "Forest Monsters 2D Pixel Art",
         "author": "monopixelart",
         "author_url": "https://monopixelart.itch.io",
@@ -1557,7 +1557,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "monopixelart__skeletons-pack",
+        "folder": "monopixelart-skeletons-pack",
         "title": "Pixel Art Skeletons Pack",
         "author": "MonoPixelArt",
         "author_url": "https://monopixelart.itch.io",
@@ -1567,7 +1567,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "oboropixel__characters-animations-asset-pack",
+        "folder": "oboropixel-characters-animations-asset-pack",
         "title": "Characters Animations Asset Pack",
         "author": "oboropixel",
         "author_url": "https://oboropixel.itch.io",
@@ -1577,7 +1577,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "penusbmic__character-pack-3",
+        "folder": "penusbmic-character-pack-3",
         "title": "Character Pack 3",
         "author": "penusbmic",
         "author_url": "https://penusbmic.itch.io",
@@ -1587,7 +1587,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "penusbmic__monster-pack-i",
+        "folder": "penusbmic-monster-pack-i",
         "title": "Monster Pack I",
         "author": "penusbmic",
         "author_url": "https://penusbmic.itch.io",
@@ -1597,7 +1597,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "penusbmic__monster-pack-i--tooth-walker",
+        "folder": "penusbmic-monster-pack-i-tooth-walker",
         "title": "Monster Pack I  Tooth Walker",
         "author": "penusbmic",
         "author_url": "https://penusbmic.itch.io",
@@ -1607,7 +1607,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "penusbmic__monster-pack-i--trash-monster",
+        "folder": "penusbmic-monster-pack-i-trash-monster",
         "title": "Monster Pack I  Trash Monster",
         "author": "penusbmic",
         "author_url": "https://penusbmic.itch.io",
@@ -1617,7 +1617,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "penusbmic__sci-fi-character-pack-1",
+        "folder": "penusbmic-sci-fi-character-pack-1",
         "title": "Sci Fi Character Pack 1",
         "author": "penusbmic",
         "author_url": "https://penusbmic.itch.io",
@@ -1627,7 +1627,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "penusbmic__sci-fi-character-pack-10",
+        "folder": "penusbmic-sci-fi-character-pack-10",
         "title": "Sci Fi Character Pack 10",
         "author": "penusbmic",
         "author_url": "https://penusbmic.itch.io",
@@ -1637,7 +1637,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "penusbmic__sci-fi-character-pack-11",
+        "folder": "penusbmic-sci-fi-character-pack-11",
         "title": "Sci Fi Character Pack 11",
         "author": "penusbmic",
         "author_url": "https://penusbmic.itch.io",
@@ -1647,7 +1647,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "penusbmic__sci-fi-character-pack-7",
+        "folder": "penusbmic-sci-fi-character-pack-7",
         "title": "Sci Fi Character Pack 7",
         "author": "penusbmic",
         "author_url": "https://penusbmic.itch.io",
@@ -1657,7 +1657,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "pidroudays__pine-tree-forest-asset-pack",
+        "folder": "pidroudays-pine-tree-forest-asset-pack",
         "title": "Pine Tree Forest Asset Pack",
         "author": "pidroudays",
         "author_url": "https://pidroudays.itch.io",
@@ -1667,7 +1667,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "pidroudays__the-forest-animal-pack",
+        "folder": "pidroudays-the-forest-animal-pack",
         "title": "The Forest Animal Pack",
         "author": "pidroudays",
         "author_url": "https://pidroudays.itch.io",
@@ -1677,7 +1677,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "pidroudays__theforestcharacterpack",
+        "folder": "pidroudays-theforestcharacterpack",
         "title": "Theforestcharacterpack",
         "author": "pidroudays",
         "author_url": "https://pidroudays.itch.io",
@@ -1687,7 +1687,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "pidroudays__theforestcharacterpack2",
+        "folder": "pidroudays-theforestcharacterpack2",
         "title": "Theforestcharacterpack2",
         "author": "pidroudays",
         "author_url": "https://pidroudays.itch.io",
@@ -1697,7 +1697,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "pixelfrog-assets__tiny-swords",
+        "folder": "pixelfrog-assets-tiny-swords",
         "title": "Tiny Swords",
         "author": "pixelfrog-assets",
         "author_url": "https://pixelfrog-assets.itch.io",
@@ -1707,7 +1707,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "pixelius-vita__free-asset-pack-01",
+        "folder": "pixelius-vita-free-asset-pack-01",
         "title": "Monster Fantasy Pack 01 (Free)",
         "author": "Pixelius Vita",
         "author_url": "https://pixelius-vita.itch.io",
@@ -1717,7 +1717,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "pixelserial__rpg-top-down-character-asset-pack",
+        "folder": "pixelserial-rpg-top-down-character-asset-pack",
         "title": "RPG Top Down Character Asset Pack",
         "author": "PixelSerial",
         "author_url": "https://pixelserial.itch.io",
@@ -1727,7 +1727,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "reaktori__debts-in-the-depths-asset-pack",
+        "folder": "reaktori-debts-in-the-depths-asset-pack",
         "title": "Debts in the Depths - Free Pixel Art Dungeon Asset Pack",
         "author": "Reaktori",
         "author_url": "https://reaktori.itch.io",
@@ -1737,7 +1737,7 @@
         "attribution": "Optional"
       },
       {
-        "folder": "schwarnhild__summer-plains-tileset-and-asset-pack-32x32-pixels",
+        "folder": "schwarnhild-summer-plains-tileset-and-asset-pack-32x32-pixels",
         "title": "Summer Plains Tileset and Asset Pack 32x32 Pixels",
         "author": "schwarnhild",
         "author_url": "https://schwarnhild.itch.io",
@@ -1747,7 +1747,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "snowhex__harvest-summer-forest-pack",
+        "folder": "snowhex-harvest-summer-forest-pack",
         "title": "Harvest Summer Forest Pack",
         "author": "snowhex",
         "author_url": "https://snowhex.itch.io",
@@ -1757,7 +1757,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "strangefew__pixel-platformer-pack",
+        "folder": "strangefew-pixel-platformer-pack",
         "title": "Pixel Platformer Pack",
         "author": "StrangeFew",
         "author_url": "https://strangefew.itch.io",
@@ -1767,7 +1767,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "studios2m__2dpixeleunitpack-1",
+        "folder": "studios2m-2dpixeleunitpack-1",
         "title": "2D PixelUnitPack_1",
         "author": "StudioS2M",
         "author_url": "https://studios2m.itch.io",
@@ -1777,7 +1777,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "szadiart__2d-soulslike-knight",
+        "folder": "szadiart-2d-soulslike-knight",
         "title": "2D Soulslike Knight",
         "author": "szadiart",
         "author_url": "https://szadiart.itch.io",
@@ -1787,7 +1787,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "szadiart__hero-and-opponents-animation",
+        "folder": "szadiart-hero-and-opponents-animation",
         "title": "Hero And Opponents Animation",
         "author": "szadiart",
         "author_url": "https://szadiart.itch.io",
@@ -1797,7 +1797,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "toffeecraft__cat-sleeping-animation-free",
+        "folder": "toffeecraft-cat-sleeping-animation-free",
         "title": "Cat Sleeping Animation FREE",
         "author": "ToffeeCraft",
         "author_url": "https://toffeecraft.itch.io",
@@ -1807,7 +1807,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "unverified__assets-32x32-nature",
+        "folder": "unverified-assets-32x32-nature",
         "title": "Assets 32X32 Nature",
         "author": "unverified",
         "author_url": "https://unverified.itch.io",
@@ -1817,7 +1817,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "unverified__knight-zip",
+        "folder": "unverified-knight-zip",
         "title": "Knight Zip",
         "author": "unverified",
         "author_url": "https://unverified.itch.io",
@@ -1827,7 +1827,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "unverified__small-monster",
+        "folder": "unverified-small-monster",
         "title": "Small Monster",
         "author": "unverified",
         "author_url": "https://unverified.itch.io",
@@ -1837,7 +1837,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "wasaby-games__exploding-crab-enemy",
+        "folder": "wasaby-games-exploding-crab-enemy",
         "title": "Exploding Crab | Enemy Pixelart",
         "author": "Wasaby Games",
         "author_url": "https://wasaby-games.itch.io",
@@ -1847,7 +1847,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "wxhaust__robo-character-pack2",
+        "folder": "wxhaust-robo-character-pack2",
         "title": "Robo Character Pack #2",
         "author": "wxhaust",
         "author_url": "https://wxhaust.itch.io",
@@ -1857,7 +1857,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "xzany__free-knight-2d-pixel-art",
+        "folder": "xzany-free-knight-2d-pixel-art",
         "title": "Free Knight 2D Pixel Art",
         "author": "xzany",
         "author_url": "https://xzany.itch.io",
@@ -1867,7 +1867,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "xzany__free-knight-rar",
+        "folder": "xzany-free-knight-rar",
         "title": "Free Knight Rar",
         "author": "xzany",
         "author_url": "https://xzany.itch.io",
@@ -1877,7 +1877,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "xzany__samurai-2d-pixel-art",
+        "folder": "xzany-samurai-2d-pixel-art",
         "title": "Samurai 2D Pixel Art",
         "author": "xzany",
         "author_url": "https://xzany.itch.io",
@@ -1887,7 +1887,7 @@
         "attribution": "Appreciated / not required"
       },
       {
-        "folder": "zerie__tiny-rpg-character-asset-pack",
+        "folder": "zerie-tiny-rpg-character-asset-pack",
         "title": "Tiny RPG Character Asset Pack v1.03",
         "author": "zerie",
         "author_url": "https://zerie.itch.io",
@@ -1938,7 +1938,7 @@
     "music": {
       "path": "sounds/music/",
       "count": 11,
-      "license": "VARIES \u2014 check each pack"
+      "license": "VARIES — check each pack"
     },
     "vector_tilesets": {
       "path": "vector-tilesets/",
@@ -1948,7 +1948,7 @@
     "misc": {
       "path": "misc-imports/",
       "count": 15,
-      "license": "VARIES \u2014 Synty paid licence, Google Fonts OFL, etc."
+      "license": "VARIES — Synty paid licence, Google Fonts OFL, etc."
     }
   }
 }

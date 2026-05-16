@@ -100,26 +100,21 @@ function externalTextureUrlFor(modelUrl: string): string | null {
   );
   if (fantasyNature) {
     const name = fantasyNature[1];
-    const HAS_TEXTURE = new Set([
-      "Flower",
-      "Flower2",
-      "Flower3",
-      "Mushroom",
-      "Tree",
-    ]);
-    const target = HAS_TEXTURE.has(name)
-      ? name
-      : /tree/i.test(name)
-        ? "Tree"
-        : null;
-    if (!target) return null;
-    const path = `/raw/quaternius/textured-fantasy-nature-mar-2017/extracted/Textured Fantasy Nature - Mar 2017/Blends/Textures/${target}.png`;
-    const encoded = path
-      .split("/")
-      .map(encodeURIComponent)
-      .join("/")
-      .replace(/%2F/g, "/");
-    return assetUrl(encoded);
+    // Texture .png files keep their original capitalization on disk:
+    // sibling .mtl/.obj files reference them by name, so renaming would
+    // break those formats. The dir tree was slug-renamed so the path
+    // segments are lowercase, but the leaf .png keeps its capitals.
+    const TEXTURE_FOR_NAME: Record<string, string> = {
+      flower: "Flower.png",
+      flower2: "Flower2.png",
+      flower3: "Flower3.png",
+      mushroom: "Mushroom.png",
+      tree: "Tree.png",
+    };
+    const file = TEXTURE_FOR_NAME[name] ?? (/tree/i.test(name) ? "Tree.png" : null);
+    if (!file) return null;
+    const path = `/raw/quaternius/textured-fantasy-nature-mar-2017/extracted/textured-fantasy-nature-mar-2017/blends/textures/${file}`;
+    return assetUrl(path);
   }
   return null;
 }

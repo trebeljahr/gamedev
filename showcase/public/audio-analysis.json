@@ -3,9 +3,9 @@
   "bucketCount": 192,
   "analysisSampleRate": 1000,
   "items": {
-    "sounds/ambience/341830__ianstargem__big-metallic-ambience.mp3": {
+    "sounds/ambience/341830-ianstargem-big-metallic-ambience.mp3": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/ambience/341830__ianstargem__big-metallic-ambience.mp3",
+      "path": "sounds/ambience/341830-ianstargem-big-metallic-ambience.mp3",
       "contentHash": "sha256:e934ec6899c38570bc07a1fa3e3b3d40c5ad5cfa1c1861222741b7f33776a737",
       "byteLength": 3862986,
       "duration": 96.549,
@@ -1038,9 +1038,9 @@
       "peak": 0.0082,
       "rms": 0.0009
     },
-    "sounds/ambience/boons_freak-rain-sound-188158.mp3": {
+    "sounds/ambience/boons-freak-rain-sound-188158.mp3": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/ambience/boons_freak-rain-sound-188158.mp3",
+      "path": "sounds/ambience/boons-freak-rain-sound-188158.mp3",
       "contentHash": "sha256:ca25c3c85f4fd56abf29ec7a59fc75d243bfbe12160f4f0870fc4f18c5e2c63e",
       "byteLength": 2915683,
       "duration": 91.115,
@@ -2487,9 +2487,9 @@
       "peak": 0.5173,
       "rms": 0.1251
     },
-    "sounds/cinematic/617043__d4xx__bass-impact-3.mp3": {
+    "sounds/cinematic/617043-d4xx-bass-impact-3.mp3": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/cinematic/617043__d4xx__bass-impact-3.mp3",
+      "path": "sounds/cinematic/617043-d4xx-bass-impact-3.mp3",
       "contentHash": "sha256:02ad668693f663907997681ac89a32c5a0759d7d09b90360ae2dbe857e081f1b",
       "byteLength": 131656,
       "duration": 3.265,
@@ -2694,9 +2694,9 @@
       "peak": 0.9465,
       "rms": 0.2335
     },
-    "sounds/cinematic/697634__bigdino1995__portal.mp3": {
+    "sounds/cinematic/697634-bigdino1995-portal.mp3": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/cinematic/697634__bigdino1995__portal.mp3",
+      "path": "sounds/cinematic/697634-bigdino1995-portal.mp3",
       "contentHash": "sha256:686a1c11c5249150645f910acd4e7ebbdb430f4393137aabe324c2488eb853cc",
       "byteLength": 76276,
       "duration": 1.881,
@@ -3729,9 +3729,9 @@
       "peak": 1.0151,
       "rms": 0.1547
     },
-    "sounds/combat/176741__deleted_user_3277771__buffer-spell.mp3": {
+    "sounds/combat/176741-deleted-user-3277771-buffer-spell.mp3": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/combat/176741__deleted_user_3277771__buffer-spell.mp3",
+      "path": "sounds/combat/176741-deleted-user-3277771-buffer-spell.mp3",
       "contentHash": "sha256:6d60c92513c0b49807842ed70c453f29726b77a8b300c521818fd273cb875cdf",
       "byteLength": 289920,
       "duration": 7.224,
@@ -3936,9 +3936,9 @@
       "peak": 0.6901,
       "rms": 0.0534
     },
-    "sounds/combat/384912__ali_6868__arrow-impact-3.mp3": {
+    "sounds/combat/384912-ali-6868-arrow-impact-3.mp3": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/combat/384912__ali_6868__arrow-impact-3.mp3",
+      "path": "sounds/combat/384912-ali-6868-arrow-impact-3.mp3",
       "contentHash": "sha256:d1aabf9ebf6896848ac537be952ac285c00c03fc570c0b9607c7a166ea6cf229",
       "byteLength": 22986,
       "duration": 0.549,
@@ -4143,9 +4143,9 @@
       "peak": 0.1813,
       "rms": 0.0167
     },
-    "sounds/combat/384913__ali_6868__arrow-impact-2.mp3": {
+    "sounds/combat/384913-ali-6868-arrow-impact-2.mp3": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/combat/384913__ali_6868__arrow-impact-2.mp3",
+      "path": "sounds/combat/384913-ali-6868-arrow-impact-2.mp3",
       "contentHash": "sha256:92e47a111e089b5b58fbbef763c39c6cd2641645550ef92e28d24c278c088739",
       "byteLength": 17762,
       "duration": 0.418,
@@ -4350,9 +4350,9 @@
       "peak": 0.2027,
       "rms": 0.0227
     },
-    "sounds/combat/384914__ali_6868__arrow-impact-1.mp3": {
+    "sounds/combat/384914-ali-6868-arrow-impact-1.mp3": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/combat/384914__ali_6868__arrow-impact-1.mp3",
+      "path": "sounds/combat/384914-ali-6868-arrow-impact-1.mp3",
       "contentHash": "sha256:052399873e0ad9d92fc6f000c75f24025554cb0d56297be27085c73021e2d5b5",
       "byteLength": 17762,
       "duration": 0.418,
@@ -4557,9 +4557,9 @@
       "peak": 0.1259,
       "rms": 0.0145
     },
-    "sounds/combat/395357__ihitokage__hand-1.ogg.mp3": {
+    "sounds/combat/395357-ihitokage-hand-1-ogg.mp3": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/combat/395357__ihitokage__hand-1.ogg.mp3",
+      "path": "sounds/combat/395357-ihitokage-hand-1-ogg.mp3",
       "contentHash": "sha256:e999d50bf613b60eb8a924e33e4460fc5e9043bd231d773b923f0a849856a23b",
       "byteLength": 7916,
       "duration": 0.96,
@@ -4764,9 +4764,9 @@
       "peak": 0.3428,
       "rms": 0.0427
     },
-    "sounds/combat/522694__julianmateo__magic-spell-sorcery-enchant-appear-ghost.mp3": {
+    "sounds/combat/522694-julianmateo-magic-spell-sorcery-enchant-appear-ghost.mp3": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/combat/522694__julianmateo__magic-spell-sorcery-enchant-appear-ghost.mp3",
+      "path": "sounds/combat/522694-julianmateo-magic-spell-sorcery-enchant-appear-ghost.mp3",
       "contentHash": "sha256:73da4680efc60bccde520b81a07b6ddf1d7eba36396d968dd1511f04fd142c37",
       "byteLength": 236160,
       "duration": 5.88,
@@ -4971,9 +4971,9 @@
       "peak": 0.3516,
       "rms": 0.0627
     },
-    "sounds/kenney/casino-audio/extracted/Audio/card-fan-1.ogg": {
+    "sounds/kenney/casino-audio/extracted/audio/card-fan-1.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/casino-audio/extracted/Audio/card-fan-1.ogg",
+      "path": "sounds/kenney/casino-audio/extracted/audio/card-fan-1.ogg",
       "contentHash": "sha256:7a9758ccad8899baef1b9f60b4064e4baa724a548293832fdaea07e6e07e638d",
       "byteLength": 12489,
       "duration": 0.721,
@@ -5178,9 +5178,9 @@
       "peak": 0.4637,
       "rms": 0.0729
     },
-    "sounds/kenney/casino-audio/extracted/Audio/card-fan-2.ogg": {
+    "sounds/kenney/casino-audio/extracted/audio/card-fan-2.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/casino-audio/extracted/Audio/card-fan-2.ogg",
+      "path": "sounds/kenney/casino-audio/extracted/audio/card-fan-2.ogg",
       "contentHash": "sha256:5743373c9dde00c6eee949a2c8e65d75946522768999167e1f5632451630e848",
       "byteLength": 18363,
       "duration": 1.307,
@@ -5385,9 +5385,9 @@
       "peak": 0.2289,
       "rms": 0.0277
     },
-    "sounds/kenney/casino-audio/extracted/Audio/card-place-1.ogg": {
+    "sounds/kenney/casino-audio/extracted/audio/card-place-1.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/casino-audio/extracted/Audio/card-place-1.ogg",
+      "path": "sounds/kenney/casino-audio/extracted/audio/card-place-1.ogg",
       "contentHash": "sha256:d8f26c33a665dcbdcc6f632f6050bc9dd548feb0d4942d4547615926d3926810",
       "byteLength": 9624,
       "duration": 0.689,
@@ -5592,9 +5592,9 @@
       "peak": 0.7356,
       "rms": 0.0452
     },
-    "sounds/kenney/casino-audio/extracted/Audio/card-place-2.ogg": {
+    "sounds/kenney/casino-audio/extracted/audio/card-place-2.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/casino-audio/extracted/Audio/card-place-2.ogg",
+      "path": "sounds/kenney/casino-audio/extracted/audio/card-place-2.ogg",
       "contentHash": "sha256:903d5050718595e87864dd755643b476ab1a5533080dcc2dddc72570d33ba9f8",
       "byteLength": 8046,
       "duration": 0.459,
@@ -5799,9 +5799,9 @@
       "peak": 0.1318,
       "rms": 0.0123
     },
-    "sounds/kenney/casino-audio/extracted/Audio/card-place-3.ogg": {
+    "sounds/kenney/casino-audio/extracted/audio/card-place-3.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/casino-audio/extracted/Audio/card-place-3.ogg",
+      "path": "sounds/kenney/casino-audio/extracted/audio/card-place-3.ogg",
       "contentHash": "sha256:1d988631a6e5201ed1bb0d728f2e43a3ec79401258426858793598044ac95841",
       "byteLength": 11503,
       "duration": 0.883,
@@ -6006,9 +6006,9 @@
       "peak": 0.1998,
       "rms": 0.0173
     },
-    "sounds/kenney/casino-audio/extracted/Preview.ogg": {
+    "sounds/kenney/casino-audio/extracted/preview.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/casino-audio/extracted/Preview.ogg",
+      "path": "sounds/kenney/casino-audio/extracted/preview.ogg",
       "contentHash": "sha256:14038ebbdfa096ce32bf6e358c00b6ae9d168d6be9cd080840ca3b896cc5f217",
       "byteLength": 424935,
       "duration": 35.107,
@@ -6213,9 +6213,9 @@
       "peak": 0.7087,
       "rms": 0.0257
     },
-    "sounds/kenney/digital-audio/extracted/Audio/phaseJump1.ogg": {
+    "sounds/kenney/digital-audio/extracted/audio/phasejump1.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/digital-audio/extracted/Audio/phaseJump1.ogg",
+      "path": "sounds/kenney/digital-audio/extracted/audio/phasejump1.ogg",
       "contentHash": "sha256:c60069ed7108678dd6a1306404d168a93cc2575cda37b06add9dd6c4d46352a3",
       "byteLength": 6733,
       "duration": 0.47,
@@ -6420,9 +6420,9 @@
       "peak": 0.6536,
       "rms": 0.1916
     },
-    "sounds/kenney/digital-audio/extracted/Audio/phaseJump2.ogg": {
+    "sounds/kenney/digital-audio/extracted/audio/phasejump2.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/digital-audio/extracted/Audio/phaseJump2.ogg",
+      "path": "sounds/kenney/digital-audio/extracted/audio/phasejump2.ogg",
       "contentHash": "sha256:5d85717cfca231f7da7887cef5f44b2131bbe3308eb0c1fee0b4f9e61d59b571",
       "byteLength": 6342,
       "duration": 0.392,
@@ -6627,9 +6627,9 @@
       "peak": 0.65,
       "rms": 0.2019
     },
-    "sounds/kenney/digital-audio/extracted/Audio/phaseJump3.ogg": {
+    "sounds/kenney/digital-audio/extracted/audio/phasejump3.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/digital-audio/extracted/Audio/phaseJump3.ogg",
+      "path": "sounds/kenney/digital-audio/extracted/audio/phasejump3.ogg",
       "contentHash": "sha256:69e25a1b7b0781f57af84eb4424973ec406d34bc48eed8b6964787b2d74093a9",
       "byteLength": 6854,
       "duration": 0.444,
@@ -6834,9 +6834,9 @@
       "peak": 0.5326,
       "rms": 0.1141
     },
-    "sounds/kenney/digital-audio/extracted/Audio/phaseJump4.ogg": {
+    "sounds/kenney/digital-audio/extracted/audio/phasejump4.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/digital-audio/extracted/Audio/phaseJump4.ogg",
+      "path": "sounds/kenney/digital-audio/extracted/audio/phasejump4.ogg",
       "contentHash": "sha256:90e1c90b9da3d0be66b54f4daa926f0fde79eba867dec7e9d1eef10524756e19",
       "byteLength": 7117,
       "duration": 0.47,
@@ -7041,9 +7041,9 @@
       "peak": 0.4275,
       "rms": 0.0799
     },
-    "sounds/kenney/digital-audio/extracted/Audio/phaseJump5.ogg": {
+    "sounds/kenney/digital-audio/extracted/audio/phasejump5.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/digital-audio/extracted/Audio/phaseJump5.ogg",
+      "path": "sounds/kenney/digital-audio/extracted/audio/phasejump5.ogg",
       "contentHash": "sha256:322d62ab7da973880d86c5ad217a2da85916ed95aa6c8d29991de392fd0f7522",
       "byteLength": 6770,
       "duration": 0.418,
@@ -7248,9 +7248,9 @@
       "peak": 0.3077,
       "rms": 0.0797
     },
-    "sounds/kenney/digital-audio/extracted/Preview.ogg": {
+    "sounds/kenney/digital-audio/extracted/preview.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/digital-audio/extracted/Preview.ogg",
+      "path": "sounds/kenney/digital-audio/extracted/preview.ogg",
       "contentHash": "sha256:989a5f69887d90e0eff0dcc641a09419857d4649a219d03e7aa5ef53d7eb5d0b",
       "byteLength": 587635,
       "duration": 49.225,
@@ -7455,9 +7455,9 @@
       "peak": 1.5355,
       "rms": 0.2221
     },
-    "sounds/kenney/impact-sounds/extracted/Audio/footstep_carpet_000.ogg": {
+    "sounds/kenney/impact-sounds/extracted/audio/footstep-carpet-000.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/impact-sounds/extracted/Audio/footstep_carpet_000.ogg",
+      "path": "sounds/kenney/impact-sounds/extracted/audio/footstep-carpet-000.ogg",
       "contentHash": "sha256:b9524658b52a99a20590f8feefc103088637fd13ea8ec35811aee785e1f2f330",
       "byteLength": 6353,
       "duration": 0.145,
@@ -7662,9 +7662,9 @@
       "peak": 0.7559,
       "rms": 0.0872
     },
-    "sounds/kenney/impact-sounds/extracted/Audio/footstep_carpet_001.ogg": {
+    "sounds/kenney/impact-sounds/extracted/audio/footstep-carpet-001.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/impact-sounds/extracted/Audio/footstep_carpet_001.ogg",
+      "path": "sounds/kenney/impact-sounds/extracted/audio/footstep-carpet-001.ogg",
       "contentHash": "sha256:9af3c3f76705107339e72036e4053bdca3eaa50ad31c8c929f42ce8d40e5d781",
       "byteLength": 6411,
       "duration": 0.145,
@@ -7869,9 +7869,9 @@
       "peak": 0.9062,
       "rms": 0.1375
     },
-    "sounds/kenney/impact-sounds/extracted/Audio/footstep_carpet_002.ogg": {
+    "sounds/kenney/impact-sounds/extracted/audio/footstep-carpet-002.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/impact-sounds/extracted/Audio/footstep_carpet_002.ogg",
+      "path": "sounds/kenney/impact-sounds/extracted/audio/footstep-carpet-002.ogg",
       "contentHash": "sha256:9af3c3f76705107339e72036e4053bdca3eaa50ad31c8c929f42ce8d40e5d781",
       "byteLength": 6411,
       "duration": 0.145,
@@ -8076,9 +8076,9 @@
       "peak": 0.9062,
       "rms": 0.1375
     },
-    "sounds/kenney/impact-sounds/extracted/Audio/footstep_carpet_003.ogg": {
+    "sounds/kenney/impact-sounds/extracted/audio/footstep-carpet-003.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/impact-sounds/extracted/Audio/footstep_carpet_003.ogg",
+      "path": "sounds/kenney/impact-sounds/extracted/audio/footstep-carpet-003.ogg",
       "contentHash": "sha256:4ae7454338d57c7d102145919ae653c7d010eb542797c4f25a1c7470be3a7e4c",
       "byteLength": 6301,
       "duration": 0.145,
@@ -8283,9 +8283,9 @@
       "peak": 0.9891,
       "rms": 0.0976
     },
-    "sounds/kenney/impact-sounds/extracted/Audio/footstep_carpet_004.ogg": {
+    "sounds/kenney/impact-sounds/extracted/audio/footstep-carpet-004.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/impact-sounds/extracted/Audio/footstep_carpet_004.ogg",
+      "path": "sounds/kenney/impact-sounds/extracted/audio/footstep-carpet-004.ogg",
       "contentHash": "sha256:4ae7454338d57c7d102145919ae653c7d010eb542797c4f25a1c7470be3a7e4c",
       "byteLength": 6301,
       "duration": 0.145,
@@ -8490,9 +8490,9 @@
       "peak": 0.9891,
       "rms": 0.0976
     },
-    "sounds/kenney/impact-sounds/extracted/Audio/footstep_concrete_000.ogg": {
+    "sounds/kenney/impact-sounds/extracted/audio/footstep-concrete-000.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/impact-sounds/extracted/Audio/footstep_concrete_000.ogg",
+      "path": "sounds/kenney/impact-sounds/extracted/audio/footstep-concrete-000.ogg",
       "contentHash": "sha256:d7267e183067757c92c169de2a379abea592cfca6b39bb2e8feea15221ad79fe",
       "byteLength": 5808,
       "duration": 0.106,
@@ -8697,9 +8697,9 @@
       "peak": 1.2479,
       "rms": 0.1282
     },
-    "sounds/kenney/interface-sounds/extracted/Audio/back_001.ogg": {
+    "sounds/kenney/interface-sounds/extracted/audio/back-001.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/interface-sounds/extracted/Audio/back_001.ogg",
+      "path": "sounds/kenney/interface-sounds/extracted/audio/back-001.ogg",
       "contentHash": "sha256:07db973f79f6ae0f2edc34561e7592e24d0577455919fb602cb8ecc0da991dcf",
       "byteLength": 6997,
       "duration": 0.064,
@@ -8904,9 +8904,9 @@
       "peak": 0.543,
       "rms": 0.0916
     },
-    "sounds/kenney/interface-sounds/extracted/Audio/click_001.ogg": {
+    "sounds/kenney/interface-sounds/extracted/audio/click-001.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/interface-sounds/extracted/Audio/click_001.ogg",
+      "path": "sounds/kenney/interface-sounds/extracted/audio/click-001.ogg",
       "contentHash": "sha256:ccfb7fa0cccdd9faec0eb16033c732b1e308d139d80f799161495d58f7adcdb9",
       "byteLength": 4876,
       "duration": 0.1,
@@ -9111,9 +9111,9 @@
       "peak": 0.4325,
       "rms": 0.0364
     },
-    "sounds/kenney/interface-sounds/extracted/Audio/click_002.ogg": {
+    "sounds/kenney/interface-sounds/extracted/audio/click-002.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/interface-sounds/extracted/Audio/click_002.ogg",
+      "path": "sounds/kenney/interface-sounds/extracted/audio/click-002.ogg",
       "contentHash": "sha256:adcd1f4adc35f1b41bc1b5bbefeff7aa44f2f3f0d96d3199b544140c7c1e761c",
       "byteLength": 4275,
       "duration": 0.01,
@@ -9318,9 +9318,9 @@
       "peak": 0.9267,
       "rms": 0.1555
     },
-    "sounds/kenney/interface-sounds/extracted/Audio/click_003.ogg": {
+    "sounds/kenney/interface-sounds/extracted/audio/click-003.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/interface-sounds/extracted/Audio/click_003.ogg",
+      "path": "sounds/kenney/interface-sounds/extracted/audio/click-003.ogg",
       "contentHash": "sha256:2fa929138bc3a0f432696588f66eac94b8f6d463905ec8808c6461ce4b054292",
       "byteLength": 4371,
       "duration": 0.01,
@@ -9525,9 +9525,9 @@
       "peak": 0.8628,
       "rms": 0.2216
     },
-    "sounds/kenney/interface-sounds/extracted/Audio/click_004.ogg": {
+    "sounds/kenney/interface-sounds/extracted/audio/click-004.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/interface-sounds/extracted/Audio/click_004.ogg",
+      "path": "sounds/kenney/interface-sounds/extracted/audio/click-004.ogg",
       "contentHash": "sha256:09e2c1b643b71b9aff9932b4e02d78db116446b9a14b00a5b2a9b28d2668fd8e",
       "byteLength": 4486,
       "duration": 0.01,
@@ -9732,9 +9732,9 @@
       "peak": 0.7664,
       "rms": 0.0885
     },
-    "sounds/kenney/interface-sounds/extracted/Audio/click_005.ogg": {
+    "sounds/kenney/interface-sounds/extracted/audio/click-005.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/interface-sounds/extracted/Audio/click_005.ogg",
+      "path": "sounds/kenney/interface-sounds/extracted/audio/click-005.ogg",
       "contentHash": "sha256:a3ee7ebb036bc3cdc218ae52bb27548c4f49bcf07505274f8b61b1af8236acc2",
       "byteLength": 4410,
       "duration": 0.01,
@@ -9939,9 +9939,9 @@
       "peak": 0.907,
       "rms": 0.3092
     },
-    "sounds/kenney/music-jingles/extracted/Audio/Hit jingles/jingles_HIT00.ogg": {
+    "sounds/kenney/music-jingles/extracted/audio/hit-jingles/jingles-hit00.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/music-jingles/extracted/Audio/Hit jingles/jingles_HIT00.ogg",
+      "path": "sounds/kenney/music-jingles/extracted/audio/hit-jingles/jingles-hit00.ogg",
       "contentHash": "sha256:e23d8c9e971a4e34484bc834a3ec1d560811ec6f5edd5efa2c61e583c18c504a",
       "byteLength": 8650,
       "duration": 0.284,
@@ -10146,9 +10146,9 @@
       "peak": 0.8125,
       "rms": 0.1977
     },
-    "sounds/kenney/music-jingles/extracted/Audio/Hit jingles/jingles_HIT01.ogg": {
+    "sounds/kenney/music-jingles/extracted/audio/hit-jingles/jingles-hit01.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/music-jingles/extracted/Audio/Hit jingles/jingles_HIT01.ogg",
+      "path": "sounds/kenney/music-jingles/extracted/audio/hit-jingles/jingles-hit01.ogg",
       "contentHash": "sha256:ddca9df332d7cdab525bbbe62ca26e9d61aa64bfa626d9516d5c53eb91c45322",
       "byteLength": 11681,
       "duration": 0.506,
@@ -10353,9 +10353,9 @@
       "peak": 0.7897,
       "rms": 0.2
     },
-    "sounds/kenney/music-jingles/extracted/Audio/Hit jingles/jingles_HIT02.ogg": {
+    "sounds/kenney/music-jingles/extracted/audio/hit-jingles/jingles-hit02.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/music-jingles/extracted/Audio/Hit jingles/jingles_HIT02.ogg",
+      "path": "sounds/kenney/music-jingles/extracted/audio/hit-jingles/jingles-hit02.ogg",
       "contentHash": "sha256:1ebd52ba108c0e749d2814c54e44bba6c39d111fa30d025fddfac70538e0e241",
       "byteLength": 11735,
       "duration": 0.524,
@@ -10560,9 +10560,9 @@
       "peak": 0.7535,
       "rms": 0.1966
     },
-    "sounds/kenney/music-jingles/extracted/Audio/Hit jingles/jingles_HIT03.ogg": {
+    "sounds/kenney/music-jingles/extracted/audio/hit-jingles/jingles-hit03.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/music-jingles/extracted/Audio/Hit jingles/jingles_HIT03.ogg",
+      "path": "sounds/kenney/music-jingles/extracted/audio/hit-jingles/jingles-hit03.ogg",
       "contentHash": "sha256:889d4c2b76c7edd63138b3a976c3f7337aaba3de90019d19bca70ec958c93014",
       "byteLength": 13944,
       "duration": 0.746,
@@ -10767,9 +10767,9 @@
       "peak": 0.7955,
       "rms": 0.1983
     },
-    "sounds/kenney/music-jingles/extracted/Audio/Hit jingles/jingles_HIT04.ogg": {
+    "sounds/kenney/music-jingles/extracted/audio/hit-jingles/jingles-hit04.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/music-jingles/extracted/Audio/Hit jingles/jingles_HIT04.ogg",
+      "path": "sounds/kenney/music-jingles/extracted/audio/hit-jingles/jingles-hit04.ogg",
       "contentHash": "sha256:7c20cd8d6b98e583822e1f58abc596900a07ba75ca690ec599efe5ea58981211",
       "byteLength": 11424,
       "duration": 0.639,
@@ -10974,9 +10974,9 @@
       "peak": 0.7354,
       "rms": 0.1562
     },
-    "sounds/kenney/music-jingles/extracted/Audio/Hit jingles/jingles_HIT05.ogg": {
+    "sounds/kenney/music-jingles/extracted/audio/hit-jingles/jingles-hit05.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/music-jingles/extracted/Audio/Hit jingles/jingles_HIT05.ogg",
+      "path": "sounds/kenney/music-jingles/extracted/audio/hit-jingles/jingles-hit05.ogg",
       "contentHash": "sha256:fe67e9e1d8c9da2228cc6c83fe5778c75397f87192e070ce7d956e270743cb30",
       "byteLength": 13868,
       "duration": 0.613,
@@ -11181,9 +11181,9 @@
       "peak": 0.7846,
       "rms": 0.2079
     },
-    "sounds/kenney/rpg-audio/extracted/Audio/footstep00.ogg": {
+    "sounds/kenney/rpg-audio/extracted/audio/footstep00.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/rpg-audio/extracted/Audio/footstep00.ogg",
+      "path": "sounds/kenney/rpg-audio/extracted/audio/footstep00.ogg",
       "contentHash": "sha256:6fe61ef1fc3bcf0e253bf2eb64759db6cb69e2fe452f4d88cc597ecf78a3d601",
       "byteLength": 9475,
       "duration": 0.249,
@@ -11388,9 +11388,9 @@
       "peak": 0.7582,
       "rms": 0.1028
     },
-    "sounds/kenney/rpg-audio/extracted/Audio/footstep01.ogg": {
+    "sounds/kenney/rpg-audio/extracted/audio/footstep01.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/rpg-audio/extracted/Audio/footstep01.ogg",
+      "path": "sounds/kenney/rpg-audio/extracted/audio/footstep01.ogg",
       "contentHash": "sha256:313472dba31fd0c855376069fa368bb5a198c27251cc8398ef464578b7047a4c",
       "byteLength": 9900,
       "duration": 0.282,
@@ -11595,9 +11595,9 @@
       "peak": 0.7879,
       "rms": 0.1196
     },
-    "sounds/kenney/rpg-audio/extracted/Audio/footstep02.ogg": {
+    "sounds/kenney/rpg-audio/extracted/audio/footstep02.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/rpg-audio/extracted/Audio/footstep02.ogg",
+      "path": "sounds/kenney/rpg-audio/extracted/audio/footstep02.ogg",
       "contentHash": "sha256:2d9575b7dead6e1217ca113991fc5229e9b6d998ea0726ebbb277e7398ab888f",
       "byteLength": 9528,
       "duration": 0.242,
@@ -11802,9 +11802,9 @@
       "peak": 0.6098,
       "rms": 0.0871
     },
-    "sounds/kenney/rpg-audio/extracted/Audio/footstep03.ogg": {
+    "sounds/kenney/rpg-audio/extracted/audio/footstep03.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/rpg-audio/extracted/Audio/footstep03.ogg",
+      "path": "sounds/kenney/rpg-audio/extracted/audio/footstep03.ogg",
       "contentHash": "sha256:a86756b9af9f370455ab47844239bb07fd1bee7a113068c91f0fcd9b72703fae",
       "byteLength": 10559,
       "duration": 0.269,
@@ -12009,9 +12009,9 @@
       "peak": 0.8804,
       "rms": 0.1158
     },
-    "sounds/kenney/rpg-audio/extracted/Audio/footstep04.ogg": {
+    "sounds/kenney/rpg-audio/extracted/audio/footstep04.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/rpg-audio/extracted/Audio/footstep04.ogg",
+      "path": "sounds/kenney/rpg-audio/extracted/audio/footstep04.ogg",
       "contentHash": "sha256:fd264d72a7cd622b82abde202f4ed09fa7de95d34c36473ee938ce66cdf39830",
       "byteLength": 11303,
       "duration": 0.323,
@@ -12216,9 +12216,9 @@
       "peak": 0.6466,
       "rms": 0.0634
     },
-    "sounds/kenney/rpg-audio/extracted/Audio/footstep05.ogg": {
+    "sounds/kenney/rpg-audio/extracted/audio/footstep05.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/rpg-audio/extracted/Audio/footstep05.ogg",
+      "path": "sounds/kenney/rpg-audio/extracted/audio/footstep05.ogg",
       "contentHash": "sha256:817957e1f95d97fd36870064c41673895575cde17bccb245f50364c86ed10198",
       "byteLength": 10288,
       "duration": 0.276,
@@ -12423,9 +12423,9 @@
       "peak": 0.5747,
       "rms": 0.0571
     },
-    "sounds/kenney/sci-fi-sounds/extracted/Audio/explosionCrunch_000.ogg": {
+    "sounds/kenney/sci-fi-sounds/extracted/audio/explosioncrunch-000.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/sci-fi-sounds/extracted/Audio/explosionCrunch_000.ogg",
+      "path": "sounds/kenney/sci-fi-sounds/extracted/audio/explosioncrunch-000.ogg",
       "contentHash": "sha256:4b597d658d0ae101f0a030fbeea5fc3a4292ab85f017470a8254a8e7959cbd69",
       "byteLength": 28274,
       "duration": 0.777,
@@ -12630,9 +12630,9 @@
       "peak": 0.6618,
       "rms": 0.1955
     },
-    "sounds/kenney/sci-fi-sounds/extracted/Audio/explosionCrunch_001.ogg": {
+    "sounds/kenney/sci-fi-sounds/extracted/audio/explosioncrunch-001.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/sci-fi-sounds/extracted/Audio/explosionCrunch_001.ogg",
+      "path": "sounds/kenney/sci-fi-sounds/extracted/audio/explosioncrunch-001.ogg",
       "contentHash": "sha256:fdd04d6f0032d4d57c134ad37f3587d2d00e58c9572715275bd8cf4f43593576",
       "byteLength": 47916,
       "duration": 1.357,
@@ -12837,9 +12837,9 @@
       "peak": 0.6443,
       "rms": 0.2383
     },
-    "sounds/kenney/sci-fi-sounds/extracted/Audio/explosionCrunch_002.ogg": {
+    "sounds/kenney/sci-fi-sounds/extracted/audio/explosioncrunch-002.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/sci-fi-sounds/extracted/Audio/explosionCrunch_002.ogg",
+      "path": "sounds/kenney/sci-fi-sounds/extracted/audio/explosioncrunch-002.ogg",
       "contentHash": "sha256:be2b8ddc62e4a24c91e2e77793de98549ce216faf2f323a917e7d6f34321ff97",
       "byteLength": 47907,
       "duration": 1.256,
@@ -13044,9 +13044,9 @@
       "peak": 0.7435,
       "rms": 0.1122
     },
-    "sounds/kenney/sci-fi-sounds/extracted/Audio/explosionCrunch_003.ogg": {
+    "sounds/kenney/sci-fi-sounds/extracted/audio/explosioncrunch-003.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/sci-fi-sounds/extracted/Audio/explosionCrunch_003.ogg",
+      "path": "sounds/kenney/sci-fi-sounds/extracted/audio/explosioncrunch-003.ogg",
       "contentHash": "sha256:8c7197bb3a1c504690319c3abe0e62a5423ee246dd70caab57963d0b7aa8144f",
       "byteLength": 54824,
       "duration": 1.553,
@@ -13251,9 +13251,9 @@
       "peak": 0.6892,
       "rms": 0.1944
     },
-    "sounds/kenney/sci-fi-sounds/extracted/Audio/explosionCrunch_004.ogg": {
+    "sounds/kenney/sci-fi-sounds/extracted/audio/explosioncrunch-004.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/sci-fi-sounds/extracted/Audio/explosionCrunch_004.ogg",
+      "path": "sounds/kenney/sci-fi-sounds/extracted/audio/explosioncrunch-004.ogg",
       "contentHash": "sha256:9c3a1c73cadf0de5d5a578b31a264f20b1ac7cb6ec9bbd34a203f58402ea5390",
       "byteLength": 79250,
       "duration": 1.98,
@@ -13458,9 +13458,9 @@
       "peak": 0.8543,
       "rms": 0.1817
     },
-    "sounds/kenney/sci-fi-sounds/extracted/Audio/impactMetal_000.ogg": {
+    "sounds/kenney/sci-fi-sounds/extracted/audio/impactmetal-000.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/sci-fi-sounds/extracted/Audio/impactMetal_000.ogg",
+      "path": "sounds/kenney/sci-fi-sounds/extracted/audio/impactmetal-000.ogg",
       "contentHash": "sha256:956c6612a256aa1a67a2327fffe2454f6b1d82e4c1c2be28fd66916335d5b1d6",
       "byteLength": 15491,
       "duration": 0.635,
@@ -13665,9 +13665,9 @@
       "peak": 0.9072,
       "rms": 0.0796
     },
-    "sounds/kenney/ui-audio/extracted/Audio/click1.ogg": {
+    "sounds/kenney/ui-audio/extracted/audio/click1.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/ui-audio/extracted/Audio/click1.ogg",
+      "path": "sounds/kenney/ui-audio/extracted/audio/click1.ogg",
       "contentHash": "sha256:59175ac17cd49a68dd736285738441287636112a84a6f7ce0d89921bda5a5360",
       "byteLength": 4983,
       "duration": 0.094,
@@ -13872,9 +13872,9 @@
       "peak": 0.5301,
       "rms": 0.0713
     },
-    "sounds/kenney/ui-audio/extracted/Audio/click2.ogg": {
+    "sounds/kenney/ui-audio/extracted/audio/click2.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/ui-audio/extracted/Audio/click2.ogg",
+      "path": "sounds/kenney/ui-audio/extracted/audio/click2.ogg",
       "contentHash": "sha256:c394b46bc6737f7f7edfbfa3031ce621b7a43d498d456d6198364eee9cd3e306",
       "byteLength": 4656,
       "duration": 0.056,
@@ -14079,9 +14079,9 @@
       "peak": 0.9189,
       "rms": 0.2006
     },
-    "sounds/kenney/ui-audio/extracted/Audio/click3.ogg": {
+    "sounds/kenney/ui-audio/extracted/audio/click3.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/ui-audio/extracted/Audio/click3.ogg",
+      "path": "sounds/kenney/ui-audio/extracted/audio/click3.ogg",
       "contentHash": "sha256:e3e7fc7ccd9c5cfdf77bffa05aee10d4973812076c76dc889ba2b16ea434127f",
       "byteLength": 4880,
       "duration": 0.086,
@@ -14286,9 +14286,9 @@
       "peak": 0.1479,
       "rms": 0.0209
     },
-    "sounds/kenney/ui-audio/extracted/Audio/click4.ogg": {
+    "sounds/kenney/ui-audio/extracted/audio/click4.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/ui-audio/extracted/Audio/click4.ogg",
+      "path": "sounds/kenney/ui-audio/extracted/audio/click4.ogg",
       "contentHash": "sha256:9c02bbfc872b50eb8750adf4b7c343120f19f5d2f04ab06a7a8948368a77b872",
       "byteLength": 4558,
       "duration": 0.037,
@@ -14493,9 +14493,9 @@
       "peak": 0.3585,
       "rms": 0.081
     },
-    "sounds/kenney/ui-audio/extracted/Audio/click5.ogg": {
+    "sounds/kenney/ui-audio/extracted/audio/click5.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/ui-audio/extracted/Audio/click5.ogg",
+      "path": "sounds/kenney/ui-audio/extracted/audio/click5.ogg",
       "contentHash": "sha256:52d41e0bb012731bf2a391d53ffb52265ef21589c7701e66b391d5e36a65b293",
       "byteLength": 4532,
       "duration": 0.032,
@@ -14700,9 +14700,9 @@
       "peak": 0.5558,
       "rms": 0.1024
     },
-    "sounds/kenney/ui-audio/extracted/Audio/mouseclick1.ogg": {
+    "sounds/kenney/ui-audio/extracted/audio/mouseclick1.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/ui-audio/extracted/Audio/mouseclick1.ogg",
+      "path": "sounds/kenney/ui-audio/extracted/audio/mouseclick1.ogg",
       "contentHash": "sha256:ece1210c62ccae6c9ea4f4c59466d9d453d6b357c7d4b1a6c31196e5e6fea1bf",
       "byteLength": 4686,
       "duration": 0.059,
@@ -14907,9 +14907,9 @@
       "peak": 0.0006,
       "rms": 0.0001
     },
-    "sounds/kenney/voiceover-pack-fighter/extracted/Audio/1.ogg": {
+    "sounds/kenney/voiceover-pack-fighter/extracted/audio/1.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/voiceover-pack-fighter/extracted/Audio/1.ogg",
+      "path": "sounds/kenney/voiceover-pack-fighter/extracted/audio/1.ogg",
       "contentHash": "sha256:232c59c88113298e4d7de15a0ad4e00efb4d040d3efec683dd5f9b1394ce0eac",
       "byteLength": 15705,
       "duration": 0.961,
@@ -15114,9 +15114,9 @@
       "peak": 0.5414,
       "rms": 0.2074
     },
-    "sounds/kenney/voiceover-pack-fighter/extracted/Audio/10.ogg": {
+    "sounds/kenney/voiceover-pack-fighter/extracted/audio/10.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/voiceover-pack-fighter/extracted/Audio/10.ogg",
+      "path": "sounds/kenney/voiceover-pack-fighter/extracted/audio/10.ogg",
       "contentHash": "sha256:4bcce4637acaad6cb0ce949ad2adaeb71a1f6382cc3c143488a65c47173e154d",
       "byteLength": 14689,
       "duration": 1.031,
@@ -15321,9 +15321,9 @@
       "peak": 0.5623,
       "rms": 0.1955
     },
-    "sounds/kenney/voiceover-pack-fighter/extracted/Audio/2.ogg": {
+    "sounds/kenney/voiceover-pack-fighter/extracted/audio/2.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/voiceover-pack-fighter/extracted/Audio/2.ogg",
+      "path": "sounds/kenney/voiceover-pack-fighter/extracted/audio/2.ogg",
       "contentHash": "sha256:95155ea07826b3c4f5fb034441f460e02e1d9e8646ee82260959f98045c86990",
       "byteLength": 13736,
       "duration": 0.915,
@@ -15528,9 +15528,9 @@
       "peak": 0.6435,
       "rms": 0.2043
     },
-    "sounds/kenney/voiceover-pack-fighter/extracted/Audio/3.ogg": {
+    "sounds/kenney/voiceover-pack-fighter/extracted/audio/3.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/voiceover-pack-fighter/extracted/Audio/3.ogg",
+      "path": "sounds/kenney/voiceover-pack-fighter/extracted/audio/3.ogg",
       "contentHash": "sha256:44ea4ef78e6cc9c871f9eb7c13398142109dcc657d33216f57b8883b767044a1",
       "byteLength": 16480,
       "duration": 1,
@@ -15735,9 +15735,9 @@
       "peak": 0.5309,
       "rms": 0.1751
     },
-    "sounds/kenney/voiceover-pack-fighter/extracted/Audio/4.ogg": {
+    "sounds/kenney/voiceover-pack-fighter/extracted/audio/4.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/voiceover-pack-fighter/extracted/Audio/4.ogg",
+      "path": "sounds/kenney/voiceover-pack-fighter/extracted/audio/4.ogg",
       "contentHash": "sha256:983d7bcfa1efdd1ffb80aaca4b5a28526d0acad4193398317a1dd210bae97723",
       "byteLength": 16416,
       "duration": 1.069,
@@ -15942,9 +15942,9 @@
       "peak": 0.4824,
       "rms": 0.1718
     },
-    "sounds/kenney/voiceover-pack-fighter/extracted/Preview.ogg": {
+    "sounds/kenney/voiceover-pack-fighter/extracted/preview.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/voiceover-pack-fighter/extracted/Preview.ogg",
+      "path": "sounds/kenney/voiceover-pack-fighter/extracted/preview.ogg",
       "contentHash": "sha256:bdefd116d5ae8fa68ed62cf43ac61b8326ff22a461c284e837e0d319017f1811",
       "byteLength": 398318,
       "duration": 33.269,
@@ -16149,9 +16149,9 @@
       "peak": 0.6657,
       "rms": 0.1978
     },
-    "sounds/kenney/voiceover-pack/extracted/Female/1.ogg": {
+    "sounds/kenney/voiceover-pack/extracted/female/1.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/voiceover-pack/extracted/Female/1.ogg",
+      "path": "sounds/kenney/voiceover-pack/extracted/female/1.ogg",
       "contentHash": "sha256:fb84ff9f243c2dcbbd22e6f1a553f2d39808686df06e4a83a75c557af7f8e802",
       "byteLength": 7348,
       "duration": 0.491,
@@ -16356,9 +16356,9 @@
       "peak": 0.2932,
       "rms": 0.0972
     },
-    "sounds/kenney/voiceover-pack/extracted/Female/10.ogg": {
+    "sounds/kenney/voiceover-pack/extracted/female/10.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/voiceover-pack/extracted/Female/10.ogg",
+      "path": "sounds/kenney/voiceover-pack/extracted/female/10.ogg",
       "contentHash": "sha256:e0f9037d43ec91fee85acfe32c6d9447332847dc69d4fd50e5d4ce4dd28482bd",
       "byteLength": 8165,
       "duration": 0.57,
@@ -16563,9 +16563,9 @@
       "peak": 0.264,
       "rms": 0.0713
     },
-    "sounds/kenney/voiceover-pack/extracted/Female/2.ogg": {
+    "sounds/kenney/voiceover-pack/extracted/female/2.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/voiceover-pack/extracted/Female/2.ogg",
+      "path": "sounds/kenney/voiceover-pack/extracted/female/2.ogg",
       "contentHash": "sha256:47fc7222f50c56e6c242bfc0b669ee54085383f8afbd057489b09645f5e857e4",
       "byteLength": 8194,
       "duration": 0.581,
@@ -16770,9 +16770,9 @@
       "peak": 0.5657,
       "rms": 0.1683
     },
-    "sounds/kenney/voiceover-pack/extracted/Preview (Female).ogg": {
+    "sounds/kenney/voiceover-pack/extracted/preview-female.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/voiceover-pack/extracted/Preview (Female).ogg",
+      "path": "sounds/kenney/voiceover-pack/extracted/preview-female.ogg",
       "contentHash": "sha256:81d53a2d7cde837a8aca7f97ee30d595e763ade9fa067a6335630865ad0a792d",
       "byteLength": 586245,
       "duration": 38.177,
@@ -16977,9 +16977,9 @@
       "peak": 1.086,
       "rms": 0.1381
     },
-    "sounds/kenney/voiceover-pack/extracted/Preview (Male).ogg": {
+    "sounds/kenney/voiceover-pack/extracted/preview-male.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/voiceover-pack/extracted/Preview (Male).ogg",
+      "path": "sounds/kenney/voiceover-pack/extracted/preview-male.ogg",
       "contentHash": "sha256:f2d478bfe8e8a2679b7a323d2fb15ae01ea04306e14e0384d2e5cfb71a5119a3",
       "byteLength": 444341,
       "duration": 41.68,
@@ -17184,9 +17184,9 @@
       "peak": 0.7224,
       "rms": 0.0911
     },
-    "sounds/kenney/voiceover-pack/extracted/Preview.ogg": {
+    "sounds/kenney/voiceover-pack/extracted/preview.ogg": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/kenney/voiceover-pack/extracted/Preview.ogg",
+      "path": "sounds/kenney/voiceover-pack/extracted/preview.ogg",
       "contentHash": "sha256:3df46f21309e15b6bbb3def1dc236e3201b27d5b8304ed403c5abe64ea3d858e",
       "byteLength": 80401,
       "duration": 6.54,
@@ -17391,9 +17391,9 @@
       "peak": 0.9989,
       "rms": 0.1491
     },
-    "sounds/misc/238891__olichite__fx_noisy_metal_door_open.mp3": {
+    "sounds/misc/238891-olichite-fx-noisy-metal-door-open.mp3": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/misc/238891__olichite__fx_noisy_metal_door_open.mp3",
+      "path": "sounds/misc/238891-olichite-fx-noisy-metal-door-open.mp3",
       "contentHash": "sha256:64dd521946023e7ef4da0bb252bc96f54c9e974d5d7f2fec7e5ab9034d0b44bd",
       "byteLength": 34560,
       "duration": 0.84,
@@ -18219,9 +18219,9 @@
       "peak": 0.1483,
       "rms": 0.0216
     },
-    "sounds/misc/freesound_community-doorclose1cs-108188.mp3": {
+    "sounds/misc/freesound-community-doorclose1cs-108188.mp3": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/misc/freesound_community-doorclose1cs-108188.mp3",
+      "path": "sounds/misc/freesound-community-doorclose1cs-108188.mp3",
       "contentHash": "sha256:721533d8d52e4c5d9e006a2b809fc4453d25da1a85a0caf8283ce47e9329f285",
       "byteLength": 31200,
       "duration": 1.56,
@@ -18426,9 +18426,9 @@
       "peak": 0.0989,
       "rms": 0.0107
     },
-    "sounds/misc/freesound_community-dooropen2cs-108190.mp3": {
+    "sounds/misc/freesound-community-dooropen2cs-108190.mp3": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/misc/freesound_community-dooropen2cs-108190.mp3",
+      "path": "sounds/misc/freesound-community-dooropen2cs-108190.mp3",
       "contentHash": "sha256:24204a38d5b7be4f0d897ac24fc282c0672ec7f613687dcf59f21280904fbc40",
       "byteLength": 24960,
       "duration": 1.248,
@@ -18633,9 +18633,9 @@
       "peak": 0.0419,
       "rms": 0.0071
     },
-    "sounds/movement/21607__ali_6868__grassy-footsteps/384858__ali_6868__left-grassgrassy-footstep-2.wav": {
+    "sounds/movement/21607-ali-6868-grassy-footsteps/384858-ali-6868-left-grassgrassy-footstep-2.wav": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/movement/21607__ali_6868__grassy-footsteps/384858__ali_6868__left-grassgrassy-footstep-2.wav",
+      "path": "sounds/movement/21607-ali-6868-grassy-footsteps/384858-ali-6868-left-grassgrassy-footstep-2.wav",
       "contentHash": "sha256:30d919213acb908a86baf218c555046011e1a3f90ad07ada8eabe3713fa287de",
       "byteLength": 177056,
       "duration": 1,
@@ -18840,9 +18840,9 @@
       "peak": 0.0254,
       "rms": 0.0088
     },
-    "sounds/movement/21607__ali_6868__grassy-footsteps/384859__ali_6868__left-grassgrassy-footstep-3.wav": {
+    "sounds/movement/21607-ali-6868-grassy-footsteps/384859-ali-6868-left-grassgrassy-footstep-3.wav": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/movement/21607__ali_6868__grassy-footsteps/384859__ali_6868__left-grassgrassy-footstep-3.wav",
+      "path": "sounds/movement/21607-ali-6868-grassy-footsteps/384859-ali-6868-left-grassgrassy-footstep-3.wav",
       "contentHash": "sha256:739dd48db5ba6a4b521bcbf46e4113b9ee96065697cd26b24580c356a19115a0",
       "byteLength": 177056,
       "duration": 1,
@@ -19047,9 +19047,9 @@
       "peak": 0.0171,
       "rms": 0.0055
     },
-    "sounds/movement/21607__ali_6868__grassy-footsteps/384860__ali_6868__left-grassgrassy-footstep-1.wav": {
+    "sounds/movement/21607-ali-6868-grassy-footsteps/384860-ali-6868-left-grassgrassy-footstep-1.wav": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/movement/21607__ali_6868__grassy-footsteps/384860__ali_6868__left-grassgrassy-footstep-1.wav",
+      "path": "sounds/movement/21607-ali-6868-grassy-footsteps/384860-ali-6868-left-grassgrassy-footstep-1.wav",
       "contentHash": "sha256:646850461031847058d9398c01df1fc78c199e0b7aebf74b3d7320d55d9ccbb2",
       "byteLength": 177056,
       "duration": 1,
@@ -19254,9 +19254,9 @@
       "peak": 0.0209,
       "rms": 0.0069
     },
-    "sounds/movement/21607__ali_6868__grassy-footsteps/384861__ali_6868__left-grassgrassy-footstep-6.wav": {
+    "sounds/movement/21607-ali-6868-grassy-footsteps/384861-ali-6868-left-grassgrassy-footstep-6.wav": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/movement/21607__ali_6868__grassy-footsteps/384861__ali_6868__left-grassgrassy-footstep-6.wav",
+      "path": "sounds/movement/21607-ali-6868-grassy-footsteps/384861-ali-6868-left-grassgrassy-footstep-6.wav",
       "contentHash": "sha256:153ff18d78b2454cb7b02e8f11e80c27b04fd4435f485d1ec7c27c8518f613cf",
       "byteLength": 177056,
       "duration": 1,
@@ -19461,9 +19461,9 @@
       "peak": 0.0192,
       "rms": 0.0034
     },
-    "sounds/movement/21607__ali_6868__grassy-footsteps/384862__ali_6868__left-grassgrassy-footstep-5.wav": {
+    "sounds/movement/21607-ali-6868-grassy-footsteps/384862-ali-6868-left-grassgrassy-footstep-5.wav": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/movement/21607__ali_6868__grassy-footsteps/384862__ali_6868__left-grassgrassy-footstep-5.wav",
+      "path": "sounds/movement/21607-ali-6868-grassy-footsteps/384862-ali-6868-left-grassgrassy-footstep-5.wav",
       "contentHash": "sha256:fd14cb57aebe26c2b3d825c4066ddf2cd51b8459af139c90dff44c865ffe313d",
       "byteLength": 177056,
       "duration": 1,
@@ -19668,9 +19668,9 @@
       "peak": 0.177,
       "rms": 0.0226
     },
-    "sounds/movement/21607__ali_6868__grassy-footsteps/384863__ali_6868__left-grassgrassy-footstep-4.wav": {
+    "sounds/movement/21607-ali-6868-grassy-footsteps/384863-ali-6868-left-grassgrassy-footstep-4.wav": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/movement/21607__ali_6868__grassy-footsteps/384863__ali_6868__left-grassgrassy-footstep-4.wav",
+      "path": "sounds/movement/21607-ali-6868-grassy-footsteps/384863-ali-6868-left-grassgrassy-footstep-4.wav",
       "contentHash": "sha256:88c1ede7bdbb2ca8178c2d11ef61774ddb3281101f8806c528399af8cc7c79d2",
       "byteLength": 177056,
       "duration": 1,
@@ -19875,9 +19875,9 @@
       "peak": 0.0217,
       "rms": 0.0053
     },
-    "sounds/movement/21608__ali_6868__gravel-footsteps/384871__ali_6868__left-gravel-footstep-2.wav": {
+    "sounds/movement/21608-ali-6868-gravel-footsteps/384871-ali-6868-left-gravel-footstep-2.wav": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/movement/21608__ali_6868__gravel-footsteps/384871__ali_6868__left-gravel-footstep-2.wav",
+      "path": "sounds/movement/21608-ali-6868-gravel-footsteps/384871-ali-6868-left-gravel-footstep-2.wav",
       "contentHash": "sha256:fc58b45e5c7ff1a03bb85dc21930ef4e4964d1da6374b4d7ccb8246d1395be93",
       "byteLength": 121932,
       "duration": 0.688,
@@ -20082,9 +20082,9 @@
       "peak": 0.1626,
       "rms": 0.0167
     },
-    "sounds/movement/21608__ali_6868__gravel-footsteps/384872__ali_6868__left-gravel-footstep-3.wav": {
+    "sounds/movement/21608-ali-6868-gravel-footsteps/384872-ali-6868-left-gravel-footstep-3.wav": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/movement/21608__ali_6868__gravel-footsteps/384872__ali_6868__left-gravel-footstep-3.wav",
+      "path": "sounds/movement/21608-ali-6868-gravel-footsteps/384872-ali-6868-left-gravel-footstep-3.wav",
       "contentHash": "sha256:f4a0a885531f7c7da8d72659be324ebba24ed1b556e2a38145933cc4a5faf53b",
       "byteLength": 121932,
       "duration": 0.688,
@@ -20289,9 +20289,9 @@
       "peak": 0.1432,
       "rms": 0.0174
     },
-    "sounds/movement/21608__ali_6868__gravel-footsteps/384873__ali_6868__left-gravel-footstep-1.wav": {
+    "sounds/movement/21608-ali-6868-gravel-footsteps/384873-ali-6868-left-gravel-footstep-1.wav": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/movement/21608__ali_6868__gravel-footsteps/384873__ali_6868__left-gravel-footstep-1.wav",
+      "path": "sounds/movement/21608-ali-6868-gravel-footsteps/384873-ali-6868-left-gravel-footstep-1.wav",
       "contentHash": "sha256:7e7db7fb5da1ec7ebb60aa1645f0c03360443122797eb27286fe1b0dad045ee1",
       "byteLength": 121932,
       "duration": 0.688,
@@ -20496,9 +20496,9 @@
       "peak": 0.1379,
       "rms": 0.0153
     },
-    "sounds/movement/21608__ali_6868__gravel-footsteps/384874__ali_6868__left-gravel-footstep-5.wav": {
+    "sounds/movement/21608-ali-6868-gravel-footsteps/384874-ali-6868-left-gravel-footstep-5.wav": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/movement/21608__ali_6868__gravel-footsteps/384874__ali_6868__left-gravel-footstep-5.wav",
+      "path": "sounds/movement/21608-ali-6868-gravel-footsteps/384874-ali-6868-left-gravel-footstep-5.wav",
       "contentHash": "sha256:81fa0f7ecc5d0f79eb4bbff91cf409a1e510b18bab2e712fb626de014771259e",
       "byteLength": 121932,
       "duration": 0.688,
@@ -20703,9 +20703,9 @@
       "peak": 0.2093,
       "rms": 0.016
     },
-    "sounds/movement/21608__ali_6868__gravel-footsteps/384875__ali_6868__left-gravel-footstep-4.wav": {
+    "sounds/movement/21608-ali-6868-gravel-footsteps/384875-ali-6868-left-gravel-footstep-4.wav": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/movement/21608__ali_6868__gravel-footsteps/384875__ali_6868__left-gravel-footstep-4.wav",
+      "path": "sounds/movement/21608-ali-6868-gravel-footsteps/384875-ali-6868-left-gravel-footstep-4.wav",
       "contentHash": "sha256:0b0e7c51e4cf45f0d6df85e06f62f05fb7f87a0d16f8b9e9afa98821c9b417b2",
       "byteLength": 121932,
       "duration": 0.688,
@@ -20910,9 +20910,9 @@
       "peak": 0.0972,
       "rms": 0.0161
     },
-    "sounds/movement/21608__ali_6868__gravel-footsteps/384876__ali_6868__right-gravel-footstep-2.wav": {
+    "sounds/movement/21608-ali-6868-gravel-footsteps/384876-ali-6868-right-gravel-footstep-2.wav": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/movement/21608__ali_6868__gravel-footsteps/384876__ali_6868__right-gravel-footstep-2.wav",
+      "path": "sounds/movement/21608-ali-6868-gravel-footsteps/384876-ali-6868-right-gravel-footstep-2.wav",
       "contentHash": "sha256:3ab201dbc9846a82ed3435654b8a946032c48092f489894fc4a4a66494547614",
       "byteLength": 85180,
       "duration": 0.479,
@@ -21117,9 +21117,9 @@
       "peak": 0.0841,
       "rms": 0.0136
     },
-    "sounds/movement/21610__ali_6868__knights-forest-footsteps/384891__ali_6868__knight-right-footstep-forestgrass-2-with-chainmail.wav": {
+    "sounds/movement/21610-ali-6868-knights-forest-footsteps/384891-ali-6868-knight-right-footstep-forestgrass-2-with-chainmail.wav": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/movement/21610__ali_6868__knights-forest-footsteps/384891__ali_6868__knight-right-footstep-forestgrass-2-with-chainmail.wav",
+      "path": "sounds/movement/21610-ali-6868-knights-forest-footsteps/384891-ali-6868-knight-right-footstep-forestgrass-2-with-chainmail.wav",
       "contentHash": "sha256:91cc2291067ae0096528869246003beb65e2a4400ca1a53943e051c7a02283a6",
       "byteLength": 155008,
       "duration": 0.875,
@@ -21324,9 +21324,9 @@
       "peak": 0.0205,
       "rms": 0.006
     },
-    "sounds/movement/21610__ali_6868__knights-forest-footsteps/384892__ali_6868__knight-right-footstep-forestgrass-3-with-chainmail.wav": {
+    "sounds/movement/21610-ali-6868-knights-forest-footsteps/384892-ali-6868-knight-right-footstep-forestgrass-3-with-chainmail.wav": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/movement/21610__ali_6868__knights-forest-footsteps/384892__ali_6868__knight-right-footstep-forestgrass-3-with-chainmail.wav",
+      "path": "sounds/movement/21610-ali-6868-knights-forest-footsteps/384892-ali-6868-knight-right-footstep-forestgrass-3-with-chainmail.wav",
       "contentHash": "sha256:9fca80960e81215ee10b81eaa3964a62e7a024156e8de409da4a4867605e0404",
       "byteLength": 155004,
       "duration": 0.875,
@@ -21531,9 +21531,9 @@
       "peak": 0.0164,
       "rms": 0.006
     },
-    "sounds/movement/21610__ali_6868__knights-forest-footsteps/384893__ali_6868__knight-left-footstep-forestgrass-6-with-chainmail.wav": {
+    "sounds/movement/21610-ali-6868-knights-forest-footsteps/384893-ali-6868-knight-left-footstep-forestgrass-6-with-chainmail.wav": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/movement/21610__ali_6868__knights-forest-footsteps/384893__ali_6868__knight-left-footstep-forestgrass-6-with-chainmail.wav",
+      "path": "sounds/movement/21610-ali-6868-knights-forest-footsteps/384893-ali-6868-knight-left-footstep-forestgrass-6-with-chainmail.wav",
       "contentHash": "sha256:4cdb831feb89c45ec353924c65d20cd9630f622eb87621ffec978c08c2315cfb",
       "byteLength": 155008,
       "duration": 0.875,
@@ -21738,9 +21738,9 @@
       "peak": 0.0206,
       "rms": 0.0074
     },
-    "sounds/movement/21610__ali_6868__knights-forest-footsteps/384894__ali_6868__knight-right-footstep-forestgrass-1-with-chainmail.wav": {
+    "sounds/movement/21610-ali-6868-knights-forest-footsteps/384894-ali-6868-knight-right-footstep-forestgrass-1-with-chainmail.wav": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/movement/21610__ali_6868__knights-forest-footsteps/384894__ali_6868__knight-right-footstep-forestgrass-1-with-chainmail.wav",
+      "path": "sounds/movement/21610-ali-6868-knights-forest-footsteps/384894-ali-6868-knight-right-footstep-forestgrass-1-with-chainmail.wav",
       "contentHash": "sha256:5115ffb8a968368ecd52ba983b05a2260ed0b3b8c8700199791b2901aa9bea2b",
       "byteLength": 155008,
       "duration": 0.875,
@@ -21945,9 +21945,9 @@
       "peak": 0.023,
       "rms": 0.0075
     },
-    "sounds/movement/21610__ali_6868__knights-forest-footsteps/384895__ali_6868__knight-right-footstep-forestgrass-6-with-chainmail.wav": {
+    "sounds/movement/21610-ali-6868-knights-forest-footsteps/384895-ali-6868-knight-right-footstep-forestgrass-6-with-chainmail.wav": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/movement/21610__ali_6868__knights-forest-footsteps/384895__ali_6868__knight-right-footstep-forestgrass-6-with-chainmail.wav",
+      "path": "sounds/movement/21610-ali-6868-knights-forest-footsteps/384895-ali-6868-knight-right-footstep-forestgrass-6-with-chainmail.wav",
       "contentHash": "sha256:16ed3367904162d016de5a126203995a948fa55dead5f2db08e7e2ef5f72a4f5",
       "byteLength": 177056,
       "duration": 1,
@@ -22152,9 +22152,9 @@
       "peak": 0.0931,
       "rms": 0.0163
     },
-    "sounds/movement/21610__ali_6868__knights-forest-footsteps/384896__ali_6868__knight-right-footstep-forestgrass-4-with-chainmail.wav": {
+    "sounds/movement/21610-ali-6868-knights-forest-footsteps/384896-ali-6868-knight-right-footstep-forestgrass-4-with-chainmail.wav": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/movement/21610__ali_6868__knights-forest-footsteps/384896__ali_6868__knight-right-footstep-forestgrass-4-with-chainmail.wav",
+      "path": "sounds/movement/21610-ali-6868-knights-forest-footsteps/384896-ali-6868-knight-right-footstep-forestgrass-4-with-chainmail.wav",
       "contentHash": "sha256:5e0e5a33169381208a3f4bf9fe13774621232a1c2e6aaea88bd27fc95411659c",
       "byteLength": 155004,
       "duration": 0.875,
@@ -22359,9 +22359,9 @@
       "peak": 0.0326,
       "rms": 0.0095
     },
-    "sounds/movement/27652__falcospizaetus__steps/489942__falcospizaetus__metallicsteps01.wav": {
+    "sounds/movement/27652-falcospizaetus-steps/489942-falcospizaetus-metallicsteps01.wav": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/movement/27652__falcospizaetus__steps/489942__falcospizaetus__metallicsteps01.wav",
+      "path": "sounds/movement/27652-falcospizaetus-steps/489942-falcospizaetus-metallicsteps01.wav",
       "contentHash": "sha256:919917035e171a469b98b33d9740d17f93e347963934fd3a412d8c3dfda6728d",
       "byteLength": 1597592,
       "duration": 9.056,
@@ -22566,9 +22566,9 @@
       "peak": 0.0148,
       "rms": 0.0029
     },
-    "sounds/movement/27652__falcospizaetus__steps/489943__falcospizaetus__metallicsteps02.wav": {
+    "sounds/movement/27652-falcospizaetus-steps/489943-falcospizaetus-metallicsteps02.wav": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/movement/27652__falcospizaetus__steps/489943__falcospizaetus__metallicsteps02.wav",
+      "path": "sounds/movement/27652-falcospizaetus-steps/489943-falcospizaetus-metallicsteps02.wav",
       "contentHash": "sha256:01de0a889ead1461f1639e3ba6149a18dda94c629200691f0102d544837d9bb7",
       "byteLength": 2048152,
       "duration": 11.61,
@@ -22773,9 +22773,9 @@
       "peak": 0.0157,
       "rms": 0.0027
     },
-    "sounds/movement/27652__falcospizaetus__steps/489944__falcospizaetus__slowstepsonrock01.wav": {
+    "sounds/movement/27652-falcospizaetus-steps/489944-falcospizaetus-slowstepsonrock01.wav": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/movement/27652__falcospizaetus__steps/489944__falcospizaetus__slowstepsonrock01.wav",
+      "path": "sounds/movement/27652-falcospizaetus-steps/489944-falcospizaetus-slowstepsonrock01.wav",
       "contentHash": "sha256:8c22303b173d9fa6923e2fcc62b1d1a8d7696ef9dfd5ab94c283b4f07d2a1926",
       "byteLength": 745624,
       "duration": 4.226,
@@ -22980,9 +22980,9 @@
       "peak": 0.0347,
       "rms": 0.0043
     },
-    "sounds/movement/27652__falcospizaetus__steps/489945__falcospizaetus__slowstepsonrock02.wav": {
+    "sounds/movement/27652-falcospizaetus-steps/489945-falcospizaetus-slowstepsonrock02.wav": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/movement/27652__falcospizaetus__steps/489945__falcospizaetus__slowstepsonrock02.wav",
+      "path": "sounds/movement/27652-falcospizaetus-steps/489945-falcospizaetus-slowstepsonrock02.wav",
       "contentHash": "sha256:5a9d07c36b34dc25cb8484fe3b4304aac8ac3fdcbb324b17b23bd2a9478cc328",
       "byteLength": 1103000,
       "duration": 6.252,
@@ -23187,9 +23187,9 @@
       "peak": 0.0662,
       "rms": 0.0054
     },
-    "sounds/movement/27652__falcospizaetus__steps/489946__falcospizaetus__slowstepsonrock03.wav": {
+    "sounds/movement/27652-falcospizaetus-steps/489946-falcospizaetus-slowstepsonrock03.wav": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/movement/27652__falcospizaetus__steps/489946__falcospizaetus__slowstepsonrock03.wav",
+      "path": "sounds/movement/27652-falcospizaetus-steps/489946-falcospizaetus-slowstepsonrock03.wav",
       "contentHash": "sha256:e1663eed4587e38bb42e3ab8757c2c1482dbcbd0ca1957a31aba0f8e5e5dc218",
       "byteLength": 1745058,
       "duration": 9.892,
@@ -23394,9 +23394,9 @@
       "peak": 0.0308,
       "rms": 0.0031
     },
-    "sounds/movement/27652__falcospizaetus__steps/489947__falcospizaetus__slowstepsongrass01.wav": {
+    "sounds/movement/27652-falcospizaetus-steps/489947-falcospizaetus-slowstepsongrass01.wav": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/movement/27652__falcospizaetus__steps/489947__falcospizaetus__slowstepsongrass01.wav",
+      "path": "sounds/movement/27652-falcospizaetus-steps/489947-falcospizaetus-slowstepsongrass01.wav",
       "contentHash": "sha256:a54ca734f9614350677af97a70e8bbb33876ad2c288928d979804ab2b24cb59b",
       "byteLength": 688280,
       "duration": 3.901,
@@ -24222,9 +24222,9 @@
       "peak": 0.9179,
       "rms": 0.1111
     },
-    "sounds/movement/freesound_community-running-in-grass-6237.mp3": {
+    "sounds/movement/freesound-community-running-in-grass-6237.mp3": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/movement/freesound_community-running-in-grass-6237.mp3",
+      "path": "sounds/movement/freesound-community-running-in-grass-6237.mp3",
       "contentHash": "sha256:5f801b03f0c959d8b7164500215fce4ba046c114ba3193764a2330db4bfb69e3",
       "byteLength": 39840,
       "duration": 1.992,
@@ -24843,9 +24843,9 @@
       "peak": 0.6581,
       "rms": 0.0455
     },
-    "sounds/music/Ancient Winds.mp3": {
+    "sounds/music/ancient-winds.mp3": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/music/Ancient Winds.mp3",
+      "path": "sounds/music/ancient-winds.mp3",
       "contentHash": "sha256:5872851e8f43d64e384f6b1aa20aa3ed4979d139ccd3c05d9c8a2d60b3c46171",
       "byteLength": 141496967,
       "duration": 3534.054,
@@ -25050,9 +25050,9 @@
       "peak": 0.157,
       "rms": 0.017
     },
-    "sounds/music/Bittersweet.mp3": {
+    "sounds/music/bittersweet.mp3": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/music/Bittersweet.mp3",
+      "path": "sounds/music/bittersweet.mp3",
       "contentHash": "sha256:3e12763e7e1955e6017ae7195df2ab7bd5a4faca9a4147eeb81d28d7aa94e5d1",
       "byteLength": 6468058,
       "duration": 202.057,
@@ -25257,9 +25257,9 @@
       "peak": 0.6579,
       "rms": 0.1189
     },
-    "sounds/music/Black Vortex.mp3": {
+    "sounds/music/black-vortex.mp3": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/music/Black Vortex.mp3",
+      "path": "sounds/music/black-vortex.mp3",
       "contentHash": "sha256:a00af27dc5d6daa2d6f00c417c921f077c9092a986ad279323ce457689b5cad8",
       "byteLength": 6790920,
       "duration": 169.718,
@@ -25464,9 +25464,9 @@
       "peak": 1.2838,
       "rms": 0.1367
     },
-    "sounds/music/Clash Defiant.mp3": {
+    "sounds/music/clash-defiant.mp3": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/music/Clash Defiant.mp3",
+      "path": "sounds/music/clash-defiant.mp3",
       "contentHash": "sha256:e2c0dfd33481c032fc8626c86f279b41a542d9b359f72c8b90833c28a1211f76",
       "byteLength": 12021086,
       "duration": 375.589,
@@ -25671,9 +25671,9 @@
       "peak": 1.4034,
       "rms": 0.3019
     },
-    "sounds/music/Comfortable Mystery 2.mp3": {
+    "sounds/music/comfortable-mystery-2.mp3": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/music/Comfortable Mystery 2.mp3",
+      "path": "sounds/music/comfortable-mystery-2.mp3",
       "contentHash": "sha256:de8d0f0b4b3070094ae950a260547adaaf21a645ddcee0b2eb490568c45c0f48",
       "byteLength": 2247012,
       "duration": 53.917,
@@ -25878,9 +25878,9 @@
       "peak": 1.0283,
       "rms": 0.1345
     },
-    "sounds/music/Corruption.mp3": {
+    "sounds/music/corruption.mp3": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/music/Corruption.mp3",
+      "path": "sounds/music/corruption.mp3",
       "contentHash": "sha256:46194f2d2e9fe90dbca66beb200c460cfc97c2769ab14a73b444e4cb6934def5",
       "byteLength": 13539947,
       "duration": 423.053,
@@ -26085,9 +26085,9 @@
       "peak": 1.4097,
       "rms": 0.2399
     },
-    "sounds/music/Magic Forest.mp3": {
+    "sounds/music/magic-forest.mp3": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/music/Magic Forest.mp3",
+      "path": "sounds/music/magic-forest.mp3",
       "contentHash": "sha256:0e8f92a3dfb5e71398502478d6d3be14b705b0dfc0afabccf5831bc741592f55",
       "byteLength": 8324631,
       "duration": 260.075,
@@ -26292,9 +26292,9 @@
       "peak": 0.439,
       "rms": 0.0746
     },
-    "sounds/music/Midnight Tale.mp3": {
+    "sounds/music/midnight-tale.mp3": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/music/Midnight Tale.mp3",
+      "path": "sounds/music/midnight-tale.mp3",
       "contentHash": "sha256:c2862369ae8ed2ae36468bf87f5a77bfa56b9944fd8ebd9703e99a8bc7a6e863",
       "byteLength": 6466790,
       "duration": 161.567,
@@ -26499,9 +26499,9 @@
       "peak": 0.8674,
       "rms": 0.1245
     },
-    "sounds/music/Peppers Theme.mp3": {
+    "sounds/music/peppers-theme.mp3": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/music/Peppers Theme.mp3",
+      "path": "sounds/music/peppers-theme.mp3",
       "contentHash": "sha256:f5fa0555764bb55309c98bf958e5d2b179a33e6de0639bac5e98889a1add97f8",
       "byteLength": 7667506,
       "duration": 239.543,
@@ -26706,9 +26706,9 @@
       "peak": 0.3487,
       "rms": 0.0327
     },
-    "sounds/music/Stay the Course.mp3": {
+    "sounds/music/stay-the-course.mp3": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/music/Stay the Course.mp3",
+      "path": "sounds/music/stay-the-course.mp3",
       "contentHash": "sha256:f7a2eefd36878a811fa479af45bd9e3efc433dd312366ba7c5ba69e493cf3321",
       "byteLength": 10886709,
       "duration": 272.065,
@@ -26913,9 +26913,9 @@
       "peak": 0.3747,
       "rms": 0.089
     },
-    "sounds/negatives/410525__thesurfboardinggiraffe__8-bitnes-like-glitchy-static.mp3": {
+    "sounds/negatives/410525-thesurfboardinggiraffe-8-bitnes-like-glitchy-static.mp3": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/negatives/410525__thesurfboardinggiraffe__8-bitnes-like-glitchy-static.mp3",
+      "path": "sounds/negatives/410525-thesurfboardinggiraffe-8-bitnes-like-glitchy-static.mp3",
       "contentHash": "sha256:ed65d270be355c7097e37d88240a504a4c7b5cb73217ca728396ac9531501e4e",
       "byteLength": 1779460,
       "duration": 44.46,
@@ -27120,9 +27120,9 @@
       "peak": 0.3962,
       "rms": 0.1002
     },
-    "sounds/negatives/445719__matrixxx__evil-presence-01.mp3": {
+    "sounds/negatives/445719-matrixxx-evil-presence-01.mp3": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/negatives/445719__matrixxx__evil-presence-01.mp3",
+      "path": "sounds/negatives/445719-matrixxx-evil-presence-01.mp3",
       "contentHash": "sha256:74feefbd6869fbaba635050d5f886c115587edbc8620915f99a7c983ac81f7dd",
       "byteLength": 82546,
       "duration": 2.038,
@@ -27327,9 +27327,9 @@
       "peak": 1.3498,
       "rms": 0.1374
     },
-    "sounds/negatives/518887__ash_rez__damage.mp3": {
+    "sounds/negatives/518887-ash-rez-damage.mp3": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/negatives/518887__ash_rez__damage.mp3",
+      "path": "sounds/negatives/518887-ash-rez-damage.mp3",
       "contentHash": "sha256:f2d0e06b79322572c3978c29d040226f8b16d62018363fab8bd6c2f21452ec0b",
       "byteLength": 105600,
       "duration": 2.616,
@@ -28155,9 +28155,9 @@
       "peak": 0.577,
       "rms": 0.1457
     },
-    "sounds/player-noises/182431__qubodup__explosive-1-v2-dod-130303.flac.mp3": {
+    "sounds/player-noises/182431-qubodup-explosive-1-v2-dod-130303-flac.mp3": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/player-noises/182431__qubodup__explosive-1-v2-dod-130303.flac.mp3",
+      "path": "sounds/player-noises/182431-qubodup-explosive-1-v2-dod-130303-flac.mp3",
       "contentHash": "sha256:0de4c31562c75498a0b33c90301908ec9a1b44ebd06e71d6483f91bfffc19a8d",
       "byteLength": 122126,
       "duration": 3.024,
@@ -28362,9 +28362,9 @@
       "peak": 1.0184,
       "rms": 0.0732
     },
-    "sounds/player-noises/218190__madamvicious__girl-taking-damage.mp3": {
+    "sounds/player-noises/218190-madamvicious-girl-taking-damage.mp3": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/player-noises/218190__madamvicious__girl-taking-damage.mp3",
+      "path": "sounds/player-noises/218190-madamvicious-girl-taking-damage.mp3",
       "contentHash": "sha256:5b7e41b8e1732219474a44298622b56d84d07edb62bd426645650568d1dcb16f",
       "byteLength": 561109,
       "duration": 14.002,
@@ -28569,9 +28569,9 @@
       "peak": 0.0474,
       "rms": 0.0089
     },
-    "sounds/player-noises/319104__abunijmeh__grunts.mp3": {
+    "sounds/player-noises/319104-abunijmeh-grunts.mp3": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/player-noises/319104__abunijmeh__grunts.mp3",
+      "path": "sounds/player-noises/319104-abunijmeh-grunts.mp3",
       "contentHash": "sha256:6a97bcad95e75ddb4039a493c69fce7afb68142ae0e12d3e254caf24051bac04",
       "byteLength": 551705,
       "duration": 13.767,
@@ -28776,9 +28776,9 @@
       "peak": 0.4464,
       "rms": 0.0323
     },
-    "sounds/player-noises/342229__christopherderp__hurt-1-male.mp3": {
+    "sounds/player-noises/342229-christopherderp-hurt-1-male.mp3": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/player-noises/342229__christopherderp__hurt-1-male.mp3",
+      "path": "sounds/player-noises/342229-christopherderp-hurt-1-male.mp3",
       "contentHash": "sha256:057a498db70be2ad79d5f8c003a3924c37b6360bf675cc877b0eedfe9d94afff",
       "byteLength": 29256,
       "duration": 0.705,
@@ -28983,9 +28983,9 @@
       "peak": 0.1254,
       "rms": 0.0182
     },
-    "sounds/player-noises/413183__micahlg__male_hurt7.ogg.mp3": {
+    "sounds/player-noises/413183-micahlg-male-hurt7-ogg.mp3": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/player-noises/413183__micahlg__male_hurt7.ogg.mp3",
+      "path": "sounds/player-noises/413183-micahlg-male-hurt7-ogg.mp3",
       "contentHash": "sha256:b94dea5f590d7f5751e3fa4c8738d5449cf5e1a808efad00a212c497b3134f08",
       "byteLength": 14044,
       "duration": 0.862,
@@ -29190,9 +29190,9 @@
       "peak": 0.1737,
       "rms": 0.0452
     },
-    "sounds/player-noises/413185__micahlg__male_hurt8.ogg.mp3": {
+    "sounds/player-noises/413185-micahlg-male-hurt8-ogg.mp3": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/player-noises/413185__micahlg__male_hurt8.ogg.mp3",
+      "path": "sounds/player-noises/413185-micahlg-male-hurt8-ogg.mp3",
       "contentHash": "sha256:14a8586d74216f73fdaa2237525123a67d7d28e4d19828f64490ad3f462c5a44",
       "byteLength": 10701,
       "duration": 0.653,
@@ -29397,9 +29397,9 @@
       "peak": 0.2645,
       "rms": 0.0647
     },
-    "sounds/positives/336576__anthousai__coins-in-cloth-08.mp3": {
+    "sounds/positives/336576-anthousai-coins-in-cloth-08.mp3": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/positives/336576__anthousai__coins-in-cloth-08.mp3",
+      "path": "sounds/positives/336576-anthousai-coins-in-cloth-08.mp3",
       "contentHash": "sha256:bdee9de2b6421f706724149aef13c671dcc540f264c9ad303103549b32e0e00a",
       "byteLength": 31680,
       "duration": 0.768,
@@ -29604,9 +29604,9 @@
       "peak": 0.0124,
       "rms": 0.0017
     },
-    "sounds/positives/342750__rhodesmas__coins-purchase-4.mp3": {
+    "sounds/positives/342750-rhodesmas-coins-purchase-4.mp3": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/positives/342750__rhodesmas__coins-purchase-4.mp3",
+      "path": "sounds/positives/342750-rhodesmas-coins-purchase-4.mp3",
       "contentHash": "sha256:be74b419b3606a724e520595db20ad01eaae4399cc6e8ada520132afeb46fd16",
       "byteLength": 55378,
       "duration": 1.358,
@@ -29811,9 +29811,9 @@
       "peak": 0.2705,
       "rms": 0.0512
     },
-    "sounds/positives/342751__rhodesmas__coins-purchase-3.mp3": {
+    "sounds/positives/342751-rhodesmas-coins-purchase-3.mp3": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/positives/342751__rhodesmas__coins-purchase-3.mp3",
+      "path": "sounds/positives/342751-rhodesmas-coins-purchase-3.mp3",
       "contentHash": "sha256:435c3f728b5eb16796278304a1f3aa862e0c4a3b5bd1d61f9539fd2ac3506407",
       "byteLength": 42840,
       "duration": 1.045,
@@ -30018,9 +30018,9 @@
       "peak": 0.0296,
       "rms": 0.0047
     },
-    "sounds/positives/350874__cabled_mess__coin_c_08.mp3": {
+    "sounds/positives/350874-cabled-mess-coin-c-08.mp3": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/positives/350874__cabled_mess__coin_c_08.mp3",
+      "path": "sounds/positives/350874-cabled-mess-coin-c-08.mp3",
       "contentHash": "sha256:948f99edf960b5d67e9182d4b0282de81db6adc942fd2290d91c7c0697c8488d",
       "byteLength": 11493,
       "duration": 0.261,
@@ -30225,9 +30225,9 @@
       "peak": 0.0588,
       "rms": 0.0041
     },
-    "sounds/positives/558909__rizzard__getting-coins-game-sound.mp3": {
+    "sounds/positives/558909-rizzard-getting-coins-game-sound.mp3": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/positives/558909__rizzard__getting-coins-game-sound.mp3",
+      "path": "sounds/positives/558909-rizzard-getting-coins-game-sound.mp3",
       "contentHash": "sha256:32688e6657698cf40dfd0f19e5f77c29a302b2e3caa414b4eb1044885552ac03",
       "byteLength": 243460,
       "duration": 6.06,
@@ -30432,9 +30432,9 @@
       "peak": 0.0362,
       "rms": 0.0013
     },
-    "sounds/positives/646673__sounddesignforyou__coin-pickup-sfx-1.mp3": {
+    "sounds/positives/646673-sounddesignforyou-coin-pickup-sfx-1.mp3": {
       "schema": "gamedev.audio-analysis.v2",
-      "path": "sounds/positives/646673__sounddesignforyou__coin-pickup-sfx-1.mp3",
+      "path": "sounds/positives/646673-sounddesignforyou-coin-pickup-sfx-1.mp3",
       "contentHash": "sha256:daa8041b91545b4b7a705c3a8ab9cef8425ca277d24c6c1eb32c3920a6ab3e56",
       "byteLength": 62693,
       "duration": 1.541,

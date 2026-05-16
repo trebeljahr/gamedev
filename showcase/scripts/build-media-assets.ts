@@ -11,8 +11,8 @@ const ASSETS_ROOT = process.env.ASSETS_DIR
 const OUT = join(SHOWCASE_DIR, "src", "lib", "media-assets.json");
 
 const NON_COMMERCIAL_ART_PACKS = new Set([
-  "bdragon1727__fire-pixel-bullet-16x16",
-  "bdragon1727__free-smoke-fx-pixel-2",
+  "bdragon1727-fire-pixel-bullet-16x16",
+  "bdragon1727-free-smoke-fx-pixel-2",
 ]);
 
 type ArtSample = {

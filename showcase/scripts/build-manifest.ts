@@ -51,12 +51,12 @@ const BBOX_CACHE = join(SHOWCASE_DIR, ".manifest-bbox-cache.json");
 
 const SKIP_PACKS = new Set(["mixamo-library"]);
 const NON_COMMERCIAL_ART_PACKS = new Set([
-  "bdragon1727__fire-pixel-bullet-16x16",
-  "bdragon1727__free-smoke-fx-pixel-2",
+  "bdragon1727-fire-pixel-bullet-16x16",
+  "bdragon1727-free-smoke-fx-pixel-2",
 ]);
 const NON_COMMERCIAL_MODEL_PATTERNS: RegExp[] = [
-  /(^|\/)gltf\/buster_drone\//i,
-  /(^|\/)glb\/model_\d+[a-z]_-_/i,
+  /(^|\/)gltf\/buster-drone\//i,
+  /(^|\/)glb\/model-\d+[a-z]-/i,
 ];
 
 // Vendors where we should prefer source files over the optimized GLBs.
