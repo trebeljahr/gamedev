@@ -63,7 +63,9 @@ const MAX_MODELS = 500; // safety cap on concurrent loaded models
 // Drip-feeding spreads the cost so the camera + animations stay at 60fps.
 // Unloads (when a pack leaves the buffer) happen all at once — those are
 // cheap.
-const MOUNT_PER_TICK = 6;
+// Keep this low — even 2 dense GLBs in one frame can spike past one frame
+// budget, which the Walker would feel as a hop.
+const MOUNT_PER_TICK = 2;
 const MOVE_SPEED = 12; // units/sec
 const WORLD_HEIGHT = 2;
 // Joystick max-range in pixels — must match `defaultParameters.maxRange`
@@ -578,7 +580,11 @@ function Walker({
     const mag = Math.hypot(dx, dy, dz);
     if (mag > 0) {
       const speed = k.shift ? MOVE_SPEED * 3 : MOVE_SPEED;
-      const s = speed * delta;
+      // Clamp delta so a long stall (GLB parse, GC pause, tab refocus) does
+      // not multiply into a teleport-sized step that reads as a camera hop.
+      // 100ms cap = at most ~1.2 units (or ~3.6 sprinting) lost to a single
+      // bad frame instead of unbounded leaps.
+      const s = speed * Math.min(delta, 0.1);
       camera.position.x += dx * s;
       camera.position.y += dy * s;
       camera.position.z += dz * s;
@@ -715,6 +721,12 @@ type CrosshairHit =
    is centred on its cell and scaled to the *model's* raw XZ footprint, NOT
    the padded cell size, so adjacent bases get a CELL_PAD gap between them.
    Geometry is a unit cube; the per-instance scale matrix stretches it. */
+// Skip raycasting placeholders entirely — they're decorative and have no
+// userData.slot, so Selector would discard every hit anyway. Without this,
+// each hover tick ran the per-instance ray test against every slot
+// (7k+ for /all) which spiked into multi-frame stalls inside dense packs.
+const noopRaycast = () => {};
+
 function Placeholders({ slots, color }: { slots: Slot[]; color: string }) {
   const ref = useRef<InstancedMesh>(null);
   const dummy = useMemo(() => new Object3D(), []);
@@ -738,6 +750,7 @@ function Placeholders({ slots, color }: { slots: Slot[]; color: string }) {
       ref={ref}
       args={[undefined, undefined, slots.length]}
       frustumCulled={false}
+      raycast={noopRaycast}
     >
       <boxGeometry args={[1, 1, 1]} />
       <meshStandardMaterial color={color} roughness={0.7} />
