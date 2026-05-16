@@ -1,0 +1,1011 @@
+{
+  "folder": "wxhaust-robo-character-pack2",
+  "title": "Robo Character Pack #2",
+  "author": "wxhaust",
+  "author_url": "https://wxhaust.itch.io",
+  "url": "https://wxhaust.itch.io/robo-character-pack2",
+  "game_id": 2372539,
+  "license_class": "Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms)",
+  "attribution": "Appreciated / not required",
+  "theme": "Vehicles & Sci-Fi",
+  "description": "Robo Character Pack #2 is a 2D vehicles & sci-fi art pack by wxhaust. Use it for player characters, NPCs, animation prototyping. License: Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). Attribution: Appreciated / not required.",
+  "category": "Vehicles & Sci-Fi",
+  "themes": [
+    "sci-fi",
+    "urban",
+    "vehicles & sci-fi"
+  ],
+  "useCases": [
+    "player characters",
+    "NPCs",
+    "animation prototyping"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "sci-fi",
+    "sprite",
+    "urban",
+    "vehicles & sci-fi"
+  ],
+  "searchText": "robo character pack #2 wxhaust-robo-character-pack2 wxhaust vehicles & sci-fi free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms) appreciated / not required robo character pack #2 is a 2d vehicles & sci-fi art pack by wxhaust. use it for player characters, npcs, animation prototyping. license: free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). attribution: appreciated / not required. sci-fi urban vehicles & sci-fi player characters npcs animation prototyping 2d art sprite",
+  "sampleCount": 24,
+  "samples": [
+    {
+      "packFolder": "wxhaust-robo-character-pack2",
+      "path": "2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/walking/1.png",
+      "src": "/2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/walking/1.png",
+      "label": "1",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 800,
+        "height": 800,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.083892822265625,
+        "transparentCoverage": 0.916107177734375,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "1 is a static 2D character sample from Robo Character Pack #2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "robo character pack #2"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "robo character pack #2",
+        "static"
+      ],
+      "searchText": "1 2d/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/walking/1.png robo character pack #2 character 1 is a static 2d character sample from robo character pack #2. useful for player characters, npcs, animation prototyping. robo character pack #2 player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "wxhaust-robo-character-pack2",
+      "path": "2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/walking/2.png",
+      "src": "/2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/walking/2.png",
+      "label": "2",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 800,
+        "height": 800,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0831146240234375,
+        "transparentCoverage": 0.9168853759765625,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "2 is a static 2D character sample from Robo Character Pack #2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "robo character pack #2"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "robo character pack #2",
+        "static"
+      ],
+      "searchText": "2 2d/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/walking/2.png robo character pack #2 character 2 is a static 2d character sample from robo character pack #2. useful for player characters, npcs, animation prototyping. robo character pack #2 player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "wxhaust-robo-character-pack2",
+      "path": "2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/walking/3.png",
+      "src": "/2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/walking/3.png",
+      "label": "3",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 800,
+        "height": 800,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.078582763671875,
+        "transparentCoverage": 0.921417236328125,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "3 is a static 2D character sample from Robo Character Pack #2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "robo character pack #2"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "robo character pack #2",
+        "static"
+      ],
+      "searchText": "3 2d/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/walking/3.png robo character pack #2 character 3 is a static 2d character sample from robo character pack #2. useful for player characters, npcs, animation prototyping. robo character pack #2 player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "wxhaust-robo-character-pack2",
+      "path": "2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/walking/4.png",
+      "src": "/2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/walking/4.png",
+      "label": "4",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 800,
+        "height": 800,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0751495361328125,
+        "transparentCoverage": 0.9248504638671875,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "4 is a static 2D character sample from Robo Character Pack #2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "robo character pack #2"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "robo character pack #2",
+        "static"
+      ],
+      "searchText": "4 2d/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/walking/4.png robo character pack #2 character 4 is a static 2d character sample from robo character pack #2. useful for player characters, npcs, animation prototyping. robo character pack #2 player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "wxhaust-robo-character-pack2",
+      "path": "2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/walking/5.png",
+      "src": "/2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/walking/5.png",
+      "label": "5",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 800,
+        "height": 800,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0771331787109375,
+        "transparentCoverage": 0.9228668212890625,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "5 is a static 2D character sample from Robo Character Pack #2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "robo character pack #2"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "robo character pack #2",
+        "static"
+      ],
+      "searchText": "5 2d/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/walking/5.png robo character pack #2 character 5 is a static 2d character sample from robo character pack #2. useful for player characters, npcs, animation prototyping. robo character pack #2 player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "wxhaust-robo-character-pack2",
+      "path": "2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/walking/6.png",
+      "src": "/2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/walking/6.png",
+      "label": "6",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 800,
+        "height": 800,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0768890380859375,
+        "transparentCoverage": 0.9231109619140625,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "6 is a static 2D character sample from Robo Character Pack #2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "robo character pack #2"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "robo character pack #2",
+        "static"
+      ],
+      "searchText": "6 2d/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/walking/6.png robo character pack #2 character 6 is a static 2d character sample from robo character pack #2. useful for player characters, npcs, animation prototyping. robo character pack #2 player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "wxhaust-robo-character-pack2",
+      "path": "2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/walking/7.png",
+      "src": "/2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/walking/7.png",
+      "label": "7",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 800,
+        "height": 800,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0826568603515625,
+        "transparentCoverage": 0.9173431396484375,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "7 is a static 2D character sample from Robo Character Pack #2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "robo character pack #2"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "robo character pack #2",
+        "static"
+      ],
+      "searchText": "7 2d/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/walking/7.png robo character pack #2 character 7 is a static 2d character sample from robo character pack #2. useful for player characters, npcs, animation prototyping. robo character pack #2 player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "wxhaust-robo-character-pack2",
+      "path": "2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/walking/8.png",
+      "src": "/2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/walking/8.png",
+      "label": "8",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 800,
+        "height": 800,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0836639404296875,
+        "transparentCoverage": 0.9163360595703125,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "8 is a static 2D character sample from Robo Character Pack #2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "robo character pack #2"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "robo character pack #2",
+        "static"
+      ],
+      "searchText": "8 2d/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/walking/8.png robo character pack #2 character 8 is a static 2d character sample from robo character pack #2. useful for player characters, npcs, animation prototyping. robo character pack #2 player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "wxhaust-robo-character-pack2",
+      "path": "2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/attack/1.png",
+      "src": "/2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/attack/1.png",
+      "label": "1",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 960,
+        "height": 960,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.059051513671875,
+        "transparentCoverage": 0.940948486328125,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "1 is a static 2D character sample from Robo Character Pack #2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "robo character pack #2"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "robo character pack #2",
+        "static"
+      ],
+      "searchText": "1 2d/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/attack/1.png robo character pack #2 character 1 is a static 2d character sample from robo character pack #2. useful for player characters, npcs, animation prototyping. robo character pack #2 player characters npcs animation prototyping 2d animated art static"
+    },
+    {
+      "packFolder": "wxhaust-robo-character-pack2",
+      "path": "2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/attack/2.png",
+      "src": "/2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/attack/2.png",
+      "label": "2",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 960,
+        "height": 960,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.05731201171875,
+        "transparentCoverage": 0.94268798828125,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "2 is a static 2D character sample from Robo Character Pack #2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "robo character pack #2"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "robo character pack #2",
+        "static"
+      ],
+      "searchText": "2 2d/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/attack/2.png robo character pack #2 character 2 is a static 2d character sample from robo character pack #2. useful for player characters, npcs, animation prototyping. robo character pack #2 player characters npcs animation prototyping 2d animated art static"
+    },
+    {
+      "packFolder": "wxhaust-robo-character-pack2",
+      "path": "2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/attack/3.png",
+      "src": "/2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/attack/3.png",
+      "label": "3",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 960,
+        "height": 960,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.05657958984375,
+        "transparentCoverage": 0.94342041015625,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "3 is a static 2D character sample from Robo Character Pack #2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "robo character pack #2"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "robo character pack #2",
+        "static"
+      ],
+      "searchText": "3 2d/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/attack/3.png robo character pack #2 character 3 is a static 2d character sample from robo character pack #2. useful for player characters, npcs, animation prototyping. robo character pack #2 player characters npcs animation prototyping 2d animated art static"
+    },
+    {
+      "packFolder": "wxhaust-robo-character-pack2",
+      "path": "2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/attack/4.png",
+      "src": "/2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/attack/4.png",
+      "label": "4",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 960,
+        "height": 960,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0562896728515625,
+        "transparentCoverage": 0.9437103271484375,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "4 is a static 2D character sample from Robo Character Pack #2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "robo character pack #2"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "robo character pack #2",
+        "static"
+      ],
+      "searchText": "4 2d/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/attack/4.png robo character pack #2 character 4 is a static 2d character sample from robo character pack #2. useful for player characters, npcs, animation prototyping. robo character pack #2 player characters npcs animation prototyping 2d animated art static"
+    },
+    {
+      "packFolder": "wxhaust-robo-character-pack2",
+      "path": "2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/attack/5.png",
+      "src": "/2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/attack/5.png",
+      "label": "5",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 960,
+        "height": 960,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.060821533203125,
+        "transparentCoverage": 0.939178466796875,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "5 is a static 2D character sample from Robo Character Pack #2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "robo character pack #2"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "robo character pack #2",
+        "static"
+      ],
+      "searchText": "5 2d/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/attack/5.png robo character pack #2 character 5 is a static 2d character sample from robo character pack #2. useful for player characters, npcs, animation prototyping. robo character pack #2 player characters npcs animation prototyping 2d animated art static"
+    },
+    {
+      "packFolder": "wxhaust-robo-character-pack2",
+      "path": "2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/attack/6.png",
+      "src": "/2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/attack/6.png",
+      "label": "6",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 960,
+        "height": 960,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.06121826171875,
+        "transparentCoverage": 0.93878173828125,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "6 is a static 2D character sample from Robo Character Pack #2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "robo character pack #2"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "robo character pack #2",
+        "static"
+      ],
+      "searchText": "6 2d/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/attack/6.png robo character pack #2 character 6 is a static 2d character sample from robo character pack #2. useful for player characters, npcs, animation prototyping. robo character pack #2 player characters npcs animation prototyping 2d animated art static"
+    },
+    {
+      "packFolder": "wxhaust-robo-character-pack2",
+      "path": "2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/attack/7.png",
+      "src": "/2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/attack/7.png",
+      "label": "7",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 960,
+        "height": 960,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0635833740234375,
+        "transparentCoverage": 0.9364166259765625,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "7 is a static 2D character sample from Robo Character Pack #2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "robo character pack #2"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "robo character pack #2",
+        "static"
+      ],
+      "searchText": "7 2d/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/attack/7.png robo character pack #2 character 7 is a static 2d character sample from robo character pack #2. useful for player characters, npcs, animation prototyping. robo character pack #2 player characters npcs animation prototyping 2d animated art static"
+    },
+    {
+      "packFolder": "wxhaust-robo-character-pack2",
+      "path": "2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/attack/8.png",
+      "src": "/2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/attack/8.png",
+      "label": "8",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 960,
+        "height": 960,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0613861083984375,
+        "transparentCoverage": 0.9386138916015625,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "8 is a static 2D character sample from Robo Character Pack #2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "robo character pack #2"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "robo character pack #2",
+        "static"
+      ],
+      "searchText": "8 2d/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/attack/8.png robo character pack #2 character 8 is a static 2d character sample from robo character pack #2. useful for player characters, npcs, animation prototyping. robo character pack #2 player characters npcs animation prototyping 2d animated art static"
+    },
+    {
+      "packFolder": "wxhaust-robo-character-pack2",
+      "path": "2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/idle/1.png",
+      "src": "/2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/idle/1.png",
+      "label": "1",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 800,
+        "height": 800,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0860443115234375,
+        "transparentCoverage": 0.9139556884765625,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "1 is a static 2D character sample from Robo Character Pack #2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "robo character pack #2"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "robo character pack #2",
+        "static"
+      ],
+      "searchText": "1 2d/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/idle/1.png robo character pack #2 character 1 is a static 2d character sample from robo character pack #2. useful for player characters, npcs, animation prototyping. robo character pack #2 player characters npcs animation prototyping 2d animated art static"
+    },
+    {
+      "packFolder": "wxhaust-robo-character-pack2",
+      "path": "2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/idle/2.png",
+      "src": "/2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/idle/2.png",
+      "label": "2",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 800,
+        "height": 800,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.082763671875,
+        "transparentCoverage": 0.917236328125,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "2 is a static 2D character sample from Robo Character Pack #2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "robo character pack #2"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "robo character pack #2",
+        "static"
+      ],
+      "searchText": "2 2d/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/idle/2.png robo character pack #2 character 2 is a static 2d character sample from robo character pack #2. useful for player characters, npcs, animation prototyping. robo character pack #2 player characters npcs animation prototyping 2d animated art static"
+    },
+    {
+      "packFolder": "wxhaust-robo-character-pack2",
+      "path": "2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/idle/3.png",
+      "src": "/2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/idle/3.png",
+      "label": "3",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 800,
+        "height": 800,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.082763671875,
+        "transparentCoverage": 0.917236328125,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "3 is a static 2D character sample from Robo Character Pack #2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "robo character pack #2"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "robo character pack #2",
+        "static"
+      ],
+      "searchText": "3 2d/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/idle/3.png robo character pack #2 character 3 is a static 2d character sample from robo character pack #2. useful for player characters, npcs, animation prototyping. robo character pack #2 player characters npcs animation prototyping 2d animated art static"
+    },
+    {
+      "packFolder": "wxhaust-robo-character-pack2",
+      "path": "2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/idle/4.png",
+      "src": "/2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/idle/4.png",
+      "label": "4",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 800,
+        "height": 800,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0803070068359375,
+        "transparentCoverage": 0.9196929931640625,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "4 is a static 2D character sample from Robo Character Pack #2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "robo character pack #2"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "robo character pack #2",
+        "static"
+      ],
+      "searchText": "4 2d/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/idle/4.png robo character pack #2 character 4 is a static 2d character sample from robo character pack #2. useful for player characters, npcs, animation prototyping. robo character pack #2 player characters npcs animation prototyping 2d animated art static"
+    },
+    {
+      "packFolder": "wxhaust-robo-character-pack2",
+      "path": "2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/idle/5.png",
+      "src": "/2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/idle/5.png",
+      "label": "5",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 800,
+        "height": 800,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.07904052734375,
+        "transparentCoverage": 0.92095947265625,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "5 is a static 2D character sample from Robo Character Pack #2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "robo character pack #2"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "robo character pack #2",
+        "static"
+      ],
+      "searchText": "5 2d/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/idle/5.png robo character pack #2 character 5 is a static 2d character sample from robo character pack #2. useful for player characters, npcs, animation prototyping. robo character pack #2 player characters npcs animation prototyping 2d animated art static"
+    },
+    {
+      "packFolder": "wxhaust-robo-character-pack2",
+      "path": "2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/idle/6.png",
+      "src": "/2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/idle/6.png",
+      "label": "6",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 800,
+        "height": 800,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0803070068359375,
+        "transparentCoverage": 0.9196929931640625,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "6 is a static 2D character sample from Robo Character Pack #2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "robo character pack #2"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "robo character pack #2",
+        "static"
+      ],
+      "searchText": "6 2d/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/idle/6.png robo character pack #2 character 6 is a static 2d character sample from robo character pack #2. useful for player characters, npcs, animation prototyping. robo character pack #2 player characters npcs animation prototyping 2d animated art static"
+    },
+    {
+      "packFolder": "wxhaust-robo-character-pack2",
+      "path": "2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/idle/7.png",
+      "src": "/2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/idle/7.png",
+      "label": "7",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 800,
+        "height": 800,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.082763671875,
+        "transparentCoverage": 0.917236328125,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "7 is a static 2D character sample from Robo Character Pack #2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "robo character pack #2"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "robo character pack #2",
+        "static"
+      ],
+      "searchText": "7 2d/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/idle/7.png robo character pack #2 character 7 is a static 2d character sample from robo character pack #2. useful for player characters, npcs, animation prototyping. robo character pack #2 player characters npcs animation prototyping 2d animated art static"
+    },
+    {
+      "packFolder": "wxhaust-robo-character-pack2",
+      "path": "2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/idle/8.png",
+      "src": "/2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/idle/8.png",
+      "label": "8",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 800,
+        "height": 800,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0860443115234375,
+        "transparentCoverage": 0.9139556884765625,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "8 is a static 2D character sample from Robo Character Pack #2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "robo character pack #2"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "robo character pack #2",
+        "static"
+      ],
+      "searchText": "8 2d/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/idle/8.png robo character pack #2 character 8 is a static 2d character sample from robo character pack #2. useful for player characters, npcs, animation prototyping. robo character pack #2 player characters npcs animation prototyping 2d animated art static"
+    }
+  ]
+}

@@ -1,0 +1,1235 @@
+{
+  "folder": "free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art",
+  "title": "Octopus, Jellyfish, Shark and Turtle Pixel Art",
+  "author": "free game assets",
+  "author_url": "https://free-game-assets.itch.io",
+  "url": "https://free-game-assets.itch.io/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art",
+  "game_id": 1980085,
+  "license_class": "Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms)",
+  "attribution": "Appreciated / not required",
+  "theme": "Animals",
+  "description": "Octopus, Jellyfish, Shark And Turtle Pixel Art is a 2D animals art pack by free game assets. Use it for enemy variants, encounters, creature animation. License: Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). Attribution: Appreciated / not required.",
+  "category": "Animals",
+  "themes": [
+    "animals",
+    "nature",
+    "urban"
+  ],
+  "useCases": [
+    "enemy variants",
+    "encounters",
+    "creature animation"
+  ],
+  "tags": [
+    "2d",
+    "animals",
+    "art",
+    "nature",
+    "sprite",
+    "urban"
+  ],
+  "searchText": "octopus, jellyfish, shark and turtle pixel art free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art free game assets animals free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms) appreciated / not required octopus, jellyfish, shark and turtle pixel art is a 2d animals art pack by free game assets. use it for enemy variants, encounters, creature animation. license: free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). attribution: appreciated / not required. animals nature urban enemy variants encounters creature animation 2d art sprite",
+  "sampleCount": 30,
+  "samples": [
+    {
+      "packFolder": "free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art",
+      "path": "2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/1/attack.png",
+      "src": "/2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/1/attack.png",
+      "label": "Attack",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 192,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.11382378472222222,
+        "transparentCoverage": 0.8861762152777778,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Attack is an animated 2D character sample from Octopus, Jellyfish, Shark and Turtle Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "searchText": "attack 2d/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/1/attack.png octopus, jellyfish, shark and turtle pixel art character attack is an animated 2d character sample from octopus, jellyfish, shark and turtle pixel art. useful for player characters, npcs, animation prototyping. octopus, jellyfish, shark and turtle pixel art player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art",
+      "path": "2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/1/death.png",
+      "src": "/2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/1/death.png",
+      "label": "Death",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 288,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.05059956395348837,
+        "transparentCoverage": 0.9494004360465116,
+        "contentRowRuns": 1,
+        "contentColRuns": 9,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Death is an animated 2D character sample from Octopus, Jellyfish, Shark and Turtle Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "searchText": "death 2d/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/1/death.png octopus, jellyfish, shark and turtle pixel art character death is an animated 2d character sample from octopus, jellyfish, shark and turtle pixel art. useful for player characters, npcs, animation prototyping. octopus, jellyfish, shark and turtle pixel art player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art",
+      "path": "2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/1/idle.png",
+      "src": "/2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/1/idle.png",
+      "label": "Idle",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 192,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0886501736111111,
+        "transparentCoverage": 0.9113498263888888,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Idle is an animated 2D character sample from Octopus, Jellyfish, Shark and Turtle Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "searchText": "idle 2d/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/1/idle.png octopus, jellyfish, shark and turtle pixel art character idle is an animated 2d character sample from octopus, jellyfish, shark and turtle pixel art. useful for player characters, npcs, animation prototyping. octopus, jellyfish, shark and turtle pixel art player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art",
+      "path": "2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/1/walk.png",
+      "src": "/2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/1/walk.png",
+      "label": "Walk",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 192,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0876736111111111,
+        "transparentCoverage": 0.9123263888888888,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Walk is an animated 2D character sample from Octopus, Jellyfish, Shark and Turtle Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "searchText": "walk 2d/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/1/walk.png octopus, jellyfish, shark and turtle pixel art character walk is an animated 2d character sample from octopus, jellyfish, shark and turtle pixel art. useful for player characters, npcs, animation prototyping. octopus, jellyfish, shark and turtle pixel art player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art",
+      "path": "2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/2/attack.png",
+      "src": "/2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/2/attack.png",
+      "label": "Attack",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 288,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.125,
+        "transparentCoverage": 0.875,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Attack is an animated 2D character sample from Octopus, Jellyfish, Shark and Turtle Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "searchText": "attack 2d/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/2/attack.png octopus, jellyfish, shark and turtle pixel art character attack is an animated 2d character sample from octopus, jellyfish, shark and turtle pixel art. useful for player characters, npcs, animation prototyping. octopus, jellyfish, shark and turtle pixel art player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art",
+      "path": "2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/2/death.png",
+      "src": "/2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/2/death.png",
+      "label": "Death",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 288,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.10374273255813954,
+        "transparentCoverage": 0.8962572674418605,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Death is an animated 2D character sample from Octopus, Jellyfish, Shark and Turtle Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "searchText": "death 2d/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/2/death.png octopus, jellyfish, shark and turtle pixel art character death is an animated 2d character sample from octopus, jellyfish, shark and turtle pixel art. useful for player characters, npcs, animation prototyping. octopus, jellyfish, shark and turtle pixel art player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art",
+      "path": "2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/2/idle.png",
+      "src": "/2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/2/idle.png",
+      "label": "Idle",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 192,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.1238064236111111,
+        "transparentCoverage": 0.8761935763888888,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Idle is an animated 2D character sample from Octopus, Jellyfish, Shark and Turtle Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "searchText": "idle 2d/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/2/idle.png octopus, jellyfish, shark and turtle pixel art character idle is an animated 2d character sample from octopus, jellyfish, shark and turtle pixel art. useful for player characters, npcs, animation prototyping. octopus, jellyfish, shark and turtle pixel art player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art",
+      "path": "2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/2/walk.png",
+      "src": "/2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/2/walk.png",
+      "label": "Walk",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 288,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.12318313953488372,
+        "transparentCoverage": 0.8768168604651163,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Walk is an animated 2D character sample from Octopus, Jellyfish, Shark and Turtle Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "searchText": "walk 2d/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/2/walk.png octopus, jellyfish, shark and turtle pixel art character walk is an animated 2d character sample from octopus, jellyfish, shark and turtle pixel art. useful for player characters, npcs, animation prototyping. octopus, jellyfish, shark and turtle pixel art player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art",
+      "path": "2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/3/attack.png",
+      "src": "/2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/3/attack.png",
+      "label": "Attack",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 288,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.16442587209302326,
+        "transparentCoverage": 0.8355741279069767,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Attack is an animated 2D character sample from Octopus, Jellyfish, Shark and Turtle Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "searchText": "attack 2d/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/3/attack.png octopus, jellyfish, shark and turtle pixel art character attack is an animated 2d character sample from octopus, jellyfish, shark and turtle pixel art. useful for player characters, npcs, animation prototyping. octopus, jellyfish, shark and turtle pixel art player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art",
+      "path": "2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/3/death.png",
+      "src": "/2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/3/death.png",
+      "label": "Death",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 288,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.15388808139534885,
+        "transparentCoverage": 0.8461119186046512,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Death is an animated 2D character sample from Octopus, Jellyfish, Shark and Turtle Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "searchText": "death 2d/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/3/death.png octopus, jellyfish, shark and turtle pixel art character death is an animated 2d character sample from octopus, jellyfish, shark and turtle pixel art. useful for player characters, npcs, animation prototyping. octopus, jellyfish, shark and turtle pixel art player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art",
+      "path": "2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/3/idle.png",
+      "src": "/2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/3/idle.png",
+      "label": "Idle",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 192,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.1730685763888889,
+        "transparentCoverage": 0.8269314236111112,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Idle is an animated 2D character sample from Octopus, Jellyfish, Shark and Turtle Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "searchText": "idle 2d/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/3/idle.png octopus, jellyfish, shark and turtle pixel art character idle is an animated 2d character sample from octopus, jellyfish, shark and turtle pixel art. useful for player characters, npcs, animation prototyping. octopus, jellyfish, shark and turtle pixel art player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art",
+      "path": "2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/3/walk.png",
+      "src": "/2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/3/walk.png",
+      "label": "Walk",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 192,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.17122395833333334,
+        "transparentCoverage": 0.8287760416666666,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Walk is an animated 2D character sample from Octopus, Jellyfish, Shark and Turtle Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "searchText": "walk 2d/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/3/walk.png octopus, jellyfish, shark and turtle pixel art character walk is an animated 2d character sample from octopus, jellyfish, shark and turtle pixel art. useful for player characters, npcs, animation prototyping. octopus, jellyfish, shark and turtle pixel art player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art",
+      "path": "2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/4/attack.png",
+      "src": "/2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/4/attack.png",
+      "label": "Attack",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 288,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.17805232558139536,
+        "transparentCoverage": 0.8219476744186046,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Attack is an animated 2D character sample from Octopus, Jellyfish, Shark and Turtle Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "searchText": "attack 2d/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/4/attack.png octopus, jellyfish, shark and turtle pixel art character attack is an animated 2d character sample from octopus, jellyfish, shark and turtle pixel art. useful for player characters, npcs, animation prototyping. octopus, jellyfish, shark and turtle pixel art player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art",
+      "path": "2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/4/death.png",
+      "src": "/2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/4/death.png",
+      "label": "Death",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 288,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.1652434593023256,
+        "transparentCoverage": 0.8347565406976745,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Death is an animated 2D character sample from Octopus, Jellyfish, Shark and Turtle Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "searchText": "death 2d/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/4/death.png octopus, jellyfish, shark and turtle pixel art character death is an animated 2d character sample from octopus, jellyfish, shark and turtle pixel art. useful for player characters, npcs, animation prototyping. octopus, jellyfish, shark and turtle pixel art player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art",
+      "path": "2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/4/idle.png",
+      "src": "/2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/4/idle.png",
+      "label": "Idle",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 192,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.1736111111111111,
+        "transparentCoverage": 0.8263888888888888,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Idle is an animated 2D character sample from Octopus, Jellyfish, Shark and Turtle Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "searchText": "idle 2d/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/4/idle.png octopus, jellyfish, shark and turtle pixel art character idle is an animated 2d character sample from octopus, jellyfish, shark and turtle pixel art. useful for player characters, npcs, animation prototyping. octopus, jellyfish, shark and turtle pixel art player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art",
+      "path": "2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/4/walk.png",
+      "src": "/2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/4/walk.png",
+      "label": "Walk",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 192,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.1736111111111111,
+        "transparentCoverage": 0.8263888888888888,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Walk is an animated 2D character sample from Octopus, Jellyfish, Shark and Turtle Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "searchText": "walk 2d/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/4/walk.png octopus, jellyfish, shark and turtle pixel art character walk is an animated 2d character sample from octopus, jellyfish, shark and turtle pixel art. useful for player characters, npcs, animation prototyping. octopus, jellyfish, shark and turtle pixel art player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art",
+      "path": "2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/5/attack.png",
+      "src": "/2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/5/attack.png",
+      "label": "Attack",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 288,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.13190406976744187,
+        "transparentCoverage": 0.8680959302325582,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Attack is an animated 2D character sample from Octopus, Jellyfish, Shark and Turtle Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "searchText": "attack 2d/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/5/attack.png octopus, jellyfish, shark and turtle pixel art character attack is an animated 2d character sample from octopus, jellyfish, shark and turtle pixel art. useful for player characters, npcs, animation prototyping. octopus, jellyfish, shark and turtle pixel art player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art",
+      "path": "2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/5/death.png",
+      "src": "/2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/5/death.png",
+      "label": "Death",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 288,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.10374273255813954,
+        "transparentCoverage": 0.8962572674418605,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Death is an animated 2D character sample from Octopus, Jellyfish, Shark and Turtle Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "searchText": "death 2d/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/5/death.png octopus, jellyfish, shark and turtle pixel art character death is an animated 2d character sample from octopus, jellyfish, shark and turtle pixel art. useful for player characters, npcs, animation prototyping. octopus, jellyfish, shark and turtle pixel art player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art",
+      "path": "2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/5/idle.png",
+      "src": "/2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/5/idle.png",
+      "label": "Idle",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 192,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.10394965277777778,
+        "transparentCoverage": 0.8960503472222222,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Idle is an animated 2D character sample from Octopus, Jellyfish, Shark and Turtle Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "searchText": "idle 2d/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/5/idle.png octopus, jellyfish, shark and turtle pixel art character idle is an animated 2d character sample from octopus, jellyfish, shark and turtle pixel art. useful for player characters, npcs, animation prototyping. octopus, jellyfish, shark and turtle pixel art player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art",
+      "path": "2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/5/walk.png",
+      "src": "/2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/5/walk.png",
+      "label": "Walk",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 288,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.10592296511627906,
+        "transparentCoverage": 0.8940770348837209,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Walk is an animated 2D character sample from Octopus, Jellyfish, Shark and Turtle Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "searchText": "walk 2d/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/5/walk.png octopus, jellyfish, shark and turtle pixel art character walk is an animated 2d character sample from octopus, jellyfish, shark and turtle pixel art. useful for player characters, npcs, animation prototyping. octopus, jellyfish, shark and turtle pixel art player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art",
+      "path": "2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/6/attack.png",
+      "src": "/2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/6/attack.png",
+      "label": "Attack",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 288,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.2799781976744186,
+        "transparentCoverage": 0.7200218023255814,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Attack is an animated 2D character sample from Octopus, Jellyfish, Shark and Turtle Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "searchText": "attack 2d/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/6/attack.png octopus, jellyfish, shark and turtle pixel art character attack is an animated 2d character sample from octopus, jellyfish, shark and turtle pixel art. useful for player characters, npcs, animation prototyping. octopus, jellyfish, shark and turtle pixel art player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art",
+      "path": "2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/6/death.png",
+      "src": "/2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/6/death.png",
+      "label": "Death",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 288,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.19694767441860464,
+        "transparentCoverage": 0.8030523255813954,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Death is an animated 2D character sample from Octopus, Jellyfish, Shark and Turtle Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "searchText": "death 2d/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/6/death.png octopus, jellyfish, shark and turtle pixel art character death is an animated 2d character sample from octopus, jellyfish, shark and turtle pixel art. useful for player characters, npcs, animation prototyping. octopus, jellyfish, shark and turtle pixel art player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art",
+      "path": "2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/6/idle.png",
+      "src": "/2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/6/idle.png",
+      "label": "Idle",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 288,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.2531795058139535,
+        "transparentCoverage": 0.7468204941860465,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Idle is an animated 2D character sample from Octopus, Jellyfish, Shark and Turtle Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "searchText": "idle 2d/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/6/idle.png octopus, jellyfish, shark and turtle pixel art character idle is an animated 2d character sample from octopus, jellyfish, shark and turtle pixel art. useful for player characters, npcs, animation prototyping. octopus, jellyfish, shark and turtle pixel art player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art",
+      "path": "2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/6/walk.png",
+      "src": "/2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/6/walk.png",
+      "label": "Walk",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 288,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.24591206395348839,
+        "transparentCoverage": 0.7540879360465116,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Walk is an animated 2D character sample from Octopus, Jellyfish, Shark and Turtle Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "searchText": "walk 2d/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/6/walk.png octopus, jellyfish, shark and turtle pixel art character walk is an animated 2d character sample from octopus, jellyfish, shark and turtle pixel art. useful for player characters, npcs, animation prototyping. octopus, jellyfish, shark and turtle pixel art player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art",
+      "path": "2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/1/hurt.png",
+      "src": "/2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/1/hurt.png",
+      "label": "Hurt",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 96,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.08897569444444445,
+        "transparentCoverage": 0.9110243055555556,
+        "contentRowRuns": 1,
+        "contentColRuns": 2,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Hurt is an animated 2D character sample from Octopus, Jellyfish, Shark and Turtle Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "searchText": "hurt 2d/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/1/hurt.png octopus, jellyfish, shark and turtle pixel art character hurt is an animated 2d character sample from octopus, jellyfish, shark and turtle pixel art. useful for player characters, npcs, animation prototyping. octopus, jellyfish, shark and turtle pixel art player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art",
+      "path": "2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/2/hurt.png",
+      "src": "/2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/2/hurt.png",
+      "label": "Hurt",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 96,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.126953125,
+        "transparentCoverage": 0.873046875,
+        "contentRowRuns": 1,
+        "contentColRuns": 2,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Hurt is an animated 2D character sample from Octopus, Jellyfish, Shark and Turtle Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "searchText": "hurt 2d/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/2/hurt.png octopus, jellyfish, shark and turtle pixel art character hurt is an animated 2d character sample from octopus, jellyfish, shark and turtle pixel art. useful for player characters, npcs, animation prototyping. octopus, jellyfish, shark and turtle pixel art player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art",
+      "path": "2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/3/hurt.png",
+      "src": "/2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/3/hurt.png",
+      "label": "Hurt",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 96,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.1733940972222222,
+        "transparentCoverage": 0.8266059027777778,
+        "contentRowRuns": 1,
+        "contentColRuns": 2,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Hurt is an animated 2D character sample from Octopus, Jellyfish, Shark and Turtle Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "searchText": "hurt 2d/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/3/hurt.png octopus, jellyfish, shark and turtle pixel art character hurt is an animated 2d character sample from octopus, jellyfish, shark and turtle pixel art. useful for player characters, npcs, animation prototyping. octopus, jellyfish, shark and turtle pixel art player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art",
+      "path": "2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/4/hurt.png",
+      "src": "/2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/4/hurt.png",
+      "label": "Hurt",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 96,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.17252604166666666,
+        "transparentCoverage": 0.8274739583333334,
+        "contentRowRuns": 1,
+        "contentColRuns": 2,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Hurt is an animated 2D character sample from Octopus, Jellyfish, Shark and Turtle Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "searchText": "hurt 2d/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/4/hurt.png octopus, jellyfish, shark and turtle pixel art character hurt is an animated 2d character sample from octopus, jellyfish, shark and turtle pixel art. useful for player characters, npcs, animation prototyping. octopus, jellyfish, shark and turtle pixel art player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art",
+      "path": "2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/5/hurt.png",
+      "src": "/2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/5/hurt.png",
+      "label": "Hurt",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 96,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.103515625,
+        "transparentCoverage": 0.896484375,
+        "contentRowRuns": 1,
+        "contentColRuns": 2,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Hurt is an animated 2D character sample from Octopus, Jellyfish, Shark and Turtle Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "searchText": "hurt 2d/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/5/hurt.png octopus, jellyfish, shark and turtle pixel art character hurt is an animated 2d character sample from octopus, jellyfish, shark and turtle pixel art. useful for player characters, npcs, animation prototyping. octopus, jellyfish, shark and turtle pixel art player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art",
+      "path": "2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/6/hurt.png",
+      "src": "/2D/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/6/hurt.png",
+      "label": "Hurt",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 96,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.2645399305555556,
+        "transparentCoverage": 0.7354600694444444,
+        "contentRowRuns": 1,
+        "contentColRuns": 2,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Hurt is an animated 2D character sample from Octopus, Jellyfish, Shark and Turtle Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "octopus, jellyfish, shark and turtle pixel art"
+      ],
+      "searchText": "hurt 2d/free-game-assets-octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/extracted/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/6/hurt.png octopus, jellyfish, shark and turtle pixel art character hurt is an animated 2d character sample from octopus, jellyfish, shark and turtle pixel art. useful for player characters, npcs, animation prototyping. octopus, jellyfish, shark and turtle pixel art player characters npcs animation prototyping 2d animated art"
+    }
+  ]
+}

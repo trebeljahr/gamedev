@@ -1,0 +1,1721 @@
+{
+  "folder": "foozlecc-void-fleet-pack-1",
+  "title": "Void - Fleet Pack 1 - Kla'ed",
+  "author": "FoozleCC",
+  "author_url": "https://foozlecc.itch.io",
+  "url": "https://foozlecc.itch.io/void-fleet-pack-1",
+  "game_id": 1668042,
+  "license_class": "CC0 1.0 (Creative Commons Zero)",
+  "attribution": "Optional",
+  "theme": "Vehicles & Sci-Fi",
+  "description": "Void Fleet Pack 1 Kla'ed is a 2D vehicles & sci-fi art pack by FoozleCC. Use it for shooters, space encounters, sci-fi prototyping. License: CC0 1.0 (Creative Commons Zero). Attribution: Optional.",
+  "category": "Vehicles & Sci-Fi",
+  "themes": [
+    "sci-fi",
+    "vehicles & sci-fi"
+  ],
+  "useCases": [
+    "shooters",
+    "space encounters",
+    "sci-fi prototyping"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "sci-fi",
+    "sprite",
+    "vehicles & sci-fi"
+  ],
+  "searchText": "void - fleet pack 1 - kla'ed foozlecc-void-fleet-pack-1 foozlecc vehicles & sci-fi cc0 1.0 (creative commons zero) optional void fleet pack 1 kla'ed is a 2d vehicles & sci-fi art pack by foozlecc. use it for shooters, space encounters, sci-fi prototyping. license: cc0 1.0 (creative commons zero). attribution: optional. sci-fi vehicles & sci-fi shooters space encounters sci-fi prototyping 2d art sprite",
+  "sampleCount": 42,
+  "samples": [
+    {
+      "packFolder": "foozlecc-void-fleet-pack-1",
+      "path": "2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/destruction/pngs/kla-ed-battlecruiser-destruction.png",
+      "src": "/2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/destruction/pngs/kla-ed-battlecruiser-destruction.png",
+      "label": "Kla Ed Battlecruiser Destruction",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 1792,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.1796875,
+        "transparentCoverage": 0.8203125,
+        "contentRowRuns": 1,
+        "contentColRuns": 14,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Kla Ed Battlecruiser Destruction is an animated 2D image sample from Void - Fleet Pack 1 - Kla'ed. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "searchText": "kla ed battlecruiser destruction 2d/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/destruction/pngs/kla-ed-battlecruiser-destruction.png void - fleet pack 1 - kla'ed image kla ed battlecruiser destruction is an animated 2d image sample from void - fleet pack 1 - kla'ed. useful for player characters, npcs, animation prototyping. void - fleet pack 1 - kla'ed player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-1",
+      "path": "2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/destruction/pngs/kla-ed-bomber-destruction.png",
+      "src": "/2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/destruction/pngs/kla-ed-bomber-destruction.png",
+      "label": "Kla Ed Bomber Destruction",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 512,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.146728515625,
+        "transparentCoverage": 0.853271484375,
+        "contentRowRuns": 1,
+        "contentColRuns": 12,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Kla Ed Bomber Destruction is an animated 2D image sample from Void - Fleet Pack 1 - Kla'ed. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "searchText": "kla ed bomber destruction 2d/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/destruction/pngs/kla-ed-bomber-destruction.png void - fleet pack 1 - kla'ed image kla ed bomber destruction is an animated 2d image sample from void - fleet pack 1 - kla'ed. useful for player characters, npcs, animation prototyping. void - fleet pack 1 - kla'ed player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-1",
+      "path": "2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/destruction/pngs/kla-ed-dreadnought-destruction.png",
+      "src": "/2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/destruction/pngs/kla-ed-dreadnought-destruction.png",
+      "label": "Kla Ed Dreadnought Destruction",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 1536,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.25576636904761907,
+        "transparentCoverage": 0.7442336309523809,
+        "contentRowRuns": 1,
+        "contentColRuns": 16,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Kla Ed Dreadnought Destruction is an animated 2D image sample from Void - Fleet Pack 1 - Kla'ed. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "searchText": "kla ed dreadnought destruction 2d/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/destruction/pngs/kla-ed-dreadnought-destruction.png void - fleet pack 1 - kla'ed image kla ed dreadnought destruction is an animated 2d image sample from void - fleet pack 1 - kla'ed. useful for player characters, npcs, animation prototyping. void - fleet pack 1 - kla'ed player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-1",
+      "path": "2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/destruction/pngs/kla-ed-fighter-destruction.png",
+      "src": "/2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/destruction/pngs/kla-ed-fighter-destruction.png",
+      "label": "Kla Ed Fighter Destruction",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 576,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.107421875,
+        "transparentCoverage": 0.892578125,
+        "contentRowRuns": 1,
+        "contentColRuns": 13,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Kla Ed Fighter Destruction is an animated 2D image sample from Void - Fleet Pack 1 - Kla'ed. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "searchText": "kla ed fighter destruction 2d/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/destruction/pngs/kla-ed-fighter-destruction.png void - fleet pack 1 - kla'ed image kla ed fighter destruction is an animated 2d image sample from void - fleet pack 1 - kla'ed. useful for player characters, npcs, animation prototyping. void - fleet pack 1 - kla'ed player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-1",
+      "path": "2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/destruction/pngs/kla-ed-frigate-destruction.png",
+      "src": "/2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/destruction/pngs/kla-ed-frigate-destruction.png",
+      "label": "Kla Ed Frigate Destruction",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 576,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.1806640625,
+        "transparentCoverage": 0.8193359375,
+        "contentRowRuns": 1,
+        "contentColRuns": 13,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Kla Ed Frigate Destruction is an animated 2D image sample from Void - Fleet Pack 1 - Kla'ed. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "searchText": "kla ed frigate destruction 2d/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/destruction/pngs/kla-ed-frigate-destruction.png void - fleet pack 1 - kla'ed image kla ed frigate destruction is an animated 2d image sample from void - fleet pack 1 - kla'ed. useful for player characters, npcs, animation prototyping. void - fleet pack 1 - kla'ed player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-1",
+      "path": "2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/destruction/pngs/kla-ed-scout-destruction.png",
+      "src": "/2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/destruction/pngs/kla-ed-scout-destruction.png",
+      "label": "Kla Ed Scout Destruction",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 640,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.1045673076923077,
+        "transparentCoverage": 0.8954326923076923,
+        "contentRowRuns": 1,
+        "contentColRuns": 14,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Kla Ed Scout Destruction is an animated 2D image sample from Void - Fleet Pack 1 - Kla'ed. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "searchText": "kla ed scout destruction 2d/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/destruction/pngs/kla-ed-scout-destruction.png void - fleet pack 1 - kla'ed image kla ed scout destruction is an animated 2d image sample from void - fleet pack 1 - kla'ed. useful for player characters, npcs, animation prototyping. void - fleet pack 1 - kla'ed player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-1",
+      "path": "2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/destruction/pngs/kla-ed-support-ship-destruction.png",
+      "src": "/2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/destruction/pngs/kla-ed-support-ship-destruction.png",
+      "label": "Kla Ed Support Ship Destruction",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 640,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.10982572115384616,
+        "transparentCoverage": 0.8901742788461539,
+        "contentRowRuns": 1,
+        "contentColRuns": 13,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Kla Ed Support Ship Destruction is an animated 2D image sample from Void - Fleet Pack 1 - Kla'ed. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "sci-fi",
+        "vehicle"
+      ],
+      "searchText": "kla ed support ship destruction 2d/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/destruction/pngs/kla-ed-support-ship-destruction.png void - fleet pack 1 - kla'ed image kla ed support ship destruction is an animated 2d image sample from void - fleet pack 1 - kla'ed. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-1",
+      "path": "2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/destruction/pngs/kla-ed-torpedo-ship-destruction.png",
+      "src": "/2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/destruction/pngs/kla-ed-torpedo-ship-destruction.png",
+      "label": "Kla Ed Torpedo Ship Destruction",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 640,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.12139423076923077,
+        "transparentCoverage": 0.8786057692307693,
+        "contentRowRuns": 1,
+        "contentColRuns": 13,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Kla Ed Torpedo Ship Destruction is an animated 2D image sample from Void - Fleet Pack 1 - Kla'ed. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "sci-fi",
+        "vehicle"
+      ],
+      "searchText": "kla ed torpedo ship destruction 2d/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/destruction/pngs/kla-ed-torpedo-ship-destruction.png void - fleet pack 1 - kla'ed image kla ed torpedo ship destruction is an animated 2d image sample from void - fleet pack 1 - kla'ed. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-1",
+      "path": "2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/engine/pngs/kla-ed-battlecruiser-engine.png",
+      "src": "/2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/engine/pngs/kla-ed-battlecruiser-engine.png",
+      "label": "Kla Ed Battlecruiser Engine",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 1536,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.00427827380952381,
+        "transparentCoverage": 0.9957217261904762,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Kla Ed Battlecruiser Engine is an animated 2D image sample from Void - Fleet Pack 1 - Kla'ed. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "searchText": "kla ed battlecruiser engine 2d/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/engine/pngs/kla-ed-battlecruiser-engine.png void - fleet pack 1 - kla'ed image kla ed battlecruiser engine is an animated 2d image sample from void - fleet pack 1 - kla'ed. useful for player characters, npcs, animation prototyping. void - fleet pack 1 - kla'ed player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-1",
+      "path": "2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/engine/pngs/kla-ed-bomber-engine.png",
+      "src": "/2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/engine/pngs/kla-ed-bomber-engine.png",
+      "label": "Kla Ed Bomber Engine",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 640,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.007211538461538462,
+        "transparentCoverage": 0.9816706730769231,
+        "contentRowRuns": 1,
+        "contentColRuns": 14,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Kla Ed Bomber Engine is an animated 2D image sample from Void - Fleet Pack 1 - Kla'ed. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "searchText": "kla ed bomber engine 2d/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/engine/pngs/kla-ed-bomber-engine.png void - fleet pack 1 - kla'ed image kla ed bomber engine is an animated 2d image sample from void - fleet pack 1 - kla'ed. useful for player characters, npcs, animation prototyping. void - fleet pack 1 - kla'ed player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-1",
+      "path": "2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/engine/pngs/kla-ed-dreadnought-engine.png",
+      "src": "/2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/engine/pngs/kla-ed-dreadnought-engine.png",
+      "label": "Kla Ed Dreadnought Engine",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 1536,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.009300595238095238,
+        "transparentCoverage": 0.9906994047619048,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Kla Ed Dreadnought Engine is an animated 2D image sample from Void - Fleet Pack 1 - Kla'ed. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "searchText": "kla ed dreadnought engine 2d/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/engine/pngs/kla-ed-dreadnought-engine.png void - fleet pack 1 - kla'ed image kla ed dreadnought engine is an animated 2d image sample from void - fleet pack 1 - kla'ed. useful for player characters, npcs, animation prototyping. void - fleet pack 1 - kla'ed player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-1",
+      "path": "2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/engine/pngs/kla-ed-fighter-engine.png",
+      "src": "/2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/engine/pngs/kla-ed-fighter-engine.png",
+      "label": "Kla Ed Fighter Engine",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 640,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0033052884615384615,
+        "transparentCoverage": 0.9909855769230769,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Kla Ed Fighter Engine is an animated 2D image sample from Void - Fleet Pack 1 - Kla'ed. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "searchText": "kla ed fighter engine 2d/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/engine/pngs/kla-ed-fighter-engine.png void - fleet pack 1 - kla'ed image kla ed fighter engine is an animated 2d image sample from void - fleet pack 1 - kla'ed. useful for player characters, npcs, animation prototyping. void - fleet pack 1 - kla'ed player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-1",
+      "path": "2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/engine/pngs/kla-ed-frigate-engine.png",
+      "src": "/2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/engine/pngs/kla-ed-frigate-engine.png",
+      "label": "Kla Ed Frigate Engine",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 768,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.003720238095238095,
+        "transparentCoverage": 0.9903273809523809,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Kla Ed Frigate Engine is an animated 2D image sample from Void - Fleet Pack 1 - Kla'ed. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "searchText": "kla ed frigate engine 2d/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/engine/pngs/kla-ed-frigate-engine.png void - fleet pack 1 - kla'ed image kla ed frigate engine is an animated 2d image sample from void - fleet pack 1 - kla'ed. useful for player characters, npcs, animation prototyping. void - fleet pack 1 - kla'ed player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-1",
+      "path": "2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/engine/pngs/kla-ed-scout-engine.png",
+      "src": "/2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/engine/pngs/kla-ed-scout-engine.png",
+      "label": "Kla Ed Scout Engine",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 640,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0033052884615384615,
+        "transparentCoverage": 0.9909855769230769,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Kla Ed Scout Engine is an animated 2D image sample from Void - Fleet Pack 1 - Kla'ed. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "searchText": "kla ed scout engine 2d/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/engine/pngs/kla-ed-scout-engine.png void - fleet pack 1 - kla'ed image kla ed scout engine is an animated 2d image sample from void - fleet pack 1 - kla'ed. useful for player characters, npcs, animation prototyping. void - fleet pack 1 - kla'ed player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-1",
+      "path": "2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/engine/pngs/kla-ed-support-ship-engine.png",
+      "src": "/2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/engine/pngs/kla-ed-support-ship-engine.png",
+      "label": "Kla Ed Support Ship Engine",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 640,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.003605769230769231,
+        "transparentCoverage": 0.9915865384615384,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Kla Ed Support Ship Engine is an animated 2D image sample from Void - Fleet Pack 1 - Kla'ed. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "sci-fi",
+        "vehicle"
+      ],
+      "searchText": "kla ed support ship engine 2d/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/engine/pngs/kla-ed-support-ship-engine.png void - fleet pack 1 - kla'ed image kla ed support ship engine is an animated 2d image sample from void - fleet pack 1 - kla'ed. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-1",
+      "path": "2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/engine/pngs/kla-ed-torpedo-ship-engine.png",
+      "src": "/2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/engine/pngs/kla-ed-torpedo-ship-engine.png",
+      "label": "Kla Ed Torpedo Ship Engine",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 640,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.007211538461538462,
+        "transparentCoverage": 0.9816706730769231,
+        "contentRowRuns": 1,
+        "contentColRuns": 14,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Kla Ed Torpedo Ship Engine is an animated 2D image sample from Void - Fleet Pack 1 - Kla'ed. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "sci-fi",
+        "vehicle"
+      ],
+      "searchText": "kla ed torpedo ship engine 2d/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/engine/pngs/kla-ed-torpedo-ship-engine.png void - fleet pack 1 - kla'ed image kla ed torpedo ship engine is an animated 2d image sample from void - fleet pack 1 - kla'ed. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-1",
+      "path": "2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/projectiles/pngs/kla-ed-big-bullet.png",
+      "src": "/2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/projectiles/pngs/kla-ed-big-bullet.png",
+      "label": "Kla Ed Big Bullet",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 32,
+        "height": 16,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.203125,
+        "transparentCoverage": 0.796875,
+        "contentRowRuns": 1,
+        "contentColRuns": 5,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Kla Ed Big Bullet is an animated 2D effect sample from Void - Fleet Pack 1 - Kla'ed. Useful for enemy variants, encounters, creature animation.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "searchText": "kla ed big bullet 2d/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/projectiles/pngs/kla-ed-big-bullet.png void - fleet pack 1 - kla'ed effect kla ed big bullet is an animated 2d effect sample from void - fleet pack 1 - kla'ed. useful for enemy variants, encounters, creature animation. void - fleet pack 1 - kla'ed enemy variants encounters creature animation 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-1",
+      "path": "2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/projectiles/pngs/kla-ed-bullet.png",
+      "src": "/2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/projectiles/pngs/kla-ed-bullet.png",
+      "label": "Kla Ed Bullet",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 16,
+        "height": 16,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.21875,
+        "transparentCoverage": 0.78125,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Kla Ed Bullet is an animated 2D effect sample from Void - Fleet Pack 1 - Kla'ed. Useful for enemy variants, encounters, creature animation.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "searchText": "kla ed bullet 2d/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/projectiles/pngs/kla-ed-bullet.png void - fleet pack 1 - kla'ed effect kla ed bullet is an animated 2d effect sample from void - fleet pack 1 - kla'ed. useful for enemy variants, encounters, creature animation. void - fleet pack 1 - kla'ed enemy variants encounters creature animation 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-1",
+      "path": "2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/projectiles/pngs/kla-ed-ray.png",
+      "src": "/2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/projectiles/pngs/kla-ed-ray.png",
+      "label": "Kla Ed Ray",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 72,
+        "height": 38,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.3442982456140351,
+        "transparentCoverage": 0.6557017543859649,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Kla Ed Ray is an animated 2D character sample from Void - Fleet Pack 1 - Kla'ed. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "searchText": "kla ed ray 2d/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/projectiles/pngs/kla-ed-ray.png void - fleet pack 1 - kla'ed character kla ed ray is an animated 2d character sample from void - fleet pack 1 - kla'ed. useful for player characters, npcs, animation prototyping. void - fleet pack 1 - kla'ed player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-1",
+      "path": "2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/projectiles/pngs/kla-ed-torpedo.png",
+      "src": "/2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/projectiles/pngs/kla-ed-torpedo.png",
+      "label": "Kla Ed Torpedo",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 33,
+        "height": 32,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.21306818181818182,
+        "transparentCoverage": 0.7869318181818182,
+        "contentRowRuns": 1,
+        "contentColRuns": 3,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Kla Ed Torpedo is an animated 2D image sample from Void - Fleet Pack 1 - Kla'ed. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "searchText": "kla ed torpedo 2d/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/projectiles/pngs/kla-ed-torpedo.png void - fleet pack 1 - kla'ed image kla ed torpedo is an animated 2d image sample from void - fleet pack 1 - kla'ed. useful for player characters, npcs, animation prototyping. void - fleet pack 1 - kla'ed player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-1",
+      "path": "2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/projectiles/pngs/kla-ed-wave.png",
+      "src": "/2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/projectiles/pngs/kla-ed-wave.png",
+      "label": "Kla Ed Wave",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 384,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.024800145348837208,
+        "transparentCoverage": 0.9610283430232558,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Kla Ed Wave is an animated 2D character sample from Void - Fleet Pack 1 - Kla'ed. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "searchText": "kla ed wave 2d/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/projectiles/pngs/kla-ed-wave.png void - fleet pack 1 - kla'ed character kla ed wave is an animated 2d character sample from void - fleet pack 1 - kla'ed. useful for player characters, npcs, animation prototyping. void - fleet pack 1 - kla'ed player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-1",
+      "path": "2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/shield/pngs/kla-ed-battlecruiser-shield.png",
+      "src": "/2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/shield/pngs/kla-ed-battlecruiser-shield.png",
+      "label": "Kla Ed Battlecruiser Shield",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 2048,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.04296875,
+        "transparentCoverage": 0.9453125,
+        "contentRowRuns": 1,
+        "contentColRuns": 32,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Kla Ed Battlecruiser Shield is an animated 2D image sample from Void - Fleet Pack 1 - Kla'ed. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "searchText": "kla ed battlecruiser shield 2d/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/shield/pngs/kla-ed-battlecruiser-shield.png void - fleet pack 1 - kla'ed image kla ed battlecruiser shield is an animated 2d image sample from void - fleet pack 1 - kla'ed. useful for player characters, npcs, animation prototyping. void - fleet pack 1 - kla'ed player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-1",
+      "path": "2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/shield/pngs/kla-ed-bomber-shield.png",
+      "src": "/2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/shield/pngs/kla-ed-bomber-shield.png",
+      "label": "Kla Ed Bomber Shield",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 384,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.016715116279069766,
+        "transparentCoverage": 0.967296511627907,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Kla Ed Bomber Shield is an animated 2D image sample from Void - Fleet Pack 1 - Kla'ed. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "searchText": "kla ed bomber shield 2d/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/shield/pngs/kla-ed-bomber-shield.png void - fleet pack 1 - kla'ed image kla ed bomber shield is an animated 2d image sample from void - fleet pack 1 - kla'ed. useful for player characters, npcs, animation prototyping. void - fleet pack 1 - kla'ed player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-1",
+      "path": "2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/shield/pngs/kla-ed-dreadnought-shield.png",
+      "src": "/2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/shield/pngs/kla-ed-dreadnought-shield.png",
+      "label": "Kla Ed Dreadnought Shield",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 1280,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.09134615384615384,
+        "transparentCoverage": 0.3395432692307692,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Kla Ed Dreadnought Shield is an animated 2D image sample from Void - Fleet Pack 1 - Kla'ed. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "searchText": "kla ed dreadnought shield 2d/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/shield/pngs/kla-ed-dreadnought-shield.png void - fleet pack 1 - kla'ed image kla ed dreadnought shield is an animated 2d image sample from void - fleet pack 1 - kla'ed. useful for player characters, npcs, animation prototyping. void - fleet pack 1 - kla'ed player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-1",
+      "path": "2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/shield/pngs/kla-ed-fighter-shield.png",
+      "src": "/2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/shield/pngs/kla-ed-fighter-shield.png",
+      "label": "Kla Ed Fighter Shield",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 640,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.025240384615384616,
+        "transparentCoverage": 0.890625,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Kla Ed Fighter Shield is an animated 2D image sample from Void - Fleet Pack 1 - Kla'ed. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "searchText": "kla ed fighter shield 2d/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/shield/pngs/kla-ed-fighter-shield.png void - fleet pack 1 - kla'ed image kla ed fighter shield is an animated 2d image sample from void - fleet pack 1 - kla'ed. useful for player characters, npcs, animation prototyping. void - fleet pack 1 - kla'ed player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-1",
+      "path": "2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/shield/pngs/kla-ed-frigate-shield.png",
+      "src": "/2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/shield/pngs/kla-ed-frigate-shield.png",
+      "label": "Kla Ed Frigate Shield",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 2560,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.03125,
+        "transparentCoverage": 0.6354166666666666,
+        "contentRowRuns": 1,
+        "contentColRuns": 40,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Kla Ed Frigate Shield is an animated 2D image sample from Void - Fleet Pack 1 - Kla'ed. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "searchText": "kla ed frigate shield 2d/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/shield/pngs/kla-ed-frigate-shield.png void - fleet pack 1 - kla'ed image kla ed frigate shield is an animated 2d image sample from void - fleet pack 1 - kla'ed. useful for player characters, npcs, animation prototyping. void - fleet pack 1 - kla'ed player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-1",
+      "path": "2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/shield/pngs/kla-ed-scout-shield.png",
+      "src": "/2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/shield/pngs/kla-ed-scout-shield.png",
+      "label": "Kla Ed Scout Shield",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 896,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.020833333333333332,
+        "transparentCoverage": 0.8888888888888888,
+        "contentRowRuns": 1,
+        "contentColRuns": 14,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Kla Ed Scout Shield is an animated 2D image sample from Void - Fleet Pack 1 - Kla'ed. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "searchText": "kla ed scout shield 2d/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/shield/pngs/kla-ed-scout-shield.png void - fleet pack 1 - kla'ed image kla ed scout shield is an animated 2d image sample from void - fleet pack 1 - kla'ed. useful for player characters, npcs, animation prototyping. void - fleet pack 1 - kla'ed player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-1",
+      "path": "2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/shield/pngs/kla-ed-torpedo-ship-shield.png",
+      "src": "/2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/shield/pngs/kla-ed-torpedo-ship-shield.png",
+      "label": "Kla Ed Torpedo Ship Shield",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 640,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.004356971153846154,
+        "transparentCoverage": 0.9731069711538461,
+        "contentRowRuns": 1,
+        "contentColRuns": 9,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Kla Ed Torpedo Ship Shield is an animated 2D image sample from Void - Fleet Pack 1 - Kla'ed. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "sci-fi",
+        "vehicle"
+      ],
+      "searchText": "kla ed torpedo ship shield 2d/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/shield/pngs/kla-ed-torpedo-ship-shield.png void - fleet pack 1 - kla'ed image kla ed torpedo ship shield is an animated 2d image sample from void - fleet pack 1 - kla'ed. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-1",
+      "path": "2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/weapons/pngs/kla-ed-battlecruiser-weapons.png",
+      "src": "/2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/weapons/pngs/kla-ed-battlecruiser-weapons.png",
+      "label": "Kla Ed Battlecruiser Weapons",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 3840,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.23046875,
+        "transparentCoverage": 0.76953125,
+        "contentRowRuns": 1,
+        "contentColRuns": 30,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Kla Ed Battlecruiser Weapons is an animated 2D icon sample from Void - Fleet Pack 1 - Kla'ed. Useful for enemy variants, encounters, creature animation.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "searchText": "kla ed battlecruiser weapons 2d/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/weapons/pngs/kla-ed-battlecruiser-weapons.png void - fleet pack 1 - kla'ed icon kla ed battlecruiser weapons is an animated 2d icon sample from void - fleet pack 1 - kla'ed. useful for enemy variants, encounters, creature animation. void - fleet pack 1 - kla'ed enemy variants encounters creature animation 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-1",
+      "path": "2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/weapons/pngs/kla-ed-dreadnought-weapons.png",
+      "src": "/2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/weapons/pngs/kla-ed-dreadnought-weapons.png",
+      "label": "Kla Ed Dreadnought Weapons",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 7680,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.3828125,
+        "transparentCoverage": 0.6171875,
+        "contentRowRuns": 1,
+        "contentColRuns": 60,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Kla Ed Dreadnought Weapons is an animated 2D icon sample from Void - Fleet Pack 1 - Kla'ed. Useful for enemy variants, encounters, creature animation.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "searchText": "kla ed dreadnought weapons 2d/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/weapons/pngs/kla-ed-dreadnought-weapons.png void - fleet pack 1 - kla'ed icon kla ed dreadnought weapons is an animated 2d icon sample from void - fleet pack 1 - kla'ed. useful for enemy variants, encounters, creature animation. void - fleet pack 1 - kla'ed enemy variants encounters creature animation 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-1",
+      "path": "2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/weapons/pngs/kla-ed-fighter-weapons.png",
+      "src": "/2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/weapons/pngs/kla-ed-fighter-weapons.png",
+      "label": "Kla Ed Fighter Weapons",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 384,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.08784520348837209,
+        "transparentCoverage": 0.9121547965116279,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Kla Ed Fighter Weapons is an animated 2D icon sample from Void - Fleet Pack 1 - Kla'ed. Useful for enemy variants, encounters, creature animation.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "searchText": "kla ed fighter weapons 2d/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/weapons/pngs/kla-ed-fighter-weapons.png void - fleet pack 1 - kla'ed icon kla ed fighter weapons is an animated 2d icon sample from void - fleet pack 1 - kla'ed. useful for enemy variants, encounters, creature animation. void - fleet pack 1 - kla'ed enemy variants encounters creature animation 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-1",
+      "path": "2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/weapons/pngs/kla-ed-frigate-weapons.png",
+      "src": "/2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/weapons/pngs/kla-ed-frigate-weapons.png",
+      "label": "Kla Ed Frigate Weapons",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 384,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.20984738372093023,
+        "transparentCoverage": 0.7901526162790697,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Kla Ed Frigate Weapons is an animated 2D icon sample from Void - Fleet Pack 1 - Kla'ed. Useful for enemy variants, encounters, creature animation.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "searchText": "kla ed frigate weapons 2d/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/weapons/pngs/kla-ed-frigate-weapons.png void - fleet pack 1 - kla'ed icon kla ed frigate weapons is an animated 2d icon sample from void - fleet pack 1 - kla'ed. useful for enemy variants, encounters, creature animation. void - fleet pack 1 - kla'ed enemy variants encounters creature animation 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-1",
+      "path": "2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/weapons/pngs/kla-ed-scout-weapons.png",
+      "src": "/2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/weapons/pngs/kla-ed-scout-weapons.png",
+      "label": "Kla Ed Scout Weapons",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 384,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.08621002906976744,
+        "transparentCoverage": 0.9137899709302325,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Kla Ed Scout Weapons is an animated 2D icon sample from Void - Fleet Pack 1 - Kla'ed. Useful for enemy variants, encounters, creature animation.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "searchText": "kla ed scout weapons 2d/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/weapons/pngs/kla-ed-scout-weapons.png void - fleet pack 1 - kla'ed icon kla ed scout weapons is an animated 2d icon sample from void - fleet pack 1 - kla'ed. useful for enemy variants, encounters, creature animation. void - fleet pack 1 - kla'ed enemy variants encounters creature animation 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-1",
+      "path": "2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/weapons/pngs/kla-ed-torpedo-ship-weapons.png",
+      "src": "/2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/weapons/pngs/kla-ed-torpedo-ship-weapons.png",
+      "label": "Kla Ed Torpedo Ship Weapons",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 1024,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.18603515625,
+        "transparentCoverage": 0.81396484375,
+        "contentRowRuns": 1,
+        "contentColRuns": 16,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Kla Ed Torpedo Ship Weapons is an animated 2D icon sample from Void - Fleet Pack 1 - Kla'ed. Useful for enemy variants, encounters, creature animation.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "sci-fi"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "sci-fi",
+        "vehicle"
+      ],
+      "searchText": "kla ed torpedo ship weapons 2d/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/weapons/pngs/kla-ed-torpedo-ship-weapons.png void - fleet pack 1 - kla'ed icon kla ed torpedo ship weapons is an animated 2d icon sample from void - fleet pack 1 - kla'ed. useful for enemy variants, encounters, creature animation. sci-fi enemy variants encounters creature animation 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-1",
+      "path": "2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/base/pngs/kla-ed-battlecruiser-base.png",
+      "src": "/2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/base/pngs/kla-ed-battlecruiser-base.png",
+      "label": "Kla Ed Battlecruiser Base",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 128,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.2186279296875,
+        "transparentCoverage": 0.7813720703125,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Kla Ed Battlecruiser Base is a static 2D image sample from Void - Fleet Pack 1 - Kla'ed. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "image",
+        "static",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "searchText": "kla ed battlecruiser base 2d/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/base/pngs/kla-ed-battlecruiser-base.png void - fleet pack 1 - kla'ed image kla ed battlecruiser base is a static 2d image sample from void - fleet pack 1 - kla'ed. useful for player characters, npcs, animation prototyping. void - fleet pack 1 - kla'ed player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-1",
+      "path": "2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/base/pngs/kla-ed-bomber-base.png",
+      "src": "/2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/base/pngs/kla-ed-bomber-base.png",
+      "label": "Kla Ed Bomber Base",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 64,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.14453125,
+        "transparentCoverage": 0.85546875,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Kla Ed Bomber Base is a static 2D image sample from Void - Fleet Pack 1 - Kla'ed. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "image",
+        "static",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "searchText": "kla ed bomber base 2d/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/base/pngs/kla-ed-bomber-base.png void - fleet pack 1 - kla'ed image kla ed bomber base is a static 2d image sample from void - fleet pack 1 - kla'ed. useful for player characters, npcs, animation prototyping. void - fleet pack 1 - kla'ed player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-1",
+      "path": "2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/base/pngs/kla-ed-dreadnought-base.png",
+      "src": "/2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/base/pngs/kla-ed-dreadnought-base.png",
+      "label": "Kla Ed Dreadnought Base",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 128,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.3294677734375,
+        "transparentCoverage": 0.6705322265625,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Kla Ed Dreadnought Base is a static 2D image sample from Void - Fleet Pack 1 - Kla'ed. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "image",
+        "static",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "searchText": "kla ed dreadnought base 2d/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/base/pngs/kla-ed-dreadnought-base.png void - fleet pack 1 - kla'ed image kla ed dreadnought base is a static 2d image sample from void - fleet pack 1 - kla'ed. useful for player characters, npcs, animation prototyping. void - fleet pack 1 - kla'ed player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-1",
+      "path": "2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/base/pngs/kla-ed-fighter-base.png",
+      "src": "/2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/base/pngs/kla-ed-fighter-base.png",
+      "label": "Kla Ed Fighter Base",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 64,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.08544921875,
+        "transparentCoverage": 0.91455078125,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Kla Ed Fighter Base is a static 2D image sample from Void - Fleet Pack 1 - Kla'ed. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "image",
+        "static",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "searchText": "kla ed fighter base 2d/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/base/pngs/kla-ed-fighter-base.png void - fleet pack 1 - kla'ed image kla ed fighter base is a static 2d image sample from void - fleet pack 1 - kla'ed. useful for player characters, npcs, animation prototyping. void - fleet pack 1 - kla'ed player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-1",
+      "path": "2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/base/pngs/kla-ed-frigate-base.png",
+      "src": "/2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/base/pngs/kla-ed-frigate-base.png",
+      "label": "Kla Ed Frigate Base",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 64,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.2041015625,
+        "transparentCoverage": 0.7958984375,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Kla Ed Frigate Base is a static 2D image sample from Void - Fleet Pack 1 - Kla'ed. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "image",
+        "static",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "searchText": "kla ed frigate base 2d/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/base/pngs/kla-ed-frigate-base.png void - fleet pack 1 - kla'ed image kla ed frigate base is a static 2d image sample from void - fleet pack 1 - kla'ed. useful for player characters, npcs, animation prototyping. void - fleet pack 1 - kla'ed player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-1",
+      "path": "2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/base/pngs/kla-ed-scout-base.png",
+      "src": "/2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/base/pngs/kla-ed-scout-base.png",
+      "label": "Kla Ed Scout Base",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 64,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.08447265625,
+        "transparentCoverage": 0.91552734375,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Kla Ed Scout Base is a static 2D image sample from Void - Fleet Pack 1 - Kla'ed. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "image",
+        "static",
+        "void - fleet pack 1 - kla'ed"
+      ],
+      "searchText": "kla ed scout base 2d/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/base/pngs/kla-ed-scout-base.png void - fleet pack 1 - kla'ed image kla ed scout base is a static 2d image sample from void - fleet pack 1 - kla'ed. useful for player characters, npcs, animation prototyping. void - fleet pack 1 - kla'ed player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-1",
+      "path": "2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/base/pngs/kla-ed-support-ship-base.png",
+      "src": "/2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/base/pngs/kla-ed-support-ship-base.png",
+      "label": "Kla Ed Support Ship Base",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 64,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.11376953125,
+        "transparentCoverage": 0.88623046875,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Kla Ed Support Ship Base is a static 2D image sample from Void - Fleet Pack 1 - Kla'ed. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "image",
+        "sci-fi",
+        "static",
+        "vehicle"
+      ],
+      "searchText": "kla ed support ship base 2d/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/base/pngs/kla-ed-support-ship-base.png void - fleet pack 1 - kla'ed image kla ed support ship base is a static 2d image sample from void - fleet pack 1 - kla'ed. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d art static vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-1",
+      "path": "2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/base/pngs/kla-ed-torpedo-ship-base.png",
+      "src": "/2D/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/base/pngs/kla-ed-torpedo-ship-base.png",
+      "label": "Kla Ed Torpedo Ship Base",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 64,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.125,
+        "transparentCoverage": 0.875,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Kla Ed Torpedo Ship Base is a static 2D image sample from Void - Fleet Pack 1 - Kla'ed. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "image",
+        "sci-fi",
+        "static",
+        "vehicle"
+      ],
+      "searchText": "kla ed torpedo ship base 2d/foozlecc-void-fleet-pack-1/extracted/foozle-2ds0012-void-fleetpack-1/foozle-2ds0012-void-enemyfleet-1/kla-ed/base/pngs/kla-ed-torpedo-ship-base.png void - fleet pack 1 - kla'ed image kla ed torpedo ship base is a static 2d image sample from void - fleet pack 1 - kla'ed. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d art static vehicle"
+    }
+  ]
+}

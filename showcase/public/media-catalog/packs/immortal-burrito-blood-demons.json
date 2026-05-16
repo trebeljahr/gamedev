@@ -1,0 +1,77 @@
+{
+  "folder": "immortal-burrito-blood-demons",
+  "title": "Blood Demons",
+  "author": "immortal-burrito",
+  "author_url": "https://immortal-burrito.itch.io",
+  "url": "https://immortal-burrito.itch.io/blood-demons",
+  "game_id": null,
+  "license_class": "Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms)",
+  "attribution": "Appreciated / not required",
+  "theme": "Enemies",
+  "description": "Blood Demons is a 2D enemies art pack by immortal-burrito. Use it for enemy variants, encounters, creature animation. License: Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). Attribution: Appreciated / not required.",
+  "category": "Enemies",
+  "themes": [
+    "enemies",
+    "urban"
+  ],
+  "useCases": [
+    "enemy variants",
+    "encounters",
+    "creature animation"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "enemies",
+    "horror",
+    "sprite",
+    "urban"
+  ],
+  "searchText": "blood demons immortal-burrito-blood-demons immortal-burrito enemies free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms) appreciated / not required blood demons is a 2d enemies art pack by immortal-burrito. use it for enemy variants, encounters, creature animation. license: free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). attribution: appreciated / not required. enemies urban enemy variants encounters creature animation 2d art horror sprite",
+  "sampleCount": 1,
+  "samples": [
+    {
+      "packFolder": "immortal-burrito-blood-demons",
+      "path": "2D/immortal-burrito-blood-demons/extracted/demon-sword/sword/sword.png",
+      "src": "/2D/immortal-burrito-blood-demons/extracted/demon-sword/sword/sword.png",
+      "label": "Sword",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 1792,
+        "height": 512,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.016534674657534245,
+        "transparentCoverage": 0.9788099315068494,
+        "contentRowRuns": 8,
+        "contentColRuns": 20,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 4,
+        "cellMedianHeight": 4
+      },
+      "promo": false,
+      "description": "Sword is an animated 2D character sample from Blood Demons. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "blood demons",
+        "character"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "blood demons",
+        "character",
+        "horror"
+      ],
+      "searchText": "sword 2d/immortal-burrito-blood-demons/extracted/demon-sword/sword/sword.png blood demons character sword is an animated 2d character sample from blood demons. useful for player characters, npcs, animation prototyping. blood demons player characters npcs animation prototyping 2d animated art horror"
+    }
+  ]
+}

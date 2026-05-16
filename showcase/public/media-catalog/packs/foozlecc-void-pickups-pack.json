@@ -1,0 +1,525 @@
+{
+  "folder": "foozlecc-void-pickups-pack",
+  "title": "Void - Pickups Pack",
+  "author": "FoozleCC",
+  "author_url": "https://foozlecc.itch.io",
+  "url": "https://foozlecc.itch.io/void-pickups-pack",
+  "game_id": 1668201,
+  "license_class": "CC0 1.0 (Creative Commons Zero)",
+  "attribution": "Optional",
+  "theme": "Icons & Items",
+  "description": "Void Pickups Pack is a 2D icons & items art pack by FoozleCC. Use it for inventory UI, loot, pickup feedback. License: CC0 1.0 (Creative Commons Zero). Attribution: Optional.",
+  "category": "Icons & Items",
+  "themes": [
+    "icons & items",
+    "void - pickups pack"
+  ],
+  "useCases": [
+    "inventory UI",
+    "loot",
+    "pickup feedback"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "icons & items",
+    "sprite",
+    "void - pickups pack"
+  ],
+  "searchText": "void - pickups pack foozlecc-void-pickups-pack foozlecc icons & items cc0 1.0 (creative commons zero) optional void pickups pack is a 2d icons & items art pack by foozlecc. use it for inventory ui, loot, pickup feedback. license: cc0 1.0 (creative commons zero). attribution: optional. icons & items void - pickups pack inventory ui loot pickup feedback 2d art sprite",
+  "sampleCount": 12,
+  "samples": [
+    {
+      "packFolder": "foozlecc-void-pickups-pack",
+      "path": "2D/foozlecc-void-pickups-pack/extracted/foozle-2ds0016-void-pickupspack/foozle-2ds0016-void-pickupspack/engines/pngs/pickup-icon-engines-base-engine.png",
+      "src": "/2D/foozlecc-void-pickups-pack/extracted/foozle-2ds0016-void-pickupspack/foozle-2ds0016-void-pickupspack/engines/pngs/pickup-icon-engines-base-engine.png",
+      "label": "Pickup Icon Engines Base Engine",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 480,
+        "height": 32,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.2757352941176471,
+        "transparentCoverage": 0.7242647058823529,
+        "contentRowRuns": 1,
+        "contentColRuns": 15,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Pickup Icon Engines Base Engine is an animated 2D icon sample from Void - Pickups Pack. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "void - pickups pack"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "vehicle",
+        "void - pickups pack"
+      ],
+      "searchText": "pickup icon engines base engine 2d/foozlecc-void-pickups-pack/extracted/foozle-2ds0016-void-pickupspack/foozle-2ds0016-void-pickupspack/engines/pngs/pickup-icon-engines-base-engine.png void - pickups pack icon pickup icon engines base engine is an animated 2d icon sample from void - pickups pack. useful for inventory ui, loot, pickup feedback. void - pickups pack inventory ui loot pickup feedback 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-pickups-pack",
+      "path": "2D/foozlecc-void-pickups-pack/extracted/foozle-2ds0016-void-pickupspack/foozle-2ds0016-void-pickupspack/engines/pngs/pickup-icon-engines-big-pulse-engine.png",
+      "src": "/2D/foozlecc-void-pickups-pack/extracted/foozle-2ds0016-void-pickupspack/foozle-2ds0016-void-pickupspack/engines/pngs/pickup-icon-engines-big-pulse-engine.png",
+      "label": "Pickup Icon Engines Big Pulse Engine",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 480,
+        "height": 32,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.29411764705882354,
+        "transparentCoverage": 0.7058823529411765,
+        "contentRowRuns": 1,
+        "contentColRuns": 15,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Pickup Icon Engines Big Pulse Engine is an animated 2D icon sample from Void - Pickups Pack. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "void - pickups pack"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "vehicle",
+        "void - pickups pack"
+      ],
+      "searchText": "pickup icon engines big pulse engine 2d/foozlecc-void-pickups-pack/extracted/foozle-2ds0016-void-pickupspack/foozle-2ds0016-void-pickupspack/engines/pngs/pickup-icon-engines-big-pulse-engine.png void - pickups pack icon pickup icon engines big pulse engine is an animated 2d icon sample from void - pickups pack. useful for inventory ui, loot, pickup feedback. void - pickups pack inventory ui loot pickup feedback 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-pickups-pack",
+      "path": "2D/foozlecc-void-pickups-pack/extracted/foozle-2ds0016-void-pickupspack/foozle-2ds0016-void-pickupspack/engines/pngs/pickup-icon-engines-burst-engine.png",
+      "src": "/2D/foozlecc-void-pickups-pack/extracted/foozle-2ds0016-void-pickupspack/foozle-2ds0016-void-pickupspack/engines/pngs/pickup-icon-engines-burst-engine.png",
+      "label": "Pickup Icon Engines Burst Engine",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 480,
+        "height": 32,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.3161764705882353,
+        "transparentCoverage": 0.6838235294117647,
+        "contentRowRuns": 1,
+        "contentColRuns": 15,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Pickup Icon Engines Burst Engine is an animated 2D icon sample from Void - Pickups Pack. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "void - pickups pack"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "vehicle",
+        "void - pickups pack"
+      ],
+      "searchText": "pickup icon engines burst engine 2d/foozlecc-void-pickups-pack/extracted/foozle-2ds0016-void-pickupspack/foozle-2ds0016-void-pickupspack/engines/pngs/pickup-icon-engines-burst-engine.png void - pickups pack icon pickup icon engines burst engine is an animated 2d icon sample from void - pickups pack. useful for inventory ui, loot, pickup feedback. void - pickups pack inventory ui loot pickup feedback 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-pickups-pack",
+      "path": "2D/foozlecc-void-pickups-pack/extracted/foozle-2ds0016-void-pickupspack/foozle-2ds0016-void-pickupspack/engines/pngs/pickup-icon-engines-supercharged-engine.png",
+      "src": "/2D/foozlecc-void-pickups-pack/extracted/foozle-2ds0016-void-pickupspack/foozle-2ds0016-void-pickupspack/engines/pngs/pickup-icon-engines-supercharged-engine.png",
+      "label": "Pickup Icon Engines Supercharged Engine",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 480,
+        "height": 32,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.27205882352941174,
+        "transparentCoverage": 0.7279411764705882,
+        "contentRowRuns": 1,
+        "contentColRuns": 15,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Pickup Icon Engines Supercharged Engine is an animated 2D icon sample from Void - Pickups Pack. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "void - pickups pack"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "vehicle",
+        "void - pickups pack"
+      ],
+      "searchText": "pickup icon engines supercharged engine 2d/foozlecc-void-pickups-pack/extracted/foozle-2ds0016-void-pickupspack/foozle-2ds0016-void-pickupspack/engines/pngs/pickup-icon-engines-supercharged-engine.png void - pickups pack icon pickup icon engines supercharged engine is an animated 2d icon sample from void - pickups pack. useful for inventory ui, loot, pickup feedback. void - pickups pack inventory ui loot pickup feedback 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-pickups-pack",
+      "path": "2D/foozlecc-void-pickups-pack/extracted/foozle-2ds0016-void-pickupspack/foozle-2ds0016-void-pickupspack/shield-generators/pngs/pickup-icon-shield-generator-all-around-shield.png",
+      "src": "/2D/foozlecc-void-pickups-pack/extracted/foozle-2ds0016-void-pickupspack/foozle-2ds0016-void-pickupspack/shield-generators/pngs/pickup-icon-shield-generator-all-around-shield.png",
+      "label": "Pickup Icon Shield Generator All Around Shield",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 480,
+        "height": 32,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.15073529411764705,
+        "transparentCoverage": 0.7389705882352942,
+        "contentRowRuns": 1,
+        "contentColRuns": 17,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Pickup Icon Shield Generator All Around Shield is an animated 2D icon sample from Void - Pickups Pack. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "void - pickups pack"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "vehicle",
+        "void - pickups pack"
+      ],
+      "searchText": "pickup icon shield generator all around shield 2d/foozlecc-void-pickups-pack/extracted/foozle-2ds0016-void-pickupspack/foozle-2ds0016-void-pickupspack/shield-generators/pngs/pickup-icon-shield-generator-all-around-shield.png void - pickups pack icon pickup icon shield generator all around shield is an animated 2d icon sample from void - pickups pack. useful for inventory ui, loot, pickup feedback. void - pickups pack inventory ui loot pickup feedback 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-pickups-pack",
+      "path": "2D/foozlecc-void-pickups-pack/extracted/foozle-2ds0016-void-pickupspack/foozle-2ds0016-void-pickupspack/shield-generators/pngs/pickup-icon-shield-generator-front-and-side-shield.png",
+      "src": "/2D/foozlecc-void-pickups-pack/extracted/foozle-2ds0016-void-pickupspack/foozle-2ds0016-void-pickupspack/shield-generators/pngs/pickup-icon-shield-generator-front-and-side-shield.png",
+      "label": "Pickup Icon Shield Generator Front And Side Shield",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 480,
+        "height": 32,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.15073529411764705,
+        "transparentCoverage": 0.7279411764705882,
+        "contentRowRuns": 1,
+        "contentColRuns": 15,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Pickup Icon Shield Generator Front And Side Shield is an animated 2D icon sample from Void - Pickups Pack. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "void - pickups pack"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "vehicle",
+        "void - pickups pack"
+      ],
+      "searchText": "pickup icon shield generator front and side shield 2d/foozlecc-void-pickups-pack/extracted/foozle-2ds0016-void-pickupspack/foozle-2ds0016-void-pickupspack/shield-generators/pngs/pickup-icon-shield-generator-front-and-side-shield.png void - pickups pack icon pickup icon shield generator front and side shield is an animated 2d icon sample from void - pickups pack. useful for inventory ui, loot, pickup feedback. void - pickups pack inventory ui loot pickup feedback 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-pickups-pack",
+      "path": "2D/foozlecc-void-pickups-pack/extracted/foozle-2ds0016-void-pickupspack/foozle-2ds0016-void-pickupspack/shield-generators/pngs/pickup-icon-shield-generator-front-shield.png",
+      "src": "/2D/foozlecc-void-pickups-pack/extracted/foozle-2ds0016-void-pickupspack/foozle-2ds0016-void-pickupspack/shield-generators/pngs/pickup-icon-shield-generator-front-shield.png",
+      "label": "Pickup Icon Shield Generator Front Shield",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 480,
+        "height": 32,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.11764705882352941,
+        "transparentCoverage": 0.7794117647058824,
+        "contentRowRuns": 1,
+        "contentColRuns": 15,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Pickup Icon Shield Generator Front Shield is an animated 2D icon sample from Void - Pickups Pack. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "void - pickups pack"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "vehicle",
+        "void - pickups pack"
+      ],
+      "searchText": "pickup icon shield generator front shield 2d/foozlecc-void-pickups-pack/extracted/foozle-2ds0016-void-pickupspack/foozle-2ds0016-void-pickupspack/shield-generators/pngs/pickup-icon-shield-generator-front-shield.png void - pickups pack icon pickup icon shield generator front shield is an animated 2d icon sample from void - pickups pack. useful for inventory ui, loot, pickup feedback. void - pickups pack inventory ui loot pickup feedback 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-pickups-pack",
+      "path": "2D/foozlecc-void-pickups-pack/extracted/foozle-2ds0016-void-pickupspack/foozle-2ds0016-void-pickupspack/weapons/pngs/pickup-icon-weapons-auto-cannons.png",
+      "src": "/2D/foozlecc-void-pickups-pack/extracted/foozle-2ds0016-void-pickupspack/foozle-2ds0016-void-pickupspack/weapons/pngs/pickup-icon-weapons-auto-cannons.png",
+      "label": "Pickup Icon Weapons Auto Cannons",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 480,
+        "height": 32,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.40441176470588236,
+        "transparentCoverage": 0.5955882352941176,
+        "contentRowRuns": 1,
+        "contentColRuns": 15,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Pickup Icon Weapons Auto Cannons is an animated 2D icon sample from Void - Pickups Pack. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "void - pickups pack"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "vehicle",
+        "void - pickups pack"
+      ],
+      "searchText": "pickup icon weapons auto cannons 2d/foozlecc-void-pickups-pack/extracted/foozle-2ds0016-void-pickupspack/foozle-2ds0016-void-pickupspack/weapons/pngs/pickup-icon-weapons-auto-cannons.png void - pickups pack icon pickup icon weapons auto cannons is an animated 2d icon sample from void - pickups pack. useful for inventory ui, loot, pickup feedback. void - pickups pack inventory ui loot pickup feedback 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-pickups-pack",
+      "path": "2D/foozlecc-void-pickups-pack/extracted/foozle-2ds0016-void-pickupspack/foozle-2ds0016-void-pickupspack/weapons/pngs/pickup-icon-weapons-rocket.png",
+      "src": "/2D/foozlecc-void-pickups-pack/extracted/foozle-2ds0016-void-pickupspack/foozle-2ds0016-void-pickupspack/weapons/pngs/pickup-icon-weapons-rocket.png",
+      "label": "Pickup Icon Weapons Rocket",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 480,
+        "height": 32,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.5716911764705882,
+        "transparentCoverage": 0.42830882352941174,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Pickup Icon Weapons Rocket is an animated 2D icon sample from Void - Pickups Pack. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "void - pickups pack"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "vehicle",
+        "void - pickups pack"
+      ],
+      "searchText": "pickup icon weapons rocket 2d/foozlecc-void-pickups-pack/extracted/foozle-2ds0016-void-pickupspack/foozle-2ds0016-void-pickupspack/weapons/pngs/pickup-icon-weapons-rocket.png void - pickups pack icon pickup icon weapons rocket is an animated 2d icon sample from void - pickups pack. useful for inventory ui, loot, pickup feedback. void - pickups pack inventory ui loot pickup feedback 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-pickups-pack",
+      "path": "2D/foozlecc-void-pickups-pack/extracted/foozle-2ds0016-void-pickupspack/foozle-2ds0016-void-pickupspack/weapons/pngs/pickup-icon-weapons-zapper.png",
+      "src": "/2D/foozlecc-void-pickups-pack/extracted/foozle-2ds0016-void-pickupspack/foozle-2ds0016-void-pickupspack/weapons/pngs/pickup-icon-weapons-zapper.png",
+      "label": "Pickup Icon Weapons Zapper",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 480,
+        "height": 32,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.5863970588235294,
+        "transparentCoverage": 0.41360294117647056,
+        "contentRowRuns": 1,
+        "contentColRuns": 15,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Pickup Icon Weapons Zapper is an animated 2D icon sample from Void - Pickups Pack. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "void - pickups pack"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "vehicle",
+        "void - pickups pack"
+      ],
+      "searchText": "pickup icon weapons zapper 2d/foozlecc-void-pickups-pack/extracted/foozle-2ds0016-void-pickupspack/foozle-2ds0016-void-pickupspack/weapons/pngs/pickup-icon-weapons-zapper.png void - pickups pack icon pickup icon weapons zapper is an animated 2d icon sample from void - pickups pack. useful for inventory ui, loot, pickup feedback. void - pickups pack inventory ui loot pickup feedback 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-pickups-pack",
+      "path": "2D/foozlecc-void-pickups-pack/extracted/foozle-2ds0016-void-pickupspack/foozle-2ds0016-void-pickupspack/weapons/pngs/pickup-icon-weapons-big-space-gun-2000.png",
+      "src": "/2D/foozlecc-void-pickups-pack/extracted/foozle-2ds0016-void-pickupspack/foozle-2ds0016-void-pickupspack/weapons/pngs/pickup-icon-weapons-big-space-gun-2000.png",
+      "label": "Pickup Icon Weapons Big Space Gun 2000",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 480,
+        "height": 32,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.30514705882352944,
+        "transparentCoverage": 0.6948529411764706,
+        "contentRowRuns": 1,
+        "contentColRuns": 15,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Pickup Icon Weapons Big Space Gun 2000 is an animated 2D icon sample from Void - Pickups Pack. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "sci-fi"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "sci-fi",
+        "vehicle"
+      ],
+      "searchText": "pickup icon weapons big space gun 2000 2d/foozlecc-void-pickups-pack/extracted/foozle-2ds0016-void-pickupspack/foozle-2ds0016-void-pickupspack/weapons/pngs/pickup-icon-weapons-big-space-gun-2000.png void - pickups pack icon pickup icon weapons big space gun 2000 is an animated 2d icon sample from void - pickups pack. useful for inventory ui, loot, pickup feedback. sci-fi inventory ui loot pickup feedback 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-pickups-pack",
+      "path": "2D/foozlecc-void-pickups-pack/extracted/foozle-2ds0016-void-pickupspack/foozle-2ds0016-void-pickupspack/shield-generators/pngs/pickup-icon-shield-generator-invincibility-shield.png",
+      "src": "/2D/foozlecc-void-pickups-pack/extracted/foozle-2ds0016-void-pickupspack/foozle-2ds0016-void-pickupspack/shield-generators/pngs/pickup-icon-shield-generator-invincibility-shield.png",
+      "label": "Pickup Icon Shield Generator Invincibility Shield",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 480,
+        "height": 32,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.22794117647058823,
+        "transparentCoverage": 0.6617647058823529,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Pickup Icon Shield Generator Invincibility Shield is a static 2D icon sample from Void - Pickups Pack. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "void - pickups pack"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "icon",
+        "static",
+        "vehicle",
+        "void - pickups pack"
+      ],
+      "searchText": "pickup icon shield generator invincibility shield 2d/foozlecc-void-pickups-pack/extracted/foozle-2ds0016-void-pickupspack/foozle-2ds0016-void-pickupspack/shield-generators/pngs/pickup-icon-shield-generator-invincibility-shield.png void - pickups pack icon pickup icon shield generator invincibility shield is a static 2d icon sample from void - pickups pack. useful for inventory ui, loot, pickup feedback. void - pickups pack inventory ui loot pickup feedback 2d art static vehicle"
+    }
+  ]
+}

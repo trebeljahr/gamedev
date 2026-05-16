@@ -1,0 +1,158 @@
+{
+  "folder": "au-pixel-heroes99-demochar",
+  "title": "HEROES 99 - FREE Animated Pixel Art Character",
+  "author": "AU_pixel",
+  "author_url": "https://au-pixel.itch.io",
+  "url": "https://au-pixel.itch.io/heroes99-demochar",
+  "game_id": 3481743,
+  "license_class": "Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms)",
+  "attribution": "Appreciated / not required",
+  "theme": "Characters",
+  "description": "Heroes 99 Free Animated Pixel Art Character is a 2D characters art pack by AU_pixel. Use it for player characters, NPCs, animation prototyping. License: Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). Attribution: Appreciated / not required.",
+  "category": "Characters",
+  "themes": [
+    "characters",
+    "urban"
+  ],
+  "useCases": [
+    "player characters",
+    "NPCs",
+    "animation prototyping"
+  ],
+  "tags": [
+    "2d",
+    "animated",
+    "art",
+    "characters",
+    "sprite",
+    "urban"
+  ],
+  "searchText": "heroes 99 - free animated pixel art character au-pixel-heroes99-demochar au_pixel characters free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms) appreciated / not required heroes 99 free animated pixel art character is a 2d characters art pack by au_pixel. use it for player characters, npcs, animation prototyping. license: free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). attribution: appreciated / not required. characters urban player characters npcs animation prototyping 2d animated art sprite",
+  "sampleCount": 3,
+  "samples": [
+    {
+      "packFolder": "au-pixel-heroes99-demochar",
+      "path": "2D/au-pixel-heroes99-demochar/extracted/heroes99-free/heroes99-free/demochar-portrait-spritesheet.png",
+      "src": "/2D/au-pixel-heroes99-demochar/extracted/heroes99-free/heroes99-free/demochar-portrait-spritesheet.png",
+      "label": "Demochar Portrait Spritesheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 192,
+        "height": 192,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.5477973090277778,
+        "transparentCoverage": 0.4522026909722222,
+        "contentRowRuns": 4,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": true,
+        "cellMedianWidth": 46,
+        "cellMedianHeight": 46
+      },
+      "promo": false,
+      "description": "Demochar Portrait Spritesheet is an animated 2D character sample from HEROES 99 - FREE Animated Pixel Art Character. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "heroes 99 - free animated pixel art character"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "heroes 99 - free animated pixel art character"
+      ],
+      "searchText": "demochar portrait spritesheet 2d/au-pixel-heroes99-demochar/extracted/heroes99-free/heroes99-free/demochar-portrait-spritesheet.png heroes 99 - free animated pixel art character character demochar portrait spritesheet is an animated 2d character sample from heroes 99 - free animated pixel art character. useful for player characters, npcs, animation prototyping. heroes 99 - free animated pixel art character player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "au-pixel-heroes99-demochar",
+      "path": "2D/au-pixel-heroes99-demochar/extracted/heroes99-free/heroes99-free/character-spritesheet.png",
+      "src": "/2D/au-pixel-heroes99-demochar/extracted/heroes99-free/heroes99-free/character-spritesheet.png",
+      "label": "Character Spritesheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 800,
+        "height": 280,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.06953125,
+        "transparentCoverage": 0.93046875,
+        "contentRowRuns": 7,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 11,
+        "cellMedianHeight": 9
+      },
+      "promo": false,
+      "description": "Character Spritesheet is an animated 2D character sample from HEROES 99 - FREE Animated Pixel Art Character. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "heroes 99 - free animated pixel art character"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "heroes 99 - free animated pixel art character"
+      ],
+      "searchText": "character spritesheet 2d/au-pixel-heroes99-demochar/extracted/heroes99-free/heroes99-free/character-spritesheet.png heroes 99 - free animated pixel art character character character spritesheet is an animated 2d character sample from heroes 99 - free animated pixel art character. useful for player characters, npcs, animation prototyping. heroes 99 - free animated pixel art character player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "au-pixel-heroes99-demochar",
+      "path": "2D/au-pixel-heroes99-demochar/extracted/heroes99-free/heroes99-free/demochar-animation.gif",
+      "src": "/2D/au-pixel-heroes99-demochar/extracted/heroes99-free/heroes99-free/demochar-animation.gif",
+      "label": "Demochar Animation",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 536,
+        "height": 362,
+        "bgKind": "mixed",
+        "alphaCoverage": 1,
+        "transparentCoverage": 0,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Demochar Animation is an animated 2D character sample from HEROES 99 - FREE Animated Pixel Art Character. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "heroes 99 - free animated pixel art character"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "heroes 99 - free animated pixel art character"
+      ],
+      "searchText": "demochar animation 2d/au-pixel-heroes99-demochar/extracted/heroes99-free/heroes99-free/demochar-animation.gif heroes 99 - free animated pixel art character character demochar animation is an animated 2d character sample from heroes 99 - free animated pixel art character. useful for player characters, npcs, animation prototyping. heroes 99 - free animated pixel art character player characters npcs animation prototyping 2d animated art"
+    }
+  ]
+}

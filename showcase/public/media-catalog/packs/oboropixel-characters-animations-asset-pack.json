@@ -1,0 +1,2205 @@
+{
+  "folder": "oboropixel-characters-animations-asset-pack",
+  "title": "Characters Animations Asset Pack",
+  "author": "oboropixel",
+  "author_url": "https://oboropixel.itch.io",
+  "url": "https://oboropixel.itch.io/characters-animations-asset-pack",
+  "game_id": 3536346,
+  "license_class": "Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms)",
+  "attribution": "Appreciated / not required",
+  "theme": "Characters",
+  "description": "Characters Animations Asset Pack is a 2D characters art pack by oboropixel. Use it for player characters, NPCs, animation prototyping. License: Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). Attribution: Appreciated / not required.",
+  "category": "Characters",
+  "themes": [
+    "characters",
+    "urban"
+  ],
+  "useCases": [
+    "player characters",
+    "NPCs",
+    "animation prototyping"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "characters",
+    "sprite",
+    "urban"
+  ],
+  "searchText": "characters animations asset pack oboropixel-characters-animations-asset-pack oboropixel characters free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms) appreciated / not required characters animations asset pack is a 2d characters art pack by oboropixel. use it for player characters, npcs, animation prototyping. license: free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). attribution: appreciated / not required. characters urban player characters npcs animation prototyping 2d art sprite",
+  "sampleCount": 54,
+  "samples": [
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/no-shadows/human-soldier-sword-shield-attack1-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/no-shadows/human-soldier-sword-shield-attack1-sheet.png",
+      "label": "Human Soldier Sword Shield Attack1 Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 768,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.02685546875,
+        "transparentCoverage": 0.97314453125,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Human Soldier Sword Shield Attack1 Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "human soldier sword shield attack1 sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/no-shadows/human-soldier-sword-shield-attack1-sheet.png characters animations asset pack character human soldier sword shield attack1 sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/no-shadows/human-soldier-sword-shield-attack2-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/no-shadows/human-soldier-sword-shield-attack2-sheet.png",
+      "label": "Human Soldier Sword Shield Attack2 Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 768,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0296630859375,
+        "transparentCoverage": 0.9703369140625,
+        "contentRowRuns": 1,
+        "contentColRuns": 9,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Human Soldier Sword Shield Attack2 Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "human soldier sword shield attack2 sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/no-shadows/human-soldier-sword-shield-attack2-sheet.png characters animations asset pack character human soldier sword shield attack2 sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/no-shadows/human-soldier-sword-shield-death-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/no-shadows/human-soldier-sword-shield-death-sheet.png",
+      "label": "Human Soldier Sword Shield Death Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 960,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.011568509615384616,
+        "transparentCoverage": 0.9884314903846154,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Human Soldier Sword Shield Death Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "human soldier sword shield death sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/no-shadows/human-soldier-sword-shield-death-sheet.png characters animations asset pack character human soldier sword shield death sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/no-shadows/human-soldier-sword-shield-hurt-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/no-shadows/human-soldier-sword-shield-hurt-sheet.png",
+      "label": "Human Soldier Sword Shield Hurt Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 384,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.02838134765625,
+        "transparentCoverage": 0.97161865234375,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Human Soldier Sword Shield Hurt Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "human soldier sword shield hurt sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/no-shadows/human-soldier-sword-shield-hurt-sheet.png characters animations asset pack character human soldier sword shield hurt sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/no-shadows/human-soldier-sword-shield-idle-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/no-shadows/human-soldier-sword-shield-idle-sheet.png",
+      "label": "Human Soldier Sword Shield Idle Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 576,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.022710755813953487,
+        "transparentCoverage": 0.9772892441860465,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Human Soldier Sword Shield Idle Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "human soldier sword shield idle sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/no-shadows/human-soldier-sword-shield-idle-sheet.png characters animations asset pack character human soldier sword shield idle sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/no-shadows/human-soldier-sword-shield-jump-fall-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/no-shadows/human-soldier-sword-shield-jump-fall-sheet.png",
+      "label": "Human Soldier Sword Shield Jump Fall Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 576,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.024164244186046513,
+        "transparentCoverage": 0.9758357558139535,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Human Soldier Sword Shield Jump Fall Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "human soldier sword shield jump fall sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/no-shadows/human-soldier-sword-shield-jump-fall-sheet.png characters animations asset pack character human soldier sword shield jump fall sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/no-shadows/human-soldier-sword-shield-walk-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/no-shadows/human-soldier-sword-shield-walk-sheet.png",
+      "label": "Human Soldier Sword Shield Walk Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 768,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0247802734375,
+        "transparentCoverage": 0.9752197265625,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Human Soldier Sword Shield Walk Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "human soldier sword shield walk sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/no-shadows/human-soldier-sword-shield-walk-sheet.png characters animations asset pack character human soldier sword shield walk sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/only-shadows/human-soldier-sword-shield-attack1-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/only-shadows/human-soldier-sword-shield-attack1-sheet.png",
+      "label": "Human Soldier Sword Shield Attack1 Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 768,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0,
+        "transparentCoverage": 0.9940185546875,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Human Soldier Sword Shield Attack1 Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "human soldier sword shield attack1 sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/only-shadows/human-soldier-sword-shield-attack1-sheet.png characters animations asset pack character human soldier sword shield attack1 sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/only-shadows/human-soldier-sword-shield-attack2-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/only-shadows/human-soldier-sword-shield-attack2-sheet.png",
+      "label": "Human Soldier Sword Shield Attack2 Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 768,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0,
+        "transparentCoverage": 0.9940185546875,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Human Soldier Sword Shield Attack2 Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "human soldier sword shield attack2 sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/only-shadows/human-soldier-sword-shield-attack2-sheet.png characters animations asset pack character human soldier sword shield attack2 sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/only-shadows/human-soldier-sword-shield-death-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/only-shadows/human-soldier-sword-shield-death-sheet.png",
+      "label": "Human Soldier Sword Shield Death Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 960,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0,
+        "transparentCoverage": 0.9887319711538461,
+        "contentRowRuns": 0,
+        "contentColRuns": 11,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Human Soldier Sword Shield Death Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "human soldier sword shield death sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/only-shadows/human-soldier-sword-shield-death-sheet.png characters animations asset pack character human soldier sword shield death sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/only-shadows/human-soldier-sword-shield-hurt-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/only-shadows/human-soldier-sword-shield-hurt-sheet.png",
+      "label": "Human Soldier Sword Shield Hurt Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 384,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0,
+        "transparentCoverage": 0.99407958984375,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Human Soldier Sword Shield Hurt Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "human soldier sword shield hurt sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/only-shadows/human-soldier-sword-shield-hurt-sheet.png characters animations asset pack character human soldier sword shield hurt sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/only-shadows/human-soldier-sword-shield-idle-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/only-shadows/human-soldier-sword-shield-idle-sheet.png",
+      "label": "Human Soldier Sword Shield Idle Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 576,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0,
+        "transparentCoverage": 0.9949127906976745,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Human Soldier Sword Shield Idle Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "human soldier sword shield idle sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/only-shadows/human-soldier-sword-shield-idle-sheet.png characters animations asset pack character human soldier sword shield idle sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/only-shadows/human-soldier-sword-shield-jump-fall-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/only-shadows/human-soldier-sword-shield-jump-fall-sheet.png",
+      "label": "Human Soldier Sword Shield Jump Fall Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 576,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0,
+        "transparentCoverage": 0.9956395348837209,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Human Soldier Sword Shield Jump Fall Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "human soldier sword shield jump fall sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/only-shadows/human-soldier-sword-shield-jump-fall-sheet.png characters animations asset pack character human soldier sword shield jump fall sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/only-shadows/human-soldier-sword-shield-walk-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/only-shadows/human-soldier-sword-shield-walk-sheet.png",
+      "label": "Human Soldier Sword Shield Walk Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 768,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0,
+        "transparentCoverage": 0.994140625,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Human Soldier Sword Shield Walk Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "human soldier sword shield walk sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/only-shadows/human-soldier-sword-shield-walk-sheet.png characters animations asset pack character human soldier sword shield walk sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/with-shadows/human-soldier-sword-shield-attack1-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/with-shadows/human-soldier-sword-shield-attack1-sheet.png",
+      "label": "Human Soldier Sword Shield Attack1 Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 768,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.02685546875,
+        "transparentCoverage": 0.96923828125,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Human Soldier Sword Shield Attack1 Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "human soldier sword shield attack1 sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/with-shadows/human-soldier-sword-shield-attack1-sheet.png characters animations asset pack character human soldier sword shield attack1 sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/with-shadows/human-soldier-sword-shield-attack2-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/with-shadows/human-soldier-sword-shield-attack2-sheet.png",
+      "label": "Human Soldier Sword Shield Attack2 Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 768,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0296630859375,
+        "transparentCoverage": 0.966552734375,
+        "contentRowRuns": 1,
+        "contentColRuns": 9,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Human Soldier Sword Shield Attack2 Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "human soldier sword shield attack2 sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/with-shadows/human-soldier-sword-shield-attack2-sheet.png characters animations asset pack character human soldier sword shield attack2 sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/with-shadows/human-soldier-sword-shield-death-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/with-shadows/human-soldier-sword-shield-death-sheet.png",
+      "label": "Human Soldier Sword Shield Death Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 960,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.011568509615384616,
+        "transparentCoverage": 0.9771634615384616,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Human Soldier Sword Shield Death Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "human soldier sword shield death sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/with-shadows/human-soldier-sword-shield-death-sheet.png characters animations asset pack character human soldier sword shield death sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/with-shadows/human-soldier-sword-shield-hurt-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/with-shadows/human-soldier-sword-shield-hurt-sheet.png",
+      "label": "Human Soldier Sword Shield Hurt Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 384,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.02838134765625,
+        "transparentCoverage": 0.96697998046875,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Human Soldier Sword Shield Hurt Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "human soldier sword shield hurt sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/with-shadows/human-soldier-sword-shield-hurt-sheet.png characters animations asset pack character human soldier sword shield hurt sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/with-shadows/human-soldier-sword-shield-idle-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/with-shadows/human-soldier-sword-shield-idle-sheet.png",
+      "label": "Human Soldier Sword Shield Idle Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 576,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.022710755813953487,
+        "transparentCoverage": 0.9727470930232558,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Human Soldier Sword Shield Idle Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "human soldier sword shield idle sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/with-shadows/human-soldier-sword-shield-idle-sheet.png characters animations asset pack character human soldier sword shield idle sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/with-shadows/human-soldier-sword-shield-jump-fall-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/with-shadows/human-soldier-sword-shield-jump-fall-sheet.png",
+      "label": "Human Soldier Sword Shield Jump Fall Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 576,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.024164244186046513,
+        "transparentCoverage": 0.971656976744186,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Human Soldier Sword Shield Jump Fall Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "human soldier sword shield jump fall sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/with-shadows/human-soldier-sword-shield-jump-fall-sheet.png characters animations asset pack character human soldier sword shield jump fall sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/with-shadows/human-soldier-sword-shield-walk-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/with-shadows/human-soldier-sword-shield-walk-sheet.png",
+      "label": "Human Soldier Sword Shield Walk Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 768,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0247802734375,
+        "transparentCoverage": 0.9710693359375,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Human Soldier Sword Shield Walk Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "human soldier sword shield walk sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/with-shadows/human-soldier-sword-shield-walk-sheet.png characters animations asset pack character human soldier sword shield walk sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/no-shadows/monster-slime-attack1-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/no-shadows/monster-slime-attack1-sheet.png",
+      "label": "Monster Slime Attack1 Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 768,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0213623046875,
+        "transparentCoverage": 0.9786376953125,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Monster Slime Attack1 Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "monster slime attack1 sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/no-shadows/monster-slime-attack1-sheet.png characters animations asset pack character monster slime attack1 sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/no-shadows/monster-slime-attack2-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/no-shadows/monster-slime-attack2-sheet.png",
+      "label": "Monster Slime Attack2 Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 768,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0279541015625,
+        "transparentCoverage": 0.9720458984375,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Monster Slime Attack2 Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "monster slime attack2 sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/no-shadows/monster-slime-attack2-sheet.png characters animations asset pack character monster slime attack2 sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/no-shadows/monster-slime-death-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/no-shadows/monster-slime-death-sheet.png",
+      "label": "Monster Slime Death Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 960,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.007211538461538462,
+        "transparentCoverage": 0.9927884615384616,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Monster Slime Death Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "monster slime death sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/no-shadows/monster-slime-death-sheet.png characters animations asset pack character monster slime death sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/no-shadows/monster-slime-hurt-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/no-shadows/monster-slime-hurt-sheet.png",
+      "label": "Monster Slime Hurt Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 384,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0166015625,
+        "transparentCoverage": 0.9833984375,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Monster Slime Hurt Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "monster slime hurt sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/no-shadows/monster-slime-hurt-sheet.png characters animations asset pack character monster slime hurt sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/no-shadows/monster-slime-idle-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/no-shadows/monster-slime-idle-sheet.png",
+      "label": "Monster Slime Idle Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 576,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.012990552325581396,
+        "transparentCoverage": 0.9870094476744186,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Monster Slime Idle Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "monster slime idle sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/no-shadows/monster-slime-idle-sheet.png characters animations asset pack character monster slime idle sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/no-shadows/monster-slime-jump-fall-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/no-shadows/monster-slime-jump-fall-sheet.png",
+      "label": "Monster Slime Jump Fall Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 576,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.015897529069767442,
+        "transparentCoverage": 0.9841024709302325,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Monster Slime Jump Fall Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "monster slime jump fall sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/no-shadows/monster-slime-jump-fall-sheet.png characters animations asset pack character monster slime jump fall sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/no-shadows/monster-slime-walk-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/no-shadows/monster-slime-walk-sheet.png",
+      "label": "Monster Slime Walk Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 768,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0152587890625,
+        "transparentCoverage": 0.9847412109375,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Monster Slime Walk Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "monster slime walk sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/no-shadows/monster-slime-walk-sheet.png characters animations asset pack character monster slime walk sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/only-shadows/monster-slime-attack1-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/only-shadows/monster-slime-attack1-sheet.png",
+      "label": "Monster Slime Attack1 Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 768,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0,
+        "transparentCoverage": 0.9881591796875,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Monster Slime Attack1 Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "monster slime attack1 sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/only-shadows/monster-slime-attack1-sheet.png characters animations asset pack character monster slime attack1 sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/only-shadows/monster-slime-attack2-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/only-shadows/monster-slime-attack2-sheet.png",
+      "label": "Monster Slime Attack2 Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 768,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0,
+        "transparentCoverage": 0.989501953125,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Monster Slime Attack2 Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "monster slime attack2 sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/only-shadows/monster-slime-attack2-sheet.png characters animations asset pack character monster slime attack2 sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/only-shadows/monster-slime-death-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/only-shadows/monster-slime-death-sheet.png",
+      "label": "Monster Slime Death Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 960,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0,
+        "transparentCoverage": 0.9918870192307693,
+        "contentRowRuns": 0,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Monster Slime Death Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "monster slime death sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/only-shadows/monster-slime-death-sheet.png characters animations asset pack character monster slime death sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/only-shadows/monster-slime-hurt-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/only-shadows/monster-slime-hurt-sheet.png",
+      "label": "Monster Slime Hurt Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 384,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0,
+        "transparentCoverage": 0.9925537109375,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Monster Slime Hurt Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "monster slime hurt sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/only-shadows/monster-slime-hurt-sheet.png characters animations asset pack character monster slime hurt sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/only-shadows/monster-slime-idle-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/only-shadows/monster-slime-idle-sheet.png",
+      "label": "Monster Slime Idle Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 576,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0,
+        "transparentCoverage": 0.9927325581395349,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Monster Slime Idle Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "monster slime idle sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/only-shadows/monster-slime-idle-sheet.png characters animations asset pack character monster slime idle sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/only-shadows/monster-slime-jump-fall-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/only-shadows/monster-slime-jump-fall-sheet.png",
+      "label": "Monster Slime Jump Fall Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 576,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0,
+        "transparentCoverage": 0.9940043604651163,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Monster Slime Jump Fall Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "monster slime jump fall sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/only-shadows/monster-slime-jump-fall-sheet.png characters animations asset pack character monster slime jump fall sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/only-shadows/monster-slime-walk-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/only-shadows/monster-slime-walk-sheet.png",
+      "label": "Monster Slime Walk Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 768,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0,
+        "transparentCoverage": 0.991455078125,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Monster Slime Walk Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "monster slime walk sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/only-shadows/monster-slime-walk-sheet.png characters animations asset pack character monster slime walk sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/with-shadows/monster-slime-attack1-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/with-shadows/monster-slime-attack1-sheet.png",
+      "label": "Monster Slime Attack1 Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 768,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0213623046875,
+        "transparentCoverage": 0.972900390625,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Monster Slime Attack1 Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "monster slime attack1 sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/with-shadows/monster-slime-attack1-sheet.png characters animations asset pack character monster slime attack1 sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/with-shadows/monster-slime-attack2-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/with-shadows/monster-slime-attack2-sheet.png",
+      "label": "Monster Slime Attack2 Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 768,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0279541015625,
+        "transparentCoverage": 0.9659423828125,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Monster Slime Attack2 Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "monster slime attack2 sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/with-shadows/monster-slime-attack2-sheet.png characters animations asset pack character monster slime attack2 sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/with-shadows/monster-slime-death-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/with-shadows/monster-slime-death-sheet.png",
+      "label": "Monster Slime Death Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 960,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.007211538461538462,
+        "transparentCoverage": 0.9846754807692307,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Monster Slime Death Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "monster slime death sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/with-shadows/monster-slime-death-sheet.png characters animations asset pack character monster slime death sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/with-shadows/monster-slime-hurt-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/with-shadows/monster-slime-hurt-sheet.png",
+      "label": "Monster Slime Hurt Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 384,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0166015625,
+        "transparentCoverage": 0.978271484375,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Monster Slime Hurt Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "monster slime hurt sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/with-shadows/monster-slime-hurt-sheet.png characters animations asset pack character monster slime hurt sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/with-shadows/monster-slime-idle-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/with-shadows/monster-slime-idle-sheet.png",
+      "label": "Monster Slime Idle Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 576,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.012990552325581396,
+        "transparentCoverage": 0.9797420058139535,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Monster Slime Idle Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "monster slime idle sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/with-shadows/monster-slime-idle-sheet.png characters animations asset pack character monster slime idle sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/with-shadows/monster-slime-jump-fall-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/with-shadows/monster-slime-jump-fall-sheet.png",
+      "label": "Monster Slime Jump Fall Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 576,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.015897529069767442,
+        "transparentCoverage": 0.9781068313953488,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Monster Slime Jump Fall Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "monster slime jump fall sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/with-shadows/monster-slime-jump-fall-sheet.png characters animations asset pack character monster slime jump fall sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/with-shadows/monster-slime-walk-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/with-shadows/monster-slime-walk-sheet.png",
+      "label": "Monster Slime Walk Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 768,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0152587890625,
+        "transparentCoverage": 0.9801025390625,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Monster Slime Walk Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "monster slime walk sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/with-shadows/monster-slime-walk-sheet.png characters animations asset pack character monster slime walk sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/no-shadows/human-soldier-sword-shield-block-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/no-shadows/human-soldier-sword-shield-block-sheet.png",
+      "label": "Human Soldier Sword Shield Block Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 576,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.023982558139534885,
+        "transparentCoverage": 0.9760174418604651,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Human Soldier Sword Shield Block Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "prototype"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "prototype"
+      ],
+      "searchText": "human soldier sword shield block sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/no-shadows/human-soldier-sword-shield-block-sheet.png characters animations asset pack character human soldier sword shield block sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. prototype player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/no-shadows/human-soldier-sword-shield-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/no-shadows/human-soldier-sword-shield-sheet.png",
+      "label": "Human Soldier Sword Shield Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 960,
+        "height": 768,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.016844512195121952,
+        "transparentCoverage": 0.983155487804878,
+        "contentRowRuns": 8,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 6,
+        "cellMedianHeight": 5
+      },
+      "promo": false,
+      "description": "Human Soldier Sword Shield Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "human soldier sword shield sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/no-shadows/human-soldier-sword-shield-sheet.png characters animations asset pack character human soldier sword shield sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/only-shadows/human-soldier-sword-shield-block-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/only-shadows/human-soldier-sword-shield-block-sheet.png",
+      "label": "Human Soldier Sword Shield Block Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 576,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0,
+        "transparentCoverage": 0.9948219476744186,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Human Soldier Sword Shield Block Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "prototype"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "prototype"
+      ],
+      "searchText": "human soldier sword shield block sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/only-shadows/human-soldier-sword-shield-block-sheet.png characters animations asset pack character human soldier sword shield block sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. prototype player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/only-shadows/human-soldier-sword-shield-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/only-shadows/human-soldier-sword-shield-sheet.png",
+      "label": "Human Soldier Sword Shield Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 960,
+        "height": 768,
+        "bgKind": "transparent",
+        "alphaCoverage": 0,
+        "transparentCoverage": 0.9954268292682927,
+        "contentRowRuns": 2,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 8,
+        "cellMedianHeight": 2
+      },
+      "promo": false,
+      "description": "Human Soldier Sword Shield Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "human soldier sword shield sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/only-shadows/human-soldier-sword-shield-sheet.png characters animations asset pack character human soldier sword shield sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/with-shadows/human-soldier-sword-shield-block-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/with-shadows/human-soldier-sword-shield-block-sheet.png",
+      "label": "Human Soldier Sword Shield Block Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 576,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.023982558139534885,
+        "transparentCoverage": 0.9711119186046512,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Human Soldier Sword Shield Block Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "prototype"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "prototype"
+      ],
+      "searchText": "human soldier sword shield block sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/with-shadows/human-soldier-sword-shield-block-sheet.png characters animations asset pack character human soldier sword shield block sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. prototype player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/with-shadows/human-soldier-sword-shield-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/with-shadows/human-soldier-sword-shield-sheet.png",
+      "label": "Human Soldier Sword Shield Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 960,
+        "height": 768,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.016844512195121952,
+        "transparentCoverage": 0.9794969512195122,
+        "contentRowRuns": 8,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 8,
+        "cellMedianHeight": 6
+      },
+      "promo": false,
+      "description": "Human Soldier Sword Shield Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "human soldier sword shield sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/human-soldier-sword-shield/with-shadows/human-soldier-sword-shield-sheet.png characters animations asset pack character human soldier sword shield sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/no-shadows/monster-slime-block-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/no-shadows/monster-slime-block-sheet.png",
+      "label": "Monster Slime Block Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 576,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.01744186046511628,
+        "transparentCoverage": 0.9825581395348837,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Monster Slime Block Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "prototype"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "prototype"
+      ],
+      "searchText": "monster slime block sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/no-shadows/monster-slime-block-sheet.png characters animations asset pack character monster slime block sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. prototype player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/no-shadows/monster-slime-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/no-shadows/monster-slime-sheet.png",
+      "label": "Monster Slime Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 960,
+        "height": 768,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.01169969512195122,
+        "transparentCoverage": 0.9883003048780488,
+        "contentRowRuns": 8,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 5,
+        "cellMedianHeight": 4
+      },
+      "promo": false,
+      "description": "Monster Slime Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "monster slime sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/no-shadows/monster-slime-sheet.png characters animations asset pack character monster slime sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/only-shadows/monster-slime-block-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/only-shadows/monster-slime-block-sheet.png",
+      "label": "Monster Slime Block Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 576,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0,
+        "transparentCoverage": 0.9925508720930233,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Monster Slime Block Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "prototype"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "prototype"
+      ],
+      "searchText": "monster slime block sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/only-shadows/monster-slime-block-sheet.png characters animations asset pack character monster slime block sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. prototype player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/only-shadows/monster-slime-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/only-shadows/monster-slime-sheet.png",
+      "label": "Monster Slime Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 960,
+        "height": 768,
+        "bgKind": "transparent",
+        "alphaCoverage": 0,
+        "transparentCoverage": 0.9943025914634146,
+        "contentRowRuns": 2,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 6,
+        "cellMedianHeight": 2
+      },
+      "promo": false,
+      "description": "Monster Slime Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "monster slime sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/only-shadows/monster-slime-sheet.png characters animations asset pack character monster slime sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/with-shadows/monster-slime-block-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/with-shadows/monster-slime-block-sheet.png",
+      "label": "Monster Slime Block Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 576,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.01744186046511628,
+        "transparentCoverage": 0.9751998546511628,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Monster Slime Block Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "prototype"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "prototype"
+      ],
+      "searchText": "monster slime block sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/with-shadows/monster-slime-block-sheet.png characters animations asset pack character monster slime block sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. prototype player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "oboropixel-characters-animations-asset-pack",
+      "path": "2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/with-shadows/monster-slime-sheet.png",
+      "src": "/2D/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/with-shadows/monster-slime-sheet.png",
+      "label": "Monster Slime Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 960,
+        "height": 768,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.01169969512195122,
+        "transparentCoverage": 0.9840129573170732,
+        "contentRowRuns": 8,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 6,
+        "cellMedianHeight": 5
+      },
+      "promo": false,
+      "description": "Monster Slime Sheet is an animated 2D character sample from Characters Animations Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "characters animations asset pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "characters animations asset pack"
+      ],
+      "searchText": "monster slime sheet 2d/oboropixel-characters-animations-asset-pack/extracted/freecharactersanimationsassetpack/freecharactersanimationsassetpack/spritesheets-96x96/monster-slime/with-shadows/monster-slime-sheet.png characters animations asset pack character monster slime sheet is an animated 2d character sample from characters animations asset pack. useful for player characters, npcs, animation prototyping. characters animations asset pack player characters npcs animation prototyping 2d animated art"
+    }
+  ]
+}

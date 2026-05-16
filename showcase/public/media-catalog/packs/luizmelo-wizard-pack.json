@@ -1,0 +1,280 @@
+{
+  "folder": "luizmelo-wizard-pack",
+  "title": "Wizard Pack",
+  "author": "luizmelo",
+  "author_url": "https://luizmelo.itch.io",
+  "url": "https://luizmelo.itch.io/wizard-pack",
+  "game_id": null,
+  "license_class": "CC0 1.0 (Creative Commons Zero)",
+  "attribution": "Optional",
+  "theme": "General",
+  "description": "Wizard Pack is a 2D general art pack by luizmelo. Use it for game jams, prototypes, scene dressing. License: CC0 1.0 (Creative Commons Zero). Attribution: Optional.",
+  "category": "General",
+  "themes": [
+    "fantasy",
+    "general"
+  ],
+  "useCases": [
+    "game jams",
+    "prototypes",
+    "scene dressing"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "fantasy",
+    "general",
+    "medieval",
+    "sprite"
+  ],
+  "searchText": "wizard pack luizmelo-wizard-pack luizmelo general cc0 1.0 (creative commons zero) optional wizard pack is a 2d general art pack by luizmelo. use it for game jams, prototypes, scene dressing. license: cc0 1.0 (creative commons zero). attribution: optional. fantasy general game jams prototypes scene dressing 2d art medieval sprite",
+  "sampleCount": 6,
+  "samples": [
+    {
+      "packFolder": "luizmelo-wizard-pack",
+      "path": "2D/luizmelo-wizard-pack/extracted/wizard-pack/wizard-pack/attack1.png",
+      "src": "/2D/luizmelo-wizard-pack/extracted/wizard-pack/wizard-pack/attack1.png",
+      "label": "Attack1",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 1848,
+        "height": 190,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.06580528846153846,
+        "transparentCoverage": 0.9341947115384616,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Attack1 is an animated 2D character sample from Wizard Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "attack1 2d/luizmelo-wizard-pack/extracted/wizard-pack/wizard-pack/attack1.png wizard pack character attack1 is an animated 2d character sample from wizard pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "luizmelo-wizard-pack",
+      "path": "2D/luizmelo-wizard-pack/extracted/wizard-pack/wizard-pack/attack2.png",
+      "src": "/2D/luizmelo-wizard-pack/extracted/wizard-pack/wizard-pack/attack2.png",
+      "label": "Attack2",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 1848,
+        "height": 190,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.06280048076923077,
+        "transparentCoverage": 0.9371995192307693,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Attack2 is an animated 2D character sample from Wizard Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "attack2 2d/luizmelo-wizard-pack/extracted/wizard-pack/wizard-pack/attack2.png wizard pack character attack2 is an animated 2d character sample from wizard pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "luizmelo-wizard-pack",
+      "path": "2D/luizmelo-wizard-pack/extracted/wizard-pack/wizard-pack/death.png",
+      "src": "/2D/luizmelo-wizard-pack/extracted/wizard-pack/wizard-pack/death.png",
+      "label": "Death",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 1617,
+        "height": 190,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0375,
+        "transparentCoverage": 0.9625,
+        "contentRowRuns": 1,
+        "contentColRuns": 9,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Death is an animated 2D character sample from Wizard Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "death 2d/luizmelo-wizard-pack/extracted/wizard-pack/wizard-pack/death.png wizard pack character death is an animated 2d character sample from wizard pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "luizmelo-wizard-pack",
+      "path": "2D/luizmelo-wizard-pack/extracted/wizard-pack/wizard-pack/idle.png",
+      "src": "/2D/luizmelo-wizard-pack/extracted/wizard-pack/wizard-pack/idle.png",
+      "label": "Idle",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 1386,
+        "height": 190,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0515625,
+        "transparentCoverage": 0.9484375,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Idle is an animated 2D character sample from Wizard Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "idle 2d/luizmelo-wizard-pack/extracted/wizard-pack/wizard-pack/idle.png wizard pack character idle is an animated 2d character sample from wizard pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "luizmelo-wizard-pack",
+      "path": "2D/luizmelo-wizard-pack/extracted/wizard-pack/wizard-pack/fall.png",
+      "src": "/2D/luizmelo-wizard-pack/extracted/wizard-pack/wizard-pack/fall.png",
+      "label": "Fall",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 462,
+        "height": 190,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.044717261904761905,
+        "transparentCoverage": 0.9552827380952381,
+        "contentRowRuns": 1,
+        "contentColRuns": 2,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Fall is an animated 2D character sample from Wizard Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "fall 2d/luizmelo-wizard-pack/extracted/wizard-pack/wizard-pack/fall.png wizard pack character fall is an animated 2d character sample from wizard pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "luizmelo-wizard-pack",
+      "path": "2D/luizmelo-wizard-pack/extracted/wizard-pack/wizard-pack/jump.png",
+      "src": "/2D/luizmelo-wizard-pack/extracted/wizard-pack/wizard-pack/jump.png",
+      "label": "Jump",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 462,
+        "height": 190,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.049069940476190475,
+        "transparentCoverage": 0.9509300595238095,
+        "contentRowRuns": 1,
+        "contentColRuns": 2,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Jump is an animated 2D character sample from Wizard Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "jump 2d/luizmelo-wizard-pack/extracted/wizard-pack/wizard-pack/jump.png wizard pack character jump is an animated 2d character sample from wizard pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    }
+  ]
+}

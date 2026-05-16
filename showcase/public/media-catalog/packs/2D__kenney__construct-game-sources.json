@@ -1,0 +1,80 @@
+{
+  "folder": "2D/kenney/construct-game-sources",
+  "title": "Construct Game Sources",
+  "author": "Kenney",
+  "author_url": "https://kenney.nl/",
+  "url": "https://kenney.nl/assets/category:2D",
+  "game_id": null,
+  "license_class": "CC0 1.0 (Creative Commons Zero)",
+  "attribution": "Optional",
+  "theme": "General",
+  "description": "Construct Game Sources is a 2D general art pack by Kenney. Use it for game jams, prototypes, scene dressing. License: CC0 1.0 (Creative Commons Zero). Attribution: Optional.",
+  "category": "General",
+  "themes": [
+    "construct game sources",
+    "general"
+  ],
+  "useCases": [
+    "game jams",
+    "prototypes",
+    "scene dressing"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "construct game sources",
+    "general",
+    "sprite"
+  ],
+  "searchText": "construct game sources 2d/kenney/construct-game-sources kenney general cc0 1.0 (creative commons zero) optional construct game sources is a 2d general art pack by kenney. use it for game jams, prototypes, scene dressing. license: cc0 1.0 (creative commons zero). attribution: optional. construct game sources general game jams prototypes scene dressing 2d art sprite",
+  "sampleCount": 1,
+  "samples": [
+    {
+      "packFolder": "2D/kenney/construct-game-sources",
+      "path": "2D/kenney/construct-game-sources/extracted/preview.png",
+      "src": "/2D/kenney/construct-game-sources/extracted/preview.png",
+      "label": "Preview",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 918,
+        "height": 515,
+        "bgKind": "solid",
+        "bgColor": {
+          "r": 241,
+          "g": 196,
+          "b": 15
+        },
+        "alphaCoverage": 1,
+        "transparentCoverage": 0,
+        "contentRowRuns": 3,
+        "contentColRuns": 3,
+        "promoBackground": true,
+        "spriteSheetGrid": false,
+        "uniformGrid": false,
+        "cellMedianWidth": 87,
+        "cellMedianHeight": 34
+      },
+      "promo": true,
+      "description": "Preview is a static 2D image sample from Construct Game Sources. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "construct game sources",
+        "image"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "construct game sources",
+        "image",
+        "static"
+      ],
+      "searchText": "preview 2d/kenney/construct-game-sources/extracted/preview.png construct game sources image preview is a static 2d image sample from construct game sources. useful for player characters, npcs, animation prototyping. construct game sources player characters npcs animation prototyping 2d art static"
+    }
+  ]
+}

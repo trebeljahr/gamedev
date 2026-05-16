@@ -1,0 +1,513 @@
+{
+  "folder": "pidroudays-theforestcharacterpack",
+  "title": "Theforestcharacterpack",
+  "author": "pidroudays",
+  "author_url": "https://pidroudays.itch.io",
+  "url": "https://pidroudays.itch.io/theforestcharacterpack",
+  "game_id": null,
+  "license_class": "Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms)",
+  "attribution": "Appreciated / not required",
+  "theme": "General",
+  "description": "Theforestcharacterpack is a 2D general art pack by pidroudays. Use it for player characters, NPCs, animation prototyping. License: Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). Attribution: Appreciated / not required.",
+  "category": "General",
+  "themes": [
+    "general",
+    "urban"
+  ],
+  "useCases": [
+    "player characters",
+    "NPCs",
+    "animation prototyping"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "general",
+    "sprite",
+    "urban"
+  ],
+  "searchText": "theforestcharacterpack pidroudays-theforestcharacterpack pidroudays general free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms) appreciated / not required theforestcharacterpack is a 2d general art pack by pidroudays. use it for player characters, npcs, animation prototyping. license: free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). attribution: appreciated / not required. general urban player characters npcs animation prototyping 2d art sprite",
+  "sampleCount": 12,
+  "samples": [
+    {
+      "packFolder": "pidroudays-theforestcharacterpack",
+      "path": "2D/pidroudays-theforestcharacterpack/extracted/theforestcp-mushroom-pumpkin/theforestcp-mushroom-pumpkin/mushroom/m-death.png",
+      "src": "/2D/pidroudays-theforestcharacterpack/extracted/theforestcp-mushroom-pumpkin/theforestcp-mushroom-pumpkin/mushroom/m-death.png",
+      "label": "M Death",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 150,
+        "height": 34,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.14411764705882352,
+        "transparentCoverage": 0.8558823529411764,
+        "contentRowRuns": 1,
+        "contentColRuns": 5,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "M Death is an animated 2D character sample from Theforestcharacterpack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "theforestcharacterpack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "theforestcharacterpack"
+      ],
+      "searchText": "m death 2d/pidroudays-theforestcharacterpack/extracted/theforestcp-mushroom-pumpkin/theforestcp-mushroom-pumpkin/mushroom/m-death.png theforestcharacterpack character m death is an animated 2d character sample from theforestcharacterpack. useful for player characters, npcs, animation prototyping. theforestcharacterpack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "pidroudays-theforestcharacterpack",
+      "path": "2D/pidroudays-theforestcharacterpack/extracted/theforestcp-mushroom-pumpkin/theforestcp-mushroom-pumpkin/mushroom/m-idle.png",
+      "src": "/2D/pidroudays-theforestcharacterpack/extracted/theforestcp-mushroom-pumpkin/theforestcp-mushroom-pumpkin/mushroom/m-idle.png",
+      "label": "M Idle",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 150,
+        "height": 34,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.18313725490196078,
+        "transparentCoverage": 0.8168627450980392,
+        "contentRowRuns": 1,
+        "contentColRuns": 5,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "M Idle is an animated 2D character sample from Theforestcharacterpack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "theforestcharacterpack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "theforestcharacterpack"
+      ],
+      "searchText": "m idle 2d/pidroudays-theforestcharacterpack/extracted/theforestcp-mushroom-pumpkin/theforestcp-mushroom-pumpkin/mushroom/m-idle.png theforestcharacterpack character m idle is an animated 2d character sample from theforestcharacterpack. useful for player characters, npcs, animation prototyping. theforestcharacterpack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "pidroudays-theforestcharacterpack",
+      "path": "2D/pidroudays-theforestcharacterpack/extracted/theforestcp-mushroom-pumpkin/theforestcp-mushroom-pumpkin/mushroom/m-walk.png",
+      "src": "/2D/pidroudays-theforestcharacterpack/extracted/theforestcp-mushroom-pumpkin/theforestcp-mushroom-pumpkin/mushroom/m-walk.png",
+      "label": "M Walk",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 240,
+        "height": 34,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.16752450980392156,
+        "transparentCoverage": 0.8324754901960785,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "M Walk is an animated 2D character sample from Theforestcharacterpack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "theforestcharacterpack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "theforestcharacterpack"
+      ],
+      "searchText": "m walk 2d/pidroudays-theforestcharacterpack/extracted/theforestcp-mushroom-pumpkin/theforestcp-mushroom-pumpkin/mushroom/m-walk.png theforestcharacterpack character m walk is an animated 2d character sample from theforestcharacterpack. useful for player characters, npcs, animation prototyping. theforestcharacterpack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "pidroudays-theforestcharacterpack",
+      "path": "2D/pidroudays-theforestcharacterpack/extracted/theforestcp-mushroom-pumpkin/theforestcp-mushroom-pumpkin/pumpkin/p-death.png",
+      "src": "/2D/pidroudays-theforestcharacterpack/extracted/theforestcp-mushroom-pumpkin/theforestcp-mushroom-pumpkin/pumpkin/p-death.png",
+      "label": "P Death",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 140,
+        "height": 30,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.275,
+        "transparentCoverage": 0.725,
+        "contentRowRuns": 1,
+        "contentColRuns": 5,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "P Death is an animated 2D character sample from Theforestcharacterpack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "theforestcharacterpack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "theforestcharacterpack"
+      ],
+      "searchText": "p death 2d/pidroudays-theforestcharacterpack/extracted/theforestcp-mushroom-pumpkin/theforestcp-mushroom-pumpkin/pumpkin/p-death.png theforestcharacterpack character p death is an animated 2d character sample from theforestcharacterpack. useful for player characters, npcs, animation prototyping. theforestcharacterpack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "pidroudays-theforestcharacterpack",
+      "path": "2D/pidroudays-theforestcharacterpack/extracted/theforestcp-mushroom-pumpkin/theforestcp-mushroom-pumpkin/pumpkin/p-idle.png",
+      "src": "/2D/pidroudays-theforestcharacterpack/extracted/theforestcp-mushroom-pumpkin/theforestcp-mushroom-pumpkin/pumpkin/p-idle.png",
+      "label": "P Idle",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 112,
+        "height": 30,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.27976190476190477,
+        "transparentCoverage": 0.7202380952380952,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "P Idle is an animated 2D character sample from Theforestcharacterpack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "theforestcharacterpack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "theforestcharacterpack"
+      ],
+      "searchText": "p idle 2d/pidroudays-theforestcharacterpack/extracted/theforestcp-mushroom-pumpkin/theforestcp-mushroom-pumpkin/pumpkin/p-idle.png theforestcharacterpack character p idle is an animated 2d character sample from theforestcharacterpack. useful for player characters, npcs, animation prototyping. theforestcharacterpack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "pidroudays-theforestcharacterpack",
+      "path": "2D/pidroudays-theforestcharacterpack/extracted/theforestcp-mushroom-pumpkin/theforestcp-mushroom-pumpkin/pumpkin/p-walk.png",
+      "src": "/2D/pidroudays-theforestcharacterpack/extracted/theforestcp-mushroom-pumpkin/theforestcp-mushroom-pumpkin/pumpkin/p-walk.png",
+      "label": "P Walk",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 196,
+        "height": 30,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.27993197278911564,
+        "transparentCoverage": 0.7200680272108844,
+        "contentRowRuns": 1,
+        "contentColRuns": 7,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "P Walk is an animated 2D character sample from Theforestcharacterpack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "theforestcharacterpack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "theforestcharacterpack"
+      ],
+      "searchText": "p walk 2d/pidroudays-theforestcharacterpack/extracted/theforestcp-mushroom-pumpkin/theforestcp-mushroom-pumpkin/pumpkin/p-walk.png theforestcharacterpack character p walk is an animated 2d character sample from theforestcharacterpack. useful for player characters, npcs, animation prototyping. theforestcharacterpack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "pidroudays-theforestcharacterpack",
+      "path": "2D/pidroudays-theforestcharacterpack/extracted/theforestcp-mushroom-pumpkin/theforestcp-mushroom-pumpkin/mushroom/m-hurt.png",
+      "src": "/2D/pidroudays-theforestcharacterpack/extracted/theforestcp-mushroom-pumpkin/theforestcp-mushroom-pumpkin/mushroom/m-hurt.png",
+      "label": "M Hurt",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 60,
+        "height": 34,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.18627450980392157,
+        "transparentCoverage": 0.8137254901960784,
+        "contentRowRuns": 1,
+        "contentColRuns": 2,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "M Hurt is an animated 2D character sample from Theforestcharacterpack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "theforestcharacterpack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "theforestcharacterpack"
+      ],
+      "searchText": "m hurt 2d/pidroudays-theforestcharacterpack/extracted/theforestcp-mushroom-pumpkin/theforestcp-mushroom-pumpkin/mushroom/m-hurt.png theforestcharacterpack character m hurt is an animated 2d character sample from theforestcharacterpack. useful for player characters, npcs, animation prototyping. theforestcharacterpack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "pidroudays-theforestcharacterpack",
+      "path": "2D/pidroudays-theforestcharacterpack/extracted/theforestcp-mushroom-pumpkin/theforestcp-mushroom-pumpkin/pumpkin/p-hurt.png",
+      "src": "/2D/pidroudays-theforestcharacterpack/extracted/theforestcp-mushroom-pumpkin/theforestcp-mushroom-pumpkin/pumpkin/p-hurt.png",
+      "label": "P Hurt",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 56,
+        "height": 30,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.27976190476190477,
+        "transparentCoverage": 0.7202380952380952,
+        "contentRowRuns": 1,
+        "contentColRuns": 2,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "P Hurt is an animated 2D character sample from Theforestcharacterpack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "theforestcharacterpack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "theforestcharacterpack"
+      ],
+      "searchText": "p hurt 2d/pidroudays-theforestcharacterpack/extracted/theforestcp-mushroom-pumpkin/theforestcp-mushroom-pumpkin/pumpkin/p-hurt.png theforestcharacterpack character p hurt is an animated 2d character sample from theforestcharacterpack. useful for player characters, npcs, animation prototyping. theforestcharacterpack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "pidroudays-theforestcharacterpack",
+      "path": "2D/pidroudays-theforestcharacterpack/extracted/theforestcp-mushroom-pumpkin/theforestcp-mushroom-pumpkin/mushroom/m-attacking.png",
+      "src": "/2D/pidroudays-theforestcharacterpack/extracted/theforestcp-mushroom-pumpkin/theforestcp-mushroom-pumpkin/mushroom/m-attacking.png",
+      "label": "M Attacking",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 120,
+        "height": 34,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.17181372549019608,
+        "transparentCoverage": 0.828186274509804,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "M Attacking is an animated 2D character sample from Theforestcharacterpack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "theforestcharacterpack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "theforestcharacterpack"
+      ],
+      "searchText": "m attacking 2d/pidroudays-theforestcharacterpack/extracted/theforestcp-mushroom-pumpkin/theforestcp-mushroom-pumpkin/mushroom/m-attacking.png theforestcharacterpack character m attacking is an animated 2d character sample from theforestcharacterpack. useful for player characters, npcs, animation prototyping. theforestcharacterpack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "pidroudays-theforestcharacterpack",
+      "path": "2D/pidroudays-theforestcharacterpack/extracted/theforestcp-mushroom-pumpkin/theforestcp-mushroom-pumpkin/mushroom/m-awaken.png",
+      "src": "/2D/pidroudays-theforestcharacterpack/extracted/theforestcp-mushroom-pumpkin/theforestcp-mushroom-pumpkin/mushroom/m-awaken.png",
+      "label": "M Awaken",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 240,
+        "height": 34,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.12794117647058822,
+        "transparentCoverage": 0.8720588235294118,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "M Awaken is an animated 2D character sample from Theforestcharacterpack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "theforestcharacterpack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "theforestcharacterpack"
+      ],
+      "searchText": "m awaken 2d/pidroudays-theforestcharacterpack/extracted/theforestcp-mushroom-pumpkin/theforestcp-mushroom-pumpkin/mushroom/m-awaken.png theforestcharacterpack character m awaken is an animated 2d character sample from theforestcharacterpack. useful for player characters, npcs, animation prototyping. theforestcharacterpack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "pidroudays-theforestcharacterpack",
+      "path": "2D/pidroudays-theforestcharacterpack/extracted/theforestcp-mushroom-pumpkin/theforestcp-mushroom-pumpkin/pumpkin/p-attacking.png",
+      "src": "/2D/pidroudays-theforestcharacterpack/extracted/theforestcp-mushroom-pumpkin/theforestcp-mushroom-pumpkin/pumpkin/p-attacking.png",
+      "label": "P Attacking",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 112,
+        "height": 30,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.34523809523809523,
+        "transparentCoverage": 0.6547619047619048,
+        "contentRowRuns": 1,
+        "contentColRuns": 5,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "P Attacking is an animated 2D character sample from Theforestcharacterpack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "theforestcharacterpack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "theforestcharacterpack"
+      ],
+      "searchText": "p attacking 2d/pidroudays-theforestcharacterpack/extracted/theforestcp-mushroom-pumpkin/theforestcp-mushroom-pumpkin/pumpkin/p-attacking.png theforestcharacterpack character p attacking is an animated 2d character sample from theforestcharacterpack. useful for player characters, npcs, animation prototyping. theforestcharacterpack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "pidroudays-theforestcharacterpack",
+      "path": "2D/pidroudays-theforestcharacterpack/extracted/theforestcp-mushroom-pumpkin/theforestcp-mushroom-pumpkin/pumpkin/p-awaken.png",
+      "src": "/2D/pidroudays-theforestcharacterpack/extracted/theforestcp-mushroom-pumpkin/theforestcp-mushroom-pumpkin/pumpkin/p-awaken.png",
+      "label": "P Awaken",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 140,
+        "height": 30,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.2711904761904762,
+        "transparentCoverage": 0.7288095238095238,
+        "contentRowRuns": 1,
+        "contentColRuns": 5,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "P Awaken is an animated 2D character sample from Theforestcharacterpack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "theforestcharacterpack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "theforestcharacterpack"
+      ],
+      "searchText": "p awaken 2d/pidroudays-theforestcharacterpack/extracted/theforestcp-mushroom-pumpkin/theforestcp-mushroom-pumpkin/pumpkin/p-awaken.png theforestcharacterpack character p awaken is an animated 2d character sample from theforestcharacterpack. useful for player characters, npcs, animation prototyping. theforestcharacterpack player characters npcs animation prototyping 2d animated art"
+    }
+  ]
+}

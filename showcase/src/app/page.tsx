@@ -4,7 +4,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { downloadsForModel, manifest } from "@/lib/manifest";
 import fs from "node:fs";
 import path from "node:path";
-import { catalog, mediaStats, sourceMappings } from "@/lib/media";
+import { catalog, findArtPack, mediaStats, sourceMappings } from "@/lib/media";
 import { AssetTypeNav } from "@/components/AssetTypeNav";
 import { pageMetadata } from "@/lib/seo";
 import {
@@ -347,10 +347,12 @@ function selectSpritesForSlots(slots: SpriteSlot[]): LibrarySpritePreview[] {
 
   for (const slot of slots) {
     const candidates = catalog.artPacks
-      .filter((pack) => slot.themes.includes(pack.theme))
-      .flatMap((pack) =>
-        pack.samples.map((sample) => ({ pack, sample, score: landingSpriteScore(pack, sample, slot) })),
-      )
+      .filter((summary) => slot.themes.includes(summary.theme))
+      .flatMap((summary) => {
+        const pack = findArtPack(summary.folder);
+        if (!pack) return [];
+        return pack.samples.map((sample) => ({ pack, sample, score: landingSpriteScore(pack, sample, slot) }));
+      })
       .filter((item) => Number.isFinite(item.score))
       .sort((a, b) => b.score - a.score || a.sample.path.localeCompare(b.sample.path));
     const candidate =

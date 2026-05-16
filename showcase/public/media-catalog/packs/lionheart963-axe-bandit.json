@@ -1,0 +1,73 @@
+{
+  "folder": "lionheart963-axe-bandit",
+  "title": "Axe Bandit",
+  "author": "lionheart963",
+  "author_url": "https://lionheart963.itch.io",
+  "url": "https://lionheart963.itch.io/axe-bandit",
+  "game_id": 114719,
+  "license_class": "Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms)",
+  "attribution": "Appreciated / not required",
+  "theme": "Characters",
+  "description": "Axe Bandit is a 2D characters art pack by lionheart963. Use it for player characters, NPCs, animation prototyping. License: Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). Attribution: Appreciated / not required.",
+  "category": "Characters",
+  "themes": [
+    "characters",
+    "urban"
+  ],
+  "useCases": [
+    "player characters",
+    "NPCs",
+    "animation prototyping"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "characters",
+    "sprite",
+    "urban"
+  ],
+  "searchText": "axe bandit lionheart963-axe-bandit lionheart963 characters free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms) appreciated / not required axe bandit is a 2d characters art pack by lionheart963. use it for player characters, npcs, animation prototyping. license: free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). attribution: appreciated / not required. characters urban player characters npcs animation prototyping 2d art sprite",
+  "sampleCount": 1,
+  "samples": [
+    {
+      "packFolder": "lionheart963-axe-bandit",
+      "path": "2D/lionheart963-axe-bandit/axe-bandit-run.png",
+      "src": "/2D/lionheart963-axe-bandit/axe-bandit-run.png",
+      "label": "Axe Bandit Run",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 640,
+        "height": 80,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.02001953125,
+        "transparentCoverage": 0.97998046875,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Axe Bandit Run is an animated 2D character sample from Axe Bandit. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "axe bandit",
+        "character"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "axe bandit",
+        "character"
+      ],
+      "searchText": "axe bandit run 2d/lionheart963-axe-bandit/axe-bandit-run.png axe bandit character axe bandit run is an animated 2d character sample from axe bandit. useful for player characters, npcs, animation prototyping. axe bandit player characters npcs animation prototyping 2d animated art"
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "folder": "pixelserial-rpg-top-down-character-asset-pack",
+  "title": "RPG Top Down Character Asset Pack",
+  "author": "PixelSerial",
+  "author_url": "https://pixelserial.itch.io",
+  "url": "https://pixelserial.itch.io/rpg-top-down-character-asset-pack",
+  "game_id": 3576823,
+  "license_class": "Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms)",
+  "attribution": "Appreciated / not required",
+  "theme": "Characters",
+  "description": "RPG Top Down Character Asset Pack is a 2D characters art pack by PixelSerial. Use it for player characters, NPCs, animation prototyping. License: Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). Attribution: Appreciated / not required.",
+  "category": "Characters",
+  "themes": [
+    "characters",
+    "fantasy",
+    "urban"
+  ],
+  "useCases": [
+    "player characters",
+    "NPCs",
+    "animation prototyping"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "characters",
+    "fantasy",
+    "sprite",
+    "urban"
+  ],
+  "searchText": "rpg top down character asset pack pixelserial-rpg-top-down-character-asset-pack pixelserial characters free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms) appreciated / not required rpg top down character asset pack is a 2d characters art pack by pixelserial. use it for player characters, npcs, animation prototyping. license: free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). attribution: appreciated / not required. characters fantasy urban player characters npcs animation prototyping 2d art sprite",
+  "sampleCount": 4,
+  "samples": [
+    {
+      "packFolder": "pixelserial-rpg-top-down-character-asset-pack",
+      "path": "2D/pixelserial-rpg-top-down-character-asset-pack/extracted/rpg-top-down-character-asset-pack-free/rpg-top-down-characters-free-version/blonde-man/blonde-man-shadow.png",
+      "src": "/2D/pixelserial-rpg-top-down-character-asset-pack/extracted/rpg-top-down-character-asset-pack-free/rpg-top-down-characters-free-version/blonde-man/blonde-man-shadow.png",
+      "label": "Blonde Man Shadow",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 128,
+        "height": 256,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.17449951171875,
+        "transparentCoverage": 0.8099365234375,
+        "contentRowRuns": 8,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": true,
+        "cellMedianWidth": 14,
+        "cellMedianHeight": 19
+      },
+      "promo": false,
+      "description": "Blonde Man Shadow is an animated 2D character sample from RPG Top Down Character Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy"
+      ],
+      "searchText": "blonde man shadow 2d/pixelserial-rpg-top-down-character-asset-pack/extracted/rpg-top-down-character-asset-pack-free/rpg-top-down-characters-free-version/blonde-man/blonde-man-shadow.png rpg top down character asset pack character blonde man shadow is an animated 2d character sample from rpg top down character asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "pixelserial-rpg-top-down-character-asset-pack",
+      "path": "2D/pixelserial-rpg-top-down-character-asset-pack/extracted/rpg-top-down-character-asset-pack-free/rpg-top-down-characters-free-version/blonde-man/blonde-man.png",
+      "src": "/2D/pixelserial-rpg-top-down-character-asset-pack/extracted/rpg-top-down-character-asset-pack-free/rpg-top-down-characters-free-version/blonde-man/blonde-man.png",
+      "label": "Blonde Man",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 128,
+        "height": 256,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.17449951171875,
+        "transparentCoverage": 0.82550048828125,
+        "contentRowRuns": 8,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": true,
+        "cellMedianWidth": 14,
+        "cellMedianHeight": 18
+      },
+      "promo": false,
+      "description": "Blonde Man is an animated 2D character sample from RPG Top Down Character Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy"
+      ],
+      "searchText": "blonde man 2d/pixelserial-rpg-top-down-character-asset-pack/extracted/rpg-top-down-character-asset-pack-free/rpg-top-down-characters-free-version/blonde-man/blonde-man.png rpg top down character asset pack character blonde man is an animated 2d character sample from rpg top down character asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "pixelserial-rpg-top-down-character-asset-pack",
+      "path": "2D/pixelserial-rpg-top-down-character-asset-pack/extracted/rpg-top-down-character-asset-pack-free/rpg-top-down-characters-free-version/blue-haired-woman/blue-haired-woman-shadow.png",
+      "src": "/2D/pixelserial-rpg-top-down-character-asset-pack/extracted/rpg-top-down-character-asset-pack-free/rpg-top-down-characters-free-version/blue-haired-woman/blue-haired-woman-shadow.png",
+      "label": "Blue Haired Woman Shadow",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 128,
+        "height": 256,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.193359375,
+        "transparentCoverage": 0.79150390625,
+        "contentRowRuns": 8,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": true,
+        "cellMedianWidth": 16,
+        "cellMedianHeight": 19
+      },
+      "promo": false,
+      "description": "Blue Haired Woman Shadow is an animated 2D character sample from RPG Top Down Character Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy"
+      ],
+      "searchText": "blue haired woman shadow 2d/pixelserial-rpg-top-down-character-asset-pack/extracted/rpg-top-down-character-asset-pack-free/rpg-top-down-characters-free-version/blue-haired-woman/blue-haired-woman-shadow.png rpg top down character asset pack character blue haired woman shadow is an animated 2d character sample from rpg top down character asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "pixelserial-rpg-top-down-character-asset-pack",
+      "path": "2D/pixelserial-rpg-top-down-character-asset-pack/extracted/rpg-top-down-character-asset-pack-free/rpg-top-down-characters-free-version/blue-haired-woman/blue-haired-woman.png",
+      "src": "/2D/pixelserial-rpg-top-down-character-asset-pack/extracted/rpg-top-down-character-asset-pack-free/rpg-top-down-characters-free-version/blue-haired-woman/blue-haired-woman.png",
+      "label": "Blue Haired Woman",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 128,
+        "height": 256,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.193359375,
+        "transparentCoverage": 0.806640625,
+        "contentRowRuns": 8,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": true,
+        "cellMedianWidth": 16,
+        "cellMedianHeight": 18
+      },
+      "promo": false,
+      "description": "Blue Haired Woman is an animated 2D character sample from RPG Top Down Character Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy"
+      ],
+      "searchText": "blue haired woman 2d/pixelserial-rpg-top-down-character-asset-pack/extracted/rpg-top-down-character-asset-pack-free/rpg-top-down-characters-free-version/blue-haired-woman/blue-haired-woman.png rpg top down character asset pack character blue haired woman is an animated 2d character sample from rpg top down character asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
+    }
+  ]
+}

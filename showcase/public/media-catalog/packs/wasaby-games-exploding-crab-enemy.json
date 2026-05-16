@@ -1,0 +1,277 @@
+{
+  "folder": "wasaby-games-exploding-crab-enemy",
+  "title": "Exploding Crab | Enemy Pixelart",
+  "author": "Wasaby Games",
+  "author_url": "https://wasaby-games.itch.io",
+  "url": "https://wasaby-games.itch.io/exploding-crab-enemy",
+  "game_id": 3281990,
+  "license_class": "Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms)",
+  "attribution": "Appreciated / not required",
+  "theme": "Animals",
+  "description": "Exploding Crab | Enemy Pixelart is a 2D animals art pack by Wasaby Games. Use it for enemy variants, encounters, creature animation. License: Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). Attribution: Appreciated / not required.",
+  "category": "Animals",
+  "themes": [
+    "animals",
+    "nature",
+    "urban"
+  ],
+  "useCases": [
+    "enemy variants",
+    "encounters",
+    "creature animation"
+  ],
+  "tags": [
+    "2d",
+    "animals",
+    "art",
+    "nature",
+    "sprite",
+    "urban"
+  ],
+  "searchText": "exploding crab | enemy pixelart wasaby-games-exploding-crab-enemy wasaby games animals free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms) appreciated / not required exploding crab | enemy pixelart is a 2d animals art pack by wasaby games. use it for enemy variants, encounters, creature animation. license: free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). attribution: appreciated / not required. animals nature urban enemy variants encounters creature animation 2d art sprite",
+  "sampleCount": 6,
+  "samples": [
+    {
+      "packFolder": "wasaby-games-exploding-crab-enemy",
+      "path": "2D/wasaby-games-exploding-crab-enemy/extracted/exploding-crab-80x80-sprite/exploding-crab-80x80-sprite/explodingcrab-whole-80x80.png",
+      "src": "/2D/wasaby-games-exploding-crab-enemy/extracted/exploding-crab-80x80-sprite/exploding-crab-80x80-sprite/explodingcrab-whole-80x80.png",
+      "label": "Explodingcrab Whole 80x80",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 1840,
+        "height": 400,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.10553850446428571,
+        "transparentCoverage": 0.8944614955357143,
+        "contentRowRuns": 5,
+        "contentColRuns": 23,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": true,
+        "cellMedianWidth": 7,
+        "cellMedianHeight": 7
+      },
+      "promo": false,
+      "description": "Explodingcrab Whole 80x80 is an animated 2D character sample from Exploding Crab | Enemy Pixelart. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "exploding crab | enemy pixelart"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "exploding crab | enemy pixelart"
+      ],
+      "searchText": "explodingcrab whole 80x80 2d/wasaby-games-exploding-crab-enemy/extracted/exploding-crab-80x80-sprite/exploding-crab-80x80-sprite/explodingcrab-whole-80x80.png exploding crab | enemy pixelart character explodingcrab whole 80x80 is an animated 2d character sample from exploding crab | enemy pixelart. useful for player characters, npcs, animation prototyping. exploding crab | enemy pixelart player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "wasaby-games-exploding-crab-enemy",
+      "path": "2D/wasaby-games-exploding-crab-enemy/extracted/exploding-crab-80x80-sprite/exploding-crab-80x80-sprite/explodingcrab-explosion-80x80.png",
+      "src": "/2D/wasaby-games-exploding-crab-enemy/extracted/exploding-crab-80x80-sprite/exploding-crab-80x80-sprite/explodingcrab-explosion-80x80.png",
+      "label": "Explodingcrab Explosion 80x80",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 1840,
+        "height": 80,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.24183238636363635,
+        "transparentCoverage": 0.7581676136363636,
+        "contentRowRuns": 1,
+        "contentColRuns": 23,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Explodingcrab Explosion 80x80 is an animated 2D effect sample from Exploding Crab | Enemy Pixelart. Useful for enemy variants, encounters, creature animation.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "exploding crab | enemy pixelart"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "exploding crab | enemy pixelart"
+      ],
+      "searchText": "explodingcrab explosion 80x80 2d/wasaby-games-exploding-crab-enemy/extracted/exploding-crab-80x80-sprite/exploding-crab-80x80-sprite/explodingcrab-explosion-80x80.png exploding crab | enemy pixelart effect explodingcrab explosion 80x80 is an animated 2d effect sample from exploding crab | enemy pixelart. useful for enemy variants, encounters, creature animation. exploding crab | enemy pixelart enemy variants encounters creature animation 2d animated art"
+    },
+    {
+      "packFolder": "wasaby-games-exploding-crab-enemy",
+      "path": "2D/wasaby-games-exploding-crab-enemy/extracted/exploding-crab-80x80-sprite/exploding-crab-80x80-sprite/explodingcrab-death-80x80.png",
+      "src": "/2D/wasaby-games-exploding-crab-enemy/extracted/exploding-crab-80x80-sprite/exploding-crab-80x80-sprite/explodingcrab-death-80x80.png",
+      "label": "Explodingcrab Death 80x80",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 480,
+        "height": 80,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.1966751453488372,
+        "transparentCoverage": 0.8033248546511628,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Explodingcrab Death 80x80 is an animated 2D character sample from Exploding Crab | Enemy Pixelart. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "exploding crab | enemy pixelart"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "exploding crab | enemy pixelart"
+      ],
+      "searchText": "explodingcrab death 80x80 2d/wasaby-games-exploding-crab-enemy/extracted/exploding-crab-80x80-sprite/exploding-crab-80x80-sprite/explodingcrab-death-80x80.png exploding crab | enemy pixelart character explodingcrab death 80x80 is an animated 2d character sample from exploding crab | enemy pixelart. useful for player characters, npcs, animation prototyping. exploding crab | enemy pixelart player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "wasaby-games-exploding-crab-enemy",
+      "path": "2D/wasaby-games-exploding-crab-enemy/extracted/exploding-crab-80x80-sprite/exploding-crab-80x80-sprite/explodingcrab-hit-80x80.png",
+      "src": "/2D/wasaby-games-exploding-crab-enemy/extracted/exploding-crab-80x80-sprite/exploding-crab-80x80-sprite/explodingcrab-hit-80x80.png",
+      "label": "Explodingcrab Hit 80x80",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 400,
+        "height": 80,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.20565257352941177,
+        "transparentCoverage": 0.7943474264705882,
+        "contentRowRuns": 1,
+        "contentColRuns": 5,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Explodingcrab Hit 80x80 is an animated 2D character sample from Exploding Crab | Enemy Pixelart. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "exploding crab | enemy pixelart"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "exploding crab | enemy pixelart"
+      ],
+      "searchText": "explodingcrab hit 80x80 2d/wasaby-games-exploding-crab-enemy/extracted/exploding-crab-80x80-sprite/exploding-crab-80x80-sprite/explodingcrab-hit-80x80.png exploding crab | enemy pixelart character explodingcrab hit 80x80 is an animated 2d character sample from exploding crab | enemy pixelart. useful for player characters, npcs, animation prototyping. exploding crab | enemy pixelart player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "wasaby-games-exploding-crab-enemy",
+      "path": "2D/wasaby-games-exploding-crab-enemy/extracted/exploding-crab-80x80-sprite/exploding-crab-80x80-sprite/explodingcrab-idle-80x80.png",
+      "src": "/2D/wasaby-games-exploding-crab-enemy/extracted/exploding-crab-80x80-sprite/exploding-crab-80x80-sprite/explodingcrab-idle-80x80.png",
+      "label": "Explodingcrab Idle 80x80",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 1040,
+        "height": 80,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.19609375,
+        "transparentCoverage": 0.80390625,
+        "contentRowRuns": 1,
+        "contentColRuns": 13,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Explodingcrab Idle 80x80 is an animated 2D character sample from Exploding Crab | Enemy Pixelart. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "exploding crab | enemy pixelart"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "exploding crab | enemy pixelart"
+      ],
+      "searchText": "explodingcrab idle 80x80 2d/wasaby-games-exploding-crab-enemy/extracted/exploding-crab-80x80-sprite/exploding-crab-80x80-sprite/explodingcrab-idle-80x80.png exploding crab | enemy pixelart character explodingcrab idle 80x80 is an animated 2d character sample from exploding crab | enemy pixelart. useful for player characters, npcs, animation prototyping. exploding crab | enemy pixelart player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "wasaby-games-exploding-crab-enemy",
+      "path": "2D/wasaby-games-exploding-crab-enemy/extracted/exploding-crab-80x80-sprite/exploding-crab-80x80-sprite/explodingcrab-walk-80x80.png",
+      "src": "/2D/wasaby-games-exploding-crab-enemy/extracted/exploding-crab-80x80-sprite/exploding-crab-80x80-sprite/explodingcrab-walk-80x80.png",
+      "label": "Explodingcrab Walk 80x80",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 800,
+        "height": 80,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.203125,
+        "transparentCoverage": 0.796875,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Explodingcrab Walk 80x80 is an animated 2D character sample from Exploding Crab | Enemy Pixelart. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "exploding crab | enemy pixelart"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "exploding crab | enemy pixelart"
+      ],
+      "searchText": "explodingcrab walk 80x80 2d/wasaby-games-exploding-crab-enemy/extracted/exploding-crab-80x80-sprite/exploding-crab-80x80-sprite/explodingcrab-walk-80x80.png exploding crab | enemy pixelart character explodingcrab walk 80x80 is an animated 2d character sample from exploding crab | enemy pixelart. useful for player characters, npcs, animation prototyping. exploding crab | enemy pixelart player characters npcs animation prototyping 2d animated art"
+    }
+  ]
+}

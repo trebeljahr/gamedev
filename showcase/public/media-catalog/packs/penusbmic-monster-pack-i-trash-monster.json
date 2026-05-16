@@ -1,0 +1,117 @@
+{
+  "folder": "penusbmic-monster-pack-i-trash-monster",
+  "title": "Monster Pack I  Trash Monster",
+  "author": "penusbmic",
+  "author_url": "https://penusbmic.itch.io",
+  "url": "https://penusbmic.itch.io/monster-pack-i",
+  "game_id": null,
+  "license_class": "Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms)",
+  "attribution": "Appreciated / not required",
+  "theme": "Enemies",
+  "description": "Monster Pack I Trash Monster is a 2D enemies art pack by penusbmic. Use it for enemy variants, encounters, creature animation. License: Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). Attribution: Appreciated / not required.",
+  "category": "Enemies",
+  "themes": [
+    "enemies",
+    "urban"
+  ],
+  "useCases": [
+    "enemy variants",
+    "encounters",
+    "creature animation"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "enemies",
+    "sprite",
+    "urban"
+  ],
+  "searchText": "monster pack i  trash monster penusbmic-monster-pack-i-trash-monster penusbmic enemies free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms) appreciated / not required monster pack i trash monster is a 2d enemies art pack by penusbmic. use it for enemy variants, encounters, creature animation. license: free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). attribution: appreciated / not required. enemies urban enemy variants encounters creature animation 2d art sprite",
+  "sampleCount": 2,
+  "samples": [
+    {
+      "packFolder": "penusbmic-monster-pack-i-trash-monster",
+      "path": "2D/penusbmic-monster-pack-i-trash-monster/extracted/trash-monster/trash-monster/trash-monster-sheet.png",
+      "src": "/2D/penusbmic-monster-pack-i-trash-monster/extracted/trash-monster/trash-monster/trash-monster-sheet.png",
+      "label": "Trash Monster Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 384,
+        "height": 384,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.1289215087890625,
+        "transparentCoverage": 0.868927001953125,
+        "contentRowRuns": 7,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 37,
+        "cellMedianHeight": 24
+      },
+      "promo": false,
+      "description": "Trash Monster Sheet is an animated 2D character sample from Monster Pack I  Trash Monster. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "monster pack i  trash monster"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "monster pack i  trash monster"
+      ],
+      "searchText": "trash monster sheet 2d/penusbmic-monster-pack-i-trash-monster/extracted/trash-monster/trash-monster/trash-monster-sheet.png monster pack i  trash monster character trash monster sheet is an animated 2d character sample from monster pack i  trash monster. useful for player characters, npcs, animation prototyping. monster pack i  trash monster player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "penusbmic-monster-pack-i-trash-monster",
+      "path": "2D/penusbmic-monster-pack-i-trash-monster/extracted/trash-monster/trash-monster/trash-monster-sprite-v2.png",
+      "src": "/2D/penusbmic-monster-pack-i-trash-monster/extracted/trash-monster/trash-monster/trash-monster-sprite-v2.png",
+      "label": "Trash Monster Sprite V2",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 384,
+        "height": 384,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.1289215087890625,
+        "transparentCoverage": 0.868927001953125,
+        "contentRowRuns": 7,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 37,
+        "cellMedianHeight": 24
+      },
+      "promo": false,
+      "description": "Trash Monster Sprite V2 is an animated 2D character sample from Monster Pack I  Trash Monster. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "monster pack i  trash monster"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "monster pack i  trash monster"
+      ],
+      "searchText": "trash monster sprite v2 2d/penusbmic-monster-pack-i-trash-monster/extracted/trash-monster/trash-monster/trash-monster-sprite-v2.png monster pack i  trash monster character trash monster sprite v2 is an animated 2d character sample from monster pack i  trash monster. useful for player characters, npcs, animation prototyping. monster pack i  trash monster player characters npcs animation prototyping 2d animated art"
+    }
+  ]
+}

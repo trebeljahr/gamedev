@@ -1,0 +1,1386 @@
+{
+  "folder": "furaz-lost-mine-free",
+  "title": "Lost Mine - Free Tileset and Animated Cratures",
+  "author": "Furaz",
+  "author_url": "https://furaz.itch.io",
+  "url": "https://furaz.itch.io/lost-mine-free",
+  "game_id": 3377944,
+  "license_class": "Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms)",
+  "attribution": "Appreciated / not required",
+  "theme": "Environments",
+  "description": "Lost Mine Free Tileset And Animated Cratures is a 2D environments art pack by Furaz. Use it for level building, tilemaps, environment dressing. License: Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). Attribution: Appreciated / not required.",
+  "category": "Environments",
+  "themes": [
+    "environments",
+    "urban"
+  ],
+  "useCases": [
+    "level building",
+    "tilemaps",
+    "environment dressing"
+  ],
+  "tags": [
+    "2d",
+    "animated",
+    "art",
+    "environments",
+    "sprite",
+    "urban"
+  ],
+  "searchText": "lost mine - free tileset and animated cratures furaz-lost-mine-free furaz environments free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms) appreciated / not required lost mine free tileset and animated cratures is a 2d environments art pack by furaz. use it for level building, tilemaps, environment dressing. license: free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). attribution: appreciated / not required. environments urban level building tilemaps environment dressing 2d animated art sprite",
+  "sampleCount": 32,
+  "samples": [
+    {
+      "packFolder": "furaz-lost-mine-free",
+      "path": "2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/background/1/back-1-clouds.png",
+      "src": "/2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/background/1/back-1-clouds.png",
+      "label": "Back 1 Clouds",
+      "kind": "tile",
+      "animated": true,
+      "inspection": {
+        "width": 128,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.05096435546875,
+        "transparentCoverage": 0.94903564453125,
+        "contentRowRuns": 2,
+        "contentColRuns": 2,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 48,
+        "cellMedianHeight": 12
+      },
+      "promo": false,
+      "description": "Back 1 Clouds is an animated 2D tile sample from Lost Mine - Free Tileset and Animated Cratures. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "nature",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "modular",
+        "nature",
+        "tile"
+      ],
+      "searchText": "back 1 clouds 2d/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/background/1/back-1-clouds.png lost mine - free tileset and animated cratures tile back 1 clouds is an animated 2d tile sample from lost mine - free tileset and animated cratures. useful for level building, tilemaps, environment dressing. nature level building tilemaps environment dressing 2d animated art modular"
+    },
+    {
+      "packFolder": "furaz-lost-mine-free",
+      "path": "2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/background/2/back-2-clouds.png",
+      "src": "/2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/background/2/back-2-clouds.png",
+      "label": "Back 2 Clouds",
+      "kind": "tile",
+      "animated": true,
+      "inspection": {
+        "width": 128,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0770263671875,
+        "transparentCoverage": 0.9229736328125,
+        "contentRowRuns": 3,
+        "contentColRuns": 2,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 53,
+        "cellMedianHeight": 16
+      },
+      "promo": false,
+      "description": "Back 2 Clouds is an animated 2D tile sample from Lost Mine - Free Tileset and Animated Cratures. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "nature",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "modular",
+        "nature",
+        "tile"
+      ],
+      "searchText": "back 2 clouds 2d/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/background/2/back-2-clouds.png lost mine - free tileset and animated cratures tile back 2 clouds is an animated 2d tile sample from lost mine - free tileset and animated cratures. useful for level building, tilemaps, environment dressing. nature level building tilemaps environment dressing 2d animated art modular"
+    },
+    {
+      "packFolder": "furaz-lost-mine-free",
+      "path": "2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/no-shadow/char/char-goblin-2.png",
+      "src": "/2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/no-shadow/char/char-goblin-2.png",
+      "label": "Char Goblin 2",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 256,
+        "height": 160,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.1573974609375,
+        "transparentCoverage": 0.8228271484375,
+        "contentRowRuns": 5,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": true,
+        "cellMedianWidth": 24,
+        "cellMedianHeight": 19
+      },
+      "promo": false,
+      "description": "Char Goblin 2 is an animated 2D character sample from Lost Mine - Free Tileset and Animated Cratures. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "nature"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "nature"
+      ],
+      "searchText": "char goblin 2 2d/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/no-shadow/char/char-goblin-2.png lost mine - free tileset and animated cratures character char goblin 2 is an animated 2d character sample from lost mine - free tileset and animated cratures. useful for player characters, npcs, animation prototyping. nature player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "furaz-lost-mine-free",
+      "path": "2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/no-shadow/char/char-goblin-3.png",
+      "src": "/2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/no-shadow/char/char-goblin-3.png",
+      "label": "Char Goblin 3",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 256,
+        "height": 160,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.1712158203125,
+        "transparentCoverage": 0.8091796875,
+        "contentRowRuns": 5,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": true,
+        "cellMedianWidth": 25,
+        "cellMedianHeight": 22
+      },
+      "promo": false,
+      "description": "Char Goblin 3 is an animated 2D character sample from Lost Mine - Free Tileset and Animated Cratures. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "nature"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "nature"
+      ],
+      "searchText": "char goblin 3 2d/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/no-shadow/char/char-goblin-3.png lost mine - free tileset and animated cratures character char goblin 3 is an animated 2d character sample from lost mine - free tileset and animated cratures. useful for player characters, npcs, animation prototyping. nature player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "furaz-lost-mine-free",
+      "path": "2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/no-shadow/char/char-halfling-thief.png",
+      "src": "/2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/no-shadow/char/char-halfling-thief.png",
+      "label": "Char Halfling Thief",
+      "kind": "tile",
+      "animated": true,
+      "inspection": {
+        "width": 256,
+        "height": 160,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.1737548828125,
+        "transparentCoverage": 0.808154296875,
+        "contentRowRuns": 5,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": true,
+        "cellMedianWidth": 24,
+        "cellMedianHeight": 20
+      },
+      "promo": false,
+      "description": "Char Halfling Thief is an animated 2D tile sample from Lost Mine - Free Tileset and Animated Cratures. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "nature",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "modular",
+        "nature",
+        "tile"
+      ],
+      "searchText": "char halfling thief 2d/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/no-shadow/char/char-halfling-thief.png lost mine - free tileset and animated cratures tile char halfling thief is an animated 2d tile sample from lost mine - free tileset and animated cratures. useful for level building, tilemaps, environment dressing. nature level building tilemaps environment dressing 2d animated art modular"
+    },
+    {
+      "packFolder": "furaz-lost-mine-free",
+      "path": "2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/shadow/char/char-goblin-2.png",
+      "src": "/2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/shadow/char/char-goblin-2.png",
+      "label": "Char Goblin 2",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 256,
+        "height": 160,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.1573974609375,
+        "transparentCoverage": 0.8228271484375,
+        "contentRowRuns": 5,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": true,
+        "cellMedianWidth": 24,
+        "cellMedianHeight": 19
+      },
+      "promo": false,
+      "description": "Char Goblin 2 is an animated 2D character sample from Lost Mine - Free Tileset and Animated Cratures. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "nature"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "nature"
+      ],
+      "searchText": "char goblin 2 2d/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/shadow/char/char-goblin-2.png lost mine - free tileset and animated cratures character char goblin 2 is an animated 2d character sample from lost mine - free tileset and animated cratures. useful for player characters, npcs, animation prototyping. nature player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "furaz-lost-mine-free",
+      "path": "2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/shadow/char/char-goblin-3.png",
+      "src": "/2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/shadow/char/char-goblin-3.png",
+      "label": "Char Goblin 3",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 256,
+        "height": 160,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.1712158203125,
+        "transparentCoverage": 0.8091796875,
+        "contentRowRuns": 5,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": true,
+        "cellMedianWidth": 25,
+        "cellMedianHeight": 22
+      },
+      "promo": false,
+      "description": "Char Goblin 3 is an animated 2D character sample from Lost Mine - Free Tileset and Animated Cratures. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "nature"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "nature"
+      ],
+      "searchText": "char goblin 3 2d/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/shadow/char/char-goblin-3.png lost mine - free tileset and animated cratures character char goblin 3 is an animated 2d character sample from lost mine - free tileset and animated cratures. useful for player characters, npcs, animation prototyping. nature player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "furaz-lost-mine-free",
+      "path": "2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/shadow/char/char-halfling-thief.png",
+      "src": "/2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/shadow/char/char-halfling-thief.png",
+      "label": "Char Halfling Thief",
+      "kind": "tile",
+      "animated": true,
+      "inspection": {
+        "width": 256,
+        "height": 160,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.1737548828125,
+        "transparentCoverage": 0.808154296875,
+        "contentRowRuns": 5,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": true,
+        "cellMedianWidth": 24,
+        "cellMedianHeight": 20
+      },
+      "promo": false,
+      "description": "Char Halfling Thief is an animated 2D tile sample from Lost Mine - Free Tileset and Animated Cratures. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "nature",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "modular",
+        "nature",
+        "tile"
+      ],
+      "searchText": "char halfling thief 2d/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/shadow/char/char-halfling-thief.png lost mine - free tileset and animated cratures tile char halfling thief is an animated 2d tile sample from lost mine - free tileset and animated cratures. useful for level building, tilemaps, environment dressing. nature level building tilemaps environment dressing 2d animated art modular"
+    },
+    {
+      "packFolder": "furaz-lost-mine-free",
+      "path": "2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/background/1/back-1-mid.png",
+      "src": "/2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/background/1/back-1-mid.png",
+      "label": "Back 1 Mid",
+      "kind": "tile",
+      "animated": false,
+      "inspection": {
+        "width": 128,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.42230224609375,
+        "transparentCoverage": 0.57769775390625,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Back 1 Mid is a static 2D tile sample from Lost Mine - Free Tileset and Animated Cratures. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "nature",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "modular",
+        "nature",
+        "static",
+        "tile"
+      ],
+      "searchText": "back 1 mid 2d/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/background/1/back-1-mid.png lost mine - free tileset and animated cratures tile back 1 mid is a static 2d tile sample from lost mine - free tileset and animated cratures. useful for level building, tilemaps, environment dressing. nature level building tilemaps environment dressing 2d animated art modular static"
+    },
+    {
+      "packFolder": "furaz-lost-mine-free",
+      "path": "2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/background/2/back-2-front.png",
+      "src": "/2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/background/2/back-2-front.png",
+      "label": "Back 2 Front",
+      "kind": "tile",
+      "animated": false,
+      "inspection": {
+        "width": 128,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.31231689453125,
+        "transparentCoverage": 0.68768310546875,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Back 2 Front is a static 2D tile sample from Lost Mine - Free Tileset and Animated Cratures. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "nature",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "modular",
+        "nature",
+        "static",
+        "tile"
+      ],
+      "searchText": "back 2 front 2d/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/background/2/back-2-front.png lost mine - free tileset and animated cratures tile back 2 front is a static 2d tile sample from lost mine - free tileset and animated cratures. useful for level building, tilemaps, environment dressing. nature level building tilemaps environment dressing 2d animated art modular static"
+    },
+    {
+      "packFolder": "furaz-lost-mine-free",
+      "path": "2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/background/2/back-2-mid.png",
+      "src": "/2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/background/2/back-2-mid.png",
+      "label": "Back 2 Mid",
+      "kind": "tile",
+      "animated": false,
+      "inspection": {
+        "width": 128,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.33038330078125,
+        "transparentCoverage": 0.66961669921875,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Back 2 Mid is a static 2D tile sample from Lost Mine - Free Tileset and Animated Cratures. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "nature",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "modular",
+        "nature",
+        "static",
+        "tile"
+      ],
+      "searchText": "back 2 mid 2d/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/background/2/back-2-mid.png lost mine - free tileset and animated cratures tile back 2 mid is a static 2d tile sample from lost mine - free tileset and animated cratures. useful for level building, tilemaps, environment dressing. nature level building tilemaps environment dressing 2d animated art modular static"
+    },
+    {
+      "packFolder": "furaz-lost-mine-free",
+      "path": "2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/background/3/back-3-mid.png",
+      "src": "/2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/background/3/back-3-mid.png",
+      "label": "Back 3 Mid",
+      "kind": "tile",
+      "animated": false,
+      "inspection": {
+        "width": 128,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.2608642578125,
+        "transparentCoverage": 0.7391357421875,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Back 3 Mid is a static 2D tile sample from Lost Mine - Free Tileset and Animated Cratures. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "nature",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "modular",
+        "nature",
+        "static",
+        "tile"
+      ],
+      "searchText": "back 3 mid 2d/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/background/3/back-3-mid.png lost mine - free tileset and animated cratures tile back 3 mid is a static 2d tile sample from lost mine - free tileset and animated cratures. useful for level building, tilemaps, environment dressing. nature level building tilemaps environment dressing 2d animated art modular static"
+    },
+    {
+      "packFolder": "furaz-lost-mine-free",
+      "path": "2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/no-shadow/asset-front.png",
+      "src": "/2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/no-shadow/asset-front.png",
+      "label": "Asset Front",
+      "kind": "tile",
+      "animated": true,
+      "inspection": {
+        "width": 192,
+        "height": 160,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.3406575520833333,
+        "transparentCoverage": 0.6593424479166666,
+        "contentRowRuns": 2,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Asset Front is an animated 2D tile sample from Lost Mine - Free Tileset and Animated Cratures. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "nature",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "modular",
+        "nature",
+        "tile"
+      ],
+      "searchText": "asset front 2d/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/no-shadow/asset-front.png lost mine - free tileset and animated cratures tile asset front is an animated 2d tile sample from lost mine - free tileset and animated cratures. useful for level building, tilemaps, environment dressing. nature level building tilemaps environment dressing 2d animated art modular"
+    },
+    {
+      "packFolder": "furaz-lost-mine-free",
+      "path": "2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/no-shadow/asset-top.png",
+      "src": "/2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/no-shadow/asset-top.png",
+      "label": "Asset Top",
+      "kind": "tile",
+      "animated": true,
+      "inspection": {
+        "width": 192,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.4112141927083333,
+        "transparentCoverage": 0.5887858072916666,
+        "contentRowRuns": 2,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Asset Top is an animated 2D tile sample from Lost Mine - Free Tileset and Animated Cratures. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "nature",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "modular",
+        "nature",
+        "tile"
+      ],
+      "searchText": "asset top 2d/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/no-shadow/asset-top.png lost mine - free tileset and animated cratures tile asset top is an animated 2d tile sample from lost mine - free tileset and animated cratures. useful for level building, tilemaps, environment dressing. nature level building tilemaps environment dressing 2d animated art modular"
+    },
+    {
+      "packFolder": "furaz-lost-mine-free",
+      "path": "2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/no-shadow/char/char-dwarf-fighter.png",
+      "src": "/2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/no-shadow/char/char-dwarf-fighter.png",
+      "label": "Char Dwarf Fighter",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 256,
+        "height": 160,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.273388671875,
+        "transparentCoverage": 0.697265625,
+        "contentRowRuns": 5,
+        "contentColRuns": 7,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 29,
+        "cellMedianHeight": 25
+      },
+      "promo": false,
+      "description": "Char Dwarf Fighter is an animated 2D image sample from Lost Mine - Free Tileset and Animated Cratures. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "nature"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "nature"
+      ],
+      "searchText": "char dwarf fighter 2d/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/no-shadow/char/char-dwarf-fighter.png lost mine - free tileset and animated cratures image char dwarf fighter is an animated 2d image sample from lost mine - free tileset and animated cratures. useful for player characters, npcs, animation prototyping. nature player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "furaz-lost-mine-free",
+      "path": "2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/no-shadow/char/char-elf-wizard.png",
+      "src": "/2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/no-shadow/char/char-elf-wizard.png",
+      "label": "Char Elf Wizard",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 256,
+        "height": 160,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.2185791015625,
+        "transparentCoverage": 0.742822265625,
+        "contentRowRuns": 4,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 21,
+        "cellMedianHeight": 29
+      },
+      "promo": false,
+      "description": "Char Elf Wizard is an animated 2D character sample from Lost Mine - Free Tileset and Animated Cratures. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy",
+        "nature"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval",
+        "nature"
+      ],
+      "searchText": "char elf wizard 2d/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/no-shadow/char/char-elf-wizard.png lost mine - free tileset and animated cratures character char elf wizard is an animated 2d character sample from lost mine - free tileset and animated cratures. useful for player characters, npcs, animation prototyping. fantasy nature player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "furaz-lost-mine-free",
+      "path": "2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/no-shadow/char/char-goblin-1.png",
+      "src": "/2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/no-shadow/char/char-goblin-1.png",
+      "label": "Char Goblin 1",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 256,
+        "height": 160,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.1406005859375,
+        "transparentCoverage": 0.838525390625,
+        "contentRowRuns": 5,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 26,
+        "cellMedianHeight": 19
+      },
+      "promo": false,
+      "description": "Char Goblin 1 is an animated 2D character sample from Lost Mine - Free Tileset and Animated Cratures. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "nature"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "nature"
+      ],
+      "searchText": "char goblin 1 2d/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/no-shadow/char/char-goblin-1.png lost mine - free tileset and animated cratures character char goblin 1 is an animated 2d character sample from lost mine - free tileset and animated cratures. useful for player characters, npcs, animation prototyping. nature player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "furaz-lost-mine-free",
+      "path": "2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/no-shadow/char/char-human-cleric.png",
+      "src": "/2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/no-shadow/char/char-human-cleric.png",
+      "label": "Char Human Cleric",
+      "kind": "tile",
+      "animated": true,
+      "inspection": {
+        "width": 256,
+        "height": 160,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.2318359375,
+        "transparentCoverage": 0.733544921875,
+        "contentRowRuns": 7,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 26,
+        "cellMedianHeight": 27
+      },
+      "promo": false,
+      "description": "Char Human Cleric is an animated 2D tile sample from Lost Mine - Free Tileset and Animated Cratures. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "nature",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "modular",
+        "nature",
+        "tile"
+      ],
+      "searchText": "char human cleric 2d/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/no-shadow/char/char-human-cleric.png lost mine - free tileset and animated cratures tile char human cleric is an animated 2d tile sample from lost mine - free tileset and animated cratures. useful for level building, tilemaps, environment dressing. nature level building tilemaps environment dressing 2d animated art modular"
+    },
+    {
+      "packFolder": "furaz-lost-mine-free",
+      "path": "2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/shadow/asset-front.png",
+      "src": "/2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/shadow/asset-front.png",
+      "label": "Asset Front",
+      "kind": "tile",
+      "animated": true,
+      "inspection": {
+        "width": 192,
+        "height": 160,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.3406575520833333,
+        "transparentCoverage": 0.6408203125,
+        "contentRowRuns": 2,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Asset Front is an animated 2D tile sample from Lost Mine - Free Tileset and Animated Cratures. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "nature",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "modular",
+        "nature",
+        "tile"
+      ],
+      "searchText": "asset front 2d/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/shadow/asset-front.png lost mine - free tileset and animated cratures tile asset front is an animated 2d tile sample from lost mine - free tileset and animated cratures. useful for level building, tilemaps, environment dressing. nature level building tilemaps environment dressing 2d animated art modular"
+    },
+    {
+      "packFolder": "furaz-lost-mine-free",
+      "path": "2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/shadow/asset-top.png",
+      "src": "/2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/shadow/asset-top.png",
+      "label": "Asset Top",
+      "kind": "tile",
+      "animated": true,
+      "inspection": {
+        "width": 192,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.4112141927083333,
+        "transparentCoverage": 0.5318196614583334,
+        "contentRowRuns": 2,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Asset Top is an animated 2D tile sample from Lost Mine - Free Tileset and Animated Cratures. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "nature",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "modular",
+        "nature",
+        "tile"
+      ],
+      "searchText": "asset top 2d/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/shadow/asset-top.png lost mine - free tileset and animated cratures tile asset top is an animated 2d tile sample from lost mine - free tileset and animated cratures. useful for level building, tilemaps, environment dressing. nature level building tilemaps environment dressing 2d animated art modular"
+    },
+    {
+      "packFolder": "furaz-lost-mine-free",
+      "path": "2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/shadow/char/char-dwarf-fighter.png",
+      "src": "/2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/shadow/char/char-dwarf-fighter.png",
+      "label": "Char Dwarf Fighter",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 256,
+        "height": 160,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.273388671875,
+        "transparentCoverage": 0.697265625,
+        "contentRowRuns": 5,
+        "contentColRuns": 7,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 29,
+        "cellMedianHeight": 25
+      },
+      "promo": false,
+      "description": "Char Dwarf Fighter is an animated 2D image sample from Lost Mine - Free Tileset and Animated Cratures. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "nature"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "nature"
+      ],
+      "searchText": "char dwarf fighter 2d/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/shadow/char/char-dwarf-fighter.png lost mine - free tileset and animated cratures image char dwarf fighter is an animated 2d image sample from lost mine - free tileset and animated cratures. useful for player characters, npcs, animation prototyping. nature player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "furaz-lost-mine-free",
+      "path": "2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/shadow/char/char-elf-wizard.png",
+      "src": "/2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/shadow/char/char-elf-wizard.png",
+      "label": "Char Elf Wizard",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 256,
+        "height": 160,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.2185791015625,
+        "transparentCoverage": 0.742822265625,
+        "contentRowRuns": 4,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 21,
+        "cellMedianHeight": 29
+      },
+      "promo": false,
+      "description": "Char Elf Wizard is an animated 2D character sample from Lost Mine - Free Tileset and Animated Cratures. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy",
+        "nature"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval",
+        "nature"
+      ],
+      "searchText": "char elf wizard 2d/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/shadow/char/char-elf-wizard.png lost mine - free tileset and animated cratures character char elf wizard is an animated 2d character sample from lost mine - free tileset and animated cratures. useful for player characters, npcs, animation prototyping. fantasy nature player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "furaz-lost-mine-free",
+      "path": "2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/shadow/char/char-goblin-1.png",
+      "src": "/2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/shadow/char/char-goblin-1.png",
+      "label": "Char Goblin 1",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 256,
+        "height": 160,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.1406005859375,
+        "transparentCoverage": 0.838525390625,
+        "contentRowRuns": 5,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 26,
+        "cellMedianHeight": 19
+      },
+      "promo": false,
+      "description": "Char Goblin 1 is an animated 2D character sample from Lost Mine - Free Tileset and Animated Cratures. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "nature"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "nature"
+      ],
+      "searchText": "char goblin 1 2d/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/shadow/char/char-goblin-1.png lost mine - free tileset and animated cratures character char goblin 1 is an animated 2d character sample from lost mine - free tileset and animated cratures. useful for player characters, npcs, animation prototyping. nature player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "furaz-lost-mine-free",
+      "path": "2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/shadow/char/char-human-cleric.png",
+      "src": "/2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/shadow/char/char-human-cleric.png",
+      "label": "Char Human Cleric",
+      "kind": "tile",
+      "animated": true,
+      "inspection": {
+        "width": 256,
+        "height": 160,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.2318359375,
+        "transparentCoverage": 0.733544921875,
+        "contentRowRuns": 7,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 26,
+        "cellMedianHeight": 27
+      },
+      "promo": false,
+      "description": "Char Human Cleric is an animated 2D tile sample from Lost Mine - Free Tileset and Animated Cratures. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "nature",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "modular",
+        "nature",
+        "tile"
+      ],
+      "searchText": "char human cleric 2d/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/shadow/char/char-human-cleric.png lost mine - free tileset and animated cratures tile char human cleric is an animated 2d tile sample from lost mine - free tileset and animated cratures. useful for level building, tilemaps, environment dressing. nature level building tilemaps environment dressing 2d animated art modular"
+    },
+    {
+      "packFolder": "furaz-lost-mine-free",
+      "path": "2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/background/1/back-1-front.png",
+      "src": "/2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/background/1/back-1-front.png",
+      "label": "Back 1 Front",
+      "kind": "tile",
+      "animated": false,
+      "inspection": {
+        "width": 128,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.5311279296875,
+        "transparentCoverage": 0.4688720703125,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Back 1 Front is a static 2D tile sample from Lost Mine - Free Tileset and Animated Cratures. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "nature",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "modular",
+        "nature",
+        "static",
+        "tile"
+      ],
+      "searchText": "back 1 front 2d/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/background/1/back-1-front.png lost mine - free tileset and animated cratures tile back 1 front is a static 2d tile sample from lost mine - free tileset and animated cratures. useful for level building, tilemaps, environment dressing. nature level building tilemaps environment dressing 2d animated art modular static"
+    },
+    {
+      "packFolder": "furaz-lost-mine-free",
+      "path": "2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/tileset-1-3.png",
+      "src": "/2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/tileset-1-3.png",
+      "label": "Tileset 1 3",
+      "kind": "tile",
+      "animated": false,
+      "inspection": {
+        "width": 288,
+        "height": 256,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.8842002467105263,
+        "transparentCoverage": 0.11579975328947369,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Tileset 1 3 is a static 2D tile sample from Lost Mine - Free Tileset and Animated Cratures. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "nature",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "modular",
+        "nature",
+        "static",
+        "tile"
+      ],
+      "searchText": "tileset 1 3 2d/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/tileset-1-3.png lost mine - free tileset and animated cratures tile tileset 1 3 is a static 2d tile sample from lost mine - free tileset and animated cratures. useful for level building, tilemaps, environment dressing. nature level building tilemaps environment dressing 2d animated art modular static"
+    },
+    {
+      "packFolder": "furaz-lost-mine-free",
+      "path": "2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/background/1/back-1-sky.png",
+      "src": "/2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/background/1/back-1-sky.png",
+      "label": "Back 1 Sky",
+      "kind": "tile",
+      "animated": false,
+      "inspection": {
+        "width": 128,
+        "height": 128,
+        "bgKind": "mixed",
+        "alphaCoverage": 1,
+        "transparentCoverage": 0,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Back 1 Sky is a static 2D tile sample from Lost Mine - Free Tileset and Animated Cratures. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "nature",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "modular",
+        "nature",
+        "static",
+        "tile"
+      ],
+      "searchText": "back 1 sky 2d/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/background/1/back-1-sky.png lost mine - free tileset and animated cratures tile back 1 sky is a static 2d tile sample from lost mine - free tileset and animated cratures. useful for level building, tilemaps, environment dressing. nature level building tilemaps environment dressing 2d animated art modular static"
+    },
+    {
+      "packFolder": "furaz-lost-mine-free",
+      "path": "2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/background/2/back-2-sky.png",
+      "src": "/2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/background/2/back-2-sky.png",
+      "label": "Back 2 Sky",
+      "kind": "tile",
+      "animated": false,
+      "inspection": {
+        "width": 128,
+        "height": 128,
+        "bgKind": "mixed",
+        "alphaCoverage": 1,
+        "transparentCoverage": 0,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Back 2 Sky is a static 2D tile sample from Lost Mine - Free Tileset and Animated Cratures. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "nature",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "modular",
+        "nature",
+        "static",
+        "tile"
+      ],
+      "searchText": "back 2 sky 2d/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/background/2/back-2-sky.png lost mine - free tileset and animated cratures tile back 2 sky is a static 2d tile sample from lost mine - free tileset and animated cratures. useful for level building, tilemaps, environment dressing. nature level building tilemaps environment dressing 2d animated art modular static"
+    },
+    {
+      "packFolder": "furaz-lost-mine-free",
+      "path": "2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/background/3/back-3-front.png",
+      "src": "/2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/background/3/back-3-front.png",
+      "label": "Back 3 Front",
+      "kind": "tile",
+      "animated": false,
+      "inspection": {
+        "width": 128,
+        "height": 128,
+        "bgKind": "mixed",
+        "alphaCoverage": 0.95111083984375,
+        "transparentCoverage": 0.04888916015625,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Back 3 Front is a static 2D tile sample from Lost Mine - Free Tileset and Animated Cratures. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "nature",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "modular",
+        "nature",
+        "static",
+        "tile"
+      ],
+      "searchText": "back 3 front 2d/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/background/3/back-3-front.png lost mine - free tileset and animated cratures tile back 3 front is a static 2d tile sample from lost mine - free tileset and animated cratures. useful for level building, tilemaps, environment dressing. nature level building tilemaps environment dressing 2d animated art modular static"
+    },
+    {
+      "packFolder": "furaz-lost-mine-free",
+      "path": "2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/background/back-1-full.png",
+      "src": "/2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/background/back-1-full.png",
+      "label": "Back 1 Full",
+      "kind": "tile",
+      "animated": false,
+      "inspection": {
+        "width": 128,
+        "height": 128,
+        "bgKind": "mixed",
+        "alphaCoverage": 1,
+        "transparentCoverage": 0,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Back 1 Full is a static 2D tile sample from Lost Mine - Free Tileset and Animated Cratures. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "nature",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "modular",
+        "nature",
+        "static",
+        "tile"
+      ],
+      "searchText": "back 1 full 2d/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/background/back-1-full.png lost mine - free tileset and animated cratures tile back 1 full is a static 2d tile sample from lost mine - free tileset and animated cratures. useful for level building, tilemaps, environment dressing. nature level building tilemaps environment dressing 2d animated art modular static"
+    },
+    {
+      "packFolder": "furaz-lost-mine-free",
+      "path": "2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/background/back-2-full.png",
+      "src": "/2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/background/back-2-full.png",
+      "label": "Back 2 Full",
+      "kind": "tile",
+      "animated": false,
+      "inspection": {
+        "width": 128,
+        "height": 128,
+        "bgKind": "mixed",
+        "alphaCoverage": 1,
+        "transparentCoverage": 0,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Back 2 Full is a static 2D tile sample from Lost Mine - Free Tileset and Animated Cratures. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "nature",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "modular",
+        "nature",
+        "static",
+        "tile"
+      ],
+      "searchText": "back 2 full 2d/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/background/back-2-full.png lost mine - free tileset and animated cratures tile back 2 full is a static 2d tile sample from lost mine - free tileset and animated cratures. useful for level building, tilemaps, environment dressing. nature level building tilemaps environment dressing 2d animated art modular static"
+    },
+    {
+      "packFolder": "furaz-lost-mine-free",
+      "path": "2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/background/back-3-full.png",
+      "src": "/2D/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/background/back-3-full.png",
+      "label": "Back 3 Full",
+      "kind": "tile",
+      "animated": false,
+      "inspection": {
+        "width": 128,
+        "height": 128,
+        "bgKind": "mixed",
+        "alphaCoverage": 1,
+        "transparentCoverage": 0,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Back 3 Full is a static 2D tile sample from Lost Mine - Free Tileset and Animated Cratures. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "nature",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "modular",
+        "nature",
+        "static",
+        "tile"
+      ],
+      "searchText": "back 3 full 2d/furaz-lost-mine-free/extracted/lost-mine-forest-ambush-free-pack-1-3/lost-mine-forest-ambush-free-pack-1-3/background/back-3-full.png lost mine - free tileset and animated cratures tile back 3 full is a static 2d tile sample from lost mine - free tileset and animated cratures. useful for level building, tilemaps, environment dressing. nature level building tilemaps environment dressing 2d animated art modular static"
+    }
+  ]
+}

@@ -1,0 +1,362 @@
+{
+  "folder": "luizmelo-fantasy-warrior",
+  "title": "Fantasy Warrior",
+  "author": "LuizMelo",
+  "author_url": "https://luizmelo.itch.io",
+  "url": "https://luizmelo.itch.io/fantasy-warrior",
+  "game_id": 850395,
+  "license_class": "CC0 1.0 (Creative Commons Zero)",
+  "attribution": "Optional",
+  "theme": "Characters",
+  "description": "Fantasy Warrior is a 2D characters art pack by LuizMelo. Use it for player characters, NPCs, animation prototyping. License: CC0 1.0 (Creative Commons Zero). Attribution: Optional.",
+  "category": "Characters",
+  "themes": [
+    "characters",
+    "fantasy"
+  ],
+  "useCases": [
+    "player characters",
+    "NPCs",
+    "animation prototyping"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "characters",
+    "fantasy",
+    "medieval",
+    "sprite"
+  ],
+  "searchText": "fantasy warrior luizmelo-fantasy-warrior luizmelo characters cc0 1.0 (creative commons zero) optional fantasy warrior is a 2d characters art pack by luizmelo. use it for player characters, npcs, animation prototyping. license: cc0 1.0 (creative commons zero). attribution: optional. characters fantasy player characters npcs animation prototyping 2d art medieval sprite",
+  "sampleCount": 8,
+  "samples": [
+    {
+      "packFolder": "luizmelo-fantasy-warrior",
+      "path": "2D/luizmelo-fantasy-warrior/extracted/fantasy-warrior/fantasy-warrior/sprites/death.png",
+      "src": "/2D/luizmelo-fantasy-warrior/extracted/fantasy-warrior/fantasy-warrior/sprites/death.png",
+      "label": "Death",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 1134,
+        "height": 162,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.01984797297297297,
+        "transparentCoverage": 0.980152027027027,
+        "contentRowRuns": 1,
+        "contentColRuns": 7,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Death is an animated 2D character sample from Fantasy Warrior. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "death 2d/luizmelo-fantasy-warrior/extracted/fantasy-warrior/fantasy-warrior/sprites/death.png fantasy warrior character death is an animated 2d character sample from fantasy warrior. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "luizmelo-fantasy-warrior",
+      "path": "2D/luizmelo-fantasy-warrior/extracted/fantasy-warrior/fantasy-warrior/sprites/fall.png",
+      "src": "/2D/luizmelo-fantasy-warrior/extracted/fantasy-warrior/fantasy-warrior/sprites/fall.png",
+      "label": "Fall",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 486,
+        "height": 162,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.03396139705882353,
+        "transparentCoverage": 0.9660386029411765,
+        "contentRowRuns": 1,
+        "contentColRuns": 3,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Fall is an animated 2D character sample from Fantasy Warrior. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "fall 2d/luizmelo-fantasy-warrior/extracted/fantasy-warrior/fantasy-warrior/sprites/fall.png fantasy warrior character fall is an animated 2d character sample from fantasy warrior. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "luizmelo-fantasy-warrior",
+      "path": "2D/luizmelo-fantasy-warrior/extracted/fantasy-warrior/fantasy-warrior/sprites/idle.png",
+      "src": "/2D/luizmelo-fantasy-warrior/extracted/fantasy-warrior/fantasy-warrior/sprites/idle.png",
+      "label": "Idle",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 1620,
+        "height": 162,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.02403846153846154,
+        "transparentCoverage": 0.9759615384615384,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Idle is an animated 2D character sample from Fantasy Warrior. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "idle 2d/luizmelo-fantasy-warrior/extracted/fantasy-warrior/fantasy-warrior/sprites/idle.png fantasy warrior character idle is an animated 2d character sample from fantasy warrior. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "luizmelo-fantasy-warrior",
+      "path": "2D/luizmelo-fantasy-warrior/extracted/fantasy-warrior/fantasy-warrior/sprites/jump.png",
+      "src": "/2D/luizmelo-fantasy-warrior/extracted/fantasy-warrior/fantasy-warrior/sprites/jump.png",
+      "label": "Jump",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 486,
+        "height": 162,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.02738970588235294,
+        "transparentCoverage": 0.9726102941176471,
+        "contentRowRuns": 1,
+        "contentColRuns": 3,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Jump is an animated 2D character sample from Fantasy Warrior. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "jump 2d/luizmelo-fantasy-warrior/extracted/fantasy-warrior/fantasy-warrior/sprites/jump.png fantasy warrior character jump is an animated 2d character sample from fantasy warrior. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "luizmelo-fantasy-warrior",
+      "path": "2D/luizmelo-fantasy-warrior/extracted/fantasy-warrior/fantasy-warrior/sprites/take-hit.png",
+      "src": "/2D/luizmelo-fantasy-warrior/extracted/fantasy-warrior/fantasy-warrior/sprites/take-hit.png",
+      "label": "Take Hit",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 486,
+        "height": 162,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.023943014705882355,
+        "transparentCoverage": 0.9760569852941177,
+        "contentRowRuns": 1,
+        "contentColRuns": 3,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Take Hit is an animated 2D character sample from Fantasy Warrior. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "take hit 2d/luizmelo-fantasy-warrior/extracted/fantasy-warrior/fantasy-warrior/sprites/take-hit.png fantasy warrior character take hit is an animated 2d character sample from fantasy warrior. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "luizmelo-fantasy-warrior",
+      "path": "2D/luizmelo-fantasy-warrior/extracted/fantasy-warrior/fantasy-warrior/sprites/attack1.png",
+      "src": "/2D/luizmelo-fantasy-warrior/extracted/fantasy-warrior/fantasy-warrior/sprites/attack1.png",
+      "label": "Attack1",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 1134,
+        "height": 162,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.03505067567567568,
+        "transparentCoverage": 0.9649493243243243,
+        "contentRowRuns": 1,
+        "contentColRuns": 9,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Attack1 is an animated 2D character sample from Fantasy Warrior. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "attack1 2d/luizmelo-fantasy-warrior/extracted/fantasy-warrior/fantasy-warrior/sprites/attack1.png fantasy warrior character attack1 is an animated 2d character sample from fantasy warrior. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "luizmelo-fantasy-warrior",
+      "path": "2D/luizmelo-fantasy-warrior/extracted/fantasy-warrior/fantasy-warrior/sprites/attack2.png",
+      "src": "/2D/luizmelo-fantasy-warrior/extracted/fantasy-warrior/fantasy-warrior/sprites/attack2.png",
+      "label": "Attack2",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 1134,
+        "height": 162,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.04793074324324324,
+        "transparentCoverage": 0.9520692567567568,
+        "contentRowRuns": 1,
+        "contentColRuns": 9,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Attack2 is an animated 2D character sample from Fantasy Warrior. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "attack2 2d/luizmelo-fantasy-warrior/extracted/fantasy-warrior/fantasy-warrior/sprites/attack2.png fantasy warrior character attack2 is an animated 2d character sample from fantasy warrior. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "luizmelo-fantasy-warrior",
+      "path": "2D/luizmelo-fantasy-warrior/extracted/fantasy-warrior/fantasy-warrior/sprites/attack3.png",
+      "src": "/2D/luizmelo-fantasy-warrior/extracted/fantasy-warrior/fantasy-warrior/sprites/attack3.png",
+      "label": "Attack3",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 1296,
+        "height": 162,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0543212890625,
+        "transparentCoverage": 0.9456787109375,
+        "contentRowRuns": 1,
+        "contentColRuns": 9,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Attack3 is an animated 2D character sample from Fantasy Warrior. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "attack3 2d/luizmelo-fantasy-warrior/extracted/fantasy-warrior/fantasy-warrior/sprites/attack3.png fantasy warrior character attack3 is an animated 2d character sample from fantasy warrior. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    }
+  ]
+}

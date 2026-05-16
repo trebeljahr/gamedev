@@ -1,0 +1,237 @@
+{
+  "folder": "penusbmic-sci-fi-character-pack-10",
+  "title": "Sci Fi Character Pack 10",
+  "author": "penusbmic",
+  "author_url": "https://penusbmic.itch.io",
+  "url": "https://penusbmic.itch.io/sci-fi-character-pack-10",
+  "game_id": null,
+  "license_class": "Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms)",
+  "attribution": "Appreciated / not required",
+  "theme": "Vehicles & Sci-Fi",
+  "description": "SCI Fi Character Pack 10 is a 2D vehicles & sci-fi art pack by penusbmic. Use it for player characters, NPCs, animation prototyping. License: Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). Attribution: Appreciated / not required.",
+  "category": "Vehicles & Sci-Fi",
+  "themes": [
+    "sci-fi",
+    "urban",
+    "vehicles & sci-fi"
+  ],
+  "useCases": [
+    "player characters",
+    "NPCs",
+    "animation prototyping"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "sci-fi",
+    "sprite",
+    "urban",
+    "vehicles & sci-fi"
+  ],
+  "searchText": "sci fi character pack 10 penusbmic-sci-fi-character-pack-10 penusbmic vehicles & sci-fi free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms) appreciated / not required sci fi character pack 10 is a 2d vehicles & sci-fi art pack by penusbmic. use it for player characters, npcs, animation prototyping. license: free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). attribution: appreciated / not required. sci-fi urban vehicles & sci-fi player characters npcs animation prototyping 2d art sprite",
+  "sampleCount": 5,
+  "samples": [
+    {
+      "packFolder": "penusbmic-sci-fi-character-pack-10",
+      "path": "2D/penusbmic-sci-fi-character-pack-10/extracted/ball-and-chain-bot/ball-and-chain-bot/attack.png",
+      "src": "/2D/penusbmic-sci-fi-character-pack-10/extracted/ball-and-chain-bot/ball-and-chain-bot/attack.png",
+      "label": "Attack",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 126,
+        "height": 312,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.07588743932038836,
+        "transparentCoverage": 0.9241125606796117,
+        "contentRowRuns": 9,
+        "contentColRuns": 2,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 33,
+        "cellMedianHeight": 22
+      },
+      "promo": false,
+      "description": "Attack is an animated 2D character sample from Sci Fi Character Pack 10. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "sci-fi"
+      ],
+      "searchText": "attack 2d/penusbmic-sci-fi-character-pack-10/extracted/ball-and-chain-bot/ball-and-chain-bot/attack.png sci fi character pack 10 character attack is an animated 2d character sample from sci fi character pack 10. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "penusbmic-sci-fi-character-pack-10",
+      "path": "2D/penusbmic-sci-fi-character-pack-10/extracted/ball-and-chain-bot/ball-and-chain-bot/charge.png",
+      "src": "/2D/penusbmic-sci-fi-character-pack-10/extracted/ball-and-chain-bot/ball-and-chain-bot/charge.png",
+      "label": "Charge",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 126,
+        "height": 156,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.05870980870980871,
+        "transparentCoverage": 0.9412901912901913,
+        "contentRowRuns": 4,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Charge is an animated 2D character sample from Sci Fi Character Pack 10. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "sci-fi"
+      ],
+      "searchText": "charge 2d/penusbmic-sci-fi-character-pack-10/extracted/ball-and-chain-bot/ball-and-chain-bot/charge.png sci fi character pack 10 character charge is an animated 2d character sample from sci fi character pack 10. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "penusbmic-sci-fi-character-pack-10",
+      "path": "2D/penusbmic-sci-fi-character-pack-10/extracted/ball-and-chain-bot/ball-and-chain-bot/death.png",
+      "src": "/2D/penusbmic-sci-fi-character-pack-10/extracted/ball-and-chain-bot/ball-and-chain-bot/death.png",
+      "label": "Death",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 126,
+        "height": 195,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0463980463980464,
+        "transparentCoverage": 0.9536019536019537,
+        "contentRowRuns": 6,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Death is an animated 2D character sample from Sci Fi Character Pack 10. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "sci-fi"
+      ],
+      "searchText": "death 2d/penusbmic-sci-fi-character-pack-10/extracted/ball-and-chain-bot/ball-and-chain-bot/death.png sci fi character pack 10 character death is an animated 2d character sample from sci fi character pack 10. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "penusbmic-sci-fi-character-pack-10",
+      "path": "2D/penusbmic-sci-fi-character-pack-10/extracted/ball-and-chain-bot/ball-and-chain-bot/idle.png",
+      "src": "/2D/penusbmic-sci-fi-character-pack-10/extracted/ball-and-chain-bot/ball-and-chain-bot/idle.png",
+      "label": "Idle",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 126,
+        "height": 195,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.055636955636955636,
+        "transparentCoverage": 0.9443630443630444,
+        "contentRowRuns": 5,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Idle is an animated 2D character sample from Sci Fi Character Pack 10. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "sci-fi"
+      ],
+      "searchText": "idle 2d/penusbmic-sci-fi-character-pack-10/extracted/ball-and-chain-bot/ball-and-chain-bot/idle.png sci fi character pack 10 character idle is an animated 2d character sample from sci fi character pack 10. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "penusbmic-sci-fi-character-pack-10",
+      "path": "2D/penusbmic-sci-fi-character-pack-10/extracted/ball-and-chain-bot/ball-and-chain-bot/transition-to-charge.png",
+      "src": "/2D/penusbmic-sci-fi-character-pack-10/extracted/ball-and-chain-bot/ball-and-chain-bot/transition-to-charge.png",
+      "label": "Transition To Charge",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 126,
+        "height": 78,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.058302808302808304,
+        "transparentCoverage": 0.9416971916971917,
+        "contentRowRuns": 2,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Transition To Charge is an animated 2D character sample from Sci Fi Character Pack 10. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "sci-fi"
+      ],
+      "searchText": "transition to charge 2d/penusbmic-sci-fi-character-pack-10/extracted/ball-and-chain-bot/ball-and-chain-bot/transition-to-charge.png sci fi character pack 10 character transition to charge is an animated 2d character sample from sci fi character pack 10. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art"
+    }
+  ]
+}

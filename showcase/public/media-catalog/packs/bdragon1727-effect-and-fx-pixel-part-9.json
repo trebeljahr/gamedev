@@ -1,0 +1,537 @@
+{
+  "folder": "bdragon1727-effect-and-fx-pixel-part-9",
+  "title": "Effect and FX Pixel Part 9",
+  "author": "BDragon1727",
+  "author_url": "https://bdragon1727.itch.io",
+  "url": "https://bdragon1727.itch.io/effect-and-fx-pixel-part-9",
+  "game_id": 2368902,
+  "license_class": "Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms)",
+  "attribution": "Appreciated / not required",
+  "theme": "Effects",
+  "description": "Effect And Fx Pixel Part 9 is a 2D effects art pack by BDragon1727. Use it for combat VFX, spell effects, hit feedback. License: Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). Attribution: Appreciated / not required.",
+  "category": "Effects",
+  "themes": [
+    "effects",
+    "urban"
+  ],
+  "useCases": [
+    "combat VFX",
+    "spell effects",
+    "hit feedback"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "effects",
+    "sprite",
+    "urban"
+  ],
+  "searchText": "effect and fx pixel part 9 bdragon1727-effect-and-fx-pixel-part-9 bdragon1727 effects free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms) appreciated / not required effect and fx pixel part 9 is a 2d effects art pack by bdragon1727. use it for combat vfx, spell effects, hit feedback. license: free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). attribution: appreciated / not required. effects urban combat vfx spell effects hit feedback 2d art sprite",
+  "sampleCount": 12,
+  "samples": [
+    {
+      "packFolder": "bdragon1727-effect-and-fx-pixel-part-9",
+      "path": "2D/bdragon1727-effect-and-fx-pixel-part-9/extracted/effect-and-fx-pixel-part-9-free/free/439.png",
+      "src": "/2D/bdragon1727-effect-and-fx-pixel-part-9/extracted/effect-and-fx-pixel-part-9-free/free/439.png",
+      "label": "439",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 640,
+        "height": 576,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0875679347826087,
+        "transparentCoverage": 0.9124320652173913,
+        "contentRowRuns": 9,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": true,
+        "cellMedianWidth": 17,
+        "cellMedianHeight": 6
+      },
+      "promo": false,
+      "description": "439 is an animated 2D effect sample from Effect and FX Pixel Part 9. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "effect and fx pixel part 9"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "effect and fx pixel part 9"
+      ],
+      "searchText": "439 2d/bdragon1727-effect-and-fx-pixel-part-9/extracted/effect-and-fx-pixel-part-9-free/free/439.png effect and fx pixel part 9 effect 439 is an animated 2d effect sample from effect and fx pixel part 9. useful for combat vfx, spell effects, hit feedback. effect and fx pixel part 9 combat vfx spell effects hit feedback 2d animated art"
+    },
+    {
+      "packFolder": "bdragon1727-effect-and-fx-pixel-part-9",
+      "path": "2D/bdragon1727-effect-and-fx-pixel-part-9/extracted/effect-and-fx-pixel-part-9-free/free/426.png",
+      "src": "/2D/bdragon1727-effect-and-fx-pixel-part-9/extracted/effect-and-fx-pixel-part-9-free/free/426.png",
+      "label": "426",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 640,
+        "height": 576,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.02798913043478261,
+        "transparentCoverage": 0.9720108695652174,
+        "contentRowRuns": 9,
+        "contentColRuns": 20,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 2,
+        "cellMedianHeight": 12
+      },
+      "promo": false,
+      "description": "426 is an animated 2D effect sample from Effect and FX Pixel Part 9. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "effect and fx pixel part 9"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "effect and fx pixel part 9"
+      ],
+      "searchText": "426 2d/bdragon1727-effect-and-fx-pixel-part-9/extracted/effect-and-fx-pixel-part-9-free/free/426.png effect and fx pixel part 9 effect 426 is an animated 2d effect sample from effect and fx pixel part 9. useful for combat vfx, spell effects, hit feedback. effect and fx pixel part 9 combat vfx spell effects hit feedback 2d animated art"
+    },
+    {
+      "packFolder": "bdragon1727-effect-and-fx-pixel-part-9",
+      "path": "2D/bdragon1727-effect-and-fx-pixel-part-9/extracted/effect-and-fx-pixel-part-9-free/free/427.png",
+      "src": "/2D/bdragon1727-effect-and-fx-pixel-part-9/extracted/effect-and-fx-pixel-part-9-free/free/427.png",
+      "label": "427",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 512,
+        "height": 576,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.06140350877192982,
+        "transparentCoverage": 0.9385964912280702,
+        "contentRowRuns": 9,
+        "contentColRuns": 9,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 10,
+        "cellMedianHeight": 18
+      },
+      "promo": false,
+      "description": "427 is an animated 2D effect sample from Effect and FX Pixel Part 9. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "effect and fx pixel part 9"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "effect and fx pixel part 9"
+      ],
+      "searchText": "427 2d/bdragon1727-effect-and-fx-pixel-part-9/extracted/effect-and-fx-pixel-part-9-free/free/427.png effect and fx pixel part 9 effect 427 is an animated 2d effect sample from effect and fx pixel part 9. useful for combat vfx, spell effects, hit feedback. effect and fx pixel part 9 combat vfx spell effects hit feedback 2d animated art"
+    },
+    {
+      "packFolder": "bdragon1727-effect-and-fx-pixel-part-9",
+      "path": "2D/bdragon1727-effect-and-fx-pixel-part-9/extracted/effect-and-fx-pixel-part-9-free/free/428.png",
+      "src": "/2D/bdragon1727-effect-and-fx-pixel-part-9/extracted/effect-and-fx-pixel-part-9-free/free/428.png",
+      "label": "428",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 640,
+        "height": 576,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.08777173913043479,
+        "transparentCoverage": 0.9122282608695652,
+        "contentRowRuns": 9,
+        "contentColRuns": 11,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 10,
+        "cellMedianHeight": 13
+      },
+      "promo": false,
+      "description": "428 is an animated 2D effect sample from Effect and FX Pixel Part 9. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "effect and fx pixel part 9"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "effect and fx pixel part 9"
+      ],
+      "searchText": "428 2d/bdragon1727-effect-and-fx-pixel-part-9/extracted/effect-and-fx-pixel-part-9-free/free/428.png effect and fx pixel part 9 effect 428 is an animated 2d effect sample from effect and fx pixel part 9. useful for combat vfx, spell effects, hit feedback. effect and fx pixel part 9 combat vfx spell effects hit feedback 2d animated art"
+    },
+    {
+      "packFolder": "bdragon1727-effect-and-fx-pixel-part-9",
+      "path": "2D/bdragon1727-effect-and-fx-pixel-part-9/extracted/effect-and-fx-pixel-part-9-free/free/429.png",
+      "src": "/2D/bdragon1727-effect-and-fx-pixel-part-9/extracted/effect-and-fx-pixel-part-9-free/free/429.png",
+      "label": "429",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 640,
+        "height": 576,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.030757472826086957,
+        "transparentCoverage": 0.969242527173913,
+        "contentRowRuns": 9,
+        "contentColRuns": 13,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 5,
+        "cellMedianHeight": 11
+      },
+      "promo": false,
+      "description": "429 is an animated 2D effect sample from Effect and FX Pixel Part 9. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "effect and fx pixel part 9"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "effect and fx pixel part 9"
+      ],
+      "searchText": "429 2d/bdragon1727-effect-and-fx-pixel-part-9/extracted/effect-and-fx-pixel-part-9-free/free/429.png effect and fx pixel part 9 effect 429 is an animated 2d effect sample from effect and fx pixel part 9. useful for combat vfx, spell effects, hit feedback. effect and fx pixel part 9 combat vfx spell effects hit feedback 2d animated art"
+    },
+    {
+      "packFolder": "bdragon1727-effect-and-fx-pixel-part-9",
+      "path": "2D/bdragon1727-effect-and-fx-pixel-part-9/extracted/effect-and-fx-pixel-part-9-free/free/436.png",
+      "src": "/2D/bdragon1727-effect-and-fx-pixel-part-9/extracted/effect-and-fx-pixel-part-9-free/free/436.png",
+      "label": "436",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 576,
+        "height": 576,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.11181640625,
+        "transparentCoverage": 0.88818359375,
+        "contentRowRuns": 9,
+        "contentColRuns": 15,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 7,
+        "cellMedianHeight": 25
+      },
+      "promo": false,
+      "description": "436 is an animated 2D effect sample from Effect and FX Pixel Part 9. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "effect and fx pixel part 9"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "effect and fx pixel part 9"
+      ],
+      "searchText": "436 2d/bdragon1727-effect-and-fx-pixel-part-9/extracted/effect-and-fx-pixel-part-9-free/free/436.png effect and fx pixel part 9 effect 436 is an animated 2d effect sample from effect and fx pixel part 9. useful for combat vfx, spell effects, hit feedback. effect and fx pixel part 9 combat vfx spell effects hit feedback 2d animated art"
+    },
+    {
+      "packFolder": "bdragon1727-effect-and-fx-pixel-part-9",
+      "path": "2D/bdragon1727-effect-and-fx-pixel-part-9/extracted/effect-and-fx-pixel-part-9-free/free/437.png",
+      "src": "/2D/bdragon1727-effect-and-fx-pixel-part-9/extracted/effect-and-fx-pixel-part-9-free/free/437.png",
+      "label": "437",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 640,
+        "height": 576,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.04600883152173913,
+        "transparentCoverage": 0.9539911684782608,
+        "contentRowRuns": 9,
+        "contentColRuns": 9,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 9,
+        "cellMedianHeight": 23
+      },
+      "promo": false,
+      "description": "437 is an animated 2D effect sample from Effect and FX Pixel Part 9. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "effect and fx pixel part 9"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "effect and fx pixel part 9"
+      ],
+      "searchText": "437 2d/bdragon1727-effect-and-fx-pixel-part-9/extracted/effect-and-fx-pixel-part-9-free/free/437.png effect and fx pixel part 9 effect 437 is an animated 2d effect sample from effect and fx pixel part 9. useful for combat vfx, spell effects, hit feedback. effect and fx pixel part 9 combat vfx spell effects hit feedback 2d animated art"
+    },
+    {
+      "packFolder": "bdragon1727-effect-and-fx-pixel-part-9",
+      "path": "2D/bdragon1727-effect-and-fx-pixel-part-9/extracted/effect-and-fx-pixel-part-9-free/free/438.png",
+      "src": "/2D/bdragon1727-effect-and-fx-pixel-part-9/extracted/effect-and-fx-pixel-part-9-free/free/438.png",
+      "label": "438",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 640,
+        "height": 576,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.03765285326086956,
+        "transparentCoverage": 0.9623471467391305,
+        "contentRowRuns": 9,
+        "contentColRuns": 12,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 5,
+        "cellMedianHeight": 18
+      },
+      "promo": false,
+      "description": "438 is an animated 2D effect sample from Effect and FX Pixel Part 9. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "effect and fx pixel part 9"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "effect and fx pixel part 9"
+      ],
+      "searchText": "438 2d/bdragon1727-effect-and-fx-pixel-part-9/extracted/effect-and-fx-pixel-part-9-free/free/438.png effect and fx pixel part 9 effect 438 is an animated 2d effect sample from effect and fx pixel part 9. useful for combat vfx, spell effects, hit feedback. effect and fx pixel part 9 combat vfx spell effects hit feedback 2d animated art"
+    },
+    {
+      "packFolder": "bdragon1727-effect-and-fx-pixel-part-9",
+      "path": "2D/bdragon1727-effect-and-fx-pixel-part-9/extracted/effect-and-fx-pixel-part-9-free/free/446.png",
+      "src": "/2D/bdragon1727-effect-and-fx-pixel-part-9/extracted/effect-and-fx-pixel-part-9-free/free/446.png",
+      "label": "446",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 640,
+        "height": 576,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.07162024456521739,
+        "transparentCoverage": 0.9283797554347826,
+        "contentRowRuns": 9,
+        "contentColRuns": 19,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 6,
+        "cellMedianHeight": 23
+      },
+      "promo": false,
+      "description": "446 is an animated 2D effect sample from Effect and FX Pixel Part 9. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "effect and fx pixel part 9"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "effect and fx pixel part 9"
+      ],
+      "searchText": "446 2d/bdragon1727-effect-and-fx-pixel-part-9/extracted/effect-and-fx-pixel-part-9-free/free/446.png effect and fx pixel part 9 effect 446 is an animated 2d effect sample from effect and fx pixel part 9. useful for combat vfx, spell effects, hit feedback. effect and fx pixel part 9 combat vfx spell effects hit feedback 2d animated art"
+    },
+    {
+      "packFolder": "bdragon1727-effect-and-fx-pixel-part-9",
+      "path": "2D/bdragon1727-effect-and-fx-pixel-part-9/extracted/effect-and-fx-pixel-part-9-free/free/447.png",
+      "src": "/2D/bdragon1727-effect-and-fx-pixel-part-9/extracted/effect-and-fx-pixel-part-9-free/free/447.png",
+      "label": "447",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 576,
+        "height": 576,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.02911376953125,
+        "transparentCoverage": 0.97088623046875,
+        "contentRowRuns": 9,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 9,
+        "cellMedianHeight": 18
+      },
+      "promo": false,
+      "description": "447 is an animated 2D effect sample from Effect and FX Pixel Part 9. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "effect and fx pixel part 9"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "effect and fx pixel part 9"
+      ],
+      "searchText": "447 2d/bdragon1727-effect-and-fx-pixel-part-9/extracted/effect-and-fx-pixel-part-9-free/free/447.png effect and fx pixel part 9 effect 447 is an animated 2d effect sample from effect and fx pixel part 9. useful for combat vfx, spell effects, hit feedback. effect and fx pixel part 9 combat vfx spell effects hit feedback 2d animated art"
+    },
+    {
+      "packFolder": "bdragon1727-effect-and-fx-pixel-part-9",
+      "path": "2D/bdragon1727-effect-and-fx-pixel-part-9/extracted/effect-and-fx-pixel-part-9-free/free/448.png",
+      "src": "/2D/bdragon1727-effect-and-fx-pixel-part-9/extracted/effect-and-fx-pixel-part-9-free/free/448.png",
+      "label": "448",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 640,
+        "height": 576,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.07574728260869565,
+        "transparentCoverage": 0.9242527173913043,
+        "contentRowRuns": 9,
+        "contentColRuns": 14,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 5,
+        "cellMedianHeight": 21
+      },
+      "promo": false,
+      "description": "448 is an animated 2D effect sample from Effect and FX Pixel Part 9. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "effect and fx pixel part 9"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "effect and fx pixel part 9"
+      ],
+      "searchText": "448 2d/bdragon1727-effect-and-fx-pixel-part-9/extracted/effect-and-fx-pixel-part-9-free/free/448.png effect and fx pixel part 9 effect 448 is an animated 2d effect sample from effect and fx pixel part 9. useful for combat vfx, spell effects, hit feedback. effect and fx pixel part 9 combat vfx spell effects hit feedback 2d animated art"
+    },
+    {
+      "packFolder": "bdragon1727-effect-and-fx-pixel-part-9",
+      "path": "2D/bdragon1727-effect-and-fx-pixel-part-9/extracted/effect-and-fx-pixel-part-9-free/free/449.png",
+      "src": "/2D/bdragon1727-effect-and-fx-pixel-part-9/extracted/effect-and-fx-pixel-part-9-free/free/449.png",
+      "label": "449",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 576,
+        "height": 576,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.07769775390625,
+        "transparentCoverage": 0.92230224609375,
+        "contentRowRuns": 9,
+        "contentColRuns": 14,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 4,
+        "cellMedianHeight": 24
+      },
+      "promo": false,
+      "description": "449 is an animated 2D effect sample from Effect and FX Pixel Part 9. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "effect and fx pixel part 9"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "effect and fx pixel part 9"
+      ],
+      "searchText": "449 2d/bdragon1727-effect-and-fx-pixel-part-9/extracted/effect-and-fx-pixel-part-9-free/free/449.png effect and fx pixel part 9 effect 449 is an animated 2d effect sample from effect and fx pixel part 9. useful for combat vfx, spell effects, hit feedback. effect and fx pixel part 9 combat vfx spell effects hit feedback 2d animated art"
+    }
+  ]
+}

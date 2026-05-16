@@ -1,0 +1,155 @@
+{
+  "folder": "carysaurus-bird-sprites",
+  "title": "Bird Sprites with Animations",
+  "author": "carysaurus",
+  "author_url": "https://carysaurus.itch.io",
+  "url": "https://carysaurus.itch.io/bird-sprites",
+  "game_id": 3905318,
+  "license_class": "Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms)",
+  "attribution": "Appreciated / not required",
+  "theme": "Animals",
+  "description": "Bird Sprites With Animations is a 2D animals art pack by carysaurus. Use it for enemy variants, encounters, creature animation. License: Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). Attribution: Appreciated / not required.",
+  "category": "Animals",
+  "themes": [
+    "animals",
+    "nature",
+    "urban"
+  ],
+  "useCases": [
+    "enemy variants",
+    "encounters",
+    "creature animation"
+  ],
+  "tags": [
+    "2d",
+    "animals",
+    "art",
+    "nature",
+    "sprite",
+    "urban"
+  ],
+  "searchText": "bird sprites with animations carysaurus-bird-sprites carysaurus animals free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms) appreciated / not required bird sprites with animations is a 2d animals art pack by carysaurus. use it for enemy variants, encounters, creature animation. license: free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). attribution: appreciated / not required. animals nature urban enemy variants encounters creature animation 2d art sprite",
+  "sampleCount": 3,
+  "samples": [
+    {
+      "packFolder": "carysaurus-bird-sprites",
+      "path": "2D/carysaurus-bird-sprites/extracted/birds-free-carysaurus/birds-free-carysaurus/crow-idle.png",
+      "src": "/2D/carysaurus-bird-sprites/extracted/birds-free-carysaurus/birds-free-carysaurus/crow-idle.png",
+      "label": "Crow Idle",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 384,
+        "height": 32,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.19754464285714285,
+        "transparentCoverage": 0.8024553571428571,
+        "contentRowRuns": 1,
+        "contentColRuns": 12,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Crow Idle is an animated 2D character sample from Bird Sprites with Animations. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "bird sprites with animations",
+        "character"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "bird sprites with animations",
+        "character"
+      ],
+      "searchText": "crow idle 2d/carysaurus-bird-sprites/extracted/birds-free-carysaurus/birds-free-carysaurus/crow-idle.png bird sprites with animations character crow idle is an animated 2d character sample from bird sprites with animations. useful for player characters, npcs, animation prototyping. bird sprites with animations player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "carysaurus-bird-sprites",
+      "path": "2D/carysaurus-bird-sprites/extracted/birds-free-carysaurus/birds-free-carysaurus/pigeon-idle.png",
+      "src": "/2D/carysaurus-bird-sprites/extracted/birds-free-carysaurus/birds-free-carysaurus/pigeon-idle.png",
+      "label": "Pigeon Idle",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 384,
+        "height": 32,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.15513392857142858,
+        "transparentCoverage": 0.8448660714285714,
+        "contentRowRuns": 1,
+        "contentColRuns": 12,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Pigeon Idle is an animated 2D character sample from Bird Sprites with Animations. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "bird sprites with animations",
+        "character"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "bird sprites with animations",
+        "character"
+      ],
+      "searchText": "pigeon idle 2d/carysaurus-bird-sprites/extracted/birds-free-carysaurus/birds-free-carysaurus/pigeon-idle.png bird sprites with animations character pigeon idle is an animated 2d character sample from bird sprites with animations. useful for player characters, npcs, animation prototyping. bird sprites with animations player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "carysaurus-bird-sprites",
+      "path": "2D/carysaurus-bird-sprites/extracted/birds-free-carysaurus/birds-free-carysaurus/yellowbird-idle.png",
+      "src": "/2D/carysaurus-bird-sprites/extracted/birds-free-carysaurus/birds-free-carysaurus/yellowbird-idle.png",
+      "label": "Yellowbird Idle",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 384,
+        "height": 32,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.1484375,
+        "transparentCoverage": 0.8515625,
+        "contentRowRuns": 1,
+        "contentColRuns": 12,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Yellowbird Idle is an animated 2D character sample from Bird Sprites with Animations. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "bird sprites with animations",
+        "character"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "bird sprites with animations",
+        "character"
+      ],
+      "searchText": "yellowbird idle 2d/carysaurus-bird-sprites/extracted/birds-free-carysaurus/birds-free-carysaurus/yellowbird-idle.png bird sprites with animations character yellowbird idle is an animated 2d character sample from bird sprites with animations. useful for player characters, npcs, animation prototyping. bird sprites with animations player characters npcs animation prototyping 2d animated art"
+    }
+  ]
+}

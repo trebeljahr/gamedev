@@ -1,0 +1,75 @@
+{
+  "folder": "creativekind-nightborne-warrior",
+  "title": "Nightborne Warrior",
+  "author": "creativekind",
+  "author_url": "https://creativekind.itch.io",
+  "url": "https://creativekind.itch.io/nightborne-warrior",
+  "game_id": null,
+  "license_class": "Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms)",
+  "attribution": "Appreciated / not required",
+  "theme": "Characters",
+  "description": "Nightborne Warrior is a 2D characters art pack by creativekind. Use it for player characters, NPCs, animation prototyping. License: Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). Attribution: Appreciated / not required.",
+  "category": "Characters",
+  "themes": [
+    "characters",
+    "urban"
+  ],
+  "useCases": [
+    "player characters",
+    "NPCs",
+    "animation prototyping"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "characters",
+    "sprite",
+    "urban"
+  ],
+  "searchText": "nightborne warrior creativekind-nightborne-warrior creativekind characters free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms) appreciated / not required nightborne warrior is a 2d characters art pack by creativekind. use it for player characters, npcs, animation prototyping. license: free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). attribution: appreciated / not required. characters urban player characters npcs animation prototyping 2d art sprite",
+  "sampleCount": 1,
+  "samples": [
+    {
+      "packFolder": "creativekind-nightborne-warrior",
+      "path": "2D/creativekind-nightborne-warrior/extracted/nightborne/nightborne.png",
+      "src": "/2D/creativekind-nightborne-warrior/extracted/nightborne/nightborne.png",
+      "label": "Nightborne",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 1840,
+        "height": 400,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.04248046875,
+        "transparentCoverage": 0.95751953125,
+        "contentRowRuns": 5,
+        "contentColRuns": 21,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 5,
+        "cellMedianHeight": 5
+      },
+      "promo": false,
+      "description": "Nightborne is an animated 2D character sample from Nightborne Warrior. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "nightborne warrior"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "nightborne warrior"
+      ],
+      "searchText": "nightborne 2d/creativekind-nightborne-warrior/extracted/nightborne/nightborne.png nightborne warrior character nightborne is an animated 2d character sample from nightborne warrior. useful for player characters, npcs, animation prototyping. nightborne warrior player characters npcs animation prototyping 2d animated art"
+    }
+  ]
+}

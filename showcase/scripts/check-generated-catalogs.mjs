@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { stat } from "node:fs/promises";
+import { readdir, stat } from "node:fs/promises";
 import { join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -13,6 +13,12 @@ const requiredFiles = [
   "src/lib/media-assets.json",
 ];
 
+const requiredDirs = [
+  // Per-pack art catalog files. The slim media-catalog.json indexes them;
+  // ArtWorkbench fetches one at a time via /api/media/art/[folder].
+  "public/media-catalog/packs",
+];
+
 const missing = [];
 
 for (const file of requiredFiles) {
@@ -22,6 +28,16 @@ for (const file of requiredFiles) {
     if (!info.isFile() || info.size === 0) missing.push(file);
   } catch {
     missing.push(file);
+  }
+}
+
+for (const dir of requiredDirs) {
+  const path = join(SHOWCASE_DIR, dir);
+  try {
+    const entries = await readdir(path);
+    if (entries.filter((name) => name.endsWith(".json")).length === 0) missing.push(`${dir}/ (empty)`);
+  } catch {
+    missing.push(`${dir}/ (missing)`);
   }
 }
 

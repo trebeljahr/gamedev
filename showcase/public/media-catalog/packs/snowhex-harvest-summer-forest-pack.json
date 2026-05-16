@@ -1,0 +1,324 @@
+{
+  "folder": "snowhex-harvest-summer-forest-pack",
+  "title": "Harvest Summer Forest Pack",
+  "author": "snowhex",
+  "author_url": "https://snowhex.itch.io",
+  "url": "https://snowhex.itch.io/harvest-summer-forest-pack",
+  "game_id": 2255958,
+  "license_class": "Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms)",
+  "attribution": "Appreciated / not required",
+  "theme": "Environments",
+  "description": "Harvest Summer Forest Pack is a 2D environments art pack by snowhex. Use it for level building, tilemaps, environment dressing. License: Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). Attribution: Appreciated / not required.",
+  "category": "Environments",
+  "themes": [
+    "environments",
+    "nature",
+    "urban"
+  ],
+  "useCases": [
+    "level building",
+    "tilemaps",
+    "environment dressing"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "environments",
+    "nature",
+    "sprite",
+    "urban"
+  ],
+  "searchText": "harvest summer forest pack snowhex-harvest-summer-forest-pack snowhex environments free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms) appreciated / not required harvest summer forest pack is a 2d environments art pack by snowhex. use it for level building, tilemaps, environment dressing. license: free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). attribution: appreciated / not required. environments nature urban level building tilemaps environment dressing 2d art sprite",
+  "sampleCount": 7,
+  "samples": [
+    {
+      "packFolder": "snowhex-harvest-summer-forest-pack",
+      "path": "2D/snowhex-harvest-summer-forest-pack/extracted/harvest-sumer-free-ver-pack/harvest-sumer-free-ver-pack/tilesets/fences-and-ladders-etc.png",
+      "src": "/2D/snowhex-harvest-summer-forest-pack/extracted/harvest-sumer-free-ver-pack/harvest-sumer-free-ver-pack/tilesets/fences-and-ladders-etc.png",
+      "label": "Fences And Ladders Etc",
+      "kind": "tile",
+      "animated": true,
+      "inspection": {
+        "width": 192,
+        "height": 119,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.2654499299719888,
+        "transparentCoverage": 0.7345500700280112,
+        "contentRowRuns": 3,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 28,
+        "cellMedianHeight": 21
+      },
+      "promo": false,
+      "description": "Fences And Ladders Etc is an animated 2D tile sample from Harvest Summer Forest Pack. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "nature",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "modular",
+        "nature",
+        "tile"
+      ],
+      "searchText": "fences and ladders etc 2d/snowhex-harvest-summer-forest-pack/extracted/harvest-sumer-free-ver-pack/harvest-sumer-free-ver-pack/tilesets/fences-and-ladders-etc.png harvest summer forest pack tile fences and ladders etc is an animated 2d tile sample from harvest summer forest pack. useful for level building, tilemaps, environment dressing. nature level building tilemaps environment dressing 2d animated art modular"
+    },
+    {
+      "packFolder": "snowhex-harvest-summer-forest-pack",
+      "path": "2D/snowhex-harvest-summer-forest-pack/extracted/harvest-sumer-free-ver-pack/harvest-sumer-free-ver-pack/tilesets/set-1-0.png",
+      "src": "/2D/snowhex-harvest-summer-forest-pack/extracted/harvest-sumer-free-ver-pack/harvest-sumer-free-ver-pack/tilesets/set-1-0.png",
+      "label": "Set 1 0",
+      "kind": "tile",
+      "animated": true,
+      "inspection": {
+        "width": 288,
+        "height": 224,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.4783095163316583,
+        "transparentCoverage": 0.5216904836683417,
+        "contentRowRuns": 3,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Set 1 0 is an animated 2D tile sample from Harvest Summer Forest Pack. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "nature",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "modular",
+        "nature",
+        "tile"
+      ],
+      "searchText": "set 1 0 2d/snowhex-harvest-summer-forest-pack/extracted/harvest-sumer-free-ver-pack/harvest-sumer-free-ver-pack/tilesets/set-1-0.png harvest summer forest pack tile set 1 0 is an animated 2d tile sample from harvest summer forest pack. useful for level building, tilemaps, environment dressing. nature level building tilemaps environment dressing 2d animated art modular"
+    },
+    {
+      "packFolder": "snowhex-harvest-summer-forest-pack",
+      "path": "2D/snowhex-harvest-summer-forest-pack/extracted/harvest-sumer-free-ver-pack/harvest-sumer-free-ver-pack/tilesets/set-1-2.png",
+      "src": "/2D/snowhex-harvest-summer-forest-pack/extracted/harvest-sumer-free-ver-pack/harvest-sumer-free-ver-pack/tilesets/set-1-2.png",
+      "label": "Set 1 2",
+      "kind": "tile",
+      "animated": true,
+      "inspection": {
+        "width": 256,
+        "height": 144,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.2983669704861111,
+        "transparentCoverage": 0.7016330295138888,
+        "contentRowRuns": 3,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Set 1 2 is an animated 2D tile sample from Harvest Summer Forest Pack. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "nature",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "modular",
+        "nature",
+        "tile"
+      ],
+      "searchText": "set 1 2 2d/snowhex-harvest-summer-forest-pack/extracted/harvest-sumer-free-ver-pack/harvest-sumer-free-ver-pack/tilesets/set-1-2.png harvest summer forest pack tile set 1 2 is an animated 2d tile sample from harvest summer forest pack. useful for level building, tilemaps, environment dressing. nature level building tilemaps environment dressing 2d animated art modular"
+    },
+    {
+      "packFolder": "snowhex-harvest-summer-forest-pack",
+      "path": "2D/snowhex-harvest-summer-forest-pack/extracted/harvest-sumer-free-ver-pack/harvest-sumer-free-ver-pack/vegetation/some-objects.png",
+      "src": "/2D/snowhex-harvest-summer-forest-pack/extracted/harvest-sumer-free-ver-pack/harvest-sumer-free-ver-pack/vegetation/some-objects.png",
+      "label": "Some Objects",
+      "kind": "tile",
+      "animated": true,
+      "inspection": {
+        "width": 80,
+        "height": 32,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.4390625,
+        "transparentCoverage": 0.5609375,
+        "contentRowRuns": 1,
+        "contentColRuns": 5,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Some Objects is an animated 2D tile sample from Harvest Summer Forest Pack. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "nature",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "modular",
+        "nature",
+        "tile"
+      ],
+      "searchText": "some objects 2d/snowhex-harvest-summer-forest-pack/extracted/harvest-sumer-free-ver-pack/harvest-sumer-free-ver-pack/vegetation/some-objects.png harvest summer forest pack tile some objects is an animated 2d tile sample from harvest summer forest pack. useful for level building, tilemaps, environment dressing. nature level building tilemaps environment dressing 2d animated art modular"
+    },
+    {
+      "packFolder": "snowhex-harvest-summer-forest-pack",
+      "path": "2D/snowhex-harvest-summer-forest-pack/extracted/harvest-sumer-free-ver-pack/harvest-sumer-free-ver-pack/falling-leaf/4-frames.png",
+      "src": "/2D/snowhex-harvest-summer-forest-pack/extracted/harvest-sumer-free-ver-pack/harvest-sumer-free-ver-pack/falling-leaf/4-frames.png",
+      "label": "4 Frames",
+      "kind": "tile",
+      "animated": true,
+      "inspection": {
+        "width": 128,
+        "height": 16,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.150390625,
+        "transparentCoverage": 0.849609375,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "4 Frames is an animated 2D tile sample from Harvest Summer Forest Pack. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "nature",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "modular",
+        "nature",
+        "tile"
+      ],
+      "searchText": "4 frames 2d/snowhex-harvest-summer-forest-pack/extracted/harvest-sumer-free-ver-pack/harvest-sumer-free-ver-pack/falling-leaf/4-frames.png harvest summer forest pack tile 4 frames is an animated 2d tile sample from harvest summer forest pack. useful for level building, tilemaps, environment dressing. nature level building tilemaps environment dressing 2d animated art modular"
+    },
+    {
+      "packFolder": "snowhex-harvest-summer-forest-pack",
+      "path": "2D/snowhex-harvest-summer-forest-pack/extracted/harvest-sumer-free-ver-pack/harvest-sumer-free-ver-pack/tilesets/set-1-1.png",
+      "src": "/2D/snowhex-harvest-summer-forest-pack/extracted/harvest-sumer-free-ver-pack/harvest-sumer-free-ver-pack/tilesets/set-1-1.png",
+      "label": "Set 1 1",
+      "kind": "tile",
+      "animated": false,
+      "inspection": {
+        "width": 288,
+        "height": 144,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.47613525390625,
+        "transparentCoverage": 0.52386474609375,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Set 1 1 is a static 2D tile sample from Harvest Summer Forest Pack. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "nature",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "modular",
+        "nature",
+        "static",
+        "tile"
+      ],
+      "searchText": "set 1 1 2d/snowhex-harvest-summer-forest-pack/extracted/harvest-sumer-free-ver-pack/harvest-sumer-free-ver-pack/tilesets/set-1-1.png harvest summer forest pack tile set 1 1 is a static 2d tile sample from harvest summer forest pack. useful for level building, tilemaps, environment dressing. nature level building tilemaps environment dressing 2d art modular static"
+    },
+    {
+      "packFolder": "snowhex-harvest-summer-forest-pack",
+      "path": "2D/snowhex-harvest-summer-forest-pack/extracted/harvest-sumer-free-ver-pack/harvest-sumer-free-ver-pack/vegetation/trees-3.png",
+      "src": "/2D/snowhex-harvest-summer-forest-pack/extracted/harvest-sumer-free-ver-pack/harvest-sumer-free-ver-pack/vegetation/trees-3.png",
+      "label": "Trees 3",
+      "kind": "tile",
+      "animated": true,
+      "inspection": {
+        "width": 160,
+        "height": 80,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.5475,
+        "transparentCoverage": 0.4525,
+        "contentRowRuns": 1,
+        "contentColRuns": 3,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Trees 3 is an animated 2D tile sample from Harvest Summer Forest Pack. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "nature",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "modular",
+        "nature",
+        "tile"
+      ],
+      "searchText": "trees 3 2d/snowhex-harvest-summer-forest-pack/extracted/harvest-sumer-free-ver-pack/harvest-sumer-free-ver-pack/vegetation/trees-3.png harvest summer forest pack tile trees 3 is an animated 2d tile sample from harvest summer forest pack. useful for level building, tilemaps, environment dressing. nature level building tilemaps environment dressing 2d animated art modular"
+    }
+  ]
+}

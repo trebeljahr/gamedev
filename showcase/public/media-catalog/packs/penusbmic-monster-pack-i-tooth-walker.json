@@ -1,0 +1,275 @@
+{
+  "folder": "penusbmic-monster-pack-i-tooth-walker",
+  "title": "Monster Pack I  Tooth Walker",
+  "author": "penusbmic",
+  "author_url": "https://penusbmic.itch.io",
+  "url": "https://penusbmic.itch.io/monster-pack-i",
+  "game_id": null,
+  "license_class": "Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms)",
+  "attribution": "Appreciated / not required",
+  "theme": "Enemies",
+  "description": "Monster Pack I Tooth Walker is a 2D enemies art pack by penusbmic. Use it for enemy variants, encounters, creature animation. License: Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). Attribution: Appreciated / not required.",
+  "category": "Enemies",
+  "themes": [
+    "enemies",
+    "urban"
+  ],
+  "useCases": [
+    "enemy variants",
+    "encounters",
+    "creature animation"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "enemies",
+    "sprite",
+    "urban"
+  ],
+  "searchText": "monster pack i  tooth walker penusbmic-monster-pack-i-tooth-walker penusbmic enemies free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms) appreciated / not required monster pack i tooth walker is a 2d enemies art pack by penusbmic. use it for enemy variants, encounters, creature animation. license: free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). attribution: appreciated / not required. enemies urban enemy variants encounters creature animation 2d art sprite",
+  "sampleCount": 6,
+  "samples": [
+    {
+      "packFolder": "penusbmic-monster-pack-i-tooth-walker",
+      "path": "2D/penusbmic-monster-pack-i-tooth-walker/extracted/tooth-walker/tooth-walker/tooth-walker-sprite-sheet.png",
+      "src": "/2D/penusbmic-monster-pack-i-tooth-walker/extracted/tooth-walker/tooth-walker/tooth-walker-sprite-sheet.png",
+      "label": "Tooth Walker Sprite Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 384,
+        "height": 320,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.04296875,
+        "transparentCoverage": 0.95703125,
+        "contentRowRuns": 5,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 25,
+        "cellMedianHeight": 27
+      },
+      "promo": false,
+      "description": "Tooth Walker Sprite Sheet is an animated 2D character sample from Monster Pack I  Tooth Walker. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "monster pack i  tooth walker"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "monster pack i  tooth walker"
+      ],
+      "searchText": "tooth walker sprite sheet 2d/penusbmic-monster-pack-i-tooth-walker/extracted/tooth-walker/tooth-walker/tooth-walker-sprite-sheet.png monster pack i  tooth walker character tooth walker sprite sheet is an animated 2d character sample from monster pack i  tooth walker. useful for player characters, npcs, animation prototyping. monster pack i  tooth walker player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "penusbmic-monster-pack-i-tooth-walker",
+      "path": "2D/penusbmic-monster-pack-i-tooth-walker/extracted/tooth-walker/tooth-walker/attack.gif",
+      "src": "/2D/penusbmic-monster-pack-i-tooth-walker/extracted/tooth-walker/tooth-walker/attack.gif",
+      "label": "Attack",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 128,
+        "height": 128,
+        "bgKind": "mixed",
+        "alphaCoverage": 1,
+        "transparentCoverage": 0,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Attack is an animated 2D character sample from Monster Pack I  Tooth Walker. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "monster pack i  tooth walker"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "monster pack i  tooth walker"
+      ],
+      "searchText": "attack 2d/penusbmic-monster-pack-i-tooth-walker/extracted/tooth-walker/tooth-walker/attack.gif monster pack i  tooth walker character attack is an animated 2d character sample from monster pack i  tooth walker. useful for player characters, npcs, animation prototyping. monster pack i  tooth walker player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "penusbmic-monster-pack-i-tooth-walker",
+      "path": "2D/penusbmic-monster-pack-i-tooth-walker/extracted/tooth-walker/tooth-walker/death.gif",
+      "src": "/2D/penusbmic-monster-pack-i-tooth-walker/extracted/tooth-walker/tooth-walker/death.gif",
+      "label": "Death",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 128,
+        "height": 128,
+        "bgKind": "mixed",
+        "alphaCoverage": 1,
+        "transparentCoverage": 0,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Death is an animated 2D character sample from Monster Pack I  Tooth Walker. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "monster pack i  tooth walker"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "monster pack i  tooth walker"
+      ],
+      "searchText": "death 2d/penusbmic-monster-pack-i-tooth-walker/extracted/tooth-walker/tooth-walker/death.gif monster pack i  tooth walker character death is an animated 2d character sample from monster pack i  tooth walker. useful for player characters, npcs, animation prototyping. monster pack i  tooth walker player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "penusbmic-monster-pack-i-tooth-walker",
+      "path": "2D/penusbmic-monster-pack-i-tooth-walker/extracted/tooth-walker/tooth-walker/idle.gif",
+      "src": "/2D/penusbmic-monster-pack-i-tooth-walker/extracted/tooth-walker/tooth-walker/idle.gif",
+      "label": "Idle",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 128,
+        "height": 128,
+        "bgKind": "mixed",
+        "alphaCoverage": 1,
+        "transparentCoverage": 0,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Idle is an animated 2D character sample from Monster Pack I  Tooth Walker. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "monster pack i  tooth walker"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "monster pack i  tooth walker"
+      ],
+      "searchText": "idle 2d/penusbmic-monster-pack-i-tooth-walker/extracted/tooth-walker/tooth-walker/idle.gif monster pack i  tooth walker character idle is an animated 2d character sample from monster pack i  tooth walker. useful for player characters, npcs, animation prototyping. monster pack i  tooth walker player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "penusbmic-monster-pack-i-tooth-walker",
+      "path": "2D/penusbmic-monster-pack-i-tooth-walker/extracted/tooth-walker/tooth-walker/walk.gif",
+      "src": "/2D/penusbmic-monster-pack-i-tooth-walker/extracted/tooth-walker/tooth-walker/walk.gif",
+      "label": "Walk",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 128,
+        "height": 128,
+        "bgKind": "mixed",
+        "alphaCoverage": 1,
+        "transparentCoverage": 0,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Walk is an animated 2D character sample from Monster Pack I  Tooth Walker. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "monster pack i  tooth walker"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "monster pack i  tooth walker"
+      ],
+      "searchText": "walk 2d/penusbmic-monster-pack-i-tooth-walker/extracted/tooth-walker/tooth-walker/walk.gif monster pack i  tooth walker character walk is an animated 2d character sample from monster pack i  tooth walker. useful for player characters, npcs, animation prototyping. monster pack i  tooth walker player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "penusbmic-monster-pack-i-tooth-walker",
+      "path": "2D/penusbmic-monster-pack-i-tooth-walker/extracted/tooth-walker/tooth-walker/damaged.gif",
+      "src": "/2D/penusbmic-monster-pack-i-tooth-walker/extracted/tooth-walker/tooth-walker/damaged.gif",
+      "label": "Damaged",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 128,
+        "height": 128,
+        "bgKind": "mixed",
+        "alphaCoverage": 1,
+        "transparentCoverage": 0,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Damaged is an animated 2D character sample from Monster Pack I  Tooth Walker. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "monster pack i  tooth walker"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "monster pack i  tooth walker"
+      ],
+      "searchText": "damaged 2d/penusbmic-monster-pack-i-tooth-walker/extracted/tooth-walker/tooth-walker/damaged.gif monster pack i  tooth walker character damaged is an animated 2d character sample from monster pack i  tooth walker. useful for player characters, npcs, animation prototyping. monster pack i  tooth walker player characters npcs animation prototyping 2d animated art"
+    }
+  ]
+}

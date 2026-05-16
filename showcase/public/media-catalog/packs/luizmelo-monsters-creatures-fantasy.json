@@ -1,0 +1,364 @@
+{
+  "folder": "luizmelo-monsters-creatures-fantasy",
+  "title": "Monsters Creatures Fantasy",
+  "author": "luizmelo",
+  "author_url": "https://luizmelo.itch.io",
+  "url": "https://luizmelo.itch.io/monsters-creatures-fantasy",
+  "game_id": null,
+  "license_class": "CC0 1.0 (Creative Commons Zero)",
+  "attribution": "Optional",
+  "theme": "Animals",
+  "description": "Monsters Creatures Fantasy is a 2D animals art pack by luizmelo. Use it for enemy variants, encounters, creature animation. License: CC0 1.0 (Creative Commons Zero). Attribution: Optional.",
+  "category": "Animals",
+  "themes": [
+    "animals",
+    "fantasy",
+    "nature"
+  ],
+  "useCases": [
+    "enemy variants",
+    "encounters",
+    "creature animation"
+  ],
+  "tags": [
+    "2d",
+    "animals",
+    "art",
+    "fantasy",
+    "medieval",
+    "nature",
+    "sprite"
+  ],
+  "searchText": "monsters creatures fantasy luizmelo-monsters-creatures-fantasy luizmelo animals cc0 1.0 (creative commons zero) optional monsters creatures fantasy is a 2d animals art pack by luizmelo. use it for enemy variants, encounters, creature animation. license: cc0 1.0 (creative commons zero). attribution: optional. animals fantasy nature enemy variants encounters creature animation 2d art medieval sprite",
+  "sampleCount": 8,
+  "samples": [
+    {
+      "packFolder": "luizmelo-monsters-creatures-fantasy",
+      "path": "2D/luizmelo-monsters-creatures-fantasy/extracted/monster-creatures-fantasy-version-1-3/monster-creatures-fantasy-version-1-3/flying-eye/attack3.png",
+      "src": "/2D/luizmelo-monsters-creatures-fantasy/extracted/monster-creatures-fantasy-version-1-3/monster-creatures-fantasy-version-1-3/flying-eye/attack3.png",
+      "label": "Attack3",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 900,
+        "height": 150,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.015352470930232558,
+        "transparentCoverage": 0.9846475290697675,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Attack3 is an animated 2D character sample from Monsters Creatures Fantasy. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "attack3 2d/luizmelo-monsters-creatures-fantasy/extracted/monster-creatures-fantasy-version-1-3/monster-creatures-fantasy-version-1-3/flying-eye/attack3.png monsters creatures fantasy character attack3 is an animated 2d character sample from monsters creatures fantasy. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "luizmelo-monsters-creatures-fantasy",
+      "path": "2D/luizmelo-monsters-creatures-fantasy/extracted/monster-creatures-fantasy-version-1-3/monster-creatures-fantasy-version-1-3/goblin/attack3.png",
+      "src": "/2D/luizmelo-monsters-creatures-fantasy/extracted/monster-creatures-fantasy-version-1-3/monster-creatures-fantasy-version-1-3/goblin/attack3.png",
+      "label": "Attack3",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 1800,
+        "height": 150,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.023251488095238096,
+        "transparentCoverage": 0.9767485119047619,
+        "contentRowRuns": 1,
+        "contentColRuns": 12,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Attack3 is an animated 2D character sample from Monsters Creatures Fantasy. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "attack3 2d/luizmelo-monsters-creatures-fantasy/extracted/monster-creatures-fantasy-version-1-3/monster-creatures-fantasy-version-1-3/goblin/attack3.png monsters creatures fantasy character attack3 is an animated 2d character sample from monsters creatures fantasy. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "luizmelo-monsters-creatures-fantasy",
+      "path": "2D/luizmelo-monsters-creatures-fantasy/extracted/monster-creatures-fantasy-version-1-3/monster-creatures-fantasy-version-1-3/mushroom/attack3.png",
+      "src": "/2D/luizmelo-monsters-creatures-fantasy/extracted/monster-creatures-fantasy-version-1-3/monster-creatures-fantasy-version-1-3/mushroom/attack3.png",
+      "label": "Attack3",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 1650,
+        "height": 150,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.029211956521739132,
+        "transparentCoverage": 0.9707880434782609,
+        "contentRowRuns": 1,
+        "contentColRuns": 11,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Attack3 is an animated 2D character sample from Monsters Creatures Fantasy. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "attack3 2d/luizmelo-monsters-creatures-fantasy/extracted/monster-creatures-fantasy-version-1-3/monster-creatures-fantasy-version-1-3/mushroom/attack3.png monsters creatures fantasy character attack3 is an animated 2d character sample from monsters creatures fantasy. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "luizmelo-monsters-creatures-fantasy",
+      "path": "2D/luizmelo-monsters-creatures-fantasy/extracted/monster-creatures-fantasy-version-1-3/monster-creatures-fantasy-version-1-3/skeleton/attack3.png",
+      "src": "/2D/luizmelo-monsters-creatures-fantasy/extracted/monster-creatures-fantasy-version-1-3/monster-creatures-fantasy-version-1-3/skeleton/attack3.png",
+      "label": "Attack3",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 900,
+        "height": 150,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.030977470930232558,
+        "transparentCoverage": 0.9690225290697675,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Attack3 is an animated 2D character sample from Monsters Creatures Fantasy. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "attack3 2d/luizmelo-monsters-creatures-fantasy/extracted/monster-creatures-fantasy-version-1-3/monster-creatures-fantasy-version-1-3/skeleton/attack3.png monsters creatures fantasy character attack3 is an animated 2d character sample from monsters creatures fantasy. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "luizmelo-monsters-creatures-fantasy",
+      "path": "2D/luizmelo-monsters-creatures-fantasy/extracted/monster-creatures-fantasy-version-1-3/monster-creatures-fantasy-version-1-3/flying-eye/projectile-sprite.png",
+      "src": "/2D/luizmelo-monsters-creatures-fantasy/extracted/monster-creatures-fantasy-version-1-3/monster-creatures-fantasy-version-1-3/flying-eye/projectile-sprite.png",
+      "label": "Projectile Sprite",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 384,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.068115234375,
+        "transparentCoverage": 0.931884765625,
+        "contentRowRuns": 1,
+        "contentColRuns": 12,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Projectile Sprite is an animated 2D character sample from Monsters Creatures Fantasy. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "projectile sprite 2d/luizmelo-monsters-creatures-fantasy/extracted/monster-creatures-fantasy-version-1-3/monster-creatures-fantasy-version-1-3/flying-eye/projectile-sprite.png monsters creatures fantasy character projectile sprite is an animated 2d character sample from monsters creatures fantasy. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "luizmelo-monsters-creatures-fantasy",
+      "path": "2D/luizmelo-monsters-creatures-fantasy/extracted/monster-creatures-fantasy-version-1-3/monster-creatures-fantasy-version-1-3/goblin/bomb-sprite.png",
+      "src": "/2D/luizmelo-monsters-creatures-fantasy/extracted/monster-creatures-fantasy-version-1-3/monster-creatures-fantasy-version-1-3/goblin/bomb-sprite.png",
+      "label": "Bomb Sprite",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 1900,
+        "height": 100,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.029447115384615384,
+        "transparentCoverage": 0.9705528846153846,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Bomb Sprite is an animated 2D character sample from Monsters Creatures Fantasy. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "bomb sprite 2d/luizmelo-monsters-creatures-fantasy/extracted/monster-creatures-fantasy-version-1-3/monster-creatures-fantasy-version-1-3/goblin/bomb-sprite.png monsters creatures fantasy character bomb sprite is an animated 2d character sample from monsters creatures fantasy. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "luizmelo-monsters-creatures-fantasy",
+      "path": "2D/luizmelo-monsters-creatures-fantasy/extracted/monster-creatures-fantasy-version-1-3/monster-creatures-fantasy-version-1-3/mushroom/projectile-sprite.png",
+      "src": "/2D/luizmelo-monsters-creatures-fantasy/extracted/monster-creatures-fantasy-version-1-3/monster-creatures-fantasy-version-1-3/mushroom/projectile-sprite.png",
+      "label": "Projectile Sprite",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 400,
+        "height": 50,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.021484375,
+        "transparentCoverage": 0.978515625,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Projectile Sprite is an animated 2D character sample from Monsters Creatures Fantasy. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "projectile sprite 2d/luizmelo-monsters-creatures-fantasy/extracted/monster-creatures-fantasy-version-1-3/monster-creatures-fantasy-version-1-3/mushroom/projectile-sprite.png monsters creatures fantasy character projectile sprite is an animated 2d character sample from monsters creatures fantasy. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "luizmelo-monsters-creatures-fantasy",
+      "path": "2D/luizmelo-monsters-creatures-fantasy/extracted/monster-creatures-fantasy-version-1-3/monster-creatures-fantasy-version-1-3/skeleton/sword-sprite.png",
+      "src": "/2D/luizmelo-monsters-creatures-fantasy/extracted/monster-creatures-fantasy-version-1-3/monster-creatures-fantasy-version-1-3/skeleton/sword-sprite.png",
+      "label": "Sword Sprite",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 736,
+        "height": 102,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.014508928571428572,
+        "transparentCoverage": 0.9854910714285714,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Sword Sprite is an animated 2D character sample from Monsters Creatures Fantasy. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "sword sprite 2d/luizmelo-monsters-creatures-fantasy/extracted/monster-creatures-fantasy-version-1-3/monster-creatures-fantasy-version-1-3/skeleton/sword-sprite.png monsters creatures fantasy character sword sprite is an animated 2d character sample from monsters creatures fantasy. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    }
+  ]
+}

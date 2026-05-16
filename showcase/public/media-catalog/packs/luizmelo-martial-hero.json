@@ -1,0 +1,353 @@
+{
+  "folder": "luizmelo-martial-hero",
+  "title": "Martial Hero",
+  "author": "luizmelo",
+  "author_url": "https://luizmelo.itch.io",
+  "url": "https://luizmelo.itch.io/martial-hero",
+  "game_id": null,
+  "license_class": "CC0 1.0 (Creative Commons Zero)",
+  "attribution": "Optional",
+  "theme": "Characters",
+  "description": "Martial Hero is a 2D characters art pack by luizmelo. Use it for player characters, NPCs, animation prototyping. License: CC0 1.0 (Creative Commons Zero). Attribution: Optional.",
+  "category": "Characters",
+  "themes": [
+    "characters",
+    "martial hero"
+  ],
+  "useCases": [
+    "player characters",
+    "NPCs",
+    "animation prototyping"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "characters",
+    "martial hero",
+    "sprite"
+  ],
+  "searchText": "martial hero luizmelo-martial-hero luizmelo characters cc0 1.0 (creative commons zero) optional martial hero is a 2d characters art pack by luizmelo. use it for player characters, npcs, animation prototyping. license: cc0 1.0 (creative commons zero). attribution: optional. characters martial hero player characters npcs animation prototyping 2d art sprite",
+  "sampleCount": 8,
+  "samples": [
+    {
+      "packFolder": "luizmelo-martial-hero",
+      "path": "2D/luizmelo-martial-hero/extracted/martial-hero/martial-hero/sprites/death.png",
+      "src": "/2D/luizmelo-martial-hero/extracted/martial-hero/martial-hero/sprites/death.png",
+      "label": "Death",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 1200,
+        "height": 200,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.020803052325581394,
+        "transparentCoverage": 0.9791969476744186,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Death is an animated 2D character sample from Martial Hero. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "martial hero"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "martial hero"
+      ],
+      "searchText": "death 2d/luizmelo-martial-hero/extracted/martial-hero/martial-hero/sprites/death.png martial hero character death is an animated 2d character sample from martial hero. useful for player characters, npcs, animation prototyping. martial hero player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "luizmelo-martial-hero",
+      "path": "2D/luizmelo-martial-hero/extracted/martial-hero/martial-hero/sprites/idle.png",
+      "src": "/2D/luizmelo-martial-hero/extracted/martial-hero/martial-hero/sprites/idle.png",
+      "label": "Idle",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 1600,
+        "height": 200,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0238037109375,
+        "transparentCoverage": 0.9761962890625,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Idle is an animated 2D character sample from Martial Hero. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "martial hero"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "martial hero"
+      ],
+      "searchText": "idle 2d/luizmelo-martial-hero/extracted/martial-hero/martial-hero/sprites/idle.png martial hero character idle is an animated 2d character sample from martial hero. useful for player characters, npcs, animation prototyping. martial hero player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "luizmelo-martial-hero",
+      "path": "2D/luizmelo-martial-hero/extracted/martial-hero/martial-hero/sprites/take-hit-white-silhouette.png",
+      "src": "/2D/luizmelo-martial-hero/extracted/martial-hero/martial-hero/sprites/take-hit-white-silhouette.png",
+      "label": "Take Hit White Silhouette",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 800,
+        "height": 200,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.02545166015625,
+        "transparentCoverage": 0.97454833984375,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Take Hit White Silhouette is an animated 2D character sample from Martial Hero. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "martial hero"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "martial hero"
+      ],
+      "searchText": "take hit white silhouette 2d/luizmelo-martial-hero/extracted/martial-hero/martial-hero/sprites/take-hit-white-silhouette.png martial hero character take hit white silhouette is an animated 2d character sample from martial hero. useful for player characters, npcs, animation prototyping. martial hero player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "luizmelo-martial-hero",
+      "path": "2D/luizmelo-martial-hero/extracted/martial-hero/martial-hero/sprites/take-hit.png",
+      "src": "/2D/luizmelo-martial-hero/extracted/martial-hero/martial-hero/sprites/take-hit.png",
+      "label": "Take Hit",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 800,
+        "height": 200,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.02545166015625,
+        "transparentCoverage": 0.97454833984375,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Take Hit is an animated 2D character sample from Martial Hero. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "martial hero"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "martial hero"
+      ],
+      "searchText": "take hit 2d/luizmelo-martial-hero/extracted/martial-hero/martial-hero/sprites/take-hit.png martial hero character take hit is an animated 2d character sample from martial hero. useful for player characters, npcs, animation prototyping. martial hero player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "luizmelo-martial-hero",
+      "path": "2D/luizmelo-martial-hero/extracted/martial-hero/martial-hero/sprites/fall.png",
+      "src": "/2D/luizmelo-martial-hero/extracted/martial-hero/martial-hero/sprites/fall.png",
+      "label": "Fall",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 400,
+        "height": 200,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.024566650390625,
+        "transparentCoverage": 0.975433349609375,
+        "contentRowRuns": 1,
+        "contentColRuns": 2,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Fall is an animated 2D character sample from Martial Hero. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "martial hero"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "martial hero"
+      ],
+      "searchText": "fall 2d/luizmelo-martial-hero/extracted/martial-hero/martial-hero/sprites/fall.png martial hero character fall is an animated 2d character sample from martial hero. useful for player characters, npcs, animation prototyping. martial hero player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "luizmelo-martial-hero",
+      "path": "2D/luizmelo-martial-hero/extracted/martial-hero/martial-hero/sprites/jump.png",
+      "src": "/2D/luizmelo-martial-hero/extracted/martial-hero/martial-hero/sprites/jump.png",
+      "label": "Jump",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 400,
+        "height": 200,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.021209716796875,
+        "transparentCoverage": 0.978790283203125,
+        "contentRowRuns": 1,
+        "contentColRuns": 2,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Jump is an animated 2D character sample from Martial Hero. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "martial hero"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "martial hero"
+      ],
+      "searchText": "jump 2d/luizmelo-martial-hero/extracted/martial-hero/martial-hero/sprites/jump.png martial hero character jump is an animated 2d character sample from martial hero. useful for player characters, npcs, animation prototyping. martial hero player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "luizmelo-martial-hero",
+      "path": "2D/luizmelo-martial-hero/extracted/martial-hero/martial-hero/sprites/attack1.png",
+      "src": "/2D/luizmelo-martial-hero/extracted/martial-hero/martial-hero/sprites/attack1.png",
+      "label": "Attack1",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 1200,
+        "height": 200,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.039607558139534885,
+        "transparentCoverage": 0.9603924418604651,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Attack1 is an animated 2D character sample from Martial Hero. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "martial hero"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "martial hero"
+      ],
+      "searchText": "attack1 2d/luizmelo-martial-hero/extracted/martial-hero/martial-hero/sprites/attack1.png martial hero character attack1 is an animated 2d character sample from martial hero. useful for player characters, npcs, animation prototyping. martial hero player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "luizmelo-martial-hero",
+      "path": "2D/luizmelo-martial-hero/extracted/martial-hero/martial-hero/sprites/attack2.png",
+      "src": "/2D/luizmelo-martial-hero/extracted/martial-hero/martial-hero/sprites/attack2.png",
+      "label": "Attack2",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 1200,
+        "height": 200,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.033521075581395346,
+        "transparentCoverage": 0.9664789244186046,
+        "contentRowRuns": 1,
+        "contentColRuns": 7,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Attack2 is an animated 2D character sample from Martial Hero. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "martial hero"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "martial hero"
+      ],
+      "searchText": "attack2 2d/luizmelo-martial-hero/extracted/martial-hero/martial-hero/sprites/attack2.png martial hero character attack2 is an animated 2d character sample from martial hero. useful for player characters, npcs, animation prototyping. martial hero player characters npcs animation prototyping 2d animated art"
+    }
+  ]
+}

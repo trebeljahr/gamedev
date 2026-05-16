@@ -1,0 +1,193 @@
+{
+  "folder": "2D/kenney/roguelike-rpg-pack",
+  "title": "Roguelike Rpg Pack",
+  "author": "Kenney",
+  "author_url": "https://kenney.nl/",
+  "url": "https://kenney.nl/assets/category:2D",
+  "game_id": null,
+  "license_class": "CC0 1.0 (Creative Commons Zero)",
+  "attribution": "Optional",
+  "theme": "General",
+  "description": "Roguelike RPG Pack is a 2D general art pack by Kenney. Use it for game jams, prototypes, scene dressing. License: CC0 1.0 (Creative Commons Zero). Attribution: Optional.",
+  "category": "General",
+  "themes": [
+    "fantasy",
+    "general"
+  ],
+  "useCases": [
+    "game jams",
+    "prototypes",
+    "scene dressing"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "fantasy",
+    "general",
+    "sprite"
+  ],
+  "searchText": "roguelike rpg pack 2d/kenney/roguelike-rpg-pack kenney general cc0 1.0 (creative commons zero) optional roguelike rpg pack is a 2d general art pack by kenney. use it for game jams, prototypes, scene dressing. license: cc0 1.0 (creative commons zero). attribution: optional. fantasy general game jams prototypes scene dressing 2d art sprite",
+  "sampleCount": 4,
+  "samples": [
+    {
+      "packFolder": "2D/kenney/roguelike-rpg-pack",
+      "path": "2D/kenney/roguelike-rpg-pack/extracted/spritesheet/roguelikesheet-magenta.png",
+      "src": "/2D/kenney/roguelike-rpg-pack/extracted/spritesheet/roguelikesheet-magenta.png",
+      "label": "Roguelikesheet Magenta",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 968,
+        "height": 526,
+        "bgKind": "mixed",
+        "alphaCoverage": 1,
+        "transparentCoverage": 0,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Roguelikesheet Magenta is a static 2D character sample from Roguelike Rpg Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "fantasy",
+        "static"
+      ],
+      "searchText": "roguelikesheet magenta 2d/kenney/roguelike-rpg-pack/extracted/spritesheet/roguelikesheet-magenta.png roguelike rpg pack character roguelikesheet magenta is a static 2d character sample from roguelike rpg pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "2D/kenney/roguelike-rpg-pack",
+      "path": "2D/kenney/roguelike-rpg-pack/spritesheet/roguelikesheet-magenta.png",
+      "src": "/2D/kenney/roguelike-rpg-pack/spritesheet/roguelikesheet-magenta.png",
+      "label": "Roguelikesheet Magenta",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 968,
+        "height": 526,
+        "bgKind": "mixed",
+        "alphaCoverage": 1,
+        "transparentCoverage": 0,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Roguelikesheet Magenta is a static 2D character sample from Roguelike Rpg Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "fantasy",
+        "static"
+      ],
+      "searchText": "roguelikesheet magenta 2d/kenney/roguelike-rpg-pack/spritesheet/roguelikesheet-magenta.png roguelike rpg pack character roguelikesheet magenta is a static 2d character sample from roguelike rpg pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "2D/kenney/roguelike-rpg-pack",
+      "path": "2D/kenney/roguelike-rpg-pack/extracted/spritesheet/roguelikesheet-transparent.png",
+      "src": "/2D/kenney/roguelike-rpg-pack/extracted/spritesheet/roguelikesheet-transparent.png",
+      "label": "Roguelikesheet Transparent",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 968,
+        "height": 526,
+        "bgKind": "mixed",
+        "alphaCoverage": 0.681064523381295,
+        "transparentCoverage": 0.318935476618705,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Roguelikesheet Transparent is a static 2D image sample from Roguelike Rpg Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "fantasy",
+        "image"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "fantasy",
+        "image",
+        "static"
+      ],
+      "searchText": "roguelikesheet transparent 2d/kenney/roguelike-rpg-pack/extracted/spritesheet/roguelikesheet-transparent.png roguelike rpg pack image roguelikesheet transparent is a static 2d image sample from roguelike rpg pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "2D/kenney/roguelike-rpg-pack",
+      "path": "2D/kenney/roguelike-rpg-pack/spritesheet/roguelikesheet-transparent.png",
+      "src": "/2D/kenney/roguelike-rpg-pack/spritesheet/roguelikesheet-transparent.png",
+      "label": "Roguelikesheet Transparent",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 968,
+        "height": 526,
+        "bgKind": "mixed",
+        "alphaCoverage": 0.681064523381295,
+        "transparentCoverage": 0.318935476618705,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Roguelikesheet Transparent is a static 2D image sample from Roguelike Rpg Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "fantasy",
+        "image"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "fantasy",
+        "image",
+        "static"
+      ],
+      "searchText": "roguelikesheet transparent 2d/kenney/roguelike-rpg-pack/spritesheet/roguelikesheet-transparent.png roguelike rpg pack image roguelikesheet transparent is a static 2d image sample from roguelike rpg pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art static"
+    }
+  ]
+}

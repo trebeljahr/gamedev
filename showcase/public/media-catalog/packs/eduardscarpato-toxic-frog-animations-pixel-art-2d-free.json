@@ -1,0 +1,1487 @@
+{
+  "folder": "eduardscarpato-toxic-frog-animations-pixel-art-2d-free",
+  "title": "Toxic Frog Animations Pixel Art 2D FREE",
+  "author": "EduardScarpato",
+  "author_url": "https://eduardscarpato.itch.io",
+  "url": "https://eduardscarpato.itch.io/toxic-frog-animations-pixel-art-2d-free",
+  "game_id": 2135348,
+  "license_class": "Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms)",
+  "attribution": "Appreciated / not required",
+  "theme": "Animals",
+  "description": "Toxic Frog Animations Pixel Art 2 D Free is a 2D animals art pack by EduardScarpato. Use it for enemy variants, encounters, creature animation. License: Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). Attribution: Appreciated / not required.",
+  "category": "Animals",
+  "themes": [
+    "animals",
+    "nature",
+    "urban"
+  ],
+  "useCases": [
+    "enemy variants",
+    "encounters",
+    "creature animation"
+  ],
+  "tags": [
+    "2d",
+    "animals",
+    "art",
+    "nature",
+    "sprite",
+    "urban"
+  ],
+  "searchText": "toxic frog animations pixel art 2d free eduardscarpato-toxic-frog-animations-pixel-art-2d-free eduardscarpato animals free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms) appreciated / not required toxic frog animations pixel art 2 d free is a 2d animals art pack by eduardscarpato. use it for enemy variants, encounters, creature animation. license: free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). attribution: appreciated / not required. animals nature urban enemy variants encounters creature animation 2d art sprite",
+  "sampleCount": 36,
+  "samples": [
+    {
+      "packFolder": "eduardscarpato-toxic-frog-animations-pixel-art-2d-free",
+      "path": "2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/blueblue/toxicfrogblueblue-attack.png",
+      "src": "/2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/blueblue/toxicfrogblueblue-attack.png",
+      "label": "Toxicfrogblueblue Attack",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 288,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.11355377906976744,
+        "transparentCoverage": 0.8864462209302325,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Toxicfrogblueblue Attack is an animated 2D character sample from Toxic Frog Animations Pixel Art 2D FREE. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "searchText": "toxicfrogblueblue attack 2d/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/blueblue/toxicfrogblueblue-attack.png toxic frog animations pixel art 2d free character toxicfrogblueblue attack is an animated 2d character sample from toxic frog animations pixel art 2d free. useful for player characters, npcs, animation prototyping. toxic frog animations pixel art 2d free player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "eduardscarpato-toxic-frog-animations-pixel-art-2d-free",
+      "path": "2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/blueblue/toxicfrogblueblue-hurt.png",
+      "src": "/2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/blueblue/toxicfrogblueblue-hurt.png",
+      "label": "Toxicfrogblueblue Hurt",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 192,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.1095920138888889,
+        "transparentCoverage": 0.8904079861111112,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Toxicfrogblueblue Hurt is an animated 2D character sample from Toxic Frog Animations Pixel Art 2D FREE. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "searchText": "toxicfrogblueblue hurt 2d/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/blueblue/toxicfrogblueblue-hurt.png toxic frog animations pixel art 2d free character toxicfrogblueblue hurt is an animated 2d character sample from toxic frog animations pixel art 2d free. useful for player characters, npcs, animation prototyping. toxic frog animations pixel art 2d free player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "eduardscarpato-toxic-frog-animations-pixel-art-2d-free",
+      "path": "2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/blueblue/toxicfrogblueblue-idle.png",
+      "src": "/2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/blueblue/toxicfrogblueblue-idle.png",
+      "label": "Toxicfrogblueblue Idle",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 384,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.114501953125,
+        "transparentCoverage": 0.885498046875,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Toxicfrogblueblue Idle is an animated 2D character sample from Toxic Frog Animations Pixel Art 2D FREE. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "searchText": "toxicfrogblueblue idle 2d/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/blueblue/toxicfrogblueblue-idle.png toxic frog animations pixel art 2d free character toxicfrogblueblue idle is an animated 2d character sample from toxic frog animations pixel art 2d free. useful for player characters, npcs, animation prototyping. toxic frog animations pixel art 2d free player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "eduardscarpato-toxic-frog-animations-pixel-art-2d-free",
+      "path": "2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/bluebrown/toxicfrogbluebrown-attack.png",
+      "src": "/2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/bluebrown/toxicfrogbluebrown-attack.png",
+      "label": "Toxicfrogbluebrown Attack",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 288,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.11355377906976744,
+        "transparentCoverage": 0.8864462209302325,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Toxicfrogbluebrown Attack is an animated 2D character sample from Toxic Frog Animations Pixel Art 2D FREE. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "searchText": "toxicfrogbluebrown attack 2d/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/bluebrown/toxicfrogbluebrown-attack.png toxic frog animations pixel art 2d free character toxicfrogbluebrown attack is an animated 2d character sample from toxic frog animations pixel art 2d free. useful for player characters, npcs, animation prototyping. toxic frog animations pixel art 2d free player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "eduardscarpato-toxic-frog-animations-pixel-art-2d-free",
+      "path": "2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/bluebrown/toxicfrogbluebrown-hurt.png",
+      "src": "/2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/bluebrown/toxicfrogbluebrown-hurt.png",
+      "label": "Toxicfrogbluebrown Hurt",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 192,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.1095920138888889,
+        "transparentCoverage": 0.8904079861111112,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Toxicfrogbluebrown Hurt is an animated 2D character sample from Toxic Frog Animations Pixel Art 2D FREE. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "searchText": "toxicfrogbluebrown hurt 2d/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/bluebrown/toxicfrogbluebrown-hurt.png toxic frog animations pixel art 2d free character toxicfrogbluebrown hurt is an animated 2d character sample from toxic frog animations pixel art 2d free. useful for player characters, npcs, animation prototyping. toxic frog animations pixel art 2d free player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "eduardscarpato-toxic-frog-animations-pixel-art-2d-free",
+      "path": "2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/bluebrown/toxicfrogbluebrown-idle.png",
+      "src": "/2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/bluebrown/toxicfrogbluebrown-idle.png",
+      "label": "Toxicfrogbluebrown Idle",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 384,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.114501953125,
+        "transparentCoverage": 0.885498046875,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Toxicfrogbluebrown Idle is an animated 2D character sample from Toxic Frog Animations Pixel Art 2D FREE. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "searchText": "toxicfrogbluebrown idle 2d/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/bluebrown/toxicfrogbluebrown-idle.png toxic frog animations pixel art 2d free character toxicfrogbluebrown idle is an animated 2d character sample from toxic frog animations pixel art 2d free. useful for player characters, npcs, animation prototyping. toxic frog animations pixel art 2d free player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "eduardscarpato-toxic-frog-animations-pixel-art-2d-free",
+      "path": "2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/greenblue/toxicfroggreenblue-attack.png",
+      "src": "/2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/greenblue/toxicfroggreenblue-attack.png",
+      "label": "Toxicfroggreenblue Attack",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 288,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.11355377906976744,
+        "transparentCoverage": 0.8864462209302325,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Toxicfroggreenblue Attack is an animated 2D character sample from Toxic Frog Animations Pixel Art 2D FREE. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "searchText": "toxicfroggreenblue attack 2d/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/greenblue/toxicfroggreenblue-attack.png toxic frog animations pixel art 2d free character toxicfroggreenblue attack is an animated 2d character sample from toxic frog animations pixel art 2d free. useful for player characters, npcs, animation prototyping. toxic frog animations pixel art 2d free player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "eduardscarpato-toxic-frog-animations-pixel-art-2d-free",
+      "path": "2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/greenblue/toxicfroggreenblue-hurt.png",
+      "src": "/2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/greenblue/toxicfroggreenblue-hurt.png",
+      "label": "Toxicfroggreenblue Hurt",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 192,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.1095920138888889,
+        "transparentCoverage": 0.8904079861111112,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Toxicfroggreenblue Hurt is an animated 2D character sample from Toxic Frog Animations Pixel Art 2D FREE. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "searchText": "toxicfroggreenblue hurt 2d/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/greenblue/toxicfroggreenblue-hurt.png toxic frog animations pixel art 2d free character toxicfroggreenblue hurt is an animated 2d character sample from toxic frog animations pixel art 2d free. useful for player characters, npcs, animation prototyping. toxic frog animations pixel art 2d free player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "eduardscarpato-toxic-frog-animations-pixel-art-2d-free",
+      "path": "2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/greenblue/toxicfroggreenblue-idle.png",
+      "src": "/2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/greenblue/toxicfroggreenblue-idle.png",
+      "label": "Toxicfroggreenblue Idle",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 384,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.114501953125,
+        "transparentCoverage": 0.885498046875,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Toxicfroggreenblue Idle is an animated 2D character sample from Toxic Frog Animations Pixel Art 2D FREE. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "searchText": "toxicfroggreenblue idle 2d/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/greenblue/toxicfroggreenblue-idle.png toxic frog animations pixel art 2d free character toxicfroggreenblue idle is an animated 2d character sample from toxic frog animations pixel art 2d free. useful for player characters, npcs, animation prototyping. toxic frog animations pixel art 2d free player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "eduardscarpato-toxic-frog-animations-pixel-art-2d-free",
+      "path": "2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/greenbrown/toxicfroggreenbrown-attack.png",
+      "src": "/2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/greenbrown/toxicfroggreenbrown-attack.png",
+      "label": "Toxicfroggreenbrown Attack",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 288,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.11355377906976744,
+        "transparentCoverage": 0.8864462209302325,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Toxicfroggreenbrown Attack is an animated 2D character sample from Toxic Frog Animations Pixel Art 2D FREE. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "searchText": "toxicfroggreenbrown attack 2d/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/greenbrown/toxicfroggreenbrown-attack.png toxic frog animations pixel art 2d free character toxicfroggreenbrown attack is an animated 2d character sample from toxic frog animations pixel art 2d free. useful for player characters, npcs, animation prototyping. toxic frog animations pixel art 2d free player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "eduardscarpato-toxic-frog-animations-pixel-art-2d-free",
+      "path": "2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/greenbrown/toxicfroggreenbrown-hurt.png",
+      "src": "/2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/greenbrown/toxicfroggreenbrown-hurt.png",
+      "label": "Toxicfroggreenbrown Hurt",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 192,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.1095920138888889,
+        "transparentCoverage": 0.8904079861111112,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Toxicfroggreenbrown Hurt is an animated 2D character sample from Toxic Frog Animations Pixel Art 2D FREE. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "searchText": "toxicfroggreenbrown hurt 2d/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/greenbrown/toxicfroggreenbrown-hurt.png toxic frog animations pixel art 2d free character toxicfroggreenbrown hurt is an animated 2d character sample from toxic frog animations pixel art 2d free. useful for player characters, npcs, animation prototyping. toxic frog animations pixel art 2d free player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "eduardscarpato-toxic-frog-animations-pixel-art-2d-free",
+      "path": "2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/greenbrown/toxicfroggreenbrown-idle.png",
+      "src": "/2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/greenbrown/toxicfroggreenbrown-idle.png",
+      "label": "Toxicfroggreenbrown Idle",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 384,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.114501953125,
+        "transparentCoverage": 0.885498046875,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Toxicfroggreenbrown Idle is an animated 2D character sample from Toxic Frog Animations Pixel Art 2D FREE. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "searchText": "toxicfroggreenbrown idle 2d/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/greenbrown/toxicfroggreenbrown-idle.png toxic frog animations pixel art 2d free character toxicfroggreenbrown idle is an animated 2d character sample from toxic frog animations pixel art 2d free. useful for player characters, npcs, animation prototyping. toxic frog animations pixel art 2d free player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "eduardscarpato-toxic-frog-animations-pixel-art-2d-free",
+      "path": "2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/purpleblue/toxicfrogpurpleblue-attack.png",
+      "src": "/2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/purpleblue/toxicfrogpurpleblue-attack.png",
+      "label": "Toxicfrogpurpleblue Attack",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 288,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.11355377906976744,
+        "transparentCoverage": 0.8864462209302325,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Toxicfrogpurpleblue Attack is an animated 2D character sample from Toxic Frog Animations Pixel Art 2D FREE. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "searchText": "toxicfrogpurpleblue attack 2d/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/purpleblue/toxicfrogpurpleblue-attack.png toxic frog animations pixel art 2d free character toxicfrogpurpleblue attack is an animated 2d character sample from toxic frog animations pixel art 2d free. useful for player characters, npcs, animation prototyping. toxic frog animations pixel art 2d free player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "eduardscarpato-toxic-frog-animations-pixel-art-2d-free",
+      "path": "2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/purpleblue/toxicfrogpurpleblue-hurt.png",
+      "src": "/2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/purpleblue/toxicfrogpurpleblue-hurt.png",
+      "label": "Toxicfrogpurpleblue Hurt",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 192,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.1095920138888889,
+        "transparentCoverage": 0.8904079861111112,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Toxicfrogpurpleblue Hurt is an animated 2D character sample from Toxic Frog Animations Pixel Art 2D FREE. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "searchText": "toxicfrogpurpleblue hurt 2d/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/purpleblue/toxicfrogpurpleblue-hurt.png toxic frog animations pixel art 2d free character toxicfrogpurpleblue hurt is an animated 2d character sample from toxic frog animations pixel art 2d free. useful for player characters, npcs, animation prototyping. toxic frog animations pixel art 2d free player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "eduardscarpato-toxic-frog-animations-pixel-art-2d-free",
+      "path": "2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/purpleblue/toxicfrogpurpleblue-idle.png",
+      "src": "/2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/purpleblue/toxicfrogpurpleblue-idle.png",
+      "label": "Toxicfrogpurpleblue Idle",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 384,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.114501953125,
+        "transparentCoverage": 0.885498046875,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Toxicfrogpurpleblue Idle is an animated 2D character sample from Toxic Frog Animations Pixel Art 2D FREE. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "searchText": "toxicfrogpurpleblue idle 2d/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/purpleblue/toxicfrogpurpleblue-idle.png toxic frog animations pixel art 2d free character toxicfrogpurpleblue idle is an animated 2d character sample from toxic frog animations pixel art 2d free. useful for player characters, npcs, animation prototyping. toxic frog animations pixel art 2d free player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "eduardscarpato-toxic-frog-animations-pixel-art-2d-free",
+      "path": "2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/purplewhite/toxicfrogpurplewhite-attack.png",
+      "src": "/2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/purplewhite/toxicfrogpurplewhite-attack.png",
+      "label": "Toxicfrogpurplewhite Attack",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 288,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.11355377906976744,
+        "transparentCoverage": 0.8864462209302325,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Toxicfrogpurplewhite Attack is an animated 2D character sample from Toxic Frog Animations Pixel Art 2D FREE. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "searchText": "toxicfrogpurplewhite attack 2d/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/purplewhite/toxicfrogpurplewhite-attack.png toxic frog animations pixel art 2d free character toxicfrogpurplewhite attack is an animated 2d character sample from toxic frog animations pixel art 2d free. useful for player characters, npcs, animation prototyping. toxic frog animations pixel art 2d free player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "eduardscarpato-toxic-frog-animations-pixel-art-2d-free",
+      "path": "2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/purplewhite/toxicfrogpurplewhite-hurt.png",
+      "src": "/2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/purplewhite/toxicfrogpurplewhite-hurt.png",
+      "label": "Toxicfrogpurplewhite Hurt",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 192,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.1095920138888889,
+        "transparentCoverage": 0.8904079861111112,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Toxicfrogpurplewhite Hurt is an animated 2D character sample from Toxic Frog Animations Pixel Art 2D FREE. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "searchText": "toxicfrogpurplewhite hurt 2d/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/purplewhite/toxicfrogpurplewhite-hurt.png toxic frog animations pixel art 2d free character toxicfrogpurplewhite hurt is an animated 2d character sample from toxic frog animations pixel art 2d free. useful for player characters, npcs, animation prototyping. toxic frog animations pixel art 2d free player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "eduardscarpato-toxic-frog-animations-pixel-art-2d-free",
+      "path": "2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/purplewhite/toxicfrogpurplewhite-idle.png",
+      "src": "/2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/purplewhite/toxicfrogpurplewhite-idle.png",
+      "label": "Toxicfrogpurplewhite Idle",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 384,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.114501953125,
+        "transparentCoverage": 0.885498046875,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Toxicfrogpurplewhite Idle is an animated 2D character sample from Toxic Frog Animations Pixel Art 2D FREE. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "searchText": "toxicfrogpurplewhite idle 2d/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/purplewhite/toxicfrogpurplewhite-idle.png toxic frog animations pixel art 2d free character toxicfrogpurplewhite idle is an animated 2d character sample from toxic frog animations pixel art 2d free. useful for player characters, npcs, animation prototyping. toxic frog animations pixel art 2d free player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "eduardscarpato-toxic-frog-animations-pixel-art-2d-free",
+      "path": "2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/blueblue/toxicfrogblueblue-explosion.png",
+      "src": "/2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/blueblue/toxicfrogblueblue-explosion.png",
+      "label": "Toxicfrogblueblue Explosion",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 432,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.07059151785714286,
+        "transparentCoverage": 0.9294084821428571,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Toxicfrogblueblue Explosion is an animated 2D effect sample from Toxic Frog Animations Pixel Art 2D FREE. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "searchText": "toxicfrogblueblue explosion 2d/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/blueblue/toxicfrogblueblue-explosion.png toxic frog animations pixel art 2d free effect toxicfrogblueblue explosion is an animated 2d effect sample from toxic frog animations pixel art 2d free. useful for combat vfx, spell effects, hit feedback. toxic frog animations pixel art 2d free combat vfx spell effects hit feedback 2d animated art"
+    },
+    {
+      "packFolder": "eduardscarpato-toxic-frog-animations-pixel-art-2d-free",
+      "path": "2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/blueblue/toxicfrogblueblue-hop.png",
+      "src": "/2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/blueblue/toxicfrogblueblue-hop.png",
+      "label": "Toxicfrogblueblue Hop",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 336,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.11011402027027027,
+        "transparentCoverage": 0.8898859797297297,
+        "contentRowRuns": 1,
+        "contentColRuns": 7,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Toxicfrogblueblue Hop is an animated 2D character sample from Toxic Frog Animations Pixel Art 2D FREE. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "searchText": "toxicfrogblueblue hop 2d/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/blueblue/toxicfrogblueblue-hop.png toxic frog animations pixel art 2d free character toxicfrogblueblue hop is an animated 2d character sample from toxic frog animations pixel art 2d free. useful for player characters, npcs, animation prototyping. toxic frog animations pixel art 2d free player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "eduardscarpato-toxic-frog-animations-pixel-art-2d-free",
+      "path": "2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/blueblue/toxicfrogblueblue-sheet.png",
+      "src": "/2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/blueblue/toxicfrogblueblue-sheet.png",
+      "label": "Toxicfrogblueblue Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 432,
+        "height": 240,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.07537411971830986,
+        "transparentCoverage": 0.9246258802816901,
+        "contentRowRuns": 5,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 13,
+        "cellMedianHeight": 10
+      },
+      "promo": false,
+      "description": "Toxicfrogblueblue Sheet is an animated 2D character sample from Toxic Frog Animations Pixel Art 2D FREE. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "searchText": "toxicfrogblueblue sheet 2d/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/blueblue/toxicfrogblueblue-sheet.png toxic frog animations pixel art 2d free character toxicfrogblueblue sheet is an animated 2d character sample from toxic frog animations pixel art 2d free. useful for player characters, npcs, animation prototyping. toxic frog animations pixel art 2d free player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "eduardscarpato-toxic-frog-animations-pixel-art-2d-free",
+      "path": "2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/bluebrown/toxicfrogbluebrown-explosion.png",
+      "src": "/2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/bluebrown/toxicfrogbluebrown-explosion.png",
+      "label": "Toxicfrogbluebrown Explosion",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 432,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.07059151785714286,
+        "transparentCoverage": 0.9294084821428571,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Toxicfrogbluebrown Explosion is an animated 2D effect sample from Toxic Frog Animations Pixel Art 2D FREE. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "searchText": "toxicfrogbluebrown explosion 2d/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/bluebrown/toxicfrogbluebrown-explosion.png toxic frog animations pixel art 2d free effect toxicfrogbluebrown explosion is an animated 2d effect sample from toxic frog animations pixel art 2d free. useful for combat vfx, spell effects, hit feedback. toxic frog animations pixel art 2d free combat vfx spell effects hit feedback 2d animated art"
+    },
+    {
+      "packFolder": "eduardscarpato-toxic-frog-animations-pixel-art-2d-free",
+      "path": "2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/bluebrown/toxicfrogbluebrown-hop.png",
+      "src": "/2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/bluebrown/toxicfrogbluebrown-hop.png",
+      "label": "Toxicfrogbluebrown Hop",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 336,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.11011402027027027,
+        "transparentCoverage": 0.8898859797297297,
+        "contentRowRuns": 1,
+        "contentColRuns": 7,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Toxicfrogbluebrown Hop is an animated 2D character sample from Toxic Frog Animations Pixel Art 2D FREE. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "searchText": "toxicfrogbluebrown hop 2d/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/bluebrown/toxicfrogbluebrown-hop.png toxic frog animations pixel art 2d free character toxicfrogbluebrown hop is an animated 2d character sample from toxic frog animations pixel art 2d free. useful for player characters, npcs, animation prototyping. toxic frog animations pixel art 2d free player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "eduardscarpato-toxic-frog-animations-pixel-art-2d-free",
+      "path": "2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/bluebrown/toxicfrogbluebrown-sheet.png",
+      "src": "/2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/bluebrown/toxicfrogbluebrown-sheet.png",
+      "label": "Toxicfrogbluebrown Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 432,
+        "height": 240,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.07537411971830986,
+        "transparentCoverage": 0.9246258802816901,
+        "contentRowRuns": 5,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 13,
+        "cellMedianHeight": 10
+      },
+      "promo": false,
+      "description": "Toxicfrogbluebrown Sheet is an animated 2D character sample from Toxic Frog Animations Pixel Art 2D FREE. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "searchText": "toxicfrogbluebrown sheet 2d/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/bluebrown/toxicfrogbluebrown-sheet.png toxic frog animations pixel art 2d free character toxicfrogbluebrown sheet is an animated 2d character sample from toxic frog animations pixel art 2d free. useful for player characters, npcs, animation prototyping. toxic frog animations pixel art 2d free player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "eduardscarpato-toxic-frog-animations-pixel-art-2d-free",
+      "path": "2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/greenblue/toxicfroggreenblue-explosion.png",
+      "src": "/2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/greenblue/toxicfroggreenblue-explosion.png",
+      "label": "Toxicfroggreenblue Explosion",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 432,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.07059151785714286,
+        "transparentCoverage": 0.9294084821428571,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Toxicfroggreenblue Explosion is an animated 2D effect sample from Toxic Frog Animations Pixel Art 2D FREE. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "searchText": "toxicfroggreenblue explosion 2d/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/greenblue/toxicfroggreenblue-explosion.png toxic frog animations pixel art 2d free effect toxicfroggreenblue explosion is an animated 2d effect sample from toxic frog animations pixel art 2d free. useful for combat vfx, spell effects, hit feedback. toxic frog animations pixel art 2d free combat vfx spell effects hit feedback 2d animated art"
+    },
+    {
+      "packFolder": "eduardscarpato-toxic-frog-animations-pixel-art-2d-free",
+      "path": "2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/greenblue/toxicfroggreenblue-hop.png",
+      "src": "/2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/greenblue/toxicfroggreenblue-hop.png",
+      "label": "Toxicfroggreenblue Hop",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 336,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.11011402027027027,
+        "transparentCoverage": 0.8898859797297297,
+        "contentRowRuns": 1,
+        "contentColRuns": 7,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Toxicfroggreenblue Hop is an animated 2D character sample from Toxic Frog Animations Pixel Art 2D FREE. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "searchText": "toxicfroggreenblue hop 2d/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/greenblue/toxicfroggreenblue-hop.png toxic frog animations pixel art 2d free character toxicfroggreenblue hop is an animated 2d character sample from toxic frog animations pixel art 2d free. useful for player characters, npcs, animation prototyping. toxic frog animations pixel art 2d free player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "eduardscarpato-toxic-frog-animations-pixel-art-2d-free",
+      "path": "2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/greenblue/toxicfroggreenblue-sheet.png",
+      "src": "/2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/greenblue/toxicfroggreenblue-sheet.png",
+      "label": "Toxicfroggreenblue Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 432,
+        "height": 240,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.07537411971830986,
+        "transparentCoverage": 0.9246258802816901,
+        "contentRowRuns": 5,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 13,
+        "cellMedianHeight": 10
+      },
+      "promo": false,
+      "description": "Toxicfroggreenblue Sheet is an animated 2D character sample from Toxic Frog Animations Pixel Art 2D FREE. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "searchText": "toxicfroggreenblue sheet 2d/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/greenblue/toxicfroggreenblue-sheet.png toxic frog animations pixel art 2d free character toxicfroggreenblue sheet is an animated 2d character sample from toxic frog animations pixel art 2d free. useful for player characters, npcs, animation prototyping. toxic frog animations pixel art 2d free player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "eduardscarpato-toxic-frog-animations-pixel-art-2d-free",
+      "path": "2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/greenbrown/toxicfroggreenbrown-explosion.png",
+      "src": "/2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/greenbrown/toxicfroggreenbrown-explosion.png",
+      "label": "Toxicfroggreenbrown Explosion",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 432,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.07059151785714286,
+        "transparentCoverage": 0.9294084821428571,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Toxicfroggreenbrown Explosion is an animated 2D effect sample from Toxic Frog Animations Pixel Art 2D FREE. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "searchText": "toxicfroggreenbrown explosion 2d/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/greenbrown/toxicfroggreenbrown-explosion.png toxic frog animations pixel art 2d free effect toxicfroggreenbrown explosion is an animated 2d effect sample from toxic frog animations pixel art 2d free. useful for combat vfx, spell effects, hit feedback. toxic frog animations pixel art 2d free combat vfx spell effects hit feedback 2d animated art"
+    },
+    {
+      "packFolder": "eduardscarpato-toxic-frog-animations-pixel-art-2d-free",
+      "path": "2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/greenbrown/toxicfroggreenbrown-hop.png",
+      "src": "/2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/greenbrown/toxicfroggreenbrown-hop.png",
+      "label": "Toxicfroggreenbrown Hop",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 336,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.11011402027027027,
+        "transparentCoverage": 0.8898859797297297,
+        "contentRowRuns": 1,
+        "contentColRuns": 7,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Toxicfroggreenbrown Hop is an animated 2D character sample from Toxic Frog Animations Pixel Art 2D FREE. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "searchText": "toxicfroggreenbrown hop 2d/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/greenbrown/toxicfroggreenbrown-hop.png toxic frog animations pixel art 2d free character toxicfroggreenbrown hop is an animated 2d character sample from toxic frog animations pixel art 2d free. useful for player characters, npcs, animation prototyping. toxic frog animations pixel art 2d free player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "eduardscarpato-toxic-frog-animations-pixel-art-2d-free",
+      "path": "2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/greenbrown/toxicfroggreenbrown-sheet.png",
+      "src": "/2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/greenbrown/toxicfroggreenbrown-sheet.png",
+      "label": "Toxicfroggreenbrown Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 432,
+        "height": 240,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.07537411971830986,
+        "transparentCoverage": 0.9246258802816901,
+        "contentRowRuns": 5,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 13,
+        "cellMedianHeight": 10
+      },
+      "promo": false,
+      "description": "Toxicfroggreenbrown Sheet is an animated 2D character sample from Toxic Frog Animations Pixel Art 2D FREE. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "searchText": "toxicfroggreenbrown sheet 2d/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/greenbrown/toxicfroggreenbrown-sheet.png toxic frog animations pixel art 2d free character toxicfroggreenbrown sheet is an animated 2d character sample from toxic frog animations pixel art 2d free. useful for player characters, npcs, animation prototyping. toxic frog animations pixel art 2d free player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "eduardscarpato-toxic-frog-animations-pixel-art-2d-free",
+      "path": "2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/purpleblue/toxicfrogpurpleblue-explosion.png",
+      "src": "/2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/purpleblue/toxicfrogpurpleblue-explosion.png",
+      "label": "Toxicfrogpurpleblue Explosion",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 432,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.07059151785714286,
+        "transparentCoverage": 0.9294084821428571,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Toxicfrogpurpleblue Explosion is an animated 2D effect sample from Toxic Frog Animations Pixel Art 2D FREE. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "searchText": "toxicfrogpurpleblue explosion 2d/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/purpleblue/toxicfrogpurpleblue-explosion.png toxic frog animations pixel art 2d free effect toxicfrogpurpleblue explosion is an animated 2d effect sample from toxic frog animations pixel art 2d free. useful for combat vfx, spell effects, hit feedback. toxic frog animations pixel art 2d free combat vfx spell effects hit feedback 2d animated art"
+    },
+    {
+      "packFolder": "eduardscarpato-toxic-frog-animations-pixel-art-2d-free",
+      "path": "2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/purpleblue/toxicfrogpurpleblue-hop.png",
+      "src": "/2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/purpleblue/toxicfrogpurpleblue-hop.png",
+      "label": "Toxicfrogpurpleblue Hop",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 336,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.11011402027027027,
+        "transparentCoverage": 0.8898859797297297,
+        "contentRowRuns": 1,
+        "contentColRuns": 7,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Toxicfrogpurpleblue Hop is an animated 2D character sample from Toxic Frog Animations Pixel Art 2D FREE. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "searchText": "toxicfrogpurpleblue hop 2d/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/purpleblue/toxicfrogpurpleblue-hop.png toxic frog animations pixel art 2d free character toxicfrogpurpleblue hop is an animated 2d character sample from toxic frog animations pixel art 2d free. useful for player characters, npcs, animation prototyping. toxic frog animations pixel art 2d free player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "eduardscarpato-toxic-frog-animations-pixel-art-2d-free",
+      "path": "2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/purpleblue/toxicfrogpurpleblue-sheet.png",
+      "src": "/2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/purpleblue/toxicfrogpurpleblue-sheet.png",
+      "label": "Toxicfrogpurpleblue Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 432,
+        "height": 240,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.07537411971830986,
+        "transparentCoverage": 0.9246258802816901,
+        "contentRowRuns": 5,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 13,
+        "cellMedianHeight": 10
+      },
+      "promo": false,
+      "description": "Toxicfrogpurpleblue Sheet is an animated 2D character sample from Toxic Frog Animations Pixel Art 2D FREE. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "searchText": "toxicfrogpurpleblue sheet 2d/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/purpleblue/toxicfrogpurpleblue-sheet.png toxic frog animations pixel art 2d free character toxicfrogpurpleblue sheet is an animated 2d character sample from toxic frog animations pixel art 2d free. useful for player characters, npcs, animation prototyping. toxic frog animations pixel art 2d free player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "eduardscarpato-toxic-frog-animations-pixel-art-2d-free",
+      "path": "2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/purplewhite/toxicfrogpurplewhite-explosion.png",
+      "src": "/2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/purplewhite/toxicfrogpurplewhite-explosion.png",
+      "label": "Toxicfrogpurplewhite Explosion",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 432,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.07059151785714286,
+        "transparentCoverage": 0.9294084821428571,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Toxicfrogpurplewhite Explosion is an animated 2D effect sample from Toxic Frog Animations Pixel Art 2D FREE. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "searchText": "toxicfrogpurplewhite explosion 2d/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/purplewhite/toxicfrogpurplewhite-explosion.png toxic frog animations pixel art 2d free effect toxicfrogpurplewhite explosion is an animated 2d effect sample from toxic frog animations pixel art 2d free. useful for combat vfx, spell effects, hit feedback. toxic frog animations pixel art 2d free combat vfx spell effects hit feedback 2d animated art"
+    },
+    {
+      "packFolder": "eduardscarpato-toxic-frog-animations-pixel-art-2d-free",
+      "path": "2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/purplewhite/toxicfrogpurplewhite-hop.png",
+      "src": "/2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/purplewhite/toxicfrogpurplewhite-hop.png",
+      "label": "Toxicfrogpurplewhite Hop",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 336,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.11011402027027027,
+        "transparentCoverage": 0.8898859797297297,
+        "contentRowRuns": 1,
+        "contentColRuns": 7,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Toxicfrogpurplewhite Hop is an animated 2D character sample from Toxic Frog Animations Pixel Art 2D FREE. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "searchText": "toxicfrogpurplewhite hop 2d/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/purplewhite/toxicfrogpurplewhite-hop.png toxic frog animations pixel art 2d free character toxicfrogpurplewhite hop is an animated 2d character sample from toxic frog animations pixel art 2d free. useful for player characters, npcs, animation prototyping. toxic frog animations pixel art 2d free player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "eduardscarpato-toxic-frog-animations-pixel-art-2d-free",
+      "path": "2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/purplewhite/toxicfrogpurplewhite-sheet.png",
+      "src": "/2D/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/purplewhite/toxicfrogpurplewhite-sheet.png",
+      "label": "Toxicfrogpurplewhite Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 432,
+        "height": 240,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.07537411971830986,
+        "transparentCoverage": 0.9246258802816901,
+        "contentRowRuns": 5,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 13,
+        "cellMedianHeight": 10
+      },
+      "promo": false,
+      "description": "Toxicfrogpurplewhite Sheet is an animated 2D character sample from Toxic Frog Animations Pixel Art 2D FREE. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "toxic frog animations pixel art 2d free"
+      ],
+      "searchText": "toxicfrogpurplewhite sheet 2d/eduardscarpato-toxic-frog-animations-pixel-art-2d-free/extracted/toxicfrog/purplewhite/toxicfrogpurplewhite-sheet.png toxic frog animations pixel art 2d free character toxicfrogpurplewhite sheet is an animated 2d character sample from toxic frog animations pixel art 2d free. useful for player characters, npcs, animation prototyping. toxic frog animations pixel art 2d free player characters npcs animation prototyping 2d animated art"
+    }
+  ]
+}

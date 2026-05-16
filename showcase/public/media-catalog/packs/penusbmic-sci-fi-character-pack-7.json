@@ -1,0 +1,199 @@
+{
+  "folder": "penusbmic-sci-fi-character-pack-7",
+  "title": "Sci Fi Character Pack 7",
+  "author": "penusbmic",
+  "author_url": "https://penusbmic.itch.io",
+  "url": "https://penusbmic.itch.io/sci-fi-character-pack-7",
+  "game_id": null,
+  "license_class": "Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms)",
+  "attribution": "Appreciated / not required",
+  "theme": "Vehicles & Sci-Fi",
+  "description": "SCI Fi Character Pack 7 is a 2D vehicles & sci-fi art pack by penusbmic. Use it for player characters, NPCs, animation prototyping. License: Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). Attribution: Appreciated / not required.",
+  "category": "Vehicles & Sci-Fi",
+  "themes": [
+    "sci-fi",
+    "urban",
+    "vehicles & sci-fi"
+  ],
+  "useCases": [
+    "player characters",
+    "NPCs",
+    "animation prototyping"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "sci-fi",
+    "sprite",
+    "urban",
+    "vehicles & sci-fi"
+  ],
+  "searchText": "sci fi character pack 7 penusbmic-sci-fi-character-pack-7 penusbmic vehicles & sci-fi free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms) appreciated / not required sci fi character pack 7 is a 2d vehicles & sci-fi art pack by penusbmic. use it for player characters, npcs, animation prototyping. license: free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). attribution: appreciated / not required. sci-fi urban vehicles & sci-fi player characters npcs animation prototyping 2d art sprite",
+  "sampleCount": 4,
+  "samples": [
+    {
+      "packFolder": "penusbmic-sci-fi-character-pack-7",
+      "path": "2D/penusbmic-sci-fi-character-pack-7/extracted/mud-guard/mud-guard/attack-2.png",
+      "src": "/2D/penusbmic-sci-fi-character-pack-7/extracted/mud-guard/mud-guard/attack-2.png",
+      "label": "Attack 2",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 82,
+        "height": 161,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.08688077564005453,
+        "transparentCoverage": 0.9131192243599454,
+        "contentRowRuns": 7,
+        "contentColRuns": 2,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": true,
+        "cellMedianWidth": 37,
+        "cellMedianHeight": 16
+      },
+      "promo": false,
+      "description": "Attack 2 is an animated 2D character sample from Sci Fi Character Pack 7. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "sci-fi"
+      ],
+      "searchText": "attack 2 2d/penusbmic-sci-fi-character-pack-7/extracted/mud-guard/mud-guard/attack-2.png sci fi character pack 7 character attack 2 is an animated 2d character sample from sci fi character pack 7. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "penusbmic-sci-fi-character-pack-7",
+      "path": "2D/penusbmic-sci-fi-character-pack-7/extracted/mud-guard/mud-guard/attack-1.png",
+      "src": "/2D/penusbmic-sci-fi-character-pack-7/extracted/mud-guard/mud-guard/attack-1.png",
+      "label": "Attack 1",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 82,
+        "height": 161,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0689289501590668,
+        "transparentCoverage": 0.9310710498409331,
+        "contentRowRuns": 7,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Attack 1 is an animated 2D character sample from Sci Fi Character Pack 7. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "sci-fi"
+      ],
+      "searchText": "attack 1 2d/penusbmic-sci-fi-character-pack-7/extracted/mud-guard/mud-guard/attack-1.png sci fi character pack 7 character attack 1 is an animated 2d character sample from sci fi character pack 7. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "penusbmic-sci-fi-character-pack-7",
+      "path": "2D/penusbmic-sci-fi-character-pack-7/extracted/mud-guard/mud-guard/damaged-and-death.png",
+      "src": "/2D/penusbmic-sci-fi-character-pack-7/extracted/mud-guard/mud-guard/damaged-and-death.png",
+      "label": "Damaged And Death",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 82,
+        "height": 184,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.06819989395546129,
+        "transparentCoverage": 0.9318001060445387,
+        "contentRowRuns": 9,
+        "contentColRuns": 3,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 9,
+        "cellMedianHeight": 12
+      },
+      "promo": false,
+      "description": "Damaged And Death is an animated 2D character sample from Sci Fi Character Pack 7. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "sci-fi"
+      ],
+      "searchText": "damaged and death 2d/penusbmic-sci-fi-character-pack-7/extracted/mud-guard/mud-guard/damaged-and-death.png sci fi character pack 7 character damaged and death is an animated 2d character sample from sci fi character pack 7. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "penusbmic-sci-fi-character-pack-7",
+      "path": "2D/penusbmic-sci-fi-character-pack-7/extracted/mud-guard/mud-guard/idle.png",
+      "src": "/2D/penusbmic-sci-fi-character-pack-7/extracted/mud-guard/mud-guard/idle.png",
+      "label": "Idle",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 82,
+        "height": 115,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.07104984093319194,
+        "transparentCoverage": 0.9289501590668081,
+        "contentRowRuns": 5,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Idle is an animated 2D character sample from Sci Fi Character Pack 7. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "sci-fi"
+      ],
+      "searchText": "idle 2d/penusbmic-sci-fi-character-pack-7/extracted/mud-guard/mud-guard/idle.png sci fi character pack 7 character idle is an animated 2d character sample from sci fi character pack 7. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art"
+    }
+  ]
+}

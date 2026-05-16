@@ -1,0 +1,113 @@
+{
+  "folder": "escape-pixel-shadow-series-duskclaw",
+  "title": "SHADOW Series - Duskclaw",
+  "author": "escape-pixel",
+  "author_url": "https://escape-pixel.itch.io",
+  "url": "https://escape-pixel.itch.io/shadow-series-duskclaw",
+  "game_id": 3767017,
+  "license_class": "Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms)",
+  "attribution": "Appreciated / not required",
+  "theme": "General",
+  "description": "Shadow Series Duskclaw is a 2D general art pack by escape-pixel. Use it for game jams, prototypes, scene dressing. License: Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). Attribution: Appreciated / not required.",
+  "category": "General",
+  "themes": [
+    "general",
+    "urban"
+  ],
+  "useCases": [
+    "game jams",
+    "prototypes",
+    "scene dressing"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "general",
+    "sprite",
+    "urban"
+  ],
+  "searchText": "shadow series - duskclaw escape-pixel-shadow-series-duskclaw escape-pixel general free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms) appreciated / not required shadow series duskclaw is a 2d general art pack by escape-pixel. use it for game jams, prototypes, scene dressing. license: free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). attribution: appreciated / not required. general urban game jams prototypes scene dressing 2d art sprite",
+  "sampleCount": 2,
+  "samples": [
+    {
+      "packFolder": "escape-pixel-shadow-series-duskclaw",
+      "path": "2D/escape-pixel-shadow-series-duskclaw/extracted/shadow-series-duskclaw-free/shadow-series-duskclaw-free/png/idle-break.png",
+      "src": "/2D/escape-pixel-shadow-series-duskclaw/extracted/shadow-series-duskclaw-free/shadow-series-duskclaw-free/png/idle-break.png",
+      "label": "Idle Break",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 2816,
+        "height": 39,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.07682291666666667,
+        "transparentCoverage": 0.9231770833333334,
+        "contentRowRuns": 1,
+        "contentColRuns": 15,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Idle Break is an animated 2D image sample from SHADOW Series - Duskclaw. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "shadow series - duskclaw"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "shadow series - duskclaw"
+      ],
+      "searchText": "idle break 2d/escape-pixel-shadow-series-duskclaw/extracted/shadow-series-duskclaw-free/shadow-series-duskclaw-free/png/idle-break.png shadow series - duskclaw image idle break is an animated 2d image sample from shadow series - duskclaw. useful for player characters, npcs, animation prototyping. shadow series - duskclaw player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "escape-pixel-shadow-series-duskclaw",
+      "path": "2D/escape-pixel-shadow-series-duskclaw/extracted/shadow-series-duskclaw-free/shadow-series-duskclaw-free/png/idle.png",
+      "src": "/2D/escape-pixel-shadow-series-duskclaw/extracted/shadow-series-duskclaw-free/shadow-series-duskclaw-free/png/idle.png",
+      "label": "Idle",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 1408,
+        "height": 39,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.05859375,
+        "transparentCoverage": 0.94140625,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Idle is an animated 2D image sample from SHADOW Series - Duskclaw. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "shadow series - duskclaw"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "shadow series - duskclaw"
+      ],
+      "searchText": "idle 2d/escape-pixel-shadow-series-duskclaw/extracted/shadow-series-duskclaw-free/shadow-series-duskclaw-free/png/idle.png shadow series - duskclaw image idle is an animated 2d image sample from shadow series - duskclaw. useful for player characters, npcs, animation prototyping. shadow series - duskclaw player characters npcs animation prototyping 2d animated art"
+    }
+  ]
+}

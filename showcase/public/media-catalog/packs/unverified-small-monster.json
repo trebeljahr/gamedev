@@ -1,0 +1,195 @@
+{
+  "folder": "unverified-small-monster",
+  "title": "Small Monster",
+  "author": "unverified",
+  "author_url": "https://unverified.itch.io",
+  "url": null,
+  "game_id": null,
+  "license_class": "Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms)",
+  "attribution": "Appreciated / not required",
+  "theme": "Enemies",
+  "description": "Small Monster is a 2D enemies art pack by unverified. Use it for enemy variants, encounters, creature animation. License: Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). Attribution: Appreciated / not required.",
+  "category": "Enemies",
+  "themes": [
+    "enemies",
+    "urban"
+  ],
+  "useCases": [
+    "enemy variants",
+    "encounters",
+    "creature animation"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "enemies",
+    "sprite",
+    "urban"
+  ],
+  "searchText": "small monster unverified-small-monster unverified enemies free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms) appreciated / not required small monster is a 2d enemies art pack by unverified. use it for enemy variants, encounters, creature animation. license: free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). attribution: appreciated / not required. enemies urban enemy variants encounters creature animation 2d art sprite",
+  "sampleCount": 4,
+  "samples": [
+    {
+      "packFolder": "unverified-small-monster",
+      "path": "2D/unverified-small-monster/extracted/small-monster/small-monster/attack.png",
+      "src": "/2D/unverified-small-monster/extracted/small-monster/small-monster/attack.png",
+      "label": "Attack",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 82,
+        "height": 507,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.053353658536585365,
+        "transparentCoverage": 0.9466463414634146,
+        "contentRowRuns": 26,
+        "contentColRuns": 2,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 18,
+        "cellMedianHeight": 6
+      },
+      "promo": false,
+      "description": "Attack is an animated 2D character sample from Small Monster. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "small monster"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "small monster"
+      ],
+      "searchText": "attack 2d/unverified-small-monster/extracted/small-monster/small-monster/attack.png small monster character attack is an animated 2d character sample from small monster. useful for player characters, npcs, animation prototyping. small monster player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "unverified-small-monster",
+      "path": "2D/unverified-small-monster/extracted/small-monster/small-monster/small-modeath-and-damagedt.png",
+      "src": "/2D/unverified-small-monster/extracted/small-monster/small-monster/small-modeath-and-damagedt.png",
+      "label": "Small Modeath And Damagedt",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 82,
+        "height": 351,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.048828125,
+        "transparentCoverage": 0.951171875,
+        "contentRowRuns": 13,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Small Modeath And Damagedt is an animated 2D character sample from Small Monster. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "small monster"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "small monster"
+      ],
+      "searchText": "small modeath and damagedt 2d/unverified-small-monster/extracted/small-monster/small-monster/small-modeath-and-damagedt.png small monster character small modeath and damagedt is an animated 2d character sample from small monster. useful for player characters, npcs, animation prototyping. small monster player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "unverified-small-monster",
+      "path": "2D/unverified-small-monster/extracted/small-monster/small-monster/small-moidle.png",
+      "src": "/2D/unverified-small-monster/extracted/small-monster/small-monster/small-moidle.png",
+      "label": "Small Moidle",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 82,
+        "height": 234,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.04784240150093809,
+        "transparentCoverage": 0.9521575984990619,
+        "contentRowRuns": 11,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Small Moidle is an animated 2D character sample from Small Monster. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "small monster"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "small monster"
+      ],
+      "searchText": "small moidle 2d/unverified-small-monster/extracted/small-monster/small-monster/small-moidle.png small monster character small moidle is an animated 2d character sample from small monster. useful for player characters, npcs, animation prototyping. small monster player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "unverified-small-monster",
+      "path": "2D/unverified-small-monster/extracted/small-monster/small-monster/small-morun.png",
+      "src": "/2D/unverified-small-monster/extracted/small-monster/small-monster/small-morun.png",
+      "label": "Small Morun",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 82,
+        "height": 234,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.04612257661038149,
+        "transparentCoverage": 0.9538774233896186,
+        "contentRowRuns": 12,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Small Morun is an animated 2D character sample from Small Monster. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "small monster"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "small monster"
+      ],
+      "searchText": "small morun 2d/unverified-small-monster/extracted/small-monster/small-monster/small-morun.png small monster character small morun is an animated 2d character sample from small monster. useful for player characters, npcs, animation prototyping. small monster player characters npcs animation prototyping 2d animated art"
+    }
+  ]
+}

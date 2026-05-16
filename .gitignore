@@ -107,9 +107,10 @@ build/
 # Bbox cache rebuilt by `pnpm manifest`. Keyed by file mtime, so
 # committing it just causes merge churn.
 .manifest-bbox-cache.json
-# Generated catalog JSON under showcase/src/lib is checked in. CI and
-# fresh checkouts do not have assets/, so committed catalogs are the
-# build input until a developer refreshes them manually.
+# Generated catalog JSON under showcase/src/lib and showcase/public is
+# checked in (including the per-pack files in showcase/public/media-catalog/
+# packs/). CI and fresh checkouts do not have assets/, so committed catalogs
+# are the build input until a developer refreshes them manually.
 
 # --- OS / editor -----------------------------------------------------------
 .DS_Store

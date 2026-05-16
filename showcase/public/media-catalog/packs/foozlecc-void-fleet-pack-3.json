@@ -1,0 +1,1792 @@
+{
+  "folder": "foozlecc-void-fleet-pack-3",
+  "title": "Void - Fleet Pack 3 - Nautolan",
+  "author": "FoozleCC",
+  "author_url": "https://foozlecc.itch.io",
+  "url": "https://foozlecc.itch.io/void-fleet-pack-3",
+  "game_id": 1668136,
+  "license_class": "CC0 1.0 (Creative Commons Zero)",
+  "attribution": "Optional",
+  "theme": "Vehicles & Sci-Fi",
+  "description": "Void Fleet Pack 3 Nautolan is a 2D vehicles & sci-fi art pack by FoozleCC. Use it for shooters, space encounters, sci-fi prototyping. License: CC0 1.0 (Creative Commons Zero). Attribution: Optional.",
+  "category": "Vehicles & Sci-Fi",
+  "themes": [
+    "sci-fi",
+    "vehicles & sci-fi"
+  ],
+  "useCases": [
+    "shooters",
+    "space encounters",
+    "sci-fi prototyping"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "sci-fi",
+    "sprite",
+    "vehicles & sci-fi"
+  ],
+  "searchText": "void - fleet pack 3 - nautolan foozlecc-void-fleet-pack-3 foozlecc vehicles & sci-fi cc0 1.0 (creative commons zero) optional void fleet pack 3 nautolan is a 2d vehicles & sci-fi art pack by foozlecc. use it for shooters, space encounters, sci-fi prototyping. license: cc0 1.0 (creative commons zero). attribution: optional. sci-fi vehicles & sci-fi shooters space encounters sci-fi prototyping 2d art sprite",
+  "sampleCount": 43,
+  "samples": [
+    {
+      "packFolder": "foozlecc-void-fleet-pack-3",
+      "path": "2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/destruction/pngs/nautolan-ship-battlecruiser.png",
+      "src": "/2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/destruction/pngs/nautolan-ship-battlecruiser.png",
+      "label": "Nautolan Ship Battlecruiser",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 1664,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.11595394736842106,
+        "transparentCoverage": 0.884046052631579,
+        "contentRowRuns": 1,
+        "contentColRuns": 12,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nautolan Ship Battlecruiser is an animated 2D image sample from Void - Fleet Pack 3 - Nautolan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "sci-fi",
+        "vehicle"
+      ],
+      "searchText": "nautolan ship battlecruiser 2d/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/destruction/pngs/nautolan-ship-battlecruiser.png void - fleet pack 3 - nautolan image nautolan ship battlecruiser is an animated 2d image sample from void - fleet pack 3 - nautolan. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-3",
+      "path": "2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/destruction/pngs/nautolan-ship-bomber.png",
+      "src": "/2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/destruction/pngs/nautolan-ship-bomber.png",
+      "label": "Nautolan Ship Bomber",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 640,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.10396634615384616,
+        "transparentCoverage": 0.8960336538461539,
+        "contentRowRuns": 1,
+        "contentColRuns": 16,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nautolan Ship Bomber is an animated 2D image sample from Void - Fleet Pack 3 - Nautolan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "sci-fi",
+        "vehicle"
+      ],
+      "searchText": "nautolan ship bomber 2d/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/destruction/pngs/nautolan-ship-bomber.png void - fleet pack 3 - nautolan image nautolan ship bomber is an animated 2d image sample from void - fleet pack 3 - nautolan. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-3",
+      "path": "2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/destruction/pngs/nautolan-ship-dreadnought.png",
+      "src": "/2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/destruction/pngs/nautolan-ship-dreadnought.png",
+      "label": "Nautolan Ship Dreadnought",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 1536,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.18284970238095238,
+        "transparentCoverage": 0.8171502976190477,
+        "contentRowRuns": 1,
+        "contentColRuns": 14,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nautolan Ship Dreadnought is an animated 2D image sample from Void - Fleet Pack 3 - Nautolan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "sci-fi",
+        "vehicle"
+      ],
+      "searchText": "nautolan ship dreadnought 2d/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/destruction/pngs/nautolan-ship-dreadnought.png void - fleet pack 3 - nautolan image nautolan ship dreadnought is an animated 2d image sample from void - fleet pack 3 - nautolan. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-3",
+      "path": "2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/destruction/pngs/nautolan-ship-fighter.png",
+      "src": "/2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/destruction/pngs/nautolan-ship-fighter.png",
+      "label": "Nautolan Ship Fighter",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 576,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.12667410714285715,
+        "transparentCoverage": 0.8733258928571429,
+        "contentRowRuns": 1,
+        "contentColRuns": 12,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nautolan Ship Fighter is an animated 2D image sample from Void - Fleet Pack 3 - Nautolan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "sci-fi",
+        "vehicle"
+      ],
+      "searchText": "nautolan ship fighter 2d/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/destruction/pngs/nautolan-ship-fighter.png void - fleet pack 3 - nautolan image nautolan ship fighter is an animated 2d image sample from void - fleet pack 3 - nautolan. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-3",
+      "path": "2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/destruction/pngs/nautolan-ship-frigate.png",
+      "src": "/2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/destruction/pngs/nautolan-ship-frigate.png",
+      "label": "Nautolan Ship Frigate",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 576,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.193359375,
+        "transparentCoverage": 0.806640625,
+        "contentRowRuns": 1,
+        "contentColRuns": 15,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nautolan Ship Frigate is an animated 2D image sample from Void - Fleet Pack 3 - Nautolan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "sci-fi",
+        "vehicle"
+      ],
+      "searchText": "nautolan ship frigate 2d/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/destruction/pngs/nautolan-ship-frigate.png void - fleet pack 3 - nautolan image nautolan ship frigate is an animated 2d image sample from void - fleet pack 3 - nautolan. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-3",
+      "path": "2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/destruction/pngs/nautolan-ship-scout.png",
+      "src": "/2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/destruction/pngs/nautolan-ship-scout.png",
+      "label": "Nautolan Ship Scout",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 576,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.10756138392857142,
+        "transparentCoverage": 0.8924386160714286,
+        "contentRowRuns": 1,
+        "contentColRuns": 14,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nautolan Ship Scout is an animated 2D image sample from Void - Fleet Pack 3 - Nautolan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "sci-fi",
+        "vehicle"
+      ],
+      "searchText": "nautolan ship scout 2d/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/destruction/pngs/nautolan-ship-scout.png void - fleet pack 3 - nautolan image nautolan ship scout is an animated 2d image sample from void - fleet pack 3 - nautolan. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-3",
+      "path": "2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/destruction/pngs/nautolan-ship-support.png",
+      "src": "/2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/destruction/pngs/nautolan-ship-support.png",
+      "label": "Nautolan Ship Support",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 512,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.11669921875,
+        "transparentCoverage": 0.88330078125,
+        "contentRowRuns": 1,
+        "contentColRuns": 12,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nautolan Ship Support is an animated 2D image sample from Void - Fleet Pack 3 - Nautolan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "sci-fi",
+        "vehicle"
+      ],
+      "searchText": "nautolan ship support 2d/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/destruction/pngs/nautolan-ship-support.png void - fleet pack 3 - nautolan image nautolan ship support is an animated 2d image sample from void - fleet pack 3 - nautolan. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-3",
+      "path": "2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/destruction/pngs/nautolan-ship-torpedo-ship.png",
+      "src": "/2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/destruction/pngs/nautolan-ship-torpedo-ship.png",
+      "label": "Nautolan Ship Torpedo Ship",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 512,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.1175537109375,
+        "transparentCoverage": 0.8824462890625,
+        "contentRowRuns": 1,
+        "contentColRuns": 12,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nautolan Ship Torpedo Ship is an animated 2D image sample from Void - Fleet Pack 3 - Nautolan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "sci-fi",
+        "vehicle"
+      ],
+      "searchText": "nautolan ship torpedo ship 2d/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/destruction/pngs/nautolan-ship-torpedo-ship.png void - fleet pack 3 - nautolan image nautolan ship torpedo ship is an animated 2d image sample from void - fleet pack 3 - nautolan. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-3",
+      "path": "2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/engine-effects/pngs/nautolan-ship-battlecruiser-engine-effect.png",
+      "src": "/2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/engine-effects/pngs/nautolan-ship-battlecruiser-engine-effect.png",
+      "label": "Nautolan Ship Battlecruiser Engine Effect",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 1024,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0078125,
+        "transparentCoverage": 0.985595703125,
+        "contentRowRuns": 1,
+        "contentColRuns": 16,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nautolan Ship Battlecruiser Engine Effect is an animated 2D effect sample from Void - Fleet Pack 3 - Nautolan. Useful for enemy variants, encounters, creature animation.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "sci-fi"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "sci-fi",
+        "vehicle"
+      ],
+      "searchText": "nautolan ship battlecruiser engine effect 2d/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/engine-effects/pngs/nautolan-ship-battlecruiser-engine-effect.png void - fleet pack 3 - nautolan effect nautolan ship battlecruiser engine effect is an animated 2d effect sample from void - fleet pack 3 - nautolan. useful for enemy variants, encounters, creature animation. sci-fi enemy variants encounters creature animation 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-3",
+      "path": "2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/engine-effects/pngs/nautolan-ship-bomber-engine-effect.png",
+      "src": "/2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/engine-effects/pngs/nautolan-ship-bomber-engine-effect.png",
+      "label": "Nautolan Ship Bomber Engine Effect",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 512,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0152587890625,
+        "transparentCoverage": 0.972900390625,
+        "contentRowRuns": 1,
+        "contentColRuns": 16,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nautolan Ship Bomber Engine Effect is an animated 2D effect sample from Void - Fleet Pack 3 - Nautolan. Useful for enemy variants, encounters, creature animation.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "sci-fi"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "sci-fi",
+        "vehicle"
+      ],
+      "searchText": "nautolan ship bomber engine effect 2d/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/engine-effects/pngs/nautolan-ship-bomber-engine-effect.png void - fleet pack 3 - nautolan effect nautolan ship bomber engine effect is an animated 2d effect sample from void - fleet pack 3 - nautolan. useful for enemy variants, encounters, creature animation. sci-fi enemy variants encounters creature animation 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-3",
+      "path": "2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/engine-effects/pngs/nautolan-ship-dreadnought-engine-effect.png",
+      "src": "/2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/engine-effects/pngs/nautolan-ship-dreadnought-engine-effect.png",
+      "label": "Nautolan Ship Dreadnought Engine Effect",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 1024,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0029296875,
+        "transparentCoverage": 0.98828125,
+        "contentRowRuns": 1,
+        "contentColRuns": 16,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nautolan Ship Dreadnought Engine Effect is an animated 2D effect sample from Void - Fleet Pack 3 - Nautolan. Useful for enemy variants, encounters, creature animation.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "sci-fi"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "sci-fi",
+        "vehicle"
+      ],
+      "searchText": "nautolan ship dreadnought engine effect 2d/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/engine-effects/pngs/nautolan-ship-dreadnought-engine-effect.png void - fleet pack 3 - nautolan effect nautolan ship dreadnought engine effect is an animated 2d effect sample from void - fleet pack 3 - nautolan. useful for enemy variants, encounters, creature animation. sci-fi enemy variants encounters creature animation 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-3",
+      "path": "2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/engine-effects/pngs/nautolan-ship-fighter-engine-effect.png",
+      "src": "/2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/engine-effects/pngs/nautolan-ship-fighter-engine-effect.png",
+      "label": "Nautolan Ship Fighter Engine Effect",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 512,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.015380859375,
+        "transparentCoverage": 0.9727783203125,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nautolan Ship Fighter Engine Effect is an animated 2D effect sample from Void - Fleet Pack 3 - Nautolan. Useful for enemy variants, encounters, creature animation.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "sci-fi"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "sci-fi",
+        "vehicle"
+      ],
+      "searchText": "nautolan ship fighter engine effect 2d/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/engine-effects/pngs/nautolan-ship-fighter-engine-effect.png void - fleet pack 3 - nautolan effect nautolan ship fighter engine effect is an animated 2d effect sample from void - fleet pack 3 - nautolan. useful for enemy variants, encounters, creature animation. sci-fi enemy variants encounters creature animation 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-3",
+      "path": "2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/engine-effects/pngs/nautolan-ship-frigate-engine-effect.png",
+      "src": "/2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/engine-effects/pngs/nautolan-ship-frigate-engine-effect.png",
+      "label": "Nautolan Ship Frigate Engine Effect",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 512,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0107421875,
+        "transparentCoverage": 0.9754638671875,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nautolan Ship Frigate Engine Effect is an animated 2D effect sample from Void - Fleet Pack 3 - Nautolan. Useful for enemy variants, encounters, creature animation.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "sci-fi"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "sci-fi",
+        "vehicle"
+      ],
+      "searchText": "nautolan ship frigate engine effect 2d/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/engine-effects/pngs/nautolan-ship-frigate-engine-effect.png void - fleet pack 3 - nautolan effect nautolan ship frigate engine effect is an animated 2d effect sample from void - fleet pack 3 - nautolan. useful for enemy variants, encounters, creature animation. sci-fi enemy variants encounters creature animation 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-3",
+      "path": "2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/engine-effects/pngs/nautolan-ship-scout-engine-effect.png",
+      "src": "/2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/engine-effects/pngs/nautolan-ship-scout-engine-effect.png",
+      "label": "Nautolan Ship Scout Engine Effect",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 512,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.017578125,
+        "transparentCoverage": 0.9693603515625,
+        "contentRowRuns": 1,
+        "contentColRuns": 16,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nautolan Ship Scout Engine Effect is an animated 2D effect sample from Void - Fleet Pack 3 - Nautolan. Useful for enemy variants, encounters, creature animation.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "sci-fi"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "sci-fi",
+        "vehicle"
+      ],
+      "searchText": "nautolan ship scout engine effect 2d/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/engine-effects/pngs/nautolan-ship-scout-engine-effect.png void - fleet pack 3 - nautolan effect nautolan ship scout engine effect is an animated 2d effect sample from void - fleet pack 3 - nautolan. useful for enemy variants, encounters, creature animation. sci-fi enemy variants encounters creature animation 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-3",
+      "path": "2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/engine-effects/pngs/nautolan-ship-support-engine-effect.png",
+      "src": "/2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/engine-effects/pngs/nautolan-ship-support-engine-effect.png",
+      "label": "Nautolan Ship Support Engine Effect",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 512,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.03076171875,
+        "transparentCoverage": 0.9453125,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nautolan Ship Support Engine Effect is an animated 2D effect sample from Void - Fleet Pack 3 - Nautolan. Useful for enemy variants, encounters, creature animation.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "sci-fi"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "sci-fi",
+        "vehicle"
+      ],
+      "searchText": "nautolan ship support engine effect 2d/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/engine-effects/pngs/nautolan-ship-support-engine-effect.png void - fleet pack 3 - nautolan effect nautolan ship support engine effect is an animated 2d effect sample from void - fleet pack 3 - nautolan. useful for enemy variants, encounters, creature animation. sci-fi enemy variants encounters creature animation 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-3",
+      "path": "2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/engine-effects/pngs/nautolan-ship-torpedo-ship-engine-effect.png",
+      "src": "/2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/engine-effects/pngs/nautolan-ship-torpedo-ship-engine-effect.png",
+      "label": "Nautolan Ship Torpedo Ship Engine Effect",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 512,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.015380859375,
+        "transparentCoverage": 0.972412109375,
+        "contentRowRuns": 1,
+        "contentColRuns": 16,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nautolan Ship Torpedo Ship Engine Effect is an animated 2D effect sample from Void - Fleet Pack 3 - Nautolan. Useful for enemy variants, encounters, creature animation.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "sci-fi"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "sci-fi",
+        "vehicle"
+      ],
+      "searchText": "nautolan ship torpedo ship engine effect 2d/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/engine-effects/pngs/nautolan-ship-torpedo-ship-engine-effect.png void - fleet pack 3 - nautolan effect nautolan ship torpedo ship engine effect is an animated 2d effect sample from void - fleet pack 3 - nautolan. useful for enemy variants, encounters, creature animation. sci-fi enemy variants encounters creature animation 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-3",
+      "path": "2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/shields/pngs/nautolan-ship-battlecruiser-shield.png",
+      "src": "/2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/shields/pngs/nautolan-ship-battlecruiser-shield.png",
+      "label": "Nautolan Ship Battlecruiser Shield",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 1408,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.014266304347826086,
+        "transparentCoverage": 0.9748641304347826,
+        "contentRowRuns": 2,
+        "contentColRuns": 29,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 3,
+        "cellMedianHeight": 3
+      },
+      "promo": false,
+      "description": "Nautolan Ship Battlecruiser Shield is an animated 2D image sample from Void - Fleet Pack 3 - Nautolan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "sci-fi",
+        "vehicle"
+      ],
+      "searchText": "nautolan ship battlecruiser shield 2d/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/shields/pngs/nautolan-ship-battlecruiser-shield.png void - fleet pack 3 - nautolan image nautolan ship battlecruiser shield is an animated 2d image sample from void - fleet pack 3 - nautolan. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-3",
+      "path": "2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/shields/pngs/nautolan-ship-bomber-shield.png",
+      "src": "/2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/shields/pngs/nautolan-ship-bomber-shield.png",
+      "label": "Nautolan Ship Bomber Shield",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 640,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.016826923076923076,
+        "transparentCoverage": 0.9603365384615384,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nautolan Ship Bomber Shield is an animated 2D image sample from Void - Fleet Pack 3 - Nautolan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "sci-fi",
+        "vehicle"
+      ],
+      "searchText": "nautolan ship bomber shield 2d/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/shields/pngs/nautolan-ship-bomber-shield.png void - fleet pack 3 - nautolan image nautolan ship bomber shield is an animated 2d image sample from void - fleet pack 3 - nautolan. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-3",
+      "path": "2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/shields/pngs/nautolan-ship-dreadnought-shield.png",
+      "src": "/2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/shields/pngs/nautolan-ship-dreadnought-shield.png",
+      "label": "Nautolan Ship Dreadnought Shield",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 2560,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.08052884615384616,
+        "transparentCoverage": 0.41225961538461536,
+        "contentRowRuns": 1,
+        "contentColRuns": 20,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nautolan Ship Dreadnought Shield is an animated 2D image sample from Void - Fleet Pack 3 - Nautolan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "sci-fi",
+        "vehicle"
+      ],
+      "searchText": "nautolan ship dreadnought shield 2d/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/shields/pngs/nautolan-ship-dreadnought-shield.png void - fleet pack 3 - nautolan image nautolan ship dreadnought shield is an animated 2d image sample from void - fleet pack 3 - nautolan. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-3",
+      "path": "2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/shields/pngs/nautolan-ship-fighter-shield.png",
+      "src": "/2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/shields/pngs/nautolan-ship-fighter-shield.png",
+      "label": "Nautolan Ship Fighter Shield",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 640,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.035006009615384616,
+        "transparentCoverage": 0.9649939903846154,
+        "contentRowRuns": 1,
+        "contentColRuns": 22,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nautolan Ship Fighter Shield is an animated 2D image sample from Void - Fleet Pack 3 - Nautolan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "sci-fi",
+        "vehicle"
+      ],
+      "searchText": "nautolan ship fighter shield 2d/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/shields/pngs/nautolan-ship-fighter-shield.png void - fleet pack 3 - nautolan image nautolan ship fighter shield is an animated 2d image sample from void - fleet pack 3 - nautolan. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-3",
+      "path": "2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/shields/pngs/nautolan-ship-frigate-shield.png",
+      "src": "/2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/shields/pngs/nautolan-ship-frigate-shield.png",
+      "label": "Nautolan Ship Frigate Shield",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 2268,
+        "height": 63,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.05859375,
+        "transparentCoverage": 0.6584821428571429,
+        "contentRowRuns": 1,
+        "contentColRuns": 35,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nautolan Ship Frigate Shield is an animated 2D image sample from Void - Fleet Pack 3 - Nautolan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "sci-fi",
+        "vehicle"
+      ],
+      "searchText": "nautolan ship frigate shield 2d/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/shields/pngs/nautolan-ship-frigate-shield.png void - fleet pack 3 - nautolan image nautolan ship frigate shield is an animated 2d image sample from void - fleet pack 3 - nautolan. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-3",
+      "path": "2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/shields/pngs/nautolan-ship-scout-shield.png",
+      "src": "/2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/shields/pngs/nautolan-ship-scout-shield.png",
+      "label": "Nautolan Ship Scout Shield",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 832,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0267578125,
+        "transparentCoverage": 0.9732421875,
+        "contentRowRuns": 1,
+        "contentColRuns": 20,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nautolan Ship Scout Shield is an animated 2D image sample from Void - Fleet Pack 3 - Nautolan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "sci-fi",
+        "vehicle"
+      ],
+      "searchText": "nautolan ship scout shield 2d/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/shields/pngs/nautolan-ship-scout-shield.png void - fleet pack 3 - nautolan image nautolan ship scout shield is an animated 2d image sample from void - fleet pack 3 - nautolan. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-3",
+      "path": "2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/shields/pngs/nautolan-ship-torpedo-ship-shield.png",
+      "src": "/2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/shields/pngs/nautolan-ship-torpedo-ship-shield.png",
+      "label": "Nautolan Ship Torpedo Ship Shield",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 512,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0157470703125,
+        "transparentCoverage": 0.950439453125,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nautolan Ship Torpedo Ship Shield is an animated 2D image sample from Void - Fleet Pack 3 - Nautolan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "sci-fi",
+        "vehicle"
+      ],
+      "searchText": "nautolan ship torpedo ship shield 2d/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/shields/pngs/nautolan-ship-torpedo-ship-shield.png void - fleet pack 3 - nautolan image nautolan ship torpedo ship shield is an animated 2d image sample from void - fleet pack 3 - nautolan. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-3",
+      "path": "2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/weapon-effects-projectiles/pngs/nautolan-bomb.png",
+      "src": "/2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/weapon-effects-projectiles/pngs/nautolan-bomb.png",
+      "label": "Nautolan Bomb",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 256,
+        "height": 16,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.1328125,
+        "transparentCoverage": 0.8671875,
+        "contentRowRuns": 1,
+        "contentColRuns": 16,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nautolan Bomb is an animated 2D icon sample from Void - Fleet Pack 3 - Nautolan. Useful for enemy variants, encounters, creature animation.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "void - fleet pack 3 - nautolan"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "void - fleet pack 3 - nautolan"
+      ],
+      "searchText": "nautolan bomb 2d/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/weapon-effects-projectiles/pngs/nautolan-bomb.png void - fleet pack 3 - nautolan icon nautolan bomb is an animated 2d icon sample from void - fleet pack 3 - nautolan. useful for enemy variants, encounters, creature animation. void - fleet pack 3 - nautolan enemy variants encounters creature animation 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-3",
+      "path": "2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/weapon-effects-projectiles/pngs/nautolan-bullet.png",
+      "src": "/2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/weapon-effects-projectiles/pngs/nautolan-bullet.png",
+      "label": "Nautolan Bullet",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 72,
+        "height": 12,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.26851851851851855,
+        "transparentCoverage": 0.7314814814814815,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nautolan Bullet is an animated 2D icon sample from Void - Fleet Pack 3 - Nautolan. Useful for enemy variants, encounters, creature animation.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "void - fleet pack 3 - nautolan"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "void - fleet pack 3 - nautolan"
+      ],
+      "searchText": "nautolan bullet 2d/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/weapon-effects-projectiles/pngs/nautolan-bullet.png void - fleet pack 3 - nautolan icon nautolan bullet is an animated 2d icon sample from void - fleet pack 3 - nautolan. useful for enemy variants, encounters, creature animation. void - fleet pack 3 - nautolan enemy variants encounters creature animation 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-3",
+      "path": "2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/weapon-effects-projectiles/pngs/nautolan-ray.png",
+      "src": "/2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/weapon-effects-projectiles/pngs/nautolan-ray.png",
+      "label": "Nautolan Ray",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 72,
+        "height": 38,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.3442982456140351,
+        "transparentCoverage": 0.6557017543859649,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nautolan Ray is an animated 2D icon sample from Void - Fleet Pack 3 - Nautolan. Useful for enemy variants, encounters, creature animation.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "void - fleet pack 3 - nautolan"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "void - fleet pack 3 - nautolan"
+      ],
+      "searchText": "nautolan ray 2d/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/weapon-effects-projectiles/pngs/nautolan-ray.png void - fleet pack 3 - nautolan icon nautolan ray is an animated 2d icon sample from void - fleet pack 3 - nautolan. useful for enemy variants, encounters, creature animation. void - fleet pack 3 - nautolan enemy variants encounters creature animation 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-3",
+      "path": "2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/weapon-effects-projectiles/pngs/nautolan-rocket.png",
+      "src": "/2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/weapon-effects-projectiles/pngs/nautolan-rocket.png",
+      "label": "Nautolan Rocket",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 96,
+        "height": 32,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.14127604166666666,
+        "transparentCoverage": 0.8274739583333334,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nautolan Rocket is an animated 2D icon sample from Void - Fleet Pack 3 - Nautolan. Useful for enemy variants, encounters, creature animation.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "void - fleet pack 3 - nautolan"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "void - fleet pack 3 - nautolan"
+      ],
+      "searchText": "nautolan rocket 2d/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/weapon-effects-projectiles/pngs/nautolan-rocket.png void - fleet pack 3 - nautolan icon nautolan rocket is an animated 2d icon sample from void - fleet pack 3 - nautolan. useful for enemy variants, encounters, creature animation. void - fleet pack 3 - nautolan enemy variants encounters creature animation 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-3",
+      "path": "2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/weapon-effects-projectiles/pngs/nautolan-wave.png",
+      "src": "/2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/weapon-effects-projectiles/pngs/nautolan-wave.png",
+      "label": "Nautolan Wave",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 384,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.022074854651162792,
+        "transparentCoverage": 0.9779251453488372,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nautolan Wave is an animated 2D icon sample from Void - Fleet Pack 3 - Nautolan. Useful for enemy variants, encounters, creature animation.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "void - fleet pack 3 - nautolan"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "void - fleet pack 3 - nautolan"
+      ],
+      "searchText": "nautolan wave 2d/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/weapon-effects-projectiles/pngs/nautolan-wave.png void - fleet pack 3 - nautolan icon nautolan wave is an animated 2d icon sample from void - fleet pack 3 - nautolan. useful for enemy variants, encounters, creature animation. void - fleet pack 3 - nautolan enemy variants encounters creature animation 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-3",
+      "path": "2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/weapons/pngs/nautolan-ship-battlecruiser-weapons.png",
+      "src": "/2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/weapons/pngs/nautolan-ship-battlecruiser-weapons.png",
+      "label": "Nautolan Ship Battlecruiser Weapons",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 1152,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.15625,
+        "transparentCoverage": 0.84375,
+        "contentRowRuns": 1,
+        "contentColRuns": 9,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nautolan Ship Battlecruiser Weapons is an animated 2D icon sample from Void - Fleet Pack 3 - Nautolan. Useful for enemy variants, encounters, creature animation.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "sci-fi"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "sci-fi",
+        "vehicle"
+      ],
+      "searchText": "nautolan ship battlecruiser weapons 2d/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/weapons/pngs/nautolan-ship-battlecruiser-weapons.png void - fleet pack 3 - nautolan icon nautolan ship battlecruiser weapons is an animated 2d icon sample from void - fleet pack 3 - nautolan. useful for enemy variants, encounters, creature animation. sci-fi enemy variants encounters creature animation 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-3",
+      "path": "2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/weapons/pngs/nautolan-ship-dreadnought-weapons.png",
+      "src": "/2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/weapons/pngs/nautolan-ship-dreadnought-weapons.png",
+      "label": "Nautolan Ship Dreadnought Weapons",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 4480,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.30357142857142855,
+        "transparentCoverage": 0.6964285714285714,
+        "contentRowRuns": 1,
+        "contentColRuns": 35,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nautolan Ship Dreadnought Weapons is an animated 2D icon sample from Void - Fleet Pack 3 - Nautolan. Useful for enemy variants, encounters, creature animation.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "sci-fi"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "sci-fi",
+        "vehicle"
+      ],
+      "searchText": "nautolan ship dreadnought weapons 2d/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/weapons/pngs/nautolan-ship-dreadnought-weapons.png void - fleet pack 3 - nautolan icon nautolan ship dreadnought weapons is an animated 2d icon sample from void - fleet pack 3 - nautolan. useful for enemy variants, encounters, creature animation. sci-fi enemy variants encounters creature animation 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-3",
+      "path": "2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/weapons/pngs/nautolan-ship-fighter-weapons.png",
+      "src": "/2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/weapons/pngs/nautolan-ship-fighter-weapons.png",
+      "label": "Nautolan Ship Fighter Weapons",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 576,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.11662946428571429,
+        "transparentCoverage": 0.8833705357142857,
+        "contentRowRuns": 1,
+        "contentColRuns": 9,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nautolan Ship Fighter Weapons is an animated 2D icon sample from Void - Fleet Pack 3 - Nautolan. Useful for enemy variants, encounters, creature animation.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "sci-fi"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "sci-fi",
+        "vehicle"
+      ],
+      "searchText": "nautolan ship fighter weapons 2d/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/weapons/pngs/nautolan-ship-fighter-weapons.png void - fleet pack 3 - nautolan icon nautolan ship fighter weapons is an animated 2d icon sample from void - fleet pack 3 - nautolan. useful for enemy variants, encounters, creature animation. sci-fi enemy variants encounters creature animation 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-3",
+      "path": "2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/weapons/pngs/nautolan-ship-frigate-weapons.png",
+      "src": "/2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/weapons/pngs/nautolan-ship-frigate-weapons.png",
+      "label": "Nautolan Ship Frigate Weapons",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 576,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.19196428571428573,
+        "transparentCoverage": 0.8080357142857143,
+        "contentRowRuns": 1,
+        "contentColRuns": 9,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nautolan Ship Frigate Weapons is an animated 2D icon sample from Void - Fleet Pack 3 - Nautolan. Useful for enemy variants, encounters, creature animation.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "sci-fi"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "sci-fi",
+        "vehicle"
+      ],
+      "searchText": "nautolan ship frigate weapons 2d/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/weapons/pngs/nautolan-ship-frigate-weapons.png void - fleet pack 3 - nautolan icon nautolan ship frigate weapons is an animated 2d icon sample from void - fleet pack 3 - nautolan. useful for enemy variants, encounters, creature animation. sci-fi enemy variants encounters creature animation 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-3",
+      "path": "2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/weapons/pngs/nautolan-ship-scout-weapons.png",
+      "src": "/2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/weapons/pngs/nautolan-ship-scout-weapons.png",
+      "label": "Nautolan Ship Scout Weapons",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 448,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.09765625,
+        "transparentCoverage": 0.90234375,
+        "contentRowRuns": 1,
+        "contentColRuns": 7,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nautolan Ship Scout Weapons is an animated 2D icon sample from Void - Fleet Pack 3 - Nautolan. Useful for enemy variants, encounters, creature animation.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "sci-fi"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "sci-fi",
+        "vehicle"
+      ],
+      "searchText": "nautolan ship scout weapons 2d/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/weapons/pngs/nautolan-ship-scout-weapons.png void - fleet pack 3 - nautolan icon nautolan ship scout weapons is an animated 2d icon sample from void - fleet pack 3 - nautolan. useful for enemy variants, encounters, creature animation. sci-fi enemy variants encounters creature animation 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-3",
+      "path": "2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/weapons/pngs/nautolan-ship-torpedo-ship-weapons.png",
+      "src": "/2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/weapons/pngs/nautolan-ship-torpedo-ship-weapons.png",
+      "label": "Nautolan Ship Torpedo Ship Weapons",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 1024,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.138916015625,
+        "transparentCoverage": 0.861083984375,
+        "contentRowRuns": 1,
+        "contentColRuns": 16,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nautolan Ship Torpedo Ship Weapons is an animated 2D icon sample from Void - Fleet Pack 3 - Nautolan. Useful for enemy variants, encounters, creature animation.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "sci-fi"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "sci-fi",
+        "vehicle"
+      ],
+      "searchText": "nautolan ship torpedo ship weapons 2d/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/weapons/pngs/nautolan-ship-torpedo-ship-weapons.png void - fleet pack 3 - nautolan icon nautolan ship torpedo ship weapons is an animated 2d icon sample from void - fleet pack 3 - nautolan. useful for enemy variants, encounters, creature animation. sci-fi enemy variants encounters creature animation 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-3",
+      "path": "2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/designs-base/pngs/nautolan-ship-battlecruiser-base.png",
+      "src": "/2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/designs-base/pngs/nautolan-ship-battlecruiser-base.png",
+      "label": "Nautolan Ship Battlecruiser Base",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 128,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.1558837890625,
+        "transparentCoverage": 0.8441162109375,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nautolan Ship Battlecruiser Base is a static 2D image sample from Void - Fleet Pack 3 - Nautolan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "image",
+        "sci-fi",
+        "static",
+        "vehicle"
+      ],
+      "searchText": "nautolan ship battlecruiser base 2d/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/designs-base/pngs/nautolan-ship-battlecruiser-base.png void - fleet pack 3 - nautolan image nautolan ship battlecruiser base is a static 2d image sample from void - fleet pack 3 - nautolan. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d art static vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-3",
+      "path": "2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/designs-base/pngs/nautolan-ship-bomber-base.png",
+      "src": "/2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/designs-base/pngs/nautolan-ship-bomber-base.png",
+      "label": "Nautolan Ship Bomber Base",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 64,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.12060546875,
+        "transparentCoverage": 0.87939453125,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nautolan Ship Bomber Base is a static 2D image sample from Void - Fleet Pack 3 - Nautolan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "image",
+        "sci-fi",
+        "static",
+        "vehicle"
+      ],
+      "searchText": "nautolan ship bomber base 2d/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/designs-base/pngs/nautolan-ship-bomber-base.png void - fleet pack 3 - nautolan image nautolan ship bomber base is a static 2d image sample from void - fleet pack 3 - nautolan. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d art static vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-3",
+      "path": "2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/designs-base/pngs/nautolan-ship-dreadnought-base.png",
+      "src": "/2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/designs-base/pngs/nautolan-ship-dreadnought-base.png",
+      "label": "Nautolan Ship Dreadnought Base",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 128,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.259033203125,
+        "transparentCoverage": 0.740966796875,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nautolan Ship Dreadnought Base is a static 2D image sample from Void - Fleet Pack 3 - Nautolan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "image",
+        "sci-fi",
+        "static",
+        "vehicle"
+      ],
+      "searchText": "nautolan ship dreadnought base 2d/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/designs-base/pngs/nautolan-ship-dreadnought-base.png void - fleet pack 3 - nautolan image nautolan ship dreadnought base is a static 2d image sample from void - fleet pack 3 - nautolan. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d art static vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-3",
+      "path": "2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/designs-base/pngs/nautolan-ship-fighter-base.png",
+      "src": "/2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/designs-base/pngs/nautolan-ship-fighter-base.png",
+      "label": "Nautolan Ship Fighter Base",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 64,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.10302734375,
+        "transparentCoverage": 0.89697265625,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nautolan Ship Fighter Base is a static 2D image sample from Void - Fleet Pack 3 - Nautolan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "image",
+        "sci-fi",
+        "static",
+        "vehicle"
+      ],
+      "searchText": "nautolan ship fighter base 2d/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/designs-base/pngs/nautolan-ship-fighter-base.png void - fleet pack 3 - nautolan image nautolan ship fighter base is a static 2d image sample from void - fleet pack 3 - nautolan. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d art static vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-3",
+      "path": "2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/designs-base/pngs/nautolan-ship-frigate-base.png",
+      "src": "/2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/designs-base/pngs/nautolan-ship-frigate-base.png",
+      "label": "Nautolan Ship Frigate Base",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 64,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.18896484375,
+        "transparentCoverage": 0.81103515625,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nautolan Ship Frigate Base is a static 2D image sample from Void - Fleet Pack 3 - Nautolan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "image",
+        "sci-fi",
+        "static",
+        "vehicle"
+      ],
+      "searchText": "nautolan ship frigate base 2d/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/designs-base/pngs/nautolan-ship-frigate-base.png void - fleet pack 3 - nautolan image nautolan ship frigate base is a static 2d image sample from void - fleet pack 3 - nautolan. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d art static vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-3",
+      "path": "2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/designs-base/pngs/nautolan-ship-scout-base.png",
+      "src": "/2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/designs-base/pngs/nautolan-ship-scout-base.png",
+      "label": "Nautolan Ship Scout Base",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 64,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.09814453125,
+        "transparentCoverage": 0.90185546875,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nautolan Ship Scout Base is a static 2D image sample from Void - Fleet Pack 3 - Nautolan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "image",
+        "sci-fi",
+        "static",
+        "vehicle"
+      ],
+      "searchText": "nautolan ship scout base 2d/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/designs-base/pngs/nautolan-ship-scout-base.png void - fleet pack 3 - nautolan image nautolan ship scout base is a static 2d image sample from void - fleet pack 3 - nautolan. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d art static vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-3",
+      "path": "2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/designs-base/pngs/nautolan-ship-support-base.png",
+      "src": "/2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/designs-base/pngs/nautolan-ship-support-base.png",
+      "label": "Nautolan Ship Support Base",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 64,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.141845703125,
+        "transparentCoverage": 0.858154296875,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nautolan Ship Support Base is a static 2D image sample from Void - Fleet Pack 3 - Nautolan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "image",
+        "sci-fi",
+        "static",
+        "vehicle"
+      ],
+      "searchText": "nautolan ship support base 2d/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/designs-base/pngs/nautolan-ship-support-base.png void - fleet pack 3 - nautolan image nautolan ship support base is a static 2d image sample from void - fleet pack 3 - nautolan. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d art static vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-3",
+      "path": "2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/designs-base/pngs/nautolan-ship-torpedo-ship.png",
+      "src": "/2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/designs-base/pngs/nautolan-ship-torpedo-ship.png",
+      "label": "Nautolan Ship Torpedo Ship",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 64,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.12451171875,
+        "transparentCoverage": 0.87548828125,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nautolan Ship Torpedo Ship is a static 2D image sample from Void - Fleet Pack 3 - Nautolan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "image",
+        "sci-fi",
+        "static",
+        "vehicle"
+      ],
+      "searchText": "nautolan ship torpedo ship 2d/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/designs-base/pngs/nautolan-ship-torpedo-ship.png void - fleet pack 3 - nautolan image nautolan ship torpedo ship is a static 2d image sample from void - fleet pack 3 - nautolan. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d art static vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-3",
+      "path": "2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/weapon-effects-projectiles/pngs/nautolan-spinning-bullet.png",
+      "src": "/2D/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/weapon-effects-projectiles/pngs/nautolan-spinning-bullet.png",
+      "label": "Nautolan Spinning Bullet",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 64,
+        "height": 8,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.4375,
+        "transparentCoverage": 0.5625,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nautolan Spinning Bullet is a static 2D icon sample from Void - Fleet Pack 3 - Nautolan. Useful for enemy variants, encounters, creature animation.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "void - fleet pack 3 - nautolan"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "icon",
+        "static",
+        "void - fleet pack 3 - nautolan"
+      ],
+      "searchText": "nautolan spinning bullet 2d/foozlecc-void-fleet-pack-3/extracted/foozle-2ds0014-void-fleetpack-3/foozle-2ds0014-void-enemyfleet-3/nautolan/weapon-effects-projectiles/pngs/nautolan-spinning-bullet.png void - fleet pack 3 - nautolan icon nautolan spinning bullet is a static 2d icon sample from void - fleet pack 3 - nautolan. useful for enemy variants, encounters, creature animation. void - fleet pack 3 - nautolan enemy variants encounters creature animation 2d art static"
+    }
+  ]
+}

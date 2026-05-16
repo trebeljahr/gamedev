@@ -5,7 +5,8 @@ import {
   type LandingModelPreviewItem,
 } from "@/components/LandingModelBackdrop";
 import { downloadsForModel, manifest } from "@/lib/manifest";
-import { catalog, mediaStats } from "@/lib/media";
+import { catalog, findArtPack, mediaStats } from "@/lib/media";
+import type { ArtSample } from "@/lib/media";
 import { isLikelyMarketingPreviewPath } from "@/lib/media-inference";
 import { pageMetadata } from "@/lib/seo";
 
@@ -22,9 +23,9 @@ const LANDING_ASSET_BASE_URL = (
 const GITHUB_URL = "https://github.com/trebeljahr/gamedev";
 const CREDITS_URL = `${GITHUB_URL}/blob/main/CREDITS.md`;
 
-function sampleForLandingArt(pack: (typeof catalog.artPacks)[number]) {
-  const materialSamples = pack.samples.filter((sample) => !isLikelyMarketingPreviewPath(sample.path));
-  return materialSamples[0] ?? pack.samples[0];
+function sampleForLandingArt(samples: ArtSample[]): ArtSample | undefined {
+  const materialSamples = samples.filter((sample) => !isLikelyMarketingPreviewPath(sample.path));
+  return materialSamples[0] ?? samples[0];
 }
 
 function landingAssetUrl(src: string) {
@@ -33,13 +34,20 @@ function landingAssetUrl(src: string) {
 }
 
 const featuredArt = catalog.artPacks
-  .filter((pack) => pack.samples.length > 0)
+  .filter((summary) => summary.sampleCount > 0)
   .slice(0, 8)
-  .map((pack) => ({
-    title: pack.title,
-    theme: pack.theme,
-    src: landingAssetUrl(sampleForLandingArt(pack).src),
-  }));
+  .flatMap((summary) => {
+    const pack = findArtPack(summary.folder);
+    const sample = pack ? sampleForLandingArt(pack.samples) : undefined;
+    if (!sample) return [];
+    return [
+      {
+        title: summary.title,
+        theme: summary.theme,
+        src: landingAssetUrl(sample.src),
+      },
+    ];
+  });
 
 const modelPicks = [
   {

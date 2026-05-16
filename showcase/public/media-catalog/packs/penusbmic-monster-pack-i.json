@@ -1,0 +1,73 @@
+{
+  "folder": "penusbmic-monster-pack-i",
+  "title": "Monster Pack I",
+  "author": "penusbmic",
+  "author_url": "https://penusbmic.itch.io",
+  "url": "https://penusbmic.itch.io/monster-pack-i",
+  "game_id": null,
+  "license_class": "Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms)",
+  "attribution": "Appreciated / not required",
+  "theme": "Enemies",
+  "description": "Monster Pack I is a 2D enemies art pack by penusbmic. Use it for enemy variants, encounters, creature animation. License: Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). Attribution: Appreciated / not required.",
+  "category": "Enemies",
+  "themes": [
+    "enemies",
+    "urban"
+  ],
+  "useCases": [
+    "enemy variants",
+    "encounters",
+    "creature animation"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "enemies",
+    "sprite",
+    "urban"
+  ],
+  "searchText": "monster pack i penusbmic-monster-pack-i penusbmic enemies free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms) appreciated / not required monster pack i is a 2d enemies art pack by penusbmic. use it for enemy variants, encounters, creature animation. license: free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). attribution: appreciated / not required. enemies urban enemy variants encounters creature animation 2d art sprite",
+  "sampleCount": 1,
+  "samples": [
+    {
+      "packFolder": "penusbmic-monster-pack-i",
+      "path": "2D/penusbmic-monster-pack-i/extracted/eye-ball-monster/eye-ball-monster/eyeball-monster-sheet.png",
+      "src": "/2D/penusbmic-monster-pack-i/extracted/eye-ball-monster/eye-ball-monster/eyeball-monster-sheet.png",
+      "label": "Eyeball Monster Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 128,
+        "height": 2400,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.020926339285714284,
+        "transparentCoverage": 0.9790736607142857,
+        "contentRowRuns": 10,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Eyeball Monster Sheet is an animated 2D character sample from Monster Pack I. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "monster pack i"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "monster pack i"
+      ],
+      "searchText": "eyeball monster sheet 2d/penusbmic-monster-pack-i/extracted/eye-ball-monster/eye-ball-monster/eyeball-monster-sheet.png monster pack i character eyeball monster sheet is an animated 2d character sample from monster pack i. useful for player characters, npcs, animation prototyping. monster pack i player characters npcs animation prototyping 2d animated art"
+    }
+  ]
+}

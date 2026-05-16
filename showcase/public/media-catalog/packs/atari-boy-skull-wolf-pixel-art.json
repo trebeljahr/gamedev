@@ -1,0 +1,77 @@
+{
+  "folder": "atari-boy-skull-wolf-pixel-art",
+  "title": "Skull Wolf Pixel art",
+  "author": "atari_boy",
+  "author_url": "https://atari-boy.itch.io",
+  "url": "https://atari-boy.itch.io/skull-wolf-pixel-art",
+  "game_id": 2136232,
+  "license_class": "CC0 1.0 (Creative Commons Zero)",
+  "attribution": "Optional",
+  "theme": "Animals",
+  "description": "Skull Wolf Pixel Art is a 2D animals art pack by atari_boy. Use it for enemy variants, encounters, creature animation. License: CC0 1.0 (Creative Commons Zero). Attribution: Optional.",
+  "category": "Animals",
+  "themes": [
+    "animals",
+    "horror",
+    "nature"
+  ],
+  "useCases": [
+    "enemy variants",
+    "encounters",
+    "creature animation"
+  ],
+  "tags": [
+    "2d",
+    "animals",
+    "art",
+    "horror",
+    "nature",
+    "sprite"
+  ],
+  "searchText": "skull wolf pixel art atari-boy-skull-wolf-pixel-art atari_boy animals cc0 1.0 (creative commons zero) optional skull wolf pixel art is a 2d animals art pack by atari_boy. use it for enemy variants, encounters, creature animation. license: cc0 1.0 (creative commons zero). attribution: optional. animals horror nature enemy variants encounters creature animation 2d art sprite",
+  "sampleCount": 1,
+  "samples": [
+    {
+      "packFolder": "atari-boy-skull-wolf-pixel-art",
+      "path": "2D/atari-boy-skull-wolf-pixel-art/extracted/skullwolf/massacre-sprite-sheet.png",
+      "src": "/2D/atari-boy-skull-wolf-pixel-art/extracted/skullwolf/massacre-sprite-sheet.png",
+      "label": "Massacre Sprite Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 448,
+        "height": 256,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.13805650684931506,
+        "transparentCoverage": 0.861943493150685,
+        "contentRowRuns": 4,
+        "contentColRuns": 7,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 35,
+        "cellMedianHeight": 19
+      },
+      "promo": false,
+      "description": "Massacre Sprite Sheet is an animated 2D character sample from Skull Wolf Pixel art. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "horror"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "horror"
+      ],
+      "searchText": "massacre sprite sheet 2d/atari-boy-skull-wolf-pixel-art/extracted/skullwolf/massacre-sprite-sheet.png skull wolf pixel art character massacre sprite sheet is an animated 2d character sample from skull wolf pixel art. useful for player characters, npcs, animation prototyping. horror player characters npcs animation prototyping 2d animated art"
+    }
+  ]
+}

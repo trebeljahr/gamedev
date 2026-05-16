@@ -1,0 +1,444 @@
+{
+  "folder": "luizmelo-medieval-warrior-pack-2",
+  "title": "Medieval Warrior Pack 2",
+  "author": "luizmelo",
+  "author_url": "https://luizmelo.itch.io",
+  "url": "https://luizmelo.itch.io/medieval-warrior-pack-2",
+  "game_id": null,
+  "license_class": "CC0 1.0 (Creative Commons Zero)",
+  "attribution": "Optional",
+  "theme": "Characters",
+  "description": "Medieval Warrior Pack 2 is a 2D characters art pack by luizmelo. Use it for player characters, NPCs, animation prototyping. License: CC0 1.0 (Creative Commons Zero). Attribution: Optional.",
+  "category": "Characters",
+  "themes": [
+    "characters",
+    "fantasy"
+  ],
+  "useCases": [
+    "player characters",
+    "NPCs",
+    "animation prototyping"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "characters",
+    "fantasy",
+    "medieval",
+    "sprite"
+  ],
+  "searchText": "medieval warrior pack 2 luizmelo-medieval-warrior-pack-2 luizmelo characters cc0 1.0 (creative commons zero) optional medieval warrior pack 2 is a 2d characters art pack by luizmelo. use it for player characters, npcs, animation prototyping. license: cc0 1.0 (creative commons zero). attribution: optional. characters fantasy player characters npcs animation prototyping 2d art medieval sprite",
+  "sampleCount": 10,
+  "samples": [
+    {
+      "packFolder": "luizmelo-medieval-warrior-pack-2",
+      "path": "2D/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/death.png",
+      "src": "/2D/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/death.png",
+      "label": "Death",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 900,
+        "height": 150,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.01835029069767442,
+        "transparentCoverage": 0.9816497093023255,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Death is an animated 2D character sample from Medieval Warrior Pack 2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "death 2d/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/death.png medieval warrior pack 2 character death is an animated 2d character sample from medieval warrior pack 2. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "luizmelo-medieval-warrior-pack-2",
+      "path": "2D/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/idle.png",
+      "src": "/2D/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/idle.png",
+      "label": "Idle",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 1200,
+        "height": 150,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0162353515625,
+        "transparentCoverage": 0.9837646484375,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Idle is an animated 2D character sample from Medieval Warrior Pack 2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "idle 2d/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/idle.png medieval warrior pack 2 character idle is an animated 2d character sample from medieval warrior pack 2. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "luizmelo-medieval-warrior-pack-2",
+      "path": "2D/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/take-hit-white-silhouette.png",
+      "src": "/2D/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/take-hit-white-silhouette.png",
+      "label": "Take Hit White Silhouette",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 600,
+        "height": 150,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0201416015625,
+        "transparentCoverage": 0.9798583984375,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Take Hit White Silhouette is an animated 2D character sample from Medieval Warrior Pack 2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "take hit white silhouette 2d/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/take-hit-white-silhouette.png medieval warrior pack 2 character take hit white silhouette is an animated 2d character sample from medieval warrior pack 2. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "luizmelo-medieval-warrior-pack-2",
+      "path": "2D/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/take-hit.png",
+      "src": "/2D/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/take-hit.png",
+      "label": "Take Hit",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 600,
+        "height": 150,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0201416015625,
+        "transparentCoverage": 0.9798583984375,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Take Hit is an animated 2D character sample from Medieval Warrior Pack 2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "take hit 2d/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/take-hit.png medieval warrior pack 2 character take hit is an animated 2d character sample from medieval warrior pack 2. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "luizmelo-medieval-warrior-pack-2",
+      "path": "2D/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/fall.png",
+      "src": "/2D/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/fall.png",
+      "label": "Fall",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 300,
+        "height": 150,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0184326171875,
+        "transparentCoverage": 0.9815673828125,
+        "contentRowRuns": 1,
+        "contentColRuns": 2,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Fall is an animated 2D character sample from Medieval Warrior Pack 2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "fall 2d/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/fall.png medieval warrior pack 2 character fall is an animated 2d character sample from medieval warrior pack 2. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "luizmelo-medieval-warrior-pack-2",
+      "path": "2D/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/jump.png",
+      "src": "/2D/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/jump.png",
+      "label": "Jump",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 300,
+        "height": 150,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.022430419921875,
+        "transparentCoverage": 0.977569580078125,
+        "contentRowRuns": 1,
+        "contentColRuns": 2,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Jump is an animated 2D character sample from Medieval Warrior Pack 2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "jump 2d/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/jump.png medieval warrior pack 2 character jump is an animated 2d character sample from medieval warrior pack 2. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "luizmelo-medieval-warrior-pack-2",
+      "path": "2D/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/attack1.png",
+      "src": "/2D/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/attack1.png",
+      "label": "Attack1",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 600,
+        "height": 150,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0340576171875,
+        "transparentCoverage": 0.9659423828125,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Attack1 is an animated 2D character sample from Medieval Warrior Pack 2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "attack1 2d/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/attack1.png medieval warrior pack 2 character attack1 is an animated 2d character sample from medieval warrior pack 2. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "luizmelo-medieval-warrior-pack-2",
+      "path": "2D/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/attack2.png",
+      "src": "/2D/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/attack2.png",
+      "label": "Attack2",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 600,
+        "height": 150,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0628662109375,
+        "transparentCoverage": 0.9371337890625,
+        "contentRowRuns": 1,
+        "contentColRuns": 5,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Attack2 is an animated 2D character sample from Medieval Warrior Pack 2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "attack2 2d/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/attack2.png medieval warrior pack 2 character attack2 is an animated 2d character sample from medieval warrior pack 2. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "luizmelo-medieval-warrior-pack-2",
+      "path": "2D/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/attack3.png",
+      "src": "/2D/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/attack3.png",
+      "label": "Attack3",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 600,
+        "height": 150,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.02374267578125,
+        "transparentCoverage": 0.97625732421875,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Attack3 is an animated 2D character sample from Medieval Warrior Pack 2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "attack3 2d/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/attack3.png medieval warrior pack 2 character attack3 is an animated 2d character sample from medieval warrior pack 2. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "luizmelo-medieval-warrior-pack-2",
+      "path": "2D/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/attack4.png",
+      "src": "/2D/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/attack4.png",
+      "label": "Attack4",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 600,
+        "height": 150,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.06341552734375,
+        "transparentCoverage": 0.93658447265625,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Attack4 is an animated 2D character sample from Medieval Warrior Pack 2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "attack4 2d/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/attack4.png medieval warrior pack 2 character attack4 is an animated 2d character sample from medieval warrior pack 2. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    }
+  ]
+}

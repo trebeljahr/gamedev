@@ -185,7 +185,7 @@ export type SourceMapping = {
   searchText: string;
 };
 
-type MediaCatalog = {
+type SlimMediaCatalog = {
   description: string;
   stats: {
     artPackCount: number;
@@ -197,12 +197,56 @@ type MediaCatalog = {
     sourceMappingCount: number;
     artLicenseSplit: Record<string, number>;
   };
-  artPacks: ArtPack[];
+  artPacks: ArtPackSummary[];
   soundCollections: SoundCollection[];
   musicTracks: MusicTrack[];
   sourceMappings: SourceMapping[];
   sources: Record<string, unknown>;
 };
+
+/**
+ * The catalog now lives in two layers:
+ *   - `public/media-catalog.json` (~2.5 MB): slim index. Holds pack
+ *     summaries, sounds, music, source mappings. Loaded once at module init.
+ *   - `public/media-catalog/packs/<folder>.json` (~0.3-5 MB each): full pack
+ *     with its samples[]. Loaded on demand via `findArtPack(folder)`.
+ *
+ * Client-side this module still resolves (so helpers like `mediaPackHref` and
+ * the exported type aliases remain client-safe), but every catalog-derived
+ * array is empty. Any client component that touches catalog data directly is
+ * a bug — it should receive a serialized subset from a server component.
+ */
+const EMPTY_CATALOG: SlimMediaCatalog = {
+  description: "",
+  stats: {
+    artPackCount: 0,
+    artSampleCount: 0,
+    soundCollectionCount: 0,
+    soundSampleCount: 0,
+    musicTrackCount: 0,
+    audioAnalysisCount: 0,
+    sourceMappingCount: 0,
+    artLicenseSplit: {},
+  },
+  artPacks: [],
+  soundCollections: [],
+  musicTracks: [],
+  sourceMappings: [],
+  sources: {},
+};
+
+const isServer = typeof window === "undefined";
+let _catalog: SlimMediaCatalog = EMPTY_CATALOG;
+if (isServer) {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const fs = require("node:fs") as typeof import("node:fs");
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const path = require("node:path") as typeof import("node:path");
+  const raw = fs.readFileSync(path.join(process.cwd(), "public", "media-catalog.json"), "utf8");
+  _catalog = JSON.parse(raw) as SlimMediaCatalog;
+}
+
+export const catalog: SlimMediaCatalog = _catalog;
 
 function normalizeCreator(value: string): string {
   return value.trim().toLowerCase().replace(/[\s_-]+/g, "-");
@@ -240,49 +284,6 @@ export function mediaPackSlug(kind: MediaPack["kind"], id: string): string {
 export function mediaPackHref(kind: MediaPack["kind"], id: string): string {
   return `/media/packs/${mediaPackSlug(kind, id)}`;
 }
-
-/**
- * The media catalog is a 121 MB JSON file. It lives in `public/media-catalog.json`
- * so it's served as a static asset and never enters the JS bundle. We read it
- * once on the server at module init; client components that need a subset
- * receive serialized props from their server parent.
- *
- * Client-side this module still resolves (so helpers like `mediaPackHref` and
- * the exported type aliases remain client-safe), but every catalog-derived
- * array is empty. Any client component that touches catalog data directly is
- * a bug — it should receive a serialized subset from a server component.
- */
-const EMPTY_CATALOG: MediaCatalog = {
-  description: "",
-  stats: {
-    artPackCount: 0,
-    artSampleCount: 0,
-    soundCollectionCount: 0,
-    soundSampleCount: 0,
-    musicTrackCount: 0,
-    audioAnalysisCount: 0,
-    sourceMappingCount: 0,
-    artLicenseSplit: {},
-  },
-  artPacks: [],
-  soundCollections: [],
-  musicTracks: [],
-  sourceMappings: [],
-  sources: {},
-};
-
-const isServer = typeof window === "undefined";
-let _catalog: MediaCatalog = EMPTY_CATALOG;
-if (isServer) {
-  // eslint-disable-next-line @typescript-eslint/no-require-imports
-  const fs = require("node:fs") as typeof import("node:fs");
-  // eslint-disable-next-line @typescript-eslint/no-require-imports
-  const path = require("node:path") as typeof import("node:path");
-  const raw = fs.readFileSync(path.join(process.cwd(), "public", "media-catalog.json"), "utf8");
-  _catalog = JSON.parse(raw) as MediaCatalog;
-}
-
-export const catalog: MediaCatalog = _catalog;
 
 export const musicTracks: MusicTrack[] = catalog.musicTracks.map((track) => ({
   ...track,
@@ -390,118 +391,77 @@ export function findMediaPack(slug: string): MediaPack | undefined {
   return mediaPacks.find((pack) => pack.slug === slug);
 }
 
-export const artPacks: ArtPack[] = catalog.artPacks.map((pack) => ({
-  ...pack,
-  samples: pack.samples.map((sample) => ({ ...sample, src: assetUrl(sample.src) })),
+export const artPackSummaries: ArtPackSummary[] = catalog.artPacks.map((summary) => ({
+  ...summary,
+  preview: summary.preview ? { ...summary.preview, src: assetUrl(summary.preview.src) } : undefined,
 }));
 
-function materialSamplesIn(samples: ArtSample[]): ArtSample[] {
-  const filtered = samples.filter(
+/**
+ * Mirrors the filter used by build-media-catalog.ts when computing
+ * per-pack summaries. Kept here for ArtWorkbench, which receives a full
+ * pack via /api/media/art/[folder] and needs the same shape on the
+ * client.
+ */
+export function materialSamplesFor(pack: ArtPack): ArtSample[] {
+  const filtered = pack.samples.filter(
     (sample) =>
       !sample.promo &&
       !sample.inspection?.promoBackground &&
       !isLikelyPromoArt(sample.path, sample.inspection),
   );
   if (filtered.length > 0) return filtered;
-  const lighter = samples.filter((sample) => !isLikelyMarketingPreviewPath(sample.path));
-  return lighter.length > 0 ? lighter : samples;
+  const lighter = pack.samples.filter((sample) => !isLikelyMarketingPreviewPath(sample.path));
+  return lighter.length > 0 ? lighter : pack.samples;
 }
 
-function previewSampleIn(samples: ArtSample[]): ArtSample | undefined {
-  return (
-    samples.find((sample) => sample.kind === "icon" || sample.kind === "ui") ??
-    samples.find((sample) => sample.kind === "character" || sample.kind === "sprite") ??
-    samples.find((sample) => sample.kind === "tile" || sample.kind === "effect") ??
-    samples[0]
-  );
+function packFileSlug(folder: string): string {
+  return folder.replace(/\//g, "__");
 }
 
-function artTypeIn(pack: ArtPack, samples: ArtSample[]): ArtType {
-  const sampleKinds = new Set(samples.map((sample) => sample.kind));
-  const uiOrIcons = pack.theme === "UI" || pack.theme === "Icons & Items";
-  if (uiOrIcons || (sampleKinds.size > 0 && [...sampleKinds].every((kind) => kind === "ui" || kind === "icon"))) {
-    return "ui-icons";
-  }
-  return "spritesheets";
-}
-
-const SUBJECT_CHARACTERS_RE =
-  /(character|characters|enemy|enemies|animal|creature|hero|knight|warrior|mage|archer|monster|dino)/;
-const SUBJECT_ENVIRONMENTS_RE =
-  /(environment|environments|tile|tileset|terrain|forest|dungeon|platform|ground|wall|props|nature|town)/;
-const SUBJECT_EFFECTS_RE = /(effect|fx|icon|item|inventory|weapon|coin|pickup|potion|spell|magic)/;
-
-function spriteSubjectIn(pack: ArtPack, samples: ArtSample[]): ArtSubject {
-  const parts = [pack.theme, pack.title, pack.folder, pack.tags.join(" ")];
-  for (const sample of samples) {
-    parts.push(sample.kind, sample.path);
-  }
-  const text = parts.join(" ").toLowerCase();
-  if (SUBJECT_CHARACTERS_RE.test(text)) return "characters";
-  if (SUBJECT_ENVIRONMENTS_RE.test(text)) return "environments";
-  if (SUBJECT_EFFECTS_RE.test(text)) return "effects-items";
-  return "other";
-}
-
-function spriteMotionIn(samples: ArtSample[]): ArtMotion {
-  return samples.some((sample) => sample.animated) ? "animated" : "static";
-}
-
-// Used by other modules (e.g. ArtWorkbench client component once the full pack is fetched).
-export function materialSamplesFor(pack: ArtPack): ArtSample[] {
-  return materialSamplesIn(pack.samples);
-}
+const artPackCache = new Map<string, ArtPack | null>();
 
 /**
- * Slim, client-safe view of an ArtPack with the heavy `samples[]` stripped and
- * filter-relevant flags precomputed. `/media` ships this list to MediaExplorer
- * instead of the full 99 MB of art samples; ArtWorkbench fetches the full pack
- * (with samples) on demand via `/api/media/art/[folder]`.
+ * Lazy-load a single art pack from its per-pack JSON file. Server-only; the
+ * client should fetch `/api/media/art/[folder]` instead. Memoized in-process
+ * so repeat reads for the same folder are free.
+ *
+ * Returns samples with the raw `/asset/path.png` src as written to disk —
+ * callers that need them resolved through ASSETS_BASE_URL should wrap with
+ * `assetUrl`. The /api/media/art route does this before returning to the
+ * client; landing pages with their own base URL consume the raw form.
  */
-export const artPackSummaries: ArtPackSummary[] = artPacks.map((pack) => {
-  const materialSamples = materialSamplesIn(pack.samples);
-  const preview = previewSampleIn(materialSamples);
-  return {
-    folder: pack.folder,
-    title: pack.title,
-    author: pack.author,
-    author_url: pack.author_url,
-    url: pack.url,
-    game_id: pack.game_id,
-    license_class: pack.license_class,
-    attribution: pack.attribution,
-    theme: pack.theme,
-    description: pack.description,
-    category: pack.category,
-    themes: pack.themes,
-    useCases: pack.useCases,
-    tags: pack.tags,
-    searchText: pack.searchText,
-    sampleCount: pack.sampleCount,
-    artType: artTypeIn(pack, materialSamples),
-    spriteSubject: spriteSubjectIn(pack, materialSamples),
-    spriteMotion: spriteMotionIn(materialSamples),
-    materialSampleCount: materialSamples.length,
-    preview: preview
-      ? {
-          path: preview.path,
-          src: preview.src,
-          label: preview.label,
-          kind: preview.kind,
-          animated: preview.animated,
-        }
-      : undefined,
-  };
-});
-
 export function findArtPack(folder: string): ArtPack | undefined {
-  return artPacks.find((pack) => pack.folder === folder);
+  if (!isServer) return undefined;
+  if (artPackCache.has(folder)) return artPackCache.get(folder) ?? undefined;
+
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const fs = require("node:fs") as typeof import("node:fs");
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const path = require("node:path") as typeof import("node:path");
+  const file = path.join(process.cwd(), "public", "media-catalog", "packs", `${packFileSlug(folder)}.json`);
+  let pack: ArtPack | null = null;
+  try {
+    const raw = fs.readFileSync(file, "utf8");
+    pack = JSON.parse(raw) as ArtPack;
+  } catch {
+    pack = null;
+  }
+  artPackCache.set(folder, pack);
+  return pack ?? undefined;
+}
+
+/** Rewrites `samples[].src` through `assetUrl`. Used by API route handlers. */
+export function withResolvedSampleUrls(pack: ArtPack): ArtPack {
+  return {
+    ...pack,
+    samples: pack.samples.map((sample) => ({ ...sample, src: assetUrl(sample.src) })),
+  };
 }
 
 export const sourceMappings: SourceMapping[] = catalog.sourceMappings;
 export const mediaSources = catalog.sources;
 
-export const artCreators = Array.from(new Set(artPacks.map((pack) => pack.author)))
+export const artCreators = Array.from(new Set(catalog.artPacks.map((pack) => pack.author)))
   .sort((a, b) => normalizeCreator(a).localeCompare(normalizeCreator(b)));
 
 export const artThemes: ArtTheme[] = [

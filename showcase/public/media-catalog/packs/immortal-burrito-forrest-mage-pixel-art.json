@@ -1,0 +1,395 @@
+{
+  "folder": "immortal-burrito-forrest-mage-pixel-art",
+  "title": "Forrest Mage Pixel Art",
+  "author": "immortal-burrito",
+  "author_url": "https://immortal-burrito.itch.io",
+  "url": "https://immortal-burrito.itch.io/forrest-mage-pixel-art",
+  "game_id": null,
+  "license_class": "Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms)",
+  "attribution": "Appreciated / not required",
+  "theme": "Characters",
+  "description": "Forrest Mage Pixel Art is a 2D characters art pack by immortal-burrito. Use it for player characters, NPCs, animation prototyping. License: Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). Attribution: Appreciated / not required.",
+  "category": "Characters",
+  "themes": [
+    "characters",
+    "urban"
+  ],
+  "useCases": [
+    "player characters",
+    "NPCs",
+    "animation prototyping"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "characters",
+    "sprite",
+    "urban"
+  ],
+  "searchText": "forrest mage pixel art immortal-burrito-forrest-mage-pixel-art immortal-burrito characters free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms) appreciated / not required forrest mage pixel art is a 2d characters art pack by immortal-burrito. use it for player characters, npcs, animation prototyping. license: free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). attribution: appreciated / not required. characters urban player characters npcs animation prototyping 2d art sprite",
+  "sampleCount": 9,
+  "samples": [
+    {
+      "packFolder": "immortal-burrito-forrest-mage-pixel-art",
+      "path": "2D/immortal-burrito-forrest-mage-pixel-art/extracted/forrestmage/forrest-mage/forrest-mage-death.png",
+      "src": "/2D/immortal-burrito-forrest-mage-pixel-art/extracted/forrestmage/forrest-mage/forrest-mage-death.png",
+      "label": "Forrest Mage Death",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 738,
+        "height": 62,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.09303977272727272,
+        "transparentCoverage": 0.9069602272727273,
+        "contentRowRuns": 2,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 16,
+        "cellMedianHeight": 9
+      },
+      "promo": false,
+      "description": "Forrest Mage Death is an animated 2D character sample from Forrest Mage Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "forrest mage pixel art"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "forrest mage pixel art"
+      ],
+      "searchText": "forrest mage death 2d/immortal-burrito-forrest-mage-pixel-art/extracted/forrestmage/forrest-mage/forrest-mage-death.png forrest mage pixel art character forrest mage death is an animated 2d character sample from forrest mage pixel art. useful for player characters, npcs, animation prototyping. forrest mage pixel art player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "immortal-burrito-forrest-mage-pixel-art",
+      "path": "2D/immortal-burrito-forrest-mage-pixel-art/extracted/forrestmage/forrest-mage/explosion.png",
+      "src": "/2D/immortal-burrito-forrest-mage-pixel-art/extracted/forrestmage/forrest-mage/explosion.png",
+      "label": "Explosion",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 492,
+        "height": 62,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.03125,
+        "transparentCoverage": 0.9322509765625,
+        "contentRowRuns": 1,
+        "contentColRuns": 7,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Explosion is an animated 2D effect sample from Forrest Mage Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "forrest mage pixel art"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "forrest mage pixel art"
+      ],
+      "searchText": "explosion 2d/immortal-burrito-forrest-mage-pixel-art/extracted/forrestmage/forrest-mage/explosion.png forrest mage pixel art effect explosion is an animated 2d effect sample from forrest mage pixel art. useful for player characters, npcs, animation prototyping. forrest mage pixel art player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "immortal-burrito-forrest-mage-pixel-art",
+      "path": "2D/immortal-burrito-forrest-mage-pixel-art/extracted/forrestmage/forrest-mage/forrest-mage-spell.png",
+      "src": "/2D/immortal-burrito-forrest-mage-pixel-art/extracted/forrestmage/forrest-mage/forrest-mage-spell.png",
+      "label": "Forrest Mage Spell",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 738,
+        "height": 62,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.1015625,
+        "transparentCoverage": 0.8984375,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Forrest Mage Spell is an animated 2D effect sample from Forrest Mage Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "forrest mage pixel art"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "forrest mage pixel art"
+      ],
+      "searchText": "forrest mage spell 2d/immortal-burrito-forrest-mage-pixel-art/extracted/forrestmage/forrest-mage/forrest-mage-spell.png forrest mage pixel art effect forrest mage spell is an animated 2d effect sample from forrest mage pixel art. useful for player characters, npcs, animation prototyping. forrest mage pixel art player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "immortal-burrito-forrest-mage-pixel-art",
+      "path": "2D/immortal-burrito-forrest-mage-pixel-art/extracted/forrestmage/forrest-mage/forrest-mage-thorns.png",
+      "src": "/2D/immortal-burrito-forrest-mage-pixel-art/extracted/forrestmage/forrest-mage/forrest-mage-thorns.png",
+      "label": "Forrest Mage Thorns",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 861,
+        "height": 62,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.1501736111111111,
+        "transparentCoverage": 0.8498263888888888,
+        "contentRowRuns": 1,
+        "contentColRuns": 11,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Forrest Mage Thorns is an animated 2D character sample from Forrest Mage Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "forrest mage pixel art"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "forrest mage pixel art"
+      ],
+      "searchText": "forrest mage thorns 2d/immortal-burrito-forrest-mage-pixel-art/extracted/forrestmage/forrest-mage/forrest-mage-thorns.png forrest mage pixel art character forrest mage thorns is an animated 2d character sample from forrest mage pixel art. useful for player characters, npcs, animation prototyping. forrest mage pixel art player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "immortal-burrito-forrest-mage-pixel-art",
+      "path": "2D/immortal-burrito-forrest-mage-pixel-art/extracted/forrestmage/forrest-mage/forrest-mage-walkl.png",
+      "src": "/2D/immortal-burrito-forrest-mage-pixel-art/extracted/forrestmage/forrest-mage/forrest-mage-walkl.png",
+      "label": "Forrest Mage Walkl",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 738,
+        "height": 62,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.09410511363636363,
+        "transparentCoverage": 0.9058948863636364,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Forrest Mage Walkl is an animated 2D character sample from Forrest Mage Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "forrest mage pixel art"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "forrest mage pixel art"
+      ],
+      "searchText": "forrest mage walkl 2d/immortal-burrito-forrest-mage-pixel-art/extracted/forrestmage/forrest-mage/forrest-mage-walkl.png forrest mage pixel art character forrest mage walkl is an animated 2d character sample from forrest mage pixel art. useful for player characters, npcs, animation prototyping. forrest mage pixel art player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "immortal-burrito-forrest-mage-pixel-art",
+      "path": "2D/immortal-burrito-forrest-mage-pixel-art/extracted/forrestmage/forrest-mage/forrest-mage-jiff.gif",
+      "src": "/2D/immortal-burrito-forrest-mage-pixel-art/extracted/forrestmage/forrest-mage/forrest-mage-jiff.gif",
+      "label": "Forrest Mage Jiff",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 123,
+        "height": 62,
+        "bgKind": "mixed",
+        "alphaCoverage": 1,
+        "transparentCoverage": 0,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Forrest Mage Jiff is an animated 2D character sample from Forrest Mage Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "forrest mage pixel art"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "forrest mage pixel art"
+      ],
+      "searchText": "forrest mage jiff 2d/immortal-burrito-forrest-mage-pixel-art/extracted/forrestmage/forrest-mage/forrest-mage-jiff.gif forrest mage pixel art character forrest mage jiff is an animated 2d character sample from forrest mage pixel art. useful for player characters, npcs, animation prototyping. forrest mage pixel art player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "immortal-burrito-forrest-mage-pixel-art",
+      "path": "2D/immortal-burrito-forrest-mage-pixel-art/extracted/forrestmage/forrest-mage/forrest-mage-teleport1.png",
+      "src": "/2D/immortal-burrito-forrest-mage-pixel-art/extracted/forrestmage/forrest-mage/forrest-mage-teleport1.png",
+      "label": "Forrest Mage Teleport1",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 615,
+        "height": 62,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.024639423076923076,
+        "transparentCoverage": 0.9753605769230769,
+        "contentRowRuns": 1,
+        "contentColRuns": 7,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Forrest Mage Teleport1 is an animated 2D character sample from Forrest Mage Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "forrest mage pixel art"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "forrest mage pixel art"
+      ],
+      "searchText": "forrest mage teleport1 2d/immortal-burrito-forrest-mage-pixel-art/extracted/forrestmage/forrest-mage/forrest-mage-teleport1.png forrest mage pixel art character forrest mage teleport1 is an animated 2d character sample from forrest mage pixel art. useful for player characters, npcs, animation prototyping. forrest mage pixel art player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "immortal-burrito-forrest-mage-pixel-art",
+      "path": "2D/immortal-burrito-forrest-mage-pixel-art/extracted/forrestmage/forrest-mage/forrest-mage-teleport2.png",
+      "src": "/2D/immortal-burrito-forrest-mage-pixel-art/extracted/forrestmage/forrest-mage/forrest-mage-teleport2.png",
+      "label": "Forrest Mage Teleport2",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 738,
+        "height": 62,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.040838068181818184,
+        "transparentCoverage": 0.9591619318181818,
+        "contentRowRuns": 1,
+        "contentColRuns": 7,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Forrest Mage Teleport2 is an animated 2D character sample from Forrest Mage Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "forrest mage pixel art"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "forrest mage pixel art"
+      ],
+      "searchText": "forrest mage teleport2 2d/immortal-burrito-forrest-mage-pixel-art/extracted/forrestmage/forrest-mage/forrest-mage-teleport2.png forrest mage pixel art character forrest mage teleport2 is an animated 2d character sample from forrest mage pixel art. useful for player characters, npcs, animation prototyping. forrest mage pixel art player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "immortal-burrito-forrest-mage-pixel-art",
+      "path": "2D/immortal-burrito-forrest-mage-pixel-art/extracted/forrestmage/forrest-mage/forrest-mage.png",
+      "src": "/2D/immortal-burrito-forrest-mage-pixel-art/extracted/forrestmage/forrest-mage/forrest-mage.png",
+      "label": "Forrest Mage",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 123,
+        "height": 62,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0931025439286651,
+        "transparentCoverage": 0.9068974560713349,
+        "contentRowRuns": 1,
+        "contentColRuns": 2,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Forrest Mage is a static 2D character sample from Forrest Mage Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "forrest mage pixel art"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "forrest mage pixel art",
+        "static"
+      ],
+      "searchText": "forrest mage 2d/immortal-burrito-forrest-mage-pixel-art/extracted/forrestmage/forrest-mage/forrest-mage.png forrest mage pixel art character forrest mage is a static 2d character sample from forrest mage pixel art. useful for player characters, npcs, animation prototyping. forrest mage pixel art player characters npcs animation prototyping 2d art static"
+    }
+  ]
+}

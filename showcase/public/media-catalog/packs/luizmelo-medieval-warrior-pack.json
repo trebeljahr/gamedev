@@ -1,0 +1,198 @@
+{
+  "folder": "luizmelo-medieval-warrior-pack",
+  "title": "Medieval Warrior Pack",
+  "author": "luizmelo",
+  "author_url": "https://luizmelo.itch.io",
+  "url": "https://luizmelo.itch.io/medieval-warrior-pack",
+  "game_id": null,
+  "license_class": "CC0 1.0 (Creative Commons Zero)",
+  "attribution": "Optional",
+  "theme": "Characters",
+  "description": "Medieval Warrior Pack is a 2D characters art pack by luizmelo. Use it for player characters, NPCs, animation prototyping. License: CC0 1.0 (Creative Commons Zero). Attribution: Optional.",
+  "category": "Characters",
+  "themes": [
+    "characters",
+    "fantasy"
+  ],
+  "useCases": [
+    "player characters",
+    "NPCs",
+    "animation prototyping"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "characters",
+    "fantasy",
+    "medieval",
+    "sprite"
+  ],
+  "searchText": "medieval warrior pack luizmelo-medieval-warrior-pack luizmelo characters cc0 1.0 (creative commons zero) optional medieval warrior pack is a 2d characters art pack by luizmelo. use it for player characters, npcs, animation prototyping. license: cc0 1.0 (creative commons zero). attribution: optional. characters fantasy player characters npcs animation prototyping 2d art medieval sprite",
+  "sampleCount": 4,
+  "samples": [
+    {
+      "packFolder": "luizmelo-medieval-warrior-pack",
+      "path": "2D/luizmelo-medieval-warrior-pack/extracted/medieval-warrior-version-1-2/medieval-warrior-version-1-2/attack3.png",
+      "src": "/2D/luizmelo-medieval-warrior-pack/extracted/medieval-warrior-version-1-2/medieval-warrior-version-1-2/attack3.png",
+      "label": "Attack3",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 736,
+        "height": 137,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.09708658854166667,
+        "transparentCoverage": 0.9029134114583334,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Attack3 is an animated 2D character sample from Medieval Warrior Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "attack3 2d/luizmelo-medieval-warrior-pack/extracted/medieval-warrior-version-1-2/medieval-warrior-version-1-2/attack3.png medieval warrior pack character attack3 is an animated 2d character sample from medieval warrior pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "luizmelo-medieval-warrior-pack",
+      "path": "2D/luizmelo-medieval-warrior-pack/extracted/medieval-warrior-version-1-2/medieval-warrior-version-1-2/crouch.png",
+      "src": "/2D/luizmelo-medieval-warrior-pack/extracted/medieval-warrior-version-1-2/medieval-warrior-version-1-2/crouch.png",
+      "label": "Crouch",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 736,
+        "height": 137,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.053059895833333336,
+        "transparentCoverage": 0.9469401041666666,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Crouch is an animated 2D character sample from Medieval Warrior Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "crouch 2d/luizmelo-medieval-warrior-pack/extracted/medieval-warrior-version-1-2/medieval-warrior-version-1-2/crouch.png medieval warrior pack character crouch is an animated 2d character sample from medieval warrior pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "luizmelo-medieval-warrior-pack",
+      "path": "2D/luizmelo-medieval-warrior-pack/extracted/medieval-warrior-version-1-2/medieval-warrior-version-1-2/roll.png",
+      "src": "/2D/luizmelo-medieval-warrior-pack/extracted/medieval-warrior-version-1-2/medieval-warrior-version-1-2/roll.png",
+      "label": "Roll",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 736,
+        "height": 137,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.032633463541666664,
+        "transparentCoverage": 0.9673665364583334,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Roll is an animated 2D character sample from Medieval Warrior Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "roll 2d/luizmelo-medieval-warrior-pack/extracted/medieval-warrior-version-1-2/medieval-warrior-version-1-2/roll.png medieval warrior pack character roll is an animated 2d character sample from medieval warrior pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "luizmelo-medieval-warrior-pack",
+      "path": "2D/luizmelo-medieval-warrior-pack/extracted/medieval-warrior-version-1-2/medieval-warrior-version-1-2/slide.png",
+      "src": "/2D/luizmelo-medieval-warrior-pack/extracted/medieval-warrior-version-1-2/medieval-warrior-version-1-2/slide.png",
+      "label": "Slide",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 368,
+        "height": 137,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.046875,
+        "transparentCoverage": 0.953125,
+        "contentRowRuns": 1,
+        "contentColRuns": 2,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Slide is a static 2D character sample from Medieval Warrior Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "fantasy",
+        "medieval",
+        "static"
+      ],
+      "searchText": "slide 2d/luizmelo-medieval-warrior-pack/extracted/medieval-warrior-version-1-2/medieval-warrior-version-1-2/slide.png medieval warrior pack character slide is a static 2d character sample from medieval warrior pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art medieval static"
+    }
+  ]
+}

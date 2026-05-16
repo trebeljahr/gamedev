@@ -1,0 +1,433 @@
+{
+  "folder": "2D/kenney/development-essentials",
+  "title": "Development Essentials",
+  "author": "Kenney",
+  "author_url": "https://kenney.nl/",
+  "url": "https://kenney.nl/assets/category:2D",
+  "game_id": null,
+  "license_class": "CC0 1.0 (Creative Commons Zero)",
+  "attribution": "Optional",
+  "theme": "General",
+  "description": "Development Essentials is a 2D general art pack by Kenney. Use it for game jams, prototypes, scene dressing. License: CC0 1.0 (Creative Commons Zero). Attribution: Optional.",
+  "category": "General",
+  "themes": [
+    "development essentials",
+    "general"
+  ],
+  "useCases": [
+    "game jams",
+    "prototypes",
+    "scene dressing"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "development essentials",
+    "general",
+    "sprite"
+  ],
+  "searchText": "development essentials 2d/kenney/development-essentials kenney general cc0 1.0 (creative commons zero) optional development essentials is a 2d general art pack by kenney. use it for game jams, prototypes, scene dressing. license: cc0 1.0 (creative commons zero). attribution: optional. development essentials general game jams prototypes scene dressing 2d art sprite",
+  "sampleCount": 10,
+  "samples": [
+    {
+      "packFolder": "2D/kenney/development-essentials",
+      "path": "2D/kenney/development-essentials/extracted/uv-texture/uv-texture.png",
+      "src": "/2D/kenney/development-essentials/extracted/uv-texture/uv-texture.png",
+      "label": "Uv Texture",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 256,
+        "height": 256,
+        "bgKind": "mixed",
+        "alphaCoverage": 1,
+        "transparentCoverage": 0,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Uv Texture is a static 2D image sample from Development Essentials. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "development essentials",
+        "image"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "development essentials",
+        "image",
+        "static"
+      ],
+      "searchText": "uv texture 2d/kenney/development-essentials/extracted/uv-texture/uv-texture.png development essentials image uv texture is a static 2d image sample from development essentials. useful for player characters, npcs, animation prototyping. development essentials player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "2D/kenney/development-essentials",
+      "path": "2D/kenney/development-essentials/extracted/checkerboard/checkerboard-transparent.png",
+      "src": "/2D/kenney/development-essentials/extracted/checkerboard/checkerboard-transparent.png",
+      "label": "Checkerboard Transparent",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 16,
+        "height": 16,
+        "bgKind": "mixed",
+        "alphaCoverage": 0.5,
+        "transparentCoverage": 0.5,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Checkerboard Transparent is a static 2D image sample from Development Essentials. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "development essentials",
+        "image"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "development essentials",
+        "image",
+        "static"
+      ],
+      "searchText": "checkerboard transparent 2d/kenney/development-essentials/extracted/checkerboard/checkerboard-transparent.png development essentials image checkerboard transparent is a static 2d image sample from development essentials. useful for player characters, npcs, animation prototyping. development essentials player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "2D/kenney/development-essentials",
+      "path": "2D/kenney/development-essentials/extracted/checkerboard/checkerboard.png",
+      "src": "/2D/kenney/development-essentials/extracted/checkerboard/checkerboard.png",
+      "label": "Checkerboard",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 16,
+        "height": 16,
+        "bgKind": "mixed",
+        "alphaCoverage": 1,
+        "transparentCoverage": 0,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Checkerboard is a static 2D image sample from Development Essentials. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "development essentials",
+        "image"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "development essentials",
+        "image",
+        "static"
+      ],
+      "searchText": "checkerboard 2d/kenney/development-essentials/extracted/checkerboard/checkerboard.png development essentials image checkerboard is a static 2d image sample from development essentials. useful for player characters, npcs, animation prototyping. development essentials player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "2D/kenney/development-essentials",
+      "path": "2D/kenney/development-essentials/extracted/gradient/gradient-angular.png",
+      "src": "/2D/kenney/development-essentials/extracted/gradient/gradient-angular.png",
+      "label": "Gradient Angular",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 256,
+        "height": 256,
+        "bgKind": "mixed",
+        "alphaCoverage": 1,
+        "transparentCoverage": 0,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Gradient Angular is a static 2D image sample from Development Essentials. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "development essentials",
+        "image"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "development essentials",
+        "image",
+        "static"
+      ],
+      "searchText": "gradient angular 2d/kenney/development-essentials/extracted/gradient/gradient-angular.png development essentials image gradient angular is a static 2d image sample from development essentials. useful for player characters, npcs, animation prototyping. development essentials player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "2D/kenney/development-essentials",
+      "path": "2D/kenney/development-essentials/extracted/gradient/gradient-horizontal-mirror.png",
+      "src": "/2D/kenney/development-essentials/extracted/gradient/gradient-horizontal-mirror.png",
+      "label": "Gradient Horizontal Mirror",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 256,
+        "height": 256,
+        "bgKind": "mixed",
+        "alphaCoverage": 1,
+        "transparentCoverage": 0,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Gradient Horizontal Mirror is a static 2D image sample from Development Essentials. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "development essentials",
+        "image"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "development essentials",
+        "image",
+        "static"
+      ],
+      "searchText": "gradient horizontal mirror 2d/kenney/development-essentials/extracted/gradient/gradient-horizontal-mirror.png development essentials image gradient horizontal mirror is a static 2d image sample from development essentials. useful for player characters, npcs, animation prototyping. development essentials player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "2D/kenney/development-essentials",
+      "path": "2D/kenney/development-essentials/extracted/gradient/gradient-horizontal.png",
+      "src": "/2D/kenney/development-essentials/extracted/gradient/gradient-horizontal.png",
+      "label": "Gradient Horizontal",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 256,
+        "height": 256,
+        "bgKind": "mixed",
+        "alphaCoverage": 1,
+        "transparentCoverage": 0,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Gradient Horizontal is a static 2D image sample from Development Essentials. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "development essentials",
+        "image"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "development essentials",
+        "image",
+        "static"
+      ],
+      "searchText": "gradient horizontal 2d/kenney/development-essentials/extracted/gradient/gradient-horizontal.png development essentials image gradient horizontal is a static 2d image sample from development essentials. useful for player characters, npcs, animation prototyping. development essentials player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "2D/kenney/development-essentials",
+      "path": "2D/kenney/development-essentials/extracted/gradient/gradient-vertical-mirror.png",
+      "src": "/2D/kenney/development-essentials/extracted/gradient/gradient-vertical-mirror.png",
+      "label": "Gradient Vertical Mirror",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 256,
+        "height": 256,
+        "bgKind": "mixed",
+        "alphaCoverage": 1,
+        "transparentCoverage": 0,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Gradient Vertical Mirror is a static 2D image sample from Development Essentials. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "development essentials",
+        "image"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "development essentials",
+        "image",
+        "static"
+      ],
+      "searchText": "gradient vertical mirror 2d/kenney/development-essentials/extracted/gradient/gradient-vertical-mirror.png development essentials image gradient vertical mirror is a static 2d image sample from development essentials. useful for player characters, npcs, animation prototyping. development essentials player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "2D/kenney/development-essentials",
+      "path": "2D/kenney/development-essentials/extracted/gradient/gradient-vertical.png",
+      "src": "/2D/kenney/development-essentials/extracted/gradient/gradient-vertical.png",
+      "label": "Gradient Vertical",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 256,
+        "height": 256,
+        "bgKind": "mixed",
+        "alphaCoverage": 1,
+        "transparentCoverage": 0,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Gradient Vertical is a static 2D image sample from Development Essentials. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "development essentials",
+        "image"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "development essentials",
+        "image",
+        "static"
+      ],
+      "searchText": "gradient vertical 2d/kenney/development-essentials/extracted/gradient/gradient-vertical.png development essentials image gradient vertical is a static 2d image sample from development essentials. useful for player characters, npcs, animation prototyping. development essentials player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "2D/kenney/development-essentials",
+      "path": "2D/kenney/development-essentials/extracted/noise/perlin-noise-small.png",
+      "src": "/2D/kenney/development-essentials/extracted/noise/perlin-noise-small.png",
+      "label": "Perlin Noise Small",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 256,
+        "height": 256,
+        "bgKind": "mixed",
+        "alphaCoverage": 1,
+        "transparentCoverage": 0,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Perlin Noise Small is a static 2D image sample from Development Essentials. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "development essentials",
+        "image"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "development essentials",
+        "image",
+        "static"
+      ],
+      "searchText": "perlin noise small 2d/kenney/development-essentials/extracted/noise/perlin-noise-small.png development essentials image perlin noise small is a static 2d image sample from development essentials. useful for player characters, npcs, animation prototyping. development essentials player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "2D/kenney/development-essentials",
+      "path": "2D/kenney/development-essentials/extracted/noise/perlin-noise.png",
+      "src": "/2D/kenney/development-essentials/extracted/noise/perlin-noise.png",
+      "label": "Perlin Noise",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 256,
+        "height": 256,
+        "bgKind": "mixed",
+        "alphaCoverage": 1,
+        "transparentCoverage": 0,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Perlin Noise is a static 2D image sample from Development Essentials. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "development essentials",
+        "image"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "development essentials",
+        "image",
+        "static"
+      ],
+      "searchText": "perlin noise 2d/kenney/development-essentials/extracted/noise/perlin-noise.png development essentials image perlin noise is a static 2d image sample from development essentials. useful for player characters, npcs, animation prototyping. development essentials player characters npcs animation prototyping 2d art static"
+    }
+  ]
+}

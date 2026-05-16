@@ -1,0 +1,75 @@
+{
+  "folder": "atari-boy-oldherocharacter",
+  "title": "Old hero Pixel Art character",
+  "author": "atari_boy",
+  "author_url": "https://atari-boy.itch.io",
+  "url": "https://atari-boy.itch.io/oldherocharacter",
+  "game_id": 2121053,
+  "license_class": "CC0 1.0 (Creative Commons Zero)",
+  "attribution": "Optional",
+  "theme": "Characters",
+  "description": "Old Hero Pixel Art Character is a 2D characters art pack by atari_boy. Use it for player characters, NPCs, animation prototyping. License: CC0 1.0 (Creative Commons Zero). Attribution: Optional.",
+  "category": "Characters",
+  "themes": [
+    "characters",
+    "old hero pixel art character"
+  ],
+  "useCases": [
+    "player characters",
+    "NPCs",
+    "animation prototyping"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "characters",
+    "old hero pixel art character",
+    "sprite"
+  ],
+  "searchText": "old hero pixel art character atari-boy-oldherocharacter atari_boy characters cc0 1.0 (creative commons zero) optional old hero pixel art character is a 2d characters art pack by atari_boy. use it for player characters, npcs, animation prototyping. license: cc0 1.0 (creative commons zero). attribution: optional. characters old hero pixel art character player characters npcs animation prototyping 2d art sprite",
+  "sampleCount": 1,
+  "samples": [
+    {
+      "packFolder": "atari-boy-oldherocharacter",
+      "path": "2D/atari-boy-oldherocharacter/extracted/jotem/jotem-spritesheet.png",
+      "src": "/2D/atari-boy-oldherocharacter/extracted/jotem/jotem-spritesheet.png",
+      "label": "Jotem Spritesheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 1536,
+        "height": 1536,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.03497314453125,
+        "transparentCoverage": 0.96502685546875,
+        "contentRowRuns": 12,
+        "contentColRuns": 12,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 12,
+        "cellMedianHeight": 6
+      },
+      "promo": false,
+      "description": "Jotem Spritesheet is an animated 2D character sample from Old hero Pixel Art character. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "old hero pixel art character"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "old hero pixel art character"
+      ],
+      "searchText": "jotem spritesheet 2d/atari-boy-oldherocharacter/extracted/jotem/jotem-spritesheet.png old hero pixel art character character jotem spritesheet is an animated 2d character sample from old hero pixel art character. useful for player characters, npcs, animation prototyping. old hero pixel art character player characters npcs animation prototyping 2d animated art"
+    }
+  ]
+}

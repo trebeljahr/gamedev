@@ -1,0 +1,603 @@
+{
+  "folder": "strangefew-pixel-platformer-pack",
+  "title": "Pixel Platformer Pack",
+  "author": "StrangeFew",
+  "author_url": "https://strangefew.itch.io",
+  "url": "https://strangefew.itch.io/pixel-platformer-pack",
+  "game_id": 242027,
+  "license_class": "Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms)",
+  "attribution": "Appreciated / not required",
+  "theme": "Environments",
+  "description": "Pixel Platformer Pack is a 2D environments art pack by StrangeFew. Use it for level building, tilemaps, environment dressing. License: Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). Attribution: Appreciated / not required.",
+  "category": "Environments",
+  "themes": [
+    "environments",
+    "urban"
+  ],
+  "useCases": [
+    "level building",
+    "tilemaps",
+    "environment dressing"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "environments",
+    "sprite",
+    "urban"
+  ],
+  "searchText": "pixel platformer pack strangefew-pixel-platformer-pack strangefew environments free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms) appreciated / not required pixel platformer pack is a 2d environments art pack by strangefew. use it for level building, tilemaps, environment dressing. license: free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). attribution: appreciated / not required. environments urban level building tilemaps environment dressing 2d art sprite",
+  "sampleCount": 14,
+  "samples": [
+    {
+      "packFolder": "strangefew-pixel-platformer-pack",
+      "path": "2D/strangefew-pixel-platformer-pack/extracted/pixel-platformer-pack/pixel-platformer-pack/raw-files/player-and-enemy-animation-strips.png",
+      "src": "/2D/strangefew-pixel-platformer-pack/extracted/pixel-platformer-pack/pixel-platformer-pack/raw-files/player-and-enemy-animation-strips.png",
+      "label": "Player And Enemy Animation Strips",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 256,
+        "height": 256,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.084197998046875,
+        "transparentCoverage": 0.915802001953125,
+        "contentRowRuns": 7,
+        "contentColRuns": 7,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": true,
+        "cellMedianWidth": 26,
+        "cellMedianHeight": 20
+      },
+      "promo": false,
+      "description": "Player And Enemy Animation Strips is an animated 2D character sample from Pixel Platformer Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "pixel platformer pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "pixel platformer pack"
+      ],
+      "searchText": "player and enemy animation strips 2d/strangefew-pixel-platformer-pack/extracted/pixel-platformer-pack/pixel-platformer-pack/raw-files/player-and-enemy-animation-strips.png pixel platformer pack character player and enemy animation strips is an animated 2d character sample from pixel platformer pack. useful for player characters, npcs, animation prototyping. pixel platformer pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "strangefew-pixel-platformer-pack",
+      "path": "2D/strangefew-pixel-platformer-pack/extracted/pixel-platformer-pack/pixel-platformer-pack/raw-files/player-die.png",
+      "src": "/2D/strangefew-pixel-platformer-pack/extracted/pixel-platformer-pack/pixel-platformer-pack/raw-files/player-die.png",
+      "label": "Player Die",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 224,
+        "height": 32,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.1474609375,
+        "transparentCoverage": 0.8525390625,
+        "contentRowRuns": 1,
+        "contentColRuns": 7,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Player Die is an animated 2D character sample from Pixel Platformer Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "pixel platformer pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "pixel platformer pack"
+      ],
+      "searchText": "player die 2d/strangefew-pixel-platformer-pack/extracted/pixel-platformer-pack/pixel-platformer-pack/raw-files/player-die.png pixel platformer pack character player die is an animated 2d character sample from pixel platformer pack. useful for player characters, npcs, animation prototyping. pixel platformer pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "strangefew-pixel-platformer-pack",
+      "path": "2D/strangefew-pixel-platformer-pack/extracted/pixel-platformer-pack/pixel-platformer-pack/raw-files/player-hit.png",
+      "src": "/2D/strangefew-pixel-platformer-pack/extracted/pixel-platformer-pack/pixel-platformer-pack/raw-files/player-hit.png",
+      "label": "Player Hit",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 128,
+        "height": 32,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.187255859375,
+        "transparentCoverage": 0.812744140625,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Player Hit is an animated 2D character sample from Pixel Platformer Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "pixel platformer pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "pixel platformer pack"
+      ],
+      "searchText": "player hit 2d/strangefew-pixel-platformer-pack/extracted/pixel-platformer-pack/pixel-platformer-pack/raw-files/player-hit.png pixel platformer pack character player hit is an animated 2d character sample from pixel platformer pack. useful for player characters, npcs, animation prototyping. pixel platformer pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "strangefew-pixel-platformer-pack",
+      "path": "2D/strangefew-pixel-platformer-pack/extracted/pixel-platformer-pack/pixel-platformer-pack/raw-files/player-idle.png",
+      "src": "/2D/strangefew-pixel-platformer-pack/extracted/pixel-platformer-pack/pixel-platformer-pack/raw-files/player-idle.png",
+      "label": "Player Idle",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 160,
+        "height": 32,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.1890625,
+        "transparentCoverage": 0.8109375,
+        "contentRowRuns": 1,
+        "contentColRuns": 5,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Player Idle is an animated 2D character sample from Pixel Platformer Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "pixel platformer pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "pixel platformer pack"
+      ],
+      "searchText": "player idle 2d/strangefew-pixel-platformer-pack/extracted/pixel-platformer-pack/pixel-platformer-pack/raw-files/player-idle.png pixel platformer pack character player idle is an animated 2d character sample from pixel platformer pack. useful for player characters, npcs, animation prototyping. pixel platformer pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "strangefew-pixel-platformer-pack",
+      "path": "2D/strangefew-pixel-platformer-pack/extracted/pixel-platformer-pack/pixel-platformer-pack/raw-files/player-run.png",
+      "src": "/2D/strangefew-pixel-platformer-pack/extracted/pixel-platformer-pack/pixel-platformer-pack/raw-files/player-run.png",
+      "label": "Player Run",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 160,
+        "height": 32,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.1615234375,
+        "transparentCoverage": 0.8384765625,
+        "contentRowRuns": 1,
+        "contentColRuns": 5,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Player Run is an animated 2D character sample from Pixel Platformer Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "pixel platformer pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "pixel platformer pack"
+      ],
+      "searchText": "player run 2d/strangefew-pixel-platformer-pack/extracted/pixel-platformer-pack/pixel-platformer-pack/raw-files/player-run.png pixel platformer pack character player run is an animated 2d character sample from pixel platformer pack. useful for player characters, npcs, animation prototyping. pixel platformer pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "strangefew-pixel-platformer-pack",
+      "path": "2D/strangefew-pixel-platformer-pack/extracted/pixel-platformer-pack/pixel-platformer-pack/raw-files/decoration-spritesheet.png",
+      "src": "/2D/strangefew-pixel-platformer-pack/extracted/pixel-platformer-pack/pixel-platformer-pack/raw-files/decoration-spritesheet.png",
+      "label": "Decoration Spritesheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 128,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.12152099609375,
+        "transparentCoverage": 0.87847900390625,
+        "contentRowRuns": 3,
+        "contentColRuns": 3,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 16,
+        "cellMedianHeight": 15
+      },
+      "promo": false,
+      "description": "Decoration Spritesheet is an animated 2D character sample from Pixel Platformer Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "pixel platformer pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "pixel platformer pack"
+      ],
+      "searchText": "decoration spritesheet 2d/strangefew-pixel-platformer-pack/extracted/pixel-platformer-pack/pixel-platformer-pack/raw-files/decoration-spritesheet.png pixel platformer pack character decoration spritesheet is an animated 2d character sample from pixel platformer pack. useful for player characters, npcs, animation prototyping. pixel platformer pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "strangefew-pixel-platformer-pack",
+      "path": "2D/strangefew-pixel-platformer-pack/extracted/pixel-platformer-pack/pixel-platformer-pack/raw-files/object-animation-strips.png",
+      "src": "/2D/strangefew-pixel-platformer-pack/extracted/pixel-platformer-pack/pixel-platformer-pack/raw-files/object-animation-strips.png",
+      "label": "Object Animation Strips",
+      "kind": "sprite",
+      "animated": true,
+      "inspection": {
+        "width": 64,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.28173828125,
+        "transparentCoverage": 0.71826171875,
+        "contentRowRuns": 5,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Object Animation Strips is an animated 2D sprite sample from Pixel Platformer Pack. Useful for level building, tilemaps, environment dressing.",
+      "category": "sprite",
+      "themes": [
+        "pixel platformer pack",
+        "sprite"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "pixel platformer pack",
+        "sprite"
+      ],
+      "searchText": "object animation strips 2d/strangefew-pixel-platformer-pack/extracted/pixel-platformer-pack/pixel-platformer-pack/raw-files/object-animation-strips.png pixel platformer pack sprite object animation strips is an animated 2d sprite sample from pixel platformer pack. useful for level building, tilemaps, environment dressing. pixel platformer pack level building tilemaps environment dressing 2d animated art"
+    },
+    {
+      "packFolder": "strangefew-pixel-platformer-pack",
+      "path": "2D/strangefew-pixel-platformer-pack/extracted/pixel-platformer-pack/pixel-platformer-pack/raw-files/full-tileset.png",
+      "src": "/2D/strangefew-pixel-platformer-pack/extracted/pixel-platformer-pack/pixel-platformer-pack/raw-files/full-tileset.png",
+      "label": "Full Tileset",
+      "kind": "tile",
+      "animated": true,
+      "inspection": {
+        "width": 256,
+        "height": 256,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.1021881103515625,
+        "transparentCoverage": 0.8978118896484375,
+        "contentRowRuns": 2,
+        "contentColRuns": 5,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 40,
+        "cellMedianHeight": 54
+      },
+      "promo": false,
+      "description": "Full Tileset is an animated 2D tile sample from Pixel Platformer Pack. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "pixel platformer pack",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "modular",
+        "pixel platformer pack",
+        "tile"
+      ],
+      "searchText": "full tileset 2d/strangefew-pixel-platformer-pack/extracted/pixel-platformer-pack/pixel-platformer-pack/raw-files/full-tileset.png pixel platformer pack tile full tileset is an animated 2d tile sample from pixel platformer pack. useful for level building, tilemaps, environment dressing. pixel platformer pack level building tilemaps environment dressing 2d animated art modular"
+    },
+    {
+      "packFolder": "strangefew-pixel-platformer-pack",
+      "path": "2D/strangefew-pixel-platformer-pack/extracted/pixel-platformer-pack/pixel-platformer-pack/raw-files/game-objects-spritesheet.png",
+      "src": "/2D/strangefew-pixel-platformer-pack/extracted/pixel-platformer-pack/pixel-platformer-pack/raw-files/game-objects-spritesheet.png",
+      "label": "Game Objects Spritesheet",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 128,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.09197998046875,
+        "transparentCoverage": 0.90802001953125,
+        "contentRowRuns": 2,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Game Objects Spritesheet is an animated 2D image sample from Pixel Platformer Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "pixel platformer pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "pixel platformer pack"
+      ],
+      "searchText": "game objects spritesheet 2d/strangefew-pixel-platformer-pack/extracted/pixel-platformer-pack/pixel-platformer-pack/raw-files/game-objects-spritesheet.png pixel platformer pack image game objects spritesheet is an animated 2d image sample from pixel platformer pack. useful for player characters, npcs, animation prototyping. pixel platformer pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "strangefew-pixel-platformer-pack",
+      "path": "2D/strangefew-pixel-platformer-pack/extracted/pixel-platformer-pack/pixel-platformer-pack/raw-files/ground-tilesheet.png",
+      "src": "/2D/strangefew-pixel-platformer-pack/extracted/pixel-platformer-pack/pixel-platformer-pack/raw-files/ground-tilesheet.png",
+      "label": "Ground Tilesheet",
+      "kind": "tile",
+      "animated": true,
+      "inspection": {
+        "width": 128,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.19525146484375,
+        "transparentCoverage": 0.80474853515625,
+        "contentRowRuns": 2,
+        "contentColRuns": 2,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 48,
+        "cellMedianHeight": 40
+      },
+      "promo": false,
+      "description": "Ground Tilesheet is an animated 2D tile sample from Pixel Platformer Pack. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "pixel platformer pack",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "modular",
+        "pixel platformer pack",
+        "tile"
+      ],
+      "searchText": "ground tilesheet 2d/strangefew-pixel-platformer-pack/extracted/pixel-platformer-pack/pixel-platformer-pack/raw-files/ground-tilesheet.png pixel platformer pack tile ground tilesheet is an animated 2d tile sample from pixel platformer pack. useful for level building, tilemaps, environment dressing. pixel platformer pack level building tilemaps environment dressing 2d animated art modular"
+    },
+    {
+      "packFolder": "strangefew-pixel-platformer-pack",
+      "path": "2D/strangefew-pixel-platformer-pack/extracted/pixel-platformer-pack/pixel-platformer-pack/raw-files/player-fall.png",
+      "src": "/2D/strangefew-pixel-platformer-pack/extracted/pixel-platformer-pack/pixel-platformer-pack/raw-files/player-fall.png",
+      "label": "Player Fall",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 32,
+        "height": 32,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.1904296875,
+        "transparentCoverage": 0.8095703125,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Player Fall is a static 2D character sample from Pixel Platformer Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "pixel platformer pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "pixel platformer pack",
+        "static"
+      ],
+      "searchText": "player fall 2d/strangefew-pixel-platformer-pack/extracted/pixel-platformer-pack/pixel-platformer-pack/raw-files/player-fall.png pixel platformer pack character player fall is a static 2d character sample from pixel platformer pack. useful for player characters, npcs, animation prototyping. pixel platformer pack player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "strangefew-pixel-platformer-pack",
+      "path": "2D/strangefew-pixel-platformer-pack/extracted/pixel-platformer-pack/pixel-platformer-pack/raw-files/clouds-background.png",
+      "src": "/2D/strangefew-pixel-platformer-pack/extracted/pixel-platformer-pack/pixel-platformer-pack/raw-files/clouds-background.png",
+      "label": "Clouds Background",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 240,
+        "height": 126,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.4128637566137566,
+        "transparentCoverage": 0.5871362433862434,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Clouds Background is a static 2D image sample from Pixel Platformer Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "pixel platformer pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "image",
+        "pixel platformer pack",
+        "static"
+      ],
+      "searchText": "clouds background 2d/strangefew-pixel-platformer-pack/extracted/pixel-platformer-pack/pixel-platformer-pack/raw-files/clouds-background.png pixel platformer pack image clouds background is a static 2d image sample from pixel platformer pack. useful for player characters, npcs, animation prototyping. pixel platformer pack player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "strangefew-pixel-platformer-pack",
+      "path": "2D/strangefew-pixel-platformer-pack/extracted/pixel-platformer-pack/pixel-platformer-pack/raw-files/player-punch.png",
+      "src": "/2D/strangefew-pixel-platformer-pack/extracted/pixel-platformer-pack/pixel-platformer-pack/raw-files/player-punch.png",
+      "label": "Player Punch",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 192,
+        "height": 32,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.17626953125,
+        "transparentCoverage": 0.82373046875,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Player Punch is an animated 2D character sample from Pixel Platformer Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "pixel platformer pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "pixel platformer pack"
+      ],
+      "searchText": "player punch 2d/strangefew-pixel-platformer-pack/extracted/pixel-platformer-pack/pixel-platformer-pack/raw-files/player-punch.png pixel platformer pack character player punch is an animated 2d character sample from pixel platformer pack. useful for player characters, npcs, animation prototyping. pixel platformer pack player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "strangefew-pixel-platformer-pack",
+      "path": "2D/strangefew-pixel-platformer-pack/extracted/pixel-platformer-pack/pixel-platformer-pack/raw-files/trees-background.png",
+      "src": "/2D/strangefew-pixel-platformer-pack/extracted/pixel-platformer-pack/pixel-platformer-pack/raw-files/trees-background.png",
+      "label": "Trees Background",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 240,
+        "height": 126,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.2916005291005291,
+        "transparentCoverage": 0.7083994708994709,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Trees Background is a static 2D image sample from Pixel Platformer Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "pixel platformer pack"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "image",
+        "pixel platformer pack",
+        "static"
+      ],
+      "searchText": "trees background 2d/strangefew-pixel-platformer-pack/extracted/pixel-platformer-pack/pixel-platformer-pack/raw-files/trees-background.png pixel platformer pack image trees background is a static 2d image sample from pixel platformer pack. useful for player characters, npcs, animation prototyping. pixel platformer pack player characters npcs animation prototyping 2d art static"
+    }
+  ]
+}

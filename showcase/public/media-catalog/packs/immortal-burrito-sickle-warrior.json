@@ -1,0 +1,75 @@
+{
+  "folder": "immortal-burrito-sickle-warrior",
+  "title": "Sickle Warrior",
+  "author": "immortal-burrito",
+  "author_url": "https://immortal-burrito.itch.io",
+  "url": "https://immortal-burrito.itch.io/sickle-warrior",
+  "game_id": null,
+  "license_class": "Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms)",
+  "attribution": "Appreciated / not required",
+  "theme": "Characters",
+  "description": "Sickle Warrior is a 2D characters art pack by immortal-burrito. Use it for player characters, NPCs, animation prototyping. License: Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). Attribution: Appreciated / not required.",
+  "category": "Characters",
+  "themes": [
+    "characters",
+    "urban"
+  ],
+  "useCases": [
+    "player characters",
+    "NPCs",
+    "animation prototyping"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "characters",
+    "sprite",
+    "urban"
+  ],
+  "searchText": "sickle warrior immortal-burrito-sickle-warrior immortal-burrito characters free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms) appreciated / not required sickle warrior is a 2d characters art pack by immortal-burrito. use it for player characters, npcs, animation prototyping. license: free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). attribution: appreciated / not required. characters urban player characters npcs animation prototyping 2d art sprite",
+  "sampleCount": 1,
+  "samples": [
+    {
+      "packFolder": "immortal-burrito-sickle-warrior",
+      "path": "2D/immortal-burrito-sickle-warrior/extracted/sicklezeep/sickle-sheet.png",
+      "src": "/2D/immortal-burrito-sickle-warrior/extracted/sicklezeep/sickle-sheet.png",
+      "label": "Sickle Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 896,
+        "height": 320,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.046488667582417584,
+        "transparentCoverage": 0.9535113324175825,
+        "contentRowRuns": 5,
+        "contentColRuns": 7,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 10,
+        "cellMedianHeight": 10
+      },
+      "promo": false,
+      "description": "Sickle Sheet is an animated 2D character sample from Sickle Warrior. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sickle warrior"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "sickle warrior"
+      ],
+      "searchText": "sickle sheet 2d/immortal-burrito-sickle-warrior/extracted/sicklezeep/sickle-sheet.png sickle warrior character sickle sheet is an animated 2d character sample from sickle warrior. useful for player characters, npcs, animation prototyping. sickle warrior player characters npcs animation prototyping 2d animated art"
+    }
+  ]
+}

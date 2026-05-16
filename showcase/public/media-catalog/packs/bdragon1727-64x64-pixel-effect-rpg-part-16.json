@@ -1,0 +1,539 @@
+{
+  "folder": "bdragon1727-64x64-pixel-effect-rpg-part-16",
+  "title": "64x64 Pixel Effect RPG Part 16",
+  "author": "BDragon1727",
+  "author_url": "https://bdragon1727.itch.io",
+  "url": "https://bdragon1727.itch.io/64x64-pixel-effect-rpg-part-16",
+  "game_id": 2604038,
+  "license_class": "Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms)",
+  "attribution": "Appreciated / not required",
+  "theme": "Effects",
+  "description": "64 X 64 Pixel Effect RPG Part 16 is a 2D effects art pack by BDragon1727. Use it for combat VFX, spell effects, hit feedback. License: Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). Attribution: Appreciated / not required.",
+  "category": "Effects",
+  "themes": [
+    "effects",
+    "fantasy",
+    "urban"
+  ],
+  "useCases": [
+    "combat VFX",
+    "spell effects",
+    "hit feedback"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "effects",
+    "fantasy",
+    "sprite",
+    "urban"
+  ],
+  "searchText": "64x64 pixel effect rpg part 16 bdragon1727-64x64-pixel-effect-rpg-part-16 bdragon1727 effects free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms) appreciated / not required 64 x 64 pixel effect rpg part 16 is a 2d effects art pack by bdragon1727. use it for combat vfx, spell effects, hit feedback. license: free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). attribution: appreciated / not required. effects fantasy urban combat vfx spell effects hit feedback 2d art sprite",
+  "sampleCount": 12,
+  "samples": [
+    {
+      "packFolder": "bdragon1727-64x64-pixel-effect-rpg-part-16",
+      "path": "2D/bdragon1727-64x64-pixel-effect-rpg-part-16/extracted/pixel-effect-rpg-part-16-free/free/1506.png",
+      "src": "/2D/bdragon1727-64x64-pixel-effect-rpg-part-16/extracted/pixel-effect-rpg-part-16-free/free/1506.png",
+      "label": "1506",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 832,
+        "height": 576,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.05623234463276836,
+        "transparentCoverage": 0.9437676553672316,
+        "contentRowRuns": 9,
+        "contentColRuns": 12,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 9,
+        "cellMedianHeight": 13
+      },
+      "promo": false,
+      "description": "1506 is an animated 2D effect sample from 64x64 Pixel Effect RPG Part 16. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "fantasy"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "fantasy"
+      ],
+      "searchText": "1506 2d/bdragon1727-64x64-pixel-effect-rpg-part-16/extracted/pixel-effect-rpg-part-16-free/free/1506.png 64x64 pixel effect rpg part 16 effect 1506 is an animated 2d effect sample from 64x64 pixel effect rpg part 16. useful for combat vfx, spell effects, hit feedback. fantasy combat vfx spell effects hit feedback 2d animated art"
+    },
+    {
+      "packFolder": "bdragon1727-64x64-pixel-effect-rpg-part-16",
+      "path": "2D/bdragon1727-64x64-pixel-effect-rpg-part-16/extracted/pixel-effect-rpg-part-16-free/free/1507.png",
+      "src": "/2D/bdragon1727-64x64-pixel-effect-rpg-part-16/extracted/pixel-effect-rpg-part-16-free/free/1507.png",
+      "label": "1507",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 832,
+        "height": 576,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0765580861581921,
+        "transparentCoverage": 0.923441913841808,
+        "contentRowRuns": 9,
+        "contentColRuns": 12,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 9,
+        "cellMedianHeight": 12
+      },
+      "promo": false,
+      "description": "1507 is an animated 2D effect sample from 64x64 Pixel Effect RPG Part 16. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "fantasy"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "fantasy"
+      ],
+      "searchText": "1507 2d/bdragon1727-64x64-pixel-effect-rpg-part-16/extracted/pixel-effect-rpg-part-16-free/free/1507.png 64x64 pixel effect rpg part 16 effect 1507 is an animated 2d effect sample from 64x64 pixel effect rpg part 16. useful for combat vfx, spell effects, hit feedback. fantasy combat vfx spell effects hit feedback 2d animated art"
+    },
+    {
+      "packFolder": "bdragon1727-64x64-pixel-effect-rpg-part-16",
+      "path": "2D/bdragon1727-64x64-pixel-effect-rpg-part-16/extracted/pixel-effect-rpg-part-16-free/free/1508.png",
+      "src": "/2D/bdragon1727-64x64-pixel-effect-rpg-part-16/extracted/pixel-effect-rpg-part-16-free/free/1508.png",
+      "label": "1508",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 832,
+        "height": 576,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.08459127824858757,
+        "transparentCoverage": 0.9154087217514124,
+        "contentRowRuns": 9,
+        "contentColRuns": 15,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 10,
+        "cellMedianHeight": 15
+      },
+      "promo": false,
+      "description": "1508 is an animated 2D effect sample from 64x64 Pixel Effect RPG Part 16. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "fantasy"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "fantasy"
+      ],
+      "searchText": "1508 2d/bdragon1727-64x64-pixel-effect-rpg-part-16/extracted/pixel-effect-rpg-part-16-free/free/1508.png 64x64 pixel effect rpg part 16 effect 1508 is an animated 2d effect sample from 64x64 pixel effect rpg part 16. useful for combat vfx, spell effects, hit feedback. fantasy combat vfx spell effects hit feedback 2d animated art"
+    },
+    {
+      "packFolder": "bdragon1727-64x64-pixel-effect-rpg-part-16",
+      "path": "2D/bdragon1727-64x64-pixel-effect-rpg-part-16/extracted/pixel-effect-rpg-part-16-free/free/1509.png",
+      "src": "/2D/bdragon1727-64x64-pixel-effect-rpg-part-16/extracted/pixel-effect-rpg-part-16-free/free/1509.png",
+      "label": "1509",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 832,
+        "height": 576,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.12424964689265537,
+        "transparentCoverage": 0.8757503531073446,
+        "contentRowRuns": 9,
+        "contentColRuns": 15,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 8,
+        "cellMedianHeight": 17
+      },
+      "promo": false,
+      "description": "1509 is an animated 2D effect sample from 64x64 Pixel Effect RPG Part 16. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "fantasy"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "fantasy"
+      ],
+      "searchText": "1509 2d/bdragon1727-64x64-pixel-effect-rpg-part-16/extracted/pixel-effect-rpg-part-16-free/free/1509.png 64x64 pixel effect rpg part 16 effect 1509 is an animated 2d effect sample from 64x64 pixel effect rpg part 16. useful for combat vfx, spell effects, hit feedback. fantasy combat vfx spell effects hit feedback 2d animated art"
+    },
+    {
+      "packFolder": "bdragon1727-64x64-pixel-effect-rpg-part-16",
+      "path": "2D/bdragon1727-64x64-pixel-effect-rpg-part-16/extracted/pixel-effect-rpg-part-16-free/free/1516.png",
+      "src": "/2D/bdragon1727-64x64-pixel-effect-rpg-part-16/extracted/pixel-effect-rpg-part-16-free/free/1516.png",
+      "label": "1516",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 832,
+        "height": 576,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.05848340395480226,
+        "transparentCoverage": 0.9415165960451978,
+        "contentRowRuns": 9,
+        "contentColRuns": 16,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 6,
+        "cellMedianHeight": 14
+      },
+      "promo": false,
+      "description": "1516 is an animated 2D effect sample from 64x64 Pixel Effect RPG Part 16. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "fantasy"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "fantasy"
+      ],
+      "searchText": "1516 2d/bdragon1727-64x64-pixel-effect-rpg-part-16/extracted/pixel-effect-rpg-part-16-free/free/1516.png 64x64 pixel effect rpg part 16 effect 1516 is an animated 2d effect sample from 64x64 pixel effect rpg part 16. useful for combat vfx, spell effects, hit feedback. fantasy combat vfx spell effects hit feedback 2d animated art"
+    },
+    {
+      "packFolder": "bdragon1727-64x64-pixel-effect-rpg-part-16",
+      "path": "2D/bdragon1727-64x64-pixel-effect-rpg-part-16/extracted/pixel-effect-rpg-part-16-free/free/1517.png",
+      "src": "/2D/bdragon1727-64x64-pixel-effect-rpg-part-16/extracted/pixel-effect-rpg-part-16-free/free/1517.png",
+      "label": "1517",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 832,
+        "height": 576,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.06095515536723164,
+        "transparentCoverage": 0.9390448446327684,
+        "contentRowRuns": 9,
+        "contentColRuns": 15,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 11,
+        "cellMedianHeight": 16
+      },
+      "promo": false,
+      "description": "1517 is an animated 2D effect sample from 64x64 Pixel Effect RPG Part 16. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "fantasy"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "fantasy"
+      ],
+      "searchText": "1517 2d/bdragon1727-64x64-pixel-effect-rpg-part-16/extracted/pixel-effect-rpg-part-16-free/free/1517.png 64x64 pixel effect rpg part 16 effect 1517 is an animated 2d effect sample from 64x64 pixel effect rpg part 16. useful for combat vfx, spell effects, hit feedback. fantasy combat vfx spell effects hit feedback 2d animated art"
+    },
+    {
+      "packFolder": "bdragon1727-64x64-pixel-effect-rpg-part-16",
+      "path": "2D/bdragon1727-64x64-pixel-effect-rpg-part-16/extracted/pixel-effect-rpg-part-16-free/free/1518.png",
+      "src": "/2D/bdragon1727-64x64-pixel-effect-rpg-part-16/extracted/pixel-effect-rpg-part-16-free/free/1518.png",
+      "label": "1518",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 832,
+        "height": 576,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.05755649717514124,
+        "transparentCoverage": 0.9424435028248588,
+        "contentRowRuns": 6,
+        "contentColRuns": 20,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 3,
+        "cellMedianHeight": 28
+      },
+      "promo": false,
+      "description": "1518 is an animated 2D effect sample from 64x64 Pixel Effect RPG Part 16. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "fantasy"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "fantasy"
+      ],
+      "searchText": "1518 2d/bdragon1727-64x64-pixel-effect-rpg-part-16/extracted/pixel-effect-rpg-part-16-free/free/1518.png 64x64 pixel effect rpg part 16 effect 1518 is an animated 2d effect sample from 64x64 pixel effect rpg part 16. useful for combat vfx, spell effects, hit feedback. fantasy combat vfx spell effects hit feedback 2d animated art"
+    },
+    {
+      "packFolder": "bdragon1727-64x64-pixel-effect-rpg-part-16",
+      "path": "2D/bdragon1727-64x64-pixel-effect-rpg-part-16/extracted/pixel-effect-rpg-part-16-free/free/1519.png",
+      "src": "/2D/bdragon1727-64x64-pixel-effect-rpg-part-16/extracted/pixel-effect-rpg-part-16-free/free/1519.png",
+      "label": "1519",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 832,
+        "height": 576,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.03358933615819209,
+        "transparentCoverage": 0.966410663841808,
+        "contentRowRuns": 9,
+        "contentColRuns": 13,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 7,
+        "cellMedianHeight": 16
+      },
+      "promo": false,
+      "description": "1519 is an animated 2D effect sample from 64x64 Pixel Effect RPG Part 16. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "fantasy"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "fantasy"
+      ],
+      "searchText": "1519 2d/bdragon1727-64x64-pixel-effect-rpg-part-16/extracted/pixel-effect-rpg-part-16-free/free/1519.png 64x64 pixel effect rpg part 16 effect 1519 is an animated 2d effect sample from 64x64 pixel effect rpg part 16. useful for combat vfx, spell effects, hit feedback. fantasy combat vfx spell effects hit feedback 2d animated art"
+    },
+    {
+      "packFolder": "bdragon1727-64x64-pixel-effect-rpg-part-16",
+      "path": "2D/bdragon1727-64x64-pixel-effect-rpg-part-16/extracted/pixel-effect-rpg-part-16-free/free/1526.png",
+      "src": "/2D/bdragon1727-64x64-pixel-effect-rpg-part-16/extracted/pixel-effect-rpg-part-16-free/free/1526.png",
+      "label": "1526",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 896,
+        "height": 576,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.04834280303030303,
+        "transparentCoverage": 0.951657196969697,
+        "contentRowRuns": 9,
+        "contentColRuns": 15,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 5,
+        "cellMedianHeight": 15
+      },
+      "promo": false,
+      "description": "1526 is an animated 2D effect sample from 64x64 Pixel Effect RPG Part 16. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "fantasy"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "fantasy"
+      ],
+      "searchText": "1526 2d/bdragon1727-64x64-pixel-effect-rpg-part-16/extracted/pixel-effect-rpg-part-16-free/free/1526.png 64x64 pixel effect rpg part 16 effect 1526 is an animated 2d effect sample from 64x64 pixel effect rpg part 16. useful for combat vfx, spell effects, hit feedback. fantasy combat vfx spell effects hit feedback 2d animated art"
+    },
+    {
+      "packFolder": "bdragon1727-64x64-pixel-effect-rpg-part-16",
+      "path": "2D/bdragon1727-64x64-pixel-effect-rpg-part-16/extracted/pixel-effect-rpg-part-16-free/free/1527.png",
+      "src": "/2D/bdragon1727-64x64-pixel-effect-rpg-part-16/extracted/pixel-effect-rpg-part-16-free/free/1527.png",
+      "label": "1527",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 896,
+        "height": 576,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.05227272727272727,
+        "transparentCoverage": 0.9477272727272728,
+        "contentRowRuns": 9,
+        "contentColRuns": 17,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 7,
+        "cellMedianHeight": 15
+      },
+      "promo": false,
+      "description": "1527 is an animated 2D effect sample from 64x64 Pixel Effect RPG Part 16. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "fantasy"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "fantasy"
+      ],
+      "searchText": "1527 2d/bdragon1727-64x64-pixel-effect-rpg-part-16/extracted/pixel-effect-rpg-part-16-free/free/1527.png 64x64 pixel effect rpg part 16 effect 1527 is an animated 2d effect sample from 64x64 pixel effect rpg part 16. useful for combat vfx, spell effects, hit feedback. fantasy combat vfx spell effects hit feedback 2d animated art"
+    },
+    {
+      "packFolder": "bdragon1727-64x64-pixel-effect-rpg-part-16",
+      "path": "2D/bdragon1727-64x64-pixel-effect-rpg-part-16/extracted/pixel-effect-rpg-part-16-free/free/1528.png",
+      "src": "/2D/bdragon1727-64x64-pixel-effect-rpg-part-16/extracted/pixel-effect-rpg-part-16-free/free/1528.png",
+      "label": "1528",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 896,
+        "height": 576,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.04043560606060606,
+        "transparentCoverage": 0.959564393939394,
+        "contentRowRuns": 9,
+        "contentColRuns": 15,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 8,
+        "cellMedianHeight": 12
+      },
+      "promo": false,
+      "description": "1528 is an animated 2D effect sample from 64x64 Pixel Effect RPG Part 16. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "fantasy"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "fantasy"
+      ],
+      "searchText": "1528 2d/bdragon1727-64x64-pixel-effect-rpg-part-16/extracted/pixel-effect-rpg-part-16-free/free/1528.png 64x64 pixel effect rpg part 16 effect 1528 is an animated 2d effect sample from 64x64 pixel effect rpg part 16. useful for combat vfx, spell effects, hit feedback. fantasy combat vfx spell effects hit feedback 2d animated art"
+    },
+    {
+      "packFolder": "bdragon1727-64x64-pixel-effect-rpg-part-16",
+      "path": "2D/bdragon1727-64x64-pixel-effect-rpg-part-16/extracted/pixel-effect-rpg-part-16-free/free/1529.png",
+      "src": "/2D/bdragon1727-64x64-pixel-effect-rpg-part-16/extracted/pixel-effect-rpg-part-16-free/free/1529.png",
+      "label": "1529",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 896,
+        "height": 576,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.06347064393939394,
+        "transparentCoverage": 0.936529356060606,
+        "contentRowRuns": 9,
+        "contentColRuns": 14,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 8,
+        "cellMedianHeight": 7
+      },
+      "promo": false,
+      "description": "1529 is an animated 2D effect sample from 64x64 Pixel Effect RPG Part 16. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "fantasy"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "fantasy"
+      ],
+      "searchText": "1529 2d/bdragon1727-64x64-pixel-effect-rpg-part-16/extracted/pixel-effect-rpg-part-16-free/free/1529.png 64x64 pixel effect rpg part 16 effect 1529 is an animated 2d effect sample from 64x64 pixel effect rpg part 16. useful for combat vfx, spell effects, hit feedback. fantasy combat vfx spell effects hit feedback 2d animated art"
+    }
+  ]
+}

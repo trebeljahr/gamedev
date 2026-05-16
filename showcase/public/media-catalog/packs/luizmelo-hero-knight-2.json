@@ -1,0 +1,321 @@
+{
+  "folder": "luizmelo-hero-knight-2",
+  "title": "Hero Knight 2",
+  "author": "luizmelo",
+  "author_url": "https://luizmelo.itch.io",
+  "url": "https://luizmelo.itch.io/hero-knight-2",
+  "game_id": null,
+  "license_class": "CC0 1.0 (Creative Commons Zero)",
+  "attribution": "Optional",
+  "theme": "Characters",
+  "description": "Hero Knight 2 is a 2D characters art pack by luizmelo. Use it for player characters, NPCs, animation prototyping. License: CC0 1.0 (Creative Commons Zero). Attribution: Optional.",
+  "category": "Characters",
+  "themes": [
+    "characters",
+    "fantasy"
+  ],
+  "useCases": [
+    "player characters",
+    "NPCs",
+    "animation prototyping"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "characters",
+    "fantasy",
+    "medieval",
+    "sprite"
+  ],
+  "searchText": "hero knight 2 luizmelo-hero-knight-2 luizmelo characters cc0 1.0 (creative commons zero) optional hero knight 2 is a 2d characters art pack by luizmelo. use it for player characters, npcs, animation prototyping. license: cc0 1.0 (creative commons zero). attribution: optional. characters fantasy player characters npcs animation prototyping 2d art medieval sprite",
+  "sampleCount": 7,
+  "samples": [
+    {
+      "packFolder": "luizmelo-hero-knight-2",
+      "path": "2D/luizmelo-hero-knight-2/extracted/hero-knight-2/hero-knight-2/sprites/attack.png",
+      "src": "/2D/luizmelo-hero-knight-2/extracted/hero-knight-2/hero-knight-2/sprites/attack.png",
+      "label": "Attack",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 840,
+        "height": 140,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.03670058139534884,
+        "transparentCoverage": 0.9632994186046512,
+        "contentRowRuns": 1,
+        "contentColRuns": 7,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Attack is an animated 2D character sample from Hero Knight 2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "attack 2d/luizmelo-hero-knight-2/extracted/hero-knight-2/hero-knight-2/sprites/attack.png hero knight 2 character attack is an animated 2d character sample from hero knight 2. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "luizmelo-hero-knight-2",
+      "path": "2D/luizmelo-hero-knight-2/extracted/hero-knight-2/hero-knight-2/sprites/dash.png",
+      "src": "/2D/luizmelo-hero-knight-2/extracted/hero-knight-2/hero-knight-2/sprites/dash.png",
+      "label": "Dash",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 560,
+        "height": 140,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.02569580078125,
+        "transparentCoverage": 0.97430419921875,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Dash is an animated 2D character sample from Hero Knight 2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "dash 2d/luizmelo-hero-knight-2/extracted/hero-knight-2/hero-knight-2/sprites/dash.png hero knight 2 character dash is an animated 2d character sample from hero knight 2. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "luizmelo-hero-knight-2",
+      "path": "2D/luizmelo-hero-knight-2/extracted/hero-knight-2/hero-knight-2/sprites/death.png",
+      "src": "/2D/luizmelo-hero-knight-2/extracted/hero-knight-2/hero-knight-2/sprites/death.png",
+      "label": "Death",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 1260,
+        "height": 140,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.021623883928571428,
+        "transparentCoverage": 0.9783761160714286,
+        "contentRowRuns": 1,
+        "contentColRuns": 9,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Death is an animated 2D character sample from Hero Knight 2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "death 2d/luizmelo-hero-knight-2/extracted/hero-knight-2/hero-knight-2/sprites/death.png hero knight 2 character death is an animated 2d character sample from hero knight 2. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "luizmelo-hero-knight-2",
+      "path": "2D/luizmelo-hero-knight-2/extracted/hero-knight-2/hero-knight-2/sprites/fall.png",
+      "src": "/2D/luizmelo-hero-knight-2/extracted/hero-knight-2/hero-knight-2/sprites/fall.png",
+      "label": "Fall",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 560,
+        "height": 140,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.02569580078125,
+        "transparentCoverage": 0.97430419921875,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Fall is an animated 2D character sample from Hero Knight 2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "fall 2d/luizmelo-hero-knight-2/extracted/hero-knight-2/hero-knight-2/sprites/fall.png hero knight 2 character fall is an animated 2d character sample from hero knight 2. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "luizmelo-hero-knight-2",
+      "path": "2D/luizmelo-hero-knight-2/extracted/hero-knight-2/hero-knight-2/sprites/idle.png",
+      "src": "/2D/luizmelo-hero-knight-2/extracted/hero-knight-2/hero-knight-2/sprites/idle.png",
+      "label": "Idle",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 1540,
+        "height": 140,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.026664402173913044,
+        "transparentCoverage": 0.9733355978260869,
+        "contentRowRuns": 1,
+        "contentColRuns": 11,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Idle is an animated 2D character sample from Hero Knight 2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "idle 2d/luizmelo-hero-knight-2/extracted/hero-knight-2/hero-knight-2/sprites/idle.png hero knight 2 character idle is an animated 2d character sample from hero knight 2. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "luizmelo-hero-knight-2",
+      "path": "2D/luizmelo-hero-knight-2/extracted/hero-knight-2/hero-knight-2/sprites/jump.png",
+      "src": "/2D/luizmelo-hero-knight-2/extracted/hero-knight-2/hero-knight-2/sprites/jump.png",
+      "label": "Jump",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 560,
+        "height": 140,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.02581787109375,
+        "transparentCoverage": 0.97418212890625,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Jump is an animated 2D character sample from Hero Knight 2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "jump 2d/luizmelo-hero-knight-2/extracted/hero-knight-2/hero-knight-2/sprites/jump.png hero knight 2 character jump is an animated 2d character sample from hero knight 2. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "luizmelo-hero-knight-2",
+      "path": "2D/luizmelo-hero-knight-2/extracted/hero-knight-2/hero-knight-2/sprites/take-hit.png",
+      "src": "/2D/luizmelo-hero-knight-2/extracted/hero-knight-2/hero-knight-2/sprites/take-hit.png",
+      "label": "Take Hit",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 560,
+        "height": 140,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.02581787109375,
+        "transparentCoverage": 0.97418212890625,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Take Hit is an animated 2D character sample from Hero Knight 2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "take hit 2d/luizmelo-hero-knight-2/extracted/hero-knight-2/hero-knight-2/sprites/take-hit.png hero knight 2 character take hit is an animated 2d character sample from hero knight 2. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    }
+  ]
+}

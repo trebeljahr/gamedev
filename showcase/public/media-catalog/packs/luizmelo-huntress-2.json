@@ -1,0 +1,353 @@
+{
+  "folder": "luizmelo-huntress-2",
+  "title": "Huntress 2",
+  "author": "luizmelo",
+  "author_url": "https://luizmelo.itch.io",
+  "url": "https://luizmelo.itch.io/huntress-2",
+  "game_id": null,
+  "license_class": "CC0 1.0 (Creative Commons Zero)",
+  "attribution": "Optional",
+  "theme": "Characters",
+  "description": "Huntress 2 is a 2D characters art pack by luizmelo. Use it for player characters, NPCs, animation prototyping. License: CC0 1.0 (Creative Commons Zero). Attribution: Optional.",
+  "category": "Characters",
+  "themes": [
+    "characters",
+    "huntress 2"
+  ],
+  "useCases": [
+    "player characters",
+    "NPCs",
+    "animation prototyping"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "characters",
+    "huntress 2",
+    "sprite"
+  ],
+  "searchText": "huntress 2 luizmelo-huntress-2 luizmelo characters cc0 1.0 (creative commons zero) optional huntress 2 is a 2d characters art pack by luizmelo. use it for player characters, npcs, animation prototyping. license: cc0 1.0 (creative commons zero). attribution: optional. characters huntress 2 player characters npcs animation prototyping 2d art sprite",
+  "sampleCount": 8,
+  "samples": [
+    {
+      "packFolder": "luizmelo-huntress-2",
+      "path": "2D/luizmelo-huntress-2/extracted/huntress-2/huntress-2/sprites/character/attack.png",
+      "src": "/2D/luizmelo-huntress-2/extracted/huntress-2/huntress-2/sprites/character/attack.png",
+      "label": "Attack",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 600,
+        "height": 100,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.04732921511627907,
+        "transparentCoverage": 0.9526707848837209,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Attack is an animated 2D character sample from Huntress 2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "huntress 2"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "huntress 2"
+      ],
+      "searchText": "attack 2d/luizmelo-huntress-2/extracted/huntress-2/huntress-2/sprites/character/attack.png huntress 2 character attack is an animated 2d character sample from huntress 2. useful for player characters, npcs, animation prototyping. huntress 2 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "luizmelo-huntress-2",
+      "path": "2D/luizmelo-huntress-2/extracted/huntress-2/huntress-2/sprites/character/death.png",
+      "src": "/2D/luizmelo-huntress-2/extracted/huntress-2/huntress-2/sprites/character/death.png",
+      "label": "Death",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 1000,
+        "height": 100,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.03064903846153846,
+        "transparentCoverage": 0.9693509615384616,
+        "contentRowRuns": 1,
+        "contentColRuns": 12,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Death is an animated 2D character sample from Huntress 2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "huntress 2"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "huntress 2"
+      ],
+      "searchText": "death 2d/luizmelo-huntress-2/extracted/huntress-2/huntress-2/sprites/character/death.png huntress 2 character death is an animated 2d character sample from huntress 2. useful for player characters, npcs, animation prototyping. huntress 2 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "luizmelo-huntress-2",
+      "path": "2D/luizmelo-huntress-2/extracted/huntress-2/huntress-2/sprites/character/get-hit.png",
+      "src": "/2D/luizmelo-huntress-2/extracted/huntress-2/huntress-2/sprites/character/get-hit.png",
+      "label": "Get Hit",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 300,
+        "height": 100,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0453125,
+        "transparentCoverage": 0.9546875,
+        "contentRowRuns": 1,
+        "contentColRuns": 3,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Get Hit is an animated 2D character sample from Huntress 2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "huntress 2"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "huntress 2"
+      ],
+      "searchText": "get hit 2d/luizmelo-huntress-2/extracted/huntress-2/huntress-2/sprites/character/get-hit.png huntress 2 character get hit is an animated 2d character sample from huntress 2. useful for player characters, npcs, animation prototyping. huntress 2 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "luizmelo-huntress-2",
+      "path": "2D/luizmelo-huntress-2/extracted/huntress-2/huntress-2/sprites/character/idle.png",
+      "src": "/2D/luizmelo-huntress-2/extracted/huntress-2/huntress-2/sprites/character/idle.png",
+      "label": "Idle",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 1000,
+        "height": 100,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.045823317307692304,
+        "transparentCoverage": 0.9541766826923077,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Idle is an animated 2D character sample from Huntress 2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "huntress 2"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "huntress 2"
+      ],
+      "searchText": "idle 2d/luizmelo-huntress-2/extracted/huntress-2/huntress-2/sprites/character/idle.png huntress 2 character idle is an animated 2d character sample from huntress 2. useful for player characters, npcs, animation prototyping. huntress 2 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "luizmelo-huntress-2",
+      "path": "2D/luizmelo-huntress-2/extracted/huntress-2/huntress-2/sprites/character/fall.png",
+      "src": "/2D/luizmelo-huntress-2/extracted/huntress-2/huntress-2/sprites/character/fall.png",
+      "label": "Fall",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 200,
+        "height": 100,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.04375,
+        "transparentCoverage": 0.95625,
+        "contentRowRuns": 1,
+        "contentColRuns": 2,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Fall is an animated 2D character sample from Huntress 2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "huntress 2"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "huntress 2"
+      ],
+      "searchText": "fall 2d/luizmelo-huntress-2/extracted/huntress-2/huntress-2/sprites/character/fall.png huntress 2 character fall is an animated 2d character sample from huntress 2. useful for player characters, npcs, animation prototyping. huntress 2 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "luizmelo-huntress-2",
+      "path": "2D/luizmelo-huntress-2/extracted/huntress-2/huntress-2/sprites/character/jump.png",
+      "src": "/2D/luizmelo-huntress-2/extracted/huntress-2/huntress-2/sprites/character/jump.png",
+      "label": "Jump",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 200,
+        "height": 100,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.04005,
+        "transparentCoverage": 0.95995,
+        "contentRowRuns": 1,
+        "contentColRuns": 2,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Jump is an animated 2D character sample from Huntress 2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "huntress 2"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "huntress 2"
+      ],
+      "searchText": "jump 2d/luizmelo-huntress-2/extracted/huntress-2/huntress-2/sprites/character/jump.png huntress 2 character jump is an animated 2d character sample from huntress 2. useful for player characters, npcs, animation prototyping. huntress 2 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "luizmelo-huntress-2",
+      "path": "2D/luizmelo-huntress-2/extracted/huntress-2/huntress-2/sprites/arrow/move.png",
+      "src": "/2D/luizmelo-huntress-2/extracted/huntress-2/huntress-2/sprites/arrow/move.png",
+      "label": "Move",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 48,
+        "height": 5,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.22916666666666666,
+        "transparentCoverage": 0.7708333333333334,
+        "contentRowRuns": 1,
+        "contentColRuns": 2,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Move is an animated 2D character sample from Huntress 2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "huntress 2"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "huntress 2"
+      ],
+      "searchText": "move 2d/luizmelo-huntress-2/extracted/huntress-2/huntress-2/sprites/arrow/move.png huntress 2 character move is an animated 2d character sample from huntress 2. useful for player characters, npcs, animation prototyping. huntress 2 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "luizmelo-huntress-2",
+      "path": "2D/luizmelo-huntress-2/extracted/huntress-2/huntress-2/sprites/arrow/static.png",
+      "src": "/2D/luizmelo-huntress-2/extracted/huntress-2/huntress-2/sprites/arrow/static.png",
+      "label": "Static",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 24,
+        "height": 5,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.275,
+        "transparentCoverage": 0.725,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Static is a static 2D character sample from Huntress 2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "huntress 2"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "huntress 2",
+        "static"
+      ],
+      "searchText": "static 2d/luizmelo-huntress-2/extracted/huntress-2/huntress-2/sprites/arrow/static.png huntress 2 character static is a static 2d character sample from huntress 2. useful for player characters, npcs, animation prototyping. huntress 2 player characters npcs animation prototyping 2d art static"
+    }
+  ]
+}

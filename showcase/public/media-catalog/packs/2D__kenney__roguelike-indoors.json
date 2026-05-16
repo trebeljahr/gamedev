@@ -1,0 +1,193 @@
+{
+  "folder": "2D/kenney/roguelike-indoors",
+  "title": "Roguelike Indoors",
+  "author": "Kenney",
+  "author_url": "https://kenney.nl/",
+  "url": "https://kenney.nl/assets/category:2D",
+  "game_id": null,
+  "license_class": "CC0 1.0 (Creative Commons Zero)",
+  "attribution": "Optional",
+  "theme": "General",
+  "description": "Roguelike Indoors is a 2D general art pack by Kenney. Use it for game jams, prototypes, scene dressing. License: CC0 1.0 (Creative Commons Zero). Attribution: Optional.",
+  "category": "General",
+  "themes": [
+    "general",
+    "roguelike indoors"
+  ],
+  "useCases": [
+    "game jams",
+    "prototypes",
+    "scene dressing"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "general",
+    "roguelike indoors",
+    "sprite"
+  ],
+  "searchText": "roguelike indoors 2d/kenney/roguelike-indoors kenney general cc0 1.0 (creative commons zero) optional roguelike indoors is a 2d general art pack by kenney. use it for game jams, prototypes, scene dressing. license: cc0 1.0 (creative commons zero). attribution: optional. general roguelike indoors game jams prototypes scene dressing 2d art sprite",
+  "sampleCount": 4,
+  "samples": [
+    {
+      "packFolder": "2D/kenney/roguelike-indoors",
+      "path": "2D/kenney/roguelike-indoors/extracted/tilesheets/roguelikeindoor-magenta.png",
+      "src": "/2D/kenney/roguelike-indoors/extracted/tilesheets/roguelikeindoor-magenta.png",
+      "label": "Roguelikeindoor Magenta",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 458,
+        "height": 305,
+        "bgKind": "mixed",
+        "alphaCoverage": 1,
+        "transparentCoverage": 0,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Roguelikeindoor Magenta is a static 2D character sample from Roguelike Indoors. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "roguelike indoors"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "roguelike indoors",
+        "static"
+      ],
+      "searchText": "roguelikeindoor magenta 2d/kenney/roguelike-indoors/extracted/tilesheets/roguelikeindoor-magenta.png roguelike indoors character roguelikeindoor magenta is a static 2d character sample from roguelike indoors. useful for player characters, npcs, animation prototyping. roguelike indoors player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "2D/kenney/roguelike-indoors",
+      "path": "2D/kenney/roguelike-indoors/extracted/tilesheets/roguelikeindoor-transparent.png",
+      "src": "/2D/kenney/roguelike-indoors/extracted/tilesheets/roguelikeindoor-transparent.png",
+      "label": "Roguelikeindoor Transparent",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 458,
+        "height": 305,
+        "bgKind": "mixed",
+        "alphaCoverage": 0.6139246323529411,
+        "transparentCoverage": 0.3860753676470588,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Roguelikeindoor Transparent is a static 2D image sample from Roguelike Indoors. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "roguelike indoors"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "image",
+        "roguelike indoors",
+        "static"
+      ],
+      "searchText": "roguelikeindoor transparent 2d/kenney/roguelike-indoors/extracted/tilesheets/roguelikeindoor-transparent.png roguelike indoors image roguelikeindoor transparent is a static 2d image sample from roguelike indoors. useful for player characters, npcs, animation prototyping. roguelike indoors player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "2D/kenney/roguelike-indoors",
+      "path": "2D/kenney/roguelike-indoors/tilesheets/roguelikeindoor-magenta.png",
+      "src": "/2D/kenney/roguelike-indoors/tilesheets/roguelikeindoor-magenta.png",
+      "label": "Roguelikeindoor Magenta",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 458,
+        "height": 305,
+        "bgKind": "mixed",
+        "alphaCoverage": 1,
+        "transparentCoverage": 0,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Roguelikeindoor Magenta is a static 2D character sample from Roguelike Indoors. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "roguelike indoors"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "roguelike indoors",
+        "static"
+      ],
+      "searchText": "roguelikeindoor magenta 2d/kenney/roguelike-indoors/tilesheets/roguelikeindoor-magenta.png roguelike indoors character roguelikeindoor magenta is a static 2d character sample from roguelike indoors. useful for player characters, npcs, animation prototyping. roguelike indoors player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "2D/kenney/roguelike-indoors",
+      "path": "2D/kenney/roguelike-indoors/tilesheets/roguelikeindoor-transparent.png",
+      "src": "/2D/kenney/roguelike-indoors/tilesheets/roguelikeindoor-transparent.png",
+      "label": "Roguelikeindoor Transparent",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 458,
+        "height": 305,
+        "bgKind": "mixed",
+        "alphaCoverage": 0.6139246323529411,
+        "transparentCoverage": 0.3860753676470588,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Roguelikeindoor Transparent is a static 2D image sample from Roguelike Indoors. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "roguelike indoors"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "image",
+        "roguelike indoors",
+        "static"
+      ],
+      "searchText": "roguelikeindoor transparent 2d/kenney/roguelike-indoors/tilesheets/roguelikeindoor-transparent.png roguelike indoors image roguelikeindoor transparent is a static 2d image sample from roguelike indoors. useful for player characters, npcs, animation prototyping. roguelike indoors player characters npcs animation prototyping 2d art static"
+    }
+  ]
+}

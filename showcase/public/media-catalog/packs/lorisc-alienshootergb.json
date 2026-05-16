@@ -1,0 +1,1521 @@
+{
+  "folder": "lorisc-alienshootergb",
+  "title": "[FREE] Alien Shooter GB - Asset Pack",
+  "author": "LorisC",
+  "author_url": "https://lorisc.itch.io",
+  "url": "https://lorisc.itch.io/alienshootergb",
+  "game_id": 3525851,
+  "license_class": "Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms)",
+  "attribution": "Appreciated / not required",
+  "theme": "Vehicles & Sci-Fi",
+  "description": "[free] Alien Shooter Gb Asset Pack is a 2D vehicles & sci-fi art pack by LorisC. Use it for shooters, space encounters, sci-fi prototyping. License: Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). Attribution: Appreciated / not required.",
+  "category": "Vehicles & Sci-Fi",
+  "themes": [
+    "sci-fi",
+    "urban",
+    "vehicles & sci-fi"
+  ],
+  "useCases": [
+    "shooters",
+    "space encounters",
+    "sci-fi prototyping"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "sci-fi",
+    "sprite",
+    "urban",
+    "vehicles & sci-fi"
+  ],
+  "searchText": "[free] alien shooter gb - asset pack lorisc-alienshootergb lorisc vehicles & sci-fi free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms) appreciated / not required [free] alien shooter gb asset pack is a 2d vehicles & sci-fi art pack by lorisc. use it for shooters, space encounters, sci-fi prototyping. license: free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). attribution: appreciated / not required. sci-fi urban vehicles & sci-fi shooters space encounters sci-fi prototyping 2d art sprite",
+  "sampleCount": 37,
+  "samples": [
+    {
+      "packFolder": "lorisc-alienshootergb",
+      "path": "2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-alienflash-strip5.png",
+      "src": "/2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-alienflash-strip5.png",
+      "label": "Vfx Alienflash Strip5",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 30,
+        "height": 6,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.4888888888888889,
+        "transparentCoverage": 0.5111111111111111,
+        "contentRowRuns": 1,
+        "contentColRuns": 3,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Vfx Alienflash Strip5 is an animated 2D character sample from [FREE] Alien Shooter GB - Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "sci-fi"
+      ],
+      "searchText": "vfx alienflash strip5 2d/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-alienflash-strip5.png [free] alien shooter gb - asset pack character vfx alienflash strip5 is an animated 2d character sample from [free] alien shooter gb - asset pack. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "lorisc-alienshootergb",
+      "path": "2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-explosion1-strip8.png",
+      "src": "/2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-explosion1-strip8.png",
+      "label": "Vfx Explosion1 Strip8",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 320,
+        "height": 40,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.1798095703125,
+        "transparentCoverage": 0.8201904296875,
+        "contentRowRuns": 1,
+        "contentColRuns": 14,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Vfx Explosion1 Strip8 is an animated 2D effect sample from [FREE] Alien Shooter GB - Asset Pack. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "sci-fi"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "sci-fi"
+      ],
+      "searchText": "vfx explosion1 strip8 2d/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-explosion1-strip8.png [free] alien shooter gb - asset pack effect vfx explosion1 strip8 is an animated 2d effect sample from [free] alien shooter gb - asset pack. useful for combat vfx, spell effects, hit feedback. sci-fi combat vfx spell effects hit feedback 2d animated art"
+    },
+    {
+      "packFolder": "lorisc-alienshootergb",
+      "path": "2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-explosion2-strip8.png",
+      "src": "/2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-explosion2-strip8.png",
+      "label": "Vfx Explosion2 Strip8",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 320,
+        "height": 40,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.226318359375,
+        "transparentCoverage": 0.773681640625,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Vfx Explosion2 Strip8 is an animated 2D effect sample from [FREE] Alien Shooter GB - Asset Pack. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "sci-fi"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "sci-fi"
+      ],
+      "searchText": "vfx explosion2 strip8 2d/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-explosion2-strip8.png [free] alien shooter gb - asset pack effect vfx explosion2 strip8 is an animated 2d effect sample from [free] alien shooter gb - asset pack. useful for combat vfx, spell effects, hit feedback. sci-fi combat vfx spell effects hit feedback 2d animated art"
+    },
+    {
+      "packFolder": "lorisc-alienshootergb",
+      "path": "2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-impact-strip3.png",
+      "src": "/2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-impact-strip3.png",
+      "label": "Vfx Impact Strip3",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 36,
+        "height": 12,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.37037037037037035,
+        "transparentCoverage": 0.6296296296296297,
+        "contentRowRuns": 1,
+        "contentColRuns": 3,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Vfx Impact Strip3 is an animated 2D effect sample from [FREE] Alien Shooter GB - Asset Pack. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "sci-fi"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "sci-fi"
+      ],
+      "searchText": "vfx impact strip3 2d/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-impact-strip3.png [free] alien shooter gb - asset pack effect vfx impact strip3 is an animated 2d effect sample from [free] alien shooter gb - asset pack. useful for combat vfx, spell effects, hit feedback. sci-fi combat vfx spell effects hit feedback 2d animated art"
+    },
+    {
+      "packFolder": "lorisc-alienshootergb",
+      "path": "2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-nohit-strip3.png",
+      "src": "/2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-nohit-strip3.png",
+      "label": "Vfx Nohit Strip3",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 21,
+        "height": 7,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.32653061224489793,
+        "transparentCoverage": 0.673469387755102,
+        "contentRowRuns": 1,
+        "contentColRuns": 3,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Vfx Nohit Strip3 is an animated 2D character sample from [FREE] Alien Shooter GB - Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "sci-fi"
+      ],
+      "searchText": "vfx nohit strip3 2d/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-nohit-strip3.png [free] alien shooter gb - asset pack character vfx nohit strip3 is an animated 2d character sample from [free] alien shooter gb - asset pack. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "lorisc-alienshootergb",
+      "path": "2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-oval-strip4.png",
+      "src": "/2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-oval-strip4.png",
+      "label": "Vfx Oval Strip4",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 44,
+        "height": 11,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.4793388429752066,
+        "transparentCoverage": 0.5206611570247934,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Vfx Oval Strip4 is an animated 2D character sample from [FREE] Alien Shooter GB - Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "sci-fi"
+      ],
+      "searchText": "vfx oval strip4 2d/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-oval-strip4.png [free] alien shooter gb - asset pack character vfx oval strip4 is an animated 2d character sample from [free] alien shooter gb - asset pack. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "lorisc-alienshootergb",
+      "path": "2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/player/ship-strip5.png",
+      "src": "/2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/player/ship-strip5.png",
+      "label": "Ship Strip5",
+      "kind": "sprite",
+      "animated": true,
+      "inspection": {
+        "width": 130,
+        "height": 26,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.6189349112426036,
+        "transparentCoverage": 0.3810650887573965,
+        "contentRowRuns": 1,
+        "contentColRuns": 3,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Ship Strip5 is an animated 2D sprite sample from [FREE] Alien Shooter GB - Asset Pack. Useful for shooters, space encounters, sci-fi prototyping.",
+      "category": "sprite",
+      "themes": [
+        "sci-fi",
+        "sprite"
+      ],
+      "useCases": [
+        "shooters",
+        "space encounters",
+        "sci-fi prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "sci-fi",
+        "sprite",
+        "vehicle"
+      ],
+      "searchText": "ship strip5 2d/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/player/ship-strip5.png [free] alien shooter gb - asset pack sprite ship strip5 is an animated 2d sprite sample from [free] alien shooter gb - asset pack. useful for shooters, space encounters, sci-fi prototyping. sci-fi shooters space encounters sci-fi prototyping 2d animated art vehicle"
+    },
+    {
+      "packFolder": "lorisc-alienshootergb",
+      "path": "2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-laser-strip4.png",
+      "src": "/2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-laser-strip4.png",
+      "label": "Vfx Laser Strip4",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 32,
+        "height": 16,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.78125,
+        "transparentCoverage": 0.21875,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Vfx Laser Strip4 is an animated 2D effect sample from [FREE] Alien Shooter GB - Asset Pack. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "sci-fi"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "sci-fi"
+      ],
+      "searchText": "vfx laser strip4 2d/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-laser-strip4.png [free] alien shooter gb - asset pack effect vfx laser strip4 is an animated 2d effect sample from [free] alien shooter gb - asset pack. useful for combat vfx, spell effects, hit feedback. sci-fi combat vfx spell effects hit feedback 2d animated art"
+    },
+    {
+      "packFolder": "lorisc-alienshootergb",
+      "path": "2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-orb1-strip4.png",
+      "src": "/2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-orb1-strip4.png",
+      "label": "Vfx Orb1 Strip4",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 40,
+        "height": 10,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.54,
+        "transparentCoverage": 0.46,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Vfx Orb1 Strip4 is an animated 2D character sample from [FREE] Alien Shooter GB - Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "sci-fi"
+      ],
+      "searchText": "vfx orb1 strip4 2d/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-orb1-strip4.png [free] alien shooter gb - asset pack character vfx orb1 strip4 is an animated 2d character sample from [free] alien shooter gb - asset pack. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "lorisc-alienshootergb",
+      "path": "2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-orb2-strip3.png",
+      "src": "/2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-orb2-strip3.png",
+      "label": "Vfx Orb2 Strip3",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 36,
+        "height": 12,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.6111111111111112,
+        "transparentCoverage": 0.3888888888888889,
+        "contentRowRuns": 1,
+        "contentColRuns": 3,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Vfx Orb2 Strip3 is an animated 2D character sample from [FREE] Alien Shooter GB - Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "sci-fi"
+      ],
+      "searchText": "vfx orb2 strip3 2d/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-orb2-strip3.png [free] alien shooter gb - asset pack character vfx orb2 strip3 is an animated 2d character sample from [free] alien shooter gb - asset pack. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "lorisc-alienshootergb",
+      "path": "2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-beam-strip2.png",
+      "src": "/2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-beam-strip2.png",
+      "label": "Vfx Beam Strip2",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 8,
+        "height": 12,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.9166666666666666,
+        "transparentCoverage": 0.08333333333333333,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Vfx Beam Strip2 is a static 2D character sample from [FREE] Alien Shooter GB - Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "sci-fi",
+        "static"
+      ],
+      "searchText": "vfx beam strip2 2d/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-beam-strip2.png [free] alien shooter gb - asset pack character vfx beam strip2 is a static 2d character sample from [free] alien shooter gb - asset pack. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "lorisc-alienshootergb",
+      "path": "2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-drip-strip2.png",
+      "src": "/2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-drip-strip2.png",
+      "label": "Vfx Drip Strip2",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 20,
+        "height": 16,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.6375,
+        "transparentCoverage": 0.3625,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Vfx Drip Strip2 is a static 2D character sample from [FREE] Alien Shooter GB - Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "sci-fi",
+        "static"
+      ],
+      "searchText": "vfx drip strip2 2d/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-drip-strip2.png [free] alien shooter gb - asset pack character vfx drip strip2 is a static 2d character sample from [free] alien shooter gb - asset pack. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "lorisc-alienshootergb",
+      "path": "2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-orb3-strip2.png",
+      "src": "/2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-orb3-strip2.png",
+      "label": "Vfx Orb3 Strip2",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 16,
+        "height": 8,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.8125,
+        "transparentCoverage": 0.1875,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Vfx Orb3 Strip2 is a static 2D character sample from [FREE] Alien Shooter GB - Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "sci-fi",
+        "static"
+      ],
+      "searchText": "vfx orb3 strip2 2d/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-orb3-strip2.png [free] alien shooter gb - asset pack character vfx orb3 strip2 is a static 2d character sample from [free] alien shooter gb - asset pack. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "lorisc-alienshootergb",
+      "path": "2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-orb4-strip2.png",
+      "src": "/2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-orb4-strip2.png",
+      "label": "Vfx Orb4 Strip2",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 16,
+        "height": 8,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.8125,
+        "transparentCoverage": 0.1875,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Vfx Orb4 Strip2 is a static 2D character sample from [FREE] Alien Shooter GB - Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "sci-fi",
+        "static"
+      ],
+      "searchText": "vfx orb4 strip2 2d/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-orb4-strip2.png [free] alien shooter gb - asset pack character vfx orb4 strip2 is a static 2d character sample from [free] alien shooter gb - asset pack. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "lorisc-alienshootergb",
+      "path": "2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-thrust-strip4.png",
+      "src": "/2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-thrust-strip4.png",
+      "label": "Vfx Thrust Strip4",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 16,
+        "height": 5,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.525,
+        "transparentCoverage": 0.475,
+        "contentRowRuns": 1,
+        "contentColRuns": 2,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Vfx Thrust Strip4 is an animated 2D character sample from [FREE] Alien Shooter GB - Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "sci-fi"
+      ],
+      "searchText": "vfx thrust strip4 2d/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-thrust-strip4.png [free] alien shooter gb - asset pack character vfx thrust strip4 is an animated 2d character sample from [free] alien shooter gb - asset pack. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "lorisc-alienshootergb",
+      "path": "2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/player/ship-farleft.png",
+      "src": "/2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/player/ship-farleft.png",
+      "label": "Ship Farleft",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 26,
+        "height": 26,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.6035502958579881,
+        "transparentCoverage": 0.39644970414201186,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Ship Farleft is a static 2D image sample from [FREE] Alien Shooter GB - Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "image",
+        "sci-fi",
+        "static",
+        "vehicle"
+      ],
+      "searchText": "ship farleft 2d/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/player/ship-farleft.png [free] alien shooter gb - asset pack image ship farleft is a static 2d image sample from [free] alien shooter gb - asset pack. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d art static vehicle"
+    },
+    {
+      "packFolder": "lorisc-alienshootergb",
+      "path": "2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/player/ship-farright.png",
+      "src": "/2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/player/ship-farright.png",
+      "label": "Ship Farright",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 26,
+        "height": 26,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.6035502958579881,
+        "transparentCoverage": 0.39644970414201186,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Ship Farright is a static 2D image sample from [FREE] Alien Shooter GB - Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "image",
+        "sci-fi",
+        "static",
+        "vehicle"
+      ],
+      "searchText": "ship farright 2d/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/player/ship-farright.png [free] alien shooter gb - asset pack image ship farright is a static 2d image sample from [free] alien shooter gb - asset pack. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d art static vehicle"
+    },
+    {
+      "packFolder": "lorisc-alienshootergb",
+      "path": "2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/player/ship-left.png",
+      "src": "/2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/player/ship-left.png",
+      "label": "Ship Left",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 26,
+        "height": 26,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.6272189349112426,
+        "transparentCoverage": 0.3727810650887574,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Ship Left is a static 2D image sample from [FREE] Alien Shooter GB - Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "image",
+        "sci-fi",
+        "static",
+        "vehicle"
+      ],
+      "searchText": "ship left 2d/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/player/ship-left.png [free] alien shooter gb - asset pack image ship left is a static 2d image sample from [free] alien shooter gb - asset pack. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d art static vehicle"
+    },
+    {
+      "packFolder": "lorisc-alienshootergb",
+      "path": "2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/player/ship-mid.png",
+      "src": "/2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/player/ship-mid.png",
+      "label": "Ship Mid",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 26,
+        "height": 26,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.6331360946745562,
+        "transparentCoverage": 0.3668639053254438,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Ship Mid is a static 2D image sample from [FREE] Alien Shooter GB - Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "image",
+        "sci-fi",
+        "static",
+        "vehicle"
+      ],
+      "searchText": "ship mid 2d/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/player/ship-mid.png [free] alien shooter gb - asset pack image ship mid is a static 2d image sample from [free] alien shooter gb - asset pack. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d art static vehicle"
+    },
+    {
+      "packFolder": "lorisc-alienshootergb",
+      "path": "2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/player/ship-right.png",
+      "src": "/2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/player/ship-right.png",
+      "label": "Ship Right",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 26,
+        "height": 26,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.6272189349112426,
+        "transparentCoverage": 0.3727810650887574,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Ship Right is a static 2D image sample from [FREE] Alien Shooter GB - Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "image",
+        "sci-fi",
+        "static",
+        "vehicle"
+      ],
+      "searchText": "ship right 2d/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/player/ship-right.png [free] alien shooter gb - asset pack image ship right is a static 2d image sample from [free] alien shooter gb - asset pack. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d art static vehicle"
+    },
+    {
+      "packFolder": "lorisc-alienshootergb",
+      "path": "2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-bullet.png",
+      "src": "/2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-bullet.png",
+      "label": "Vfx Bullet",
+      "kind": "effect",
+      "animated": false,
+      "inspection": {
+        "width": 4,
+        "height": 7,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.8571428571428571,
+        "transparentCoverage": 0.14285714285714285,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Vfx Bullet is a static 2D effect sample from [FREE] Alien Shooter GB - Asset Pack. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "sci-fi"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "effect",
+        "sci-fi",
+        "static"
+      ],
+      "searchText": "vfx bullet 2d/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-bullet.png [free] alien shooter gb - asset pack effect vfx bullet is a static 2d effect sample from [free] alien shooter gb - asset pack. useful for combat vfx, spell effects, hit feedback. sci-fi combat vfx spell effects hit feedback 2d art static"
+    },
+    {
+      "packFolder": "lorisc-alienshootergb",
+      "path": "2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-flash.png",
+      "src": "/2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-flash.png",
+      "label": "Vfx Flash",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 6,
+        "height": 6,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.8888888888888888,
+        "transparentCoverage": 0.1111111111111111,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Vfx Flash is a static 2D character sample from [FREE] Alien Shooter GB - Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "sci-fi",
+        "static"
+      ],
+      "searchText": "vfx flash 2d/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/vfx/vfx-flash.png [free] alien shooter gb - asset pack character vfx flash is a static 2d character sample from [free] alien shooter gb - asset pack. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "lorisc-alienshootergb",
+      "path": "2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-assetpack.png",
+      "src": "/2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-assetpack.png",
+      "label": "Alienshootergb Assetpack",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 432,
+        "height": 270,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.3008544921875,
+        "transparentCoverage": 0.6991455078125,
+        "contentRowRuns": 1,
+        "contentColRuns": 2,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Alienshootergb Assetpack is a static 2D character sample from [FREE] Alien Shooter GB - Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "sci-fi",
+        "static"
+      ],
+      "searchText": "alienshootergb assetpack 2d/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-assetpack.png [free] alien shooter gb - asset pack character alienshootergb assetpack is a static 2d character sample from [free] alien shooter gb - asset pack. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "lorisc-alienshootergb",
+      "path": "2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/aliens/alien-air3.png",
+      "src": "/2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/aliens/alien-air3.png",
+      "label": "Alien Air3",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 36,
+        "height": 31,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.3942652329749104,
+        "transparentCoverage": 0.6057347670250897,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Alien Air3 is a static 2D character sample from [FREE] Alien Shooter GB - Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "sci-fi",
+        "static"
+      ],
+      "searchText": "alien air3 2d/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/aliens/alien-air3.png [free] alien shooter gb - asset pack character alien air3 is a static 2d character sample from [free] alien shooter gb - asset pack. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "lorisc-alienshootergb",
+      "path": "2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/other/other-asteroid1.png",
+      "src": "/2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/other/other-asteroid1.png",
+      "label": "Other Asteroid1",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 9,
+        "height": 9,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.4567901234567901,
+        "transparentCoverage": 0.5432098765432098,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Other Asteroid1 is a static 2D character sample from [FREE] Alien Shooter GB - Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "sci-fi",
+        "static"
+      ],
+      "searchText": "other asteroid1 2d/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/other/other-asteroid1.png [free] alien shooter gb - asset pack character other asteroid1 is a static 2d character sample from [free] alien shooter gb - asset pack. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "lorisc-alienshootergb",
+      "path": "2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/tilesets/tileset-metal.png",
+      "src": "/2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/tilesets/tileset-metal.png",
+      "label": "Tileset Metal",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 64,
+        "height": 64,
+        "bgKind": "mixed",
+        "alphaCoverage": 0.99609375,
+        "transparentCoverage": 0.00390625,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Tileset Metal is a static 2D character sample from [FREE] Alien Shooter GB - Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "sci-fi",
+        "static"
+      ],
+      "searchText": "tileset metal 2d/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/tilesets/tileset-metal.png [free] alien shooter gb - asset pack character tileset metal is a static 2d character sample from [free] alien shooter gb - asset pack. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "lorisc-alienshootergb",
+      "path": "2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/tilesets/tileset-organic.png",
+      "src": "/2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/tilesets/tileset-organic.png",
+      "label": "Tileset Organic",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 64,
+        "height": 64,
+        "bgKind": "mixed",
+        "alphaCoverage": 0.96728515625,
+        "transparentCoverage": 0.03271484375,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Tileset Organic is a static 2D character sample from [FREE] Alien Shooter GB - Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "sci-fi",
+        "static"
+      ],
+      "searchText": "tileset organic 2d/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/tilesets/tileset-organic.png [free] alien shooter gb - asset pack character tileset organic is a static 2d character sample from [free] alien shooter gb - asset pack. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "lorisc-alienshootergb",
+      "path": "2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/tilesets/tileset-rocks.png",
+      "src": "/2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/tilesets/tileset-rocks.png",
+      "label": "Tileset Rocks",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 64,
+        "height": 64,
+        "bgKind": "mixed",
+        "alphaCoverage": 0.982421875,
+        "transparentCoverage": 0.017578125,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Tileset Rocks is a static 2D character sample from [FREE] Alien Shooter GB - Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "sci-fi",
+        "static"
+      ],
+      "searchText": "tileset rocks 2d/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/tilesets/tileset-rocks.png [free] alien shooter gb - asset pack character tileset rocks is a static 2d character sample from [free] alien shooter gb - asset pack. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "lorisc-alienshootergb",
+      "path": "2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/aliens/alien-air1.png",
+      "src": "/2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/aliens/alien-air1.png",
+      "label": "Alien Air1",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 26,
+        "height": 17,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.5475113122171946,
+        "transparentCoverage": 0.45248868778280543,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Alien Air1 is a static 2D character sample from [FREE] Alien Shooter GB - Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "sci-fi",
+        "static"
+      ],
+      "searchText": "alien air1 2d/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/aliens/alien-air1.png [free] alien shooter gb - asset pack character alien air1 is a static 2d character sample from [free] alien shooter gb - asset pack. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "lorisc-alienshootergb",
+      "path": "2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/aliens/alien-air2.png",
+      "src": "/2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/aliens/alien-air2.png",
+      "label": "Alien Air2",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 24,
+        "height": 40,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.5604166666666667,
+        "transparentCoverage": 0.4395833333333333,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Alien Air2 is a static 2D character sample from [FREE] Alien Shooter GB - Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "sci-fi",
+        "static"
+      ],
+      "searchText": "alien air2 2d/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/aliens/alien-air2.png [free] alien shooter gb - asset pack character alien air2 is a static 2d character sample from [free] alien shooter gb - asset pack. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "lorisc-alienshootergb",
+      "path": "2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/aliens/alien-air4.png",
+      "src": "/2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/aliens/alien-air4.png",
+      "label": "Alien Air4",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 32,
+        "height": 38,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.5049342105263158,
+        "transparentCoverage": 0.49506578947368424,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Alien Air4 is a static 2D character sample from [FREE] Alien Shooter GB - Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "sci-fi",
+        "static"
+      ],
+      "searchText": "alien air4 2d/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/aliens/alien-air4.png [free] alien shooter gb - asset pack character alien air4 is a static 2d character sample from [free] alien shooter gb - asset pack. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "lorisc-alienshootergb",
+      "path": "2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/aliens/alien-air5.png",
+      "src": "/2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/aliens/alien-air5.png",
+      "label": "Alien Air5",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 28,
+        "height": 28,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.6836734693877551,
+        "transparentCoverage": 0.3163265306122449,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Alien Air5 is a static 2D character sample from [FREE] Alien Shooter GB - Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "sci-fi",
+        "static"
+      ],
+      "searchText": "alien air5 2d/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/aliens/alien-air5.png [free] alien shooter gb - asset pack character alien air5 is a static 2d character sample from [free] alien shooter gb - asset pack. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "lorisc-alienshootergb",
+      "path": "2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/aliens/alien-air6.png",
+      "src": "/2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/aliens/alien-air6.png",
+      "label": "Alien Air6",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 22,
+        "height": 24,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.7462121212121212,
+        "transparentCoverage": 0.2537878787878788,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Alien Air6 is a static 2D character sample from [FREE] Alien Shooter GB - Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "sci-fi",
+        "static"
+      ],
+      "searchText": "alien air6 2d/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/aliens/alien-air6.png [free] alien shooter gb - asset pack character alien air6 is a static 2d character sample from [free] alien shooter gb - asset pack. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "lorisc-alienshootergb",
+      "path": "2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/aliens/alien-ground1.png",
+      "src": "/2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/aliens/alien-ground1.png",
+      "label": "Alien Ground1",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 20,
+        "height": 27,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.8444444444444444,
+        "transparentCoverage": 0.15555555555555556,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Alien Ground1 is a static 2D character sample from [FREE] Alien Shooter GB - Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "sci-fi",
+        "static"
+      ],
+      "searchText": "alien ground1 2d/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/aliens/alien-ground1.png [free] alien shooter gb - asset pack character alien ground1 is a static 2d character sample from [free] alien shooter gb - asset pack. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "lorisc-alienshootergb",
+      "path": "2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/aliens/alien-ground2.png",
+      "src": "/2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/aliens/alien-ground2.png",
+      "label": "Alien Ground2",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 26,
+        "height": 26,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.6538461538461539,
+        "transparentCoverage": 0.34615384615384615,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Alien Ground2 is a static 2D character sample from [FREE] Alien Shooter GB - Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "sci-fi",
+        "static"
+      ],
+      "searchText": "alien ground2 2d/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/aliens/alien-ground2.png [free] alien shooter gb - asset pack character alien ground2 is a static 2d character sample from [free] alien shooter gb - asset pack. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "lorisc-alienshootergb",
+      "path": "2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/other/other-asteroid2.png",
+      "src": "/2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/other/other-asteroid2.png",
+      "label": "Other Asteroid2",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 18,
+        "height": 18,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.7777777777777778,
+        "transparentCoverage": 0.2222222222222222,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Other Asteroid2 is a static 2D character sample from [FREE] Alien Shooter GB - Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "sci-fi",
+        "static"
+      ],
+      "searchText": "other asteroid2 2d/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/other/other-asteroid2.png [free] alien shooter gb - asset pack character other asteroid2 is a static 2d character sample from [free] alien shooter gb - asset pack. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "lorisc-alienshootergb",
+      "path": "2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/other/other-asteroid3.png",
+      "src": "/2D/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/other/other-asteroid3.png",
+      "label": "Other Asteroid3",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 38,
+        "height": 40,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.6144736842105263,
+        "transparentCoverage": 0.38552631578947366,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Other Asteroid3 is a static 2D character sample from [FREE] Alien Shooter GB - Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "sci-fi",
+        "static"
+      ],
+      "searchText": "other asteroid3 2d/lorisc-alienshootergb/extracted/alienshootergb-1-0/alienshootergb-1-0/alienshootergb-1-0/seperated-assets/sprites/other/other-asteroid3.png [free] alien shooter gb - asset pack character other asteroid3 is a static 2d character sample from [free] alien shooter gb - asset pack. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d art static"
+    }
+  ]
+}

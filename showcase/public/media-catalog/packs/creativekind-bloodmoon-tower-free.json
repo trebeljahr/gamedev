@@ -1,0 +1,73 @@
+{
+  "folder": "creativekind-bloodmoon-tower-free",
+  "title": "Bloodmoon Tower Free",
+  "author": "creativekind",
+  "author_url": "https://creativekind.itch.io",
+  "url": "https://creativekind.itch.io/gif-bloodmoon-tower-free",
+  "game_id": null,
+  "license_class": "Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms)",
+  "attribution": "Appreciated / not required",
+  "theme": "Environments",
+  "description": "Bloodmoon Tower Free is a 2D environments art pack by creativekind. Use it for level building, tilemaps, environment dressing. License: Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). Attribution: Appreciated / not required.",
+  "category": "Environments",
+  "themes": [
+    "environments",
+    "urban"
+  ],
+  "useCases": [
+    "level building",
+    "tilemaps",
+    "environment dressing"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "environments",
+    "sprite",
+    "urban"
+  ],
+  "searchText": "bloodmoon tower free creativekind-bloodmoon-tower-free creativekind environments free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms) appreciated / not required bloodmoon tower free is a 2d environments art pack by creativekind. use it for level building, tilemaps, environment dressing. license: free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). attribution: appreciated / not required. environments urban level building tilemaps environment dressing 2d art sprite",
+  "sampleCount": 1,
+  "samples": [
+    {
+      "packFolder": "creativekind-bloodmoon-tower-free",
+      "path": "2D/creativekind-bloodmoon-tower-free/extracted/bloodmoontower-free-version/redmoontower-free-idle-animation.png",
+      "src": "/2D/creativekind-bloodmoon-tower-free/extracted/bloodmoontower-free-version/redmoontower-free-idle-animation.png",
+      "label": "Redmoontower Free Idle Animation",
+      "kind": "sprite",
+      "animated": true,
+      "inspection": {
+        "width": 1100,
+        "height": 140,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.19057765151515152,
+        "transparentCoverage": 0.8094223484848485,
+        "contentRowRuns": 1,
+        "contentColRuns": 11,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Redmoontower Free Idle Animation is an animated 2D sprite sample from Bloodmoon Tower Free. Useful for game jams, prototypes, scene dressing.",
+      "category": "sprite",
+      "themes": [
+        "bloodmoon tower free",
+        "sprite"
+      ],
+      "useCases": [
+        "game jams",
+        "prototypes",
+        "scene dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "bloodmoon tower free",
+        "sprite"
+      ],
+      "searchText": "redmoontower free idle animation 2d/creativekind-bloodmoon-tower-free/extracted/bloodmoontower-free-version/redmoontower-free-idle-animation.png bloodmoon tower free sprite redmoontower free idle animation is an animated 2d sprite sample from bloodmoon tower free. useful for game jams, prototypes, scene dressing. bloodmoon tower free game jams prototypes scene dressing 2d animated art"
+    }
+  ]
+}

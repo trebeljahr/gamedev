@@ -1,0 +1,313 @@
+{
+  "folder": "luizmelo-fire-worm",
+  "title": "Fire Worm",
+  "author": "luizmelo",
+  "author_url": "https://luizmelo.itch.io",
+  "url": "https://luizmelo.itch.io/fire-worm",
+  "game_id": null,
+  "license_class": "CC0 1.0 (Creative Commons Zero)",
+  "attribution": "Optional",
+  "theme": "Effects",
+  "description": "Fire Worm is a 2D effects art pack by luizmelo. Use it for combat VFX, spell effects, hit feedback. License: CC0 1.0 (Creative Commons Zero). Attribution: Optional.",
+  "category": "Effects",
+  "themes": [
+    "effects",
+    "fire worm"
+  ],
+  "useCases": [
+    "combat VFX",
+    "spell effects",
+    "hit feedback"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "effects",
+    "fire worm",
+    "sprite"
+  ],
+  "searchText": "fire worm luizmelo-fire-worm luizmelo effects cc0 1.0 (creative commons zero) optional fire worm is a 2d effects art pack by luizmelo. use it for combat vfx, spell effects, hit feedback. license: cc0 1.0 (creative commons zero). attribution: optional. effects fire worm combat vfx spell effects hit feedback 2d art sprite",
+  "sampleCount": 7,
+  "samples": [
+    {
+      "packFolder": "luizmelo-fire-worm",
+      "path": "2D/luizmelo-fire-worm/extracted/fire-worm/fire-worm/sprites/fire-ball/move.png",
+      "src": "/2D/luizmelo-fire-worm/extracted/fire-worm/fire-worm/sprites/fire-ball/move.png",
+      "label": "Move",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 276,
+        "height": 46,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.04987281976744186,
+        "transparentCoverage": 0.9501271802325582,
+        "contentRowRuns": 1,
+        "contentColRuns": 7,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Move is an animated 2D effect sample from Fire Worm. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "fire worm"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "fire worm"
+      ],
+      "searchText": "move 2d/luizmelo-fire-worm/extracted/fire-worm/fire-worm/sprites/fire-ball/move.png fire worm effect move is an animated 2d effect sample from fire worm. useful for combat vfx, spell effects, hit feedback. fire worm combat vfx spell effects hit feedback 2d animated art"
+    },
+    {
+      "packFolder": "luizmelo-fire-worm",
+      "path": "2D/luizmelo-fire-worm/extracted/fire-worm/fire-worm/sprites/worm/attack.png",
+      "src": "/2D/luizmelo-fire-worm/extracted/fire-worm/fire-worm/sprites/worm/attack.png",
+      "label": "Attack",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 1440,
+        "height": 90,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.080810546875,
+        "transparentCoverage": 0.919189453125,
+        "contentRowRuns": 1,
+        "contentColRuns": 24,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Attack is an animated 2D effect sample from Fire Worm. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "fire worm"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "fire worm"
+      ],
+      "searchText": "attack 2d/luizmelo-fire-worm/extracted/fire-worm/fire-worm/sprites/worm/attack.png fire worm effect attack is an animated 2d effect sample from fire worm. useful for combat vfx, spell effects, hit feedback. fire worm combat vfx spell effects hit feedback 2d animated art"
+    },
+    {
+      "packFolder": "luizmelo-fire-worm",
+      "path": "2D/luizmelo-fire-worm/extracted/fire-worm/fire-worm/sprites/worm/death.png",
+      "src": "/2D/luizmelo-fire-worm/extracted/fire-worm/fire-worm/sprites/worm/death.png",
+      "label": "Death",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 720,
+        "height": 90,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0712890625,
+        "transparentCoverage": 0.9287109375,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Death is an animated 2D effect sample from Fire Worm. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "fire worm"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "fire worm"
+      ],
+      "searchText": "death 2d/luizmelo-fire-worm/extracted/fire-worm/fire-worm/sprites/worm/death.png fire worm effect death is an animated 2d effect sample from fire worm. useful for combat vfx, spell effects, hit feedback. fire worm combat vfx spell effects hit feedback 2d animated art"
+    },
+    {
+      "packFolder": "luizmelo-fire-worm",
+      "path": "2D/luizmelo-fire-worm/extracted/fire-worm/fire-worm/sprites/worm/get-hit.png",
+      "src": "/2D/luizmelo-fire-worm/extracted/fire-worm/fire-worm/sprites/worm/get-hit.png",
+      "label": "Get Hit",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 270,
+        "height": 90,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.07977941176470588,
+        "transparentCoverage": 0.9202205882352941,
+        "contentRowRuns": 1,
+        "contentColRuns": 3,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Get Hit is an animated 2D effect sample from Fire Worm. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "fire worm"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "fire worm"
+      ],
+      "searchText": "get hit 2d/luizmelo-fire-worm/extracted/fire-worm/fire-worm/sprites/worm/get-hit.png fire worm effect get hit is an animated 2d effect sample from fire worm. useful for combat vfx, spell effects, hit feedback. fire worm combat vfx spell effects hit feedback 2d animated art"
+    },
+    {
+      "packFolder": "luizmelo-fire-worm",
+      "path": "2D/luizmelo-fire-worm/extracted/fire-worm/fire-worm/sprites/worm/idle.png",
+      "src": "/2D/luizmelo-fire-worm/extracted/fire-worm/fire-worm/sprites/worm/idle.png",
+      "label": "Idle",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 810,
+        "height": 90,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.08133370535714286,
+        "transparentCoverage": 0.9186662946428571,
+        "contentRowRuns": 1,
+        "contentColRuns": 9,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Idle is an animated 2D effect sample from Fire Worm. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "fire worm"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "fire worm"
+      ],
+      "searchText": "idle 2d/luizmelo-fire-worm/extracted/fire-worm/fire-worm/sprites/worm/idle.png fire worm effect idle is an animated 2d effect sample from fire worm. useful for combat vfx, spell effects, hit feedback. fire worm combat vfx spell effects hit feedback 2d animated art"
+    },
+    {
+      "packFolder": "luizmelo-fire-worm",
+      "path": "2D/luizmelo-fire-worm/extracted/fire-worm/fire-worm/sprites/worm/walk.png",
+      "src": "/2D/luizmelo-fire-worm/extracted/fire-worm/fire-worm/sprites/worm/walk.png",
+      "label": "Walk",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 810,
+        "height": 90,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.08063616071428571,
+        "transparentCoverage": 0.9193638392857143,
+        "contentRowRuns": 1,
+        "contentColRuns": 9,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Walk is an animated 2D effect sample from Fire Worm. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "fire worm"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "fire worm"
+      ],
+      "searchText": "walk 2d/luizmelo-fire-worm/extracted/fire-worm/fire-worm/sprites/worm/walk.png fire worm effect walk is an animated 2d effect sample from fire worm. useful for combat vfx, spell effects, hit feedback. fire worm combat vfx spell effects hit feedback 2d animated art"
+    },
+    {
+      "packFolder": "luizmelo-fire-worm",
+      "path": "2D/luizmelo-fire-worm/extracted/fire-worm/fire-worm/sprites/fire-ball/explosion.png",
+      "src": "/2D/luizmelo-fire-worm/extracted/fire-worm/fire-worm/sprites/fire-ball/explosion.png",
+      "label": "Explosion",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 322,
+        "height": 46,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.03969594594594594,
+        "transparentCoverage": 0.9603040540540541,
+        "contentRowRuns": 1,
+        "contentColRuns": 9,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Explosion is an animated 2D effect sample from Fire Worm. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "fire worm"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "fire worm"
+      ],
+      "searchText": "explosion 2d/luizmelo-fire-worm/extracted/fire-worm/fire-worm/sprites/fire-ball/explosion.png fire worm effect explosion is an animated 2d effect sample from fire worm. useful for combat vfx, spell effects, hit feedback. fire worm combat vfx spell effects hit feedback 2d animated art"
+    }
+  ]
+}

@@ -1,0 +1,1685 @@
+{
+  "folder": "foozlecc-void-fleet-pack-2",
+  "title": "Void - Fleet Pack 2 - Nairan",
+  "author": "FoozleCC",
+  "author_url": "https://foozlecc.itch.io",
+  "url": "https://foozlecc.itch.io/void-fleet-pack-2",
+  "game_id": 1668118,
+  "license_class": "CC0 1.0 (Creative Commons Zero)",
+  "attribution": "Optional",
+  "theme": "Vehicles & Sci-Fi",
+  "description": "Void Fleet Pack 2 Nairan is a 2D vehicles & sci-fi art pack by FoozleCC. Use it for shooters, space encounters, sci-fi prototyping. License: CC0 1.0 (Creative Commons Zero). Attribution: Optional.",
+  "category": "Vehicles & Sci-Fi",
+  "themes": [
+    "sci-fi",
+    "vehicles & sci-fi"
+  ],
+  "useCases": [
+    "shooters",
+    "space encounters",
+    "sci-fi prototyping"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "sci-fi",
+    "sprite",
+    "vehicles & sci-fi"
+  ],
+  "searchText": "void - fleet pack 2 - nairan foozlecc-void-fleet-pack-2 foozlecc vehicles & sci-fi cc0 1.0 (creative commons zero) optional void fleet pack 2 nairan is a 2d vehicles & sci-fi art pack by foozlecc. use it for shooters, space encounters, sci-fi prototyping. license: cc0 1.0 (creative commons zero). attribution: optional. sci-fi vehicles & sci-fi shooters space encounters sci-fi prototyping 2d art sprite",
+  "sampleCount": 41,
+  "samples": [
+    {
+      "packFolder": "foozlecc-void-fleet-pack-2",
+      "path": "2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/destruction/pngs/nairan-battlecruiser-destruction.png",
+      "src": "/2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/destruction/pngs/nairan-battlecruiser-destruction.png",
+      "label": "Nairan Battlecruiser Destruction",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 2304,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.21847098214285715,
+        "transparentCoverage": 0.7815290178571429,
+        "contentRowRuns": 1,
+        "contentColRuns": 19,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nairan Battlecruiser Destruction is an animated 2D image sample from Void - Fleet Pack 2 - Nairan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "void - fleet pack 2 - nairan"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "void - fleet pack 2 - nairan"
+      ],
+      "searchText": "nairan battlecruiser destruction 2d/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/destruction/pngs/nairan-battlecruiser-destruction.png void - fleet pack 2 - nairan image nairan battlecruiser destruction is an animated 2d image sample from void - fleet pack 2 - nairan. useful for player characters, npcs, animation prototyping. void - fleet pack 2 - nairan player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-2",
+      "path": "2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/destruction/pngs/nairan-bomber-destruction.png",
+      "src": "/2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/destruction/pngs/nairan-bomber-destruction.png",
+      "label": "Nairan Bomber Destruction",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 1024,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.206298828125,
+        "transparentCoverage": 0.793701171875,
+        "contentRowRuns": 1,
+        "contentColRuns": 14,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nairan Bomber Destruction is an animated 2D image sample from Void - Fleet Pack 2 - Nairan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "void - fleet pack 2 - nairan"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "void - fleet pack 2 - nairan"
+      ],
+      "searchText": "nairan bomber destruction 2d/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/destruction/pngs/nairan-bomber-destruction.png void - fleet pack 2 - nairan image nairan bomber destruction is an animated 2d image sample from void - fleet pack 2 - nairan. useful for player characters, npcs, animation prototyping. void - fleet pack 2 - nairan player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-2",
+      "path": "2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/destruction/pngs/nairan-dreadnought-destruction.png",
+      "src": "/2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/destruction/pngs/nairan-dreadnought-destruction.png",
+      "label": "Nairan Dreadnought Destruction",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 2304,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.25167410714285715,
+        "transparentCoverage": 0.7483258928571429,
+        "contentRowRuns": 1,
+        "contentColRuns": 17,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nairan Dreadnought Destruction is an animated 2D image sample from Void - Fleet Pack 2 - Nairan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "void - fleet pack 2 - nairan"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "void - fleet pack 2 - nairan"
+      ],
+      "searchText": "nairan dreadnought destruction 2d/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/destruction/pngs/nairan-dreadnought-destruction.png void - fleet pack 2 - nairan image nairan dreadnought destruction is an animated 2d image sample from void - fleet pack 2 - nairan. useful for player characters, npcs, animation prototyping. void - fleet pack 2 - nairan player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-2",
+      "path": "2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/destruction/pngs/nairan-fighter-destruction.png",
+      "src": "/2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/destruction/pngs/nairan-fighter-destruction.png",
+      "label": "Nairan Fighter Destruction",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 1152,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.17829241071428573,
+        "transparentCoverage": 0.8217075892857143,
+        "contentRowRuns": 1,
+        "contentColRuns": 13,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nairan Fighter Destruction is an animated 2D image sample from Void - Fleet Pack 2 - Nairan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "void - fleet pack 2 - nairan"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "void - fleet pack 2 - nairan"
+      ],
+      "searchText": "nairan fighter destruction 2d/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/destruction/pngs/nairan-fighter-destruction.png void - fleet pack 2 - nairan image nairan fighter destruction is an animated 2d image sample from void - fleet pack 2 - nairan. useful for player characters, npcs, animation prototyping. void - fleet pack 2 - nairan player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-2",
+      "path": "2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/destruction/pngs/nairan-frigate-destruction.png",
+      "src": "/2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/destruction/pngs/nairan-frigate-destruction.png",
+      "label": "Nairan Frigate Destruction",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 1024,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.23291015625,
+        "transparentCoverage": 0.76708984375,
+        "contentRowRuns": 1,
+        "contentColRuns": 14,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nairan Frigate Destruction is an animated 2D image sample from Void - Fleet Pack 2 - Nairan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "void - fleet pack 2 - nairan"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "void - fleet pack 2 - nairan"
+      ],
+      "searchText": "nairan frigate destruction 2d/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/destruction/pngs/nairan-frigate-destruction.png void - fleet pack 2 - nairan image nairan frigate destruction is an animated 2d image sample from void - fleet pack 2 - nairan. useful for player characters, npcs, animation prototyping. void - fleet pack 2 - nairan player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-2",
+      "path": "2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/destruction/pngs/nairan-scout-destruction.png",
+      "src": "/2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/destruction/pngs/nairan-scout-destruction.png",
+      "label": "Nairan Scout Destruction",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 1024,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.19775390625,
+        "transparentCoverage": 0.80224609375,
+        "contentRowRuns": 1,
+        "contentColRuns": 14,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nairan Scout Destruction is an animated 2D image sample from Void - Fleet Pack 2 - Nairan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "void - fleet pack 2 - nairan"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "void - fleet pack 2 - nairan"
+      ],
+      "searchText": "nairan scout destruction 2d/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/destruction/pngs/nairan-scout-destruction.png void - fleet pack 2 - nairan image nairan scout destruction is an animated 2d image sample from void - fleet pack 2 - nairan. useful for player characters, npcs, animation prototyping. void - fleet pack 2 - nairan player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-2",
+      "path": "2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/destruction/pngs/nairan-support-ship-destruction.png",
+      "src": "/2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/destruction/pngs/nairan-support-ship-destruction.png",
+      "label": "Nairan Support Ship Destruction",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 1024,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.205078125,
+        "transparentCoverage": 0.794921875,
+        "contentRowRuns": 1,
+        "contentColRuns": 14,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nairan Support Ship Destruction is an animated 2D image sample from Void - Fleet Pack 2 - Nairan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "sci-fi",
+        "vehicle"
+      ],
+      "searchText": "nairan support ship destruction 2d/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/destruction/pngs/nairan-support-ship-destruction.png void - fleet pack 2 - nairan image nairan support ship destruction is an animated 2d image sample from void - fleet pack 2 - nairan. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-2",
+      "path": "2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/destruction/pngs/nairan-torpedo-ship-destruction.png",
+      "src": "/2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/destruction/pngs/nairan-torpedo-ship-destruction.png",
+      "label": "Nairan Torpedo Ship Destruction",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 1024,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.209228515625,
+        "transparentCoverage": 0.790771484375,
+        "contentRowRuns": 1,
+        "contentColRuns": 14,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nairan Torpedo Ship Destruction is an animated 2D image sample from Void - Fleet Pack 2 - Nairan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "sci-fi",
+        "vehicle"
+      ],
+      "searchText": "nairan torpedo ship destruction 2d/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/destruction/pngs/nairan-torpedo-ship-destruction.png void - fleet pack 2 - nairan image nairan torpedo ship destruction is an animated 2d image sample from void - fleet pack 2 - nairan. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-2",
+      "path": "2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/engine-effects/pngs/nairan-battlecruiser-engine.png",
+      "src": "/2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/engine-effects/pngs/nairan-battlecruiser-engine.png",
+      "label": "Nairan Battlecruiser Engine",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 1024,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.01220703125,
+        "transparentCoverage": 0.98779296875,
+        "contentRowRuns": 1,
+        "contentColRuns": 24,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nairan Battlecruiser Engine is an animated 2D effect sample from Void - Fleet Pack 2 - Nairan. Useful for enemy variants, encounters, creature animation.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "void - fleet pack 2 - nairan"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "void - fleet pack 2 - nairan"
+      ],
+      "searchText": "nairan battlecruiser engine 2d/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/engine-effects/pngs/nairan-battlecruiser-engine.png void - fleet pack 2 - nairan effect nairan battlecruiser engine is an animated 2d effect sample from void - fleet pack 2 - nairan. useful for enemy variants, encounters, creature animation. void - fleet pack 2 - nairan enemy variants encounters creature animation 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-2",
+      "path": "2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/engine-effects/pngs/nairan-bomber-engine.png",
+      "src": "/2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/engine-effects/pngs/nairan-bomber-engine.png",
+      "label": "Nairan Bomber Engine",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 512,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0318603515625,
+        "transparentCoverage": 0.9681396484375,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nairan Bomber Engine is an animated 2D effect sample from Void - Fleet Pack 2 - Nairan. Useful for enemy variants, encounters, creature animation.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "void - fleet pack 2 - nairan"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "void - fleet pack 2 - nairan"
+      ],
+      "searchText": "nairan bomber engine 2d/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/engine-effects/pngs/nairan-bomber-engine.png void - fleet pack 2 - nairan effect nairan bomber engine is an animated 2d effect sample from void - fleet pack 2 - nairan. useful for enemy variants, encounters, creature animation. void - fleet pack 2 - nairan enemy variants encounters creature animation 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-2",
+      "path": "2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/engine-effects/pngs/nairan-dreadnought-engine.png",
+      "src": "/2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/engine-effects/pngs/nairan-dreadnought-engine.png",
+      "label": "Nairan Dreadnought Engine",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 1024,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0115966796875,
+        "transparentCoverage": 0.9884033203125,
+        "contentRowRuns": 1,
+        "contentColRuns": 24,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nairan Dreadnought Engine is an animated 2D effect sample from Void - Fleet Pack 2 - Nairan. Useful for enemy variants, encounters, creature animation.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "void - fleet pack 2 - nairan"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "void - fleet pack 2 - nairan"
+      ],
+      "searchText": "nairan dreadnought engine 2d/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/engine-effects/pngs/nairan-dreadnought-engine.png void - fleet pack 2 - nairan effect nairan dreadnought engine is an animated 2d effect sample from void - fleet pack 2 - nairan. useful for enemy variants, encounters, creature animation. void - fleet pack 2 - nairan enemy variants encounters creature animation 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-2",
+      "path": "2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/engine-effects/pngs/nairan-fighter-engine.png",
+      "src": "/2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/engine-effects/pngs/nairan-fighter-engine.png",
+      "label": "Nairan Fighter Engine",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 512,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0181884765625,
+        "transparentCoverage": 0.9818115234375,
+        "contentRowRuns": 2,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 7,
+        "cellMedianHeight": 3
+      },
+      "promo": false,
+      "description": "Nairan Fighter Engine is an animated 2D effect sample from Void - Fleet Pack 2 - Nairan. Useful for enemy variants, encounters, creature animation.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "void - fleet pack 2 - nairan"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "void - fleet pack 2 - nairan"
+      ],
+      "searchText": "nairan fighter engine 2d/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/engine-effects/pngs/nairan-fighter-engine.png void - fleet pack 2 - nairan effect nairan fighter engine is an animated 2d effect sample from void - fleet pack 2 - nairan. useful for enemy variants, encounters, creature animation. void - fleet pack 2 - nairan enemy variants encounters creature animation 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-2",
+      "path": "2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/engine-effects/pngs/nairan-frigate-engine.png",
+      "src": "/2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/engine-effects/pngs/nairan-frigate-engine.png",
+      "label": "Nairan Frigate Engine",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 512,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.018310546875,
+        "transparentCoverage": 0.981689453125,
+        "contentRowRuns": 1,
+        "contentColRuns": 18,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nairan Frigate Engine is an animated 2D effect sample from Void - Fleet Pack 2 - Nairan. Useful for enemy variants, encounters, creature animation.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "void - fleet pack 2 - nairan"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "void - fleet pack 2 - nairan"
+      ],
+      "searchText": "nairan frigate engine 2d/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/engine-effects/pngs/nairan-frigate-engine.png void - fleet pack 2 - nairan effect nairan frigate engine is an animated 2d effect sample from void - fleet pack 2 - nairan. useful for enemy variants, encounters, creature animation. void - fleet pack 2 - nairan enemy variants encounters creature animation 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-2",
+      "path": "2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/engine-effects/pngs/nairan-scout-engine.png",
+      "src": "/2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/engine-effects/pngs/nairan-scout-engine.png",
+      "label": "Nairan Scout Engine",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 512,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.014892578125,
+        "transparentCoverage": 0.985107421875,
+        "contentRowRuns": 2,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 6,
+        "cellMedianHeight": 3
+      },
+      "promo": false,
+      "description": "Nairan Scout Engine is an animated 2D effect sample from Void - Fleet Pack 2 - Nairan. Useful for enemy variants, encounters, creature animation.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "void - fleet pack 2 - nairan"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "void - fleet pack 2 - nairan"
+      ],
+      "searchText": "nairan scout engine 2d/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/engine-effects/pngs/nairan-scout-engine.png void - fleet pack 2 - nairan effect nairan scout engine is an animated 2d effect sample from void - fleet pack 2 - nairan. useful for enemy variants, encounters, creature animation. void - fleet pack 2 - nairan enemy variants encounters creature animation 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-2",
+      "path": "2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/engine-effects/pngs/nairan-support-ship-engine.png",
+      "src": "/2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/engine-effects/pngs/nairan-support-ship-engine.png",
+      "label": "Nairan Support Ship Engine",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 512,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0186767578125,
+        "transparentCoverage": 0.9813232421875,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nairan Support Ship Engine is an animated 2D effect sample from Void - Fleet Pack 2 - Nairan. Useful for enemy variants, encounters, creature animation.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "sci-fi"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "sci-fi",
+        "vehicle"
+      ],
+      "searchText": "nairan support ship engine 2d/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/engine-effects/pngs/nairan-support-ship-engine.png void - fleet pack 2 - nairan effect nairan support ship engine is an animated 2d effect sample from void - fleet pack 2 - nairan. useful for enemy variants, encounters, creature animation. sci-fi enemy variants encounters creature animation 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-2",
+      "path": "2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/engine-effects/pngs/nairan-torpedo-ship-engine.png",
+      "src": "/2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/engine-effects/pngs/nairan-torpedo-ship-engine.png",
+      "label": "Nairan Torpedo Ship Engine",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 512,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0179443359375,
+        "transparentCoverage": 0.9820556640625,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nairan Torpedo Ship Engine is an animated 2D effect sample from Void - Fleet Pack 2 - Nairan. Useful for enemy variants, encounters, creature animation.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "sci-fi"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "sci-fi",
+        "vehicle"
+      ],
+      "searchText": "nairan torpedo ship engine 2d/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/engine-effects/pngs/nairan-torpedo-ship-engine.png void - fleet pack 2 - nairan effect nairan torpedo ship engine is an animated 2d effect sample from void - fleet pack 2 - nairan. useful for enemy variants, encounters, creature animation. sci-fi enemy variants encounters creature animation 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-2",
+      "path": "2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/shields/pngs/nairan-battlecruiser-shield.png",
+      "src": "/2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/shields/pngs/nairan-battlecruiser-shield.png",
+      "label": "Nairan Battlecruiser Shield",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 1024,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.01953125,
+        "transparentCoverage": 0.9619140625,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nairan Battlecruiser Shield is an animated 2D image sample from Void - Fleet Pack 2 - Nairan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "void - fleet pack 2 - nairan"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "void - fleet pack 2 - nairan"
+      ],
+      "searchText": "nairan battlecruiser shield 2d/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/shields/pngs/nairan-battlecruiser-shield.png void - fleet pack 2 - nairan image nairan battlecruiser shield is an animated 2d image sample from void - fleet pack 2 - nairan. useful for player characters, npcs, animation prototyping. void - fleet pack 2 - nairan player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-2",
+      "path": "2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/shields/pngs/nairan-bomber-shield.png",
+      "src": "/2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/shields/pngs/nairan-bomber-shield.png",
+      "label": "Nairan Bomber Shield",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 640,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.025240384615384616,
+        "transparentCoverage": 0.953125,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nairan Bomber Shield is an animated 2D image sample from Void - Fleet Pack 2 - Nairan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "void - fleet pack 2 - nairan"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "void - fleet pack 2 - nairan"
+      ],
+      "searchText": "nairan bomber shield 2d/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/shields/pngs/nairan-bomber-shield.png void - fleet pack 2 - nairan image nairan bomber shield is an animated 2d image sample from void - fleet pack 2 - nairan. useful for player characters, npcs, animation prototyping. void - fleet pack 2 - nairan player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-2",
+      "path": "2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/shields/pngs/nairan-dreadnought-shield.png",
+      "src": "/2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/shields/pngs/nairan-dreadnought-shield.png",
+      "label": "Nairan Dreadnought Shield",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 1024,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.1201171875,
+        "transparentCoverage": 0.267578125,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nairan Dreadnought Shield is an animated 2D image sample from Void - Fleet Pack 2 - Nairan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "void - fleet pack 2 - nairan"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "void - fleet pack 2 - nairan"
+      ],
+      "searchText": "nairan dreadnought shield 2d/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/shields/pngs/nairan-dreadnought-shield.png void - fleet pack 2 - nairan image nairan dreadnought shield is an animated 2d image sample from void - fleet pack 2 - nairan. useful for player characters, npcs, animation prototyping. void - fleet pack 2 - nairan player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-2",
+      "path": "2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/shields/pngs/nairan-fighter-shield.png",
+      "src": "/2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/shields/pngs/nairan-fighter-shield.png",
+      "label": "Nairan Fighter Shield",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 1280,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.026442307692307692,
+        "transparentCoverage": 0.8677884615384616,
+        "contentRowRuns": 1,
+        "contentColRuns": 20,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nairan Fighter Shield is an animated 2D image sample from Void - Fleet Pack 2 - Nairan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "void - fleet pack 2 - nairan"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "void - fleet pack 2 - nairan"
+      ],
+      "searchText": "nairan fighter shield 2d/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/shields/pngs/nairan-fighter-shield.png void - fleet pack 2 - nairan image nairan fighter shield is an animated 2d image sample from void - fleet pack 2 - nairan. useful for player characters, npcs, animation prototyping. void - fleet pack 2 - nairan player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-2",
+      "path": "2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/shields/pngs/nairan-frigate-shield.png",
+      "src": "/2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/shields/pngs/nairan-frigate-shield.png",
+      "label": "Nairan Frigate Shield",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 512,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.115234375,
+        "transparentCoverage": 0.5498046875,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nairan Frigate Shield is an animated 2D image sample from Void - Fleet Pack 2 - Nairan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "void - fleet pack 2 - nairan"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "void - fleet pack 2 - nairan"
+      ],
+      "searchText": "nairan frigate shield 2d/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/shields/pngs/nairan-frigate-shield.png void - fleet pack 2 - nairan image nairan frigate shield is an animated 2d image sample from void - fleet pack 2 - nairan. useful for player characters, npcs, animation prototyping. void - fleet pack 2 - nairan player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-2",
+      "path": "2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/shields/pngs/nairan-scout-shield.png",
+      "src": "/2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/shields/pngs/nairan-scout-shield.png",
+      "label": "Nairan Scout Shield",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 1152,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.020089285714285716,
+        "transparentCoverage": 0.8861607142857143,
+        "contentRowRuns": 1,
+        "contentColRuns": 18,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nairan Scout Shield is an animated 2D image sample from Void - Fleet Pack 2 - Nairan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "void - fleet pack 2 - nairan"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "void - fleet pack 2 - nairan"
+      ],
+      "searchText": "nairan scout shield 2d/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/shields/pngs/nairan-scout-shield.png void - fleet pack 2 - nairan image nairan scout shield is an animated 2d image sample from void - fleet pack 2 - nairan. useful for player characters, npcs, animation prototyping. void - fleet pack 2 - nairan player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-2",
+      "path": "2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/shields/pngs/nairan-torpedo-ship-shield.png",
+      "src": "/2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/shields/pngs/nairan-torpedo-ship-shield.png",
+      "label": "Nairan Torpedo Ship Shield",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 512,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0230712890625,
+        "transparentCoverage": 0.9481201171875,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nairan Torpedo Ship Shield is an animated 2D image sample from Void - Fleet Pack 2 - Nairan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "sci-fi",
+        "vehicle"
+      ],
+      "searchText": "nairan torpedo ship shield 2d/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/shields/pngs/nairan-torpedo-ship-shield.png void - fleet pack 2 - nairan image nairan torpedo ship shield is an animated 2d image sample from void - fleet pack 2 - nairan. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-2",
+      "path": "2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/weapon-effects-projectiles/pngs/nairan-bolt.png",
+      "src": "/2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/weapon-effects-projectiles/pngs/nairan-bolt.png",
+      "label": "Nairan Bolt",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 45,
+        "height": 9,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.17037037037037037,
+        "transparentCoverage": 0.8296296296296296,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nairan Bolt is an animated 2D icon sample from Void - Fleet Pack 2 - Nairan. Useful for enemy variants, encounters, creature animation.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "void - fleet pack 2 - nairan"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "void - fleet pack 2 - nairan"
+      ],
+      "searchText": "nairan bolt 2d/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/weapon-effects-projectiles/pngs/nairan-bolt.png void - fleet pack 2 - nairan icon nairan bolt is an animated 2d icon sample from void - fleet pack 2 - nairan. useful for enemy variants, encounters, creature animation. void - fleet pack 2 - nairan enemy variants encounters creature animation 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-2",
+      "path": "2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/weapon-effects-projectiles/pngs/nairan-ray.png",
+      "src": "/2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/weapon-effects-projectiles/pngs/nairan-ray.png",
+      "label": "Nairan Ray",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 72,
+        "height": 38,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.3442982456140351,
+        "transparentCoverage": 0.6557017543859649,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nairan Ray is an animated 2D icon sample from Void - Fleet Pack 2 - Nairan. Useful for enemy variants, encounters, creature animation.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "void - fleet pack 2 - nairan"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "void - fleet pack 2 - nairan"
+      ],
+      "searchText": "nairan ray 2d/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/weapon-effects-projectiles/pngs/nairan-ray.png void - fleet pack 2 - nairan icon nairan ray is an animated 2d icon sample from void - fleet pack 2 - nairan. useful for enemy variants, encounters, creature animation. void - fleet pack 2 - nairan enemy variants encounters creature animation 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-2",
+      "path": "2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/weapon-effects-projectiles/pngs/nairan-rocket.png",
+      "src": "/2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/weapon-effects-projectiles/pngs/nairan-rocket.png",
+      "label": "Nairan Rocket",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 36,
+        "height": 16,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.21180555555555555,
+        "transparentCoverage": 0.7881944444444444,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nairan Rocket is an animated 2D icon sample from Void - Fleet Pack 2 - Nairan. Useful for enemy variants, encounters, creature animation.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "void - fleet pack 2 - nairan"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "void - fleet pack 2 - nairan"
+      ],
+      "searchText": "nairan rocket 2d/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/weapon-effects-projectiles/pngs/nairan-rocket.png void - fleet pack 2 - nairan icon nairan rocket is an animated 2d icon sample from void - fleet pack 2 - nairan. useful for enemy variants, encounters, creature animation. void - fleet pack 2 - nairan enemy variants encounters creature animation 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-2",
+      "path": "2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/weapon-effects-projectiles/pngs/nairan-torpedo.png",
+      "src": "/2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/weapon-effects-projectiles/pngs/nairan-torpedo.png",
+      "label": "Nairan Torpedo",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 27,
+        "height": 24,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.3194444444444444,
+        "transparentCoverage": 0.6805555555555556,
+        "contentRowRuns": 1,
+        "contentColRuns": 3,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nairan Torpedo is an animated 2D icon sample from Void - Fleet Pack 2 - Nairan. Useful for enemy variants, encounters, creature animation.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "void - fleet pack 2 - nairan"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "void - fleet pack 2 - nairan"
+      ],
+      "searchText": "nairan torpedo 2d/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/weapon-effects-projectiles/pngs/nairan-torpedo.png void - fleet pack 2 - nairan icon nairan torpedo is an animated 2d icon sample from void - fleet pack 2 - nairan. useful for enemy variants, encounters, creature animation. void - fleet pack 2 - nairan enemy variants encounters creature animation 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-2",
+      "path": "2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/weapons/pngs/nairan-battlecruiser-weapons.png",
+      "src": "/2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/weapons/pngs/nairan-battlecruiser-weapons.png",
+      "label": "Nairan Battlecruiser Weapons",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 1152,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.24386160714285715,
+        "transparentCoverage": 0.7561383928571429,
+        "contentRowRuns": 1,
+        "contentColRuns": 9,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nairan Battlecruiser Weapons is an animated 2D icon sample from Void - Fleet Pack 2 - Nairan. Useful for enemy variants, encounters, creature animation.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "void - fleet pack 2 - nairan"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "void - fleet pack 2 - nairan"
+      ],
+      "searchText": "nairan battlecruiser weapons 2d/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/weapons/pngs/nairan-battlecruiser-weapons.png void - fleet pack 2 - nairan icon nairan battlecruiser weapons is an animated 2d icon sample from void - fleet pack 2 - nairan. useful for enemy variants, encounters, creature animation. void - fleet pack 2 - nairan enemy variants encounters creature animation 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-2",
+      "path": "2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/weapons/pngs/nairan-dreadnought-weapons.png",
+      "src": "/2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/weapons/pngs/nairan-dreadnought-weapons.png",
+      "label": "Nairan Dreadnought Weapons",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 4352,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.3046875,
+        "transparentCoverage": 0.6953125,
+        "contentRowRuns": 1,
+        "contentColRuns": 34,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nairan Dreadnought Weapons is an animated 2D icon sample from Void - Fleet Pack 2 - Nairan. Useful for enemy variants, encounters, creature animation.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "void - fleet pack 2 - nairan"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "void - fleet pack 2 - nairan"
+      ],
+      "searchText": "nairan dreadnought weapons 2d/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/weapons/pngs/nairan-dreadnought-weapons.png void - fleet pack 2 - nairan icon nairan dreadnought weapons is an animated 2d icon sample from void - fleet pack 2 - nairan. useful for enemy variants, encounters, creature animation. void - fleet pack 2 - nairan enemy variants encounters creature animation 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-2",
+      "path": "2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/weapons/pngs/nairan-fighter-weapons.png",
+      "src": "/2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/weapons/pngs/nairan-fighter-weapons.png",
+      "label": "Nairan Fighter Weapons",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 1792,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.11979166666666667,
+        "transparentCoverage": 0.8802083333333334,
+        "contentRowRuns": 1,
+        "contentColRuns": 28,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nairan Fighter Weapons is an animated 2D icon sample from Void - Fleet Pack 2 - Nairan. Useful for enemy variants, encounters, creature animation.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "void - fleet pack 2 - nairan"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "void - fleet pack 2 - nairan"
+      ],
+      "searchText": "nairan fighter weapons 2d/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/weapons/pngs/nairan-fighter-weapons.png void - fleet pack 2 - nairan icon nairan fighter weapons is an animated 2d icon sample from void - fleet pack 2 - nairan. useful for enemy variants, encounters, creature animation. void - fleet pack 2 - nairan enemy variants encounters creature animation 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-2",
+      "path": "2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/weapons/pngs/nairan-frigate-weapons.png",
+      "src": "/2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/weapons/pngs/nairan-frigate-weapons.png",
+      "label": "Nairan Frigate Weapons",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 320,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.2735140931372549,
+        "transparentCoverage": 0.7264859068627451,
+        "contentRowRuns": 1,
+        "contentColRuns": 5,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nairan Frigate Weapons is an animated 2D icon sample from Void - Fleet Pack 2 - Nairan. Useful for enemy variants, encounters, creature animation.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "void - fleet pack 2 - nairan"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "void - fleet pack 2 - nairan"
+      ],
+      "searchText": "nairan frigate weapons 2d/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/weapons/pngs/nairan-frigate-weapons.png void - fleet pack 2 - nairan icon nairan frigate weapons is an animated 2d icon sample from void - fleet pack 2 - nairan. useful for enemy variants, encounters, creature animation. void - fleet pack 2 - nairan enemy variants encounters creature animation 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-2",
+      "path": "2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/weapons/pngs/nairan-scout-weapons.png",
+      "src": "/2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/weapons/pngs/nairan-scout-weapons.png",
+      "label": "Nairan Scout Weapons",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 384,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.08984375,
+        "transparentCoverage": 0.91015625,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nairan Scout Weapons is an animated 2D icon sample from Void - Fleet Pack 2 - Nairan. Useful for enemy variants, encounters, creature animation.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "void - fleet pack 2 - nairan"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "void - fleet pack 2 - nairan"
+      ],
+      "searchText": "nairan scout weapons 2d/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/weapons/pngs/nairan-scout-weapons.png void - fleet pack 2 - nairan icon nairan scout weapons is an animated 2d icon sample from void - fleet pack 2 - nairan. useful for enemy variants, encounters, creature animation. void - fleet pack 2 - nairan enemy variants encounters creature animation 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-2",
+      "path": "2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/weapons/pngs/nairan-torpedo-ship-weapons.png",
+      "src": "/2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/weapons/pngs/nairan-torpedo-ship-weapons.png",
+      "label": "Nairan Torpedo Ship Weapons",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 768,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.1793154761904762,
+        "transparentCoverage": 0.8206845238095238,
+        "contentRowRuns": 1,
+        "contentColRuns": 12,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nairan Torpedo Ship Weapons is an animated 2D icon sample from Void - Fleet Pack 2 - Nairan. Useful for enemy variants, encounters, creature animation.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "sci-fi"
+      ],
+      "useCases": [
+        "enemy variants",
+        "encounters",
+        "creature animation"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "sci-fi",
+        "vehicle"
+      ],
+      "searchText": "nairan torpedo ship weapons 2d/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/weapons/pngs/nairan-torpedo-ship-weapons.png void - fleet pack 2 - nairan icon nairan torpedo ship weapons is an animated 2d icon sample from void - fleet pack 2 - nairan. useful for enemy variants, encounters, creature animation. sci-fi enemy variants encounters creature animation 2d animated art vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-2",
+      "path": "2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/designs-base/pngs/nairan-battlecruiser-base.png",
+      "src": "/2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/designs-base/pngs/nairan-battlecruiser-base.png",
+      "label": "Nairan Battlecruiser Base",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 128,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.236572265625,
+        "transparentCoverage": 0.763427734375,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nairan Battlecruiser Base is a static 2D image sample from Void - Fleet Pack 2 - Nairan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "void - fleet pack 2 - nairan"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "image",
+        "static",
+        "void - fleet pack 2 - nairan"
+      ],
+      "searchText": "nairan battlecruiser base 2d/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/designs-base/pngs/nairan-battlecruiser-base.png void - fleet pack 2 - nairan image nairan battlecruiser base is a static 2d image sample from void - fleet pack 2 - nairan. useful for player characters, npcs, animation prototyping. void - fleet pack 2 - nairan player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-2",
+      "path": "2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/designs-base/pngs/nairan-bomber-base.png",
+      "src": "/2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/designs-base/pngs/nairan-bomber-base.png",
+      "label": "Nairan Bomber Base",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 64,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.1552734375,
+        "transparentCoverage": 0.8447265625,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nairan Bomber Base is a static 2D image sample from Void - Fleet Pack 2 - Nairan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "void - fleet pack 2 - nairan"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "image",
+        "static",
+        "void - fleet pack 2 - nairan"
+      ],
+      "searchText": "nairan bomber base 2d/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/designs-base/pngs/nairan-bomber-base.png void - fleet pack 2 - nairan image nairan bomber base is a static 2d image sample from void - fleet pack 2 - nairan. useful for player characters, npcs, animation prototyping. void - fleet pack 2 - nairan player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-2",
+      "path": "2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/designs-base/pngs/nairan-dreadnought-base.png",
+      "src": "/2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/designs-base/pngs/nairan-dreadnought-base.png",
+      "label": "Nairan Dreadnought Base",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 128,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.3359375,
+        "transparentCoverage": 0.6640625,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nairan Dreadnought Base is a static 2D image sample from Void - Fleet Pack 2 - Nairan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "void - fleet pack 2 - nairan"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "image",
+        "static",
+        "void - fleet pack 2 - nairan"
+      ],
+      "searchText": "nairan dreadnought base 2d/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/designs-base/pngs/nairan-dreadnought-base.png void - fleet pack 2 - nairan image nairan dreadnought base is a static 2d image sample from void - fleet pack 2 - nairan. useful for player characters, npcs, animation prototyping. void - fleet pack 2 - nairan player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-2",
+      "path": "2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/designs-base/pngs/nairan-fighter-base.png",
+      "src": "/2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/designs-base/pngs/nairan-fighter-base.png",
+      "label": "Nairan Fighter Base",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 64,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.10693359375,
+        "transparentCoverage": 0.89306640625,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nairan Fighter Base is a static 2D image sample from Void - Fleet Pack 2 - Nairan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "void - fleet pack 2 - nairan"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "image",
+        "static",
+        "void - fleet pack 2 - nairan"
+      ],
+      "searchText": "nairan fighter base 2d/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/designs-base/pngs/nairan-fighter-base.png void - fleet pack 2 - nairan image nairan fighter base is a static 2d image sample from void - fleet pack 2 - nairan. useful for player characters, npcs, animation prototyping. void - fleet pack 2 - nairan player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-2",
+      "path": "2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/designs-base/pngs/nairan-frigate-base.png",
+      "src": "/2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/designs-base/pngs/nairan-frigate-base.png",
+      "label": "Nairan Frigate Base",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 64,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.27001953125,
+        "transparentCoverage": 0.72998046875,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nairan Frigate Base is a static 2D image sample from Void - Fleet Pack 2 - Nairan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "void - fleet pack 2 - nairan"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "image",
+        "static",
+        "void - fleet pack 2 - nairan"
+      ],
+      "searchText": "nairan frigate base 2d/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/designs-base/pngs/nairan-frigate-base.png void - fleet pack 2 - nairan image nairan frigate base is a static 2d image sample from void - fleet pack 2 - nairan. useful for player characters, npcs, animation prototyping. void - fleet pack 2 - nairan player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-2",
+      "path": "2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/designs-base/pngs/nairan-scout-base.png",
+      "src": "/2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/designs-base/pngs/nairan-scout-base.png",
+      "label": "Nairan Scout Base",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 64,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.09228515625,
+        "transparentCoverage": 0.90771484375,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nairan Scout Base is a static 2D image sample from Void - Fleet Pack 2 - Nairan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "void - fleet pack 2 - nairan"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "image",
+        "static",
+        "void - fleet pack 2 - nairan"
+      ],
+      "searchText": "nairan scout base 2d/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/designs-base/pngs/nairan-scout-base.png void - fleet pack 2 - nairan image nairan scout base is a static 2d image sample from void - fleet pack 2 - nairan. useful for player characters, npcs, animation prototyping. void - fleet pack 2 - nairan player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-2",
+      "path": "2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/designs-base/pngs/nairan-support-ship-base.png",
+      "src": "/2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/designs-base/pngs/nairan-support-ship-base.png",
+      "label": "Nairan Support Ship Base",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 64,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.130859375,
+        "transparentCoverage": 0.869140625,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nairan Support Ship Base is a static 2D image sample from Void - Fleet Pack 2 - Nairan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "image",
+        "sci-fi",
+        "static",
+        "vehicle"
+      ],
+      "searchText": "nairan support ship base 2d/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/designs-base/pngs/nairan-support-ship-base.png void - fleet pack 2 - nairan image nairan support ship base is a static 2d image sample from void - fleet pack 2 - nairan. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d art static vehicle"
+    },
+    {
+      "packFolder": "foozlecc-void-fleet-pack-2",
+      "path": "2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/designs-base/pngs/nairan-torpedo-ship-base.png",
+      "src": "/2D/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/designs-base/pngs/nairan-torpedo-ship-base.png",
+      "label": "Nairan Torpedo Ship Base",
+      "kind": "image",
+      "animated": false,
+      "inspection": {
+        "width": 64,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.13916015625,
+        "transparentCoverage": 0.86083984375,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nairan Torpedo Ship Base is a static 2D image sample from Void - Fleet Pack 2 - Nairan. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "image",
+        "sci-fi",
+        "static",
+        "vehicle"
+      ],
+      "searchText": "nairan torpedo ship base 2d/foozlecc-void-fleet-pack-2/extracted/foozle-2ds0013-void-fleetpack-2/foozle-2ds0013-void-enemyfleet-2/nairan/designs-base/pngs/nairan-torpedo-ship-base.png void - fleet pack 2 - nairan image nairan torpedo ship base is a static 2d image sample from void - fleet pack 2 - nairan. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d art static vehicle"
+    }
+  ]
+}

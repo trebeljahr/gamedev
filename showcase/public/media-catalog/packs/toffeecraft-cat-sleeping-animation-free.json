@@ -1,0 +1,236 @@
+{
+  "folder": "toffeecraft-cat-sleeping-animation-free",
+  "title": "Cat Sleeping Animation FREE",
+  "author": "ToffeeCraft",
+  "author_url": "https://toffeecraft.itch.io",
+  "url": "https://toffeecraft.itch.io/cat-sleeping-animation-free",
+  "game_id": 3744758,
+  "license_class": "Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms)",
+  "attribution": "Appreciated / not required",
+  "theme": "Animals",
+  "description": "Cat Sleeping Animation Free is a 2D animals art pack by ToffeeCraft. Use it for enemy variants, encounters, creature animation. License: Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). Attribution: Appreciated / not required.",
+  "category": "Animals",
+  "themes": [
+    "animals",
+    "nature",
+    "urban"
+  ],
+  "useCases": [
+    "enemy variants",
+    "encounters",
+    "creature animation"
+  ],
+  "tags": [
+    "2d",
+    "animals",
+    "animated",
+    "art",
+    "nature",
+    "sprite",
+    "urban"
+  ],
+  "searchText": "cat sleeping animation free toffeecraft-cat-sleeping-animation-free toffeecraft animals free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms) appreciated / not required cat sleeping animation free is a 2d animals art pack by toffeecraft. use it for enemy variants, encounters, creature animation. license: free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). attribution: appreciated / not required. animals nature urban enemy variants encounters creature animation 2d animated art sprite",
+  "sampleCount": 5,
+  "samples": [
+    {
+      "packFolder": "toffeecraft-cat-sleeping-animation-free",
+      "path": "2D/toffeecraft-cat-sleeping-animation-free/extracted/sleepingcatfree/sleepingcatfree/sleepingcat1.png",
+      "src": "/2D/toffeecraft-cat-sleeping-animation-free/extracted/sleepingcatfree/sleepingcatfree/sleepingcat1.png",
+      "label": "Sleepingcat1",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 384,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.2401889534883721,
+        "transparentCoverage": 0.7598110465116279,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Sleepingcat1 is an animated 2D character sample from Cat Sleeping Animation FREE. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "cat sleeping animation free",
+        "character"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "cat sleeping animation free",
+        "character"
+      ],
+      "searchText": "sleepingcat1 2d/toffeecraft-cat-sleeping-animation-free/extracted/sleepingcatfree/sleepingcatfree/sleepingcat1.png cat sleeping animation free character sleepingcat1 is an animated 2d character sample from cat sleeping animation free. useful for player characters, npcs, animation prototyping. cat sleeping animation free player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "toffeecraft-cat-sleeping-animation-free",
+      "path": "2D/toffeecraft-cat-sleeping-animation-free/extracted/sleepingcatfree/sleepingcatfree/sleepingcat2.png",
+      "src": "/2D/toffeecraft-cat-sleeping-animation-free/extracted/sleepingcatfree/sleepingcatfree/sleepingcat2.png",
+      "label": "Sleepingcat2",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 384,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.2401889534883721,
+        "transparentCoverage": 0.7598110465116279,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Sleepingcat2 is an animated 2D character sample from Cat Sleeping Animation FREE. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "cat sleeping animation free",
+        "character"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "cat sleeping animation free",
+        "character"
+      ],
+      "searchText": "sleepingcat2 2d/toffeecraft-cat-sleeping-animation-free/extracted/sleepingcatfree/sleepingcatfree/sleepingcat2.png cat sleeping animation free character sleepingcat2 is an animated 2d character sample from cat sleeping animation free. useful for player characters, npcs, animation prototyping. cat sleeping animation free player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "toffeecraft-cat-sleeping-animation-free",
+      "path": "2D/toffeecraft-cat-sleeping-animation-free/extracted/sleepingcatfree/sleepingcatfree/sleepingcat3.png",
+      "src": "/2D/toffeecraft-cat-sleeping-animation-free/extracted/sleepingcatfree/sleepingcatfree/sleepingcat3.png",
+      "label": "Sleepingcat3",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 384,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.2401889534883721,
+        "transparentCoverage": 0.7598110465116279,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Sleepingcat3 is an animated 2D character sample from Cat Sleeping Animation FREE. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "cat sleeping animation free",
+        "character"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "cat sleeping animation free",
+        "character"
+      ],
+      "searchText": "sleepingcat3 2d/toffeecraft-cat-sleeping-animation-free/extracted/sleepingcatfree/sleepingcatfree/sleepingcat3.png cat sleeping animation free character sleepingcat3 is an animated 2d character sample from cat sleeping animation free. useful for player characters, npcs, animation prototyping. cat sleeping animation free player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "toffeecraft-cat-sleeping-animation-free",
+      "path": "2D/toffeecraft-cat-sleeping-animation-free/extracted/sleepingcatfree/sleepingcatfree/sleepingcat4.png",
+      "src": "/2D/toffeecraft-cat-sleeping-animation-free/extracted/sleepingcatfree/sleepingcatfree/sleepingcat4.png",
+      "label": "Sleepingcat4",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 384,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.2401889534883721,
+        "transparentCoverage": 0.7598110465116279,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Sleepingcat4 is an animated 2D character sample from Cat Sleeping Animation FREE. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "cat sleeping animation free",
+        "character"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "cat sleeping animation free",
+        "character"
+      ],
+      "searchText": "sleepingcat4 2d/toffeecraft-cat-sleeping-animation-free/extracted/sleepingcatfree/sleepingcatfree/sleepingcat4.png cat sleeping animation free character sleepingcat4 is an animated 2d character sample from cat sleeping animation free. useful for player characters, npcs, animation prototyping. cat sleeping animation free player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "toffeecraft-cat-sleeping-animation-free",
+      "path": "2D/toffeecraft-cat-sleeping-animation-free/extracted/sleepingcatfree/sleepingcatfree/sleepingcat5.png",
+      "src": "/2D/toffeecraft-cat-sleeping-animation-free/extracted/sleepingcatfree/sleepingcatfree/sleepingcat5.png",
+      "label": "Sleepingcat5",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 384,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.2401889534883721,
+        "transparentCoverage": 0.7598110465116279,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Sleepingcat5 is an animated 2D character sample from Cat Sleeping Animation FREE. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "cat sleeping animation free",
+        "character"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "cat sleeping animation free",
+        "character"
+      ],
+      "searchText": "sleepingcat5 2d/toffeecraft-cat-sleeping-animation-free/extracted/sleepingcatfree/sleepingcatfree/sleepingcat5.png cat sleeping animation free character sleepingcat5 is an animated 2d character sample from cat sleeping animation free. useful for player characters, npcs, animation prototyping. cat sleeping animation free player characters npcs animation prototyping 2d animated art"
+    }
+  ]
+}

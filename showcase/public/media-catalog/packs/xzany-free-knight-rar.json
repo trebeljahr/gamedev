@@ -1,0 +1,323 @@
+{
+  "folder": "xzany-free-knight-rar",
+  "title": "Free Knight Rar",
+  "author": "xzany",
+  "author_url": "https://xzany.itch.io",
+  "url": "https://xzany.itch.io/free-knight-2d-pixel-art",
+  "game_id": null,
+  "license_class": "Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms)",
+  "attribution": "Appreciated / not required",
+  "theme": "Characters",
+  "description": "Free Knight Rar is a 2D characters art pack by xzany. Use it for player characters, NPCs, animation prototyping. License: Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). Attribution: Appreciated / not required.",
+  "category": "Characters",
+  "themes": [
+    "characters",
+    "fantasy",
+    "urban"
+  ],
+  "useCases": [
+    "player characters",
+    "NPCs",
+    "animation prototyping"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "characters",
+    "fantasy",
+    "medieval",
+    "sprite",
+    "urban"
+  ],
+  "searchText": "free knight rar xzany-free-knight-rar xzany characters free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms) appreciated / not required free knight rar is a 2d characters art pack by xzany. use it for player characters, npcs, animation prototyping. license: free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). attribution: appreciated / not required. characters fantasy urban player characters npcs animation prototyping 2d art medieval sprite",
+  "sampleCount": 7,
+  "samples": [
+    {
+      "packFolder": "xzany-free-knight-rar",
+      "path": "2D/xzany-free-knight-rar/extracted/knight/knight/nobkg-knightattack-strip.png",
+      "src": "/2D/xzany-free-knight-rar/extracted/knight/knight/nobkg-knightattack-strip.png",
+      "label": "Nobkg Knightattack Strip",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 3168,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.03125,
+        "transparentCoverage": 0.96875,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nobkg Knightattack Strip is an animated 2D character sample from Free Knight Rar. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "nobkg knightattack strip 2d/xzany-free-knight-rar/extracted/knight/knight/nobkg-knightattack-strip.png free knight rar character nobkg knightattack strip is an animated 2d character sample from free knight rar. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "xzany-free-knight-rar",
+      "path": "2D/xzany-free-knight-rar/extracted/knight/knight/nobkg-knightdeath-strip.png",
+      "src": "/2D/xzany-free-knight-rar/extracted/knight/knight/nobkg-knightdeath-strip.png",
+      "label": "Nobkg Knightdeath Strip",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 1440,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.049005681818181816,
+        "transparentCoverage": 0.9509943181818182,
+        "contentRowRuns": 1,
+        "contentColRuns": 15,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nobkg Knightdeath Strip is an animated 2D character sample from Free Knight Rar. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "nobkg knightdeath strip 2d/xzany-free-knight-rar/extracted/knight/knight/nobkg-knightdeath-strip.png free knight rar character nobkg knightdeath strip is an animated 2d character sample from free knight rar. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "xzany-free-knight-rar",
+      "path": "2D/xzany-free-knight-rar/extracted/knight/knight/nobkg-knightidle-strip.png",
+      "src": "/2D/xzany-free-knight-rar/extracted/knight/knight/nobkg-knightidle-strip.png",
+      "label": "Nobkg Knightidle Strip",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 960,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.09237132352941177,
+        "transparentCoverage": 0.9076286764705882,
+        "contentRowRuns": 1,
+        "contentColRuns": 15,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nobkg Knightidle Strip is an animated 2D character sample from Free Knight Rar. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "nobkg knightidle strip 2d/xzany-free-knight-rar/extracted/knight/knight/nobkg-knightidle-strip.png free knight rar character nobkg knightidle strip is an animated 2d character sample from free knight rar. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "xzany-free-knight-rar",
+      "path": "2D/xzany-free-knight-rar/extracted/knight/knight/nobkg-knightjumpandfall-strip.png",
+      "src": "/2D/xzany-free-knight-rar/extracted/knight/knight/nobkg-knightjumpandfall-strip.png",
+      "label": "Nobkg Knightjumpandfall Strip",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 2160,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.02783203125,
+        "transparentCoverage": 0.97216796875,
+        "contentRowRuns": 1,
+        "contentColRuns": 13,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nobkg Knightjumpandfall Strip is an animated 2D character sample from Free Knight Rar. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "nobkg knightjumpandfall strip 2d/xzany-free-knight-rar/extracted/knight/knight/nobkg-knightjumpandfall-strip.png free knight rar character nobkg knightjumpandfall strip is an animated 2d character sample from free knight rar. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "xzany-free-knight-rar",
+      "path": "2D/xzany-free-knight-rar/extracted/knight/knight/nobkg-knightroll-strip.png",
+      "src": "/2D/xzany-free-knight-rar/extracted/knight/knight/nobkg-knightroll-strip.png",
+      "label": "Nobkg Knightroll Strip",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 2700,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.017578125,
+        "transparentCoverage": 0.982421875,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nobkg Knightroll Strip is an animated 2D character sample from Free Knight Rar. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "nobkg knightroll strip 2d/xzany-free-knight-rar/extracted/knight/knight/nobkg-knightroll-strip.png free knight rar character nobkg knightroll strip is an animated 2d character sample from free knight rar. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "xzany-free-knight-rar",
+      "path": "2D/xzany-free-knight-rar/extracted/knight/knight/nobkg-knightrun-strip.png",
+      "src": "/2D/xzany-free-knight-rar/extracted/knight/knight/nobkg-knightrun-strip.png",
+      "label": "Nobkg Knightrun Strip",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 768,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.043712797619047616,
+        "transparentCoverage": 0.9562872023809523,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nobkg Knightrun Strip is an animated 2D character sample from Free Knight Rar. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "nobkg knightrun strip 2d/xzany-free-knight-rar/extracted/knight/knight/nobkg-knightrun-strip.png free knight rar character nobkg knightrun strip is an animated 2d character sample from free knight rar. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "xzany-free-knight-rar",
+      "path": "2D/xzany-free-knight-rar/extracted/knight/knight/nobkg-knightshield-strip.png",
+      "src": "/2D/xzany-free-knight-rar/extracted/knight/knight/nobkg-knightshield-strip.png",
+      "label": "Nobkg Knightshield Strip",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 672,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0615234375,
+        "transparentCoverage": 0.9384765625,
+        "contentRowRuns": 1,
+        "contentColRuns": 7,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Nobkg Knightshield Strip is an animated 2D character sample from Free Knight Rar. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "nobkg knightshield strip 2d/xzany-free-knight-rar/extracted/knight/knight/nobkg-knightshield-strip.png free knight rar character nobkg knightshield strip is an animated 2d character sample from free knight rar. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-import { readFile, writeFile } from "node:fs/promises";
+import { mkdir, readFile, readdir, rm, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import {
   buildArtPackMetadata,
@@ -8,6 +8,7 @@ import {
   buildSoundSampleMetadata,
   buildSourceMappingMetadata,
 } from "../src/lib/catalog-metadata";
+import { isLikelyMarketingPreviewPath, isLikelyPromoArt } from "../src/lib/media-inference";
 
 type MetadataMapping = {
   path_pattern: string;
@@ -61,6 +62,43 @@ type ArtSample = {
   animated: boolean;
   inspection?: ArtInspection;
   promo?: boolean;
+};
+
+type ArtSampleWithMeta = ArtSample & ReturnType<typeof buildArtSampleMetadata>;
+
+type ArtTheme =
+  | "Characters"
+  | "Enemies"
+  | "Effects"
+  | "Icons & Items"
+  | "Environments"
+  | "UI"
+  | "Vehicles & Sci-Fi"
+  | "Animals"
+  | "General";
+
+type ArtType = "ui-icons" | "spritesheets";
+type ArtSubject = "characters" | "environments" | "effects-items" | "other";
+type ArtMotion = "animated" | "static";
+
+type ArtPack = RawArtPack & ReturnType<typeof buildArtPackMetadata> & {
+  theme: ArtTheme;
+  sampleCount: number;
+  samples: ArtSampleWithMeta[];
+};
+
+type ArtPackSummary = Omit<ArtPack, "samples"> & {
+  artType: ArtType;
+  spriteSubject: ArtSubject;
+  spriteMotion: ArtMotion;
+  materialSampleCount: number;
+  preview?: {
+    path: string;
+    src: string;
+    label: string;
+    kind: ArtSample["kind"];
+    animated: boolean;
+  };
 };
 
 type SoundSample = {
@@ -118,9 +156,11 @@ type Metadata = {
 
 const repoRoot = join(__dirname, "..", "..");
 const metadataPath = join(repoRoot, "metadata.json");
-const mediaAssetsPath = join(__dirname, "..", "src", "lib", "media-assets.json");
-const audioAnalysisPath = join(__dirname, "..", "public", "audio-analysis.json");
-const outPath = join(__dirname, "..", "public", "media-catalog.json");
+const showcaseDir = join(__dirname, "..");
+const mediaAssetsPath = join(showcaseDir, "src", "lib", "media-assets.json");
+const audioAnalysisPath = join(showcaseDir, "public", "audio-analysis.json");
+const outPath = join(showcaseDir, "public", "media-catalog.json");
+const packsDir = join(showcaseDir, "public", "media-catalog", "packs");
 
 const NON_COMMERCIAL_ART_PACKS = new Set([
   "bdragon1727-fire-pixel-bullet-16x16",
@@ -232,7 +272,7 @@ function generatedKenneySoundMappings(mediaAssets: MediaAssets, existingPatterns
     }));
 }
 
-function artThemeFor(pack: RawArtPack) {
+function artThemeFor(pack: RawArtPack): ArtTheme {
   const text = tokenTextValue(`${pack.folder.replace(/^2D\/kenney\//i, "")} ${pack.title}`);
   if (hasToken(text, "icon|icons|item|items|coin|coins|chest|pickup|pickups|potion|potions|weapon|weapons|inventory|fable")) return "Icons & Items";
   if (hasToken(text, "effect|effects|fx|fire|smoke|bullet|bullets|spell|spells|magic|explosion|explosions|slash|slashes|particle|particles")) return "Effects";
@@ -282,6 +322,106 @@ function userCollectionNotes(collectionId: string): string {
   return `${title} is a user-curated, mixed-source sound-effects folder. Individual files may come from Freesound, Pixabay, or other mapped sources; match files against source mappings before shipping.`;
 }
 
+// Replaces "/" with "__" so a folder like "2D/kenney/input-prompts" maps to a
+// filesystem-safe filename "2D__kenney__input-prompts.json".
+export function packFileSlug(folder: string): string {
+  return folder.replace(/\//g, "__");
+}
+
+function materialSamplesIn(samples: ArtSampleWithMeta[]): ArtSampleWithMeta[] {
+  const filtered = samples.filter(
+    (sample) =>
+      !sample.promo &&
+      !sample.inspection?.promoBackground &&
+      !isLikelyPromoArt(sample.path, sample.inspection),
+  );
+  if (filtered.length > 0) return filtered;
+  const lighter = samples.filter((sample) => !isLikelyMarketingPreviewPath(sample.path));
+  return lighter.length > 0 ? lighter : samples;
+}
+
+function previewSampleIn(samples: ArtSampleWithMeta[]): ArtSampleWithMeta | undefined {
+  return (
+    samples.find((sample) => sample.kind === "icon" || sample.kind === "ui") ??
+    samples.find((sample) => sample.kind === "character" || sample.kind === "sprite") ??
+    samples.find((sample) => sample.kind === "tile" || sample.kind === "effect") ??
+    samples[0]
+  );
+}
+
+function artTypeIn(pack: ArtPack, samples: ArtSampleWithMeta[]): ArtType {
+  const sampleKinds = new Set(samples.map((sample) => sample.kind));
+  const uiOrIcons = pack.theme === "UI" || pack.theme === "Icons & Items";
+  if (uiOrIcons || (sampleKinds.size > 0 && [...sampleKinds].every((kind) => kind === "ui" || kind === "icon"))) {
+    return "ui-icons";
+  }
+  return "spritesheets";
+}
+
+const SUBJECT_CHARACTERS_RE =
+  /(character|characters|enemy|enemies|animal|creature|hero|knight|warrior|mage|archer|monster|dino)/;
+const SUBJECT_ENVIRONMENTS_RE =
+  /(environment|environments|tile|tileset|terrain|forest|dungeon|platform|ground|wall|props|nature|town)/;
+const SUBJECT_EFFECTS_RE = /(effect|fx|icon|item|inventory|weapon|coin|pickup|potion|spell|magic)/;
+
+function spriteSubjectIn(pack: ArtPack, samples: ArtSampleWithMeta[]): ArtSubject {
+  const parts = [pack.theme, pack.title, pack.folder, pack.tags.join(" ")];
+  for (const sample of samples) {
+    parts.push(sample.kind, sample.path);
+  }
+  const text = parts.join(" ").toLowerCase();
+  if (SUBJECT_CHARACTERS_RE.test(text)) return "characters";
+  if (SUBJECT_ENVIRONMENTS_RE.test(text)) return "environments";
+  if (SUBJECT_EFFECTS_RE.test(text)) return "effects-items";
+  return "other";
+}
+
+function spriteMotionIn(samples: ArtSampleWithMeta[]): ArtMotion {
+  return samples.some((sample) => sample.animated) ? "animated" : "static";
+}
+
+function summarizeArtPack(pack: ArtPack): ArtPackSummary {
+  const materialSamples = materialSamplesIn(pack.samples);
+  const preview = previewSampleIn(materialSamples);
+  const slim: Omit<ArtPack, "samples"> & Partial<Pick<ArtPack, "samples">> = { ...pack };
+  delete slim.samples;
+  return {
+    ...(slim as Omit<ArtPack, "samples">),
+    artType: artTypeIn(pack, materialSamples),
+    spriteSubject: spriteSubjectIn(pack, materialSamples),
+    spriteMotion: spriteMotionIn(materialSamples),
+    materialSampleCount: materialSamples.length,
+    preview: preview
+      ? {
+          path: preview.path,
+          src: preview.src,
+          label: preview.label,
+          kind: preview.kind,
+          animated: preview.animated,
+        }
+      : undefined,
+  };
+}
+
+async function writeJson(path: string, data: unknown): Promise<void> {
+  await writeFile(path, `${JSON.stringify(data, null, 2)}\n`);
+}
+
+async function pruneStalePackFiles(keepFolders: Set<string>): Promise<void> {
+  let entries: string[] = [];
+  try {
+    entries = await readdir(packsDir);
+  } catch {
+    return;
+  }
+  const expected = new Set([...keepFolders].map((folder) => `${packFileSlug(folder)}.json`));
+  await Promise.all(
+    entries
+      .filter((name) => name.endsWith(".json") && !expected.has(name))
+      .map((name) => rm(join(packsDir, name), { force: true })),
+  );
+}
+
 async function main() {
   const metadata = JSON.parse(await readFile(metadataPath, "utf8")) as Metadata;
   const mediaAssets = JSON.parse(await readFile(mediaAssetsPath, "utf8")) as MediaAssets;
@@ -307,7 +447,7 @@ async function main() {
   const allowedArtPacks = [...metadata["2d_packs"].packs, ...generatedKenneyPacks].filter((pack) => !isNonCommercialPack(pack));
   const allowedArtPackFolders = new Set(allowedArtPacks.map((pack) => pack.folder));
 
-  const artPacks = allowedArtPacks.map((pack) => {
+  const artPacks: ArtPack[] = allowedArtPacks.map((pack) => {
     const normalizedPack = {
       ...pack,
       author: pack.author.trim(),
@@ -318,7 +458,7 @@ async function main() {
     const nonPromoSamples = packSamples.filter((sample) => !sample.promo);
     // Keep promos only when the pack has *nothing else* — better than an empty pack.
     const visibleSamples = nonPromoSamples.length > 0 ? nonPromoSamples : packSamples;
-    const samples = visibleSamples.map((sample) => ({
+    const samples: ArtSampleWithMeta[] = visibleSamples.map((sample) => ({
       ...sample,
       ...buildArtSampleMetadata({
         packTitle: normalizedPack.title,
@@ -574,9 +714,11 @@ async function main() {
     ...buildSourceMappingMetadata(entry),
   }));
 
+  const artPackSummaries: ArtPackSummary[] = artPacks.map(summarizeArtPack);
+
   const catalog = {
     description:
-      "Search-ready metadata for non-3D-library assets. Generated from metadata.json plus media-assets.json; agents can use this to choose 2D art, sound effects, music, textures, and source path groups without opening or listening to files.",
+      "Search-ready metadata for non-3D-library assets. Generated from metadata.json plus media-assets.json; agents can use this to choose 2D art, sound effects, music, textures, and source path groups without opening or listening to files. Per-pack art samples live under public/media-catalog/packs/<folder>.json — fetch them on demand instead of loading the full catalog.",
     stats: {
       artPackCount: artPacks.length,
       artSampleCount: mediaAssets.artSamples.filter((sample) => allowedArtPackFolders.has(sample.packFolder)).length,
@@ -591,16 +733,20 @@ async function main() {
         return counts;
       }, {}),
     },
-    artPacks,
+    artPacks: artPackSummaries,
     soundCollections,
     musicTracks,
     sourceMappings,
     sources: metadata.sources,
   };
 
-  await writeFile(outPath, `${JSON.stringify(catalog, null, 2)}\n`);
+  await mkdir(packsDir, { recursive: true });
+  await pruneStalePackFiles(new Set(artPacks.map((pack) => pack.folder)));
+  await Promise.all(artPacks.map((pack) => writeJson(join(packsDir, `${packFileSlug(pack.folder)}.json`), pack)));
+
+  await writeJson(outPath, catalog);
   console.log(
-    `[media-catalog] ${artPacks.length} art packs · ${soundCollections.length} sound groups · ${musicTracks.length} music tracks · ${sourceMappings.length} path mappings`,
+    `[media-catalog] ${artPacks.length} art packs (${artPacks.length} per-pack files) · ${soundCollections.length} sound groups · ${musicTracks.length} music tracks · ${sourceMappings.length} path mappings`,
   );
 }
 

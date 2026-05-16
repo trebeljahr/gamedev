@@ -1,0 +1,407 @@
+{
+  "folder": "darkpixel-kronovi-undead-executioner",
+  "title": "Undead Executioner",
+  "author": "darkpixel-kronovi",
+  "author_url": "https://darkpixel-kronovi.itch.io",
+  "url": null,
+  "game_id": null,
+  "license_class": "Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms)",
+  "attribution": "Appreciated / not required",
+  "theme": "Enemies",
+  "description": "Undead Executioner is a 2D enemies art pack by darkpixel-kronovi. Use it for enemy variants, encounters, creature animation. License: Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). Attribution: Appreciated / not required.",
+  "category": "Enemies",
+  "themes": [
+    "enemies",
+    "urban"
+  ],
+  "useCases": [
+    "enemy variants",
+    "encounters",
+    "creature animation"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "enemies",
+    "sprite",
+    "urban"
+  ],
+  "searchText": "undead executioner darkpixel-kronovi-undead-executioner darkpixel-kronovi enemies free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms) appreciated / not required undead executioner is a 2d enemies art pack by darkpixel-kronovi. use it for enemy variants, encounters, creature animation. license: free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). attribution: appreciated / not required. enemies urban enemy variants encounters creature animation 2d art sprite",
+  "sampleCount": 9,
+  "samples": [
+    {
+      "packFolder": "darkpixel-kronovi-undead-executioner",
+      "path": "2D/darkpixel-kronovi-undead-executioner/extracted/undead-executioner/undead-executioner-puppet/png/summon.png",
+      "src": "/2D/darkpixel-kronovi-undead-executioner/extracted/undead-executioner/undead-executioner-puppet/png/summon.png",
+      "label": "Summon",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 400,
+        "height": 200,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.050537109375,
+        "transparentCoverage": 0.949462890625,
+        "contentRowRuns": 2,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": true,
+        "cellMedianWidth": 32,
+        "cellMedianHeight": 45
+      },
+      "promo": false,
+      "description": "Summon is an animated 2D image sample from Undead Executioner. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "undead executioner"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "undead executioner"
+      ],
+      "searchText": "summon 2d/darkpixel-kronovi-undead-executioner/extracted/undead-executioner/undead-executioner-puppet/png/summon.png undead executioner image summon is an animated 2d image sample from undead executioner. useful for player characters, npcs, animation prototyping. undead executioner player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "darkpixel-kronovi-undead-executioner",
+      "path": "2D/darkpixel-kronovi-undead-executioner/extracted/undead-executioner/undead-executioner-puppet/png/death.png",
+      "src": "/2D/darkpixel-kronovi-undead-executioner/extracted/undead-executioner/undead-executioner-puppet/png/death.png",
+      "label": "Death",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 1000,
+        "height": 200,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.03163296568627451,
+        "transparentCoverage": 0.9683670343137255,
+        "contentRowRuns": 2,
+        "contentColRuns": 11,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 7,
+        "cellMedianHeight": 10
+      },
+      "promo": false,
+      "description": "Death is an animated 2D image sample from Undead Executioner. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "undead executioner"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "undead executioner"
+      ],
+      "searchText": "death 2d/darkpixel-kronovi-undead-executioner/extracted/undead-executioner/undead-executioner-puppet/png/death.png undead executioner image death is an animated 2d image sample from undead executioner. useful for player characters, npcs, animation prototyping. undead executioner player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "darkpixel-kronovi-undead-executioner",
+      "path": "2D/darkpixel-kronovi-undead-executioner/extracted/undead-executioner/undead-executioner-puppet/png/idle.png",
+      "src": "/2D/darkpixel-kronovi-undead-executioner/extracted/undead-executioner/undead-executioner-puppet/png/idle.png",
+      "label": "Idle",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 500,
+        "height": 100,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.061197916666666664,
+        "transparentCoverage": 0.9388020833333334,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Idle is an animated 2D image sample from Undead Executioner. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "undead executioner"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "undead executioner"
+      ],
+      "searchText": "idle 2d/darkpixel-kronovi-undead-executioner/extracted/undead-executioner/undead-executioner-puppet/png/idle.png undead executioner image idle is an animated 2d image sample from undead executioner. useful for player characters, npcs, animation prototyping. undead executioner player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "darkpixel-kronovi-undead-executioner",
+      "path": "2D/darkpixel-kronovi-undead-executioner/extracted/undead-executioner/undead-executioner-puppet/png/attacking.png",
+      "src": "/2D/darkpixel-kronovi-undead-executioner/extracted/undead-executioner/undead-executioner-puppet/png/attacking.png",
+      "label": "Attacking",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 600,
+        "height": 300,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.064666748046875,
+        "transparentCoverage": 0.935333251953125,
+        "contentRowRuns": 3,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 25,
+        "cellMedianHeight": 28
+      },
+      "promo": false,
+      "description": "Attacking is an animated 2D character sample from Undead Executioner. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "undead executioner"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "undead executioner"
+      ],
+      "searchText": "attacking 2d/darkpixel-kronovi-undead-executioner/extracted/undead-executioner/undead-executioner-puppet/png/attacking.png undead executioner character attacking is an animated 2d character sample from undead executioner. useful for player characters, npcs, animation prototyping. undead executioner player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "darkpixel-kronovi-undead-executioner",
+      "path": "2D/darkpixel-kronovi-undead-executioner/extracted/undead-executioner/undead-executioner-puppet/png/idle2.png",
+      "src": "/2D/darkpixel-kronovi-undead-executioner/extracted/undead-executioner/undead-executioner-puppet/png/idle2.png",
+      "label": "Idle2",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 400,
+        "height": 200,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0791015625,
+        "transparentCoverage": 0.9208984375,
+        "contentRowRuns": 2,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": true,
+        "cellMedianWidth": 29,
+        "cellMedianHeight": 40
+      },
+      "promo": false,
+      "description": "Idle2 is an animated 2D image sample from Undead Executioner. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "undead executioner"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "undead executioner"
+      ],
+      "searchText": "idle2 2d/darkpixel-kronovi-undead-executioner/extracted/undead-executioner/undead-executioner-puppet/png/idle2.png undead executioner image idle2 is an animated 2d image sample from undead executioner. useful for player characters, npcs, animation prototyping. undead executioner player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "darkpixel-kronovi-undead-executioner",
+      "path": "2D/darkpixel-kronovi-undead-executioner/extracted/undead-executioner/undead-executioner-puppet/png/summonappear.png",
+      "src": "/2D/darkpixel-kronovi-undead-executioner/extracted/undead-executioner/undead-executioner-puppet/png/summonappear.png",
+      "label": "Summonappear",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 150,
+        "height": 100,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.029066666666666668,
+        "transparentCoverage": 0.9709333333333333,
+        "contentRowRuns": 2,
+        "contentColRuns": 3,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 10,
+        "cellMedianHeight": 14
+      },
+      "promo": false,
+      "description": "Summonappear is an animated 2D image sample from Undead Executioner. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "undead executioner"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "undead executioner"
+      ],
+      "searchText": "summonappear 2d/darkpixel-kronovi-undead-executioner/extracted/undead-executioner/undead-executioner-puppet/png/summonappear.png undead executioner image summonappear is an animated 2d image sample from undead executioner. useful for player characters, npcs, animation prototyping. undead executioner player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "darkpixel-kronovi-undead-executioner",
+      "path": "2D/darkpixel-kronovi-undead-executioner/extracted/undead-executioner/undead-executioner-puppet/png/summondeath.png",
+      "src": "/2D/darkpixel-kronovi-undead-executioner/extracted/undead-executioner/undead-executioner-puppet/png/summondeath.png",
+      "label": "Summondeath",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 150,
+        "height": 100,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.023066666666666666,
+        "transparentCoverage": 0.9769333333333333,
+        "contentRowRuns": 2,
+        "contentColRuns": 3,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 8,
+        "cellMedianHeight": 14
+      },
+      "promo": false,
+      "description": "Summondeath is an animated 2D image sample from Undead Executioner. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "undead executioner"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "undead executioner"
+      ],
+      "searchText": "summondeath 2d/darkpixel-kronovi-undead-executioner/extracted/undead-executioner/undead-executioner-puppet/png/summondeath.png undead executioner image summondeath is an animated 2d image sample from undead executioner. useful for player characters, npcs, animation prototyping. undead executioner player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "darkpixel-kronovi-undead-executioner",
+      "path": "2D/darkpixel-kronovi-undead-executioner/extracted/undead-executioner/undead-executioner-puppet/png/summonidle.png",
+      "src": "/2D/darkpixel-kronovi-undead-executioner/extracted/undead-executioner/undead-executioner-puppet/png/summonidle.png",
+      "label": "Summonidle",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 200,
+        "height": 50,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.051,
+        "transparentCoverage": 0.949,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Summonidle is an animated 2D image sample from Undead Executioner. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "undead executioner"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "undead executioner"
+      ],
+      "searchText": "summonidle 2d/darkpixel-kronovi-undead-executioner/extracted/undead-executioner/undead-executioner-puppet/png/summonidle.png undead executioner image summonidle is an animated 2d image sample from undead executioner. useful for player characters, npcs, animation prototyping. undead executioner player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "darkpixel-kronovi-undead-executioner",
+      "path": "2D/darkpixel-kronovi-undead-executioner/extracted/undead-executioner/undead-executioner-puppet/png/skill1.png",
+      "src": "/2D/darkpixel-kronovi-undead-executioner/extracted/undead-executioner/undead-executioner-puppet/png/skill1.png",
+      "label": "Skill1",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 600,
+        "height": 200,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.08759191176470588,
+        "transparentCoverage": 0.9124080882352941,
+        "contentRowRuns": 2,
+        "contentColRuns": 7,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 19,
+        "cellMedianHeight": 28
+      },
+      "promo": false,
+      "description": "Skill1 is an animated 2D image sample from Undead Executioner. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "undead executioner"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "undead executioner"
+      ],
+      "searchText": "skill1 2d/darkpixel-kronovi-undead-executioner/extracted/undead-executioner/undead-executioner-puppet/png/skill1.png undead executioner image skill1 is an animated 2d image sample from undead executioner. useful for player characters, npcs, animation prototyping. undead executioner player characters npcs animation prototyping 2d animated art"
+    }
+  ]
+}

@@ -1,0 +1,275 @@
+{
+  "folder": "penusbmic-sci-fi-character-pack-1",
+  "title": "Sci Fi Character Pack 1",
+  "author": "penusbmic",
+  "author_url": "https://penusbmic.itch.io",
+  "url": "https://penusbmic.itch.io/characterpack1",
+  "game_id": null,
+  "license_class": "Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms)",
+  "attribution": "Appreciated / not required",
+  "theme": "Vehicles & Sci-Fi",
+  "description": "SCI Fi Character Pack 1 is a 2D vehicles & sci-fi art pack by penusbmic. Use it for player characters, NPCs, animation prototyping. License: Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). Attribution: Appreciated / not required.",
+  "category": "Vehicles & Sci-Fi",
+  "themes": [
+    "sci-fi",
+    "urban",
+    "vehicles & sci-fi"
+  ],
+  "useCases": [
+    "player characters",
+    "NPCs",
+    "animation prototyping"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "sci-fi",
+    "sprite",
+    "urban",
+    "vehicles & sci-fi"
+  ],
+  "searchText": "sci fi character pack 1 penusbmic-sci-fi-character-pack-1 penusbmic vehicles & sci-fi free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms) appreciated / not required sci fi character pack 1 is a 2d vehicles & sci-fi art pack by penusbmic. use it for player characters, npcs, animation prototyping. license: free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). attribution: appreciated / not required. sci-fi urban vehicles & sci-fi player characters npcs animation prototyping 2d art sprite",
+  "sampleCount": 6,
+  "samples": [
+    {
+      "packFolder": "penusbmic-sci-fi-character-pack-1",
+      "path": "2D/penusbmic-sci-fi-character-pack-1/extracted/spirit-boxer/spirit-boxer/all-attacks.png",
+      "src": "/2D/penusbmic-sci-fi-character-pack-1/extracted/spirit-boxer/spirit-boxer/all-attacks.png",
+      "label": "All Attacks",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 137,
+        "height": 1276,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.04600694444444445,
+        "transparentCoverage": 0.9539930555555556,
+        "contentRowRuns": 29,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "All Attacks is an animated 2D character sample from Sci Fi Character Pack 1. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "sci-fi"
+      ],
+      "searchText": "all attacks 2d/penusbmic-sci-fi-character-pack-1/extracted/spirit-boxer/spirit-boxer/all-attacks.png sci fi character pack 1 character all attacks is an animated 2d character sample from sci fi character pack 1. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "penusbmic-sci-fi-character-pack-1",
+      "path": "2D/penusbmic-sci-fi-character-pack-1/extracted/spirit-boxer/spirit-boxer/attack-1.png",
+      "src": "/2D/penusbmic-sci-fi-character-pack-1/extracted/spirit-boxer/spirit-boxer/attack-1.png",
+      "label": "Attack 1",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 137,
+        "height": 264,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.03130874060150376,
+        "transparentCoverage": 0.9686912593984962,
+        "contentRowRuns": 6,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Attack 1 is an animated 2D character sample from Sci Fi Character Pack 1. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "sci-fi"
+      ],
+      "searchText": "attack 1 2d/penusbmic-sci-fi-character-pack-1/extracted/spirit-boxer/spirit-boxer/attack-1.png sci fi character pack 1 character attack 1 is an animated 2d character sample from sci fi character pack 1. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "penusbmic-sci-fi-character-pack-1",
+      "path": "2D/penusbmic-sci-fi-character-pack-1/extracted/spirit-boxer/spirit-boxer/attack-2.png",
+      "src": "/2D/penusbmic-sci-fi-character-pack-1/extracted/spirit-boxer/spirit-boxer/attack-2.png",
+      "label": "Attack 2",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 137,
+        "height": 572,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.04578637295081967,
+        "transparentCoverage": 0.9542136270491803,
+        "contentRowRuns": 13,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Attack 2 is an animated 2D character sample from Sci Fi Character Pack 1. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "sci-fi"
+      ],
+      "searchText": "attack 2 2d/penusbmic-sci-fi-character-pack-1/extracted/spirit-boxer/spirit-boxer/attack-2.png sci fi character pack 1 character attack 2 is an animated 2d character sample from sci fi character pack 1. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "penusbmic-sci-fi-character-pack-1",
+      "path": "2D/penusbmic-sci-fi-character-pack-1/extracted/spirit-boxer/spirit-boxer/attack-3.png",
+      "src": "/2D/penusbmic-sci-fi-character-pack-1/extracted/spirit-boxer/spirit-boxer/attack-3.png",
+      "label": "Attack 3",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 137,
+        "height": 440,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.04609375,
+        "transparentCoverage": 0.95390625,
+        "contentRowRuns": 10,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Attack 3 is an animated 2D character sample from Sci Fi Character Pack 1. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "sci-fi"
+      ],
+      "searchText": "attack 3 2d/penusbmic-sci-fi-character-pack-1/extracted/spirit-boxer/spirit-boxer/attack-3.png sci fi character pack 1 character attack 3 is an animated 2d character sample from sci fi character pack 1. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "penusbmic-sci-fi-character-pack-1",
+      "path": "2D/penusbmic-sci-fi-character-pack-1/extracted/spirit-boxer/spirit-boxer/damaged-and-death.png",
+      "src": "/2D/penusbmic-sci-fi-character-pack-1/extracted/spirit-boxer/spirit-boxer/damaged-and-death.png",
+      "label": "Damaged And Death",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 137,
+        "height": 528,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.021484375,
+        "transparentCoverage": 0.978515625,
+        "contentRowRuns": 13,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Damaged And Death is an animated 2D character sample from Sci Fi Character Pack 1. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "sci-fi"
+      ],
+      "searchText": "damaged and death 2d/penusbmic-sci-fi-character-pack-1/extracted/spirit-boxer/spirit-boxer/damaged-and-death.png sci fi character pack 1 character damaged and death is an animated 2d character sample from sci fi character pack 1. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "penusbmic-sci-fi-character-pack-1",
+      "path": "2D/penusbmic-sci-fi-character-pack-1/extracted/spirit-boxer/spirit-boxer/idle.png",
+      "src": "/2D/penusbmic-sci-fi-character-pack-1/extracted/spirit-boxer/spirit-boxer/idle.png",
+      "label": "Idle",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 137,
+        "height": 176,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.03176841406768414,
+        "transparentCoverage": 0.9682315859323158,
+        "contentRowRuns": 4,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Idle is an animated 2D character sample from Sci Fi Character Pack 1. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "sci-fi"
+      ],
+      "searchText": "idle 2d/penusbmic-sci-fi-character-pack-1/extracted/spirit-boxer/spirit-boxer/idle.png sci fi character pack 1 character idle is an animated 2d character sample from sci fi character pack 1. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art"
+    }
+  ]
+}

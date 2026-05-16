@@ -1,0 +1,73 @@
+{
+  "folder": "creativekind-flying-obelisk",
+  "title": "Flying Obelisk",
+  "author": "creativekind",
+  "author_url": "https://creativekind.itch.io",
+  "url": "https://creativekind.itch.io/flying-obelisk",
+  "game_id": null,
+  "license_class": "Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms)",
+  "attribution": "Appreciated / not required",
+  "theme": "Enemies",
+  "description": "Flying Obelisk is a 2D enemies art pack by creativekind. Use it for game jams, prototypes, scene dressing. License: Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). Attribution: Appreciated / not required.",
+  "category": "Enemies",
+  "themes": [
+    "enemies",
+    "urban"
+  ],
+  "useCases": [
+    "game jams",
+    "prototypes",
+    "scene dressing"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "enemies",
+    "sprite",
+    "urban"
+  ],
+  "searchText": "flying obelisk creativekind-flying-obelisk creativekind enemies free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms) appreciated / not required flying obelisk is a 2d enemies art pack by creativekind. use it for game jams, prototypes, scene dressing. license: free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). attribution: appreciated / not required. enemies urban game jams prototypes scene dressing 2d art sprite",
+  "sampleCount": 1,
+  "samples": [
+    {
+      "packFolder": "creativekind-flying-obelisk",
+      "path": "2D/creativekind-flying-obelisk/extracted/flyingobelisk-simple/flyingobelisk-no-lightnings-no-letter.png",
+      "src": "/2D/creativekind-flying-obelisk/extracted/flyingobelisk-simple/flyingobelisk-no-lightnings-no-letter.png",
+      "label": "Flyingobelisk No Lightnings No Letter",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 2600,
+        "height": 400,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.20512820512820512,
+        "transparentCoverage": 0.7948717948717948,
+        "contentRowRuns": 1,
+        "contentColRuns": 13,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Flyingobelisk No Lightnings No Letter is an animated 2D image sample from Flying Obelisk. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "flying obelisk",
+        "image"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "flying obelisk",
+        "image"
+      ],
+      "searchText": "flyingobelisk no lightnings no letter 2d/creativekind-flying-obelisk/extracted/flyingobelisk-simple/flyingobelisk-no-lightnings-no-letter.png flying obelisk image flyingobelisk no lightnings no letter is an animated 2d image sample from flying obelisk. useful for player characters, npcs, animation prototyping. flying obelisk player characters npcs animation prototyping 2d animated art"
+    }
+  ]
+}

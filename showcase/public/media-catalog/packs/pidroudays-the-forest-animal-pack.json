@@ -1,0 +1,595 @@
+{
+  "folder": "pidroudays-the-forest-animal-pack",
+  "title": "The Forest Animal Pack",
+  "author": "pidroudays",
+  "author_url": "https://pidroudays.itch.io",
+  "url": "https://pidroudays.itch.io/the-forest-animal-pack",
+  "game_id": null,
+  "license_class": "Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms)",
+  "attribution": "Appreciated / not required",
+  "theme": "Environments",
+  "description": "The Forest Animal Pack is a 2D environments art pack by pidroudays. Use it for enemy variants, encounters, creature animation. License: Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). Attribution: Appreciated / not required.",
+  "category": "Environments",
+  "themes": [
+    "environments",
+    "nature",
+    "urban"
+  ],
+  "useCases": [
+    "enemy variants",
+    "encounters",
+    "creature animation"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "environments",
+    "nature",
+    "sprite",
+    "urban"
+  ],
+  "searchText": "the forest animal pack pidroudays-the-forest-animal-pack pidroudays environments free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms) appreciated / not required the forest animal pack is a 2d environments art pack by pidroudays. use it for enemy variants, encounters, creature animation. license: free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). attribution: appreciated / not required. environments nature urban enemy variants encounters creature animation 2d art sprite",
+  "sampleCount": 14,
+  "samples": [
+    {
+      "packFolder": "pidroudays-the-forest-animal-pack",
+      "path": "2D/pidroudays-the-forest-animal-pack/extracted/theforestap/theforestap/bat/bat-death.png",
+      "src": "/2D/pidroudays-the-forest-animal-pack/extracted/theforestap/theforestap/bat/bat-death.png",
+      "label": "Bat Death",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 80,
+        "height": 12,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.21041666666666667,
+        "transparentCoverage": 0.7895833333333333,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Bat Death is an animated 2D character sample from The Forest Animal Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "nature"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "nature"
+      ],
+      "searchText": "bat death 2d/pidroudays-the-forest-animal-pack/extracted/theforestap/theforestap/bat/bat-death.png the forest animal pack character bat death is an animated 2d character sample from the forest animal pack. useful for player characters, npcs, animation prototyping. nature player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "pidroudays-the-forest-animal-pack",
+      "path": "2D/pidroudays-the-forest-animal-pack/extracted/theforestap/theforestap/cat/cat-death.png",
+      "src": "/2D/pidroudays-the-forest-animal-pack/extracted/theforestap/theforestap/cat/cat-death.png",
+      "label": "Cat Death",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 72,
+        "height": 12,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.1840277777777778,
+        "transparentCoverage": 0.8159722222222222,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Cat Death is an animated 2D character sample from The Forest Animal Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "nature"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "nature"
+      ],
+      "searchText": "cat death 2d/pidroudays-the-forest-animal-pack/extracted/theforestap/theforestap/cat/cat-death.png the forest animal pack character cat death is an animated 2d character sample from the forest animal pack. useful for player characters, npcs, animation prototyping. nature player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "pidroudays-the-forest-animal-pack",
+      "path": "2D/pidroudays-the-forest-animal-pack/extracted/theforestap/theforestap/cat/cat-idle.png",
+      "src": "/2D/pidroudays-the-forest-animal-pack/extracted/theforestap/theforestap/cat/cat-idle.png",
+      "label": "Cat Idle",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 108,
+        "height": 12,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.18981481481481483,
+        "transparentCoverage": 0.8101851851851852,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Cat Idle is an animated 2D character sample from The Forest Animal Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "nature"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "nature"
+      ],
+      "searchText": "cat idle 2d/pidroudays-the-forest-animal-pack/extracted/theforestap/theforestap/cat/cat-idle.png the forest animal pack character cat idle is an animated 2d character sample from the forest animal pack. useful for player characters, npcs, animation prototyping. nature player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "pidroudays-the-forest-animal-pack",
+      "path": "2D/pidroudays-the-forest-animal-pack/extracted/theforestap/theforestap/cat/cat-run.png",
+      "src": "/2D/pidroudays-the-forest-animal-pack/extracted/theforestap/theforestap/cat/cat-run.png",
+      "label": "Cat Run",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 72,
+        "height": 12,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.2337962962962963,
+        "transparentCoverage": 0.7662037037037037,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Cat Run is an animated 2D character sample from The Forest Animal Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "nature"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "nature"
+      ],
+      "searchText": "cat run 2d/pidroudays-the-forest-animal-pack/extracted/theforestap/theforestap/cat/cat-run.png the forest animal pack character cat run is an animated 2d character sample from the forest animal pack. useful for player characters, npcs, animation prototyping. nature player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "pidroudays-the-forest-animal-pack",
+      "path": "2D/pidroudays-the-forest-animal-pack/extracted/theforestap/theforestap/dog/dog-death.png",
+      "src": "/2D/pidroudays-the-forest-animal-pack/extracted/theforestap/theforestap/dog/dog-death.png",
+      "label": "Dog Death",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 96,
+        "height": 16,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.2727864583333333,
+        "transparentCoverage": 0.7272135416666666,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Dog Death is an animated 2D character sample from The Forest Animal Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "nature"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "nature"
+      ],
+      "searchText": "dog death 2d/pidroudays-the-forest-animal-pack/extracted/theforestap/theforestap/dog/dog-death.png the forest animal pack character dog death is an animated 2d character sample from the forest animal pack. useful for player characters, npcs, animation prototyping. nature player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "pidroudays-the-forest-animal-pack",
+      "path": "2D/pidroudays-the-forest-animal-pack/extracted/theforestap/theforestap/dog/dog-idle.png",
+      "src": "/2D/pidroudays-the-forest-animal-pack/extracted/theforestap/theforestap/dog/dog-idle.png",
+      "label": "Dog Idle",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 96,
+        "height": 16,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.2975260416666667,
+        "transparentCoverage": 0.7024739583333334,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Dog Idle is an animated 2D character sample from The Forest Animal Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "nature"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "nature"
+      ],
+      "searchText": "dog idle 2d/pidroudays-the-forest-animal-pack/extracted/theforestap/theforestap/dog/dog-idle.png the forest animal pack character dog idle is an animated 2d character sample from the forest animal pack. useful for player characters, npcs, animation prototyping. nature player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "pidroudays-the-forest-animal-pack",
+      "path": "2D/pidroudays-the-forest-animal-pack/extracted/theforestap/theforestap/dog/dog-run.png",
+      "src": "/2D/pidroudays-the-forest-animal-pack/extracted/theforestap/theforestap/dog/dog-run.png",
+      "label": "Dog Run",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 96,
+        "height": 16,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.2981770833333333,
+        "transparentCoverage": 0.7018229166666666,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Dog Run is an animated 2D character sample from The Forest Animal Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "nature"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "nature"
+      ],
+      "searchText": "dog run 2d/pidroudays-the-forest-animal-pack/extracted/theforestap/theforestap/dog/dog-run.png the forest animal pack character dog run is an animated 2d character sample from the forest animal pack. useful for player characters, npcs, animation prototyping. nature player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "pidroudays-the-forest-animal-pack",
+      "path": "2D/pidroudays-the-forest-animal-pack/extracted/theforestap/theforestap/bat/bat-hurt.png",
+      "src": "/2D/pidroudays-the-forest-animal-pack/extracted/theforestap/theforestap/bat/bat-hurt.png",
+      "label": "Bat Hurt",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 40,
+        "height": 12,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.26458333333333334,
+        "transparentCoverage": 0.7354166666666667,
+        "contentRowRuns": 1,
+        "contentColRuns": 2,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Bat Hurt is an animated 2D character sample from The Forest Animal Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "nature"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "nature"
+      ],
+      "searchText": "bat hurt 2d/pidroudays-the-forest-animal-pack/extracted/theforestap/theforestap/bat/bat-hurt.png the forest animal pack character bat hurt is an animated 2d character sample from the forest animal pack. useful for player characters, npcs, animation prototyping. nature player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "pidroudays-the-forest-animal-pack",
+      "path": "2D/pidroudays-the-forest-animal-pack/extracted/theforestap/theforestap/cat/cat-hurt.png",
+      "src": "/2D/pidroudays-the-forest-animal-pack/extracted/theforestap/theforestap/cat/cat-hurt.png",
+      "label": "Cat Hurt",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 36,
+        "height": 12,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.22916666666666666,
+        "transparentCoverage": 0.7708333333333334,
+        "contentRowRuns": 1,
+        "contentColRuns": 2,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Cat Hurt is an animated 2D character sample from The Forest Animal Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "nature"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "nature"
+      ],
+      "searchText": "cat hurt 2d/pidroudays-the-forest-animal-pack/extracted/theforestap/theforestap/cat/cat-hurt.png the forest animal pack character cat hurt is an animated 2d character sample from the forest animal pack. useful for player characters, npcs, animation prototyping. nature player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "pidroudays-the-forest-animal-pack",
+      "path": "2D/pidroudays-the-forest-animal-pack/extracted/theforestap/theforestap/dog/dog-hurt.png",
+      "src": "/2D/pidroudays-the-forest-animal-pack/extracted/theforestap/theforestap/dog/dog-hurt.png",
+      "label": "Dog Hurt",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 48,
+        "height": 16,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.2981770833333333,
+        "transparentCoverage": 0.7018229166666666,
+        "contentRowRuns": 1,
+        "contentColRuns": 2,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Dog Hurt is an animated 2D character sample from The Forest Animal Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "nature"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "nature"
+      ],
+      "searchText": "dog hurt 2d/pidroudays-the-forest-animal-pack/extracted/theforestap/theforestap/dog/dog-hurt.png the forest animal pack character dog hurt is an animated 2d character sample from the forest animal pack. useful for player characters, npcs, animation prototyping. nature player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "pidroudays-the-forest-animal-pack",
+      "path": "2D/pidroudays-the-forest-animal-pack/extracted/theforestap/theforestap/bat/bat-awaken.png",
+      "src": "/2D/pidroudays-the-forest-animal-pack/extracted/theforestap/theforestap/bat/bat-awaken.png",
+      "label": "Bat Awaken",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 140,
+        "height": 12,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.26666666666666666,
+        "transparentCoverage": 0.7333333333333333,
+        "contentRowRuns": 1,
+        "contentColRuns": 7,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Bat Awaken is an animated 2D character sample from The Forest Animal Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "nature"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "nature"
+      ],
+      "searchText": "bat awaken 2d/pidroudays-the-forest-animal-pack/extracted/theforestap/theforestap/bat/bat-awaken.png the forest animal pack character bat awaken is an animated 2d character sample from the forest animal pack. useful for player characters, npcs, animation prototyping. nature player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "pidroudays-the-forest-animal-pack",
+      "path": "2D/pidroudays-the-forest-animal-pack/extracted/theforestap/theforestap/bat/bat-flying.png",
+      "src": "/2D/pidroudays-the-forest-animal-pack/extracted/theforestap/theforestap/bat/bat-flying.png",
+      "label": "Bat Flying",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 80,
+        "height": 12,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.25625,
+        "transparentCoverage": 0.74375,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Bat Flying is an animated 2D character sample from The Forest Animal Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "nature"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "nature"
+      ],
+      "searchText": "bat flying 2d/pidroudays-the-forest-animal-pack/extracted/theforestap/theforestap/bat/bat-flying.png the forest animal pack character bat flying is an animated 2d character sample from the forest animal pack. useful for player characters, npcs, animation prototyping. nature player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "pidroudays-the-forest-animal-pack",
+      "path": "2D/pidroudays-the-forest-animal-pack/extracted/theforestap/theforestap/cat/cat-stand.png",
+      "src": "/2D/pidroudays-the-forest-animal-pack/extracted/theforestap/theforestap/cat/cat-stand.png",
+      "label": "Cat Stand",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 54,
+        "height": 12,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.2222222222222222,
+        "transparentCoverage": 0.7777777777777778,
+        "contentRowRuns": 1,
+        "contentColRuns": 3,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Cat Stand is an animated 2D character sample from The Forest Animal Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "nature"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "nature"
+      ],
+      "searchText": "cat stand 2d/pidroudays-the-forest-animal-pack/extracted/theforestap/theforestap/cat/cat-stand.png the forest animal pack character cat stand is an animated 2d character sample from the forest animal pack. useful for player characters, npcs, animation prototyping. nature player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "pidroudays-the-forest-animal-pack",
+      "path": "2D/pidroudays-the-forest-animal-pack/extracted/theforestap/theforestap/bat/bat-static.png",
+      "src": "/2D/pidroudays-the-forest-animal-pack/extracted/theforestap/theforestap/bat/bat-static.png",
+      "label": "Bat Static",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 40,
+        "height": 12,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.26666666666666666,
+        "transparentCoverage": 0.7333333333333333,
+        "contentRowRuns": 1,
+        "contentColRuns": 2,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Bat Static is a static 2D character sample from The Forest Animal Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "nature"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "nature",
+        "static"
+      ],
+      "searchText": "bat static 2d/pidroudays-the-forest-animal-pack/extracted/theforestap/theforestap/bat/bat-static.png the forest animal pack character bat static is a static 2d character sample from the forest animal pack. useful for player characters, npcs, animation prototyping. nature player characters npcs animation prototyping 2d art static"
+    }
+  ]
+}

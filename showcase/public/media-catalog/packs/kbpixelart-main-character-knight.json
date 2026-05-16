@@ -1,0 +1,364 @@
+{
+  "folder": "kbpixelart-main-character-knight",
+  "title": "Main Character - Knight",
+  "author": "KBPixelArt",
+  "author_url": "https://kbpixelart.itch.io",
+  "url": "https://kbpixelart.itch.io/main-character-knight",
+  "game_id": 3752982,
+  "license_class": "Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms)",
+  "attribution": "Appreciated / not required",
+  "theme": "Characters",
+  "description": "Main Character Knight is a 2D characters art pack by KBPixelArt. Use it for player characters, NPCs, animation prototyping. License: Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). Attribution: Appreciated / not required.",
+  "category": "Characters",
+  "themes": [
+    "characters",
+    "fantasy",
+    "urban"
+  ],
+  "useCases": [
+    "player characters",
+    "NPCs",
+    "animation prototyping"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "characters",
+    "fantasy",
+    "medieval",
+    "sprite",
+    "urban"
+  ],
+  "searchText": "main character - knight kbpixelart-main-character-knight kbpixelart characters free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms) appreciated / not required main character knight is a 2d characters art pack by kbpixelart. use it for player characters, npcs, animation prototyping. license: free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). attribution: appreciated / not required. characters fantasy urban player characters npcs animation prototyping 2d art medieval sprite",
+  "sampleCount": 8,
+  "samples": [
+    {
+      "packFolder": "kbpixelart-main-character-knight",
+      "path": "2D/kbpixelart-main-character-knight/extracted/maincharacter-knight-free/maincharacter-knight-free/knight-maincharacter-idle.png",
+      "src": "/2D/kbpixelart-main-character-knight/extracted/maincharacter-knight-free/maincharacter-knight-free/knight-maincharacter-idle.png",
+      "label": "Knight Maincharacter Idle",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 1280,
+        "height": 64,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.09254807692307693,
+        "transparentCoverage": 0.9074519230769231,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Knight Maincharacter Idle is an animated 2D character sample from Main Character - Knight. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "knight maincharacter idle 2d/kbpixelart-main-character-knight/extracted/maincharacter-knight-free/maincharacter-knight-free/knight-maincharacter-idle.png main character - knight character knight maincharacter idle is an animated 2d character sample from main character - knight. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "kbpixelart-main-character-knight",
+      "path": "2D/kbpixelart-main-character-knight/extracted/0-8/0-8/templatedata/unity-logo-title-footer.png",
+      "src": "/2D/kbpixelart-main-character-knight/extracted/0-8/0-8/templatedata/unity-logo-title-footer.png",
+      "label": "Unity Logo Title Footer",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 103,
+        "height": 38,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.21486969851814,
+        "transparentCoverage": 0.702861522738886,
+        "contentRowRuns": 1,
+        "contentColRuns": 5,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Unity Logo Title Footer is an animated 2D character sample from Main Character - Knight. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "unity logo title footer 2d/kbpixelart-main-character-knight/extracted/0-8/0-8/templatedata/unity-logo-title-footer.png main character - knight character unity logo title footer is an animated 2d character sample from main character - knight. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "kbpixelart-main-character-knight",
+      "path": "2D/kbpixelart-main-character-knight/extracted/0-8/0-8/templatedata/memoryprofiler.png",
+      "src": "/2D/kbpixelart-main-character-knight/extracted/0-8/0-8/templatedata/memoryprofiler.png",
+      "label": "Memoryprofiler",
+      "kind": "ui",
+      "animated": false,
+      "inspection": {
+        "width": 32,
+        "height": 32,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.3017578125,
+        "transparentCoverage": 0.6376953125,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Memoryprofiler is a static 2D ui sample from Main Character - Knight. Useful for player characters, NPCs, animation prototyping.",
+      "category": "ui",
+      "themes": [
+        "fantasy",
+        "ui"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "fantasy",
+        "medieval",
+        "static",
+        "ui"
+      ],
+      "searchText": "memoryprofiler 2d/kbpixelart-main-character-knight/extracted/0-8/0-8/templatedata/memoryprofiler.png main character - knight ui memoryprofiler is a static 2d ui sample from main character - knight. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art medieval static"
+    },
+    {
+      "packFolder": "kbpixelart-main-character-knight",
+      "path": "2D/kbpixelart-main-character-knight/extracted/0-8/0-8/templatedata/unity-logo-dark.png",
+      "src": "/2D/kbpixelart-main-character-knight/extracted/0-8/0-8/templatedata/unity-logo-dark.png",
+      "label": "Unity Logo Dark",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 154,
+        "height": 130,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.31388611388611387,
+        "transparentCoverage": 0.6634365634365634,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Unity Logo Dark is a static 2D character sample from Main Character - Knight. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "fantasy",
+        "medieval",
+        "static"
+      ],
+      "searchText": "unity logo dark 2d/kbpixelart-main-character-knight/extracted/0-8/0-8/templatedata/unity-logo-dark.png main character - knight character unity logo dark is a static 2d character sample from main character - knight. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art medieval static"
+    },
+    {
+      "packFolder": "kbpixelart-main-character-knight",
+      "path": "2D/kbpixelart-main-character-knight/extracted/0-8/0-8/templatedata/unity-logo-light.png",
+      "src": "/2D/kbpixelart-main-character-knight/extracted/0-8/0-8/templatedata/unity-logo-light.png",
+      "label": "Unity Logo Light",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 154,
+        "height": 130,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.31388611388611387,
+        "transparentCoverage": 0.6634365634365634,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Unity Logo Light is a static 2D character sample from Main Character - Knight. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "fantasy",
+        "medieval",
+        "static"
+      ],
+      "searchText": "unity logo light 2d/kbpixelart-main-character-knight/extracted/0-8/0-8/templatedata/unity-logo-light.png main character - knight character unity logo light is a static 2d character sample from main character - knight. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art medieval static"
+    },
+    {
+      "packFolder": "kbpixelart-main-character-knight",
+      "path": "2D/kbpixelart-main-character-knight/extracted/0-8/0-8/templatedata/webmemd-icon.png",
+      "src": "/2D/kbpixelart-main-character-knight/extracted/0-8/0-8/templatedata/webmemd-icon.png",
+      "label": "Webmemd Icon",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 128,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.21234130859375,
+        "transparentCoverage": 0.7730712890625,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Webmemd Icon is a static 2D icon sample from Main Character - Knight. Useful for player characters, NPCs, animation prototyping.",
+      "category": "icon",
+      "themes": [
+        "fantasy",
+        "icon"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "fantasy",
+        "icon",
+        "medieval",
+        "static"
+      ],
+      "searchText": "webmemd icon 2d/kbpixelart-main-character-knight/extracted/0-8/0-8/templatedata/webmemd-icon.png main character - knight icon webmemd icon is a static 2d icon sample from main character - knight. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art medieval static"
+    },
+    {
+      "packFolder": "kbpixelart-main-character-knight",
+      "path": "2D/kbpixelart-main-character-knight/extracted/0-8/0-8/templatedata/progress-bar-empty-dark.png",
+      "src": "/2D/kbpixelart-main-character-knight/extracted/0-8/0-8/templatedata/progress-bar-empty-dark.png",
+      "label": "Progress Bar Empty Dark",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 141,
+        "height": 18,
+        "bgKind": "mixed",
+        "alphaCoverage": 0.24428684003152087,
+        "transparentCoverage": 0.7557131599684791,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Progress Bar Empty Dark is a static 2D character sample from Main Character - Knight. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "fantasy",
+        "medieval",
+        "static"
+      ],
+      "searchText": "progress bar empty dark 2d/kbpixelart-main-character-knight/extracted/0-8/0-8/templatedata/progress-bar-empty-dark.png main character - knight character progress bar empty dark is a static 2d character sample from main character - knight. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art medieval static"
+    },
+    {
+      "packFolder": "kbpixelart-main-character-knight",
+      "path": "2D/kbpixelart-main-character-knight/extracted/0-8/0-8/templatedata/progress-bar-empty-light.png",
+      "src": "/2D/kbpixelart-main-character-knight/extracted/0-8/0-8/templatedata/progress-bar-empty-light.png",
+      "label": "Progress Bar Empty Light",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 141,
+        "height": 18,
+        "bgKind": "mixed",
+        "alphaCoverage": 0.24428684003152087,
+        "transparentCoverage": 0.7557131599684791,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Progress Bar Empty Light is a static 2D character sample from Main Character - Knight. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "fantasy",
+        "medieval",
+        "static"
+      ],
+      "searchText": "progress bar empty light 2d/kbpixelart-main-character-knight/extracted/0-8/0-8/templatedata/progress-bar-empty-light.png main character - knight character progress bar empty light is a static 2d character sample from main character - knight. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art medieval static"
+    }
+  ]
+}

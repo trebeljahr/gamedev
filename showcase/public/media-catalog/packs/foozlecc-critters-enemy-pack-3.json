@@ -1,0 +1,1561 @@
+{
+  "folder": "foozlecc-critters-enemy-pack-3",
+  "title": "Critters - Enemy Pack 3",
+  "author": "FoozleCC",
+  "author_url": "https://foozlecc.itch.io",
+  "url": "https://foozlecc.itch.io/critters-enemy-pack-3",
+  "game_id": 1168924,
+  "license_class": "CC0 1.0 (Creative Commons Zero)",
+  "attribution": "Optional",
+  "theme": "Animals",
+  "description": "Critters Enemy Pack 3 is a 2D animals art pack by FoozleCC. Use it for enemy variants, encounters, creature animation. License: CC0 1.0 (Creative Commons Zero). Attribution: Optional.",
+  "category": "Animals",
+  "themes": [
+    "animals",
+    "nature"
+  ],
+  "useCases": [
+    "enemy variants",
+    "encounters",
+    "creature animation"
+  ],
+  "tags": [
+    "2d",
+    "animals",
+    "art",
+    "nature",
+    "sprite"
+  ],
+  "searchText": "critters - enemy pack 3 foozlecc-critters-enemy-pack-3 foozlecc animals cc0 1.0 (creative commons zero) optional critters enemy pack 3 is a 2d animals art pack by foozlecc. use it for enemy variants, encounters, creature animation. license: cc0 1.0 (creative commons zero). attribution: optional. animals nature enemy variants encounters creature animation 2d art sprite",
+  "sampleCount": 38,
+  "samples": [
+    {
+      "packFolder": "foozlecc-critters-enemy-pack-3",
+      "path": "2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/catfish-warrior/pngs/catfish-warrior-spritesheet.png",
+      "src": "/2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/catfish-warrior/pngs/catfish-warrior-spritesheet.png",
+      "label": "Catfish Warrior Spritesheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 1920,
+        "height": 896,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.02619485294117647,
+        "transparentCoverage": 0.9738051470588235,
+        "contentRowRuns": 7,
+        "contentColRuns": 15,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": true,
+        "cellMedianWidth": 8,
+        "cellMedianHeight": 6
+      },
+      "promo": false,
+      "description": "Catfish Warrior Spritesheet is an animated 2D character sample from Critters - Enemy Pack 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "searchText": "catfish warrior spritesheet 2d/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/catfish-warrior/pngs/catfish-warrior-spritesheet.png critters - enemy pack 3 character catfish warrior spritesheet is an animated 2d character sample from critters - enemy pack 3. useful for player characters, npcs, animation prototyping. critters - enemy pack 3 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-critters-enemy-pack-3",
+      "path": "2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/newt-slinger/pngs/newt-slinger-spritesheet.png",
+      "src": "/2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/newt-slinger/pngs/newt-slinger-spritesheet.png",
+      "label": "Newt Slinger Spritesheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 528,
+        "height": 288,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.10284598214285715,
+        "transparentCoverage": 0.8971540178571429,
+        "contentRowRuns": 6,
+        "contentColRuns": 11,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 14,
+        "cellMedianHeight": 14
+      },
+      "promo": false,
+      "description": "Newt Slinger Spritesheet is an animated 2D character sample from Critters - Enemy Pack 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "searchText": "newt slinger spritesheet 2d/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/newt-slinger/pngs/newt-slinger-spritesheet.png critters - enemy pack 3 character newt slinger spritesheet is an animated 2d character sample from critters - enemy pack 3. useful for player characters, npcs, animation prototyping. critters - enemy pack 3 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-critters-enemy-pack-3",
+      "path": "2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/turtle-king/pngs/turtle-king-spritesheet.png",
+      "src": "/2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/turtle-king/pngs/turtle-king-spritesheet.png",
+      "label": "Turtle King Spritesheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 1280,
+        "height": 1024,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.03833841463414634,
+        "transparentCoverage": 0.9616615853658537,
+        "contentRowRuns": 8,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 12,
+        "cellMedianHeight": 7
+      },
+      "promo": false,
+      "description": "Turtle King Spritesheet is an animated 2D character sample from Critters - Enemy Pack 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "searchText": "turtle king spritesheet 2d/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/turtle-king/pngs/turtle-king-spritesheet.png critters - enemy pack 3 character turtle king spritesheet is an animated 2d character sample from critters - enemy pack 3. useful for player characters, npcs, animation prototyping. critters - enemy pack 3 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-critters-enemy-pack-3",
+      "path": "2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/weasel-fisherman/pngs/weasel-fisherman-spritesheet.png",
+      "src": "/2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/weasel-fisherman/pngs/weasel-fisherman-spritesheet.png",
+      "label": "Weasel Fisherman Spritesheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 960,
+        "height": 576,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.03956980519480519,
+        "transparentCoverage": 0.9604301948051948,
+        "contentRowRuns": 6,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 14,
+        "cellMedianHeight": 11
+      },
+      "promo": false,
+      "description": "Weasel Fisherman Spritesheet is an animated 2D character sample from Critters - Enemy Pack 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "searchText": "weasel fisherman spritesheet 2d/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/weasel-fisherman/pngs/weasel-fisherman-spritesheet.png critters - enemy pack 3 character weasel fisherman spritesheet is an animated 2d character sample from critters - enemy pack 3. useful for player characters, npcs, animation prototyping. critters - enemy pack 3 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-critters-enemy-pack-3",
+      "path": "2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/catfish-warrior/pngs/catfish-warrior-death.png",
+      "src": "/2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/catfish-warrior/pngs/catfish-warrior-death.png",
+      "label": "Catfish Warrior Death",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 1920,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.05170036764705882,
+        "transparentCoverage": 0.9482996323529411,
+        "contentRowRuns": 1,
+        "contentColRuns": 15,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Catfish Warrior Death is an animated 2D character sample from Critters - Enemy Pack 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "searchText": "catfish warrior death 2d/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/catfish-warrior/pngs/catfish-warrior-death.png critters - enemy pack 3 character catfish warrior death is an animated 2d character sample from critters - enemy pack 3. useful for player characters, npcs, animation prototyping. critters - enemy pack 3 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-critters-enemy-pack-3",
+      "path": "2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/catfish-warrior/pngs/catfish-warrior-hurt.png",
+      "src": "/2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/catfish-warrior/pngs/catfish-warrior-hurt.png",
+      "label": "Catfish Warrior Hurt",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 512,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.05322265625,
+        "transparentCoverage": 0.94677734375,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Catfish Warrior Hurt is an animated 2D character sample from Critters - Enemy Pack 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "searchText": "catfish warrior hurt 2d/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/catfish-warrior/pngs/catfish-warrior-hurt.png critters - enemy pack 3 character catfish warrior hurt is an animated 2d character sample from critters - enemy pack 3. useful for player characters, npcs, animation prototyping. critters - enemy pack 3 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-critters-enemy-pack-3",
+      "path": "2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/catfish-warrior/pngs/catfish-warrior-idle.png",
+      "src": "/2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/catfish-warrior/pngs/catfish-warrior-idle.png",
+      "label": "Catfish Warrior Idle",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 896,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.04972550675675676,
+        "transparentCoverage": 0.9502744932432432,
+        "contentRowRuns": 1,
+        "contentColRuns": 7,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Catfish Warrior Idle is an animated 2D character sample from Critters - Enemy Pack 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "searchText": "catfish warrior idle 2d/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/catfish-warrior/pngs/catfish-warrior-idle.png critters - enemy pack 3 character catfish warrior idle is an animated 2d character sample from critters - enemy pack 3. useful for player characters, npcs, animation prototyping. critters - enemy pack 3 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-critters-enemy-pack-3",
+      "path": "2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/catfish-warrior/pngs/catfish-warrior-jump.png",
+      "src": "/2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/catfish-warrior/pngs/catfish-warrior-jump.png",
+      "label": "Catfish Warrior Jump",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 896,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.05099239864864865,
+        "transparentCoverage": 0.9490076013513513,
+        "contentRowRuns": 1,
+        "contentColRuns": 7,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Catfish Warrior Jump is an animated 2D character sample from Critters - Enemy Pack 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "searchText": "catfish warrior jump 2d/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/catfish-warrior/pngs/catfish-warrior-jump.png critters - enemy pack 3 character catfish warrior jump is an animated 2d character sample from critters - enemy pack 3. useful for player characters, npcs, animation prototyping. critters - enemy pack 3 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-critters-enemy-pack-3",
+      "path": "2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/catfish-warrior/pngs/catfish-warrior-run.png",
+      "src": "/2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/catfish-warrior/pngs/catfish-warrior-run.png",
+      "label": "Catfish Warrior Run",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 1024,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0499267578125,
+        "transparentCoverage": 0.9500732421875,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Catfish Warrior Run is an animated 2D character sample from Critters - Enemy Pack 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "searchText": "catfish warrior run 2d/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/catfish-warrior/pngs/catfish-warrior-run.png critters - enemy pack 3 character catfish warrior run is an animated 2d character sample from critters - enemy pack 3. useful for player characters, npcs, animation prototyping. critters - enemy pack 3 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-critters-enemy-pack-3",
+      "path": "2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/newt-slinger/pngs/newt-slinger-attack.png",
+      "src": "/2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/newt-slinger/pngs/newt-slinger-attack.png",
+      "label": "Newt Slinger Attack",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 432,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.16964285714285715,
+        "transparentCoverage": 0.8303571428571429,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Newt Slinger Attack is an animated 2D character sample from Critters - Enemy Pack 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "searchText": "newt slinger attack 2d/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/newt-slinger/pngs/newt-slinger-attack.png critters - enemy pack 3 character newt slinger attack is an animated 2d character sample from critters - enemy pack 3. useful for player characters, npcs, animation prototyping. critters - enemy pack 3 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-critters-enemy-pack-3",
+      "path": "2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/newt-slinger/pngs/newt-slinger-death.png",
+      "src": "/2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/newt-slinger/pngs/newt-slinger-death.png",
+      "label": "Newt Slinger Death",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 528,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.14860733695652173,
+        "transparentCoverage": 0.8513926630434783,
+        "contentRowRuns": 1,
+        "contentColRuns": 11,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Newt Slinger Death is an animated 2D character sample from Critters - Enemy Pack 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "searchText": "newt slinger death 2d/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/newt-slinger/pngs/newt-slinger-death.png critters - enemy pack 3 character newt slinger death is an animated 2d character sample from critters - enemy pack 3. useful for player characters, npcs, animation prototyping. critters - enemy pack 3 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-critters-enemy-pack-3",
+      "path": "2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/newt-slinger/pngs/newt-slinger-hurt.png",
+      "src": "/2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/newt-slinger/pngs/newt-slinger-hurt.png",
+      "label": "Newt Slinger Hurt",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 192,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.17274305555555555,
+        "transparentCoverage": 0.8272569444444444,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Newt Slinger Hurt is an animated 2D character sample from Critters - Enemy Pack 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "searchText": "newt slinger hurt 2d/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/newt-slinger/pngs/newt-slinger-hurt.png critters - enemy pack 3 character newt slinger hurt is an animated 2d character sample from critters - enemy pack 3. useful for player characters, npcs, animation prototyping. critters - enemy pack 3 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-critters-enemy-pack-3",
+      "path": "2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/newt-slinger/pngs/newt-slinger-idle.png",
+      "src": "/2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/newt-slinger/pngs/newt-slinger-idle.png",
+      "label": "Newt Slinger Idle",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 288,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.16197311046511628,
+        "transparentCoverage": 0.8380268895348837,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Newt Slinger Idle is an animated 2D character sample from Critters - Enemy Pack 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "searchText": "newt slinger idle 2d/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/newt-slinger/pngs/newt-slinger-idle.png critters - enemy pack 3 character newt slinger idle is an animated 2d character sample from critters - enemy pack 3. useful for player characters, npcs, animation prototyping. critters - enemy pack 3 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-critters-enemy-pack-3",
+      "path": "2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/newt-slinger/pngs/newt-slinger-jump.png",
+      "src": "/2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/newt-slinger/pngs/newt-slinger-jump.png",
+      "label": "Newt Slinger Jump",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 288,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.14880087209302326,
+        "transparentCoverage": 0.8511991279069767,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Newt Slinger Jump is an animated 2D character sample from Critters - Enemy Pack 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "searchText": "newt slinger jump 2d/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/newt-slinger/pngs/newt-slinger-jump.png critters - enemy pack 3 character newt slinger jump is an animated 2d character sample from critters - enemy pack 3. useful for player characters, npcs, animation prototyping. critters - enemy pack 3 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-critters-enemy-pack-3",
+      "path": "2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/newt-slinger/pngs/newt-slinger-run.png",
+      "src": "/2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/newt-slinger/pngs/newt-slinger-run.png",
+      "label": "Newt Slinger Run",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 384,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.158447265625,
+        "transparentCoverage": 0.841552734375,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Newt Slinger Run is an animated 2D character sample from Critters - Enemy Pack 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "searchText": "newt slinger run 2d/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/newt-slinger/pngs/newt-slinger-run.png critters - enemy pack 3 character newt slinger run is an animated 2d character sample from critters - enemy pack 3. useful for player characters, npcs, animation prototyping. critters - enemy pack 3 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-critters-enemy-pack-3",
+      "path": "2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/turtle-king/pngs/turtle-king-death.png",
+      "src": "/2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/turtle-king/pngs/turtle-king-death.png",
+      "label": "Turtle King Death",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 1280,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.04176682692307692,
+        "transparentCoverage": 0.9582331730769231,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Turtle King Death is an animated 2D character sample from Critters - Enemy Pack 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "searchText": "turtle king death 2d/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/turtle-king/pngs/turtle-king-death.png critters - enemy pack 3 character turtle king death is an animated 2d character sample from critters - enemy pack 3. useful for player characters, npcs, animation prototyping. critters - enemy pack 3 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-critters-enemy-pack-3",
+      "path": "2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/turtle-king/pngs/turtle-king-hurt.png",
+      "src": "/2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/turtle-king/pngs/turtle-king-hurt.png",
+      "label": "Turtle King Hurt",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 512,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0543212890625,
+        "transparentCoverage": 0.9456787109375,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Turtle King Hurt is an animated 2D character sample from Critters - Enemy Pack 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "searchText": "turtle king hurt 2d/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/turtle-king/pngs/turtle-king-hurt.png critters - enemy pack 3 character turtle king hurt is an animated 2d character sample from critters - enemy pack 3. useful for player characters, npcs, animation prototyping. critters - enemy pack 3 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-critters-enemy-pack-3",
+      "path": "2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/turtle-king/pngs/turtle-king-idle.png",
+      "src": "/2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/turtle-king/pngs/turtle-king-idle.png",
+      "label": "Turtle King Idle",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 1152,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.04896763392857143,
+        "transparentCoverage": 0.9510323660714286,
+        "contentRowRuns": 1,
+        "contentColRuns": 9,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Turtle King Idle is an animated 2D character sample from Critters - Enemy Pack 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "searchText": "turtle king idle 2d/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/turtle-king/pngs/turtle-king-idle.png critters - enemy pack 3 character turtle king idle is an animated 2d character sample from critters - enemy pack 3. useful for player characters, npcs, animation prototyping. critters - enemy pack 3 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-critters-enemy-pack-3",
+      "path": "2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/turtle-king/pngs/turtle-king-jump.png",
+      "src": "/2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/turtle-king/pngs/turtle-king-jump.png",
+      "label": "Turtle King Jump",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 1280,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.04131610576923077,
+        "transparentCoverage": 0.9586838942307693,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Turtle King Jump is an animated 2D character sample from Critters - Enemy Pack 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "searchText": "turtle king jump 2d/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/turtle-king/pngs/turtle-king-jump.png critters - enemy pack 3 character turtle king jump is an animated 2d character sample from critters - enemy pack 3. useful for player characters, npcs, animation prototyping. critters - enemy pack 3 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-critters-enemy-pack-3",
+      "path": "2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/turtle-king/pngs/turtle-king-walk.png",
+      "src": "/2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/turtle-king/pngs/turtle-king-walk.png",
+      "label": "Turtle King Walk",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 1280,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.049729567307692304,
+        "transparentCoverage": 0.9502704326923077,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Turtle King Walk is an animated 2D character sample from Critters - Enemy Pack 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "searchText": "turtle king walk 2d/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/turtle-king/pngs/turtle-king-walk.png critters - enemy pack 3 character turtle king walk is an animated 2d character sample from critters - enemy pack 3. useful for player characters, npcs, animation prototyping. critters - enemy pack 3 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-critters-enemy-pack-3",
+      "path": "2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/weasel-fisherman/pngs/weasel-fisherman-attack.png",
+      "src": "/2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/weasel-fisherman/pngs/weasel-fisherman-attack.png",
+      "label": "Weasel Fisherman Attack",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 672,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.06165540540540541,
+        "transparentCoverage": 0.9383445945945946,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Weasel Fisherman Attack is an animated 2D character sample from Critters - Enemy Pack 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "searchText": "weasel fisherman attack 2d/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/weasel-fisherman/pngs/weasel-fisherman-attack.png critters - enemy pack 3 character weasel fisherman attack is an animated 2d character sample from critters - enemy pack 3. useful for player characters, npcs, animation prototyping. critters - enemy pack 3 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-critters-enemy-pack-3",
+      "path": "2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/weasel-fisherman/pngs/weasel-fisherman-death.png",
+      "src": "/2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/weasel-fisherman/pngs/weasel-fisherman-death.png",
+      "label": "Weasel Fisherman Death",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 960,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.045823317307692304,
+        "transparentCoverage": 0.9541766826923077,
+        "contentRowRuns": 1,
+        "contentColRuns": 12,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Weasel Fisherman Death is an animated 2D character sample from Critters - Enemy Pack 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "searchText": "weasel fisherman death 2d/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/weasel-fisherman/pngs/weasel-fisherman-death.png critters - enemy pack 3 character weasel fisherman death is an animated 2d character sample from critters - enemy pack 3. useful for player characters, npcs, animation prototyping. critters - enemy pack 3 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-critters-enemy-pack-3",
+      "path": "2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/weasel-fisherman/pngs/weasel-fisherman-hurt.png",
+      "src": "/2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/weasel-fisherman/pngs/weasel-fisherman-hurt.png",
+      "label": "Weasel Fisherman Hurt",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 384,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.06585693359375,
+        "transparentCoverage": 0.93414306640625,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Weasel Fisherman Hurt is an animated 2D character sample from Critters - Enemy Pack 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "searchText": "weasel fisherman hurt 2d/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/weasel-fisherman/pngs/weasel-fisherman-hurt.png critters - enemy pack 3 character weasel fisherman hurt is an animated 2d character sample from critters - enemy pack 3. useful for player characters, npcs, animation prototyping. critters - enemy pack 3 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-critters-enemy-pack-3",
+      "path": "2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/weasel-fisherman/pngs/weasel-fisherman-idle.png",
+      "src": "/2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/weasel-fisherman/pngs/weasel-fisherman-idle.png",
+      "label": "Weasel Fisherman Idle",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 480,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.06173406862745098,
+        "transparentCoverage": 0.938265931372549,
+        "contentRowRuns": 1,
+        "contentColRuns": 5,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Weasel Fisherman Idle is an animated 2D character sample from Critters - Enemy Pack 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "searchText": "weasel fisherman idle 2d/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/weasel-fisherman/pngs/weasel-fisherman-idle.png critters - enemy pack 3 character weasel fisherman idle is an animated 2d character sample from critters - enemy pack 3. useful for player characters, npcs, animation prototyping. critters - enemy pack 3 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-critters-enemy-pack-3",
+      "path": "2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/weasel-fisherman/pngs/weasel-fisherman-jump.png",
+      "src": "/2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/weasel-fisherman/pngs/weasel-fisherman-jump.png",
+      "label": "Weasel Fisherman Jump",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 576,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.06631540697674419,
+        "transparentCoverage": 0.9336845930232558,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Weasel Fisherman Jump is an animated 2D character sample from Critters - Enemy Pack 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "searchText": "weasel fisherman jump 2d/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/weasel-fisherman/pngs/weasel-fisherman-jump.png critters - enemy pack 3 character weasel fisherman jump is an animated 2d character sample from critters - enemy pack 3. useful for player characters, npcs, animation prototyping. critters - enemy pack 3 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-critters-enemy-pack-3",
+      "path": "2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/weasel-fisherman/pngs/weasel-fisherman-run.png",
+      "src": "/2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/weasel-fisherman/pngs/weasel-fisherman-run.png",
+      "label": "Weasel Fisherman Run",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 768,
+        "height": 96,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.06298828125,
+        "transparentCoverage": 0.93701171875,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Weasel Fisherman Run is an animated 2D character sample from Critters - Enemy Pack 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "searchText": "weasel fisherman run 2d/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/weasel-fisherman/pngs/weasel-fisherman-run.png critters - enemy pack 3 character weasel fisherman run is an animated 2d character sample from critters - enemy pack 3. useful for player characters, npcs, animation prototyping. critters - enemy pack 3 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-critters-enemy-pack-3",
+      "path": "2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/projectile/pngs/sling-ball.png",
+      "src": "/2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/projectile/pngs/sling-ball.png",
+      "label": "Sling Ball",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 64,
+        "height": 16,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.046875,
+        "transparentCoverage": 0.953125,
+        "contentRowRuns": 1,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Sling Ball is an animated 2D character sample from Critters - Enemy Pack 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "searchText": "sling ball 2d/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/projectile/pngs/sling-ball.png critters - enemy pack 3 character sling ball is an animated 2d character sample from critters - enemy pack 3. useful for player characters, npcs, animation prototyping. critters - enemy pack 3 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-critters-enemy-pack-3",
+      "path": "2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/catfish-warrior/pngs/catfish-warrior-attack-01.png",
+      "src": "/2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/catfish-warrior/pngs/catfish-warrior-attack-01.png",
+      "label": "Catfish Warrior Attack 01",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 896,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.052787162162162164,
+        "transparentCoverage": 0.9472128378378378,
+        "contentRowRuns": 1,
+        "contentColRuns": 7,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Catfish Warrior Attack 01 is an animated 2D character sample from Critters - Enemy Pack 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "searchText": "catfish warrior attack 01 2d/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/catfish-warrior/pngs/catfish-warrior-attack-01.png critters - enemy pack 3 character catfish warrior attack 01 is an animated 2d character sample from critters - enemy pack 3. useful for player characters, npcs, animation prototyping. critters - enemy pack 3 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-critters-enemy-pack-3",
+      "path": "2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/catfish-warrior/pngs/catfish-warrior-attack-02.png",
+      "src": "/2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/catfish-warrior/pngs/catfish-warrior-attack-02.png",
+      "label": "Catfish Warrior Attack 02",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 896,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.05891047297297297,
+        "transparentCoverage": 0.941089527027027,
+        "contentRowRuns": 1,
+        "contentColRuns": 7,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Catfish Warrior Attack 02 is an animated 2D character sample from Critters - Enemy Pack 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "searchText": "catfish warrior attack 02 2d/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/catfish-warrior/pngs/catfish-warrior-attack-02.png critters - enemy pack 3 character catfish warrior attack 02 is an animated 2d character sample from critters - enemy pack 3. useful for player characters, npcs, animation prototyping. critters - enemy pack 3 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-critters-enemy-pack-3",
+      "path": "2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/turtle-king/pngs/turtle-king-attack-01.png",
+      "src": "/2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/turtle-king/pngs/turtle-king-attack-01.png",
+      "label": "Turtle King Attack 01",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 1024,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.052490234375,
+        "transparentCoverage": 0.947509765625,
+        "contentRowRuns": 1,
+        "contentColRuns": 9,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Turtle King Attack 01 is an animated 2D character sample from Critters - Enemy Pack 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "searchText": "turtle king attack 01 2d/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/turtle-king/pngs/turtle-king-attack-01.png critters - enemy pack 3 character turtle king attack 01 is an animated 2d character sample from critters - enemy pack 3. useful for player characters, npcs, animation prototyping. critters - enemy pack 3 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-critters-enemy-pack-3",
+      "path": "2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/turtle-king/pngs/turtle-king-attack-02.png",
+      "src": "/2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/turtle-king/pngs/turtle-king-attack-02.png",
+      "label": "Turtle King Attack 02",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 768,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.060592296511627904,
+        "transparentCoverage": 0.9394077034883721,
+        "contentRowRuns": 1,
+        "contentColRuns": 7,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Turtle King Attack 02 is an animated 2D character sample from Critters - Enemy Pack 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "searchText": "turtle king attack 02 2d/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/turtle-king/pngs/turtle-king-attack-02.png critters - enemy pack 3 character turtle king attack 02 is an animated 2d character sample from critters - enemy pack 3. useful for player characters, npcs, animation prototyping. critters - enemy pack 3 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-critters-enemy-pack-3",
+      "path": "2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/turtle-king/pngs/turtle-king-attack-03.png",
+      "src": "/2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/turtle-king/pngs/turtle-king-attack-03.png",
+      "label": "Turtle King Attack 03",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 768,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.048328488372093026,
+        "transparentCoverage": 0.951671511627907,
+        "contentRowRuns": 1,
+        "contentColRuns": 7,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Turtle King Attack 03 is an animated 2D character sample from Critters - Enemy Pack 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "searchText": "turtle king attack 03 2d/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/turtle-king/pngs/turtle-king-attack-03.png critters - enemy pack 3 character turtle king attack 03 is an animated 2d character sample from critters - enemy pack 3. useful for player characters, npcs, animation prototyping. critters - enemy pack 3 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "foozlecc-critters-enemy-pack-3",
+      "path": "2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/projectile/pngs/spear-pose-0.png",
+      "src": "/2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/projectile/pngs/spear-pose-0.png",
+      "label": "Spear Pose 0",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 48,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.053385416666666664,
+        "transparentCoverage": 0.9466145833333334,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Spear Pose 0 is a static 2D character sample from Critters - Enemy Pack 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "critters - enemy pack 3",
+        "static"
+      ],
+      "searchText": "spear pose 0 2d/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/projectile/pngs/spear-pose-0.png critters - enemy pack 3 character spear pose 0 is a static 2d character sample from critters - enemy pack 3. useful for player characters, npcs, animation prototyping. critters - enemy pack 3 player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "foozlecc-critters-enemy-pack-3",
+      "path": "2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/projectile/pngs/spear-pose-1.png",
+      "src": "/2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/projectile/pngs/spear-pose-1.png",
+      "label": "Spear Pose 1",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 48,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.053385416666666664,
+        "transparentCoverage": 0.9466145833333334,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Spear Pose 1 is a static 2D character sample from Critters - Enemy Pack 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "critters - enemy pack 3",
+        "static"
+      ],
+      "searchText": "spear pose 1 2d/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/projectile/pngs/spear-pose-1.png critters - enemy pack 3 character spear pose 1 is a static 2d character sample from critters - enemy pack 3. useful for player characters, npcs, animation prototyping. critters - enemy pack 3 player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "foozlecc-critters-enemy-pack-3",
+      "path": "2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/projectile/pngs/spear-pose-2.png",
+      "src": "/2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/projectile/pngs/spear-pose-2.png",
+      "label": "Spear Pose 2",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 48,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.053385416666666664,
+        "transparentCoverage": 0.9466145833333334,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Spear Pose 2 is a static 2D character sample from Critters - Enemy Pack 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "critters - enemy pack 3",
+        "static"
+      ],
+      "searchText": "spear pose 2 2d/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/projectile/pngs/spear-pose-2.png critters - enemy pack 3 character spear pose 2 is a static 2d character sample from critters - enemy pack 3. useful for player characters, npcs, animation prototyping. critters - enemy pack 3 player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "foozlecc-critters-enemy-pack-3",
+      "path": "2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/projectile/pngs/trident-pose-0.png",
+      "src": "/2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/projectile/pngs/trident-pose-0.png",
+      "label": "Trident Pose 0",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 48,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.06727430555555555,
+        "transparentCoverage": 0.9327256944444444,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Trident Pose 0 is a static 2D character sample from Critters - Enemy Pack 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "critters - enemy pack 3",
+        "static"
+      ],
+      "searchText": "trident pose 0 2d/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/projectile/pngs/trident-pose-0.png critters - enemy pack 3 character trident pose 0 is a static 2d character sample from critters - enemy pack 3. useful for player characters, npcs, animation prototyping. critters - enemy pack 3 player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "foozlecc-critters-enemy-pack-3",
+      "path": "2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/projectile/pngs/trident-pose-1.png",
+      "src": "/2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/projectile/pngs/trident-pose-1.png",
+      "label": "Trident Pose 1",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 48,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.06727430555555555,
+        "transparentCoverage": 0.9327256944444444,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Trident Pose 1 is a static 2D character sample from Critters - Enemy Pack 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "critters - enemy pack 3",
+        "static"
+      ],
+      "searchText": "trident pose 1 2d/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/projectile/pngs/trident-pose-1.png critters - enemy pack 3 character trident pose 1 is a static 2d character sample from critters - enemy pack 3. useful for player characters, npcs, animation prototyping. critters - enemy pack 3 player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "foozlecc-critters-enemy-pack-3",
+      "path": "2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/projectile/pngs/trident-pose-2.png",
+      "src": "/2D/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/projectile/pngs/trident-pose-2.png",
+      "label": "Trident Pose 2",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 48,
+        "height": 48,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.06727430555555555,
+        "transparentCoverage": 0.9327256944444444,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Trident Pose 2 is a static 2D character sample from Critters - Enemy Pack 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "critters - enemy pack 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "critters - enemy pack 3",
+        "static"
+      ],
+      "searchText": "trident pose 2 2d/foozlecc-critters-enemy-pack-3/extracted/foozle-2dc0026-critters-enemypack3-pixel-art/foozle-2dc0026-critters-enemypack3-pixel-art/projectile/pngs/trident-pose-2.png critters - enemy pack 3 character trident pose 2 is a static 2d character sample from critters - enemy pack 3. useful for player characters, npcs, animation prototyping. critters - enemy pack 3 player characters npcs animation prototyping 2d art static"
+    }
+  ]
+}

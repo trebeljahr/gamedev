@@ -1,0 +1,74 @@
+{
+  "folder": "schwarnhild-summer-plains-tileset-and-asset-pack-32x32-pixels",
+  "title": "Summer Plains Tileset and Asset Pack 32x32 Pixels",
+  "author": "schwarnhild",
+  "author_url": "https://schwarnhild.itch.io",
+  "url": "https://schwarnhild.itch.io/summer-plains-tileset-and-asset-pack-32x32-pixels",
+  "game_id": 2537336,
+  "license_class": "Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms)",
+  "attribution": "Appreciated / not required",
+  "theme": "Environments",
+  "description": "Summer Plains Tileset And Asset Pack 32 X 32 Pixels is a 2D environments art pack by schwarnhild. Use it for level building, tilemaps, environment dressing. License: Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). Attribution: Appreciated / not required.",
+  "category": "Environments",
+  "themes": [
+    "environments",
+    "urban"
+  ],
+  "useCases": [
+    "level building",
+    "tilemaps",
+    "environment dressing"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "environments",
+    "sprite",
+    "urban"
+  ],
+  "searchText": "summer plains tileset and asset pack 32x32 pixels schwarnhild-summer-plains-tileset-and-asset-pack-32x32-pixels schwarnhild environments free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms) appreciated / not required summer plains tileset and asset pack 32 x 32 pixels is a 2d environments art pack by schwarnhild. use it for level building, tilemaps, environment dressing. license: free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). attribution: appreciated / not required. environments urban level building tilemaps environment dressing 2d art sprite",
+  "sampleCount": 1,
+  "samples": [
+    {
+      "packFolder": "schwarnhild-summer-plains-tileset-and-asset-pack-32x32-pixels",
+      "path": "2D/schwarnhild-summer-plains-tileset-and-asset-pack-32x32-pixels/extracted/summer-plains-v1-0-standard/summer-plains-v1-0-standard/tiles.png",
+      "src": "/2D/schwarnhild-summer-plains-tileset-and-asset-pack-32x32-pixels/extracted/summer-plains-v1-0-standard/summer-plains-v1-0-standard/tiles.png",
+      "label": "Tiles",
+      "kind": "tile",
+      "animated": false,
+      "inspection": {
+        "width": 416,
+        "height": 384,
+        "bgKind": "mixed",
+        "alphaCoverage": 0.7400688559322034,
+        "transparentCoverage": 0.2599311440677966,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Tiles is a static 2D tile sample from Summer Plains Tileset and Asset Pack 32x32 Pixels. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "summer plains tileset and asset pack 32x32 pixels",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "modular",
+        "static",
+        "summer plains tileset and asset pack 32x32 pixels",
+        "tile"
+      ],
+      "searchText": "tiles 2d/schwarnhild-summer-plains-tileset-and-asset-pack-32x32-pixels/extracted/summer-plains-v1-0-standard/summer-plains-v1-0-standard/tiles.png summer plains tileset and asset pack 32x32 pixels tile tiles is a static 2d tile sample from summer plains tileset and asset pack 32x32 pixels. useful for level building, tilemaps, environment dressing. summer plains tileset and asset pack 32x32 pixels level building tilemaps environment dressing 2d art modular static"
+    }
+  ]
+}

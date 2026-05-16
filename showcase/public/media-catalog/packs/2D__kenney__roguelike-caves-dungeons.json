@@ -1,0 +1,197 @@
+{
+  "folder": "2D/kenney/roguelike-caves-dungeons",
+  "title": "Roguelike Caves Dungeons",
+  "author": "Kenney",
+  "author_url": "https://kenney.nl/",
+  "url": "https://kenney.nl/assets/category:2D",
+  "game_id": null,
+  "license_class": "CC0 1.0 (Creative Commons Zero)",
+  "attribution": "Optional",
+  "theme": "General",
+  "description": "Roguelike Caves Dungeons is a 2D general art pack by Kenney. Use it for level building, tilemaps, environment dressing. License: CC0 1.0 (Creative Commons Zero). Attribution: Optional.",
+  "category": "General",
+  "themes": [
+    "general",
+    "roguelike caves dungeons"
+  ],
+  "useCases": [
+    "level building",
+    "tilemaps",
+    "environment dressing"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "general",
+    "roguelike caves dungeons",
+    "sprite"
+  ],
+  "searchText": "roguelike caves dungeons 2d/kenney/roguelike-caves-dungeons kenney general cc0 1.0 (creative commons zero) optional roguelike caves dungeons is a 2d general art pack by kenney. use it for level building, tilemaps, environment dressing. license: cc0 1.0 (creative commons zero). attribution: optional. general roguelike caves dungeons level building tilemaps environment dressing 2d art sprite",
+  "sampleCount": 4,
+  "samples": [
+    {
+      "packFolder": "2D/kenney/roguelike-caves-dungeons",
+      "path": "2D/kenney/roguelike-caves-dungeons/extracted/spritesheet/roguelikedungeon-transparent.png",
+      "src": "/2D/kenney/roguelike-caves-dungeons/extracted/spritesheet/roguelikedungeon-transparent.png",
+      "label": "Roguelikedungeon Transparent",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 492,
+        "height": 305,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.7007910770440252,
+        "transparentCoverage": 0.29920892295597484,
+        "contentRowRuns": 12,
+        "contentColRuns": 17,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 8,
+        "cellMedianHeight": 8
+      },
+      "promo": false,
+      "description": "Roguelikedungeon Transparent is an animated 2D image sample from Roguelike Caves Dungeons. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "roguelike caves dungeons"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "roguelike caves dungeons"
+      ],
+      "searchText": "roguelikedungeon transparent 2d/kenney/roguelike-caves-dungeons/extracted/spritesheet/roguelikedungeon-transparent.png roguelike caves dungeons image roguelikedungeon transparent is an animated 2d image sample from roguelike caves dungeons. useful for player characters, npcs, animation prototyping. roguelike caves dungeons player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "2D/kenney/roguelike-caves-dungeons",
+      "path": "2D/kenney/roguelike-caves-dungeons/spritesheet/roguelikedungeon-transparent.png",
+      "src": "/2D/kenney/roguelike-caves-dungeons/spritesheet/roguelikedungeon-transparent.png",
+      "label": "Roguelikedungeon Transparent",
+      "kind": "image",
+      "animated": true,
+      "inspection": {
+        "width": 492,
+        "height": 305,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.7007910770440252,
+        "transparentCoverage": 0.29920892295597484,
+        "contentRowRuns": 12,
+        "contentColRuns": 17,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 8,
+        "cellMedianHeight": 8
+      },
+      "promo": false,
+      "description": "Roguelikedungeon Transparent is an animated 2D image sample from Roguelike Caves Dungeons. Useful for player characters, NPCs, animation prototyping.",
+      "category": "image",
+      "themes": [
+        "image",
+        "roguelike caves dungeons"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "image",
+        "roguelike caves dungeons"
+      ],
+      "searchText": "roguelikedungeon transparent 2d/kenney/roguelike-caves-dungeons/spritesheet/roguelikedungeon-transparent.png roguelike caves dungeons image roguelikedungeon transparent is an animated 2d image sample from roguelike caves dungeons. useful for player characters, npcs, animation prototyping. roguelike caves dungeons player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "2D/kenney/roguelike-caves-dungeons",
+      "path": "2D/kenney/roguelike-caves-dungeons/extracted/spritesheet/roguelikedungeon-magenta.png",
+      "src": "/2D/kenney/roguelike-caves-dungeons/extracted/spritesheet/roguelikedungeon-magenta.png",
+      "label": "Roguelikedungeon Magenta",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 492,
+        "height": 305,
+        "bgKind": "mixed",
+        "alphaCoverage": 1,
+        "transparentCoverage": 0,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Roguelikedungeon Magenta is a static 2D character sample from Roguelike Caves Dungeons. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "roguelike caves dungeons"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "roguelike caves dungeons",
+        "static"
+      ],
+      "searchText": "roguelikedungeon magenta 2d/kenney/roguelike-caves-dungeons/extracted/spritesheet/roguelikedungeon-magenta.png roguelike caves dungeons character roguelikedungeon magenta is a static 2d character sample from roguelike caves dungeons. useful for player characters, npcs, animation prototyping. roguelike caves dungeons player characters npcs animation prototyping 2d art static"
+    },
+    {
+      "packFolder": "2D/kenney/roguelike-caves-dungeons",
+      "path": "2D/kenney/roguelike-caves-dungeons/spritesheet/roguelikedungeon-magenta.png",
+      "src": "/2D/kenney/roguelike-caves-dungeons/spritesheet/roguelikedungeon-magenta.png",
+      "label": "Roguelikedungeon Magenta",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 492,
+        "height": 305,
+        "bgKind": "mixed",
+        "alphaCoverage": 1,
+        "transparentCoverage": 0,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Roguelikedungeon Magenta is a static 2D character sample from Roguelike Caves Dungeons. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "roguelike caves dungeons"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "roguelike caves dungeons",
+        "static"
+      ],
+      "searchText": "roguelikedungeon magenta 2d/kenney/roguelike-caves-dungeons/spritesheet/roguelikedungeon-magenta.png roguelike caves dungeons character roguelikedungeon magenta is a static 2d character sample from roguelike caves dungeons. useful for player characters, npcs, animation prototyping. roguelike caves dungeons player characters npcs animation prototyping 2d art static"
+    }
+  ]
+}

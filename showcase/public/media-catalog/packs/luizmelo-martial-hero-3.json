@@ -1,0 +1,355 @@
+{
+  "folder": "luizmelo-martial-hero-3",
+  "title": "Martial Hero 3",
+  "author": "luizmelo",
+  "author_url": "https://luizmelo.itch.io",
+  "url": "https://luizmelo.itch.io/martial-hero-3",
+  "game_id": null,
+  "license_class": "CC0 1.0 (Creative Commons Zero)",
+  "attribution": "Optional",
+  "theme": "Characters",
+  "description": "Martial Hero 3 is a 2D characters art pack by luizmelo. Use it for player characters, NPCs, animation prototyping. License: CC0 1.0 (Creative Commons Zero). Attribution: Optional.",
+  "category": "Characters",
+  "themes": [
+    "characters",
+    "martial hero 3"
+  ],
+  "useCases": [
+    "player characters",
+    "NPCs",
+    "animation prototyping"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "characters",
+    "martial hero 3",
+    "sprite"
+  ],
+  "searchText": "martial hero 3 luizmelo-martial-hero-3 luizmelo characters cc0 1.0 (creative commons zero) optional martial hero 3 is a 2d characters art pack by luizmelo. use it for player characters, npcs, animation prototyping. license: cc0 1.0 (creative commons zero). attribution: optional. characters martial hero 3 player characters npcs animation prototyping 2d art sprite",
+  "sampleCount": 8,
+  "samples": [
+    {
+      "packFolder": "luizmelo-martial-hero-3",
+      "path": "2D/luizmelo-martial-hero-3/extracted/martial-hero-3/martial-hero-3/sprite/death.png",
+      "src": "/2D/luizmelo-martial-hero-3/extracted/martial-hero-3/martial-hero-3/sprite/death.png",
+      "label": "Death",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 1386,
+        "height": 126,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.026324728260869564,
+        "transparentCoverage": 0.9736752717391305,
+        "contentRowRuns": 2,
+        "contentColRuns": 12,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 4,
+        "cellMedianHeight": 4
+      },
+      "promo": false,
+      "description": "Death is an animated 2D character sample from Martial Hero 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "martial hero 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "martial hero 3"
+      ],
+      "searchText": "death 2d/luizmelo-martial-hero-3/extracted/martial-hero-3/martial-hero-3/sprite/death.png martial hero 3 character death is an animated 2d character sample from martial hero 3. useful for player characters, npcs, animation prototyping. martial hero 3 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "luizmelo-martial-hero-3",
+      "path": "2D/luizmelo-martial-hero-3/extracted/martial-hero-3/martial-hero-3/sprite/idle.png",
+      "src": "/2D/luizmelo-martial-hero-3/extracted/martial-hero-3/martial-hero-3/sprite/idle.png",
+      "label": "Idle",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 1260,
+        "height": 126,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.045973557692307696,
+        "transparentCoverage": 0.9540264423076923,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Idle is an animated 2D character sample from Martial Hero 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "martial hero 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "martial hero 3"
+      ],
+      "searchText": "idle 2d/luizmelo-martial-hero-3/extracted/martial-hero-3/martial-hero-3/sprite/idle.png martial hero 3 character idle is an animated 2d character sample from martial hero 3. useful for player characters, npcs, animation prototyping. martial hero 3 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "luizmelo-martial-hero-3",
+      "path": "2D/luizmelo-martial-hero-3/extracted/martial-hero-3/martial-hero-3/sprite/take-hit.png",
+      "src": "/2D/luizmelo-martial-hero-3/extracted/martial-hero-3/martial-hero-3/sprite/take-hit.png",
+      "label": "Take Hit",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 378,
+        "height": 126,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.043704044117647056,
+        "transparentCoverage": 0.9562959558823529,
+        "contentRowRuns": 1,
+        "contentColRuns": 3,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Take Hit is an animated 2D character sample from Martial Hero 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "martial hero 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "martial hero 3"
+      ],
+      "searchText": "take hit 2d/luizmelo-martial-hero-3/extracted/martial-hero-3/martial-hero-3/sprite/take-hit.png martial hero 3 character take hit is an animated 2d character sample from martial hero 3. useful for player characters, npcs, animation prototyping. martial hero 3 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "luizmelo-martial-hero-3",
+      "path": "2D/luizmelo-martial-hero-3/extracted/martial-hero-3/martial-hero-3/sprite/going-down.png",
+      "src": "/2D/luizmelo-martial-hero-3/extracted/martial-hero-3/martial-hero-3/sprite/going-down.png",
+      "label": "Going Down",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 378,
+        "height": 126,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.04154411764705882,
+        "transparentCoverage": 0.9584558823529412,
+        "contentRowRuns": 1,
+        "contentColRuns": 3,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Going Down is an animated 2D character sample from Martial Hero 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "martial hero 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "martial hero 3"
+      ],
+      "searchText": "going down 2d/luizmelo-martial-hero-3/extracted/martial-hero-3/martial-hero-3/sprite/going-down.png martial hero 3 character going down is an animated 2d character sample from martial hero 3. useful for player characters, npcs, animation prototyping. martial hero 3 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "luizmelo-martial-hero-3",
+      "path": "2D/luizmelo-martial-hero-3/extracted/martial-hero-3/martial-hero-3/sprite/going-up.png",
+      "src": "/2D/luizmelo-martial-hero-3/extracted/martial-hero-3/martial-hero-3/sprite/going-up.png",
+      "label": "Going Up",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 378,
+        "height": 126,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.04692095588235294,
+        "transparentCoverage": 0.9530790441176471,
+        "contentRowRuns": 1,
+        "contentColRuns": 3,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Going Up is an animated 2D character sample from Martial Hero 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "martial hero 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "martial hero 3"
+      ],
+      "searchText": "going up 2d/luizmelo-martial-hero-3/extracted/martial-hero-3/martial-hero-3/sprite/going-up.png martial hero 3 character going up is an animated 2d character sample from martial hero 3. useful for player characters, npcs, animation prototyping. martial hero 3 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "luizmelo-martial-hero-3",
+      "path": "2D/luizmelo-martial-hero-3/extracted/martial-hero-3/martial-hero-3/sprite/attack1.png",
+      "src": "/2D/luizmelo-martial-hero-3/extracted/martial-hero-3/martial-hero-3/sprite/attack1.png",
+      "label": "Attack1",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 882,
+        "height": 126,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.05880489864864865,
+        "transparentCoverage": 0.9411951013513513,
+        "contentRowRuns": 1,
+        "contentColRuns": 7,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Attack1 is an animated 2D character sample from Martial Hero 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "martial hero 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "martial hero 3"
+      ],
+      "searchText": "attack1 2d/luizmelo-martial-hero-3/extracted/martial-hero-3/martial-hero-3/sprite/attack1.png martial hero 3 character attack1 is an animated 2d character sample from martial hero 3. useful for player characters, npcs, animation prototyping. martial hero 3 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "luizmelo-martial-hero-3",
+      "path": "2D/luizmelo-martial-hero-3/extracted/martial-hero-3/martial-hero-3/sprite/attack2.png",
+      "src": "/2D/luizmelo-martial-hero-3/extracted/martial-hero-3/martial-hero-3/sprite/attack2.png",
+      "label": "Attack2",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 756,
+        "height": 126,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.06858648255813954,
+        "transparentCoverage": 0.9314135174418605,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Attack2 is an animated 2D character sample from Martial Hero 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "martial hero 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "martial hero 3"
+      ],
+      "searchText": "attack2 2d/luizmelo-martial-hero-3/extracted/martial-hero-3/martial-hero-3/sprite/attack2.png martial hero 3 character attack2 is an animated 2d character sample from martial hero 3. useful for player characters, npcs, animation prototyping. martial hero 3 player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "luizmelo-martial-hero-3",
+      "path": "2D/luizmelo-martial-hero-3/extracted/martial-hero-3/martial-hero-3/sprite/attack3.png",
+      "src": "/2D/luizmelo-martial-hero-3/extracted/martial-hero-3/martial-hero-3/sprite/attack3.png",
+      "label": "Attack3",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 1134,
+        "height": 126,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.039760044642857144,
+        "transparentCoverage": 0.9602399553571429,
+        "contentRowRuns": 1,
+        "contentColRuns": 11,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Attack3 is an animated 2D character sample from Martial Hero 3. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "martial hero 3"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "martial hero 3"
+      ],
+      "searchText": "attack3 2d/luizmelo-martial-hero-3/extracted/martial-hero-3/martial-hero-3/sprite/attack3.png martial hero 3 character attack3 is an animated 2d character sample from martial hero 3. useful for player characters, npcs, animation prototyping. martial hero 3 player characters npcs animation prototyping 2d animated art"
+    }
+  ]
+}

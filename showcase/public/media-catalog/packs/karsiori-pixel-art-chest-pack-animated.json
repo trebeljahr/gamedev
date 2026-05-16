@@ -1,0 +1,2492 @@
+{
+  "folder": "karsiori-pixel-art-chest-pack-animated",
+  "title": "FREE Pixel Art Chest Pack - Animated",
+  "author": "karsiori",
+  "author_url": "https://karsiori.itch.io",
+  "url": "https://karsiori.itch.io/pixel-art-chest-pack-animated",
+  "game_id": 2230382,
+  "license_class": "CC0 1.0 (Creative Commons Zero)",
+  "attribution": "Optional",
+  "theme": "Icons & Items",
+  "description": "Free Pixel Art Chest Pack Animated is a 2D icons & items art pack by karsiori. Use it for inventory UI, loot, pickup feedback. License: CC0 1.0 (Creative Commons Zero). Attribution: Optional.",
+  "category": "Icons & Items",
+  "themes": [
+    "free pixel art chest pack - animated",
+    "icons & items"
+  ],
+  "useCases": [
+    "inventory UI",
+    "loot",
+    "pickup feedback"
+  ],
+  "tags": [
+    "2d",
+    "animated",
+    "art",
+    "free pixel art chest pack - animated",
+    "icons & items",
+    "sprite"
+  ],
+  "searchText": "free pixel art chest pack - animated karsiori-pixel-art-chest-pack-animated karsiori icons & items cc0 1.0 (creative commons zero) optional free pixel art chest pack animated is a 2d icons & items art pack by karsiori. use it for inventory ui, loot, pickup feedback. license: cc0 1.0 (creative commons zero). attribution: optional. free pixel art chest pack - animated icons & items inventory ui loot pickup feedback 2d animated art sprite",
+  "sampleCount": 60,
+  "samples": [
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-1/golden-chest-1-sprites/golden-chest-1-frame-00.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-1/golden-chest-1-sprites/golden-chest-1-frame-00.png",
+      "label": "Golden Chest 1 Frame 00",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 40,
+        "height": 25,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.711,
+        "transparentCoverage": 0.289,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Golden Chest 1 Frame 00 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "golden chest 1 frame 00 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-1/golden-chest-1-sprites/golden-chest-1-frame-00.png free pixel art chest pack - animated icon golden chest 1 frame 00 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-1/golden-chest-1-sprites/golden-chest-1-frame-01.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-1/golden-chest-1-sprites/golden-chest-1-frame-01.png",
+      "label": "Golden Chest 1 Frame 01",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 40,
+        "height": 25,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.673,
+        "transparentCoverage": 0.327,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Golden Chest 1 Frame 01 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "golden chest 1 frame 01 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-1/golden-chest-1-sprites/golden-chest-1-frame-01.png free pixel art chest pack - animated icon golden chest 1 frame 01 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-1/golden-chest-1-sprites/golden-chest-1-frame-02.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-1/golden-chest-1-sprites/golden-chest-1-frame-02.png",
+      "label": "Golden Chest 1 Frame 02",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 40,
+        "height": 25,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.705,
+        "transparentCoverage": 0.295,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Golden Chest 1 Frame 02 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "golden chest 1 frame 02 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-1/golden-chest-1-sprites/golden-chest-1-frame-02.png free pixel art chest pack - animated icon golden chest 1 frame 02 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-1/golden-chest-1-sprites/golden-chest-1-frame-03.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-1/golden-chest-1-sprites/golden-chest-1-frame-03.png",
+      "label": "Golden Chest 1 Frame 03",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 40,
+        "height": 25,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.846,
+        "transparentCoverage": 0.154,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Golden Chest 1 Frame 03 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "golden chest 1 frame 03 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-1/golden-chest-1-sprites/golden-chest-1-frame-03.png free pixel art chest pack - animated icon golden chest 1 frame 03 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-1/golden-chest-1-spritesheet.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-1/golden-chest-1-spritesheet.png",
+      "label": "Golden Chest 1 Spritesheet",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 200,
+        "height": 25,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.7782,
+        "transparentCoverage": 0.2218,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Golden Chest 1 Spritesheet is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "golden chest 1 spritesheet 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-1/golden-chest-1-spritesheet.png free pixel art chest pack - animated icon golden chest 1 spritesheet is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-2/golden-chest-2-sprites/golden-chest-2-frame-00.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-2/golden-chest-2-sprites/golden-chest-2-frame-00.png",
+      "label": "Golden Chest 2 Frame 00",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 41,
+        "height": 25,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.6741463414634147,
+        "transparentCoverage": 0.3258536585365854,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Golden Chest 2 Frame 00 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "golden chest 2 frame 00 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-2/golden-chest-2-sprites/golden-chest-2-frame-00.png free pixel art chest pack - animated icon golden chest 2 frame 00 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-2/golden-chest-2-sprites/golden-chest-2-frame-01.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-2/golden-chest-2-sprites/golden-chest-2-frame-01.png",
+      "label": "Golden Chest 2 Frame 01",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 41,
+        "height": 25,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.6741463414634147,
+        "transparentCoverage": 0.3258536585365854,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Golden Chest 2 Frame 01 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "golden chest 2 frame 01 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-2/golden-chest-2-sprites/golden-chest-2-frame-01.png free pixel art chest pack - animated icon golden chest 2 frame 01 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-2/golden-chest-2-sprites/golden-chest-2-frame-02.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-2/golden-chest-2-sprites/golden-chest-2-frame-02.png",
+      "label": "Golden Chest 2 Frame 02",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 41,
+        "height": 25,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.6360975609756098,
+        "transparentCoverage": 0.36390243902439023,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Golden Chest 2 Frame 02 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "golden chest 2 frame 02 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-2/golden-chest-2-sprites/golden-chest-2-frame-02.png free pixel art chest pack - animated icon golden chest 2 frame 02 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-2/golden-chest-2-sprites/golden-chest-2-frame-03.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-2/golden-chest-2-sprites/golden-chest-2-frame-03.png",
+      "label": "Golden Chest 2 Frame 03",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 41,
+        "height": 25,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.7053658536585365,
+        "transparentCoverage": 0.2946341463414634,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Golden Chest 2 Frame 03 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "golden chest 2 frame 03 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-2/golden-chest-2-sprites/golden-chest-2-frame-03.png free pixel art chest pack - animated icon golden chest 2 frame 03 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-2/golden-chest-2-sprites/golden-chest-2-frame-04.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-2/golden-chest-2-sprites/golden-chest-2-frame-04.png",
+      "label": "Golden Chest 2 Frame 04",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 41,
+        "height": 25,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.8058536585365854,
+        "transparentCoverage": 0.19414634146341464,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Golden Chest 2 Frame 04 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "golden chest 2 frame 04 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-2/golden-chest-2-sprites/golden-chest-2-frame-04.png free pixel art chest pack - animated icon golden chest 2 frame 04 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-2/golden-chest-2-sprites/golden-chest-2-frame-05.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-2/golden-chest-2-sprites/golden-chest-2-frame-05.png",
+      "label": "Golden Chest 2 Frame 05",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 41,
+        "height": 25,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.9121951219512195,
+        "transparentCoverage": 0.08780487804878048,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Golden Chest 2 Frame 05 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "golden chest 2 frame 05 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-2/golden-chest-2-sprites/golden-chest-2-frame-05.png free pixel art chest pack - animated icon golden chest 2 frame 05 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-2/golden-chest-2-spritesheet.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-2/golden-chest-2-spritesheet.png",
+      "label": "Golden Chest 2 Spritesheet",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 246,
+        "height": 25,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.7346341463414634,
+        "transparentCoverage": 0.2653658536585366,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Golden Chest 2 Spritesheet is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "golden chest 2 spritesheet 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-2/golden-chest-2-spritesheet.png free pixel art chest pack - animated icon golden chest 2 spritesheet is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-3/golden-chest-3-sprites/golden-chest-3-frame-00.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-3/golden-chest-3-sprites/golden-chest-3-frame-00.png",
+      "label": "Golden Chest 3 Frame 00",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 40,
+        "height": 26,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.7173076923076923,
+        "transparentCoverage": 0.2826923076923077,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Golden Chest 3 Frame 00 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "golden chest 3 frame 00 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-3/golden-chest-3-sprites/golden-chest-3-frame-00.png free pixel art chest pack - animated icon golden chest 3 frame 00 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-3/golden-chest-3-sprites/golden-chest-3-frame-01.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-3/golden-chest-3-sprites/golden-chest-3-frame-01.png",
+      "label": "Golden Chest 3 Frame 01",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 40,
+        "height": 26,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.6807692307692308,
+        "transparentCoverage": 0.3192307692307692,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Golden Chest 3 Frame 01 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "golden chest 3 frame 01 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-3/golden-chest-3-sprites/golden-chest-3-frame-01.png free pixel art chest pack - animated icon golden chest 3 frame 01 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-3/golden-chest-3-sprites/golden-chest-3-frame-02.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-3/golden-chest-3-sprites/golden-chest-3-frame-02.png",
+      "label": "Golden Chest 3 Frame 02",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 40,
+        "height": 26,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.7471153846153846,
+        "transparentCoverage": 0.2528846153846154,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Golden Chest 3 Frame 02 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "golden chest 3 frame 02 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-3/golden-chest-3-sprites/golden-chest-3-frame-02.png free pixel art chest pack - animated icon golden chest 3 frame 02 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-3/golden-chest-3-sprites/golden-chest-3-frame-03.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-3/golden-chest-3-sprites/golden-chest-3-frame-03.png",
+      "label": "Golden Chest 3 Frame 03",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 40,
+        "height": 26,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.8432692307692308,
+        "transparentCoverage": 0.15673076923076923,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Golden Chest 3 Frame 03 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "golden chest 3 frame 03 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-3/golden-chest-3-sprites/golden-chest-3-frame-03.png free pixel art chest pack - animated icon golden chest 3 frame 03 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-3/golden-chest-3-sprites/golden-chest-3-frame-04.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-3/golden-chest-3-sprites/golden-chest-3-frame-04.png",
+      "label": "Golden Chest 3 Frame 04",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 40,
+        "height": 26,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.9105769230769231,
+        "transparentCoverage": 0.08942307692307692,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Golden Chest 3 Frame 04 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "golden chest 3 frame 04 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-3/golden-chest-3-sprites/golden-chest-3-frame-04.png free pixel art chest pack - animated icon golden chest 3 frame 04 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-3/golden-chest-3-spritesheet.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-3/golden-chest-3-spritesheet.png",
+      "label": "Golden Chest 3 Spritesheet",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 200,
+        "height": 26,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.7798076923076923,
+        "transparentCoverage": 0.2201923076923077,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Golden Chest 3 Spritesheet is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "golden chest 3 spritesheet 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-3/golden-chest-3-spritesheet.png free pixel art chest pack - animated icon golden chest 3 spritesheet is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/metal-chest/metal-chest-sprites/metal-chest-frame-00.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/metal-chest/metal-chest-sprites/metal-chest-frame-00.png",
+      "label": "Metal Chest Frame 00",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 72,
+        "height": 62,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.6453853046594982,
+        "transparentCoverage": 0.3546146953405018,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Metal Chest Frame 00 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "metal chest frame 00 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/metal-chest/metal-chest-sprites/metal-chest-frame-00.png free pixel art chest pack - animated icon metal chest frame 00 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/metal-chest/metal-chest-sprites/metal-chest-frame-01.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/metal-chest/metal-chest-sprites/metal-chest-frame-01.png",
+      "label": "Metal Chest Frame 01",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 72,
+        "height": 62,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.6449372759856631,
+        "transparentCoverage": 0.3550627240143369,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Metal Chest Frame 01 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "metal chest frame 01 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/metal-chest/metal-chest-sprites/metal-chest-frame-01.png free pixel art chest pack - animated icon metal chest frame 01 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/metal-chest/metal-chest-sprites/metal-chest-frame-02.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/metal-chest/metal-chest-sprites/metal-chest-frame-02.png",
+      "label": "Metal Chest Frame 02",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 72,
+        "height": 62,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.6449372759856631,
+        "transparentCoverage": 0.3550627240143369,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Metal Chest Frame 02 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "metal chest frame 02 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/metal-chest/metal-chest-sprites/metal-chest-frame-02.png free pixel art chest pack - animated icon metal chest frame 02 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/metal-chest/metal-chest-sprites/metal-chest-frame-03.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/metal-chest/metal-chest-sprites/metal-chest-frame-03.png",
+      "label": "Metal Chest Frame 03",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 72,
+        "height": 62,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.6449372759856631,
+        "transparentCoverage": 0.3550627240143369,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Metal Chest Frame 03 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "metal chest frame 03 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/metal-chest/metal-chest-sprites/metal-chest-frame-03.png free pixel art chest pack - animated icon metal chest frame 03 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/metal-chest/metal-chest-sprites/metal-chest-frame-04.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/metal-chest/metal-chest-sprites/metal-chest-frame-04.png",
+      "label": "Metal Chest Frame 04",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 72,
+        "height": 62,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.6449372759856631,
+        "transparentCoverage": 0.3550627240143369,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Metal Chest Frame 04 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "metal chest frame 04 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/metal-chest/metal-chest-sprites/metal-chest-frame-04.png free pixel art chest pack - animated icon metal chest frame 04 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/metal-chest/metal-chest-sprites/metal-chest-frame-05.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/metal-chest/metal-chest-sprites/metal-chest-frame-05.png",
+      "label": "Metal Chest Frame 05",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 72,
+        "height": 62,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.6449372759856631,
+        "transparentCoverage": 0.3550627240143369,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Metal Chest Frame 05 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "metal chest frame 05 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/metal-chest/metal-chest-sprites/metal-chest-frame-05.png free pixel art chest pack - animated icon metal chest frame 05 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/metal-chest/metal-chest-sprites/metal-chest-frame-06.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/metal-chest/metal-chest-sprites/metal-chest-frame-06.png",
+      "label": "Metal Chest Frame 06",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 72,
+        "height": 62,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.6458333333333334,
+        "transparentCoverage": 0.3541666666666667,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Metal Chest Frame 06 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "metal chest frame 06 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/metal-chest/metal-chest-sprites/metal-chest-frame-06.png free pixel art chest pack - animated icon metal chest frame 06 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/metal-chest/metal-chest-sprites/metal-chest-frame-07.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/metal-chest/metal-chest-sprites/metal-chest-frame-07.png",
+      "label": "Metal Chest Frame 07",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 72,
+        "height": 62,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.6426971326164874,
+        "transparentCoverage": 0.3573028673835125,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Metal Chest Frame 07 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "metal chest frame 07 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/metal-chest/metal-chest-sprites/metal-chest-frame-07.png free pixel art chest pack - animated icon metal chest frame 07 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/metal-chest/metal-chest-sprites/metal-chest-frame-08.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/metal-chest/metal-chest-sprites/metal-chest-frame-08.png",
+      "label": "Metal Chest Frame 08",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 72,
+        "height": 62,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.6812275985663082,
+        "transparentCoverage": 0.31877240143369173,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Metal Chest Frame 08 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "metal chest frame 08 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/metal-chest/metal-chest-sprites/metal-chest-frame-08.png free pixel art chest pack - animated icon metal chest frame 08 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/metal-chest/metal-chest-sprites/metal-chest-frame-09.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/metal-chest/metal-chest-sprites/metal-chest-frame-09.png",
+      "label": "Metal Chest Frame 09",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 72,
+        "height": 62,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.7762096774193549,
+        "transparentCoverage": 0.22379032258064516,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Metal Chest Frame 09 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "metal chest frame 09 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/metal-chest/metal-chest-sprites/metal-chest-frame-09.png free pixel art chest pack - animated icon metal chest frame 09 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/metal-chest/metal-chest-sprites/metal-chest-frame-10.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/metal-chest/metal-chest-sprites/metal-chest-frame-10.png",
+      "label": "Metal Chest Frame 10",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 72,
+        "height": 62,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.8897849462365591,
+        "transparentCoverage": 0.11021505376344086,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Metal Chest Frame 10 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "metal chest frame 10 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/metal-chest/metal-chest-sprites/metal-chest-frame-10.png free pixel art chest pack - animated icon metal chest frame 10 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/metal-chest/metal-chest-spritesheet.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/metal-chest/metal-chest-spritesheet.png",
+      "label": "Metal Chest Spritesheet",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 792,
+        "height": 62,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.694921875,
+        "transparentCoverage": 0.305078125,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Metal Chest Spritesheet is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "metal chest spritesheet 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/metal-chest/metal-chest-spritesheet.png free pixel art chest pack - animated icon metal chest spritesheet is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/retro-chest/retro-chest-sprites/retro-chest-frame-00.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/retro-chest/retro-chest-sprites/retro-chest-frame-00.png",
+      "label": "Retro Chest Frame 00",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 43,
+        "height": 40,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.7593023255813953,
+        "transparentCoverage": 0.24069767441860465,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Retro Chest Frame 00 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "retro chest frame 00 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/retro-chest/retro-chest-sprites/retro-chest-frame-00.png free pixel art chest pack - animated icon retro chest frame 00 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/retro-chest/retro-chest-sprites/retro-chest-frame-01.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/retro-chest/retro-chest-sprites/retro-chest-frame-01.png",
+      "label": "Retro Chest Frame 01",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 43,
+        "height": 40,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.7593023255813953,
+        "transparentCoverage": 0.24069767441860465,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Retro Chest Frame 01 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "retro chest frame 01 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/retro-chest/retro-chest-sprites/retro-chest-frame-01.png free pixel art chest pack - animated icon retro chest frame 01 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/retro-chest/retro-chest-sprites/retro-chest-frame-02.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/retro-chest/retro-chest-sprites/retro-chest-frame-02.png",
+      "label": "Retro Chest Frame 02",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 43,
+        "height": 40,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.8308139534883721,
+        "transparentCoverage": 0.1691860465116279,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Retro Chest Frame 02 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "retro chest frame 02 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/retro-chest/retro-chest-sprites/retro-chest-frame-02.png free pixel art chest pack - animated icon retro chest frame 02 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/retro-chest/retro-chest-spritesheet.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/retro-chest/retro-chest-spritesheet.png",
+      "label": "Retro Chest Spritesheet",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 172,
+        "height": 40,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.8248546511627907,
+        "transparentCoverage": 0.1751453488372093,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Retro Chest Spritesheet is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "retro chest spritesheet 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/retro-chest/retro-chest-spritesheet.png free pixel art chest pack - animated icon retro chest spritesheet is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-1/wooden-chest-1-sprites/wooden-chest-1-frame-00.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-1/wooden-chest-1-sprites/wooden-chest-1-frame-00.png",
+      "label": "Wooden Chest 1 Frame 00",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 48,
+        "height": 36,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.7598379629629629,
+        "transparentCoverage": 0.24016203703703703,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Wooden Chest 1 Frame 00 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "wooden chest 1 frame 00 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-1/wooden-chest-1-sprites/wooden-chest-1-frame-00.png free pixel art chest pack - animated icon wooden chest 1 frame 00 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-1/wooden-chest-1-sprites/wooden-chest-1-frame-01.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-1/wooden-chest-1-sprites/wooden-chest-1-frame-01.png",
+      "label": "Wooden Chest 1 Frame 01",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 48,
+        "height": 36,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.7598379629629629,
+        "transparentCoverage": 0.24016203703703703,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Wooden Chest 1 Frame 01 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "wooden chest 1 frame 01 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-1/wooden-chest-1-sprites/wooden-chest-1-frame-01.png free pixel art chest pack - animated icon wooden chest 1 frame 01 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-1/wooden-chest-1-sprites/wooden-chest-1-frame-02.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-1/wooden-chest-1-sprites/wooden-chest-1-frame-02.png",
+      "label": "Wooden Chest 1 Frame 02",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 48,
+        "height": 36,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.8049768518518519,
+        "transparentCoverage": 0.19502314814814814,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Wooden Chest 1 Frame 02 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "wooden chest 1 frame 02 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-1/wooden-chest-1-sprites/wooden-chest-1-frame-02.png free pixel art chest pack - animated icon wooden chest 1 frame 02 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-1/wooden-chest-1-sprites/wooden-chest-1-frame-03.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-1/wooden-chest-1-sprites/wooden-chest-1-frame-03.png",
+      "label": "Wooden Chest 1 Frame 03",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 48,
+        "height": 36,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.8530092592592593,
+        "transparentCoverage": 0.14699074074074073,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Wooden Chest 1 Frame 03 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "wooden chest 1 frame 03 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-1/wooden-chest-1-sprites/wooden-chest-1-frame-03.png free pixel art chest pack - animated icon wooden chest 1 frame 03 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-1/wooden-chest-1-sprites/wooden-chest-1-frame-04.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-1/wooden-chest-1-sprites/wooden-chest-1-frame-04.png",
+      "label": "Wooden Chest 1 Frame 04",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 48,
+        "height": 36,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.8987268518518519,
+        "transparentCoverage": 0.10127314814814815,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Wooden Chest 1 Frame 04 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "wooden chest 1 frame 04 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-1/wooden-chest-1-sprites/wooden-chest-1-frame-04.png free pixel art chest pack - animated icon wooden chest 1 frame 04 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-1/wooden-chest-1-spritesheet.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-1/wooden-chest-1-spritesheet.png",
+      "label": "Wooden Chest 1 Spritesheet",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 240,
+        "height": 36,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.8152777777777778,
+        "transparentCoverage": 0.18472222222222223,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Wooden Chest 1 Spritesheet is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "wooden chest 1 spritesheet 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-1/wooden-chest-1-spritesheet.png free pixel art chest pack - animated icon wooden chest 1 spritesheet is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-2/wooden-chest-2-sprites/wooden-chest-2-frame-00.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-2/wooden-chest-2-sprites/wooden-chest-2-frame-00.png",
+      "label": "Wooden Chest 2 Frame 00",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 48,
+        "height": 32,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.7578125,
+        "transparentCoverage": 0.2421875,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Wooden Chest 2 Frame 00 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "wooden chest 2 frame 00 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-2/wooden-chest-2-sprites/wooden-chest-2-frame-00.png free pixel art chest pack - animated icon wooden chest 2 frame 00 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-2/wooden-chest-2-sprites/wooden-chest-2-frame-01.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-2/wooden-chest-2-sprites/wooden-chest-2-frame-01.png",
+      "label": "Wooden Chest 2 Frame 01",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 48,
+        "height": 32,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.7578125,
+        "transparentCoverage": 0.2421875,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Wooden Chest 2 Frame 01 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "wooden chest 2 frame 01 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-2/wooden-chest-2-sprites/wooden-chest-2-frame-01.png free pixel art chest pack - animated icon wooden chest 2 frame 01 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-2/wooden-chest-2-sprites/wooden-chest-2-frame-02.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-2/wooden-chest-2-sprites/wooden-chest-2-frame-02.png",
+      "label": "Wooden Chest 2 Frame 02",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 48,
+        "height": 32,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.80859375,
+        "transparentCoverage": 0.19140625,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Wooden Chest 2 Frame 02 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "wooden chest 2 frame 02 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-2/wooden-chest-2-sprites/wooden-chest-2-frame-02.png free pixel art chest pack - animated icon wooden chest 2 frame 02 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-2/wooden-chest-2-sprites/wooden-chest-2-frame-03.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-2/wooden-chest-2-sprites/wooden-chest-2-frame-03.png",
+      "label": "Wooden Chest 2 Frame 03",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 48,
+        "height": 32,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.8626302083333334,
+        "transparentCoverage": 0.13736979166666666,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Wooden Chest 2 Frame 03 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "wooden chest 2 frame 03 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-2/wooden-chest-2-sprites/wooden-chest-2-frame-03.png free pixel art chest pack - animated icon wooden chest 2 frame 03 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-2/wooden-chest-2-sprites/wooden-chest-2-frame-04.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-2/wooden-chest-2-sprites/wooden-chest-2-frame-04.png",
+      "label": "Wooden Chest 2 Frame 04",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 48,
+        "height": 32,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.9140625,
+        "transparentCoverage": 0.0859375,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Wooden Chest 2 Frame 04 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "wooden chest 2 frame 04 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-2/wooden-chest-2-sprites/wooden-chest-2-frame-04.png free pixel art chest pack - animated icon wooden chest 2 frame 04 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-2/wooden-chest-2-spritesheet.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-2/wooden-chest-2-spritesheet.png",
+      "label": "Wooden Chest 2 Spritesheet",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 240,
+        "height": 32,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.8201822916666667,
+        "transparentCoverage": 0.17981770833333333,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Wooden Chest 2 Spritesheet is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "wooden chest 2 spritesheet 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-2/wooden-chest-2-spritesheet.png free pixel art chest pack - animated icon wooden chest 2 spritesheet is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-3/wooden-chest-3-sprites/wooden-chest-3-frame-00.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-3/wooden-chest-3-sprites/wooden-chest-3-frame-00.png",
+      "label": "Wooden Chest 3 Frame 00",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 48,
+        "height": 32,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.7578125,
+        "transparentCoverage": 0.2421875,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Wooden Chest 3 Frame 00 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "wooden chest 3 frame 00 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-3/wooden-chest-3-sprites/wooden-chest-3-frame-00.png free pixel art chest pack - animated icon wooden chest 3 frame 00 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-3/wooden-chest-3-sprites/wooden-chest-3-frame-01.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-3/wooden-chest-3-sprites/wooden-chest-3-frame-01.png",
+      "label": "Wooden Chest 3 Frame 01",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 48,
+        "height": 32,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.7578125,
+        "transparentCoverage": 0.2421875,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Wooden Chest 3 Frame 01 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "wooden chest 3 frame 01 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-3/wooden-chest-3-sprites/wooden-chest-3-frame-01.png free pixel art chest pack - animated icon wooden chest 3 frame 01 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-3/wooden-chest-3-sprites/wooden-chest-3-frame-02.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-3/wooden-chest-3-sprites/wooden-chest-3-frame-02.png",
+      "label": "Wooden Chest 3 Frame 02",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 48,
+        "height": 32,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.80859375,
+        "transparentCoverage": 0.19140625,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Wooden Chest 3 Frame 02 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "wooden chest 3 frame 02 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-3/wooden-chest-3-sprites/wooden-chest-3-frame-02.png free pixel art chest pack - animated icon wooden chest 3 frame 02 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-3/wooden-chest-3-sprites/wooden-chest-3-frame-03.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-3/wooden-chest-3-sprites/wooden-chest-3-frame-03.png",
+      "label": "Wooden Chest 3 Frame 03",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 48,
+        "height": 32,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.8626302083333334,
+        "transparentCoverage": 0.13736979166666666,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Wooden Chest 3 Frame 03 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "wooden chest 3 frame 03 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-3/wooden-chest-3-sprites/wooden-chest-3-frame-03.png free pixel art chest pack - animated icon wooden chest 3 frame 03 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-3/wooden-chest-3-sprites/wooden-chest-3-frame-04.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-3/wooden-chest-3-sprites/wooden-chest-3-frame-04.png",
+      "label": "Wooden Chest 3 Frame 04",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 48,
+        "height": 32,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.9140625,
+        "transparentCoverage": 0.0859375,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Wooden Chest 3 Frame 04 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "wooden chest 3 frame 04 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-3/wooden-chest-3-sprites/wooden-chest-3-frame-04.png free pixel art chest pack - animated icon wooden chest 3 frame 04 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-3/wooden-chest-3-spritesheet.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-3/wooden-chest-3-spritesheet.png",
+      "label": "Wooden Chest 3 Spritesheet",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 240,
+        "height": 32,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.8201822916666667,
+        "transparentCoverage": 0.17981770833333333,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Wooden Chest 3 Spritesheet is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "wooden chest 3 spritesheet 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-3/wooden-chest-3-spritesheet.png free pixel art chest pack - animated icon wooden chest 3 spritesheet is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-4/wooden-chest-4-sprites/wooden-chest-4-frame-00.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-4/wooden-chest-4-sprites/wooden-chest-4-frame-00.png",
+      "label": "Wooden Chest 4 Frame 00",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 48,
+        "height": 38,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.7916666666666666,
+        "transparentCoverage": 0.20833333333333334,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Wooden Chest 4 Frame 00 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "wooden chest 4 frame 00 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-4/wooden-chest-4-sprites/wooden-chest-4-frame-00.png free pixel art chest pack - animated icon wooden chest 4 frame 00 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-4/wooden-chest-4-sprites/wooden-chest-4-frame-01.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-4/wooden-chest-4-sprites/wooden-chest-4-frame-01.png",
+      "label": "Wooden Chest 4 Frame 01",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 48,
+        "height": 38,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.7916666666666666,
+        "transparentCoverage": 0.20833333333333334,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Wooden Chest 4 Frame 01 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "wooden chest 4 frame 01 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-4/wooden-chest-4-sprites/wooden-chest-4-frame-01.png free pixel art chest pack - animated icon wooden chest 4 frame 01 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-4/wooden-chest-4-sprites/wooden-chest-4-frame-02.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-4/wooden-chest-4-sprites/wooden-chest-4-frame-02.png",
+      "label": "Wooden Chest 4 Frame 02",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 48,
+        "height": 38,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.8344298245614035,
+        "transparentCoverage": 0.16557017543859648,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Wooden Chest 4 Frame 02 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "wooden chest 4 frame 02 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-4/wooden-chest-4-sprites/wooden-chest-4-frame-02.png free pixel art chest pack - animated icon wooden chest 4 frame 02 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-4/wooden-chest-4-sprites/wooden-chest-4-frame-03.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-4/wooden-chest-4-sprites/wooden-chest-4-frame-03.png",
+      "label": "Wooden Chest 4 Frame 03",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 48,
+        "height": 38,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.8804824561403509,
+        "transparentCoverage": 0.11951754385964912,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Wooden Chest 4 Frame 03 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "wooden chest 4 frame 03 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-4/wooden-chest-4-sprites/wooden-chest-4-frame-03.png free pixel art chest pack - animated icon wooden chest 4 frame 03 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-4/wooden-chest-4-sprites/wooden-chest-4-frame-04.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-4/wooden-chest-4-sprites/wooden-chest-4-frame-04.png",
+      "label": "Wooden Chest 4 Frame 04",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 48,
+        "height": 38,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.9232456140350878,
+        "transparentCoverage": 0.07675438596491228,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Wooden Chest 4 Frame 04 is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "wooden chest 4 frame 04 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-4/wooden-chest-4-sprites/wooden-chest-4-frame-04.png free pixel art chest pack - animated icon wooden chest 4 frame 04 is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-4/wooden-chest-4-spritesheet.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-4/wooden-chest-4-spritesheet.png",
+      "label": "Wooden Chest 4 Spritesheet",
+      "kind": "icon",
+      "animated": false,
+      "inspection": {
+        "width": 240,
+        "height": 38,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.8442982456140351,
+        "transparentCoverage": 0.15570175438596492,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Wooden Chest 4 Spritesheet is a static 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon",
+        "static"
+      ],
+      "searchText": "wooden chest 4 spritesheet 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/wooden-chest-4/wooden-chest-4-spritesheet.png free pixel art chest pack - animated icon wooden chest 4 spritesheet is a static 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art static"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-1/golden-chest-1-sprites/golden-chest-1-frame-04.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-1/golden-chest-1-sprites/golden-chest-1-frame-04.png",
+      "label": "Golden Chest 1 Frame 04",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 40,
+        "height": 25,
+        "bgKind": "mixed",
+        "alphaCoverage": 0.956,
+        "transparentCoverage": 0.044,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Golden Chest 1 Frame 04 is an animated 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "searchText": "golden chest 1 frame 04 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/golden-chest-1/golden-chest-1-sprites/golden-chest-1-frame-04.png free pixel art chest pack - animated icon golden chest 1 frame 04 is an animated 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art"
+    },
+    {
+      "packFolder": "karsiori-pixel-art-chest-pack-animated",
+      "path": "2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/retro-chest/retro-chest-sprites/retro-chest-frame-03.png",
+      "src": "/2D/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/retro-chest/retro-chest-sprites/retro-chest-frame-03.png",
+      "label": "Retro Chest Frame 03",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 43,
+        "height": 40,
+        "bgKind": "mixed",
+        "alphaCoverage": 0.95,
+        "transparentCoverage": 0.05,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Retro Chest Frame 03 is an animated 2D icon sample from FREE Pixel Art Chest Pack - Animated. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "free pixel art chest pack - animated",
+        "icon"
+      ],
+      "searchText": "retro chest frame 03 2d/karsiori-pixel-art-chest-pack-animated/extracted/pixel-chest-pack/pixel-chest-pack/retro-chest/retro-chest-sprites/retro-chest-frame-03.png free pixel art chest pack - animated icon retro chest frame 03 is an animated 2d icon sample from free pixel art chest pack - animated. useful for inventory ui, loot, pickup feedback. free pixel art chest pack - animated inventory ui loot pickup feedback 2d animated art"
+    }
+  ]
+}

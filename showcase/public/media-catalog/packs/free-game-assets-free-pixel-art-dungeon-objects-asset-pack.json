@@ -1,0 +1,684 @@
+{
+  "folder": "free-game-assets-free-pixel-art-dungeon-objects-asset-pack",
+  "title": "Free Dungeon Objects Pixel Assets",
+  "author": "free game assets",
+  "author_url": "https://free-game-assets.itch.io",
+  "url": "https://free-game-assets.itch.io/free-pixel-art-dungeon-objects-asset-pack",
+  "game_id": 3483505,
+  "license_class": "Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms)",
+  "attribution": "Appreciated / not required",
+  "theme": "Environments",
+  "description": "Free Dungeon Objects Pixel Assets is a 2D environments art pack by free game assets. Use it for level building, tilemaps, environment dressing. License: Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). Attribution: Appreciated / not required.",
+  "category": "Environments",
+  "themes": [
+    "environments",
+    "fantasy",
+    "urban"
+  ],
+  "useCases": [
+    "level building",
+    "tilemaps",
+    "environment dressing"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "environments",
+    "fantasy",
+    "medieval",
+    "sprite",
+    "urban"
+  ],
+  "searchText": "free dungeon objects pixel assets free-game-assets-free-pixel-art-dungeon-objects-asset-pack free game assets environments free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms) appreciated / not required free dungeon objects pixel assets is a 2d environments art pack by free game assets. use it for level building, tilemaps, environment dressing. license: free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). attribution: appreciated / not required. environments fantasy urban level building tilemaps environment dressing 2d art medieval sprite",
+  "sampleCount": 15,
+  "samples": [
+    {
+      "packFolder": "free-game-assets-free-pixel-art-dungeon-objects-asset-pack",
+      "path": "2D/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/png/trap-plate.png",
+      "src": "/2D/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/png/trap-plate.png",
+      "label": "Trap Plate",
+      "kind": "tile",
+      "animated": true,
+      "inspection": {
+        "width": 112,
+        "height": 240,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.31339285714285714,
+        "transparentCoverage": 0.6866071428571429,
+        "contentRowRuns": 8,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": true,
+        "cellMedianWidth": 16,
+        "cellMedianHeight": 19
+      },
+      "promo": false,
+      "description": "Trap Plate is an animated 2D tile sample from Free Dungeon Objects Pixel Assets. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "fantasy",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "fantasy",
+        "medieval",
+        "modular",
+        "tile"
+      ],
+      "searchText": "trap plate 2d/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/png/trap-plate.png free dungeon objects pixel assets tile trap plate is an animated 2d tile sample from free dungeon objects pixel assets. useful for level building, tilemaps, environment dressing. fantasy level building tilemaps environment dressing 2d animated art medieval modular"
+    },
+    {
+      "packFolder": "free-game-assets-free-pixel-art-dungeon-objects-asset-pack",
+      "path": "2D/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/tiled-files/trap-plate.png",
+      "src": "/2D/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/tiled-files/trap-plate.png",
+      "label": "Trap Plate",
+      "kind": "tile",
+      "animated": true,
+      "inspection": {
+        "width": 128,
+        "height": 272,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.24485677083333332,
+        "transparentCoverage": 0.7551432291666667,
+        "contentRowRuns": 8,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": true,
+        "cellMedianWidth": 15,
+        "cellMedianHeight": 18
+      },
+      "promo": false,
+      "description": "Trap Plate is an animated 2D tile sample from Free Dungeon Objects Pixel Assets. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "fantasy",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "fantasy",
+        "medieval",
+        "modular",
+        "tile"
+      ],
+      "searchText": "trap plate 2d/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/tiled-files/trap-plate.png free dungeon objects pixel assets tile trap plate is an animated 2d tile sample from free dungeon objects pixel assets. useful for level building, tilemaps, environment dressing. fantasy level building tilemaps environment dressing 2d animated art medieval modular"
+    },
+    {
+      "packFolder": "free-game-assets-free-pixel-art-dungeon-objects-asset-pack",
+      "path": "2D/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/png/fire-trap.png",
+      "src": "/2D/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/png/fire-trap.png",
+      "label": "Fire Trap",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 1008,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.06403882575757576,
+        "transparentCoverage": 0.9171401515151515,
+        "contentRowRuns": 3,
+        "contentColRuns": 25,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 4,
+        "cellMedianHeight": 5
+      },
+      "promo": false,
+      "description": "Fire Trap is an animated 2D effect sample from Free Dungeon Objects Pixel Assets. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "fantasy"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "fire trap 2d/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/png/fire-trap.png free dungeon objects pixel assets effect fire trap is an animated 2d effect sample from free dungeon objects pixel assets. useful for combat vfx, spell effects, hit feedback. fantasy combat vfx spell effects hit feedback 2d animated art medieval"
+    },
+    {
+      "packFolder": "free-game-assets-free-pixel-art-dungeon-objects-asset-pack",
+      "path": "2D/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/png/other-objects.png",
+      "src": "/2D/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/png/other-objects.png",
+      "label": "Other Objects",
+      "kind": "tile",
+      "animated": true,
+      "inspection": {
+        "width": 352,
+        "height": 112,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.23794367283950618,
+        "transparentCoverage": 0.7218846450617284,
+        "contentRowRuns": 2,
+        "contentColRuns": 5,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 20,
+        "cellMedianHeight": 33
+      },
+      "promo": false,
+      "description": "Other Objects is an animated 2D tile sample from Free Dungeon Objects Pixel Assets. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "fantasy",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "fantasy",
+        "medieval",
+        "modular",
+        "tile"
+      ],
+      "searchText": "other objects 2d/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/png/other-objects.png free dungeon objects pixel assets tile other objects is an animated 2d tile sample from free dungeon objects pixel assets. useful for level building, tilemaps, environment dressing. fantasy level building tilemaps environment dressing 2d animated art medieval modular"
+    },
+    {
+      "packFolder": "free-game-assets-free-pixel-art-dungeon-objects-asset-pack",
+      "path": "2D/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/png/pedestals.png",
+      "src": "/2D/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/png/pedestals.png",
+      "label": "Pedestals",
+      "kind": "tile",
+      "animated": true,
+      "inspection": {
+        "width": 560,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.4057203389830508,
+        "transparentCoverage": 0.5591896186440678,
+        "contentRowRuns": 3,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 17,
+        "cellMedianHeight": 19
+      },
+      "promo": false,
+      "description": "Pedestals is an animated 2D tile sample from Free Dungeon Objects Pixel Assets. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "fantasy",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "fantasy",
+        "medieval",
+        "modular",
+        "tile"
+      ],
+      "searchText": "pedestals 2d/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/png/pedestals.png free dungeon objects pixel assets tile pedestals is an animated 2d tile sample from free dungeon objects pixel assets. useful for level building, tilemaps, environment dressing. fantasy level building tilemaps environment dressing 2d animated art medieval modular"
+    },
+    {
+      "packFolder": "free-game-assets-free-pixel-art-dungeon-objects-asset-pack",
+      "path": "2D/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/png/supplies-objects.png",
+      "src": "/2D/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/png/supplies-objects.png",
+      "label": "Supplies Objects",
+      "kind": "tile",
+      "animated": true,
+      "inspection": {
+        "width": 208,
+        "height": 592,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.32296006944444444,
+        "transparentCoverage": 0.6356770833333333,
+        "contentRowRuns": 8,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Supplies Objects is an animated 2D tile sample from Free Dungeon Objects Pixel Assets. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "fantasy",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "fantasy",
+        "medieval",
+        "modular",
+        "tile"
+      ],
+      "searchText": "supplies objects 2d/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/png/supplies-objects.png free dungeon objects pixel assets tile supplies objects is an animated 2d tile sample from free dungeon objects pixel assets. useful for level building, tilemaps, environment dressing. fantasy level building tilemaps environment dressing 2d animated art medieval modular"
+    },
+    {
+      "packFolder": "free-game-assets-free-pixel-art-dungeon-objects-asset-pack",
+      "path": "2D/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/png/trap-saw.png",
+      "src": "/2D/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/png/trap-saw.png",
+      "label": "Trap Saw",
+      "kind": "tile",
+      "animated": true,
+      "inspection": {
+        "width": 384,
+        "height": 256,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.18964729532163743,
+        "transparentCoverage": 0.8103527046783626,
+        "contentRowRuns": 4,
+        "contentColRuns": 9,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 20,
+        "cellMedianHeight": 40
+      },
+      "promo": false,
+      "description": "Trap Saw is an animated 2D tile sample from Free Dungeon Objects Pixel Assets. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "fantasy",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "fantasy",
+        "medieval",
+        "modular",
+        "tile"
+      ],
+      "searchText": "trap saw 2d/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/png/trap-saw.png free dungeon objects pixel assets tile trap saw is an animated 2d tile sample from free dungeon objects pixel assets. useful for level building, tilemaps, environment dressing. fantasy level building tilemaps environment dressing 2d animated art medieval modular"
+    },
+    {
+      "packFolder": "free-game-assets-free-pixel-art-dungeon-objects-asset-pack",
+      "path": "2D/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/tiled-files/fire-trap.png",
+      "src": "/2D/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/tiled-files/fire-trap.png",
+      "label": "Fire Trap",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 1008,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.06403882575757576,
+        "transparentCoverage": 0.9171401515151515,
+        "contentRowRuns": 3,
+        "contentColRuns": 25,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 4,
+        "cellMedianHeight": 5
+      },
+      "promo": false,
+      "description": "Fire Trap is an animated 2D effect sample from Free Dungeon Objects Pixel Assets. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "fantasy"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "fire trap 2d/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/tiled-files/fire-trap.png free dungeon objects pixel assets effect fire trap is an animated 2d effect sample from free dungeon objects pixel assets. useful for combat vfx, spell effects, hit feedback. fantasy combat vfx spell effects hit feedback 2d animated art medieval"
+    },
+    {
+      "packFolder": "free-game-assets-free-pixel-art-dungeon-objects-asset-pack",
+      "path": "2D/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/tiled-files/other-objects.png",
+      "src": "/2D/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/tiled-files/other-objects.png",
+      "label": "Other Objects",
+      "kind": "tile",
+      "animated": true,
+      "inspection": {
+        "width": 368,
+        "height": 128,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.19478581460674158,
+        "transparentCoverage": 0.7717696629213483,
+        "contentRowRuns": 2,
+        "contentColRuns": 5,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 18,
+        "cellMedianHeight": 32
+      },
+      "promo": false,
+      "description": "Other Objects is an animated 2D tile sample from Free Dungeon Objects Pixel Assets. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "fantasy",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "fantasy",
+        "medieval",
+        "modular",
+        "tile"
+      ],
+      "searchText": "other objects 2d/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/tiled-files/other-objects.png free dungeon objects pixel assets tile other objects is an animated 2d tile sample from free dungeon objects pixel assets. useful for level building, tilemaps, environment dressing. fantasy level building tilemaps environment dressing 2d animated art medieval modular"
+    },
+    {
+      "packFolder": "free-game-assets-free-pixel-art-dungeon-objects-asset-pack",
+      "path": "2D/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/tiled-files/pedestals.png",
+      "src": "/2D/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/tiled-files/pedestals.png",
+      "label": "Pedestals",
+      "kind": "tile",
+      "animated": true,
+      "inspection": {
+        "width": 592,
+        "height": 160,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.3117074275362319,
+        "transparentCoverage": 0.6608355978260869,
+        "contentRowRuns": 3,
+        "contentColRuns": 9,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 17,
+        "cellMedianHeight": 18
+      },
+      "promo": false,
+      "description": "Pedestals is an animated 2D tile sample from Free Dungeon Objects Pixel Assets. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "fantasy",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "fantasy",
+        "medieval",
+        "modular",
+        "tile"
+      ],
+      "searchText": "pedestals 2d/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/tiled-files/pedestals.png free dungeon objects pixel assets tile pedestals is an animated 2d tile sample from free dungeon objects pixel assets. useful for level building, tilemaps, environment dressing. fantasy level building tilemaps environment dressing 2d animated art medieval modular"
+    },
+    {
+      "packFolder": "free-game-assets-free-pixel-art-dungeon-objects-asset-pack",
+      "path": "2D/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/tiled-files/supplies-objects.png",
+      "src": "/2D/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/tiled-files/supplies-objects.png",
+      "label": "Supplies Objects",
+      "kind": "tile",
+      "animated": true,
+      "inspection": {
+        "width": 240,
+        "height": 592,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.2794846754807692,
+        "transparentCoverage": 0.6847205528846154,
+        "contentRowRuns": 8,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Supplies Objects is an animated 2D tile sample from Free Dungeon Objects Pixel Assets. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "fantasy",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "fantasy",
+        "medieval",
+        "modular",
+        "tile"
+      ],
+      "searchText": "supplies objects 2d/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/tiled-files/supplies-objects.png free dungeon objects pixel assets tile supplies objects is an animated 2d tile sample from free dungeon objects pixel assets. useful for level building, tilemaps, environment dressing. fantasy level building tilemaps environment dressing 2d animated art medieval modular"
+    },
+    {
+      "packFolder": "free-game-assets-free-pixel-art-dungeon-objects-asset-pack",
+      "path": "2D/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/tiled-files/trap-saw.png",
+      "src": "/2D/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/tiled-files/trap-saw.png",
+      "label": "Trap Saw",
+      "kind": "tile",
+      "animated": true,
+      "inspection": {
+        "width": 416,
+        "height": 272,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.163875374251497,
+        "transparentCoverage": 0.836124625748503,
+        "contentRowRuns": 4,
+        "contentColRuns": 9,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 19,
+        "cellMedianHeight": 37
+      },
+      "promo": false,
+      "description": "Trap Saw is an animated 2D tile sample from Free Dungeon Objects Pixel Assets. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "fantasy",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "fantasy",
+        "medieval",
+        "modular",
+        "tile"
+      ],
+      "searchText": "trap saw 2d/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/tiled-files/trap-saw.png free dungeon objects pixel assets tile trap saw is an animated 2d tile sample from free dungeon objects pixel assets. useful for level building, tilemaps, environment dressing. fantasy level building tilemaps environment dressing 2d animated art medieval modular"
+    },
+    {
+      "packFolder": "free-game-assets-free-pixel-art-dungeon-objects-asset-pack",
+      "path": "2D/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/png/full.png",
+      "src": "/2D/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/png/full.png",
+      "label": "Full",
+      "kind": "tile",
+      "animated": false,
+      "inspection": {
+        "width": 1104,
+        "height": 416,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.24820963541666666,
+        "transparentCoverage": 0.7253824869791666,
+        "contentRowRuns": 1,
+        "contentColRuns": 2,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Full is a static 2D tile sample from Free Dungeon Objects Pixel Assets. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "fantasy",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "fantasy",
+        "medieval",
+        "modular",
+        "static",
+        "tile"
+      ],
+      "searchText": "full 2d/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/png/full.png free dungeon objects pixel assets tile full is a static 2d tile sample from free dungeon objects pixel assets. useful for level building, tilemaps, environment dressing. fantasy level building tilemaps environment dressing 2d art medieval modular static"
+    },
+    {
+      "packFolder": "free-game-assets-free-pixel-art-dungeon-objects-asset-pack",
+      "path": "2D/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/coupon.png",
+      "src": "/2D/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/coupon.png",
+      "label": "Coupon",
+      "kind": "tile",
+      "animated": false,
+      "inspection": {
+        "width": 1840,
+        "height": 2445,
+        "bgKind": "mixed",
+        "alphaCoverage": 0.9948186528497409,
+        "transparentCoverage": 0.0051813471502590676,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Coupon is a static 2D tile sample from Free Dungeon Objects Pixel Assets. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "fantasy",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "fantasy",
+        "medieval",
+        "modular",
+        "static",
+        "tile"
+      ],
+      "searchText": "coupon 2d/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/coupon.png free dungeon objects pixel assets tile coupon is a static 2d tile sample from free dungeon objects pixel assets. useful for level building, tilemaps, environment dressing. fantasy level building tilemaps environment dressing 2d art medieval modular static"
+    },
+    {
+      "packFolder": "free-game-assets-free-pixel-art-dungeon-objects-asset-pack",
+      "path": "2D/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/psd/coupon.png",
+      "src": "/2D/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/psd/coupon.png",
+      "label": "Coupon",
+      "kind": "tile",
+      "animated": false,
+      "inspection": {
+        "width": 1840,
+        "height": 2445,
+        "bgKind": "mixed",
+        "alphaCoverage": 0.9948186528497409,
+        "transparentCoverage": 0.0051813471502590676,
+        "contentRowRuns": 1,
+        "contentColRuns": 1,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Coupon is a static 2D tile sample from Free Dungeon Objects Pixel Assets. Useful for level building, tilemaps, environment dressing.",
+      "category": "tile",
+      "themes": [
+        "fantasy",
+        "tile"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "fantasy",
+        "medieval",
+        "modular",
+        "static",
+        "tile"
+      ],
+      "searchText": "coupon 2d/free-game-assets-free-pixel-art-dungeon-objects-asset-pack/extracted/free-pixel-art-dungeon-objects-asset-pack/psd/coupon.png free dungeon objects pixel assets tile coupon is a static 2d tile sample from free dungeon objects pixel assets. useful for level building, tilemaps, environment dressing. fantasy level building tilemaps environment dressing 2d art medieval modular static"
+    }
+  ]
+}

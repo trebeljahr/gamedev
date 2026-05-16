@@ -1,0 +1,321 @@
+{
+  "folder": "luizmelo-evil-wizard-2",
+  "title": "Evil Wizard 2",
+  "author": "luizmelo",
+  "author_url": "https://luizmelo.itch.io",
+  "url": "https://luizmelo.itch.io/evil-wizard-2",
+  "game_id": null,
+  "license_class": "CC0 1.0 (Creative Commons Zero)",
+  "attribution": "Optional",
+  "theme": "General",
+  "description": "Evil Wizard 2 is a 2D general art pack by luizmelo. Use it for game jams, prototypes, scene dressing. License: CC0 1.0 (Creative Commons Zero). Attribution: Optional.",
+  "category": "General",
+  "themes": [
+    "fantasy",
+    "general"
+  ],
+  "useCases": [
+    "game jams",
+    "prototypes",
+    "scene dressing"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "fantasy",
+    "general",
+    "medieval",
+    "sprite"
+  ],
+  "searchText": "evil wizard 2 luizmelo-evil-wizard-2 luizmelo general cc0 1.0 (creative commons zero) optional evil wizard 2 is a 2d general art pack by luizmelo. use it for game jams, prototypes, scene dressing. license: cc0 1.0 (creative commons zero). attribution: optional. fantasy general game jams prototypes scene dressing 2d art medieval sprite",
+  "sampleCount": 7,
+  "samples": [
+    {
+      "packFolder": "luizmelo-evil-wizard-2",
+      "path": "2D/luizmelo-evil-wizard-2/extracted/evil-wizard-2/evil-wizard-2/sprites/death.png",
+      "src": "/2D/luizmelo-evil-wizard-2/extracted/evil-wizard-2/evil-wizard-2/sprites/death.png",
+      "label": "Death",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 1750,
+        "height": 250,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.017795138888888888,
+        "transparentCoverage": 0.9822048611111112,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Death is an animated 2D character sample from Evil Wizard 2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "death 2d/luizmelo-evil-wizard-2/extracted/evil-wizard-2/evil-wizard-2/sprites/death.png evil wizard 2 character death is an animated 2d character sample from evil wizard 2. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "luizmelo-evil-wizard-2",
+      "path": "2D/luizmelo-evil-wizard-2/extracted/evil-wizard-2/evil-wizard-2/sprites/idle.png",
+      "src": "/2D/luizmelo-evil-wizard-2/extracted/evil-wizard-2/evil-wizard-2/sprites/idle.png",
+      "label": "Idle",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 2000,
+        "height": 250,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.0306396484375,
+        "transparentCoverage": 0.9693603515625,
+        "contentRowRuns": 1,
+        "contentColRuns": 9,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Idle is an animated 2D character sample from Evil Wizard 2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "idle 2d/luizmelo-evil-wizard-2/extracted/evil-wizard-2/evil-wizard-2/sprites/idle.png evil wizard 2 character idle is an animated 2d character sample from evil wizard 2. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "luizmelo-evil-wizard-2",
+      "path": "2D/luizmelo-evil-wizard-2/extracted/evil-wizard-2/evil-wizard-2/sprites/jump.png",
+      "src": "/2D/luizmelo-evil-wizard-2/extracted/evil-wizard-2/evil-wizard-2/sprites/jump.png",
+      "label": "Jump",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 500,
+        "height": 250,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.03106689453125,
+        "transparentCoverage": 0.96893310546875,
+        "contentRowRuns": 1,
+        "contentColRuns": 3,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Jump is an animated 2D character sample from Evil Wizard 2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "jump 2d/luizmelo-evil-wizard-2/extracted/evil-wizard-2/evil-wizard-2/sprites/jump.png evil wizard 2 character jump is an animated 2d character sample from evil wizard 2. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "luizmelo-evil-wizard-2",
+      "path": "2D/luizmelo-evil-wizard-2/extracted/evil-wizard-2/evil-wizard-2/sprites/take-hit.png",
+      "src": "/2D/luizmelo-evil-wizard-2/extracted/evil-wizard-2/evil-wizard-2/sprites/take-hit.png",
+      "label": "Take Hit",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 750,
+        "height": 250,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.026011029411764707,
+        "transparentCoverage": 0.9739889705882353,
+        "contentRowRuns": 1,
+        "contentColRuns": 3,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Take Hit is an animated 2D character sample from Evil Wizard 2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "take hit 2d/luizmelo-evil-wizard-2/extracted/evil-wizard-2/evil-wizard-2/sprites/take-hit.png evil wizard 2 character take hit is an animated 2d character sample from evil wizard 2. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "luizmelo-evil-wizard-2",
+      "path": "2D/luizmelo-evil-wizard-2/extracted/evil-wizard-2/evil-wizard-2/sprites/fall.png",
+      "src": "/2D/luizmelo-evil-wizard-2/extracted/evil-wizard-2/evil-wizard-2/sprites/fall.png",
+      "label": "Fall",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 500,
+        "height": 250,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.028289794921875,
+        "transparentCoverage": 0.971710205078125,
+        "contentRowRuns": 1,
+        "contentColRuns": 2,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Fall is an animated 2D character sample from Evil Wizard 2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "fall 2d/luizmelo-evil-wizard-2/extracted/evil-wizard-2/evil-wizard-2/sprites/fall.png evil wizard 2 character fall is an animated 2d character sample from evil wizard 2. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "luizmelo-evil-wizard-2",
+      "path": "2D/luizmelo-evil-wizard-2/extracted/evil-wizard-2/evil-wizard-2/sprites/attack1.png",
+      "src": "/2D/luizmelo-evil-wizard-2/extracted/evil-wizard-2/evil-wizard-2/sprites/attack1.png",
+      "label": "Attack1",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 2000,
+        "height": 250,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.048095703125,
+        "transparentCoverage": 0.951904296875,
+        "contentRowRuns": 1,
+        "contentColRuns": 9,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Attack1 is an animated 2D character sample from Evil Wizard 2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "attack1 2d/luizmelo-evil-wizard-2/extracted/evil-wizard-2/evil-wizard-2/sprites/attack1.png evil wizard 2 character attack1 is an animated 2d character sample from evil wizard 2. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "luizmelo-evil-wizard-2",
+      "path": "2D/luizmelo-evil-wizard-2/extracted/evil-wizard-2/evil-wizard-2/sprites/attack2.png",
+      "src": "/2D/luizmelo-evil-wizard-2/extracted/evil-wizard-2/evil-wizard-2/sprites/attack2.png",
+      "label": "Attack2",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 2000,
+        "height": 250,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.065673828125,
+        "transparentCoverage": 0.934326171875,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Attack2 is an animated 2D character sample from Evil Wizard 2. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "attack2 2d/luizmelo-evil-wizard-2/extracted/evil-wizard-2/evil-wizard-2/sprites/attack2.png evil wizard 2 character attack2 is an animated 2d character sample from evil wizard 2. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    }
+  ]
+}

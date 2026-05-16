@@ -1,0 +1,195 @@
+{
+  "folder": "penusbmic-sci-fi-character-pack-11",
+  "title": "Sci Fi Character Pack 11",
+  "author": "penusbmic",
+  "author_url": "https://penusbmic.itch.io",
+  "url": "https://penusbmic.itch.io/sci-fi-character-pack-11",
+  "game_id": null,
+  "license_class": "Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms)",
+  "attribution": "Appreciated / not required",
+  "theme": "Vehicles & Sci-Fi",
+  "description": "SCI Fi Character Pack 11 is a 2D vehicles & sci-fi art pack by penusbmic. Use it for player characters, NPCs, animation prototyping. License: Free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). Attribution: Appreciated / not required.",
+  "category": "Vehicles & Sci-Fi",
+  "themes": [
+    "sci-fi",
+    "urban",
+    "vehicles & sci-fi"
+  ],
+  "useCases": [
+    "player characters",
+    "NPCs",
+    "animation prototyping"
+  ],
+  "tags": [
+    "2d",
+    "art",
+    "sci-fi",
+    "sprite",
+    "urban",
+    "vehicles & sci-fi"
+  ],
+  "searchText": "sci fi character pack 11 penusbmic-sci-fi-character-pack-11 penusbmic vehicles & sci-fi free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms) appreciated / not required sci fi character pack 11 is a 2d vehicles & sci-fi art pack by penusbmic. use it for player characters, npcs, animation prototyping. license: free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). attribution: appreciated / not required. sci-fi urban vehicles & sci-fi player characters npcs animation prototyping 2d art sprite",
+  "sampleCount": 4,
+  "samples": [
+    {
+      "packFolder": "penusbmic-sci-fi-character-pack-11",
+      "path": "2D/penusbmic-sci-fi-character-pack-11/extracted/toaster-bot/toaster-bot/attack.png",
+      "src": "/2D/penusbmic-sci-fi-character-pack-11/extracted/toaster-bot/toaster-bot/attack.png",
+      "label": "Attack",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 1166,
+        "height": 22,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.1359375,
+        "transparentCoverage": 0.8640625,
+        "contentRowRuns": 1,
+        "contentColRuns": 14,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Attack is an animated 2D character sample from Sci Fi Character Pack 11. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "sci-fi"
+      ],
+      "searchText": "attack 2d/penusbmic-sci-fi-character-pack-11/extracted/toaster-bot/toaster-bot/attack.png sci fi character pack 11 character attack is an animated 2d character sample from sci fi character pack 11. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "penusbmic-sci-fi-character-pack-11",
+      "path": "2D/penusbmic-sci-fi-character-pack-11/extracted/toaster-bot/toaster-bot/death.png",
+      "src": "/2D/penusbmic-sci-fi-character-pack-11/extracted/toaster-bot/toaster-bot/death.png",
+      "label": "Death",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 530,
+        "height": 22,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.06924715909090909,
+        "transparentCoverage": 0.9307528409090909,
+        "contentRowRuns": 1,
+        "contentColRuns": 5,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Death is an animated 2D character sample from Sci Fi Character Pack 11. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "sci-fi"
+      ],
+      "searchText": "death 2d/penusbmic-sci-fi-character-pack-11/extracted/toaster-bot/toaster-bot/death.png sci fi character pack 11 character death is an animated 2d character sample from sci fi character pack 11. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "penusbmic-sci-fi-character-pack-11",
+      "path": "2D/penusbmic-sci-fi-character-pack-11/extracted/toaster-bot/toaster-bot/idle.png",
+      "src": "/2D/penusbmic-sci-fi-character-pack-11/extracted/toaster-bot/toaster-bot/idle.png",
+      "label": "Idle",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 530,
+        "height": 22,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.06818181818181818,
+        "transparentCoverage": 0.9318181818181818,
+        "contentRowRuns": 1,
+        "contentColRuns": 5,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Idle is an animated 2D character sample from Sci Fi Character Pack 11. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "sci-fi"
+      ],
+      "searchText": "idle 2d/penusbmic-sci-fi-character-pack-11/extracted/toaster-bot/toaster-bot/idle.png sci fi character pack 11 character idle is an animated 2d character sample from sci fi character pack 11. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d animated art"
+    },
+    {
+      "packFolder": "penusbmic-sci-fi-character-pack-11",
+      "path": "2D/penusbmic-sci-fi-character-pack-11/extracted/toaster-bot/toaster-bot/damaged.png",
+      "src": "/2D/penusbmic-sci-fi-character-pack-11/extracted/toaster-bot/toaster-bot/damaged.png",
+      "label": "Damaged",
+      "kind": "character",
+      "animated": false,
+      "inspection": {
+        "width": 212,
+        "height": 22,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.07332761578044597,
+        "transparentCoverage": 0.926672384219554,
+        "contentRowRuns": 1,
+        "contentColRuns": 2,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Damaged is a static 2D character sample from Sci Fi Character Pack 11. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "sci-fi"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "art",
+        "character",
+        "sci-fi",
+        "static"
+      ],
+      "searchText": "damaged 2d/penusbmic-sci-fi-character-pack-11/extracted/toaster-bot/toaster-bot/damaged.png sci fi character pack 11 character damaged is a static 2d character sample from sci fi character pack 11. useful for player characters, npcs, animation prototyping. sci-fi player characters npcs animation prototyping 2d art static"
+    }
+  ]
+}
