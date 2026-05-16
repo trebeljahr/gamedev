@@ -515,6 +515,12 @@ function Walker({
     }
 
     const k = keys.current;
+    // PointerLockControls + the joystick branch above both mutate
+    // camera.quaternion. R3F only refreshes camera.matrix at render time,
+    // which runs after this useFrame — so reading camera.matrix here would
+    // lag the latest quaternion by one frame and the walk direction would
+    // drift behind the view. Force the matrix to reflect current quaternion.
+    camera.updateMatrix();
     // Right is the camera's local +X (matrix column 0). Under YXZ Euler with
     // zero roll, that column is invariantly horizontal and unit-length, so it
     // stays stable as you pitch up or down. getWorldDirection + fwd.y=0 +
