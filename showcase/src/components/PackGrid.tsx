@@ -6,7 +6,7 @@ import type { ReactNode } from "react";
 import { InfiniteListSentinel, useInfiniteList } from "@/components/useInfiniteList";
 import { LicenseLink } from "@/components/LicenseLink";
 import type { VendorLicense } from "@/lib/license";
-import { displayPackDescription, displayPackTitle, type Pack } from "@/lib/manifest";
+import { displayPackTitle, packDescription, type Pack } from "@/lib/manifest";
 import { uniqueTags } from "@/lib/tags";
 
 const PackCardPreview = dynamic(
@@ -15,7 +15,7 @@ const PackCardPreview = dynamic(
 );
 
 export type PackGridItem = {
-  pack: Pick<Pack, "count" | "description" | "id" | "license" | "pack" | "preview" | "tags" | "title" | "vendor">;
+  pack: Pack;
   actions?: ReactNode;
   previewModelFiles: string[];
   modelMatches?: number;
@@ -76,7 +76,7 @@ export function PackGrid({
                 />
               </div>
               <Link className="pack-card-body-link" href={packHref}>
-                <p>{displayPackDescription(pack)}</p>
+                <p>{packDescription(pack)}</p>
                 <div className="pack-tags">
                   {uniqueTags(pack.tags).slice(0, 5).map((tag) => (
                     <span key={tag}>{tag}</span>

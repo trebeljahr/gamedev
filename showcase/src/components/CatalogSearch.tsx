@@ -9,7 +9,7 @@ import { PackGrid } from "@/components/PackGrid";
 import { PackDownloadButton } from "@/components/PackDownloadButton";
 import { SiteHeader } from "@/components/SiteHeader";
 import { licenseForVendor } from "@/lib/license";
-import type { Manifest, Pack } from "@/lib/manifest";
+import { modelSearchText, packSearchText, type Manifest, type Pack } from "@/lib/manifest";
 import { previewModelFilesFor } from "@/lib/preview-model";
 
 type CatalogSearchProps = {
@@ -37,14 +37,18 @@ function matchPack(pack: Pack, terms: string[], motion: ModelMotionFilter): Pack
   for (const model of pack.models) {
     if (!modelMatchesMotion(model, motion)) continue;
     eligibleCount += 1;
-    if (terms.length === 0 || terms.every((term) => model.searchText.includes(term))) {
+    if (terms.length === 0) {
       modelMatches += 1;
+      continue;
     }
+    const text = modelSearchText(model, pack);
+    if (terms.every((term) => text.includes(term))) modelMatches += 1;
   }
 
   if (eligibleCount === 0) return null;
   if (terms.length === 0 && motion === "all") return { pack, modelMatches: 0 };
-  const packHit = motion === "all" && terms.every((term) => pack.searchText.includes(term));
+  const packText = packSearchText(pack);
+  const packHit = motion === "all" && terms.every((term) => packText.includes(term));
   if (!packHit && modelMatches === 0) return null;
   return { pack, modelMatches };
 }

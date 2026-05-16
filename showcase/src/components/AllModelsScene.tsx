@@ -27,11 +27,10 @@ import {
 import type { JoystickOnMove } from "joystick-controller";
 import { Model, type AnimationInfo } from "./Model";
 import {
-  allModelsLayout,
   distToPackXZ,
-  layoutForPackId,
   layoutPackModels,
   type PackLayout,
+  type SceneLayout,
   type Slot,
   type WorldBounds,
 } from "@/lib/layout";
@@ -139,6 +138,7 @@ type ModelGridSceneProps = {
   showHud?: boolean;
   showPackLabels?: boolean;
   showModelPanel?: boolean;
+  showPlinths?: boolean;
   allowArrowWalk?: boolean;
   selectedIndex?: number | null;
   onSelectedIndexChange?: (index: number) => void;
@@ -189,43 +189,26 @@ function packOverviewCameraForBounds(bounds: WorldBounds): CameraPose {
   };
 }
 
-export function AllModelsScene({
-  packId,
-}: {
-  packId?: string;
-}) {
-  const sceneLayout = useMemo(
-    () => (packId ? layoutForPackId(packId) ?? allModelsLayout : allModelsLayout),
-    [packId],
-  );
-  const isPackScene = sceneLayout.packs.length === 1 && !!packId;
+export function AllModelsScene({ sceneLayout }: { sceneLayout: SceneLayout }) {
   const cameraPose = useMemo(
-    () =>
-      isPackScene
-        ? packOverviewCameraForBounds(sceneLayout.bounds)
-        : walkthroughCameraForBounds(sceneLayout.bounds),
-    [isPackScene, sceneLayout],
+    () => walkthroughCameraForBounds(sceneLayout.bounds),
+    [sceneLayout],
   );
-  const title = isPackScene ? displayPackTitle(sceneLayout.packs[0].pack) : "All models";
-  const backHref = isPackScene
-    ? `/${sceneLayout.packs[0].pack.vendor}/${sceneLayout.packs[0].pack.pack}`
-    : "/#3d-packs";
-  const backLabel = isPackScene ? "back to kit" : "back to packs";
 
   return (
     <ModelGridScene
       slots={sceneLayout.slots}
       layouts={sceneLayout.packs}
       bounds={sceneLayout.bounds}
-      title={title}
-      backHref={backHref}
-      backLabel={backLabel}
-      theme={isPackScene ? PACK_STUDIO_THEME : ARCHIVE_THEME}
+      title="All models"
+      backHref="/#3d-packs"
+      backLabel="back to packs"
+      theme={ARCHIVE_THEME}
       start={cameraPose.position}
       lookAt={cameraPose.lookAt}
-      loadAll={isPackScene}
+      loadAll={false}
       showHud
-      showPackLabels={!isPackScene}
+      showPackLabels
       showModelPanel
     />
   );
@@ -257,6 +240,7 @@ export function PackModelsScene({
       showHud={false}
       showPackLabels={false}
       showModelPanel={false}
+      showPlinths={false}
       allowArrowWalk={false}
       selectedIndex={selectedIndex}
       onSelectedIndexChange={onSelectedIndexChange}
@@ -278,10 +262,17 @@ function ModelGridScene({
   showHud = false,
   showPackLabels = false,
   showModelPanel = false,
+  showPlinths = true,
   allowArrowWalk = true,
   selectedIndex,
   onSelectedIndexChange,
 }: ModelGridSceneProps) {
+  // From the pack-overview top-down camera, the slab plinths read as raised
+  // floor tiles and visually intersect models that have geometry near y=0.
+  // Hiding them lets the model rest directly on the world floor (no z-fight
+  // and no "raised tile" illusion). The /all walkthrough keeps the slabs so
+  // each model still has a visible footprint when seen from eye level.
+  const groundY = showPlinths ? BASE_TOP_Y : 0.005;
   const [mounted, setMounted] = useState<Slot[]>([]);
   const [internalSelected, setInternalSelected] = useState<Slot | null>(null);
   const [hoverInspect, setHoverInspect] = useState(false);
@@ -371,7 +362,7 @@ function ModelGridScene({
           panelOpen={panelOpen}
           onPanelClose={() => setInternalSelected(null)}
         />
-        <Placeholders slots={slots} color={theme.base} />
+        {showPlinths && <Placeholders slots={slots} color={theme.base} />}
         <Floor bounds={bounds} color={theme.floor} />
         <ActiveModels
           slots={slots}
@@ -382,9 +373,10 @@ function ModelGridScene({
           playAnim={playAnim}
           onAnimInfo={setAnimInfo}
           loadAll={loadAll}
+          groundY={groundY}
         />
-        {selected && <SelectedMarker slot={selected} />}
-        {controlledSelected && <FocusSelectedSlot slot={controlledSelected} />}
+        {selected && <SelectedMarker slot={selected} groundY={groundY} />}
+        {controlledSelected && <FocusSelectedSlot slot={controlledSelected} groundY={groundY} />}
         {showPackLabels && <PackLabels layouts={layouts} />}
         <Suspense fallback={null}>
           <Environment
@@ -772,6 +764,7 @@ function ActiveModels({
   playAnim,
   onAnimInfo,
   loadAll = false,
+  groundY,
 }: {
   slots: Slot[];
   layouts: PackLayout[];
@@ -781,6 +774,7 @@ function ActiveModels({
   playAnim: string | null;
   onAnimInfo: (slotIndex: number, info: AnimationInfo | null) => void;
   loadAll?: boolean;
+  groundY: number;
 }) {
   const { camera } = useThree();
   const target = useRef<Slot[]>([]);
@@ -861,6 +855,7 @@ function ActiveModels({
           <Suspense fallback={null}>
             <GroundedModel
               slot={slot}
+              groundY={groundY}
               playAnimation={
                 selectedIndex === slot.index ? playAnim ?? undefined : undefined
               }
@@ -883,10 +878,12 @@ function ActiveModels({
    to figure out which slot was clicked. */
 function GroundedModel({
   slot,
+  groundY,
   playAnimation,
   onAnimInfo,
 }: {
   slot: Slot;
+  groundY: number;
   playAnimation?: string;
   onAnimInfo: (slotIndex: number, info: AnimationInfo | null) => void;
 }) {
@@ -897,7 +894,7 @@ function GroundedModel({
   // it here using the manifest's bbox minY.
   const x = sx + cw / 2;
   const z = sz + cd / 2;
-  const y = BASE_TOP_Y - (slot.model.minY ?? 0);
+  const y = groundY - (slot.model.minY ?? 0);
 
   const slotIndex = slot.index;
   const reportAnim = useCallback(
@@ -1008,19 +1005,19 @@ function Floor({ bounds, color }: { bounds: WorldBounds; color: string }) {
   );
 }
 
-function slotCenter(slot: Slot): Vector3 {
+function slotCenter(slot: Slot, groundY: number): Vector3 {
   const [sx, _sy, sz] = slot.position;
   const [cw, cd] = slot.cellSize;
-  return new Vector3(sx + cw / 2, BASE_TOP_Y + 0.5, sz + cd / 2);
+  return new Vector3(sx + cw / 2, groundY + 0.5, sz + cd / 2);
 }
 
-function SelectedMarker({ slot }: { slot: Slot }) {
-  const center = slotCenter(slot);
+function SelectedMarker({ slot, groundY }: { slot: Slot; groundY: number }) {
+  const center = slotCenter(slot, groundY);
   const radius = Math.max(slot.model.size[0], slot.model.size[2], 1) / 2 + 0.42;
   return (
     <mesh
       rotation={[-Math.PI / 2, 0, 0]}
-      position={[center.x, BASE_TOP_Y + 0.035, center.z]}
+      position={[center.x, groundY + 0.035, center.z]}
       renderOrder={2}
     >
       <ringGeometry args={[radius, radius + 0.08, 64]} />
@@ -1029,7 +1026,7 @@ function SelectedMarker({ slot }: { slot: Slot }) {
   );
 }
 
-function FocusSelectedSlot({ slot }: { slot: Slot }) {
+function FocusSelectedSlot({ slot, groundY }: { slot: Slot; groundY: number }) {
   const { camera } = useThree();
   const target = useRef<{
     position: Vector3;
@@ -1037,7 +1034,7 @@ function FocusSelectedSlot({ slot }: { slot: Slot }) {
   } | null>(null);
 
   useEffect(() => {
-    const center = slotCenter(slot);
+    const center = slotCenter(slot, groundY);
     const reach = Math.max(5, Math.max(slot.model.size[0], slot.model.size[2]) * 1.35);
     target.current = {
       position: new Vector3(
@@ -1047,7 +1044,7 @@ function FocusSelectedSlot({ slot }: { slot: Slot }) {
       ),
       lookAt: center,
     };
-  }, [slot]);
+  }, [slot, groundY]);
 
   useFrame((_, delta) => {
     if (!target.current) return;

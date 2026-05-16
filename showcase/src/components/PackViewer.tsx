@@ -8,7 +8,13 @@ import { LicenseLink } from "@/components/LicenseLink";
 import { PackDownloadButton } from "@/components/PackDownloadButton";
 import { ModelDownloadLinks } from "@/components/ModelDownloadLinks";
 import { licenseForVendor } from "@/lib/license";
-import { assetUrl, displayPackDescription, displayPackTitle, type Pack } from "@/lib/manifest";
+import {
+  assetUrl,
+  displayPackTitle,
+  modelSearchText,
+  packDescription,
+  type Pack,
+} from "@/lib/manifest";
 import { findModelRouteRef, modelHref, modelRouteRefsForPack, type ModelRouteRef } from "@/lib/model-routes";
 import { uniqueTags } from "@/lib/tags";
 import { useRouter } from "next/navigation";
@@ -120,8 +126,11 @@ function PackGroupViewer({ pack, modelRefs }: { pack: Pack; modelRefs: ModelRout
   const visibleModels = useMemo(() => {
     if (!normalizedQuery) return modelRefs;
     const terms = normalizedQuery.split(/\s+/).filter(Boolean);
-    return modelRefs.filter((ref) => terms.every((term) => ref.model.searchText.includes(term)));
-  }, [modelRefs, normalizedQuery]);
+    return modelRefs.filter((ref) => {
+      const text = modelSearchText(ref.model, pack);
+      return terms.every((term) => text.includes(term));
+    });
+  }, [modelRefs, normalizedQuery, pack]);
   const modelList = useInfiniteList({
     total: visibleModels.length,
     pageSize: MODEL_LIST_PAGE_SIZE,
@@ -148,7 +157,7 @@ function PackGroupViewer({ pack, modelRefs }: { pack: Pack; modelRefs: ModelRout
         </Link>
         <div className="pack-context-label">Part of pack</div>
         <h1>{packTitle}</h1>
-        <p className="pack-view-description">{displayPackDescription(pack)}</p>
+        <p className="pack-view-description">{packDescription(pack)}</p>
         <div className="pack-credit-panel">
           <div>
             <span>Creator</span>

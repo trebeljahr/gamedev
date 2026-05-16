@@ -1,33 +1,24 @@
-import data from "./manifest.json";
-import type { ModelCategory } from "./catalog-metadata";
+import { type ModelCategory, usagePhrase } from "./catalog-metadata";
 
 export type Model = {
   name: string;
   file: string;
   downloads?: ModelDownload[];
-  label: string;
   title: string;
-  description: string;
   category: ModelCategory;
   subcategory: string;
   style: string[];
   themes: string[];
   tags: string[];
-  searchText: string;
   // World-space XZ footprint + height of the model's static bbox, computed
   // by scripts/build-manifest.ts. Used by /all to size the base plate and to
   // pack cells without normalising every model into a fixed unit cube.
   size: [number, number, number]; // [width X, height Y, depth Z]
   minY: number; // bbox min Y — translate the model up by -minY to ground it
-  // Bbox centre in local model coords (X, Z). GLB origins aren't always at
-  // the model's XZ centre; the renderer uses this so each model sits in the
-  // middle of its cell rather than potentially overhanging into a neighbour.
-  cxz: [number, number];
 };
 export type ModelDownload = {
   format: string;
   file: string;
-  label?: string;
   optimized?: boolean;
 };
 export type PackPreview = {
@@ -40,23 +31,42 @@ export type Pack = {
   id: string;
   vendor: string;
   pack: string;
-  label: string;
   title: string;
-  description: string;
   categories: ModelCategory[];
   style: string[];
   themes: string[];
   tags: string[];
   source: string;
   license: string;
-  searchText: string;
   preview?: PackPreview;
   count: number;
   models: Model[];
 };
 export type Manifest = { packs: Pack[] };
 
-export const manifest = data as Manifest;
+/**
+ * The manifest is a 6.8 MB JSON file. It lives in `public/manifest.json` so
+ * it's served as a static asset and never enters the JS bundle. We read it
+ * once on the server at module init; client components that need the data
+ * receive subsets via React props (or fetch /manifest.json themselves for
+ * whole-catalog views).
+ *
+ * Client-side this module still resolves (so helpers like `assetUrl` and
+ * `displayPackTitle` remain client-safe), but `manifest.packs` is empty.
+ * Any client component that touches manifest data directly is a bug — it
+ * should receive a serialized subset from a server component.
+ */
+const isServer = typeof window === "undefined";
+let _manifest: Manifest = { packs: [] };
+if (isServer) {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const fs = require("node:fs") as typeof import("node:fs");
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const path = require("node:path") as typeof import("node:path");
+  const raw = fs.readFileSync(path.join(process.cwd(), "public", "manifest.json"), "utf8");
+  _manifest = JSON.parse(raw) as Manifest;
+}
+export const manifest: Manifest = _manifest;
 
 export function findPack(vendor: string, pack: string): Pack | undefined {
   return manifest.packs.find((p) => p.vendor === vendor && p.pack === pack);
@@ -121,10 +131,52 @@ export function displayPackTitle(pack: Pick<Pack, "title" | "vendor">): string {
   );
 }
 
-export function displayPackDescription(pack: Pick<Pack, "description" | "title" | "vendor">): string {
-  const title = displayPackTitle(pack);
-  if (title === pack.title) return pack.description;
-  return pack.description.split(pack.title).join(title);
+/**
+ * Render the templated per-model description on demand. Build-manifest used to
+ * pre-bake this into the JSON, which was ~1.2 MB of repeated boilerplate.
+ */
+export function modelDescription(model: Model, pack: Pack): string {
+  return `${model.title} is a ${model.style.join(", ")} ${model.subcategory} from ${pack.source}'s ${displayPackTitle(pack)} pack. Useful for ${usagePhrase(model.category)}.`;
+}
+
+/**
+ * Lazy fuzzy-search index for a single model. Catalog/search components join
+ * many of these per keystroke; the surface stays small (no description, no
+ * file URL) so substring matching is cheap and meaningful.
+ */
+export function modelSearchText(model: Model, pack: Pack): string {
+  return [
+    model.title,
+    model.name,
+    displayPackTitle(pack),
+    pack.pack,
+    pack.source,
+    model.category,
+    model.subcategory,
+    ...model.themes,
+    ...model.style,
+    ...model.tags,
+  ].filter(Boolean).join(" ").toLowerCase();
+}
+
+export function packDescription(pack: Pack): string {
+  const themePhrase = pack.themes.length > 0 ? pack.themes.join(", ") : "general";
+  const categoryPhrase = pack.categories.length > 0 ? pack.categories.join(", ") : "game assets";
+  return `${displayPackTitle(pack)} is a ${pack.source} ${pack.style.join(", ")} pack with ${pack.count.toLocaleString("en-US")} models focused on ${themePhrase}. Includes ${categoryPhrase}.`;
+}
+
+export function packSearchText(pack: Pack): string {
+  return [
+    displayPackTitle(pack),
+    pack.pack,
+    pack.source,
+    pack.vendor,
+    pack.license,
+    ...pack.categories,
+    ...pack.themes,
+    ...pack.style,
+    ...pack.tags,
+  ].filter(Boolean).join(" ").toLowerCase();
 }
 
 export function downloadsForModel(model: Model): ModelDownload[] {

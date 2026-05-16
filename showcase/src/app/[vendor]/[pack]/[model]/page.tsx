@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { PackViewer } from "@/components/PackViewer";
 import { exactLicenseUrlFor, licenseForVendor } from "@/lib/license";
-import { findPack } from "@/lib/manifest";
+import { findPack, modelDescription } from "@/lib/manifest";
 import { findModelRouteRef, modelHref } from "@/lib/model-routes";
 import { pageMetadata } from "@/lib/seo";
 
@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: ModelPageProps): Promise<Meta
   });
   const metadata = pageMetadata({
     title: `${ref.model.title} 3D Model by ${credit.vendorLabel}`,
-    description: `${ref.model.description} Browse it in ${data.title}, download source files, and review ${data.license} license notes.`,
+    description: `${modelDescription(ref.model, data)} Browse it in ${data.title}, download source files, and review ${data.license} license notes.`,
     pathname: modelHref(data, ref),
     imagePathname: `/${data.vendor}/${data.pack}`,
     imageAlt: `${ref.model.title} 3D model`,

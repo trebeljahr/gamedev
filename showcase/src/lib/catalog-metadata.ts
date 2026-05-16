@@ -19,25 +19,21 @@ export type ModelCategory =
 
 export type ModelMetadata = {
   title: string;
-  description: string;
   category: ModelCategory;
   subcategory: string;
   style: string[];
   themes: string[];
   tags: string[];
-  searchText: string;
 };
 
 export type PackMetadata = {
   title: string;
-  description: string;
   categories: ModelCategory[];
   style: string[];
   themes: string[];
   tags: string[];
   source: string;
   license: string;
-  searchText: string;
 };
 
 export type MediaMetadata = {
@@ -256,7 +252,7 @@ function sizeWords(size?: AssetSize): string[] {
   return tags;
 }
 
-function usagePhrase(category: ModelCategory): string {
+export function usagePhrase(category: ModelCategory): string {
   switch (category) {
     case "character":
       return "NPCs, player stand-ins, crowd dressing, or animation tests";
@@ -296,23 +292,8 @@ export function buildModelMetadata(input: ModelInput): ModelMetadata {
   const themes = inferThemes(text, packTitle);
   const tags = inferTags(text, [category, subcategory, ...themes, ...sizeWords(input.size)]);
   const style = inferStyle(input.vendor, text);
-  const source = VENDOR_LABELS[input.vendor] ?? cleanAssetTitle(input.vendor);
-  const description = `${title} is a ${style.join(", ")} ${subcategory} from ${source}'s ${packTitle} pack. Useful for ${usagePhrase(category)}.`;
-  const searchText = unique([
-    title,
-    input.name,
-    input.file ?? "",
-    packTitle,
-    input.pack,
-    source,
-    category,
-    subcategory,
-    ...themes,
-    ...style,
-    ...tags,
-  ].filter(Boolean)).join(" ").toLowerCase();
 
-  return { title, description, category, subcategory, style, themes, tags, searchText };
+  return { title, category, subcategory, style, themes, tags };
 }
 
 function topValues<T extends string>(values: T[], max = 6): T[] {
@@ -337,24 +318,9 @@ export function buildPackMetadata(input: PackInput): PackMetadata {
     "game-ready",
   ]).sort();
   const style = inferStyle(input.vendor, `${input.pack} ${tags.join(" ")}`);
-  const categoryPhrase = categories.length > 0 ? categories.join(", ") : "game assets";
-  const themePhrase = themes.length > 0 ? themes.join(", ") : "general";
   const license = VENDOR_LICENSES[input.vendor] ?? "Check source metadata";
-  const description = `${title} is a ${source} ${style.join(", ")} pack with ${input.count.toLocaleString("en-US")} models focused on ${themePhrase}. Includes ${categoryPhrase}.`;
-  const searchText = unique([
-    title,
-    input.pack,
-    source,
-    input.vendor,
-    license,
-    description,
-    ...categories,
-    ...themes,
-    ...style,
-    ...tags,
-  ]).join(" ").toLowerCase();
 
-  return { title, description, categories, style, themes, tags, source, license, searchText };
+  return { title, categories, style, themes, tags, source, license };
 }
 
 export function buildArtPackMetadata(input: {

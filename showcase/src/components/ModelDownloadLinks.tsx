@@ -23,7 +23,7 @@ function primaryDownloadFor(downloads: ModelDownload[]): ModelDownload | undefin
 
 function primaryDownloadLabel(download: ModelDownload): string {
   if (download.optimized && download.format === "glb") return "Download .glb";
-  return `Download ${download.label ?? modelDownloadLabel(download)}`;
+  return `Download ${modelDownloadLabel(download)}`;
 }
 
 export function ModelDownloadLinks({ model, className, compact = false }: ModelDownloadLinksProps) {
@@ -62,7 +62,7 @@ export function ModelDownloadLinks({ model, className, compact = false }: ModelD
             <span>Source formats</span>
             {sourceDownloads.map((download) => {
               const filename = modelDownloadFilename(model, download);
-              const label = download.label ?? modelDownloadLabel(download);
+              const label = modelDownloadLabel(download);
               return (
                 <a
                   key={`${download.format}:${download.file}`}

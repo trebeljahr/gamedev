@@ -7,7 +7,7 @@ import { fileURLToPath } from "node:url";
 const SHOWCASE_DIR = join(fileURLToPath(new URL(".", import.meta.url)), "..");
 
 const requiredFiles = [
-  "src/lib/manifest.json",
+  "public/manifest.json",
   "src/lib/media-assets.json",
   "src/lib/audio-analysis.json",
   "src/lib/media-catalog.json",

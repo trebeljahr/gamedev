@@ -12,19 +12,16 @@ import type { PackPreview } from "../src/lib/manifest";
 type ExistingModel = {
   name: string;
   file: string;
-  label?: string;
   title?: string;
   category?: ModelCategory;
   size?: AssetSize;
   minY: number;
-  cxz: [number, number];
 };
 
 type ExistingPack = {
   id: string;
   vendor: string;
   pack: string;
-  label?: string;
   preview?: PackPreview;
   count: number;
   models: ExistingModel[];
@@ -34,7 +31,7 @@ type ExistingManifest = {
   packs: ExistingPack[];
 };
 
-const manifestPath = join(__dirname, "..", "src", "lib", "manifest.json");
+const manifestPath = join(__dirname, "..", "public", "manifest.json");
 
 async function main() {
   const manifest = JSON.parse(await readFile(manifestPath, "utf8")) as ExistingManifest;
@@ -50,7 +47,6 @@ async function main() {
       });
       return {
         ...model,
-        label: metadata.title,
         ...metadata,
         size: model.size ?? ([1, 1, 1] as AssetSize),
       };
@@ -67,7 +63,6 @@ async function main() {
       id: pack.id,
       vendor: pack.vendor,
       pack: pack.pack,
-      label: metadata.title,
       ...metadata,
       preview: buildPackPreviewMetadata(models),
       count: models.length,

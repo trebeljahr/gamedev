@@ -9,7 +9,14 @@ import { LicenseLink } from "@/components/LicenseLink";
 import { ModelDownloadLinks } from "@/components/ModelDownloadLinks";
 import { SiteHeader } from "@/components/SiteHeader";
 import { licenseForVendor, type VendorLicense } from "@/lib/license";
-import { displayPackTitle, type Manifest, type Model, type Pack } from "@/lib/manifest";
+import {
+  displayPackTitle,
+  modelSearchText,
+  packSearchText,
+  type Manifest,
+  type Model,
+  type Pack,
+} from "@/lib/manifest";
 import { modelHref } from "@/lib/model-routes";
 import { uniqueTags } from "@/lib/tags";
 
@@ -68,12 +75,13 @@ export function ModelCatalog({ manifest }: ModelCatalogProps) {
       manifest.packs.flatMap((pack) => {
         const vendorCredit = licenseForVendor(pack.vendor);
         const license = pack.license || vendorCredit.license;
+        const packIndex = packSearchText(pack);
         return pack.models.map((model) => ({
           model,
           pack,
           license,
           vendorCredit,
-          searchText: `${model.searchText} ${pack.searchText} ${vendorCredit.vendorLabel} ${license}`.toLowerCase(),
+          searchText: `${modelSearchText(model, pack)} ${packIndex} ${vendorCredit.vendorLabel.toLowerCase()} ${license.toLowerCase()}`,
         }));
       }),
     [manifest.packs],

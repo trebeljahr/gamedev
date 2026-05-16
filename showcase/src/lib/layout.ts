@@ -21,7 +21,7 @@
  * it. The base itself is sized to model.size (raw) so neighbours have a
  * CELL_PAD-wide gap on each side.
  */
-import { manifest, type Pack, type Model } from "./manifest";
+import { type Manifest, type Pack, type Model } from "./manifest";
 
 // Gap added to every model cell. Adjacent cells touch edge-to-edge, but the
 // base inside each cell is only sized to the model's raw bbox — so two
@@ -141,7 +141,7 @@ export function layoutPackModels(pack: Pack, indexStart = 0): {
 
 /* Pack each pack's models into a roughly-square block, then pack those
    blocks into the world. */
-function computeSlots(): SceneLayout {
+export function computeAllModelsLayout(manifest: Manifest): SceneLayout {
   const slots: Slot[] = [];
   const packs: PackLayout[] = [];
 
@@ -241,43 +241,6 @@ function computeSlots(): SceneLayout {
     slots,
     packs,
     bounds: { min: [0, 0, 0], max: [maxX, 10, maxZ] },
-  };
-}
-
-const _data = computeSlots();
-export const allSlots = _data.slots;
-export const packLayouts = _data.packs;
-export const worldBounds = _data.bounds;
-export const allModelsLayout: SceneLayout = _data;
-
-export function layoutForPackId(packId: string): SceneLayout | undefined {
-  const layout = packLayouts.find((pl) => pl.pack.id === packId);
-  if (!layout) return undefined;
-
-  const originX = layout.bounds.minX;
-  const originZ = layout.bounds.minZ;
-  const slots = layout.slots.map((slot) => ({
-    ...slot,
-    position: [
-      slot.position[0] - originX,
-      slot.position[1],
-      slot.position[2] - originZ,
-    ] satisfies [number, number, number],
-  }));
-  const bounds = {
-    minX: 0,
-    maxX: layout.bounds.maxX - layout.bounds.minX,
-    minZ: 0,
-    maxZ: layout.bounds.maxZ - layout.bounds.minZ,
-  };
-
-  return {
-    slots,
-    packs: [{ ...layout, slots, bounds }],
-    bounds: {
-      min: [0, 0, 0],
-      max: [bounds.maxX, 10, bounds.maxZ],
-    },
   };
 }
 

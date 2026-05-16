@@ -43,7 +43,7 @@ const ASSETS_ROOT = process.env.ASSETS_DIR
   : join(REPO_ROOT, "assets");
 const GLB_ROOT = join(ASSETS_ROOT, "glb");
 const MODELS_ROOT = join(ASSETS_ROOT, "raw");
-const OUT = join(SHOWCASE_DIR, "src", "lib", "manifest.json");
+const OUT = join(SHOWCASE_DIR, "public", "manifest.json");
 const MEDIA_OUT = join(SHOWCASE_DIR, "src", "lib", "media-assets.json");
 const BBOX_CACHE = join(SHOWCASE_DIR, ".manifest-bbox-cache.json");
 
@@ -75,39 +75,31 @@ type Model = {
   name: string;
   file: string;
   downloads: ModelDownload[];
-  label: string;
   title: string;
-  description: string;
   category: ModelCategory;
   subcategory: string;
   style: string[];
   themes: string[];
   tags: string[];
-  searchText: string;
   size: Size;
   minY: number;
-  cxz: [number, number];
 };
 type ModelDownload = {
   format: string;
   file: string;
-  label?: string;
   optimized?: boolean;
 };
 type Pack = {
   id: string;
   vendor: string;
   pack: string;
-  label: string;
   title: string;
-  description: string;
   categories: ModelCategory[];
   style: string[];
   themes: string[];
   tags: string[];
   source: string;
   license: string;
-  searchText: string;
   preview?: PackPreview;
   count: number;
   models: Model[];
@@ -313,11 +305,6 @@ type CacheEntry = {
   mtime: number;
   size: Size;
   minY: number;
-  // Bbox centre in local model coords (X, Z). GLB origins aren't always at
-  // the model's XZ centre; storing this lets the renderer position the
-  // model so its bbox sits on the centre of its cell, with no overlap of
-  // neighbouring cells.
-  cxz: [number, number];
 };
 type Cache = Record<string, CacheEntry>;
 
@@ -347,24 +334,18 @@ const MIN_DIM = 0.3;
 async function computeBbox(
   absPath: string,
   io: NodeIO,
-): Promise<{ size: Size; minY: number; cxz: [number, number] }> {
+): Promise<{ size: Size; minY: number }> {
   const doc = await io.read(absPath);
   const root = doc.getRoot();
   const scene = root.getDefaultScene() || root.listScenes()[0];
-  if (!scene) return { size: [1, 1, 1], minY: 0, cxz: [0, 0] };
+  if (!scene) return { size: [1, 1, 1], minY: 0 };
   const b = getBounds(scene);
   const size: Size = [b.max[0] - b.min[0], b.max[1] - b.min[1], b.max[2] - b.min[2]];
   for (let i = 0; i < 3; i++) {
     if (!Number.isFinite(size[i]) || size[i] < MIN_DIM) size[i] = MIN_DIM;
   }
   const rigged = root.listSkins().length > 0;
-  // For rigged models we clamped the bind-pose width down to roughly idle-
-  // pose proportions; pretend the centre is at the rig root so the visible
-  // character lands in the middle of its cell.
-  const cxz: [number, number] = rigged
-    ? [0, 0]
-    : [(b.min[0] + b.max[0]) / 2, (b.min[2] + b.max[2]) / 2];
-  return { size: rigged ? clampRiggedHoriz(size) : size, minY: b.min[1], cxz };
+  return { size: rigged ? clampRiggedHoriz(size) : size, minY: b.min[1] };
 }
 
 /* -------- model discovery ------------------------------------------------ */
@@ -428,11 +409,6 @@ function formatForPath(path: string): string {
   return lower.match(/\.([a-z0-9]+)$/)?.[1] ?? "file";
 }
 
-function downloadLabel(format: string, optimized: boolean): string {
-  const name = format === "gltf" ? "glTF" : format === "glb" ? "GLB" : format.toUpperCase();
-  return `${name} ${optimized ? "optimized" : "source"}`;
-}
-
 function buildModelDownloads(
   modelAbsPath: string,
   optimizedByKey: Map<string, string[]>,
@@ -454,7 +430,6 @@ function buildModelDownloads(
     downloads.push({
       format,
       file,
-      label: downloadLabel(format, optimized),
       optimized,
     });
   }
@@ -567,7 +542,6 @@ async function main() {
               mtime,
               size: bb.size,
               minY: bb.minY,
-              cxz: bb.cxz,
             };
             stats.computed++;
           } catch (err) {
@@ -577,7 +551,6 @@ async function main() {
               mtime,
               size: [1, 1, 1],
               minY: 0,
-              cxz: [0, 0],
             };
             console.warn(`[manifest] bbox failed for ${relative(ASSETS_ROOT, a)}: ${(err as Error).message}`);
           }
@@ -597,14 +570,12 @@ async function main() {
           name,
           file,
           downloads: buildModelDownloads(a, optimizedByKey, sourceByKey),
-          label: metadata.title,
           ...metadata,
           size: entry.size,
           minY: entry.minY,
-          cxz: entry.cxz,
         });
       }
-      models.sort((a, b) => a.label.localeCompare(b.label));
+      models.sort((a, b) => a.title.localeCompare(b.title));
 
       if (usedSource) stats.source += models.length;
       else stats.optimized += models.length;
@@ -620,7 +591,6 @@ async function main() {
         id: `${vendor}/${pack}`,
         vendor,
         pack,
-        label: packMetadata.title,
         ...packMetadata,
         preview: buildPackPreviewMetadata(models),
         count: models.length,

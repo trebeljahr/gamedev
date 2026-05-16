@@ -78,7 +78,7 @@ const featuredModels: LandingModelPreviewItem[] = modelPicks.flatMap((pick) => {
   const optimized = downloadsForModel(model).find((download) => download.optimized);
 
   return {
-    label: model.label,
+    label: model.title,
     file: optimized?.file ?? model.file,
     source: pack.source,
     minY: model.minY,

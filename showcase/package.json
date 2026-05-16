@@ -10,9 +10,9 @@
     "media:audio": "tsx scripts/build-audio-analysis.ts",
     "media:catalog": "tsx scripts/build-media-assets.ts && tsx scripts/build-audio-analysis.ts && tsx scripts/build-media-catalog.ts",
     "manifest:enrich": "tsx scripts/enrich-existing-manifest.ts",
-    "predev": "node scripts/check-generated-catalogs.mjs && node scripts/clean-dev-cache.mjs",
+    "predev": "node scripts/check-generated-catalogs.mjs",
     "prebuild": "node scripts/check-generated-catalogs.mjs",
-    "dev": "next dev --port 3679",
+    "dev": "next dev --turbopack --port 3679",
     "build": "next build",
     "start": "next start --port 3679",
     "lint": "eslint ."
