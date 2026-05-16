@@ -153,6 +153,8 @@ export function isLikelySeparateFramePath(path: string): boolean {
   const actionHint = hasToken(name, ACTION_WORDS) || hasToken(path, ACTION_WORDS);
   const words = name.split(/\s+/).filter(Boolean);
   const onlyActionAndNumber = words.length <= 2 && hasToken(words[0] ?? "", ACTION_WORDS) && /^\d{1,4}$/.test(words.at(-1) ?? "");
+  const parentFolderText = tokenText(parts(path).at(-2) ?? "");
+  const actionFolder = new RegExp(`^(${ACTION_WORDS})$`, "i").test(parentFolderText);
   const kenneyPoseFrame =
     /(^|[\\/])kenney([\\/]|$)/i.test(path) &&
     /(^|[\\/])(png|sprites?|poses?|limbs?)([\\/]|$)/i.test(path) &&
@@ -164,8 +166,8 @@ export function isLikelySeparateFramePath(path: string): boolean {
       /(^|\s)[a-z]$/.test(name));
 
   return (
-    (frameSuffix && (frameFolder || (actionHint && !onlyActionAndNumber))) ||
-    (compactFrameSuffix && frameFolder) ||
+    (frameSuffix && (frameFolder || actionFolder || (actionHint && !onlyActionAndNumber))) ||
+    (compactFrameSuffix && (frameFolder || actionFolder)) ||
     kenneyPoseFrame ||
     namedPoseFrame
   );
@@ -254,7 +256,15 @@ export function artDesignKey(path: string): string {
     .trim();
 
   if (name.length < 3 || /^(png|free|asset|sprite|character)$/.test(name)) {
-    return `${parent} ${tokenText(basenameWithoutExtension(path))}`.replace(/\s+/g, " ").trim();
+    const parentFolder = tokenText(pathParts.at(-2) ?? "");
+    const baseName = tokenText(basenameWithoutExtension(path));
+    const actionPattern = new RegExp(`^(${ACTION_WORDS})$`, "i");
+    const baseAction = baseName.split(/\s+/).find((token) => actionPattern.test(token));
+    if (baseAction && parentFolder === baseAction.toLowerCase()) {
+      const grandparent = tokenText(pathParts.at(-3) ?? "");
+      return `${grandparent} ${baseAction}`.replace(/\s+/g, " ").trim();
+    }
+    return `${parent} ${baseName}`.replace(/\s+/g, " ").trim();
   }
 
   return `${parent} ${name}`.replace(/\s+/g, " ").trim();
@@ -289,6 +299,36 @@ export function scoreArtSample(path: string, inspection?: ArtInspection): number
       score += 4;
   }
   return score;
+}
+
+export function groupSequenceFrames<T extends { path: string }>(samples: readonly T[]): T[][] {
+  const buckets = new Map<string, T[]>();
+  for (const sample of samples) {
+    if (!isLikelySeparateFramePath(sample.path)) continue;
+    const key = artDesignKey(sample.path);
+    const list = buckets.get(key) ?? [];
+    list.push(sample);
+    buckets.set(key, list);
+  }
+  return [...buckets.values()].filter((list) => list.length >= 2);
+}
+
+export function frameNumberFromPath(path: string): number | null {
+  const base = basenameWithoutExtension(path);
+  const match = base.match(/(?:^|[^0-9])(\d{1,5})$/);
+  return match ? Number(match[1]) : null;
+}
+
+export function sortByFrameNumber<T extends { path: string }>(samples: readonly T[]): T[] {
+  return [...samples].sort((a, b) => {
+    const parentA = a.path.split("/").slice(0, -1).join("/");
+    const parentB = b.path.split("/").slice(0, -1).join("/");
+    if (parentA !== parentB) return parentA.localeCompare(parentB);
+    const frameA = frameNumberFromPath(a.path);
+    const frameB = frameNumberFromPath(b.path);
+    if (frameA !== null && frameB !== null && frameA !== frameB) return frameA - frameB;
+    return a.path.localeCompare(b.path);
+  });
 }
 
 export type ArtSampleSelectionInput = {

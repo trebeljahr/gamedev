@@ -8,7 +8,12 @@ import {
   buildSoundSampleMetadata,
   buildSourceMappingMetadata,
 } from "../src/lib/catalog-metadata";
-import { isLikelyMarketingPreviewPath, isLikelyPromoArt } from "../src/lib/media-inference";
+import {
+  groupSequenceFrames,
+  isLikelyMarketingPreviewPath,
+  isLikelyPromoArt,
+  sortByFrameNumber,
+} from "../src/lib/media-inference";
 
 type MetadataMapping = {
   path_pattern: string;
@@ -98,6 +103,7 @@ type ArtPackSummary = Omit<ArtPack, "samples"> & {
     label: string;
     kind: ArtSample["kind"];
     animated: boolean;
+    sequenceSrcs?: string[];
   };
 };
 
@@ -341,6 +347,12 @@ function materialSamplesIn(samples: ArtSampleWithMeta[]): ArtSampleWithMeta[] {
 }
 
 function previewSampleIn(samples: ArtSampleWithMeta[]): ArtSampleWithMeta | undefined {
+  const animatedCharacter = samples.find(
+    (sample) => sample.animated && (sample.kind === "character" || sample.kind === "sprite"),
+  );
+  if (animatedCharacter) return animatedCharacter;
+  const animatedAny = samples.find((sample) => sample.animated);
+  if (animatedAny) return animatedAny;
   return (
     samples.find((sample) => sample.kind === "icon" || sample.kind === "ui") ??
     samples.find((sample) => sample.kind === "character" || sample.kind === "sprite") ??
@@ -383,6 +395,13 @@ function spriteMotionIn(samples: ArtSampleWithMeta[]): ArtMotion {
 function summarizeArtPack(pack: ArtPack): ArtPackSummary {
   const materialSamples = materialSamplesIn(pack.samples);
   const preview = previewSampleIn(materialSamples);
+  const sequenceGroups = preview ? groupSequenceFrames(materialSamples) : [];
+  const previewSequence = preview
+    ? sequenceGroups.find((group) => group.some((item) => item.path === preview.path))
+    : undefined;
+  const sequenceSrcs = previewSequence
+    ? sortByFrameNumber(previewSequence).map((item) => item.src)
+    : undefined;
   const slim: Omit<ArtPack, "samples"> & Partial<Pick<ArtPack, "samples">> = { ...pack };
   delete slim.samples;
   return {
@@ -397,7 +416,8 @@ function summarizeArtPack(pack: ArtPack): ArtPackSummary {
           src: preview.src,
           label: preview.label,
           kind: preview.kind,
-          animated: preview.animated,
+          animated: preview.animated || (sequenceSrcs?.length ?? 0) >= 2,
+          sequenceSrcs,
         }
       : undefined,
   };

@@ -191,6 +191,32 @@ function sequenceLabel(samples: ArtSample[]): string {
   return `${humanizePathSegment(folder) || "Frame"}${range}`;
 }
 
+const SUBJECT_NOISE_FOLDER = /^(extracted|assets?|images?|png|pngs?|sprites?|spritesheets?|sheets?|frames?|individual|separate|all|default|export|exports?|files?|godotproject|previews?|samples?|demo|version|v\d+)$/i;
+
+function inferSampleSubject(samplePath: string): string {
+  const segments = samplePath.split("/").filter(Boolean);
+  if (segments.length < 2) return "All";
+  for (let index = segments.length - 2; index >= 0; index--) {
+    if (!SUBJECT_NOISE_FOLDER.test(segments[index])) return humanizePathSegment(segments[index]);
+  }
+  return humanizePathSegment(segments[0]);
+}
+
+type PackSubjectGroup = { subject: string; samples: ArtSample[] };
+
+function packSubjectGroups(samples: ArtSample[]): PackSubjectGroup[] {
+  const buckets = new Map<string, ArtSample[]>();
+  for (const sample of samples) {
+    const subject = inferSampleSubject(sample.path);
+    const list = buckets.get(subject) ?? [];
+    list.push(sample);
+    buckets.set(subject, list);
+  }
+  return [...buckets.entries()]
+    .map(([subject, items]) => ({ subject, samples: items }))
+    .sort((a, b) => b.samples.length - a.samples.length || a.subject.localeCompare(b.subject));
+}
+
 function artSampleGroups(samples: ArtSample[]): ArtSampleGroup[] {
   const designBuckets = new Map<string, ArtSample[]>();
   for (const sample of samples) {
@@ -492,6 +518,38 @@ function isEmptyFrameRect(integral: ContentIntegral, source: SpriteRect): boolea
   const area = Math.max(1, source.w * source.h);
   const minPixels = Math.max(3, Math.floor(area * 0.0015));
   return contentPixelsInRect(integral, source) < minPixels;
+}
+
+function gutterContentFraction(integral: ContentIntegral, cols: number, rows: number, gutterWidth = 2): number {
+  if (cols <= 1 && rows <= 1) return 0;
+  const cellWidth = integral.width / cols;
+  const cellHeight = integral.height / rows;
+  let contentPixels = 0;
+  let gutterArea = 0;
+  for (let col = 1; col < cols; col++) {
+    const center = Math.round(col * cellWidth);
+    const x = Math.max(0, center - Math.floor(gutterWidth / 2));
+    const w = Math.min(gutterWidth, integral.width - x);
+    if (w <= 0) continue;
+    const stripe = { x, y: 0, w, h: integral.height };
+    contentPixels += contentPixelsInRect(integral, stripe);
+    gutterArea += stripe.w * stripe.h;
+  }
+  for (let row = 1; row < rows; row++) {
+    const center = Math.round(row * cellHeight);
+    const y = Math.max(0, center - Math.floor(gutterWidth / 2));
+    const h = Math.min(gutterWidth, integral.height - y);
+    if (h <= 0) continue;
+    const stripe = { x: 0, y, w: integral.width, h };
+    contentPixels += contentPixelsInRect(integral, stripe);
+    gutterArea += stripe.w * stripe.h;
+  }
+  return gutterArea > 0 ? contentPixels / gutterArea : 0;
+}
+
+function hasClearGridGutters(integral: ContentIntegral, cols: number, rows: number): boolean {
+  if (cols <= 1 && rows <= 1) return true;
+  return gutterContentFraction(integral, cols, rows, 1) <= 0.002;
 }
 
 function cellSizeCandidates(length: number): number[] {
@@ -900,10 +958,22 @@ function fallbackStaticSheetGridFromImage(sample: ArtSample, imageWidth: number,
   return null;
 }
 
-function detectGridFromImageData(imageData: ImageData, options: { sequenceMode?: SpriteSequenceMode } = {}): SpriteGrid {
+function detectGridFromImageData(
+  imageData: ImageData,
+  options: { sequenceMode?: SpriteSequenceMode; requireCleanGutters?: boolean } = {},
+): SpriteGrid {
   const { width, height, data } = imageData;
   const bg = sampleImageBackground(imageData);
   const integral = buildContentIntegral(imageData, bg);
+  const requireCleanGutters = options.requireCleanGutters ?? false;
+  const finalize = (grid: SpriteGrid): SpriteGrid => {
+    if (!requireCleanGutters) return grid;
+    if (grid.frames || grid.sequences) return grid;
+    if (grid.cols * grid.rows <= 1) return grid;
+    return hasClearGridGutters(integral, grid.cols, grid.rows)
+      ? grid
+      : { cols: 1, rows: 1, confidence: 0, mode: "static" };
+  };
   const divisorGrid = detectDivisorGrid(integral);
   const rowActivity = new Float32Array(height);
   const colActivity = new Float32Array(width);
@@ -931,21 +1001,21 @@ function detectGridFromImageData(imageData: ImageData, options: { sequenceMode?:
   const sequences = sequenceLayoutMode ? snapSequencesToRegularCells(imageData, integral, rawSequences) : [];
   if (sequenceLayoutMode && sequences.length > 1) {
     const first = sequences[0];
-    return {
+    return finalize({
       cols: first.frames.length,
       rows: 1,
       confidence: 0.72,
       mode: sequenceLayoutMode,
       frames: first.frames,
       sequences,
-    };
+    });
   }
 
   if (rowPeriod.lag > 0 && colPeriod.lag > 0) {
     const rows = Math.max(1, Math.round(height / rowPeriod.lag));
     const cols = Math.max(1, Math.round(width / colPeriod.lag));
     if (rows <= 32 && cols <= 32) {
-      return { cols, rows, confidence: 0.5 + Math.min(rowPeriod.score, colPeriod.score) * 0.4, mode: "grid" };
+      return finalize({ cols, rows, confidence: 0.5 + Math.min(rowPeriod.score, colPeriod.score) * 0.4, mode: "grid" });
     }
   }
 
@@ -981,23 +1051,23 @@ function detectGridFromImageData(imageData: ImageData, options: { sequenceMode?:
         cols * rows > 96 ||
         (cols * rows > 1 && scoreDivisorGrid(integral, cols, rows) < 0.58))
     ) {
-      return divisorGrid;
+      return finalize(divisorGrid);
     }
 
     const frames = detectVariableFrames(imageData, bg, rowActivity, colActivity);
     const rowSpans = detectActiveSpans(rowActivity);
     const colSpans = detectActiveSpans(colActivity);
     if (frames.length > 1 && (frames.length !== rows * cols || hasVariableSpanSizes(rowSpans) || hasVariableSpanSizes(colSpans))) {
-      return { cols: frames.length, rows: 1, confidence: 0.62, mode: "variable", frames };
+      return finalize({ cols: frames.length, rows: 1, confidence: 0.62, mode: "variable", frames });
     }
-    return projectionGrid;
+    return finalize(projectionGrid);
   }
 
-  if (divisorGrid) return divisorGrid;
+  if (divisorGrid) return finalize(divisorGrid);
 
   for (const size of [16, 24, 32, 48, 64, 96, 128, 192, 256]) {
     if (width % size === 0 && height % size === 0) {
-      return { cols: width / size, rows: height / size, confidence: 0.4, mode: "grid" };
+      return finalize({ cols: width / size, rows: height / size, confidence: 0.4, mode: "grid" });
     }
   }
 
@@ -1314,6 +1384,35 @@ function SquareArtPreview({ sample, label }: { sample: ArtSample; label: string 
     if (!canvas || !context) return;
 
     let cancelled = false;
+    let raf = 0;
+    let lastFrameTime = 0;
+    let frameIndex = 0;
+
+    const drawFrame = (image: HTMLImageElement, rect: SpriteRect, size: number) => {
+      context.clearRect(0, 0, size, size);
+      context.imageSmoothingEnabled = false;
+      const scale = Math.min(size / rect.w, size / rect.h);
+      const w = rect.w * scale;
+      const h = rect.h * scale;
+      const x = (size - w) / 2;
+      const y = (size - h) / 2;
+      context.drawImage(image, rect.x, rect.y, rect.w, rect.h, x, y, w, h);
+    };
+
+    const startAnimation = (image: HTMLImageElement, frames: SpriteRect[], size: number) => {
+      drawFrame(image, frames[0], size);
+      const tick = (time: number) => {
+        if (cancelled) return;
+        if (time - lastFrameTime >= 120) {
+          frameIndex = (frameIndex + 1) % frames.length;
+          drawFrame(image, frames[frameIndex], size);
+          lastFrameTime = time;
+        }
+        raf = requestAnimationFrame(tick);
+      };
+      raf = requestAnimationFrame(tick);
+    };
+
     const loadImage = (useCors: boolean) => {
       const image = new Image();
       if (useCors) image.crossOrigin = "anonymous";
@@ -1334,13 +1433,28 @@ function SquareArtPreview({ sample, label }: { sample: ArtSample; label: string 
           }
           scratchContext.drawImage(image, 0, 0);
           const imageData = scratchContext.getImageData(0, 0, scratch.width, scratch.height);
-          const grid = detectGridFromImageData(imageData);
-          const frames = framesForGrid(imageData, grid);
-          if (frames.length >= 6 && Math.max(imageData.width / imageData.height, imageData.height / imageData.width) >= 4) {
-            drawSquareFrameGrid(context, image, frames, size);
-          } else {
-            drawImageContained(context, image, size, size);
+          const sheetLike =
+            sample.animated || isLikelySpriteSheetPath(sample.path) || isLikelyTextureAtlasPath(sample.path);
+          const grid = detectGridFromImageData(imageData, { requireCleanGutters: !sheetLike });
+          const allFrames = framesForGrid(imageData, grid);
+          const bg = sampleImageBackground(imageData);
+          const integral = buildContentIntegral(imageData, bg);
+          const usableFrames = allFrames.length > 1 ? allFrames.filter((rect) => !isEmptyFrameRect(integral, rect)) : allFrames;
+          const animationFrames = usableFrames.length >= 2 ? usableFrames : allFrames;
+
+          if (sample.animated && animationFrames.length >= 2) {
+            startAnimation(image, animationFrames, size);
+            return;
           }
+          if (
+            !sample.animated &&
+            animationFrames.length >= 6 &&
+            Math.max(imageData.width / imageData.height, imageData.height / imageData.width) >= 4
+          ) {
+            drawSquareFrameGrid(context, image, animationFrames, size);
+            return;
+          }
+          drawImageContained(context, image, size, size);
         } catch {
           drawImageContained(context, image, size, size);
         }
@@ -1359,13 +1473,104 @@ function SquareArtPreview({ sample, label }: { sample: ArtSample; label: string 
 
     return () => {
       cancelled = true;
+      cancelAnimationFrame(raf);
     };
-  }, [sample.src]);
+  }, [sample.animated, sample.path, sample.src]);
 
   return <canvas ref={canvasRef} width={128} height={128} role="img" aria-label={label} />;
 }
 
-function ArtSamplePreview({ sample }: { sample: ArtSample }) {
+function MultiFileSequencePreview({ srcs, label }: { srcs: readonly string[]; label: string }) {
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const context = canvas?.getContext("2d", { willReadFrequently: true });
+    if (!canvas || !context) return;
+    if (srcs.length === 0) return;
+
+    let cancelled = false;
+    let raf = 0;
+    let frameIndex = 0;
+    let lastFrameTime = 0;
+
+    const drawFrame = (image: HTMLImageElement, source: SpriteRect, size: number) => {
+      context.clearRect(0, 0, size, size);
+      context.imageSmoothingEnabled = false;
+      const scale = Math.min(size / source.w, size / source.h);
+      const w = source.w * scale;
+      const h = source.h * scale;
+      const x = (size - w) / 2;
+      const y = (size - h) / 2;
+      context.drawImage(image, source.x, source.y, source.w, source.h, x, y, w, h);
+    };
+
+    const loadFrame = (src: string): Promise<{ image: HTMLImageElement; source: SpriteRect } | null> =>
+      new Promise((resolve) => {
+        const load = (useCors: boolean) => {
+          const image = new Image();
+          if (useCors) image.crossOrigin = "anonymous";
+          image.onload = () => {
+            const width = image.naturalWidth || image.width;
+            const height = image.naturalHeight || image.height;
+            let source: SpriteRect = { x: 0, y: 0, w: width, h: height };
+            try {
+              const scratch = document.createElement("canvas");
+              scratch.width = width;
+              scratch.height = height;
+              const scratchCtx = scratch.getContext("2d", { willReadFrequently: true });
+              if (scratchCtx) {
+                scratchCtx.drawImage(image, 0, 0);
+                const imageData = scratchCtx.getImageData(0, 0, width, height);
+                source = computeTrimRect(imageData, source, sampleImageBackground(imageData), 2);
+              }
+            } catch {
+              source = { x: 0, y: 0, w: width, h: height };
+            }
+            resolve({ image, source });
+          };
+          image.onerror = () => {
+            if (useCors) load(false);
+            else resolve(null);
+          };
+          image.src = src;
+        };
+        load(true);
+      });
+
+    Promise.all(srcs.map(loadFrame)).then((results) => {
+      if (cancelled) return;
+      const frames = results.filter((item): item is { image: HTMLImageElement; source: SpriteRect } => Boolean(item));
+      if (frames.length === 0) return;
+      const size = canvas.width;
+      drawFrame(frames[0].image, frames[0].source, size);
+      if (frames.length < 2) return;
+      const tick = (time: number) => {
+        if (cancelled) return;
+        if (time - lastFrameTime >= 120) {
+          frameIndex = (frameIndex + 1) % frames.length;
+          const frame = frames[frameIndex];
+          drawFrame(frame.image, frame.source, size);
+          lastFrameTime = time;
+        }
+        raf = requestAnimationFrame(tick);
+      };
+      raf = requestAnimationFrame(tick);
+    });
+
+    return () => {
+      cancelled = true;
+      cancelAnimationFrame(raf);
+    };
+  }, [srcs]);
+
+  return <canvas ref={canvasRef} width={128} height={128} role="img" aria-label={label} />;
+}
+
+function ArtSamplePreview({ sample, sequenceSrcs }: { sample: ArtSample; sequenceSrcs?: readonly string[] }) {
+  if (sequenceSrcs && sequenceSrcs.length >= 2) {
+    return <MultiFileSequencePreview srcs={sequenceSrcs} label={sample.label} />;
+  }
   if (isSpriteSheetCandidate(sample)) return <SquareArtPreview sample={sample} label={sample.label} />;
   return <img src={sample.src} alt="" loading="lazy" decoding="async" />;
 }
@@ -1524,14 +1729,17 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
         ? "sequence-pack"
         : "off";
     const pureAtlas = isLikelyTextureAtlas(sample.path, sample.inspection) && !hybridAtlas;
-    const fallbackSequenceGrid = fallbackSequenceGridFromImage(sample.path, imageWidth, imageHeight);
-    const fallbackStaticGrid = fallbackStaticSheetGridFromImage(sample, imageWidth, imageHeight);
+    const sheetLike =
+      sample.animated || isLikelySpriteSheet(sample.path, sample.inspection) || pureAtlas || hybridAtlas;
+    const requireCleanGutters = !sheetLike;
+    const fallbackSequenceGrid = sheetLike ? fallbackSequenceGridFromImage(sample.path, imageWidth, imageHeight) : null;
+    const fallbackStaticGrid = sheetLike ? fallbackStaticSheetGridFromImage(sample, imageWidth, imageHeight) : null;
     if (!imageData) {
       return pureAtlas
         ? fallbackSequenceGrid ?? fallbackStaticGrid ?? { cols: 1, rows: 1, confidence: 0.9, mode: "atlas" as const }
         : fallbackSequenceGrid ?? fallbackStaticGrid;
     }
-    const detectedFromPixels = detectGridFromImageData(imageData, { sequenceMode });
+    const detectedFromPixels = detectGridFromImageData(imageData, { sequenceMode, requireCleanGutters });
     const canAnimateSample =
       sample.animated && isLikelySpriteSheet(sample.path, sample.inspection) && !pureAtlas;
     const hintedLayout = canAnimateSample
@@ -2188,9 +2396,10 @@ function FrameSequenceRunner({ pack, group }: { pack: ArtPack; group: ArtSampleG
 }
 
 function ArtSampleGroupPreview({ group }: { group: ArtSampleGroup }) {
+  const sequenceSrcs = group.sequence ? group.samples.map((sample) => sample.src) : undefined;
   return (
     <div className="sample-group-thumb">
-      <ArtSamplePreview sample={group.primary} />
+      <ArtSamplePreview sample={group.primary} sequenceSrcs={sequenceSrcs} />
       {group.sequence && <span>{group.samples.length}</span>}
     </div>
   );
@@ -2274,14 +2483,57 @@ function useArtPack(folder: string): { pack: ArtPack | undefined; loading: boole
   return { pack, loading, error };
 }
 
+function PackSubjectTabs({
+  subjects,
+  activeSubject,
+  onSelect,
+}: {
+  subjects: PackSubjectGroup[];
+  activeSubject: string;
+  onSelect: (subject: string) => void;
+}) {
+  if (subjects.length <= 1) return null;
+  return (
+    <div className="pack-subject-tabs" role="tablist" aria-label="Pack subjects">
+      {subjects.map((subject) => {
+        const active = subject.subject === activeSubject;
+        return (
+          <button
+            key={subject.subject}
+            type="button"
+            role="tab"
+            aria-selected={active}
+            className={active ? "active" : ""}
+            onClick={() => onSelect(subject.subject)}
+          >
+            <strong>{subject.subject}</strong>
+            <small>{subject.samples.length} files</small>
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
 function ArtWorkbench({ summary }: { summary: ArtPackSummary }) {
   const { pack, loading, error } = useArtPack(summary.folder);
   const materialSamples = useMemo(() => (pack ? materialSamplesFor(pack) : []), [pack]);
-  const groups = useMemo(() => (pack ? artSampleGroups(materialSamples) : []), [materialSamples, pack]);
+  const subjects = useMemo(() => (pack ? packSubjectGroups(materialSamples) : []), [materialSamples, pack]);
+  const [activeSubject, setActiveSubject] = useState("");
+  const resolvedSubject =
+    subjects.find((subject) => subject.subject === activeSubject) ?? subjects[0];
+  const subjectSamples = resolvedSubject?.samples ?? materialSamples;
+  const groups = useMemo(() => (pack ? artSampleGroups(subjectSamples) : []), [pack, subjectSamples]);
   const [selectedGroupId, setSelectedGroupId] = useState("");
   const selectedGroup = groups.find((group) => group.id === selectedGroupId) ?? groups[0];
   const selectedSample = selectedGroup?.primary;
   const materialCount = pack ? materialSamples.length : summary.materialSampleCount;
+
+  useEffect(() => {
+    if (!subjects.some((subject) => subject.subject === activeSubject)) {
+      setActiveSubject(subjects[0]?.subject ?? "");
+    }
+  }, [activeSubject, subjects]);
 
   useEffect(() => {
     if (!groups.some((group) => group.id === selectedGroupId)) {
@@ -2332,6 +2584,11 @@ function ArtWorkbench({ summary }: { summary: ArtPackSummary }) {
           <div className="empty-preview">{loading ? "Loading samples…" : "No samples"}</div>
         ) : (
           <>
+            <PackSubjectTabs
+              subjects={subjects}
+              activeSubject={resolvedSubject?.subject ?? ""}
+              onSelect={setActiveSubject}
+            />
             <ArtSampleBrowser groups={groups} activeId={selectedGroup?.id ?? ""} onSelect={setSelectedGroupId} />
             {selectedGroup?.sequence ? (
               <FrameSequenceRunner pack={pack} group={selectedGroup} />
@@ -2361,7 +2618,7 @@ function ArtPackCard({
       <button type="button" onClick={onSelect}>
         <div className="art-thumb">
           {preview ? (
-            <ArtSamplePreview sample={previewSampleStub(pack, preview)} />
+            <ArtSamplePreview sample={previewSampleStub(pack, preview)} sequenceSrcs={preview.sequenceSrcs} />
           ) : (
             <span>{initials(pack.title)}</span>
           )}

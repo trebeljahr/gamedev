@@ -117,6 +117,7 @@ export type ArtPackSummary = Omit<ArtPack, "samples"> & {
     label: string;
     kind: ArtSample["kind"];
     animated: boolean;
+    sequenceSrcs?: string[];
   };
 };
 
@@ -393,7 +394,13 @@ export function findMediaPack(slug: string): MediaPack | undefined {
 
 export const artPackSummaries: ArtPackSummary[] = catalog.artPacks.map((summary) => ({
   ...summary,
-  preview: summary.preview ? { ...summary.preview, src: assetUrl(summary.preview.src) } : undefined,
+  preview: summary.preview
+    ? {
+        ...summary.preview,
+        src: assetUrl(summary.preview.src),
+        sequenceSrcs: summary.preview.sequenceSrcs?.map((src) => assetUrl(src)),
+      }
+    : undefined,
 }));
 
 /**
