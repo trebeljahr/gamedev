@@ -80,5 +80,8 @@ module.exports = async (phase) => {
   );
 
   const { withLocalDev } = await import("@hatchkit/dev-plugin-next");
-  return withLocalDev(nextConfig, { slug: "gamedev" });
+  // Next 16 Turbopack evaluates next.config in main + worker processes.
+  // Suppress the worker's duplicate Tailscale banner; allowedDevOrigins
+  // still gets applied so the worker trusts the local-dev host.
+  return withLocalDev(nextConfig, { slug: "gamedev", silent: isDevWorker });
 };
