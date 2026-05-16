@@ -143,3 +143,6 @@ venv/
 .claude/settings.local.json
 .claude/worktrees/
 .claude/scheduled_tasks.lock
+# Each worktree picks its own preview port to avoid collisions across
+# parallel previews. Copy .claude/launch.json.example as a starter.
+.claude/launch.json

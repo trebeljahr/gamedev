@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "showcase",
+      "runtimeExecutable": "pnpm",
+      "//runtimeArgs": "Replace 65000 below with a free random high port (49152-65535).",
+      "runtimeArgs": ["--dir", "showcase", "exec", "next", "dev", "--turbopack", "--port", "65000"],
+      "port": 65000
+    }
+  ]
+}
