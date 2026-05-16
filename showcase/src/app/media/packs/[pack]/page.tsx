@@ -2,10 +2,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { LicenseLink } from "@/components/LicenseLink";
+import { MediaPackTrackList } from "@/components/MediaPackTrackList";
 import { SiteHeader } from "@/components/SiteHeader";
 import { findMediaPack, mediaPackHref, mediaPacks } from "@/lib/media";
 import { pageMetadata } from "@/lib/seo";
-import { uniqueTags } from "@/lib/tags";
 
 type MediaPackPageProps = {
   params: Promise<{ pack: string }>;
@@ -83,45 +83,7 @@ export default async function MediaPackPage({ params }: MediaPackPageProps) {
 
           {pack.notes && <p className="media-pack-notes">{pack.notes}</p>}
 
-          <div className="track-list media-pack-list">
-            {pack.kind === "music"
-              ? pack.musicTracks.map((track) => (
-                  <article className="track-row" key={track.path}>
-                    <div className="media-row-kicker">
-                      <span className="sound-org sound-org-music">Music</span>
-                      <span>{track.source}</span>
-                    </div>
-                    <div className="media-title">{track.title}</div>
-                    <div className="media-detail">{track.path}</div>
-                    <audio className="media-pack-audio" controls preload="none" src={track.src} />
-                    <p>{track.description}</p>
-                    <div className="inline-tags">
-                      {uniqueTags(track.tags).slice(0, 5).map((tag) => (
-                        <span key={tag}>{tag}</span>
-                      ))}
-                    </div>
-                  </article>
-                ))
-              : pack.soundSamples.map((sample) => (
-                  <article className="track-row" key={sample.path}>
-                    <div className="media-row-kicker">
-                      <span className={`sound-org sound-org-${sample.organization}`}>
-                        {sample.organization === "creator-pack" ? "Pack" : "Collection"}
-                      </span>
-                      <span>{sample.source}</span>
-                    </div>
-                    <div className="media-title">{sample.label}</div>
-                    <div className="media-detail">{sample.category} · {sample.path}</div>
-                    <audio className="media-pack-audio" controls preload="none" src={sample.src} />
-                    <p>{sample.description}</p>
-                    <div className="inline-tags">
-                      {uniqueTags(sample.tags).slice(0, 5).map((tag) => (
-                        <span key={tag}>{tag}</span>
-                      ))}
-                    </div>
-                  </article>
-                ))}
-          </div>
+          <MediaPackTrackList pack={pack} />
         </section>
       </div>
     </div>
