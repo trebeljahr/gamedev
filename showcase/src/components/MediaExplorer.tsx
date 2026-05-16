@@ -5,12 +5,20 @@ import { type CSSProperties, type ReactNode, useEffect, useId, useMemo, useRef, 
 import { LicenseLink } from "@/components/LicenseLink";
 import { NavDrawer, SelectDropdown } from "@/components/NavDrawer";
 import { InfiniteListSentinel, useInfiniteList } from "@/components/useInfiniteList";
-import type { ArtPack, ArtSample, AudioAnalysis, MusicTrack, SoundCollection, SoundSample, SourceMapping } from "@/lib/media";
-import { artCreators, mediaPackHref } from "@/lib/media";
+import type {
+  ArtPack,
+  ArtPackSummary,
+  ArtSample,
+  AudioAnalysis,
+  MusicTrack,
+  SoundCollection,
+  SoundSample,
+  SourceMapping,
+} from "@/lib/media";
+import { materialSamplesFor, mediaPackHref } from "@/lib/media";
 import {
   artDesignKey,
   isLikelyHybridSpriteAtlasPath,
-  isLikelyMarketingPreviewPath,
   isLikelySeparateFramePath,
   isLikelySpriteSheetPath,
   isLikelyTextureAtlasPath,
@@ -22,8 +30,9 @@ import { uniqueTags } from "@/lib/tags";
 type MediaExplorerProps = {
   soundCollections: SoundCollection[];
   musicTracks: MusicTrack[];
-  artPacks: ArtPack[];
+  artPacks: ArtPackSummary[];
   sourceMappings: SourceMapping[];
+  artCreators: string[];
   initialView?: View;
   initialArtType?: ArtTypeFilter;
   initialSpriteSubject?: SpriteSubjectFilter;
@@ -205,21 +214,6 @@ function initials(value: string): string {
     .join("");
 }
 
-function materialSamplesFor(pack: ArtPack): ArtSample[] {
-  const materialSamples = pack.samples.filter((sample) => !isLikelyMarketingPreviewPath(sample.path));
-  return materialSamples.length > 0 ? materialSamples : pack.samples;
-}
-
-function sampleForPreview(pack: ArtPack): ArtSample | undefined {
-  const samples = materialSamplesFor(pack);
-  return (
-    samples.find((sample) => sample.kind === "icon" || sample.kind === "ui") ??
-    samples.find((sample) => sample.kind === "character" || sample.kind === "sprite") ??
-    samples.find((sample) => sample.kind === "tile" || sample.kind === "effect") ??
-    samples[0]
-  );
-}
-
 function samplePathParent(path: string): string {
   return path.split("/").slice(0, -1).join("/");
 }
@@ -325,51 +319,39 @@ function searchMatches(searchText: string, query: string): boolean {
   return terms.every((term) => normalizedSearchText.includes(term));
 }
 
-function creatorUrlForPacks(packs: ArtPack[]): string | undefined {
+function creatorUrlForPacks(packs: ArtPackSummary[]): string | undefined {
   return packs.find((pack) => pack.author_url)?.author_url;
 }
 
-function artTypeFor(pack: ArtPack): Exclude<ArtTypeFilter, "all"> {
-  const samples = materialSamplesFor(pack);
-  const sampleKinds = new Set(samples.map((sample) => sample.kind));
-  const uiOrIcons = pack.theme === "UI" || pack.theme === "Icons & Items";
-  if (uiOrIcons || (sampleKinds.size > 0 && [...sampleKinds].every((kind) => kind === "ui" || kind === "icon"))) {
-    return "ui-icons";
-  }
-  return "spritesheets";
-}
-
-function spriteSubjectFor(pack: ArtPack): Exclude<SpriteSubjectFilter, "all"> {
-  const samples = materialSamplesFor(pack);
-  const text = `${pack.theme} ${pack.title} ${pack.folder} ${pack.tags.join(" ")} ${samples
-    .map((sample) => `${sample.kind} ${sample.path}`)
-    .join(" ")}`.toLowerCase();
-  if (/(character|characters|enemy|enemies|animal|creature|hero|knight|warrior|mage|archer|monster|dino)/.test(text)) {
-    return "characters";
-  }
-  if (/(environment|environments|tile|tileset|terrain|forest|dungeon|platform|ground|wall|props|nature|town)/.test(text)) {
-    return "environments";
-  }
-  if (/(effect|fx|icon|item|inventory|weapon|coin|pickup|potion|spell|magic)/.test(text)) {
-    return "effects-items";
-  }
-  return "other";
-}
-
-function spriteMotionFor(pack: ArtPack): Exclude<SpriteMotionFilter, "all"> {
-  return materialSamplesFor(pack).some((sample) => sample.animated) ? "animated" : "static";
-}
-
-function artTaxonomyLabel(pack: ArtPack): string {
-  if (artTypeFor(pack) === "ui-icons") return "UI / Icons";
-  const subjects: Record<Exclude<SpriteSubjectFilter, "all">, string> = {
-    characters: "Characters",
-    environments: "Environments",
-    "effects-items": "Effects & Items",
-    other: "Other",
+function previewSampleStub(pack: ArtPackSummary, preview: NonNullable<ArtPackSummary["preview"]>): ArtSample {
+  return {
+    packFolder: pack.folder,
+    path: preview.path,
+    src: preview.src,
+    label: preview.label,
+    kind: preview.kind,
+    animated: preview.animated,
+    description: "",
+    category: pack.category,
+    themes: pack.themes,
+    useCases: pack.useCases,
+    tags: pack.tags,
+    searchText: "",
   };
-  const motion = spriteMotionFor(pack) === "animated" ? "Animated" : "Static";
-  return `Spritesheets / ${subjects[spriteSubjectFor(pack)]} / ${motion}`;
+}
+
+const ART_SUBJECT_LABELS: Record<SpriteSubjectFilter & string, string> = {
+  all: "All",
+  characters: "Characters",
+  environments: "Environments",
+  "effects-items": "Effects & Items",
+  other: "Other",
+};
+
+function artTaxonomyLabel(pack: ArtPackSummary): string {
+  if (pack.artType === "ui-icons") return "UI / Icons";
+  const motion = pack.spriteMotion === "animated" ? "Animated" : "Static";
+  return `Spritesheets / ${ART_SUBJECT_LABELS[pack.spriteSubject]} / ${motion}`;
 }
 
 const ART_TAXONOMY_ORDER = [
@@ -2297,13 +2279,55 @@ function ArtSampleBrowser({
   );
 }
 
-function ArtWorkbench({ pack }: { pack: ArtPack }) {
-  const materialSamples = useMemo(() => materialSamplesFor(pack), [pack]);
-  const groups = useMemo(() => artSampleGroups(materialSamples), [materialSamples]);
-  const [selectedGroupId, setSelectedGroupId] = useState(groups[0]?.id ?? "");
+const artPackCache = new Map<string, ArtPack>();
+
+function useArtPack(folder: string): { pack: ArtPack | undefined; loading: boolean; error: string | undefined } {
+  const cached = artPackCache.get(folder);
+  const [pack, setPack] = useState<ArtPack | undefined>(cached);
+  const [loading, setLoading] = useState<boolean>(!cached);
+  const [error, setError] = useState<string | undefined>(undefined);
+
+  useEffect(() => {
+    const hit = artPackCache.get(folder);
+    if (hit) {
+      setPack(hit);
+      setLoading(false);
+      setError(undefined);
+      return;
+    }
+    let cancelled = false;
+    setPack(undefined);
+    setLoading(true);
+    setError(undefined);
+    fetch(`/api/media/art/${encodeURIComponent(folder)}`)
+      .then((response) => (response.ok ? response.json() : Promise.reject(new Error(`HTTP ${response.status}`))))
+      .then((data: ArtPack) => {
+        if (cancelled) return;
+        artPackCache.set(folder, data);
+        setPack(data);
+      })
+      .catch((err: unknown) => {
+        if (!cancelled) setError(err instanceof Error ? err.message : String(err));
+      })
+      .finally(() => {
+        if (!cancelled) setLoading(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [folder]);
+
+  return { pack, loading, error };
+}
+
+function ArtWorkbench({ summary }: { summary: ArtPackSummary }) {
+  const { pack, loading, error } = useArtPack(summary.folder);
+  const materialSamples = useMemo(() => (pack ? materialSamplesFor(pack) : []), [pack]);
+  const groups = useMemo(() => (pack ? artSampleGroups(materialSamples) : []), [materialSamples, pack]);
+  const [selectedGroupId, setSelectedGroupId] = useState("");
   const selectedGroup = groups.find((group) => group.id === selectedGroupId) ?? groups[0];
   const selectedSample = selectedGroup?.primary;
-  const materialCount = materialSamples.length;
+  const materialCount = pack ? materialSamples.length : summary.materialSampleCount;
 
   useEffect(() => {
     if (!groups.some((group) => group.id === selectedGroupId)) {
@@ -2316,43 +2340,51 @@ function ArtWorkbench({ pack }: { pack: ArtPack }) {
       <div className="workbench-main">
         <div className="workbench-title">
           <div>
-            <div className="vendor-tag">{pack.theme}</div>
-            <h3>{pack.title}</h3>
-            <p className="workbench-description">{pack.description}</p>
+            <div className="vendor-tag">{summary.theme}</div>
+            <h3>{summary.title}</h3>
+            <p className="workbench-description">{summary.description}</p>
           </div>
           <div className="workbench-credit-grid">
             <div>
               <span>Creator</span>
-              {pack.author_url ? (
-                <a href={pack.author_url} target="_blank" rel="noreferrer">
-                  {pack.author}
+              {summary.author_url ? (
+                <a href={summary.author_url} target="_blank" rel="noreferrer">
+                  {summary.author}
                 </a>
               ) : (
-                <strong>{pack.author}</strong>
+                <strong>{summary.author}</strong>
               )}
             </div>
             <div>
               <span>License</span>
               <LicenseLink
-                license={pack.license_class}
-                fallbackUrl={pack.url}
-                label={licenseBucket(pack.license_class)}
-                title={pack.license_class}
+                license={summary.license_class}
+                fallbackUrl={summary.url}
+                label={licenseBucket(summary.license_class)}
+                title={summary.license_class}
               />
             </div>
-            {pack.url && (
-              <a className="source-link" href={pack.url} target="_blank" rel="noreferrer">
+            {summary.url && (
+              <a className="source-link" href={summary.url} target="_blank" rel="noreferrer">
                 Source pack
               </a>
             )}
             <small>{materialCount} material files</small>
           </div>
         </div>
-        <ArtSampleBrowser groups={groups} activeId={selectedGroup?.id ?? ""} onSelect={setSelectedGroupId} />
-        {selectedGroup?.sequence ? (
-          <FrameSequenceRunner pack={pack} group={selectedGroup} />
+        {error ? (
+          <div className="empty-preview">Failed to load samples: {error}</div>
+        ) : !pack ? (
+          <div className="empty-preview">{loading ? "Loading samples…" : "No samples"}</div>
         ) : (
-          <ArtCanvasRunner pack={pack} sample={selectedSample} />
+          <>
+            <ArtSampleBrowser groups={groups} activeId={selectedGroup?.id ?? ""} onSelect={setSelectedGroupId} />
+            {selectedGroup?.sequence ? (
+              <FrameSequenceRunner pack={pack} group={selectedGroup} />
+            ) : (
+              <ArtCanvasRunner pack={pack} sample={selectedSample} />
+            )}
+          </>
         )}
       </div>
     </section>
@@ -2364,17 +2396,21 @@ function ArtPackCard({
   active,
   onSelect,
 }: {
-  pack: ArtPack;
+  pack: ArtPackSummary;
   active: boolean;
   onSelect: () => void;
 }) {
-  const sample = sampleForPreview(pack);
-  const materialCount = materialSamplesFor(pack).length;
+  const preview = pack.preview;
+  const materialCount = pack.materialSampleCount;
   return (
     <article className={`art-card ${active ? "active" : ""}`}>
       <button type="button" onClick={onSelect}>
         <div className="art-thumb">
-          {sample ? <ArtSamplePreview sample={sample} /> : <span>{initials(pack.title)}</span>}
+          {preview ? (
+            <ArtSamplePreview sample={previewSampleStub(pack, preview)} />
+          ) : (
+            <span>{initials(pack.title)}</span>
+          )}
         </div>
         <div className="art-card-body">
           <strong>{pack.title}</strong>
@@ -2704,6 +2740,7 @@ export function MediaExplorer({
   musicTracks,
   artPacks,
   sourceMappings,
+  artCreators,
   initialView = "sounds",
   initialArtType = "all",
   initialSpriteSubject = "all",
@@ -2803,11 +2840,10 @@ export function MediaExplorer({
     return artPacks.filter((pack) => {
       if (licenseFilter !== "all" && licenseBucket(pack.license_class) !== licenseFilter) return false;
       if (creatorFilter !== "all" && pack.author !== creatorFilter) return false;
-      const artType = artTypeFor(pack);
-      if (artTypeFilter !== "all" && artType !== artTypeFilter) return false;
-      if (artType === "spritesheets") {
-        if (spriteSubjectFilter !== "all" && spriteSubjectFor(pack) !== spriteSubjectFilter) return false;
-        if (spriteMotionFilter !== "all" && spriteMotionFor(pack) !== spriteMotionFilter) return false;
+      if (artTypeFilter !== "all" && pack.artType !== artTypeFilter) return false;
+      if (pack.artType === "spritesheets") {
+        if (spriteSubjectFilter !== "all" && pack.spriteSubject !== spriteSubjectFilter) return false;
+        if (spriteMotionFilter !== "all" && pack.spriteMotion !== spriteMotionFilter) return false;
       }
       return searchMatches(pack.searchText, q);
     });
@@ -3223,7 +3259,7 @@ export function MediaExplorer({
         </div>
       ) : view === "art" ? (
         <div className="art-layout">
-          {selectedArt && <ArtWorkbench pack={selectedArt} />}
+          {selectedArt && <ArtWorkbench summary={selectedArt} />}
           <section className="media-panel">
             <div className="panel-heading">
               <h3>2D asset sets</h3>

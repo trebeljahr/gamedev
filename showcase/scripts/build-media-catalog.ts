@@ -99,8 +99,8 @@ type Metadata = {
 const repoRoot = join(__dirname, "..", "..");
 const metadataPath = join(repoRoot, "metadata.json");
 const mediaAssetsPath = join(__dirname, "..", "src", "lib", "media-assets.json");
-const audioAnalysisPath = join(__dirname, "..", "src", "lib", "audio-analysis.json");
-const outPath = join(__dirname, "..", "src", "lib", "media-catalog.json");
+const audioAnalysisPath = join(__dirname, "..", "public", "audio-analysis.json");
+const outPath = join(__dirname, "..", "public", "media-catalog.json");
 
 const NON_COMMERCIAL_ART_PACKS = new Set([
   "bdragon1727__fire-pixel-bullet-16x16",

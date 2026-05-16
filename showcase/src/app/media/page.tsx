@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { MediaExplorer } from "@/components/MediaExplorer";
-import { artPacks, musicTracks, soundCollections, sourceMappings } from "@/lib/media";
+import { artCreators, artPackSummaries, musicTracks, soundCollections, sourceMappings } from "@/lib/media";
 import { pageMetadata } from "@/lib/seo";
 
 type MediaPageProps = {
@@ -41,8 +41,9 @@ export default async function MediaPage({ searchParams }: MediaPageProps) {
     <MediaExplorer
       soundCollections={soundCollections}
       musicTracks={musicTracks}
-      artPacks={artPacks}
+      artPacks={artPackSummaries}
       sourceMappings={sourceMappings}
+      artCreators={artCreators}
       initialView={view}
       initialArtType={type === "ui-icons" || type === "spritesheets" ? type : "all"}
       initialSpriteSubject={

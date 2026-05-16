@@ -8,9 +8,9 @@ const SHOWCASE_DIR = join(fileURLToPath(new URL(".", import.meta.url)), "..");
 
 const requiredFiles = [
   "public/manifest.json",
+  "public/audio-analysis.json",
+  "public/media-catalog.json",
   "src/lib/media-assets.json",
-  "src/lib/audio-analysis.json",
-  "src/lib/media-catalog.json",
 ];
 
 const missing = [];

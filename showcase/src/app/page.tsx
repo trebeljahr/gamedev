@@ -2,7 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { SiteHeader } from "@/components/SiteHeader";
 import { downloadsForModel, manifest } from "@/lib/manifest";
-import audioAnalysisData from "@/lib/audio-analysis.json";
+import fs from "node:fs";
+import path from "node:path";
 import { catalog, mediaStats, sourceMappings } from "@/lib/media";
 import { CatalogSearch } from "@/components/CatalogSearch";
 import { AssetTypeNav } from "@/components/AssetTypeNav";
@@ -70,9 +71,15 @@ const FEATURED_SPRITE_SLOTS: Array<{
   },
 ];
 
-const audioAnalysisItems = (audioAnalysisData as {
-  items?: Record<string, { duration?: number; loudness?: number[] }>;
-}).items ?? {};
+const audioAnalysisItems = (() => {
+  const raw = fs.readFileSync(
+    path.join(process.cwd(), "public", "audio-analysis.json"),
+    "utf8",
+  );
+  return (JSON.parse(raw) as {
+    items?: Record<string, { duration?: number; loudness?: number[] }>;
+  }).items ?? {};
+})();
 
 const FEATURED_MODEL_PICKS = [
   {
