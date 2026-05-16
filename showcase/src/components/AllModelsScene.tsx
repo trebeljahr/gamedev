@@ -515,12 +515,14 @@ function Walker({
     }
 
     const k = keys.current;
-    const fwd = _walkerForward;
-    camera.getWorldDirection(fwd);
-    fwd.y = 0;
-    if (fwd.lengthSq() > 0) fwd.normalize();
-    const right = _walkerRight.crossVectors(fwd, _walkerUp);
-    if (right.lengthSq() > 0) right.normalize();
+    // Right is the camera's local +X (matrix column 0). Under YXZ Euler with
+    // zero roll, that column is invariantly horizontal and unit-length, so it
+    // stays stable as you pitch up or down. getWorldDirection + fwd.y=0 +
+    // normalize would flip sign near the ±90° pitch limit when the extracted
+    // Euler crosses the gimbal-lock boundary — visible as the camera jumping
+    // back and forth while walking.
+    const right = _walkerRight.setFromMatrixColumn(camera.matrix, 0);
+    const fwd = _walkerForward.crossVectors(_walkerUp, right);
     let dx = 0,
       dy = 0,
       dz = 0;
