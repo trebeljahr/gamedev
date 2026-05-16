@@ -1,7 +1,14 @@
 import { existsSync } from "node:fs";
 import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
 import { dirname, join, relative } from "node:path";
-import { inferArtKind, isAnimatedArtPath, selectDisplayArtSamples } from "../src/lib/media-inference";
+import type { ArtInspection } from "../src/lib/media-inference";
+import {
+  inferArtKind,
+  isAnimatedArt,
+  isLikelyPromoArt,
+  selectDisplayArtSamples,
+} from "../src/lib/media-inference";
+import { flushInspectionCache, inspectArtImageCached } from "./inspect-art-image";
 
 const SHOWCASE_DIR = join(__dirname, "..");
 const REPO_ROOT = join(SHOWCASE_DIR, "..");
@@ -9,6 +16,7 @@ const ASSETS_ROOT = process.env.ASSETS_DIR
   ? process.env.ASSETS_DIR
   : join(REPO_ROOT, "assets");
 const OUT = join(SHOWCASE_DIR, "src", "lib", "media-assets.json");
+const IMAGE_INSPECT_CACHE = join(SHOWCASE_DIR, ".cache", "image-inspect.json");
 
 const NON_COMMERCIAL_ART_PACKS = new Set([
   "bdragon1727-fire-pixel-bullet-16x16",
@@ -22,6 +30,8 @@ type ArtSample = {
   label: string;
   kind: "character" | "sprite" | "icon" | "tile" | "effect" | "ui" | "image";
   animated: boolean;
+  inspection?: ArtInspection;
+  promo?: boolean;
 };
 
 type SoundSample = {
@@ -275,18 +285,48 @@ async function main() {
         (path, name) => !isJunkPath(path) && /\.(png|jpe?g|webp|gif)$/i.test(name),
       );
       const relImages = images.map((abs) => relative(ASSETS_ROOT, abs).split("/").join("/"));
-      for (const rel of selectDisplayArtSamples(relImages)) {
+      const inspections = new Map<string, ArtInspection>();
+      for (const abs of images) {
+        const rel = relative(ASSETS_ROOT, abs).split("/").join("/");
+        try {
+          const inspection = await inspectArtImageCached(IMAGE_INSPECT_CACHE, abs, rel);
+          inspections.set(rel, {
+            width: inspection.width,
+            height: inspection.height,
+            bgKind: inspection.bgKind,
+            bgColor: inspection.bgColor,
+            alphaCoverage: inspection.alphaCoverage,
+            transparentCoverage: inspection.transparentCoverage,
+            contentRowRuns: inspection.contentRowRuns,
+            contentColRuns: inspection.contentColRuns,
+            promoBackground: inspection.promoBackground,
+            spriteSheetGrid: inspection.spriteSheetGrid,
+            uniformGrid: inspection.uniformGrid,
+            cellMedianWidth: inspection.cellMedianWidth,
+            cellMedianHeight: inspection.cellMedianHeight,
+          });
+        } catch (err) {
+          console.warn(`[media-assets] inspect failed for ${rel}: ${(err as Error).message}`);
+        }
+      }
+      const selectionInput = relImages.map((path) => ({ path, inspection: inspections.get(path) }));
+      for (const rel of selectDisplayArtSamples(selectionInput)) {
+        const inspection = inspections.get(rel);
         const kind = inferArtKind(rel);
+        const promo = isLikelyPromoArt(rel, inspection);
         artSamples.push({
           packFolder,
           path: rel,
           src: `/${rel.split("/").map(encodeURIComponent).join("/")}`,
           label: labelFromAssetPath(rel),
           kind,
-          animated: isAnimatedArtPath(rel),
+          animated: isAnimatedArt(rel, inspection),
+          inspection,
+          promo,
         });
       }
     }
+    await flushInspectionCache(IMAGE_INSPECT_CACHE);
   }
 
   if (existsSync(soundRoot)) {

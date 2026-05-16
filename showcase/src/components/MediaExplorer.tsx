@@ -21,7 +21,9 @@ import {
   artDesignKey,
   isLikelyHybridSpriteAtlasPath,
   isLikelySeparateFramePath,
+  isLikelySpriteSheet,
   isLikelySpriteSheetPath,
+  isLikelyTextureAtlas,
   isLikelyTextureAtlasPath,
 } from "@/lib/media-inference";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -165,9 +167,13 @@ function sortSamplesByFrame(a: ArtSample, b: ArtSample): number {
 
 function sampleLayoutLabel(sample: ArtSample, group?: ArtSampleGroup): string {
   if (group?.sequence) return `${group.samples.length} frame files`;
+  if (sample.inspection?.promoBackground) {
+    return sample.path.toLowerCase().endsWith(".gif") ? "promo gif" : "promo image";
+  }
   if (isLikelyHybridSpriteAtlasPath(sample.path)) return "hybrid atlas";
-  if (isLikelyTextureAtlasPath(sample.path)) return "atlas / tiles";
-  if (sample.animated || isLikelySpriteSheetPath(sample.path)) return sample.path.toLowerCase().endsWith(".gif") ? "gif animation" : "sprite sheet";
+  if (isLikelyTextureAtlas(sample.path, sample.inspection)) return "atlas / tiles";
+  if (sample.animated || isLikelySpriteSheet(sample.path, sample.inspection))
+    return sample.path.toLowerCase().endsWith(".gif") ? "gif animation" : "sprite sheet";
   return sample.kind;
 }
 
@@ -1493,7 +1499,7 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
       : isLikelySpriteSequencePackPath(sample.path)
         ? "sequence-pack"
         : "off";
-    const pureAtlas = isLikelyTextureAtlasPath(sample.path) && !hybridAtlas;
+    const pureAtlas = isLikelyTextureAtlas(sample.path, sample.inspection) && !hybridAtlas;
     const fallbackSequenceGrid = fallbackSequenceGridFromImage(sample.path, imageWidth, imageHeight);
     const fallbackStaticGrid = fallbackStaticSheetGridFromImage(sample, imageWidth, imageHeight);
     if (!imageData) {
@@ -1502,7 +1508,8 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
         : fallbackSequenceGrid ?? fallbackStaticGrid;
     }
     const detectedFromPixels = detectGridFromImageData(imageData, { sequenceMode });
-    const canAnimateSample = sample.animated && isLikelySpriteSheetPath(sample.path) && !pureAtlas;
+    const canAnimateSample =
+      sample.animated && isLikelySpriteSheet(sample.path, sample.inspection) && !pureAtlas;
     const hintedLayout = canAnimateSample
       ? parseSpriteSizeHint(sample.path, imageData.width, imageData.height) ?? parseGridHint(sample.path, imageData.width, imageData.height)
       : null;
@@ -1525,8 +1532,11 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
 
   const canAnimateSample = Boolean(
     sample?.animated &&
-      isLikelySpriteSheetPath(sample.path) &&
-      !(isLikelyTextureAtlasPath(sample.path) && !isLikelyHybridSpriteAtlasPath(sample.path)),
+      isLikelySpriteSheet(sample.path, sample.inspection) &&
+      !(
+        isLikelyTextureAtlas(sample.path, sample.inspection) &&
+        !isLikelyHybridSpriteAtlasPath(sample.path)
+      ),
   );
   const canUnwrapStaticLayout = Boolean(!canAnimateSample && detectedGrid && isUnwrappableSpriteGrid(detectedGrid));
 

@@ -1,5 +1,6 @@
 import { assetUrl } from "./manifest";
-import { isLikelyMarketingPreviewPath } from "./media-inference";
+import type { ArtInspection } from "./media-inference";
+import { isLikelyMarketingPreviewPath, isLikelyPromoArt } from "./media-inference";
 
 export type ArtType = "ui-icons" | "spritesheets";
 export type ArtSubject = "characters" | "environments" | "effects-items" | "other";
@@ -132,6 +133,8 @@ export type ArtSample = {
   useCases: string[];
   tags: string[];
   searchText: string;
+  inspection?: ArtInspection;
+  promo?: boolean;
 };
 
 export type SoundSample = {
@@ -393,8 +396,15 @@ export const artPacks: ArtPack[] = catalog.artPacks.map((pack) => ({
 }));
 
 function materialSamplesIn(samples: ArtSample[]): ArtSample[] {
-  const filtered = samples.filter((sample) => !isLikelyMarketingPreviewPath(sample.path));
-  return filtered.length > 0 ? filtered : samples;
+  const filtered = samples.filter(
+    (sample) =>
+      !sample.promo &&
+      !sample.inspection?.promoBackground &&
+      !isLikelyPromoArt(sample.path, sample.inspection),
+  );
+  if (filtered.length > 0) return filtered;
+  const lighter = samples.filter((sample) => !isLikelyMarketingPreviewPath(sample.path));
+  return lighter.length > 0 ? lighter : samples;
 }
 
 function previewSampleIn(samples: ArtSample[]): ArtSample | undefined {

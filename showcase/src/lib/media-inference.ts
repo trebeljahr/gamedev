@@ -1,5 +1,23 @@
 export type ArtKind = "character" | "sprite" | "icon" | "tile" | "effect" | "ui" | "image";
 
+export type ArtBackgroundKind = "transparent" | "solid" | "mixed";
+
+export type ArtInspection = {
+  width: number;
+  height: number;
+  bgKind: ArtBackgroundKind;
+  bgColor?: { r: number; g: number; b: number };
+  alphaCoverage: number;
+  transparentCoverage: number;
+  contentRowRuns: number;
+  contentColRuns: number;
+  promoBackground: boolean;
+  spriteSheetGrid: boolean;
+  uniformGrid: boolean;
+  cellMedianWidth?: number;
+  cellMedianHeight?: number;
+};
+
 const ACTION_WORDS =
   "idle|walk|run|jump|fall|attack|attacks|hurt|hit|death|die|move|dash|roll|slide|crouch|sleep|sleeping|charge|teleport";
 const ANIMATION_WORDS =
@@ -54,6 +72,23 @@ export function isLikelyMarketingPreviewPath(path: string): boolean {
 
   const folders = pathParts.slice(0, -1).map(tokenText);
   return folders.some((folder) => hasToken(folder, MARKETING_PREVIEW_FOLDERS));
+}
+
+// Generic / placeholder-style names ("a.png", "a-gif.gif", "a-png.png",
+// "untitled", "image", "asset", "sample-1") — typical of itch promo dumps.
+export function hasGenericFilename(path: string): boolean {
+  const base = basenameWithoutExtension(path);
+  const name = tokenText(base);
+  if (!name) return true;
+  // single-letter or single-letter + format-token e.g. "a", "a png", "a gif", "a gif 2"
+  if (/^[a-z](?:\s+(?:png|gif|jpg|jpeg|webp|sprite|sheet)(?:\s+\d{1,3})?)?$/.test(name)) return true;
+  if (/^(?:untitled|new file|image|images?|asset|assets?|sample|samples?|file|files?|test|tmp|temp)(?:\s+\d{1,3})?$/.test(name)) return true;
+  if (/^[a-z]{1,3}\d{0,3}$/.test(base)) return true;
+  return false;
+}
+
+export function isLikelyPromoImagePath(path: string): boolean {
+  return isLikelyMarketingPreviewPath(path) || hasGenericFilename(path);
 }
 
 function hasCharacterHint(path: string): boolean {
@@ -225,7 +260,7 @@ export function artDesignKey(path: string): string {
   return `${parent} ${name}`.replace(/\s+/g, " ").trim();
 }
 
-export function scoreArtSample(path: string): number {
+export function scoreArtSample(path: string, inspection?: ArtInspection): number {
   const lower = path.toLowerCase();
   let score = 0;
   if (/\.(png|webp|gif)$/i.test(path)) score += 8;
@@ -235,18 +270,57 @@ export function scoreArtSample(path: string): number {
   if (/(character|hero|knight|warrior|monster|enemy|icon|item|effect|fx|npc|ship)/.test(lower)) score += 8;
   if (isLikelySeparateFramePath(path)) score -= 10;
   if (isLikelyMarketingPreviewPath(path)) score -= 45;
+  if (hasGenericFilename(path)) score -= 25;
   if (/(license|readme|credit|cover|banner|thumbnail|__macosx|[\\/]\._)/.test(lower)) score -= 40;
+
+  if (inspection) {
+    if (inspection.promoBackground) score -= 45;
+    if (inspection.bgKind === "transparent") score += 6;
+    if (inspection.spriteSheetGrid) score += 12;
+    if (inspection.uniformGrid) score += 6;
+    // Tiny image with solid bg is almost always a promo/sample.
+    if (
+      inspection.promoBackground &&
+      inspection.width * inspection.height <= 320 * 320
+    )
+      score -= 20;
+    // Sprite-sheet hint outweighs path-based heuristics when transparent.
+    if (inspection.bgKind === "transparent" && inspection.alphaCoverage < 0.5)
+      score += 4;
+  }
   return score;
 }
 
-export function selectRepresentativeArtSamples(paths: string[], limit: number): string[] {
-  const materialPaths = paths.filter((path) => !isLikelyMarketingPreviewPath(path));
-  const candidates = materialPaths.length > 0 ? materialPaths : paths;
-  const sorted = [...candidates].sort((a, b) => scoreArtSample(b) - scoreArtSample(a) || a.localeCompare(b));
+export type ArtSampleSelectionInput = {
+  path: string;
+  inspection?: ArtInspection;
+};
+
+function toInputs(paths: string[] | ArtSampleSelectionInput[]): ArtSampleSelectionInput[] {
+  if (paths.length === 0) return [];
+  if (typeof paths[0] === "string") return (paths as string[]).map((path) => ({ path }));
+  return paths as ArtSampleSelectionInput[];
+}
+
+export function selectRepresentativeArtSamples(
+  paths: string[] | ArtSampleSelectionInput[],
+  limit: number,
+): string[] {
+  const inputs = toInputs(paths);
+  const filtered = inputs.filter(
+    ({ path, inspection }) =>
+      !isLikelyMarketingPreviewPath(path) && !(inspection?.promoBackground),
+  );
+  const candidates = filtered.length > 0 ? filtered : inputs;
+  const sorted = [...candidates].sort(
+    (a, b) =>
+      scoreArtSample(b.path, b.inspection) - scoreArtSample(a.path, a.inspection) ||
+      a.path.localeCompare(b.path),
+  );
   const selected: string[] = [];
   const seenDesigns = new Set<string>();
 
-  for (const path of sorted) {
+  for (const { path } of sorted) {
     const key = artDesignKey(path);
     if (seenDesigns.has(key)) continue;
     seenDesigns.add(key);
@@ -254,7 +328,7 @@ export function selectRepresentativeArtSamples(paths: string[], limit: number): 
     if (selected.length >= limit) return selected;
   }
 
-  for (const path of sorted) {
+  for (const { path } of sorted) {
     if (!selected.includes(path)) selected.push(path);
     if (selected.length >= limit) return selected;
   }
@@ -262,6 +336,58 @@ export function selectRepresentativeArtSamples(paths: string[], limit: number): 
   return selected;
 }
 
-export function selectDisplayArtSamples(paths: string[]): string[] {
-  return [...paths].sort((a, b) => scoreArtSample(b) - scoreArtSample(a) || a.localeCompare(b));
+export function selectDisplayArtSamples(
+  paths: string[] | ArtSampleSelectionInput[],
+): string[] {
+  const inputs = toInputs(paths);
+  return [...inputs]
+    .sort(
+      (a, b) =>
+        scoreArtSample(b.path, b.inspection) - scoreArtSample(a.path, a.inspection) ||
+        a.path.localeCompare(b.path),
+    )
+    .map(({ path }) => path);
+}
+
+// Inspection-aware classifiers — fall back to path heuristics when inspection
+// is missing or "mixed" (i.e. inconclusive).
+export function isLikelyPromoArt(path: string, inspection?: ArtInspection): boolean {
+  if (inspection?.promoBackground) return true;
+  return isLikelyPromoImagePath(path);
+}
+
+export function isLikelySpriteSheet(path: string, inspection?: ArtInspection): boolean {
+  if (inspection) {
+    if (inspection.promoBackground) return false;
+    if (inspection.spriteSheetGrid) return true;
+    if (inspection.bgKind === "transparent" && inspection.alphaCoverage < 0.6)
+      return isLikelySpriteSheetPath(path);
+  }
+  return isLikelySpriteSheetPath(path);
+}
+
+export function isLikelyTextureAtlas(path: string, inspection?: ArtInspection): boolean {
+  if (inspection?.promoBackground) return false;
+  return isLikelyTextureAtlasPath(path);
+}
+
+export function isAnimatedArt(path: string, inspection?: ArtInspection): boolean {
+  if (inspection?.promoBackground) {
+    // promo gifs are still animated *images* but not useful sprite sheets
+    if (/\.gif$/i.test(path)) return true;
+    return false;
+  }
+  if (inspection && !inspection.spriteSheetGrid && inspection.bgKind === "transparent") {
+    // single-frame transparent png: not animated even if name says so
+    if (inspection.contentRowRuns <= 1 && inspection.contentColRuns <= 1) return false;
+  }
+  // Strong pixel signal: clean transparent sprite-sheet grid with multiple frames.
+  if (
+    inspection?.spriteSheetGrid &&
+    inspection.bgKind === "transparent" &&
+    (inspection.contentRowRuns >= 2 || inspection.contentColRuns >= 2)
+  ) {
+    return true;
+  }
+  return isAnimatedArtPath(path);
 }

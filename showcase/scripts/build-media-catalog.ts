@@ -34,6 +34,24 @@ type RawArtPack = {
   attribution: string;
 };
 
+type ArtBackgroundKind = "transparent" | "solid" | "mixed";
+
+type ArtInspection = {
+  width: number;
+  height: number;
+  bgKind: ArtBackgroundKind;
+  bgColor?: { r: number; g: number; b: number };
+  alphaCoverage: number;
+  transparentCoverage: number;
+  contentRowRuns: number;
+  contentColRuns: number;
+  promoBackground: boolean;
+  spriteSheetGrid: boolean;
+  uniformGrid: boolean;
+  cellMedianWidth?: number;
+  cellMedianHeight?: number;
+};
+
 type ArtSample = {
   packFolder: string;
   path: string;
@@ -41,6 +59,8 @@ type ArtSample = {
   label: string;
   kind: "character" | "sprite" | "icon" | "tile" | "effect" | "ui" | "image";
   animated: boolean;
+  inspection?: ArtInspection;
+  promo?: boolean;
 };
 
 type SoundSample = {
@@ -294,7 +314,11 @@ async function main() {
       theme: artThemeFor(pack),
     };
     const packMetadata = buildArtPackMetadata(normalizedPack);
-    const samples = (artSamplesByPack.get(pack.folder) ?? []).map((sample) => ({
+    const packSamples = artSamplesByPack.get(pack.folder) ?? [];
+    const nonPromoSamples = packSamples.filter((sample) => !sample.promo);
+    // Keep promos only when the pack has *nothing else* — better than an empty pack.
+    const visibleSamples = nonPromoSamples.length > 0 ? nonPromoSamples : packSamples;
+    const samples = visibleSamples.map((sample) => ({
       ...sample,
       ...buildArtSampleMetadata({
         packTitle: normalizedPack.title,

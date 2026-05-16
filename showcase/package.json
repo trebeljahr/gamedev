@@ -40,6 +40,7 @@
     "draco3d": "^1.5.7",
     "eslint": "^9.39.4",
     "eslint-config-next": "^16.2.6",
+    "sharp": "^0.34.5",
     "tsx": "^4.21.0",
     "typescript": "^6.0.3"
   }
