@@ -5,7 +5,6 @@ import { downloadsForModel, manifest } from "@/lib/manifest";
 import fs from "node:fs";
 import path from "node:path";
 import { catalog, mediaStats, sourceMappings } from "@/lib/media";
-import { CatalogSearch } from "@/components/CatalogSearch";
 import { AssetTypeNav } from "@/components/AssetTypeNav";
 import { pageMetadata } from "@/lib/seo";
 import {
@@ -14,14 +13,9 @@ import {
   type LibrarySoundPreview,
   type LibrarySpritePreview,
 } from "@/components/LibraryHeroShowreel";
+import { LibraryAssetTracks } from "@/components/LibraryAssetTracks";
 import { isLikelyMarketingPreviewPath, isLikelySpriteSheetPath } from "@/lib/media-inference";
 import type { ArtPack, ArtSample, ArtTheme, MusicTrack } from "@/lib/media";
-
-type HomePageProps = {
-  searchParams?: Promise<{
-    model?: string | string[];
-  }>;
-};
 
 export const metadata: Metadata = pageMetadata({
   title: "Free Game Assets Library for Prototypes",
@@ -41,13 +35,15 @@ function assetUrl(src: string) {
 
 type FeaturedSpriteCategory = "character" | "environment" | "icons";
 
-const FEATURED_SPRITE_SLOTS: Array<{
+type SpriteSlot = {
   category: FeaturedSpriteCategory;
   themes: ArtTheme[];
   label: string;
   requireAnimated: boolean;
   preferKinds?: ArtSample["kind"][];
-}> = [
+};
+
+const FEATURED_SPRITE_SLOTS: SpriteSlot[] = [
   {
     category: "character",
     themes: ["Characters"],
@@ -68,6 +64,51 @@ const FEATURED_SPRITE_SLOTS: Array<{
     label: "Icons & UI",
     requireAnimated: false,
     preferKinds: ["icon", "ui"],
+  },
+];
+
+const TRACK_SPRITE_SLOTS: SpriteSlot[] = [
+  {
+    category: "character",
+    themes: ["Characters"],
+    label: "Hero rig",
+    requireAnimated: true,
+    preferKinds: ["character", "sprite"],
+  },
+  {
+    category: "character",
+    themes: ["Enemies", "Animals"],
+    label: "Enemy",
+    requireAnimated: true,
+    preferKinds: ["character", "sprite"],
+  },
+  {
+    category: "environment",
+    themes: ["Environments"],
+    label: "Tileset",
+    requireAnimated: false,
+    preferKinds: ["tile", "sprite", "image"],
+  },
+  {
+    category: "environment",
+    themes: ["Effects", "Vehicles & Sci-Fi"],
+    label: "FX & props",
+    requireAnimated: false,
+    preferKinds: ["effect", "sprite", "image"],
+  },
+  {
+    category: "icons",
+    themes: ["Icons & Items"],
+    label: "Icons",
+    requireAnimated: false,
+    preferKinds: ["icon"],
+  },
+  {
+    category: "icons",
+    themes: ["UI"],
+    label: "UI kit",
+    requireAnimated: false,
+    preferKinds: ["ui", "icon"],
   },
 ];
 
@@ -117,8 +158,68 @@ const FEATURED_MUSIC_TITLES = [
   "Comfortable Mystery 2",
 ];
 
-function selectFeaturedModels(): LibraryModelPreview[] {
-  return FEATURED_MODEL_PICKS.flatMap((pick) => {
+const TRACK_MODEL_PICKS = [
+  {
+    packId: "kaykit/medieval-builder-pack",
+    name: "castle",
+    position: [-1.8, -0.74, -0.2],
+    rotation: [0, 0.4, 0],
+    scale: 0.5,
+  },
+  {
+    packId: "kaykit/adventurers",
+    name: "Knight",
+    position: [-0.55, -0.74, 0.3],
+    rotation: [0, 0.25, 0],
+    scale: 0.5,
+  },
+  {
+    packId: "kenney/car-kit",
+    name: "ambulance",
+    position: [0.8, -0.74, -0.25],
+    rotation: [0, -0.55, 0],
+    scale: 0.42,
+  },
+  {
+    packId: "quaternius/ultimate-space-kit-march-2023",
+    name: "Astronaut_BarbaraTheBee",
+    position: [0.55, -0.74, 0.55],
+    rotation: [0, -0.4, 0],
+    scale: 0.42,
+  },
+  {
+    packId: "kaykit/skeletons",
+    name: "Skeleton_Blade",
+    position: [1.85, -0.74, 0.1],
+    rotation: [0, -0.3, 0],
+    scale: 0.6,
+  },
+] satisfies Array<{
+  packId: string;
+  name: string;
+  position: [number, number, number];
+  rotation: [number, number, number];
+  scale: number;
+}>;
+
+const TRACK_MUSIC_TITLES = [
+  "Ancient Winds",
+  "Clash Defiant",
+  "Magic Forest",
+  "Midnight Tale",
+  "Stay the Course",
+];
+
+type ModelPick = {
+  packId: string;
+  name: string;
+  position: [number, number, number];
+  rotation: [number, number, number];
+  scale: number;
+};
+
+function picksToPreviews(picks: ModelPick[]): LibraryModelPreview[] {
+  return picks.flatMap((pick) => {
     const pack = manifest.packs.find((item) => item.id === pick.packId);
     const model = pack?.models.find((item) => item.name === pick.name);
     if (!pack || !model) return [];
@@ -136,10 +237,18 @@ function selectFeaturedModels(): LibraryModelPreview[] {
   });
 }
 
+function selectFeaturedModels(): LibraryModelPreview[] {
+  return picksToPreviews(FEATURED_MODEL_PICKS);
+}
+
+function selectTrackModels(): LibraryModelPreview[] {
+  return picksToPreviews(TRACK_MODEL_PICKS);
+}
+
 function landingSpriteScore(
   pack: ArtPack,
   sample: ArtSample,
-  slot: (typeof FEATURED_SPRITE_SLOTS)[number],
+  slot: SpriteSlot,
 ): number {
   const text = `${pack.title} ${pack.theme} ${sample.label} ${sample.path}`.toLowerCase();
   let score = 0;
@@ -173,11 +282,11 @@ function landingSpriteScore(
   return score;
 }
 
-function selectFeaturedSprites(): LibrarySpritePreview[] {
+function selectSpritesForSlots(slots: SpriteSlot[]): LibrarySpritePreview[] {
   const selected: LibrarySpritePreview[] = [];
   const usedPacks = new Set<string>();
 
-  for (const slot of FEATURED_SPRITE_SLOTS) {
+  for (const slot of slots) {
     const candidates = catalog.artPacks
       .filter((pack) => slot.themes.includes(pack.theme))
       .flatMap((pack) =>
@@ -209,6 +318,14 @@ function selectFeaturedSprites(): LibrarySpritePreview[] {
   return selected;
 }
 
+function selectFeaturedSprites(): LibrarySpritePreview[] {
+  return selectSpritesForSlots(FEATURED_SPRITE_SLOTS);
+}
+
+function selectTrackSprites(): LibrarySpritePreview[] {
+  return selectSpritesForSlots(TRACK_SPRITE_SLOTS);
+}
+
 function soundPreviewForTrack(track: MusicTrack): LibrarySoundPreview | undefined {
   const audio = audioAnalysisItems[track.path];
   if (!audio?.loudness?.length) return undefined;
@@ -222,21 +339,21 @@ function soundPreviewForTrack(track: MusicTrack): LibrarySoundPreview | undefine
   };
 }
 
-function selectFeaturedSounds(): LibrarySoundPreview[] {
+function selectSoundsFromTitles(titles: readonly string[], limit: number): LibrarySoundPreview[] {
   const byTitle = new Map(catalog.musicTracks.map((track) => [track.title, track]));
-  const picks = FEATURED_MUSIC_TITLES
+  const picks = titles
     .map((title) => byTitle.get(title))
     .filter(Boolean)
     .map((track) => soundPreviewForTrack(track as MusicTrack))
     .filter(Boolean) as LibrarySoundPreview[];
 
-  if (picks.length < 3) {
+  if (picks.length < limit) {
     for (const track of catalog.musicTracks) {
       if (picks.some((pick) => pick.path === track.path)) continue;
       const preview = soundPreviewForTrack(track);
       if (!preview) continue;
       picks.push(preview);
-      if (picks.length === 3) break;
+      if (picks.length === limit) break;
     }
   }
 
@@ -246,20 +363,24 @@ function selectFeaturedSounds(): LibrarySoundPreview[] {
     if (seen.has(key)) return false;
     seen.add(key);
     return true;
-  }).slice(0, 3);
+  }).slice(0, limit);
 }
 
-function firstParam(value: string | string[] | undefined) {
-  return Array.isArray(value) ? value[0] : value;
+function selectFeaturedSounds(): LibrarySoundPreview[] {
+  return selectSoundsFromTitles(FEATURED_MUSIC_TITLES, 3);
 }
 
-export default async function HomePage({ searchParams }: HomePageProps) {
-  const params = await searchParams;
-  const modelParam = firstParam(params?.model);
-  const modelMotion = modelParam === "animated" || modelParam === "static" ? modelParam : "all";
+function selectTrackSounds(): LibrarySoundPreview[] {
+  return selectSoundsFromTitles(TRACK_MUSIC_TITLES, 5);
+}
+
+export default function HomePage() {
   const featuredModels = selectFeaturedModels();
   const featuredSprites = selectFeaturedSprites();
   const featuredSounds = selectFeaturedSounds();
+  const trackModels = selectTrackModels();
+  const trackSprites = selectTrackSprites();
+  const trackSounds = selectTrackSounds();
   const totalModels = manifest.packs.reduce((n, p) => n + p.count, 0);
   const iconPackCount = catalog.artPacks.filter((pack) => pack.theme === "UI" || pack.theme === "Icons & Items").length;
   const spritePackCount = Math.max(mediaStats.artPackCount - iconPackCount, 0);
@@ -295,13 +416,13 @@ export default async function HomePage({ searchParams }: HomePageProps) {
             </p>
             <div className="library-actions" aria-label="Primary catalog actions">
               <Link className="landing-button primary" href="/models">
-                Search every model
+                Browse 3D
               </Link>
-              <Link className="landing-button secondary" href="/media">
-                Explore media
+              <Link className="landing-button primary" href="/media?view=art&type=all">
+                Browse 2D
               </Link>
-              <Link className="landing-button secondary" href="#3d-collections">
-                Browse pack collections
+              <Link className="landing-button primary" href="/media?view=sounds&type=all">
+                Browse sounds
               </Link>
             </div>
           </div>
@@ -310,18 +431,20 @@ export default async function HomePage({ searchParams }: HomePageProps) {
 
         <AssetTypeNav note={`${totalModels.toLocaleString()} models · ${textureGroupLabel} · ${totalMediaCollections} media collections`} />
 
-        <section className="catalog-heading" id="3d-collections" aria-labelledby="packs-heading">
-          <div>
-            <div className="landing-kicker">3D catalog</div>
-            <h2 id="packs-heading">Pack collections</h2>
-          </div>
-          <div className="catalog-heading-actions">
-            <Link href="/models">Search every model</Link>
-            <Link href="/all">Open world viewer</Link>
-          </div>
-        </section>
-
-        <CatalogSearch manifest={manifest} showHeader={false} modelMotion={modelMotion} />
+        <LibraryAssetTracks
+          modelCount={totalModels}
+          packCount={manifest.packs.length}
+          spritePackCount={spritePackCount}
+          spriteSampleCount={mediaStats.artSampleCount}
+          iconPackCount={iconPackCount}
+          textureGroupLabel={textureGroupLabel}
+          soundCollectionCount={mediaStats.soundCollectionCount}
+          soundSampleCount={mediaStats.soundSampleCount}
+          musicTrackCount={mediaStats.musicTrackCount}
+          models={trackModels}
+          sprites={trackSprites}
+          sounds={trackSounds}
+        />
       </main>
     </>
   );

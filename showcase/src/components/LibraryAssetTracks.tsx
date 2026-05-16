@@ -1,0 +1,153 @@
+"use client";
+
+import Link from "next/link";
+import { LandingModelBackdrop } from "@/components/LandingModelBackdrop";
+import {
+  SoundSignal,
+  SpriteLoop,
+  type LibraryModelPreview,
+  type LibrarySoundPreview,
+  type LibrarySpritePreview,
+} from "@/components/LibraryHeroShowreel";
+
+type LibraryAssetTracksProps = {
+  modelCount: number;
+  packCount: number;
+  spritePackCount: number;
+  spriteSampleCount: number;
+  iconPackCount: number;
+  textureGroupLabel: string;
+  soundCollectionCount: number;
+  soundSampleCount: number;
+  musicTrackCount: number;
+  models: LibraryModelPreview[];
+  sprites: LibrarySpritePreview[];
+  sounds: LibrarySoundPreview[];
+};
+
+export function LibraryAssetTracks({
+  modelCount,
+  packCount,
+  spritePackCount,
+  spriteSampleCount,
+  iconPackCount,
+  textureGroupLabel,
+  soundCollectionCount,
+  soundSampleCount,
+  musicTrackCount,
+  models,
+  sprites,
+  sounds,
+}: LibraryAssetTracksProps) {
+  return (
+    <section className="library-tracks" aria-labelledby="library-tracks-heading">
+      <header className="library-tracks-intro">
+        <div className="landing-kicker">What&rsquo;s inside</div>
+        <h2 id="library-tracks-heading">
+          Three asset tracks, one searchable archive.
+        </h2>
+        <p>
+          Pick the medium you actually need. Each track has its own browser
+          previews, filters, and downloads &mdash; no digging through
+          unrelated formats first.
+        </p>
+      </header>
+
+      <article className="library-track" data-track="3d">
+        <div className="library-track-copy">
+          <div className="landing-kicker">3D models</div>
+          <h3>Game-ready GLB models, props &amp; rigs</h3>
+          <p>
+            {modelCount.toLocaleString()} optimized GLB models across{" "}
+            {packCount} packs &mdash; characters, vehicles, buildings,
+            weapons, props, environments. Pre-baked shadows, sane scale,
+            drop straight into Three.js, Unity, Godot, or Blender.
+          </p>
+          <ul className="library-track-bullets">
+            <li>Live in-browser 3D previews with orbit + animation playback</li>
+            <li>Filter by category, theme, animated vs static, license</li>
+            <li>{textureGroupLabel} for PBR materials and decals</li>
+          </ul>
+          <div className="library-track-actions">
+            <Link className="landing-button primary" href="/models">
+              Browse 3D models
+            </Link>
+            <Link className="landing-button secondary" href="/all">
+              Open world viewer
+            </Link>
+          </div>
+        </div>
+        <div className="library-track-visual library-track-visual--3d">
+          <LandingModelBackdrop models={models} />
+          <div className="library-tile-chip library-tile-chip--floating" data-tone="model">
+            <span>3D</span>
+            <strong>{models.length} live models</strong>
+          </div>
+          <div className="library-model-glow" aria-hidden="true" />
+        </div>
+      </article>
+
+      <article className="library-track" data-track="2d">
+        <div className="library-track-visual library-track-visual--2d">
+          <div className="library-tile-rack library-tile-rack--wide">
+            {sprites.map((sample, index) => (
+              <SpriteLoop key={`${sample.path}-${index}`} sample={sample} index={index} />
+            ))}
+          </div>
+        </div>
+        <div className="library-track-copy">
+          <div className="landing-kicker">2D art</div>
+          <h3>Animated sprite sheets, tilesets &amp; UI</h3>
+          <p>
+            {spriteSampleCount.toLocaleString()} sprite samples across{" "}
+            {spritePackCount} sprite packs and {iconPackCount} icon/UI kits.
+            Frame strips are auto-parsed, so animations preview straight in
+            the catalog before you download anything.
+          </p>
+          <ul className="library-track-bullets">
+            <li>Character rigs with idle, walk, attack, hurt cycles</li>
+            <li>Environment tilesets, parallax backgrounds, FX strips</li>
+            <li>Icon packs, button kits, and pixel-perfect UI elements</li>
+          </ul>
+          <div className="library-track-actions">
+            <Link className="landing-button primary" href="/media?view=art&type=all">
+              Browse 2D art
+            </Link>
+            <Link className="landing-button secondary" href="/media?view=art&type=spritesheets&motion=animated">
+              Animated only
+            </Link>
+          </div>
+        </div>
+      </article>
+
+      <article className="library-track" data-track="sounds">
+        <div className="library-track-copy">
+          <div className="landing-kicker">Sounds &amp; music</div>
+          <h3>Music tracks &amp; sound effects, pre-analyzed</h3>
+          <p>
+            {musicTrackCount} music tracks and {soundCollectionCount} sound
+            collections with {soundSampleCount.toLocaleString()} effects.
+            Waveforms, durations, and tags are baked in &mdash; preview a
+            loop, scrub a loudness graph, then download.
+          </p>
+          <ul className="library-track-bullets">
+            <li>Music loops with tempo, mood, and use-case tags</li>
+            <li>SFX collections for movement, combat, UI, ambience</li>
+            <li>Filter by length, license, and source pack</li>
+          </ul>
+          <div className="library-track-actions">
+            <Link className="landing-button primary" href="/media?view=sounds&type=all">
+              Browse sounds
+            </Link>
+            <Link className="landing-button secondary" href="/media?view=sounds&type=music">
+              Music only
+            </Link>
+          </div>
+        </div>
+        <div className="library-track-visual library-track-visual--sounds">
+          <SoundSignal sounds={sounds} limit={5} chipLabel="Music & SFX" />
+        </div>
+      </article>
+    </section>
+  );
+}

@@ -116,7 +116,7 @@ function drawFrame(
   );
 }
 
-function SpriteLoop({ sample, index }: { sample: LibrarySpritePreview; index: number }) {
+export function SpriteLoop({ sample, index }: { sample: LibrarySpritePreview; index: number }) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const [failed, setFailed] = useState(false);
   const [frameCount, setFrameCount] = useState(1);
@@ -209,15 +209,23 @@ function SpriteLoop({ sample, index }: { sample: LibrarySpritePreview; index: nu
   );
 }
 
-function SoundSignal({ sounds }: { sounds: LibrarySoundPreview[] }) {
-  const rows = sounds.slice(0, 3);
+export function SoundSignal({
+  sounds,
+  limit = 3,
+  chipLabel = "Music & SFX",
+}: {
+  sounds: LibrarySoundPreview[];
+  limit?: number;
+  chipLabel?: string;
+}) {
+  const rows = sounds.slice(0, limit);
   if (rows.length === 0) return null;
 
   return (
     <div className="library-sound-signal" aria-label="Static waveform previews from analyzed music tracks">
       <div className="library-tile-chip" data-tone="music">
         <span>Audio</span>
-        <strong>Music & SFX</strong>
+        <strong>{chipLabel}</strong>
       </div>
       <div className="library-signal-rows">
         {rows.map((sound) => {

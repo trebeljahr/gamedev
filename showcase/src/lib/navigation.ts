@@ -4,11 +4,8 @@ export const navGroups = [
     key: "packs",
     items: [
       { label: "All models", href: "/models" },
-      { label: "Pack collections", href: "/#3d-collections" },
       { label: "World viewer", href: "/all" },
       { label: "Textures", href: "/media?view=textures" },
-      { label: "Animated", href: "/?model=animated#3d-collections" },
-      { label: "Static", href: "/?model=static#3d-collections" },
     ],
   },
   {
