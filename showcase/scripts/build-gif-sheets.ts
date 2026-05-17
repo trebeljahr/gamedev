@@ -170,38 +170,60 @@ async function buildSheet(gifAbs: string): Promise<"written" | "skipped" | "sing
   return "written";
 }
 
+const RESULT_GLYPH: Record<"written" | "skipped" | "single-frame" | "failed", string> = {
+  written: "+",
+  skipped: "=",
+  "single-frame": ".",
+  failed: "!",
+};
+
+function formatDuration(ms: number): string {
+  if (ms < 1000) return `${ms}ms`;
+  const seconds = ms / 1000;
+  if (seconds < 60) return `${seconds.toFixed(1)}s`;
+  const minutes = Math.floor(seconds / 60);
+  const rem = Math.round(seconds - minutes * 60);
+  return `${minutes}m${rem.toString().padStart(2, "0")}s`;
+}
+
 async function main() {
+  const startedAt = Date.now();
   if (!existsSync(ASSETS_ROOT)) {
     console.warn(`[gif-sheets] assets dir not found: ${ASSETS_ROOT}`);
     return;
   }
+  console.log(`[gif-sheets] scanning ${ASSETS_ROOT}`);
   const gifs = await walkGifs(ASSETS_ROOT);
   if (gifs.length === 0) {
     console.log(`[gif-sheets] no gifs under ${ASSETS_ROOT}`);
     return;
   }
-  let written = 0;
-  let skipped = 0;
-  let singleFrame = 0;
-  let failed = 0;
-  for (let index = 0; index < gifs.length; index += 1) {
+  const total = gifs.length;
+  const padWidth = String(total).length;
+  console.log(`[gif-sheets] found ${total} gif(s); converting…`);
+  const tallies = { written: 0, skipped: 0, "single-frame": 0, failed: 0 };
+  for (let index = 0; index < total; index += 1) {
     const gif = gifs[index];
+    const rel = relative(ASSETS_ROOT, gif).split("/").join("/");
+    const itemStart = Date.now();
+    let result: "written" | "skipped" | "single-frame" | "failed";
+    let errorMessage: string | null = null;
     try {
-      const result = await buildSheet(gif);
-      if (result === "written") written += 1;
-      else if (result === "skipped") skipped += 1;
-      else if (result === "single-frame") singleFrame += 1;
-      else failed += 1;
+      result = await buildSheet(gif);
     } catch (err) {
-      failed += 1;
-      console.warn(`[gif-sheets] failed ${gif}: ${(err as Error).message}`);
+      result = "failed";
+      errorMessage = (err as Error).message;
     }
-    if ((index + 1) % 50 === 0) {
-      console.log(`[gif-sheets] progress ${index + 1}/${gifs.length}`);
-    }
+    tallies[result] += 1;
+    const glyph = RESULT_GLYPH[result];
+    const counter = `${String(index + 1).padStart(padWidth, " ")}/${total}`;
+    const duration = formatDuration(Date.now() - itemStart);
+    const suffix = errorMessage ? ` — ${errorMessage}` : "";
+    console.log(`[gif-sheets] ${counter} ${glyph} ${result.padEnd(12)} ${duration.padStart(6)}  ${rel}${suffix}`);
   }
+  const elapsed = formatDuration(Date.now() - startedAt);
   console.log(
-    `[gif-sheets] ${written} written · ${skipped} up-to-date · ${singleFrame} single-frame · ${failed} failed (of ${gifs.length})`,
+    `[gif-sheets] done in ${elapsed} · ${tallies.written} written · ${tallies.skipped} up-to-date · ${tallies["single-frame"]} single-frame · ${tallies.failed} failed (of ${total})`,
   );
 }
 
