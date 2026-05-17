@@ -2876,7 +2876,7 @@ select:focus-visible {
 .art-runner {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(220px, 280px);
-  align-items: stretch;
+  align-items: start;
   min-width: 0;
 }
 .art-runner-stage {
@@ -2886,7 +2886,7 @@ select:focus-visible {
   min-width: 0;
 }
 .art-runner-stage > canvas {
-  align-self: stretch;
+  align-self: start;
   justify-self: center;
   display: block;
   width: 100%;
