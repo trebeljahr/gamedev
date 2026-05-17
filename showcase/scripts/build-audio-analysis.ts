@@ -80,16 +80,27 @@ async function main() {
   let missing = 0;
   let failed = 0;
 
-  for (const path of targets) {
+  const total = targets.length;
+  const padWidth = String(total).length;
+  console.log(`[audio-analysis] ${total} target file(s)`);
+  for (let index = 0; index < total; index += 1) {
+    const path = targets[index];
+    const counter = `${String(index + 1).padStart(padWidth, " ")}/${total}`;
     const file = join(ASSETS_ROOT, path);
     const previousItem = previous.items?.[path];
+    const startedAt = Date.now();
+    const log = (status: string) =>
+      process.stdout.write(`[audio-analysis] ${counter} ${status.padEnd(8)} ${`${Date.now() - startedAt}ms`.padStart(6)}  ${path}\n`);
+    process.stdout.write(`[audio-analysis] ${counter} ▶ start              ${path}\n`);
 
     if (!existsSync(file)) {
       if (previousItem) {
         nextItems[path] = previousItem;
         reused += 1;
+        log("= reused (missing)");
       } else {
         missing += 1;
+        log("? missing");
       }
       continue;
     }
@@ -99,6 +110,7 @@ async function main() {
       if (!FORCE && canReuseAudioAnalysis(previousItem, contentHash, BUCKET_COUNT, ANALYSIS_SAMPLE_RATE)) {
         nextItems[path] = previousItem;
         reused += 1;
+        log("= reused");
         continue;
       }
 
@@ -111,12 +123,14 @@ async function main() {
       });
       nextItems[path] = { ...item, byteLength: item.byteLength || size };
       analyzed += 1;
+      log("+ analyzed");
     } catch (error) {
       failed += 1;
       if (previousItem) {
         nextItems[path] = previousItem;
         reused += 1;
       }
+      log("! failed");
       console.warn(`[audio-analysis] skipped ${path}: ${error instanceof Error ? error.message : String(error)}`);
     }
   }

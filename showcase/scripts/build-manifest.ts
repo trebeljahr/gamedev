@@ -255,15 +255,25 @@ async function writeMediaManifest(): Promise<void> {
 
   if (existsSync(artRoot) || existsSync(join(ASSETS_ROOT, "kenney", "2D"))) {
     const packDirs = await discoverArtPackDirs(ASSETS_ROOT);
+    const totalPacks = packDirs.length;
+    const packPadWidth = String(totalPacks).length;
+    console.log(`[media] inspecting ${totalPacks} art pack(s)`);
 
-    for (const { packFolder, dir: packDir } of packDirs) {
+    for (let packIndex = 0; packIndex < totalPacks; packIndex += 1) {
+      const { packFolder, dir: packDir } = packDirs[packIndex];
+      const packCounter = `${String(packIndex + 1).padStart(packPadWidth, " ")}/${totalPacks}`;
+      const packStart = Date.now();
       const images = await walk(
         packDir,
         (path, name) => !isJunkMediaPath(path) && /\.(png|jpe?g|webp|gif)$/i.test(name),
       );
       const filteredImages = dropGifsWithSheetSiblings(images);
       const relImages = filteredImages.map((abs) => relative(ASSETS_ROOT, abs).split("/").join("/"));
+      process.stdout.write(
+        `[media] ${packCounter} ▶ ${packFolder} (${filteredImages.length} image${filteredImages.length === 1 ? "" : "s"})\n`,
+      );
       const inspections = new Map<string, ArtInspection>();
+      let inspected = 0;
       for (const abs of filteredImages) {
         const rel = relative(ASSETS_ROOT, abs).split("/").join("/");
         try {
@@ -286,8 +296,15 @@ async function writeMediaManifest(): Promise<void> {
         } catch (err) {
           console.warn(`[manifest] inspect failed for ${rel}: ${(err as Error).message}`);
         }
+        inspected += 1;
+        if (inspected % 200 === 0) {
+          process.stdout.write(
+            `[media] ${packCounter}   inspected ${inspected}/${filteredImages.length} in ${Date.now() - packStart}ms…\n`,
+          );
+        }
       }
       const selectionInput = relImages.map((path) => ({ path, inspection: inspections.get(path) }));
+      let packSamples = 0;
       for (const rel of selectDisplayArtSamples(selectionInput)) {
         const inspection = inspections.get(rel);
         const kind = inferArtKind(rel);
@@ -302,7 +319,11 @@ async function writeMediaManifest(): Promise<void> {
           inspection,
           promo,
         });
+        packSamples += 1;
       }
+      process.stdout.write(
+        `[media] ${packCounter} ✓ ${packFolder} · ${packSamples} samples · ${Date.now() - packStart}ms\n`,
+      );
     }
     await flushInspectionCache(IMAGE_INSPECT_CACHE);
   }
@@ -565,6 +586,7 @@ async function main() {
   const packs: Pack[] = [];
   const stats = { source: 0, optimized: 0, cacheHits: 0, computed: 0, failed: 0 };
 
+  console.log(`[manifest] scanning ${vendors.length} vendor(s) under ${relative(SHOWCASE_DIR, GLB_ROOT)}`);
   for (const vendor of vendors) {
     if (SKIP_PACKS.has(vendor)) continue;
     const vendorDir = join(GLB_ROOT, vendor);
@@ -572,8 +594,10 @@ async function main() {
       .filter((d) => d.isDirectory())
       .map((d) => d.name)
       .sort();
+    process.stdout.write(`[manifest] ▶ vendor ${vendor} (${packDirs.length} pack${packDirs.length === 1 ? "" : "s"})\n`);
 
     for (const pack of packDirs) {
+      const packStart = Date.now();
       const sourceDownloads = (await findSourceDownloadFiles(vendor, pack)).filter(
         (path) => !/\/animations?\//i.test(path) && !isNonCommercialModelPath(relative(ASSETS_ROOT, path)),
       );
@@ -654,6 +678,10 @@ async function main() {
 
       if (usedSource) stats.source += models.length;
       else stats.optimized += models.length;
+
+      process.stdout.write(
+        `[manifest]   ✓ ${vendor}/${pack} · ${models.length} model${models.length === 1 ? "" : "s"} · ${Date.now() - packStart}ms\n`,
+      );
 
       const packMetadata = buildPackMetadata({
         vendor,

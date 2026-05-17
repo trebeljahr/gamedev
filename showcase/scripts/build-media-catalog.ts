@@ -1,5 +1,5 @@
 import { mkdir, readFile, readdir, rm, writeFile } from "node:fs/promises";
-import { join } from "node:path";
+import { join, relative } from "node:path";
 import {
   buildArtPackMetadata,
   buildArtSampleMetadata,
@@ -443,10 +443,15 @@ async function pruneStalePackFiles(keepFolders: Set<string>): Promise<void> {
 }
 
 async function main() {
+  const startedAt = Date.now();
+  console.log(`[media-catalog] loading inputs`);
   const metadata = JSON.parse(await readFile(metadataPath, "utf8")) as Metadata;
   const mediaAssets = JSON.parse(await readFile(mediaAssetsPath, "utf8")) as MediaAssets;
   const audioAnalysis = await readOptionalJson<AudioAnalysisCatalog>(audioAnalysisPath, { items: {} });
   const audioByPath = audioAnalysis.items ?? {};
+  console.log(
+    `[media-catalog]   ${mediaAssets.artSamples.length} art samples · ${mediaAssets.soundSamples.length} sound samples · ${(mediaAssets.musicTracks ?? []).length} music tracks · ${Object.keys(audioByPath).length} audio analyses`,
+  );
 
   const artSamplesByPack = mediaAssets.artSamples.reduce((map, sample) => {
     const list = map.get(sample.packFolder) ?? [];
@@ -762,11 +767,14 @@ async function main() {
 
   await mkdir(packsDir, { recursive: true });
   await pruneStalePackFiles(new Set(artPacks.map((pack) => pack.folder)));
+  console.log(`[media-catalog] writing ${artPacks.length} per-pack file(s) under ${relative(showcaseDir, packsDir)}`);
   await Promise.all(artPacks.map((pack) => writeJson(join(packsDir, `${packFileSlug(pack.folder)}.json`), pack)));
 
+  console.log(`[media-catalog] writing index → ${relative(showcaseDir, outPath)}`);
   await writeJson(outPath, catalog);
+  const elapsed = Date.now() - startedAt;
   console.log(
-    `[media-catalog] ${artPacks.length} art packs (${artPacks.length} per-pack files) · ${soundCollections.length} sound groups · ${musicTracks.length} music tracks · ${sourceMappings.length} path mappings`,
+    `[media-catalog] done in ${elapsed}ms · ${artPacks.length} art packs · ${soundCollections.length} sound groups · ${musicTracks.length} music tracks · ${sourceMappings.length} path mappings`,
   );
 }
 
