@@ -23,6 +23,7 @@ const ASSETS_ROOT = process.env.ASSETS_DIR
 
 const MAX_STRIP_WIDTH = 8192;
 const MIN_FRAMES = 2;
+const PER_FILE_TIMEOUT_MS = 90_000;
 
 type SheetMetadata = {
   source: string;
@@ -42,6 +43,7 @@ async function walkGifs(dir: string): Promise<string[]> {
   const out: string[] = [];
   if (!existsSync(dir)) return out;
   const stack = [dir];
+  let visited = 0;
   while (stack.length) {
     const d = stack.pop()!;
     let entries;
@@ -55,6 +57,10 @@ async function walkGifs(dir: string): Promise<string[]> {
       if (isJunkPath(p)) continue;
       if (entry.isDirectory()) stack.push(p);
       else if (entry.isFile() && /\.gif$/i.test(entry.name)) out.push(p);
+    }
+    visited += 1;
+    if (visited % 250 === 0) {
+      process.stdout.write(`[gif-sheets] scanning… ${visited} dirs, ${out.length} gif(s) so far\n`);
     }
   }
   return out;
@@ -100,13 +106,6 @@ function pickGrid(frameCount: number, frameWidth: number): { cols: number; rows:
   return { cols, rows };
 }
 
-async function extractFrame(file: string, page: number): Promise<Buffer> {
-  return sharp(file, { animated: true, page, pages: 1, failOn: "none" })
-    .ensureAlpha()
-    .png({ compressionLevel: 9 })
-    .toBuffer();
-}
-
 async function buildSheet(gifAbs: string): Promise<"written" | "skipped" | "single-frame" | "failed"> {
   const base = gifAbs.replace(/\.gif$/i, "");
   const baseName = base.split("/").pop() ?? base;
@@ -133,12 +132,32 @@ async function buildSheet(gifAbs: string): Promise<"written" | "skipped" | "sing
   const { cols, rows } = pickGrid(pages, frameWidth);
   const { png: outPng, json: outJson } = sheetPaths(gifAbs, frameWidth, frameHeight);
 
-  const composites: sharp.OverlayOptions[] = [];
+  // Read every frame in a single sharp pass — calling sharp() per page would
+  // re-decode the full animation each time (O(pages²) for high-frame gifs and
+  // a frequent source of multi-minute stalls).
+  const { data, info } = await sharp(gifAbs, { animated: true, failOn: "none" })
+    .ensureAlpha()
+    .raw()
+    .toBuffer({ resolveWithObject: true });
+  const channels = info.channels;
+  const stride = frameWidth * frameHeight * channels;
+  if (data.length < stride * pages) {
+    throw new Error(
+      `raw buffer too small: got ${data.length} bytes, need ${stride * pages} for ${pages}×${frameWidth}×${frameHeight}×${channels}`,
+    );
+  }
+
+  const composites: sharp.OverlayOptions[] = new Array(pages);
   for (let i = 0; i < pages; i += 1) {
-    const buffer = await extractFrame(gifAbs, i);
+    const slice = data.subarray(i * stride, (i + 1) * stride);
     const col = i % cols;
     const row = Math.floor(i / cols);
-    composites.push({ input: buffer, left: col * frameWidth, top: row * frameHeight });
+    composites[i] = {
+      input: slice,
+      raw: { width: frameWidth, height: frameHeight, channels },
+      left: col * frameWidth,
+      top: row * frameHeight,
+    };
   }
 
   const canvasWidth = cols * frameWidth;
@@ -168,6 +187,22 @@ async function buildSheet(gifAbs: string): Promise<"written" | "skipped" | "sing
   };
   await writeFile(outJson, `${JSON.stringify(metadata, null, 2)}\n`);
   return "written";
+}
+
+function withTimeout<T>(promise: Promise<T>, ms: number, label: string): Promise<T> {
+  return new Promise<T>((resolve, reject) => {
+    const handle = setTimeout(() => reject(new Error(`timeout after ${ms}ms: ${label}`)), ms);
+    promise.then(
+      (value) => {
+        clearTimeout(handle);
+        resolve(value);
+      },
+      (err) => {
+        clearTimeout(handle);
+        reject(err);
+      },
+    );
+  });
 }
 
 const RESULT_GLYPH: Record<"written" | "skipped" | "single-frame" | "failed", string> = {
@@ -205,21 +240,24 @@ async function main() {
   for (let index = 0; index < total; index += 1) {
     const gif = gifs[index];
     const rel = relative(ASSETS_ROOT, gif).split("/").join("/");
+    const counter = `${String(index + 1).padStart(padWidth, " ")}/${total}`;
+    process.stdout.write(`[gif-sheets] ${counter} ▶ start                ${rel}\n`);
     const itemStart = Date.now();
     let result: "written" | "skipped" | "single-frame" | "failed";
     let errorMessage: string | null = null;
     try {
-      result = await buildSheet(gif);
+      result = await withTimeout(buildSheet(gif), PER_FILE_TIMEOUT_MS, rel);
     } catch (err) {
       result = "failed";
       errorMessage = (err as Error).message;
     }
     tallies[result] += 1;
     const glyph = RESULT_GLYPH[result];
-    const counter = `${String(index + 1).padStart(padWidth, " ")}/${total}`;
     const duration = formatDuration(Date.now() - itemStart);
     const suffix = errorMessage ? ` — ${errorMessage}` : "";
-    console.log(`[gif-sheets] ${counter} ${glyph} ${result.padEnd(12)} ${duration.padStart(6)}  ${rel}${suffix}`);
+    process.stdout.write(
+      `[gif-sheets] ${counter} ${glyph} ${result.padEnd(12)} ${duration.padStart(6)}  ${rel}${suffix}\n`,
+    );
   }
   const elapsed = formatDuration(Date.now() - startedAt);
   console.log(
