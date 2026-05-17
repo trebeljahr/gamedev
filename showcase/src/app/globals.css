@@ -2873,30 +2873,31 @@ select:focus-visible {
   color: var(--muted);
   font-size: 11px;
 }
+.art-runner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 280px);
+  align-items: stretch;
+  min-width: 0;
+}
 .art-runner-stage {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(220px, 300px);
+  grid-template-columns: minmax(0, 1fr) minmax(200px, 260px);
   align-items: start;
   min-width: 0;
 }
 .art-runner-stage > canvas {
-  align-self: start;
+  align-self: stretch;
+  justify-self: center;
   display: block;
   width: 100%;
+  max-width: 100%;
   height: auto;
-  aspect-ratio: 12 / 7;
+  aspect-ratio: 16 / 9;
   background: #15171c;
   image-rendering: pixelated;
 }
 .art-runner-stage > canvas:only-child {
   grid-column: 1 / -1;
-}
-.art-runner-stage > canvas.zoomable-canvas {
-  cursor: grab;
-  touch-action: none;
-}
-.art-runner-stage > canvas.zoomable-canvas:active {
-  cursor: grabbing;
 }
 .animation-overview {
   display: grid;
@@ -3033,14 +3034,22 @@ select:focus-visible {
   white-space: nowrap;
 }
 .runner-controls {
-  padding: 12px;
-  border-top: 1px solid var(--border);
+  flex-direction: column;
+  align-items: stretch;
+  align-content: start;
+  padding: 14px;
+  border-left: 1px solid var(--border);
+  background: #101216;
 }
 .runner-controls button {
   padding: 0 12px;
 }
 .runner-controls label {
-  min-width: 90px;
+  width: 100%;
+  min-width: 0;
+}
+.runner-controls label input[type="range"] {
+  width: 100%;
 }
 .runner-controls label span {
   color: var(--text);
@@ -4084,8 +4093,13 @@ select:focus-visible {
   .art-workbench {
     grid-template-columns: 1fr;
   }
+  .art-runner,
   .art-runner-stage {
     grid-template-columns: 1fr;
+  }
+  .runner-controls {
+    border-left: 0;
+    border-top: 1px solid var(--border);
   }
   .animation-overview {
     border-top: 1px solid var(--border);

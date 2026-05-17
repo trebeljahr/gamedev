@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { type CSSProperties, type PointerEvent as ReactPointerEvent, type ReactNode, useEffect, useId, useMemo, useRef, useState } from "react";
+import { type CSSProperties, type ReactNode, useEffect, useId, useMemo, useRef, useState } from "react";
 import { LicenseLink } from "@/components/LicenseLink";
 import { NavDrawer, SelectDropdown } from "@/components/NavDrawer";
 import { InfiniteListSentinel, useInfiniteList } from "@/components/useInfiniteList";
@@ -1591,9 +1591,6 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
   const [flip, setFlip] = useState(false);
   const [loadedImage, setLoadedImage] = useState<LoadedSpriteImage | null>(null);
   const [loadFailed, setLoadFailed] = useState(false);
-  const zoomRef = useRef(1);
-  const panRef = useRef({ x: 0, y: 0 });
-  const dragRef = useRef<{ startX: number; startY: number; startPanX: number; startPanY: number } | null>(null);
   const background = "#15171c";
 
   useEffect(() => {
@@ -1609,67 +1606,7 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
     setSequenceIndex(0);
     setLoadedImage(null);
     setLoadFailed(false);
-    zoomRef.current = 1;
-    panRef.current = { x: 0, y: 0 };
   }, [sample?.animated, sample?.path, sample?.src]);
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const handleWheel = (event: WheelEvent) => {
-      event.preventDefault();
-      const rect = canvas.getBoundingClientRect();
-      const scaleX = canvas.width / rect.width;
-      const scaleY = canvas.height / rect.height;
-      const cursorX = (event.clientX - rect.left) * scaleX - canvas.width / 2;
-      const cursorY = (event.clientY - rect.top) * scaleY - canvas.height / 2;
-      const factor = event.deltaY < 0 ? 1.1 : 1 / 1.1;
-      const oldZoom = zoomRef.current;
-      const newZoom = Math.min(16, Math.max(0.2, oldZoom * factor));
-      const actual = newZoom / oldZoom;
-      zoomRef.current = newZoom;
-      panRef.current = {
-        x: (panRef.current.x - cursorX) * actual + cursorX,
-        y: (panRef.current.y - cursorY) * actual + cursorY,
-      };
-    };
-    canvas.addEventListener("wheel", handleWheel, { passive: false });
-    return () => canvas.removeEventListener("wheel", handleWheel);
-  }, []);
-
-  function handlePointerDown(event: ReactPointerEvent<HTMLCanvasElement>) {
-    event.currentTarget.setPointerCapture(event.pointerId);
-    dragRef.current = {
-      startX: event.clientX,
-      startY: event.clientY,
-      startPanX: panRef.current.x,
-      startPanY: panRef.current.y,
-    };
-  }
-
-  function handlePointerMove(event: ReactPointerEvent<HTMLCanvasElement>) {
-    if (!dragRef.current) return;
-    const canvas = event.currentTarget;
-    const rect = canvas.getBoundingClientRect();
-    const scaleX = canvas.width / rect.width;
-    const scaleY = canvas.height / rect.height;
-    panRef.current = {
-      x: dragRef.current.startPanX + (event.clientX - dragRef.current.startX) * scaleX,
-      y: dragRef.current.startPanY + (event.clientY - dragRef.current.startY) * scaleY,
-    };
-  }
-
-  function handlePointerUp(event: ReactPointerEvent<HTMLCanvasElement>) {
-    if (event.currentTarget.hasPointerCapture(event.pointerId)) {
-      event.currentTarget.releasePointerCapture(event.pointerId);
-    }
-    dragRef.current = null;
-  }
-
-  function resetView() {
-    zoomRef.current = 1;
-    panRef.current = { x: 0, y: 0 };
-  }
 
   useEffect(() => {
     let cancelled = false;
@@ -1869,17 +1806,16 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
       if (image && !loadFailed && drawFrames.length > 0) {
         context.imageSmoothingEnabled = false;
         const drawFrame = drawFrames[currentFrame % drawFrames.length];
-        const fitRatio = Math.min(
-          (drawingCanvas.width * 0.82) / stageWidth,
-          (drawingCanvas.height * 0.74) / stageHeight,
+        const ratio = Math.min(
+          (drawingCanvas.width * 0.92) / stageWidth,
+          (drawingCanvas.height * 0.86) / stageHeight,
         );
-        const ratio = fitRatio * zoomRef.current;
         const stageW = stageWidth * ratio;
         const stageH = stageHeight * ratio;
         const w = drawFrame.source.w * ratio;
         const h = drawFrame.source.h * ratio;
-        const stageX = (drawingCanvas.width - stageW) / 2 + panRef.current.x;
-        const stageY = (drawingCanvas.height - stageH) / 2 - 8 + panRef.current.y;
+        const stageX = (drawingCanvas.width - stageW) / 2;
+        const stageY = (drawingCanvas.height - stageH) / 2;
         const boxX = stageX + ((stageWidth - drawFrame.box.w) / 2) * ratio;
         const boxY = stageY + (stageHeight - drawFrame.box.h) * ratio;
         const x = boxX + (drawFrame.source.x - drawFrame.box.x) * ratio;
@@ -1946,17 +1882,7 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
   return (
     <div className="art-runner">
       <div className="art-runner-stage">
-        <canvas
-          ref={canvasRef}
-          width={720}
-          height={420}
-          className="zoomable-canvas"
-          onPointerDown={handlePointerDown}
-          onPointerMove={handlePointerMove}
-          onPointerUp={handlePointerUp}
-          onPointerCancel={handlePointerUp}
-          onDoubleClick={resetView}
-        />
+        <canvas ref={canvasRef} width={960} height={540} />
         {sequences.length > 1 && (
           <aside className="animation-overview" aria-label="Detected animations">
             <div className="animation-overview-head">
@@ -2085,9 +2011,6 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
           <input type="checkbox" checked={flip} onChange={(event) => setFlip(event.target.checked)} />
           Flip
         </label>
-        <button type="button" onClick={resetView}>
-          Reset view
-        </button>
       </div>
     </div>
   );
@@ -2139,9 +2062,6 @@ function FrameSequenceRunner({ pack, group }: { pack: ArtPack; group: ArtSampleG
   const [speed, setSpeed] = useState(1);
   const [flip, setFlip] = useState(false);
   const [loadFailed, setLoadFailed] = useState(false);
-  const zoomRef = useRef(1);
-  const panRef = useRef({ x: 0, y: 0 });
-  const dragRef = useRef<{ startX: number; startY: number; startPanX: number; startPanY: number } | null>(null);
   const background = "#15171c";
 
   useEffect(() => {
@@ -2150,67 +2070,7 @@ function FrameSequenceRunner({ pack, group }: { pack: ArtPack; group: ArtSampleG
     setPlaying(true);
     setLoadedFrames([]);
     setLoadFailed(false);
-    zoomRef.current = 1;
-    panRef.current = { x: 0, y: 0 };
   }, [group.id]);
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const handleWheel = (event: WheelEvent) => {
-      event.preventDefault();
-      const rect = canvas.getBoundingClientRect();
-      const scaleX = canvas.width / rect.width;
-      const scaleY = canvas.height / rect.height;
-      const cursorX = (event.clientX - rect.left) * scaleX - canvas.width / 2;
-      const cursorY = (event.clientY - rect.top) * scaleY - canvas.height / 2;
-      const factor = event.deltaY < 0 ? 1.1 : 1 / 1.1;
-      const oldZoom = zoomRef.current;
-      const newZoom = Math.min(16, Math.max(0.2, oldZoom * factor));
-      const actual = newZoom / oldZoom;
-      zoomRef.current = newZoom;
-      panRef.current = {
-        x: (panRef.current.x - cursorX) * actual + cursorX,
-        y: (panRef.current.y - cursorY) * actual + cursorY,
-      };
-    };
-    canvas.addEventListener("wheel", handleWheel, { passive: false });
-    return () => canvas.removeEventListener("wheel", handleWheel);
-  }, []);
-
-  function handlePointerDown(event: ReactPointerEvent<HTMLCanvasElement>) {
-    event.currentTarget.setPointerCapture(event.pointerId);
-    dragRef.current = {
-      startX: event.clientX,
-      startY: event.clientY,
-      startPanX: panRef.current.x,
-      startPanY: panRef.current.y,
-    };
-  }
-
-  function handlePointerMove(event: ReactPointerEvent<HTMLCanvasElement>) {
-    if (!dragRef.current) return;
-    const canvas = event.currentTarget;
-    const rect = canvas.getBoundingClientRect();
-    const scaleX = canvas.width / rect.width;
-    const scaleY = canvas.height / rect.height;
-    panRef.current = {
-      x: dragRef.current.startPanX + (event.clientX - dragRef.current.startX) * scaleX,
-      y: dragRef.current.startPanY + (event.clientY - dragRef.current.startY) * scaleY,
-    };
-  }
-
-  function handlePointerUp(event: ReactPointerEvent<HTMLCanvasElement>) {
-    if (event.currentTarget.hasPointerCapture(event.pointerId)) {
-      event.currentTarget.releasePointerCapture(event.pointerId);
-    }
-    dragRef.current = null;
-  }
-
-  function resetView() {
-    zoomRef.current = 1;
-    panRef.current = { x: 0, y: 0 };
-  }
 
   useEffect(() => {
     let cancelled = false;
@@ -2261,17 +2121,16 @@ function FrameSequenceRunner({ pack, group }: { pack: ArtPack; group: ArtSampleG
 
       if (loadedFrame && !loadFailed) {
         const source = loadedFrame.source;
-        const fitRatio = Math.min(
-          (drawingCanvas.width * 0.82) / stageWidth,
-          (drawingCanvas.height * 0.74) / stageHeight,
+        const ratio = Math.min(
+          (drawingCanvas.width * 0.92) / stageWidth,
+          (drawingCanvas.height * 0.86) / stageHeight,
         );
-        const ratio = fitRatio * zoomRef.current;
         const stageW = stageWidth * ratio;
         const stageH = stageHeight * ratio;
         const w = source.w * ratio;
         const h = source.h * ratio;
-        const stageX = (drawingCanvas.width - stageW) / 2 + panRef.current.x;
-        const stageY = (drawingCanvas.height - stageH) / 2 - 8 + panRef.current.y;
+        const stageX = (drawingCanvas.width - stageW) / 2;
+        const stageY = (drawingCanvas.height - stageH) / 2;
         const x = stageX + (stageW - w) / 2;
         const y = stageY + stageH - h;
         drawingContext.imageSmoothingEnabled = false;
@@ -2314,17 +2173,7 @@ function FrameSequenceRunner({ pack, group }: { pack: ArtPack; group: ArtSampleG
   return (
     <div className="art-runner">
       <div className="art-runner-stage sequence-stage">
-        <canvas
-          ref={canvasRef}
-          width={720}
-          height={420}
-          className="zoomable-canvas"
-          onPointerDown={handlePointerDown}
-          onPointerMove={handlePointerMove}
-          onPointerUp={handlePointerUp}
-          onPointerCancel={handlePointerUp}
-          onDoubleClick={resetView}
-        />
+        <canvas ref={canvasRef} width={960} height={540} />
         <aside className="animation-overview" aria-label="Frame sequence files">
           <div className="animation-overview-head">
             <span>{group.samples.length} files</span>
@@ -2387,9 +2236,6 @@ function FrameSequenceRunner({ pack, group }: { pack: ArtPack; group: ArtSampleG
           <input type="checkbox" checked={flip} onChange={(event) => setFlip(event.target.checked)} />
           Flip
         </label>
-        <button type="button" onClick={resetView}>
-          Reset view
-        </button>
       </div>
     </div>
   );
