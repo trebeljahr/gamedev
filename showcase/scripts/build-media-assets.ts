@@ -99,6 +99,26 @@ function isJunkPath(path: string): boolean {
   return /(^|\/)(__MACOSX|\.DS_Store)(\/|$)/i.test(path) || /(^|\/)\._/.test(path);
 }
 
+/**
+ * If a gif has been pre-processed into a sibling sprite sheet
+ * (`<name>__strip-WxH.sheet.png` produced by build-gif-sheets.ts), drop the
+ * original gif so downstream code uses the static sheet instead — canvas can't
+ * decode subsequent gif frames, but it can animate a strip just fine.
+ */
+function dropGifsWithSheetSiblings(images: string[]): string[] {
+  const sheetBases = new Set<string>();
+  for (const abs of images) {
+    const match = abs.match(/^(.*?)__strip-\d+x\d+\.sheet\.png$/i);
+    if (match) sheetBases.add(match[1]);
+  }
+  if (sheetBases.size === 0) return images;
+  return images.filter((abs) => {
+    if (!/\.gif$/i.test(abs)) return true;
+    const base = abs.replace(/\.gif$/i, "");
+    return !sheetBases.has(base);
+  });
+}
+
 async function addPackDirsFromRoot(
   out: Map<string, ArtPackDir>,
   dir: string,
@@ -284,9 +304,10 @@ async function main() {
         packDir,
         (path, name) => !isJunkPath(path) && /\.(png|jpe?g|webp|gif)$/i.test(name),
       );
-      const relImages = images.map((abs) => relative(ASSETS_ROOT, abs).split("/").join("/"));
+      const filteredImages = dropGifsWithSheetSiblings(images);
+      const relImages = filteredImages.map((abs) => relative(ASSETS_ROOT, abs).split("/").join("/"));
       const inspections = new Map<string, ArtInspection>();
-      for (const abs of images) {
+      for (const abs of filteredImages) {
         const rel = relative(ASSETS_ROOT, abs).split("/").join("/");
         try {
           const inspection = await inspectArtImageCached(IMAGE_INSPECT_CACHE, abs, rel);

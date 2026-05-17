@@ -2903,6 +2903,19 @@ select:focus-visible {
 .art-runner-stage > canvas:only-child {
   grid-column: 1 / -1;
 }
+.art-runner-stage > .art-gif-stage {
+  grid-column: 1 / -1;
+  align-self: start;
+  justify-self: center;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  background: #15171c;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
 .animation-overview {
   display: grid;
   grid-template-rows: auto auto minmax(0, 1fr);

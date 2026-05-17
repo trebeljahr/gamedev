@@ -356,6 +356,10 @@ function isSpriteSheetCandidate(sample: ArtSample): boolean {
   return sample.animated || isLikelySpriteSheetPath(sample.path) || /(?:sprite|spritesheet|sheet|animation|anim)/i.test(sample.label);
 }
 
+function isGifSample(sample: { path: string }): boolean {
+  return sample.path.toLowerCase().endsWith(".gif");
+}
+
 function normalizeSpritePathText(value: string): string {
   return value
     .replace(/([a-z])([A-Z])/g, "$1 $2")
@@ -1571,8 +1575,22 @@ function ArtSamplePreview({ sample, sequenceSrcs }: { sample: ArtSample; sequenc
   if (sequenceSrcs && sequenceSrcs.length >= 2) {
     return <MultiFileSequencePreview srcs={sequenceSrcs} label={sample.label} />;
   }
+  if (isGifSample(sample)) return <img src={sample.src} alt="" loading="lazy" decoding="async" />;
   if (isSpriteSheetCandidate(sample)) return <SquareArtPreview sample={sample} label={sample.label} />;
   return <img src={sample.src} alt="" loading="lazy" decoding="async" />;
+}
+
+function GifInspector({ sample }: { sample: ArtSample }) {
+  return (
+    <div className="art-runner">
+      <div className="art-runner-stage">
+        <img className="art-gif-stage" src={sample.src} alt={sample.label} />
+      </div>
+      <div className="runner-controls">
+        <small>Animated GIF · browser playback (no frame controls)</small>
+      </div>
+    </div>
+  );
 }
 
 function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }) {
@@ -2438,6 +2456,8 @@ function ArtWorkbench({ summary }: { summary: ArtPackSummary }) {
             <ArtSampleBrowser groups={groups} activeId={selectedGroup?.id ?? ""} onSelect={setSelectedGroupId} />
             {selectedGroup?.sequence ? (
               <FrameSequenceRunner pack={pack} group={selectedGroup} />
+            ) : selectedSample && isGifSample(selectedSample) ? (
+              <GifInspector sample={selectedSample} />
             ) : (
               <ArtCanvasRunner pack={pack} sample={selectedSample} />
             )}

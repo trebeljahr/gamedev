@@ -201,6 +201,7 @@ export function isLikelyHybridSpriteAtlasPath(path: string): boolean {
 
 export function isLikelySpriteSheetPath(path: string): boolean {
   if (/\.(gif)$/i.test(path)) return true;
+  if (/\.sheet\.png$/i.test(path)) return true;
   if (isLikelyHybridSpriteAtlasPath(path)) return true;
   if (isLikelyTextureAtlasPath(path)) return false;
   if (isLikelySeparateFramePath(path)) return false;
@@ -233,6 +234,7 @@ export function inferArtKind(path: string): ArtKind {
 
 export function isAnimatedArtPath(path: string): boolean {
   if (/\.(gif)$/i.test(path)) return true;
+  if (/\.sheet\.png$/i.test(path)) return true;
   if (isLikelyStaticCollectionSheetPath(path)) return false;
   if (!isLikelySpriteSheetPath(path)) return false;
   if (hasExplicitAnimationHint(path) || isLikelySingularCharacterSheetPath(path)) return true;

@@ -163,6 +163,25 @@ function isJunkMediaPath(path: string): boolean {
   return /(^|\/)(__MACOSX|\.DS_Store)(\/|$)/i.test(path) || /(^|\/)\._/.test(path);
 }
 
+/**
+ * Drop gif files when a sibling `<name>__strip-WxH.sheet.png` exists (produced
+ * by build-gif-sheets.ts). The static strip is the displayable form; the gif
+ * stays on disk as the source of truth.
+ */
+function dropGifsWithSheetSiblings(images: string[]): string[] {
+  const sheetBases = new Set<string>();
+  for (const abs of images) {
+    const match = abs.match(/^(.*?)__strip-\d+x\d+\.sheet\.png$/i);
+    if (match) sheetBases.add(match[1]);
+  }
+  if (sheetBases.size === 0) return images;
+  return images.filter((abs) => {
+    if (!/\.gif$/i.test(abs)) return true;
+    const base = abs.replace(/\.gif$/i, "");
+    return !sheetBases.has(base);
+  });
+}
+
 async function addArtPackDirsFromRoot(
   out: Map<string, ArtPackDir>,
   dir: string,
@@ -242,9 +261,10 @@ async function writeMediaManifest(): Promise<void> {
         packDir,
         (path, name) => !isJunkMediaPath(path) && /\.(png|jpe?g|webp|gif)$/i.test(name),
       );
-      const relImages = images.map((abs) => relative(ASSETS_ROOT, abs).split("/").join("/"));
+      const filteredImages = dropGifsWithSheetSiblings(images);
+      const relImages = filteredImages.map((abs) => relative(ASSETS_ROOT, abs).split("/").join("/"));
       const inspections = new Map<string, ArtInspection>();
-      for (const abs of images) {
+      for (const abs of filteredImages) {
         const rel = relative(ASSETS_ROOT, abs).split("/").join("/");
         try {
           const inspection = await inspectArtImageCached(IMAGE_INSPECT_CACHE, abs, rel);
