@@ -17,6 +17,7 @@ import type {
 } from "@/lib/media";
 import { materialSamplesFor, mediaPackHref } from "@/lib/media";
 import { resolveSoundAttribution, type SoundAttribution } from "@/lib/sound-attribution";
+import { cleanAudioLabel } from "@/lib/audio-label";
 import { useLoudnessEnvelope, waveformPath } from "@/lib/loudness";
 import {
   exportAudioSelection,
@@ -2874,7 +2875,7 @@ function MusicTrackRow({ track }: { track: MusicTrack }) {
       </div>
       <AudioPlayer
         src={track.src}
-        title={track.title}
+        title={cleanAudioLabel(track.title)}
         detail={
           <>
             {track.source} ·{" "}
@@ -3043,7 +3044,7 @@ function SoundPad({ collection, initialSamplePath }: { collection: SoundCollecti
       </div>
       <AudioPlayer
         src={sample?.src}
-        title={sample?.label ?? "No sample selected"}
+        title={sample ? cleanAudioLabel(sample.label) : "No sample selected"}
         detail={sample ? `${sample.kind} · ${sample.path.split("/").pop()}` : undefined}
         volume={volume}
         rate={rate}
@@ -3157,7 +3158,7 @@ function SoundPad({ collection, initialSamplePath }: { collection: SoundCollecti
           collection.samples.map((item) => (
             <button key={item.path} type="button" className={item.path === sample?.path ? "active" : ""} onClick={() => play(item)}>
               <span>{item.kind}</span>
-              {item.label}
+              {cleanAudioLabel(item.label)}
             </button>
           ))
         ) : (
@@ -3707,7 +3708,7 @@ export function MediaExplorer({
                             />
                           </span>
                         </div>
-                        <div className="media-title">{result.item.label}</div>
+                        <div className="media-title">{cleanAudioLabel(result.item.label)}</div>
                         <div className="media-detail">{result.item.collection.title}</div>
                         <p>{result.item.description}</p>
                       </div>

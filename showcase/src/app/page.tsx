@@ -5,6 +5,7 @@ import { downloadsForModel, manifest } from "@/lib/manifest";
 import fs from "node:fs";
 import path from "node:path";
 import { catalog, findArtPack, mediaStats, sourceMappings } from "@/lib/media";
+import { cleanAudioLabel } from "@/lib/audio-label";
 import { pageMetadata } from "@/lib/seo";
 import {
   LibraryHeroShowreel,
@@ -395,7 +396,7 @@ function previewFromMusic(
   const audio = audioFor(track.path);
   if (!audio) return undefined;
   return {
-    title: track.title,
+    title: cleanAudioLabel(track.title),
     source: track.source,
     path: track.path,
     duration: audio.duration,
@@ -413,7 +414,7 @@ function previewFromSound(
   const audio = audioFor(sample.path);
   if (!audio) return undefined;
   return {
-    title: sample.label,
+    title: cleanAudioLabel(sample.label),
     source: collection.source,
     path: sample.path,
     duration: audio.duration,

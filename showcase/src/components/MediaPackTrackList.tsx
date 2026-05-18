@@ -1,6 +1,7 @@
 "use client";
 
 import { InfiniteListSentinel, useInfiniteList } from "@/components/useInfiniteList";
+import { cleanAudioLabel } from "@/lib/audio-label";
 import type { MediaPack, MediaPackSoundSample, MusicTrack } from "@/lib/media";
 import { uniqueTags } from "@/lib/tags";
 
@@ -48,7 +49,7 @@ function MusicRow({ track }: { track: MusicTrack }) {
         <span className="sound-org sound-org-music">Music</span>
         <span>{track.source}</span>
       </div>
-      <div className="media-title">{track.title}</div>
+      <div className="media-title">{cleanAudioLabel(track.title)}</div>
       <div className="media-detail">{track.path}</div>
       <audio className="media-pack-audio" controls preload="none" src={track.src} />
       <p>{track.description}</p>
@@ -70,7 +71,7 @@ function SoundRow({ sample }: { sample: MediaPackSoundSample }) {
         </span>
         <span>{sample.source}</span>
       </div>
-      <div className="media-title">{sample.label}</div>
+      <div className="media-title">{cleanAudioLabel(sample.label)}</div>
       <div className="media-detail">{sample.category} · {sample.path}</div>
       <audio className="media-pack-audio" controls preload="none" src={sample.src} />
       <p>{sample.description}</p>
