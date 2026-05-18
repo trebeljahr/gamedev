@@ -147,6 +147,7 @@ export type SoundSample = {
   kind: "movement" | "combat" | "ui" | "ambient" | "effect";
   description: string;
   category: string;
+  subcategory?: string;
   themes: string[];
   useCases: string[];
   tags: string[];

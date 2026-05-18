@@ -29,6 +29,7 @@ import {
 import { SiteHeader } from "@/components/SiteHeader";
 import { navGroups, type NavKey } from "@/lib/navigation";
 import { uniqueTags } from "@/lib/tags";
+import { SOUND_SUBCATEGORIES, SOUND_SUBCATEGORY_LABELS } from "@/lib/catalog-metadata";
 
 type MediaExplorerProps = {
   soundCollections: SoundCollection[];
@@ -2837,6 +2838,7 @@ export function MediaExplorer({
   const [spriteMotionFilter, setSpriteMotionFilter] = useState<SpriteMotionFilter>(initialSpriteMotion);
   const [soundTypeFilter, setSoundTypeFilter] = useState<SoundTypeFilter>(initialSoundType);
   const [soundCategoryFilter, setSoundCategoryFilter] = useState("all");
+  const [soundSubcategoryFilter, setSoundSubcategoryFilter] = useState("all");
   const [soundSortMode, setSoundSortMode] = useState<SoundSortMode>("shuffle");
   const [selectedArtFolder, setSelectedArtFolder] = useState(artPacks[0]?.folder ?? "");
   const [selectedSoundPath, setSelectedSoundPath] = useState(
@@ -2889,6 +2891,25 @@ export function MediaExplorer({
     }
   }, [soundCategories, soundCategoryFilter]);
 
+  const soundSubcategories = useMemo(() => {
+    if (soundCategoryFilter === "all") return ["all"] as string[];
+    const present = new Set(
+      soundEffectItems
+        .filter((item) => item.category === soundCategoryFilter)
+        .map((item) => item.subcategory)
+        .filter((value): value is string => Boolean(value)),
+    );
+    const ordered = (SOUND_SUBCATEGORIES[soundCategoryFilter] ?? []).filter((sub) => present.has(sub));
+    const extras = Array.from(present).filter((sub) => !ordered.includes(sub)).sort();
+    return ["all", ...ordered, ...extras];
+  }, [soundCategoryFilter, soundEffectItems]);
+
+  useEffect(() => {
+    if (!soundSubcategories.includes(soundSubcategoryFilter)) {
+      setSoundSubcategoryFilter("all");
+    }
+  }, [soundSubcategories, soundSubcategoryFilter]);
+
   const artLicenses = useMemo(
     () => ["all", ...Array.from(new Set(artPacks.map((p) => licenseBucket(p.license_class))))],
     [artPacks],
@@ -2899,9 +2920,10 @@ export function MediaExplorer({
     const q = query.trim().toLowerCase();
     return soundEffectItems.filter((item) => {
       if (soundCategoryFilter !== "all" && item.category !== soundCategoryFilter) return false;
+      if (soundSubcategoryFilter !== "all" && item.subcategory !== soundSubcategoryFilter) return false;
       return searchMatches(`${item.searchText} ${item.collection.searchText}`.toLowerCase(), q);
     });
-  }, [query, soundCategoryFilter, soundEffectItems, soundTypeFilter]);
+  }, [query, soundCategoryFilter, soundSubcategoryFilter, soundEffectItems, soundTypeFilter]);
 
   const allSoundResults = useMemo<SoundResult[]>(
     () => [
@@ -2983,7 +3005,7 @@ export function MediaExplorer({
   const soundList = useInfiniteList({
     total: filteredSoundResults.length,
     pageSize: SOUND_LIST_PAGE_SIZE,
-    resetKey: ["sounds", query, soundCategoryFilter, soundTypeFilter, soundSortMode].join("|"),
+    resetKey: ["sounds", query, soundCategoryFilter, soundSubcategoryFilter, soundTypeFilter, soundSortMode].join("|"),
   });
 
   const visibleSoundResults = useMemo(
@@ -3054,7 +3076,13 @@ export function MediaExplorer({
     setSoundTypeFilter(value);
     if (value === "all") {
       setSoundCategoryFilter("all");
+      setSoundSubcategoryFilter("all");
     }
+  }
+
+  function selectSoundCategory(value: string) {
+    setSoundCategoryFilter(value);
+    setSoundSubcategoryFilter("all");
   }
 
   return (
@@ -3115,15 +3143,31 @@ export function MediaExplorer({
               ]}
             />
             {soundTypeFilter !== "music" && (
-              <SelectDropdown
-                ariaLabel="Sound category"
-                value={soundCategoryFilter}
-                onChange={setSoundCategoryFilter}
-                options={soundCategories.map((category) => ({
-                  value: category,
-                  label: category === "all" ? "All SFX categories" : soundCategoryLabel(category),
-                }))}
-              />
+              <>
+                <SelectDropdown
+                  ariaLabel="Sound category"
+                  value={soundCategoryFilter}
+                  onChange={selectSoundCategory}
+                  options={soundCategories.map((category) => ({
+                    value: category,
+                    label: category === "all" ? "All SFX categories" : soundCategoryLabel(category),
+                  }))}
+                />
+                {soundCategoryFilter !== "all" && soundSubcategories.length > 1 && (
+                  <SelectDropdown
+                    ariaLabel="Sound subcategory"
+                    value={soundSubcategoryFilter}
+                    onChange={setSoundSubcategoryFilter}
+                    options={soundSubcategories.map((sub) => ({
+                      value: sub,
+                      label:
+                        sub === "all"
+                          ? `All ${soundCategoryLabel(soundCategoryFilter)} types`
+                          : SOUND_SUBCATEGORY_LABELS[sub] ?? sub,
+                    }))}
+                  />
+                )}
+              </>
             )}
             <SelectDropdown<SoundSortMode>
               ariaLabel="Sound sort"
@@ -3283,6 +3327,9 @@ export function MediaExplorer({
                           <span className="sound-org sound-org-user-collection">
                             {soundCategoryLabel(result.item.category)}
                           </span>
+                          {result.item.subcategory && (
+                            <span>{SOUND_SUBCATEGORY_LABELS[result.item.subcategory] ?? result.item.subcategory}</span>
+                          )}
                         </div>
                         <div className="media-title">{result.item.label}</div>
                         <div className="media-detail">{result.item.collection.title}</div>

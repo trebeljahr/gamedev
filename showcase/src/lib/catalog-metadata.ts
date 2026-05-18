@@ -39,10 +39,50 @@ export type PackMetadata = {
 export type MediaMetadata = {
   description: string;
   category: string;
+  subcategory?: string;
   themes: string[];
   useCases: string[];
   tags: string[];
   searchText: string;
+};
+
+export const SOUND_SUBCATEGORIES: Record<string, string[]> = {
+  movement: ["footstep", "jump", "fall", "gear", "motion"],
+  combat: ["melee", "ranged", "magic", "explosion", "impact", "hurt"],
+  ui: ["click", "coin-pickup", "success", "error", "notification", "voice"],
+  ambient: ["environment", "weather", "drone", "room-tone"],
+  effect: ["animal", "door", "item-interact", "transition", "card-casino", "misc-fx"],
+  music: [],
+};
+
+export const SOUND_SUBCATEGORY_LABELS: Record<string, string> = {
+  footstep: "Footsteps",
+  jump: "Jumps",
+  fall: "Falls",
+  gear: "Cloth / Gear",
+  motion: "Motion / Grunts",
+  melee: "Melee",
+  ranged: "Ranged / Projectile",
+  magic: "Magic / Spell",
+  explosion: "Explosions",
+  impact: "Impacts",
+  hurt: "Hurt / Damage",
+  click: "Clicks / Buttons",
+  "coin-pickup": "Coins / Pickups",
+  success: "Confirm / Success",
+  error: "Error / Negative",
+  notification: "Notification / Chime",
+  voice: "Voice / Voiceover",
+  environment: "Environment",
+  weather: "Weather",
+  drone: "Drone / Atmosphere",
+  "room-tone": "Room Tone",
+  animal: "Animals / Creatures",
+  door: "Doors",
+  "item-interact": "Item Interaction",
+  transition: "Transitions / Whoosh",
+  "card-casino": "Cards / Casino",
+  "misc-fx": "Misc FX",
 };
 
 type ModelInput = {
@@ -463,10 +503,11 @@ export function buildSoundSampleMetadata(input: {
 }): MediaMetadata {
   const text = tokenText(input.collectionTitle, input.label, input.path, input.kind);
   const category = soundCategory(text) || input.kind;
+  const subcategory = soundSubcategory(category, text);
   const themes = soundThemes(text);
   const useCases = soundUseCases(category, text);
-  const tags = mediaTags(inferTags(text, ["sound", "sfx", category, input.kind, ...themes]));
-  const description = `${input.label} is a ${category} sound sample from ${input.collectionTitle}. Useful for ${useCases.join(", ")}.`;
+  const tags = mediaTags(inferTags(text, ["sound", "sfx", category, input.kind, ...(subcategory ? [subcategory] : []), ...themes]));
+  const description = `${input.label} is a ${category}${subcategory ? ` / ${subcategory}` : ""} sound sample from ${input.collectionTitle}. Useful for ${useCases.join(", ")}.`;
   const searchText = unique([
     input.label,
     input.path,
@@ -474,11 +515,12 @@ export function buildSoundSampleMetadata(input: {
     input.kind,
     description,
     category,
+    subcategory ?? "",
     ...themes,
     ...useCases,
     ...tags,
   ]).join(" ").toLowerCase();
-  return { description, category, themes, useCases, tags, searchText };
+  return { description, category, subcategory, themes, useCases, tags, searchText };
 }
 
 export function buildSourceMappingMetadata(input: {
@@ -537,11 +579,58 @@ function mediumForPath(path: string): string {
 
 function soundCategory(text: string): string {
   if (/(music|track|theme|song|incompetech|macleod)/i.test(text)) return "music";
+  if (/(voiceover|voice-over|narration)/i.test(text)) return "ui";
   if (/(footstep|step|walk|run|jump|movement|grass|gravel)/i.test(text)) return "movement";
   if (/(hit|impact|slash|attack|weapon|arrow|explosion|laser|shoot|hurt|damage|combat)/i.test(text)) return "combat";
-  if (hasToken(text, "ui|click|button|select|menu|confirm|coin|pickup|notification")) return "ui";
-  if (/(ambient|wind|rain|forest|water|loop|room|drone|atmosphere)/i.test(text)) return "ambient";
+  if (hasToken(text, "ui|click|button|select|menu|confirm|coin|pickup|notification") || /(negatives?|positives?|fail|error|deny)/i.test(text)) return "ui";
+  if (/(ambien|wind|rain|forest|water|loop|room|drone|atmosphere|scenery|warehouse|mountain)/i.test(text)) return "ambient";
   return "effect";
+}
+
+function soundSubcategory(category: string, text: string): string | undefined {
+  switch (category) {
+    case "movement":
+      if (/(jump|hop|leap)/i.test(text)) return "jump";
+      if (/(fall|falling|drop|land)/i.test(text)) return "fall";
+      if (/(chainmail|armor|cloth|leather|gear)/i.test(text)) return "gear";
+      if (/(footstep|step|walk|run|grass|gravel|snow|rock|wood|metal|forest)/i.test(text)) return "footstep";
+      if (/(grunt|breath|exhale|effort|moan)/i.test(text)) return "motion";
+      return "motion";
+    case "combat":
+      if (/(spell|magic|sorcery|enchant|wizard|mana|cast)/i.test(text)) return "magic";
+      if (/(explosion|explode|blast|nuke|nuclear|bomb|detonat)/i.test(text)) return "explosion";
+      if (/(hurt|damage|ouch|pain|grunt.*hurt|taking damage)/i.test(text)) return "hurt";
+      if (/(arrow|bow|gun|shot|shoot|laser|bullet|cannon|projectile)/i.test(text)) return "ranged";
+      if (/(slash|sword|blade|punch|hand|kick|stab|melee|strike)/i.test(text)) return "melee";
+      if (/(impact|hit|smash|crush|thud|whack|riser)/i.test(text)) return "impact";
+      return "impact";
+    case "ui":
+      if (/(voiceover|voice-over|narration|\bvo\b|speak|announce)/i.test(text)) return "voice";
+      if (/(coin|purchase|collect|gem|gold|treasure)/i.test(text)) return "coin-pickup";
+      if (/(error|fail|negative|deny|wrong|bad|cancel)/i.test(text)) return "error";
+      if (/(confirm|success|positive|complete|done|win|yes|accept|\bok\b)/i.test(text)) return "success";
+      if (/(notification|alert|chime|ding|ping|alarm|bell|jingle)/i.test(text)) return "notification";
+      if (/(pickup)/i.test(text)) return "coin-pickup";
+      if (/(click|button|select|tap|menu|hover)/i.test(text)) return "click";
+      return "click";
+    case "ambient":
+      if (/(wind|rain|storm|thunder|snow|weather)/i.test(text)) return "weather";
+      if (/(forest|water|river|ocean|mountain|cave|scenery|nature)/i.test(text)) return "environment";
+      if (/(room|warehouse|hall|interior|tone)/i.test(text)) return "room-tone";
+      if (/(drone|atmosphere|atmospheric|texture|pad|hum)/i.test(text)) return "drone";
+      return "drone";
+    case "effect":
+      if (/(bear|cat|horse|lion|tiger|cow|dog|bird|animal|moo|roar|neigh|meow|bark|chirp|growl)/i.test(text)) return "animal";
+      if (/(door|gate|latch|knock)/i.test(text)) return "door";
+      if (/(card|deal|shuffle|casino|chip|dice|roulette)/i.test(text)) return "card-casino";
+      if (/(whoosh|swoosh|riser|transition|sweep|portal|teleport|warp|swish)/i.test(text)) return "transition";
+      if (/(eat|drink|chew|sip|glass|bottle|pickup|item|inventory|drop)/i.test(text)) return "item-interact";
+      return "misc-fx";
+    case "music":
+      return undefined;
+    default:
+      return undefined;
+  }
 }
 
 function soundThemes(text: string): string[] {
