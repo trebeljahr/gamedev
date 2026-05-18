@@ -260,12 +260,12 @@ const TRACK_MODEL_PICKS = [
   scale: number;
 }>;
 
-const TRACK_MUSIC_TITLES = [
-  "Ancient Winds",
-  "Clash Defiant",
-  "Magic Forest",
-  "Midnight Tale",
-  "Stay the Course",
+const TRACK_MUSIC_PICKS: FeaturedSoundPick[] = [
+  { kind: "music", tone: "music", collectionLabel: "Kevin MacLeod", matchTitle: "Clash Defiant" },
+  { kind: "music", tone: "music", collectionLabel: "Kevin MacLeod", matchTitle: "Magic Forest" },
+  { kind: "music", tone: "music", collectionLabel: "Kevin MacLeod", matchTitle: "Peppers Theme" },
+  { kind: "music", tone: "music", collectionLabel: "Kevin MacLeod", matchTitle: "Midnight Tale" },
+  { kind: "music", tone: "jingle", collectionLabel: "Kenney Jingles", matchTitle: "Jingles Hit 03" },
 ];
 
 type ModelPick = {
@@ -482,25 +482,36 @@ function selectFeaturedSounds(): LibrarySoundPreview[] {
 function selectTrackSounds(): LibrarySoundPreview[] {
   const picks: LibrarySoundPreview[] = [];
   const seen = new Set<string>();
-  const byTitle = new Map(catalog.musicTracks.map((track) => [track.title, track]));
-  for (const title of TRACK_MUSIC_TITLES) {
-    const track = byTitle.get(title);
-    if (!track) continue;
-    const preview = previewFromMusic(track, "music", track.source);
-    if (!preview || seen.has(preview.path)) continue;
-    seen.add(preview.path);
-    picks.push(preview);
+
+  for (const pick of TRACK_MUSIC_PICKS) {
+    const preview = pickMusic(pick);
+    if (preview && !seen.has(preview.path)) {
+      seen.add(preview.path);
+      picks.push(preview);
+    }
   }
+
   if (picks.length < 5) {
-    for (const track of catalog.musicTracks) {
-      if (seen.has(track.path)) continue;
-      const preview = previewFromMusic(track, "music", track.source);
+    const sourcesUsed = new Set(picks.map((p) => p.source));
+    const remaining = catalog.musicTracks.filter((track) => !seen.has(track.path));
+    remaining.sort((a, b) => {
+      const aNew = sourcesUsed.has(a.source) ? 1 : 0;
+      const bNew = sourcesUsed.has(b.source) ? 1 : 0;
+      if (aNew !== bNew) return aNew - bNew;
+      return a.title.localeCompare(b.title);
+    });
+    for (const track of remaining) {
+      const tone: "music" | "jingle" = track.source === "Kenney" ? "jingle" : "music";
+      const label = track.source === "Kenney" ? "Kenney Jingles" : track.source;
+      const preview = previewFromMusic(track, tone, label);
       if (!preview) continue;
       seen.add(track.path);
+      sourcesUsed.add(track.source);
       picks.push(preview);
       if (picks.length === 5) break;
     }
   }
+
   return picks.slice(0, 5);
 }
 
