@@ -3251,18 +3251,16 @@ export function MediaExplorer({
                             <button type="button" className="row-button" onClick={() => setSelectedSoundPath(item.path)}>
                               <div>
                                 <div className="media-row-kicker">
-                                  <span className={`sound-org sound-org-${item.organization}`}>
-                                    {item.organization === "creator-pack" ? "Pack" : "Collection"}
+                                  <span className="sound-org sound-org-user-collection">
+                                    {soundCategoryLabel(item.category)}
                                   </span>
-                                  <span>{item.source}</span>
                                 </div>
                                 <div className="media-title">{item.label}</div>
-                                <div className="media-detail">{soundCategoryLabel(item.category)} · {item.collection.title}</div>
+                                <div className="media-detail">{item.collection.title}</div>
                                 <p>{item.description}</p>
                               </div>
                             </button>
                             <div className="media-actions">
-                              <Link href={item.packHref}>pack</Link>
                               {item.collection.url && (
                                 <a href={item.collection.url} target="_blank" rel="noreferrer">
                                   source
