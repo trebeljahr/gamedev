@@ -18,6 +18,7 @@ function activeKey(pathname: string, search: string, hash: string): NavKey | und
     if (hash === "#3d-packs" || hash === "#3d-collections" || hash.startsWith("#creator-")) return "packs";
     return "library";
   }
+  if (pathname === "/build-with-ai") return "buildWithAi";
   if (pathname === "/models") return "packs";
   if (pathname === "/all") return undefined;
   if (pathname === "/media") {

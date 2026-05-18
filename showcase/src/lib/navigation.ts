@@ -30,6 +30,10 @@ export const navGroups = [
   },
 ] as const;
 
-export const navItems = [{ label: "Home", href: "/", key: "library" }, ...navGroups] as const;
+export const navItems = [
+  { label: "Home", href: "/", key: "library" },
+  { label: "Build with AI", href: "/build-with-ai", key: "buildWithAi" },
+  ...navGroups,
+] as const;
 
 export type NavKey = (typeof navItems)[number]["key"];
