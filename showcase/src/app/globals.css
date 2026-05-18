@@ -551,17 +551,6 @@ select:focus-visible {
   object-fit: contain;
   image-rendering: pixelated;
 }
-.library-tile-pulse {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  width: 6px;
-  height: 6px;
-  border-radius: 999px;
-  background: var(--accent, #ffd84d);
-  box-shadow: 0 0 0 4px rgba(255,216,77,0.18);
-  animation: library-tile-pulse 1.6s ease-in-out infinite;
-}
 .library-tile-meta {
   display: grid;
   gap: 2px;
@@ -668,10 +657,6 @@ select:focus-visible {
 .library-signal-fill {
   fill: var(--signal-accent);
   filter: drop-shadow(0 0 6px var(--signal-accent-soft));
-}
-@keyframes library-tile-pulse {
-  0%, 100% { opacity: 0.4; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.45); }
 }
 @keyframes library-model-glow {
   0% { opacity: 0.55; transform: translate(0, 0); }

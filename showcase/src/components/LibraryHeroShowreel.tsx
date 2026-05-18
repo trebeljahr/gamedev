@@ -221,7 +221,6 @@ export function SpriteLoop({ sample, index }: { sample: LibrarySpritePreview; in
             aria-label={`${sample.label} animated sprite preview`}
           />
         )}
-        {animatedFlag ? <i className="library-tile-pulse" aria-hidden="true" /> : null}
       </div>
       <div className="library-tile-meta">
         <strong>{sample.label}</strong>
