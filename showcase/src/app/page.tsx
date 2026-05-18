@@ -20,7 +20,7 @@ import type { ArtPack, ArtSample, ArtTheme, MusicTrack, SoundCollection, SoundSa
 export const metadata: Metadata = pageMetadata({
   title: "Free Game Assets Library for Prototypes",
   description:
-    "Search 7,000+ free game-ready 3D models, pixel art, sounds, music, textures, license notes, and creator credits in one fast browser catalog.",
+    "Search 7,000+ free game-ready 3D models plus pixel art, sounds, music, and textures from one fast browser catalog, with license notes and creator credits attached.",
   pathname: "/",
 });
 
@@ -542,8 +542,9 @@ export default function HomePage() {
             <div className="landing-kicker">GameDev Asset Library</div>
             <h2 id="library-heading">Search the whole asset archive from one place.</h2>
             <p>
-              3D models and textures, animated 2D sprite sheets, sound effects,
-              music, and VFX share the same compact navigation.
+              Models, sprites, textures, sounds, and music sit behind the
+              same search and filters, so you can jump between them in a
+              single click instead of opening five different sites.
             </p>
             <div className="library-actions" aria-label="Primary catalog actions">
               <Link className="landing-button primary" href="/models">

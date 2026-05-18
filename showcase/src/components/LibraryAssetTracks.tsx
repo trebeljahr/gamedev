@@ -47,9 +47,9 @@ export function LibraryAssetTracks({
           Three asset tracks, one searchable archive.
         </h2>
         <p>
-          Pick the medium you actually need. Each track has its own browser
-          previews, filters, and downloads &mdash; no digging through
-          unrelated formats first.
+          Pick the medium you need. Each track has its own previews,
+          filters, and downloads, so you&rsquo;re not scrolling past
+          unrelated formats to get there.
         </p>
       </header>
 
@@ -58,10 +58,11 @@ export function LibraryAssetTracks({
           <div className="landing-kicker">3D models</div>
           <h3>Game-ready GLB models, props &amp; rigs</h3>
           <p>
-            {modelCount.toLocaleString()} optimized GLB models across{" "}
-            {packCount} packs &mdash; characters, vehicles, buildings,
-            weapons, props, environments. Pre-baked shadows, sane scale,
-            drop straight into Three.js, Unity, Godot, or Blender.
+            {modelCount.toLocaleString()} game-ready GLB models across{" "}
+            {packCount} packs, covering characters, vehicles, props, and
+            full environment kits. Scale stays consistent across vendors,
+            shadows are pre-baked, and files import cleanly into Three.js,
+            Unity, Godot, or Blender.
           </p>
           <ul className="library-track-bullets">
             <li>Live in-browser 3D previews with orbit + animation playback</li>
@@ -123,9 +124,10 @@ export function LibraryAssetTracks({
           <h3>Music tracks &amp; sound effects, pre-analyzed</h3>
           <p>
             {musicTrackCount} music tracks and {soundCollectionCount} sound
-            collections with {soundSampleCount.toLocaleString()} effects.
-            Waveforms, durations, and tags are baked in &mdash; preview a
-            loop, scrub a loudness graph, then download.
+            collections totaling {soundSampleCount.toLocaleString()}{" "}
+            effects. Waveforms, durations, and tags are pre-computed, so
+            you can audition a loop and check its loudness shape before
+            committing to a download.
           </p>
           <ul className="library-track-bullets">
             <li>Music loops with tempo, mood, and use-case tags</li>

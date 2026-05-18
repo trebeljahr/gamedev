@@ -163,9 +163,10 @@ export default function LandingPage() {
           </Link>
           <h1 id="landing-title">Free community-made game assets, gathered into one browser.</h1>
           <p>
-            A one-stop catalog of models, sprites, textures, sound effects, and music made by
-            other people in the game-dev community. I pre-selected the things I found and liked,
-            then organized them for quick browsing, previewing, and credit checking.
+            A catalog of models, sprites, textures, sound effects, and music made by other
+            people in the game-dev community. I picked the things I&rsquo;d reach for myself
+            and grouped them so you can scan, preview, and follow each asset back to its
+            creator without hopping across a dozen sites.
           </p>
           <div className="landing-actions" aria-label="Primary actions">
             <Link className="landing-button primary" href="/">
@@ -283,7 +284,7 @@ export default function LandingPage() {
       <section className="landing-final" aria-labelledby="final-title">
         <div>
           <p className="landing-kicker">Start browsing</p>
-          <h2 id="final-title">Open the one-stop shop and find something worth building around.</h2>
+          <h2 id="final-title">Find an asset worth building a prototype around.</h2>
         </div>
         <Link className="landing-button primary" href="/">
           Enter library
