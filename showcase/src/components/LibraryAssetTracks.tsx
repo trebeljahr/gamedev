@@ -77,6 +77,17 @@ export function LibraryAssetTracks({
               Open world viewer
             </Link>
           </div>
+          <p className="library-track-tooling">
+            Bringing your own FBX or OBJ? The GLBs in this catalog were baked with{" "}
+            <a
+              href="https://github.com/trebeljahr/conv3d"
+              target="_blank"
+              rel="noreferrer"
+            >
+              conv3d
+            </a>
+            , a small CLI that converts 3D sources to optimized GLB plus R3F components.
+          </p>
         </div>
         <div className="library-track-visual library-track-visual--3d">
           <LandingModelBackdrop models={models} />
