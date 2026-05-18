@@ -840,8 +840,7 @@ select:focus-visible {
   background: #ffe57d;
   transform: translateY(-1px);
 }
-.asset-section-nav,
-.asset-type-nav {
+.asset-section-nav {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -850,26 +849,11 @@ select:focus-visible {
   background: rgba(19,19,23,0.7);
   border: 1px solid rgba(255,255,255,0.12);
   border-radius: 8px;
-}
-.asset-type-nav {
-  width: min(1180px, calc(100% - 44px));
-  margin: clamp(34px, 6vw, 72px) auto 0;
-}
-.asset-section-nav {
   justify-content: flex-end;
   max-width: 760px;
 }
-.asset-section-nav .nav-panel,
-.asset-type-nav .nav-panel {
+.asset-section-nav .nav-panel {
   z-index: 15;
-}
-.asset-nav-note {
-  margin-left: auto;
-  padding: 0 8px;
-  color: rgba(232,230,227,0.56);
-  font-size: 12px;
-  line-height: 30px;
-  white-space: nowrap;
 }
 .catalog-heading {
   display: flex;
@@ -3945,17 +3929,6 @@ select:focus-visible {
   .all-link,
   .catalog-heading a {
     width: 100%;
-    white-space: normal;
-  }
-  .asset-type-nav {
-    width: min(100% - 36px, 1180px);
-    align-items: flex-start;
-  }
-  .asset-nav-note {
-    width: 100%;
-    margin-left: 0;
-    padding-top: 4px;
-    line-height: 1.4;
     white-space: normal;
   }
   .catalog-heading,

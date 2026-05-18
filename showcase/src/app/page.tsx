@@ -5,7 +5,6 @@ import { downloadsForModel, manifest } from "@/lib/manifest";
 import fs from "node:fs";
 import path from "node:path";
 import { catalog, findArtPack, mediaStats, sourceMappings } from "@/lib/media";
-import { AssetTypeNav } from "@/components/AssetTypeNav";
 import { pageMetadata } from "@/lib/seo";
 import {
   LibraryHeroShowreel,
@@ -562,8 +561,6 @@ export default function HomePage() {
           </div>
           <LibraryHeroShowreel models={featuredModels} sprites={featuredSprites} sounds={featuredSounds} />
         </section>
-
-        <AssetTypeNav note={`${totalModels.toLocaleString()} models · ${textureGroupLabel} · ${totalMediaCollections} media collections`} />
 
         <LibraryAssetTracks
           modelCount={totalModels}
