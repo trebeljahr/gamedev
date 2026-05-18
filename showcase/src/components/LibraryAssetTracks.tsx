@@ -56,9 +56,9 @@ export function LibraryAssetTracks({
       <article className="library-track" data-track="3d">
         <div className="library-track-copy">
           <div className="landing-kicker">3D models</div>
-          <h3>Game-ready GLB models, props &amp; rigs</h3>
+          <h3>Game-ready 3D models, props &amp; rigs</h3>
           <p>
-            {modelCount.toLocaleString()} game-ready GLB models across{" "}
+            {modelCount.toLocaleString()} game-ready 3D models across{" "}
             {packCount} packs, covering characters, vehicles, props, and
             full environment kits. Scale stays consistent across vendors,
             shadows are pre-baked, and files import cleanly into Three.js,
@@ -66,6 +66,7 @@ export function LibraryAssetTracks({
           </p>
           <ul className="library-track-bullets">
             <li>Live in-browser 3D previews with orbit + animation playback</li>
+            <li>Download as GLB, glTF, FBX, or OBJ &mdash; most models ship in all four</li>
             <li>Filter by category, theme, animated vs static, license</li>
             <li>{textureGroupLabel} for PBR materials and decals</li>
           </ul>

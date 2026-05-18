@@ -374,6 +374,19 @@ function modelKey(file: string): string {
   return file.replace(/\.gltf\.glb$/i, "").replace(/\.gltf$/i, "").replace(/\.glb$/i, "");
 }
 
+// Cross-format match key: strip any known model extension, lowercase, and
+// normalize `_`/space to `-` so a kaykit `arrow_bow.fbx` collapses to the
+// same key as its sibling `arrow-bow.gltf`. Without this the FBX/OBJ
+// downloads never attach to their gltf/glb counterpart and the catalog
+// download menu stays GLB-only.
+function matchKey(file: string): string {
+  const name = file.split("/").pop()!;
+  const stripped = name
+    .replace(/\.gltf\.glb$/i, "")
+    .replace(/\.(gltf|glb|fbx|obj)$/i, "");
+  return stripped.toLowerCase().replace(/[\s_]+/g, "-");
+}
+
 /* -------- bbox extraction + cache ----------------------------------------
  * Cache shape: { [absPath]: { mtime, size, minY } }. Keyed by absolute path
  * so files in models/ and glb-optimized/ have distinct entries; invalidated
@@ -466,7 +479,10 @@ async function findOptimizedModels(vendor: string, pack: string): Promise<string
   return walk(packDir, (n) => n.toLowerCase().endsWith(".glb"));
 }
 
-const SOURCE_DOWNLOAD_EXTENSIONS = [".gltf", ".glb", ".fbx", ".obj", ".blend", ".dae"];
+// Surface only the four formats users actually ship with — Blender/Collada
+// sources stay on disk but bloat the manifest (~3k extra entries) without
+// matching what the catalog advertises.
+const SOURCE_DOWNLOAD_EXTENSIONS = [".gltf", ".glb", ".fbx", ".obj"];
 
 async function findSourceDownloadFiles(vendor: string, pack: string): Promise<string[]> {
   const packDir = join(MODELS_ROOT, vendor, pack);
@@ -480,7 +496,7 @@ async function findSourceDownloadFiles(vendor: string, pack: string): Promise<st
 function groupByModelKey(paths: string[]): Map<string, string[]> {
   const out = new Map<string, string[]>();
   for (const path of paths) {
-    const key = modelKey(path.split("/").pop()!).toLowerCase();
+    const key = matchKey(path);
     const list = out.get(key) ?? [];
     list.push(path);
     out.set(key, list);
@@ -500,7 +516,7 @@ function buildModelDownloads(
   optimizedByKey: Map<string, string[]>,
   sourceByKey: Map<string, string[]>,
 ): ModelDownload[] {
-  const key = modelKey(modelAbsPath.split("/").pop()!).toLowerCase();
+  const key = matchKey(modelAbsPath);
   const downloads: ModelDownload[] = [];
   const seen = new Set<string>();
   const seenFormatVariants = new Set<string>();

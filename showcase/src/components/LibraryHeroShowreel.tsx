@@ -346,7 +346,7 @@ export function LibraryHeroShowreel({
         />
         <div className="library-tile-chip library-tile-chip--floating" data-tone="model">
           <span>3D</span>
-          <strong>GLB models</strong>
+          <strong>3D models</strong>
         </div>
         <div className="library-model-glow" aria-hidden="true" />
       </div>
