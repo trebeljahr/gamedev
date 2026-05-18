@@ -15,6 +15,7 @@
     "prebuild": "node scripts/check-generated-catalogs.mjs",
     "dev": "next dev --turbopack --port 3679",
     "build": "next build",
+    "bundle:zip": "tsx scripts/build-bundle-zip.ts",
     "start": "next start --port 3679",
     "lint": "eslint ."
   },
