@@ -302,7 +302,6 @@ export function LibraryHeroShowreel({
   sounds: LibrarySoundPreview[];
 }) {
   const visibleSprites = sprites.slice(0, 3);
-  const modelCount = models.length;
 
   return (
     <div className="library-showreel" aria-hidden="true">
@@ -312,12 +311,6 @@ export function LibraryHeroShowreel({
           <span>3D</span>
           <strong>GLB models</strong>
         </div>
-        {modelCount > 0 ? (
-          <div className="library-model-foot">
-            <span>{modelCount} live</span>
-            <small>shadows · lights · animations</small>
-          </div>
-        ) : null}
         <div className="library-model-glow" aria-hidden="true" />
       </div>
 
