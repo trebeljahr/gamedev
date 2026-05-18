@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Free Game Assets Library",
+    title: "Free, Hand-Picked Game Assets with Permissive Licenses",
     description: SITE_DESCRIPTION,
     url: "/",
     siteName: SITE_NAME,
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Free Game Assets Library",
+    title: "Free, Hand-Picked Game Assets with Permissive Licenses",
     description: SITE_DESCRIPTION,
     images: ["/twitter-image"],
   },

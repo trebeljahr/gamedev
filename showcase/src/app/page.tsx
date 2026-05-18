@@ -18,9 +18,9 @@ import { isLikelyMarketingPreviewPath, isLikelySpriteSheetPath } from "@/lib/med
 import type { ArtPack, ArtSample, ArtTheme, MusicTrack, SoundCollection, SoundSample } from "@/lib/media";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Free Game Assets Library for Prototypes",
+  title: "Free, Hand-Picked Game Assets with Permissive Licenses",
   description:
-    "Search 7,000+ free game-ready 3D models plus pixel art, sounds, music, and textures from one fast browser catalog, with license notes and creator credits attached.",
+    "Search free, hand-picked, high-quality game assets with permissive licenses — 3D models, pixel art, sprite sheets, sound effects, music, and textures — all in one place.",
   pathname: "/",
 });
 
@@ -540,7 +540,9 @@ export default function HomePage() {
         <section className="library-hero" aria-labelledby="library-heading">
           <div className="library-hero-copy">
             <div className="landing-kicker">GameDev Asset Library</div>
-            <h2 id="library-heading">Search the whole asset archive from one place.</h2>
+            <h2 id="library-heading">
+              Search free, hand-picked, high-quality game assets with permissive licenses, all in one place.
+            </h2>
             <p>
               Models, sprites, textures, sounds, and music sit behind the
               same search and filters, so you can jump between them in a

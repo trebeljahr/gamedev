@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const SITE_NAME = "GameDev Asset Library";
 export const SITE_URL = "https://gamedev.trebeljahr.com";
 export const SITE_DESCRIPTION =
-  "Search and preview free game-ready 3D models, pixel art, sound effects, music, texture sources, licenses, and creator credits.";
+  "Search free, hand-picked, high-quality game assets with permissive licenses — 3D models, pixel art, sound effects, music, and textures — all in one place.";
 
 const DEFAULT_OG_IMAGE = "/opengraph-image";
 const DEFAULT_TWITTER_IMAGE = "/twitter-image";
