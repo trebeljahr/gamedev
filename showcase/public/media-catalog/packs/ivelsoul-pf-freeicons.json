@@ -32,6 +32,1007 @@
   "samples": [
     {
       "packFolder": "ivelsoul-pf-freeicons",
+      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-apple__strip-24x24.sheet.png",
+      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-apple__strip-24x24.sheet.png",
+      "label": "Pf Icon Apple Strip 24x24.Sheet",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 240,
+        "height": 24,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.2800347222222222,
+        "transparentCoverage": 0.7199652777777777,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Pf Icon Apple Strip 24x24.Sheet is an animated 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "searchText": "pf icon apple strip 24x24.sheet 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-apple__strip-24x24.sheet.png pixel fable — free animated icons icon pf icon apple strip 24x24.sheet is an animated 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art"
+    },
+    {
+      "packFolder": "ivelsoul-pf-freeicons",
+      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-blood__strip-24x24.sheet.png",
+      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-blood__strip-24x24.sheet.png",
+      "label": "Pf Icon Blood Strip 24x24.Sheet",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 240,
+        "height": 24,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.22760416666666666,
+        "transparentCoverage": 0.7723958333333333,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Pf Icon Blood Strip 24x24.Sheet is an animated 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "horror",
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "searchText": "pf icon blood strip 24x24.sheet 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-blood__strip-24x24.sheet.png pixel fable — free animated icons icon pf icon blood strip 24x24.sheet is an animated 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art horror"
+    },
+    {
+      "packFolder": "ivelsoul-pf-freeicons",
+      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-bow__strip-24x24.sheet.png",
+      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-bow__strip-24x24.sheet.png",
+      "label": "Pf Icon Bow Strip 24x24.Sheet",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 240,
+        "height": 24,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.24340277777777777,
+        "transparentCoverage": 0.7565972222222223,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Pf Icon Bow Strip 24x24.Sheet is an animated 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "searchText": "pf icon bow strip 24x24.sheet 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-bow__strip-24x24.sheet.png pixel fable — free animated icons icon pf icon bow strip 24x24.sheet is an animated 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art"
+    },
+    {
+      "packFolder": "ivelsoul-pf-freeicons",
+      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-coin__strip-24x24.sheet.png",
+      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-coin__strip-24x24.sheet.png",
+      "label": "Pf Icon Coin Strip 24x24.Sheet",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 240,
+        "height": 24,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.26875,
+        "transparentCoverage": 0.73125,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Pf Icon Coin Strip 24x24.Sheet is an animated 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "searchText": "pf icon coin strip 24x24.sheet 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-coin__strip-24x24.sheet.png pixel fable — free animated icons icon pf icon coin strip 24x24.sheet is an animated 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art"
+    },
+    {
+      "packFolder": "ivelsoul-pf-freeicons",
+      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-d6__strip-24x24.sheet.png",
+      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-d6__strip-24x24.sheet.png",
+      "label": "Pf Icon D6 Strip 24x24.Sheet",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 240,
+        "height": 24,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.2803819444444444,
+        "transparentCoverage": 0.7196180555555556,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Pf Icon D6 Strip 24x24.Sheet is an animated 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "searchText": "pf icon d6 strip 24x24.sheet 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-d6__strip-24x24.sheet.png pixel fable — free animated icons icon pf icon d6 strip 24x24.sheet is an animated 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art"
+    },
+    {
+      "packFolder": "ivelsoul-pf-freeicons",
+      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-diamond__strip-24x24.sheet.png",
+      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-diamond__strip-24x24.sheet.png",
+      "label": "Pf Icon Diamond Strip 24x24.Sheet",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 240,
+        "height": 24,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.2921875,
+        "transparentCoverage": 0.7078125,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Pf Icon Diamond Strip 24x24.Sheet is an animated 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "searchText": "pf icon diamond strip 24x24.sheet 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-diamond__strip-24x24.sheet.png pixel fable — free animated icons icon pf icon diamond strip 24x24.sheet is an animated 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art"
+    },
+    {
+      "packFolder": "ivelsoul-pf-freeicons",
+      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-emerald__strip-24x24.sheet.png",
+      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-emerald__strip-24x24.sheet.png",
+      "label": "Pf Icon Emerald Strip 24x24.Sheet",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 240,
+        "height": 24,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.2454861111111111,
+        "transparentCoverage": 0.7545138888888889,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Pf Icon Emerald Strip 24x24.Sheet is an animated 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "searchText": "pf icon emerald strip 24x24.sheet 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-emerald__strip-24x24.sheet.png pixel fable — free animated icons icon pf icon emerald strip 24x24.sheet is an animated 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art"
+    },
+    {
+      "packFolder": "ivelsoul-pf-freeicons",
+      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-evasion__strip-24x24.sheet.png",
+      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-evasion__strip-24x24.sheet.png",
+      "label": "Pf Icon Evasion Strip 24x24.Sheet",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 240,
+        "height": 24,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.34930555555555554,
+        "transparentCoverage": 0.6506944444444445,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Pf Icon Evasion Strip 24x24.Sheet is an animated 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "searchText": "pf icon evasion strip 24x24.sheet 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-evasion__strip-24x24.sheet.png pixel fable — free animated icons icon pf icon evasion strip 24x24.sheet is an animated 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art"
+    },
+    {
+      "packFolder": "ivelsoul-pf-freeicons",
+      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-heart-empty__strip-24x24.sheet.png",
+      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-heart-empty__strip-24x24.sheet.png",
+      "label": "Pf Icon Heart Empty Strip 24x24.Sheet",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 240,
+        "height": 24,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.23125,
+        "transparentCoverage": 0.76875,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Pf Icon Heart Empty Strip 24x24.Sheet is an animated 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "searchText": "pf icon heart empty strip 24x24.sheet 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-heart-empty__strip-24x24.sheet.png pixel fable — free animated icons icon pf icon heart empty strip 24x24.sheet is an animated 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art"
+    },
+    {
+      "packFolder": "ivelsoul-pf-freeicons",
+      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-heart1__strip-24x24.sheet.png",
+      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-heart1__strip-24x24.sheet.png",
+      "label": "Pf Icon Heart1 Strip 24x24.Sheet",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 240,
+        "height": 24,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.23125,
+        "transparentCoverage": 0.76875,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Pf Icon Heart1 Strip 24x24.Sheet is an animated 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "searchText": "pf icon heart1 strip 24x24.sheet 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-heart1__strip-24x24.sheet.png pixel fable — free animated icons icon pf icon heart1 strip 24x24.sheet is an animated 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art"
+    },
+    {
+      "packFolder": "ivelsoul-pf-freeicons",
+      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-heart2__strip-24x24.sheet.png",
+      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-heart2__strip-24x24.sheet.png",
+      "label": "Pf Icon Heart2 Strip 24x24.Sheet",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 240,
+        "height": 24,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.23125,
+        "transparentCoverage": 0.76875,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Pf Icon Heart2 Strip 24x24.Sheet is an animated 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "searchText": "pf icon heart2 strip 24x24.sheet 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-heart2__strip-24x24.sheet.png pixel fable — free animated icons icon pf icon heart2 strip 24x24.sheet is an animated 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art"
+    },
+    {
+      "packFolder": "ivelsoul-pf-freeicons",
+      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-hpotion__strip-24x24.sheet.png",
+      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-hpotion__strip-24x24.sheet.png",
+      "label": "Pf Icon Hpotion Strip 24x24.Sheet",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 240,
+        "height": 24,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.3090277777777778,
+        "transparentCoverage": 0.6909722222222222,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Pf Icon Hpotion Strip 24x24.Sheet is an animated 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "searchText": "pf icon hpotion strip 24x24.sheet 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-hpotion__strip-24x24.sheet.png pixel fable — free animated icons icon pf icon hpotion strip 24x24.sheet is an animated 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art"
+    },
+    {
+      "packFolder": "ivelsoul-pf-freeicons",
+      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-magicstar__strip-24x24.sheet.png",
+      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-magicstar__strip-24x24.sheet.png",
+      "label": "Pf Icon Magicstar Strip 24x24.Sheet",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 240,
+        "height": 24,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.26545138888888886,
+        "transparentCoverage": 0.7345486111111111,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Pf Icon Magicstar Strip 24x24.Sheet is an animated 2D icon sample from Pixel Fable — Free Animated Icons. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "searchText": "pf icon magicstar strip 24x24.sheet 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-magicstar__strip-24x24.sheet.png pixel fable — free animated icons icon pf icon magicstar strip 24x24.sheet is an animated 2d icon sample from pixel fable — free animated icons. useful for combat vfx, spell effects, hit feedback. pixel fable — free animated icons combat vfx spell effects hit feedback 2d animated art"
+    },
+    {
+      "packFolder": "ivelsoul-pf-freeicons",
+      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-meat__strip-24x24.sheet.png",
+      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-meat__strip-24x24.sheet.png",
+      "label": "Pf Icon Meat Strip 24x24.Sheet",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 240,
+        "height": 24,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.28958333333333336,
+        "transparentCoverage": 0.7104166666666667,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Pf Icon Meat Strip 24x24.Sheet is an animated 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "searchText": "pf icon meat strip 24x24.sheet 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-meat__strip-24x24.sheet.png pixel fable — free animated icons icon pf icon meat strip 24x24.sheet is an animated 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art"
+    },
+    {
+      "packFolder": "ivelsoul-pf-freeicons",
+      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-moon__strip-24x24.sheet.png",
+      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-moon__strip-24x24.sheet.png",
+      "label": "Pf Icon Moon Strip 24x24.Sheet",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 240,
+        "height": 24,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.3578125,
+        "transparentCoverage": 0.6421875,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Pf Icon Moon Strip 24x24.Sheet is an animated 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "searchText": "pf icon moon strip 24x24.sheet 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-moon__strip-24x24.sheet.png pixel fable — free animated icons icon pf icon moon strip 24x24.sheet is an animated 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art"
+    },
+    {
+      "packFolder": "ivelsoul-pf-freeicons",
+      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-mpotion__strip-24x24.sheet.png",
+      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-mpotion__strip-24x24.sheet.png",
+      "label": "Pf Icon Mpotion Strip 24x24.Sheet",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 240,
+        "height": 24,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.2777777777777778,
+        "transparentCoverage": 0.7222222222222222,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Pf Icon Mpotion Strip 24x24.Sheet is an animated 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "searchText": "pf icon mpotion strip 24x24.sheet 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-mpotion__strip-24x24.sheet.png pixel fable — free animated icons icon pf icon mpotion strip 24x24.sheet is an animated 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art"
+    },
+    {
+      "packFolder": "ivelsoul-pf-freeicons",
+      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-poison__strip-24x24.sheet.png",
+      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-poison__strip-24x24.sheet.png",
+      "label": "Pf Icon Poison Strip 24x24.Sheet",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 240,
+        "height": 24,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.22760416666666666,
+        "transparentCoverage": 0.7723958333333333,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Pf Icon Poison Strip 24x24.Sheet is an animated 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "searchText": "pf icon poison strip 24x24.sheet 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-poison__strip-24x24.sheet.png pixel fable — free animated icons icon pf icon poison strip 24x24.sheet is an animated 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art"
+    },
+    {
+      "packFolder": "ivelsoul-pf-freeicons",
+      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-scull__strip-24x24.sheet.png",
+      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-scull__strip-24x24.sheet.png",
+      "label": "Pf Icon Scull Strip 24x24.Sheet",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 240,
+        "height": 24,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.3185763888888889,
+        "transparentCoverage": 0.6814236111111112,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Pf Icon Scull Strip 24x24.Sheet is an animated 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "searchText": "pf icon scull strip 24x24.sheet 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-scull__strip-24x24.sheet.png pixel fable — free animated icons icon pf icon scull strip 24x24.sheet is an animated 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art"
+    },
+    {
+      "packFolder": "ivelsoul-pf-freeicons",
+      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-shield1__strip-24x24.sheet.png",
+      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-shield1__strip-24x24.sheet.png",
+      "label": "Pf Icon Shield1 Strip 24x24.Sheet",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 240,
+        "height": 24,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.321875,
+        "transparentCoverage": 0.678125,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Pf Icon Shield1 Strip 24x24.Sheet is an animated 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "searchText": "pf icon shield1 strip 24x24.sheet 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-shield1__strip-24x24.sheet.png pixel fable — free animated icons icon pf icon shield1 strip 24x24.sheet is an animated 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art"
+    },
+    {
+      "packFolder": "ivelsoul-pf-freeicons",
+      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-shield2__strip-24x24.sheet.png",
+      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-shield2__strip-24x24.sheet.png",
+      "label": "Pf Icon Shield2 Strip 24x24.Sheet",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 240,
+        "height": 24,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.3060763888888889,
+        "transparentCoverage": 0.6939236111111111,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Pf Icon Shield2 Strip 24x24.Sheet is an animated 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "searchText": "pf icon shield2 strip 24x24.sheet 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-shield2__strip-24x24.sheet.png pixel fable — free animated icons icon pf icon shield2 strip 24x24.sheet is an animated 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art"
+    },
+    {
+      "packFolder": "ivelsoul-pf-freeicons",
+      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-speed__strip-24x24.sheet.png",
+      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-speed__strip-24x24.sheet.png",
+      "label": "Pf Icon Speed Strip 24x24.Sheet",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 240,
+        "height": 24,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.2838541666666667,
+        "transparentCoverage": 0.7161458333333334,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Pf Icon Speed Strip 24x24.Sheet is an animated 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "searchText": "pf icon speed strip 24x24.sheet 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-speed__strip-24x24.sheet.png pixel fable — free animated icons icon pf icon speed strip 24x24.sheet is an animated 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art"
+    },
+    {
+      "packFolder": "ivelsoul-pf-freeicons",
+      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-stone__strip-24x24.sheet.png",
+      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-stone__strip-24x24.sheet.png",
+      "label": "Pf Icon Stone Strip 24x24.Sheet",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 240,
+        "height": 24,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.24791666666666667,
+        "transparentCoverage": 0.7520833333333333,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Pf Icon Stone Strip 24x24.Sheet is an animated 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "searchText": "pf icon stone strip 24x24.sheet 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-stone__strip-24x24.sheet.png pixel fable — free animated icons icon pf icon stone strip 24x24.sheet is an animated 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art"
+    },
+    {
+      "packFolder": "ivelsoul-pf-freeicons",
+      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-sun__strip-24x24.sheet.png",
+      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-sun__strip-24x24.sheet.png",
+      "label": "Pf Icon Sun Strip 24x24.Sheet",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 240,
+        "height": 24,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.33611111111111114,
+        "transparentCoverage": 0.6638888888888889,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Pf Icon Sun Strip 24x24.Sheet is an animated 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "searchText": "pf icon sun strip 24x24.sheet 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-sun__strip-24x24.sheet.png pixel fable — free animated icons icon pf icon sun strip 24x24.sheet is an animated 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art"
+    },
+    {
+      "packFolder": "ivelsoul-pf-freeicons",
+      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-sword__strip-24x24.sheet.png",
+      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-sword__strip-24x24.sheet.png",
+      "label": "Pf Icon Sword Strip 24x24.Sheet",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 240,
+        "height": 24,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.2064236111111111,
+        "transparentCoverage": 0.7935763888888889,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Pf Icon Sword Strip 24x24.Sheet is an animated 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "searchText": "pf icon sword strip 24x24.sheet 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-sword__strip-24x24.sheet.png pixel fable — free animated icons icon pf icon sword strip 24x24.sheet is an animated 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art"
+    },
+    {
+      "packFolder": "ivelsoul-pf-freeicons",
+      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-wood__strip-24x24.sheet.png",
+      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-wood__strip-24x24.sheet.png",
+      "label": "Pf Icon Wood Strip 24x24.Sheet",
+      "kind": "icon",
+      "animated": true,
+      "inspection": {
+        "width": 240,
+        "height": 24,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.2763888888888889,
+        "transparentCoverage": 0.7236111111111111,
+        "contentRowRuns": 1,
+        "contentColRuns": 10,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Pf Icon Wood Strip 24x24.Sheet is an animated 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
+      "category": "icon",
+      "themes": [
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "useCases": [
+        "inventory UI",
+        "loot",
+        "pickup feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "icon",
+        "pixel fable — free animated icons"
+      ],
+      "searchText": "pf icon wood strip 24x24.sheet 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-wood__strip-24x24.sheet.png pixel fable — free animated icons icon pf icon wood strip 24x24.sheet is an animated 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art"
+    },
+    {
+      "packFolder": "ivelsoul-pf-freeicons",
       "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/pf-icon-all-anim-24x24.png",
       "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/pf-icon-all-anim-24x24.png",
       "label": "Pf Icon All Anim 24x24",
@@ -111,1032 +1112,6 @@
         "pixel fable — free animated icons"
       ],
       "searchText": "pf icon emerald sheet 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/png/pf-icon-emerald-sheet.png pixel fable — free animated icons icon pf icon emerald sheet is an animated 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art"
-    },
-    {
-      "packFolder": "ivelsoul-pf-freeicons",
-      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-apple.gif",
-      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-apple.gif",
-      "label": "Pf Icon Apple",
-      "kind": "icon",
-      "animated": false,
-      "inspection": {
-        "width": 24,
-        "height": 24,
-        "bgKind": "transparent",
-        "alphaCoverage": 0.2795138888888889,
-        "transparentCoverage": 0.7204861111111112,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Pf Icon Apple is a static 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
-      "category": "icon",
-      "themes": [
-        "icon",
-        "pixel fable — free animated icons"
-      ],
-      "useCases": [
-        "inventory UI",
-        "loot",
-        "pickup feedback"
-      ],
-      "tags": [
-        "2d",
-        "animated",
-        "art",
-        "icon",
-        "pixel fable — free animated icons",
-        "static"
-      ],
-      "searchText": "pf icon apple 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-apple.gif pixel fable — free animated icons icon pf icon apple is a static 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art static"
-    },
-    {
-      "packFolder": "ivelsoul-pf-freeicons",
-      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-blood.gif",
-      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-blood.gif",
-      "label": "Pf Icon Blood",
-      "kind": "icon",
-      "animated": false,
-      "inspection": {
-        "width": 24,
-        "height": 24,
-        "bgKind": "transparent",
-        "alphaCoverage": 0.22569444444444445,
-        "transparentCoverage": 0.7743055555555556,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Pf Icon Blood is a static 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
-      "category": "icon",
-      "themes": [
-        "icon",
-        "pixel fable — free animated icons"
-      ],
-      "useCases": [
-        "inventory UI",
-        "loot",
-        "pickup feedback"
-      ],
-      "tags": [
-        "2d",
-        "animated",
-        "art",
-        "horror",
-        "icon",
-        "pixel fable — free animated icons",
-        "static"
-      ],
-      "searchText": "pf icon blood 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-blood.gif pixel fable — free animated icons icon pf icon blood is a static 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art horror static"
-    },
-    {
-      "packFolder": "ivelsoul-pf-freeicons",
-      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-bow.gif",
-      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-bow.gif",
-      "label": "Pf Icon Bow",
-      "kind": "icon",
-      "animated": false,
-      "inspection": {
-        "width": 24,
-        "height": 24,
-        "bgKind": "transparent",
-        "alphaCoverage": 0.2378472222222222,
-        "transparentCoverage": 0.7621527777777778,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Pf Icon Bow is a static 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
-      "category": "icon",
-      "themes": [
-        "icon",
-        "pixel fable — free animated icons"
-      ],
-      "useCases": [
-        "inventory UI",
-        "loot",
-        "pickup feedback"
-      ],
-      "tags": [
-        "2d",
-        "animated",
-        "art",
-        "icon",
-        "pixel fable — free animated icons",
-        "static"
-      ],
-      "searchText": "pf icon bow 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-bow.gif pixel fable — free animated icons icon pf icon bow is a static 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art static"
-    },
-    {
-      "packFolder": "ivelsoul-pf-freeicons",
-      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-coin.gif",
-      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-coin.gif",
-      "label": "Pf Icon Coin",
-      "kind": "icon",
-      "animated": false,
-      "inspection": {
-        "width": 24,
-        "height": 24,
-        "bgKind": "transparent",
-        "alphaCoverage": 0.2708333333333333,
-        "transparentCoverage": 0.7291666666666666,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Pf Icon Coin is a static 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
-      "category": "icon",
-      "themes": [
-        "icon",
-        "pixel fable — free animated icons"
-      ],
-      "useCases": [
-        "inventory UI",
-        "loot",
-        "pickup feedback"
-      ],
-      "tags": [
-        "2d",
-        "animated",
-        "art",
-        "icon",
-        "pixel fable — free animated icons",
-        "static"
-      ],
-      "searchText": "pf icon coin 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-coin.gif pixel fable — free animated icons icon pf icon coin is a static 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art static"
-    },
-    {
-      "packFolder": "ivelsoul-pf-freeicons",
-      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-d6.gif",
-      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-d6.gif",
-      "label": "Pf Icon D6",
-      "kind": "icon",
-      "animated": false,
-      "inspection": {
-        "width": 24,
-        "height": 24,
-        "bgKind": "transparent",
-        "alphaCoverage": 0.28125,
-        "transparentCoverage": 0.71875,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Pf Icon D6 is a static 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
-      "category": "icon",
-      "themes": [
-        "icon",
-        "pixel fable — free animated icons"
-      ],
-      "useCases": [
-        "inventory UI",
-        "loot",
-        "pickup feedback"
-      ],
-      "tags": [
-        "2d",
-        "animated",
-        "art",
-        "icon",
-        "pixel fable — free animated icons",
-        "static"
-      ],
-      "searchText": "pf icon d6 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-d6.gif pixel fable — free animated icons icon pf icon d6 is a static 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art static"
-    },
-    {
-      "packFolder": "ivelsoul-pf-freeicons",
-      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-diamond.gif",
-      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-diamond.gif",
-      "label": "Pf Icon Diamond",
-      "kind": "icon",
-      "animated": false,
-      "inspection": {
-        "width": 24,
-        "height": 24,
-        "bgKind": "transparent",
-        "alphaCoverage": 0.2916666666666667,
-        "transparentCoverage": 0.7083333333333334,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Pf Icon Diamond is a static 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
-      "category": "icon",
-      "themes": [
-        "icon",
-        "pixel fable — free animated icons"
-      ],
-      "useCases": [
-        "inventory UI",
-        "loot",
-        "pickup feedback"
-      ],
-      "tags": [
-        "2d",
-        "animated",
-        "art",
-        "icon",
-        "pixel fable — free animated icons",
-        "static"
-      ],
-      "searchText": "pf icon diamond 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-diamond.gif pixel fable — free animated icons icon pf icon diamond is a static 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art static"
-    },
-    {
-      "packFolder": "ivelsoul-pf-freeicons",
-      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-emerald.gif",
-      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-emerald.gif",
-      "label": "Pf Icon Emerald",
-      "kind": "icon",
-      "animated": false,
-      "inspection": {
-        "width": 24,
-        "height": 24,
-        "bgKind": "transparent",
-        "alphaCoverage": 0.2465277777777778,
-        "transparentCoverage": 0.7534722222222222,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Pf Icon Emerald is a static 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
-      "category": "icon",
-      "themes": [
-        "icon",
-        "pixel fable — free animated icons"
-      ],
-      "useCases": [
-        "inventory UI",
-        "loot",
-        "pickup feedback"
-      ],
-      "tags": [
-        "2d",
-        "animated",
-        "art",
-        "icon",
-        "pixel fable — free animated icons",
-        "static"
-      ],
-      "searchText": "pf icon emerald 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-emerald.gif pixel fable — free animated icons icon pf icon emerald is a static 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art static"
-    },
-    {
-      "packFolder": "ivelsoul-pf-freeicons",
-      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-evasion.gif",
-      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-evasion.gif",
-      "label": "Pf Icon Evasion",
-      "kind": "icon",
-      "animated": false,
-      "inspection": {
-        "width": 24,
-        "height": 24,
-        "bgKind": "transparent",
-        "alphaCoverage": 0.3472222222222222,
-        "transparentCoverage": 0.6527777777777778,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Pf Icon Evasion is a static 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
-      "category": "icon",
-      "themes": [
-        "icon",
-        "pixel fable — free animated icons"
-      ],
-      "useCases": [
-        "inventory UI",
-        "loot",
-        "pickup feedback"
-      ],
-      "tags": [
-        "2d",
-        "animated",
-        "art",
-        "icon",
-        "pixel fable — free animated icons",
-        "static"
-      ],
-      "searchText": "pf icon evasion 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-evasion.gif pixel fable — free animated icons icon pf icon evasion is a static 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art static"
-    },
-    {
-      "packFolder": "ivelsoul-pf-freeicons",
-      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-heart-empty.gif",
-      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-heart-empty.gif",
-      "label": "Pf Icon Heart Empty",
-      "kind": "icon",
-      "animated": false,
-      "inspection": {
-        "width": 24,
-        "height": 24,
-        "bgKind": "transparent",
-        "alphaCoverage": 0.22916666666666666,
-        "transparentCoverage": 0.7708333333333334,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Pf Icon Heart Empty is a static 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
-      "category": "icon",
-      "themes": [
-        "icon",
-        "pixel fable — free animated icons"
-      ],
-      "useCases": [
-        "inventory UI",
-        "loot",
-        "pickup feedback"
-      ],
-      "tags": [
-        "2d",
-        "animated",
-        "art",
-        "icon",
-        "pixel fable — free animated icons",
-        "static"
-      ],
-      "searchText": "pf icon heart empty 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-heart-empty.gif pixel fable — free animated icons icon pf icon heart empty is a static 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art static"
-    },
-    {
-      "packFolder": "ivelsoul-pf-freeicons",
-      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-heart1.gif",
-      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-heart1.gif",
-      "label": "Pf Icon Heart1",
-      "kind": "icon",
-      "animated": false,
-      "inspection": {
-        "width": 24,
-        "height": 24,
-        "bgKind": "transparent",
-        "alphaCoverage": 0.22916666666666666,
-        "transparentCoverage": 0.7708333333333334,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Pf Icon Heart1 is a static 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
-      "category": "icon",
-      "themes": [
-        "icon",
-        "pixel fable — free animated icons"
-      ],
-      "useCases": [
-        "inventory UI",
-        "loot",
-        "pickup feedback"
-      ],
-      "tags": [
-        "2d",
-        "animated",
-        "art",
-        "icon",
-        "pixel fable — free animated icons",
-        "static"
-      ],
-      "searchText": "pf icon heart1 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-heart1.gif pixel fable — free animated icons icon pf icon heart1 is a static 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art static"
-    },
-    {
-      "packFolder": "ivelsoul-pf-freeicons",
-      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-heart2.gif",
-      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-heart2.gif",
-      "label": "Pf Icon Heart2",
-      "kind": "icon",
-      "animated": false,
-      "inspection": {
-        "width": 24,
-        "height": 24,
-        "bgKind": "transparent",
-        "alphaCoverage": 0.22916666666666666,
-        "transparentCoverage": 0.7708333333333334,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Pf Icon Heart2 is a static 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
-      "category": "icon",
-      "themes": [
-        "icon",
-        "pixel fable — free animated icons"
-      ],
-      "useCases": [
-        "inventory UI",
-        "loot",
-        "pickup feedback"
-      ],
-      "tags": [
-        "2d",
-        "animated",
-        "art",
-        "icon",
-        "pixel fable — free animated icons",
-        "static"
-      ],
-      "searchText": "pf icon heart2 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-heart2.gif pixel fable — free animated icons icon pf icon heart2 is a static 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art static"
-    },
-    {
-      "packFolder": "ivelsoul-pf-freeicons",
-      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-hpotion.gif",
-      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-hpotion.gif",
-      "label": "Pf Icon Hpotion",
-      "kind": "icon",
-      "animated": false,
-      "inspection": {
-        "width": 24,
-        "height": 24,
-        "bgKind": "transparent",
-        "alphaCoverage": 0.3072916666666667,
-        "transparentCoverage": 0.6927083333333334,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Pf Icon Hpotion is a static 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
-      "category": "icon",
-      "themes": [
-        "icon",
-        "pixel fable — free animated icons"
-      ],
-      "useCases": [
-        "inventory UI",
-        "loot",
-        "pickup feedback"
-      ],
-      "tags": [
-        "2d",
-        "animated",
-        "art",
-        "icon",
-        "pixel fable — free animated icons",
-        "static"
-      ],
-      "searchText": "pf icon hpotion 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-hpotion.gif pixel fable — free animated icons icon pf icon hpotion is a static 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art static"
-    },
-    {
-      "packFolder": "ivelsoul-pf-freeicons",
-      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-magicstar.gif",
-      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-magicstar.gif",
-      "label": "Pf Icon Magicstar",
-      "kind": "icon",
-      "animated": false,
-      "inspection": {
-        "width": 24,
-        "height": 24,
-        "bgKind": "transparent",
-        "alphaCoverage": 0.265625,
-        "transparentCoverage": 0.734375,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Pf Icon Magicstar is a static 2D icon sample from Pixel Fable — Free Animated Icons. Useful for combat VFX, spell effects, hit feedback.",
-      "category": "icon",
-      "themes": [
-        "icon",
-        "pixel fable — free animated icons"
-      ],
-      "useCases": [
-        "combat VFX",
-        "spell effects",
-        "hit feedback"
-      ],
-      "tags": [
-        "2d",
-        "animated",
-        "art",
-        "icon",
-        "pixel fable — free animated icons",
-        "static"
-      ],
-      "searchText": "pf icon magicstar 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-magicstar.gif pixel fable — free animated icons icon pf icon magicstar is a static 2d icon sample from pixel fable — free animated icons. useful for combat vfx, spell effects, hit feedback. pixel fable — free animated icons combat vfx spell effects hit feedback 2d animated art static"
-    },
-    {
-      "packFolder": "ivelsoul-pf-freeicons",
-      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-meat.gif",
-      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-meat.gif",
-      "label": "Pf Icon Meat",
-      "kind": "icon",
-      "animated": false,
-      "inspection": {
-        "width": 24,
-        "height": 24,
-        "bgKind": "transparent",
-        "alphaCoverage": 0.2864583333333333,
-        "transparentCoverage": 0.7135416666666666,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Pf Icon Meat is a static 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
-      "category": "icon",
-      "themes": [
-        "icon",
-        "pixel fable — free animated icons"
-      ],
-      "useCases": [
-        "inventory UI",
-        "loot",
-        "pickup feedback"
-      ],
-      "tags": [
-        "2d",
-        "animated",
-        "art",
-        "icon",
-        "pixel fable — free animated icons",
-        "static"
-      ],
-      "searchText": "pf icon meat 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-meat.gif pixel fable — free animated icons icon pf icon meat is a static 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art static"
-    },
-    {
-      "packFolder": "ivelsoul-pf-freeicons",
-      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-moon.gif",
-      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-moon.gif",
-      "label": "Pf Icon Moon",
-      "kind": "icon",
-      "animated": false,
-      "inspection": {
-        "width": 24,
-        "height": 24,
-        "bgKind": "transparent",
-        "alphaCoverage": 0.3611111111111111,
-        "transparentCoverage": 0.6388888888888888,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Pf Icon Moon is a static 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
-      "category": "icon",
-      "themes": [
-        "icon",
-        "pixel fable — free animated icons"
-      ],
-      "useCases": [
-        "inventory UI",
-        "loot",
-        "pickup feedback"
-      ],
-      "tags": [
-        "2d",
-        "animated",
-        "art",
-        "icon",
-        "pixel fable — free animated icons",
-        "static"
-      ],
-      "searchText": "pf icon moon 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-moon.gif pixel fable — free animated icons icon pf icon moon is a static 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art static"
-    },
-    {
-      "packFolder": "ivelsoul-pf-freeicons",
-      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-mpotion.gif",
-      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-mpotion.gif",
-      "label": "Pf Icon Mpotion",
-      "kind": "icon",
-      "animated": false,
-      "inspection": {
-        "width": 24,
-        "height": 24,
-        "bgKind": "transparent",
-        "alphaCoverage": 0.2743055555555556,
-        "transparentCoverage": 0.7256944444444444,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Pf Icon Mpotion is a static 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
-      "category": "icon",
-      "themes": [
-        "icon",
-        "pixel fable — free animated icons"
-      ],
-      "useCases": [
-        "inventory UI",
-        "loot",
-        "pickup feedback"
-      ],
-      "tags": [
-        "2d",
-        "animated",
-        "art",
-        "icon",
-        "pixel fable — free animated icons",
-        "static"
-      ],
-      "searchText": "pf icon mpotion 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-mpotion.gif pixel fable — free animated icons icon pf icon mpotion is a static 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art static"
-    },
-    {
-      "packFolder": "ivelsoul-pf-freeicons",
-      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-poison.gif",
-      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-poison.gif",
-      "label": "Pf Icon Poison",
-      "kind": "icon",
-      "animated": false,
-      "inspection": {
-        "width": 24,
-        "height": 24,
-        "bgKind": "transparent",
-        "alphaCoverage": 0.22569444444444445,
-        "transparentCoverage": 0.7743055555555556,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Pf Icon Poison is a static 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
-      "category": "icon",
-      "themes": [
-        "icon",
-        "pixel fable — free animated icons"
-      ],
-      "useCases": [
-        "inventory UI",
-        "loot",
-        "pickup feedback"
-      ],
-      "tags": [
-        "2d",
-        "animated",
-        "art",
-        "icon",
-        "pixel fable — free animated icons",
-        "static"
-      ],
-      "searchText": "pf icon poison 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-poison.gif pixel fable — free animated icons icon pf icon poison is a static 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art static"
-    },
-    {
-      "packFolder": "ivelsoul-pf-freeicons",
-      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-scull.gif",
-      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-scull.gif",
-      "label": "Pf Icon Scull",
-      "kind": "icon",
-      "animated": false,
-      "inspection": {
-        "width": 24,
-        "height": 24,
-        "bgKind": "transparent",
-        "alphaCoverage": 0.3177083333333333,
-        "transparentCoverage": 0.6822916666666666,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Pf Icon Scull is a static 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
-      "category": "icon",
-      "themes": [
-        "icon",
-        "pixel fable — free animated icons"
-      ],
-      "useCases": [
-        "inventory UI",
-        "loot",
-        "pickup feedback"
-      ],
-      "tags": [
-        "2d",
-        "animated",
-        "art",
-        "icon",
-        "pixel fable — free animated icons",
-        "static"
-      ],
-      "searchText": "pf icon scull 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-scull.gif pixel fable — free animated icons icon pf icon scull is a static 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art static"
-    },
-    {
-      "packFolder": "ivelsoul-pf-freeicons",
-      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-shield1.gif",
-      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-shield1.gif",
-      "label": "Pf Icon Shield1",
-      "kind": "icon",
-      "animated": false,
-      "inspection": {
-        "width": 24,
-        "height": 24,
-        "bgKind": "transparent",
-        "alphaCoverage": 0.3159722222222222,
-        "transparentCoverage": 0.6840277777777778,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Pf Icon Shield1 is a static 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
-      "category": "icon",
-      "themes": [
-        "icon",
-        "pixel fable — free animated icons"
-      ],
-      "useCases": [
-        "inventory UI",
-        "loot",
-        "pickup feedback"
-      ],
-      "tags": [
-        "2d",
-        "animated",
-        "art",
-        "icon",
-        "pixel fable — free animated icons",
-        "static"
-      ],
-      "searchText": "pf icon shield1 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-shield1.gif pixel fable — free animated icons icon pf icon shield1 is a static 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art static"
-    },
-    {
-      "packFolder": "ivelsoul-pf-freeicons",
-      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-shield2.gif",
-      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-shield2.gif",
-      "label": "Pf Icon Shield2",
-      "kind": "icon",
-      "animated": false,
-      "inspection": {
-        "width": 24,
-        "height": 24,
-        "bgKind": "transparent",
-        "alphaCoverage": 0.3038194444444444,
-        "transparentCoverage": 0.6961805555555556,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Pf Icon Shield2 is a static 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
-      "category": "icon",
-      "themes": [
-        "icon",
-        "pixel fable — free animated icons"
-      ],
-      "useCases": [
-        "inventory UI",
-        "loot",
-        "pickup feedback"
-      ],
-      "tags": [
-        "2d",
-        "animated",
-        "art",
-        "icon",
-        "pixel fable — free animated icons",
-        "static"
-      ],
-      "searchText": "pf icon shield2 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-shield2.gif pixel fable — free animated icons icon pf icon shield2 is a static 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art static"
-    },
-    {
-      "packFolder": "ivelsoul-pf-freeicons",
-      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-speed.gif",
-      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-speed.gif",
-      "label": "Pf Icon Speed",
-      "kind": "icon",
-      "animated": false,
-      "inspection": {
-        "width": 24,
-        "height": 24,
-        "bgKind": "transparent",
-        "alphaCoverage": 0.2829861111111111,
-        "transparentCoverage": 0.7170138888888888,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Pf Icon Speed is a static 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
-      "category": "icon",
-      "themes": [
-        "icon",
-        "pixel fable — free animated icons"
-      ],
-      "useCases": [
-        "inventory UI",
-        "loot",
-        "pickup feedback"
-      ],
-      "tags": [
-        "2d",
-        "animated",
-        "art",
-        "icon",
-        "pixel fable — free animated icons",
-        "static"
-      ],
-      "searchText": "pf icon speed 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-speed.gif pixel fable — free animated icons icon pf icon speed is a static 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art static"
-    },
-    {
-      "packFolder": "ivelsoul-pf-freeicons",
-      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-stone.gif",
-      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-stone.gif",
-      "label": "Pf Icon Stone",
-      "kind": "icon",
-      "animated": false,
-      "inspection": {
-        "width": 24,
-        "height": 24,
-        "bgKind": "transparent",
-        "alphaCoverage": 0.24305555555555555,
-        "transparentCoverage": 0.7569444444444444,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Pf Icon Stone is a static 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
-      "category": "icon",
-      "themes": [
-        "icon",
-        "pixel fable — free animated icons"
-      ],
-      "useCases": [
-        "inventory UI",
-        "loot",
-        "pickup feedback"
-      ],
-      "tags": [
-        "2d",
-        "animated",
-        "art",
-        "icon",
-        "pixel fable — free animated icons",
-        "static"
-      ],
-      "searchText": "pf icon stone 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-stone.gif pixel fable — free animated icons icon pf icon stone is a static 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art static"
-    },
-    {
-      "packFolder": "ivelsoul-pf-freeicons",
-      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-sun.gif",
-      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-sun.gif",
-      "label": "Pf Icon Sun",
-      "kind": "icon",
-      "animated": false,
-      "inspection": {
-        "width": 24,
-        "height": 24,
-        "bgKind": "transparent",
-        "alphaCoverage": 0.3333333333333333,
-        "transparentCoverage": 0.6666666666666666,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Pf Icon Sun is a static 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
-      "category": "icon",
-      "themes": [
-        "icon",
-        "pixel fable — free animated icons"
-      ],
-      "useCases": [
-        "inventory UI",
-        "loot",
-        "pickup feedback"
-      ],
-      "tags": [
-        "2d",
-        "animated",
-        "art",
-        "icon",
-        "pixel fable — free animated icons",
-        "static"
-      ],
-      "searchText": "pf icon sun 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-sun.gif pixel fable — free animated icons icon pf icon sun is a static 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art static"
-    },
-    {
-      "packFolder": "ivelsoul-pf-freeicons",
-      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-sword.gif",
-      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-sword.gif",
-      "label": "Pf Icon Sword",
-      "kind": "icon",
-      "animated": false,
-      "inspection": {
-        "width": 24,
-        "height": 24,
-        "bgKind": "transparent",
-        "alphaCoverage": 0.2013888888888889,
-        "transparentCoverage": 0.7986111111111112,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Pf Icon Sword is a static 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
-      "category": "icon",
-      "themes": [
-        "icon",
-        "pixel fable — free animated icons"
-      ],
-      "useCases": [
-        "inventory UI",
-        "loot",
-        "pickup feedback"
-      ],
-      "tags": [
-        "2d",
-        "animated",
-        "art",
-        "icon",
-        "pixel fable — free animated icons",
-        "static"
-      ],
-      "searchText": "pf icon sword 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-sword.gif pixel fable — free animated icons icon pf icon sword is a static 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art static"
-    },
-    {
-      "packFolder": "ivelsoul-pf-freeicons",
-      "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-wood.gif",
-      "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-wood.gif",
-      "label": "Pf Icon Wood",
-      "kind": "icon",
-      "animated": false,
-      "inspection": {
-        "width": 24,
-        "height": 24,
-        "bgKind": "transparent",
-        "alphaCoverage": 0.2743055555555556,
-        "transparentCoverage": 0.7256944444444444,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Pf Icon Wood is a static 2D icon sample from Pixel Fable — Free Animated Icons. Useful for inventory UI, loot, pickup feedback.",
-      "category": "icon",
-      "themes": [
-        "icon",
-        "pixel fable — free animated icons"
-      ],
-      "useCases": [
-        "inventory UI",
-        "loot",
-        "pickup feedback"
-      ],
-      "tags": [
-        "2d",
-        "animated",
-        "art",
-        "icon",
-        "pixel fable — free animated icons",
-        "static"
-      ],
-      "searchText": "pf icon wood 2d/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-wood.gif pixel fable — free animated icons icon pf icon wood is a static 2d icon sample from pixel fable — free animated icons. useful for inventory ui, loot, pickup feedback. pixel fable — free animated icons inventory ui loot pickup feedback 2d animated art static"
     },
     {
       "packFolder": "ivelsoul-pf-freeicons",

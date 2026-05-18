@@ -6,6 +6,7 @@ import {
   inferArtKind,
   isAnimatedArt,
   isLikelyPromoArt,
+  normalizeAudioDisplayName,
   selectDisplayArtSamples,
 } from "../src/lib/media-inference";
 import { flushInspectionCache, inspectArtImageCached } from "./inspect-art-image";
@@ -155,6 +156,10 @@ function labelFromAssetPath(path: string): string {
   );
 }
 
+function labelFromAudioPath(path: string): string {
+  return normalizeAudioDisplayName(labelFromAssetPath(path));
+}
+
 function musicPackId(path: string): string {
   const parts = path.split("/");
   if (parts.length >= 4 && !AUDIO_EXT_PATTERN.test(parts[2])) return `${parts[0]}/${parts[1]}/${parts[2]}`;
@@ -175,7 +180,7 @@ function musicBaseTitle(path: string): string {
     .replace(/\s*\((?:loop|full|preview)\)\s*$/i, "")
     .replace(/\s+/g, " ")
     .trim();
-  return humanize(raw);
+  return normalizeAudioDisplayName(humanize(raw));
 }
 
 function isMusicLoop(path: string): boolean {
@@ -385,7 +390,7 @@ async function main() {
           collectionId,
           path: rel,
           src: `/${rel.split("/").map(encodeURIComponent).join("/")}`,
-          label: labelFromAssetPath(rel),
+          label: labelFromAudioPath(rel),
           kind: inferSoundKind(rel),
         });
       }

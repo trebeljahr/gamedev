@@ -32,25 +32,25 @@
   "samples": [
     {
       "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprbatilisk1.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprbatilisk1.gif",
-      "label": "Sprbatilisk1",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprbatilisk1__strip-25x25.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprbatilisk1__strip-25x25.sheet.png",
+      "label": "Sprbatilisk1 Strip 25x25.Sheet",
       "kind": "character",
-      "animated": false,
+      "animated": true,
       "inspection": {
-        "width": 25,
+        "width": 100,
         "height": 25,
         "bgKind": "transparent",
-        "alphaCoverage": 0.2432,
-        "transparentCoverage": 0.7568,
+        "alphaCoverage": 0.2464,
+        "transparentCoverage": 0.7536,
         "contentRowRuns": 1,
-        "contentColRuns": 1,
+        "contentColRuns": 4,
         "promoBackground": false,
-        "spriteSheetGrid": false,
+        "spriteSheetGrid": true,
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Sprbatilisk1 is a static 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Sprbatilisk1 Strip 25x25.Sheet is an animated 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -63,35 +63,35 @@
       ],
       "tags": [
         "2d",
+        "animated",
         "art",
         "character",
         "fantasy",
-        "medieval",
-        "static"
+        "medieval"
       ],
-      "searchText": "sprbatilisk1 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprbatilisk1.gif debts in the depths - free pixel art dungeon asset pack character sprbatilisk1 is a static 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art medieval static"
+      "searchText": "sprbatilisk1 strip 25x25.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprbatilisk1__strip-25x25.sheet.png debts in the depths - free pixel art dungeon asset pack character sprbatilisk1 strip 25x25.sheet is an animated 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprbatilisk2.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprbatilisk2.gif",
-      "label": "Sprbatilisk2",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprbatilisk2__strip-25x25.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprbatilisk2__strip-25x25.sheet.png",
+      "label": "Sprbatilisk2 Strip 25x25.Sheet",
       "kind": "character",
-      "animated": false,
+      "animated": true,
       "inspection": {
-        "width": 25,
+        "width": 100,
         "height": 25,
         "bgKind": "transparent",
-        "alphaCoverage": 0.3808,
-        "transparentCoverage": 0.6192,
+        "alphaCoverage": 0.3784,
+        "transparentCoverage": 0.6216,
         "contentRowRuns": 1,
-        "contentColRuns": 1,
+        "contentColRuns": 4,
         "promoBackground": false,
-        "spriteSheetGrid": false,
+        "spriteSheetGrid": true,
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Sprbatilisk2 is a static 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Sprbatilisk2 Strip 25x25.Sheet is an animated 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -104,35 +104,35 @@
       ],
       "tags": [
         "2d",
+        "animated",
         "art",
         "character",
         "fantasy",
-        "medieval",
-        "static"
+        "medieval"
       ],
-      "searchText": "sprbatilisk2 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprbatilisk2.gif debts in the depths - free pixel art dungeon asset pack character sprbatilisk2 is a static 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art medieval static"
+      "searchText": "sprbatilisk2 strip 25x25.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprbatilisk2__strip-25x25.sheet.png debts in the depths - free pixel art dungeon asset pack character sprbatilisk2 strip 25x25.sheet is an animated 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprbatilisk3.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprbatilisk3.gif",
-      "label": "Sprbatilisk3",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprbatilisk3__strip-25x25.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprbatilisk3__strip-25x25.sheet.png",
+      "label": "Sprbatilisk3 Strip 25x25.Sheet",
       "kind": "character",
-      "animated": false,
+      "animated": true,
       "inspection": {
-        "width": 25,
+        "width": 100,
         "height": 25,
         "bgKind": "transparent",
-        "alphaCoverage": 0.4,
-        "transparentCoverage": 0.6,
+        "alphaCoverage": 0.3996,
+        "transparentCoverage": 0.6004,
         "contentRowRuns": 1,
-        "contentColRuns": 1,
+        "contentColRuns": 4,
         "promoBackground": false,
-        "spriteSheetGrid": false,
+        "spriteSheetGrid": true,
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Sprbatilisk3 is a static 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Sprbatilisk3 Strip 25x25.Sheet is an animated 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -145,35 +145,35 @@
       ],
       "tags": [
         "2d",
+        "animated",
         "art",
         "character",
         "fantasy",
-        "medieval",
-        "static"
+        "medieval"
       ],
-      "searchText": "sprbatilisk3 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprbatilisk3.gif debts in the depths - free pixel art dungeon asset pack character sprbatilisk3 is a static 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art medieval static"
+      "searchText": "sprbatilisk3 strip 25x25.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprbatilisk3__strip-25x25.sheet.png debts in the depths - free pixel art dungeon asset pack character sprbatilisk3 strip 25x25.sheet is an animated 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprbogslium1.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprbogslium1.gif",
-      "label": "Sprbogslium1",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprbogslium1__strip-39x26.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprbogslium1__strip-39x26.sheet.png",
+      "label": "Sprbogslium1 Strip 39x26.Sheet",
       "kind": "character",
-      "animated": false,
+      "animated": true,
       "inspection": {
-        "width": 39,
+        "width": 156,
         "height": 26,
         "bgKind": "transparent",
-        "alphaCoverage": 0.16863905325443787,
-        "transparentCoverage": 0.8313609467455622,
+        "alphaCoverage": 0.16370808678500987,
+        "transparentCoverage": 0.8362919132149902,
         "contentRowRuns": 1,
-        "contentColRuns": 1,
+        "contentColRuns": 4,
         "promoBackground": false,
-        "spriteSheetGrid": false,
+        "spriteSheetGrid": true,
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Sprbogslium1 is a static 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Sprbogslium1 Strip 39x26.Sheet is an animated 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -186,35 +186,35 @@
       ],
       "tags": [
         "2d",
+        "animated",
         "art",
         "character",
         "fantasy",
-        "medieval",
-        "static"
+        "medieval"
       ],
-      "searchText": "sprbogslium1 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprbogslium1.gif debts in the depths - free pixel art dungeon asset pack character sprbogslium1 is a static 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art medieval static"
+      "searchText": "sprbogslium1 strip 39x26.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprbogslium1__strip-39x26.sheet.png debts in the depths - free pixel art dungeon asset pack character sprbogslium1 strip 39x26.sheet is an animated 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprbogslium2.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprbogslium2.gif",
-      "label": "Sprbogslium2",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprbogslium2__strip-39x26.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprbogslium2__strip-39x26.sheet.png",
+      "label": "Sprbogslium2 Strip 39x26.Sheet",
       "kind": "character",
-      "animated": false,
+      "animated": true,
       "inspection": {
-        "width": 39,
+        "width": 156,
         "height": 26,
         "bgKind": "transparent",
-        "alphaCoverage": 0.27317554240631164,
-        "transparentCoverage": 0.7268244575936884,
+        "alphaCoverage": 0.2571499013806706,
+        "transparentCoverage": 0.7428500986193294,
         "contentRowRuns": 1,
-        "contentColRuns": 1,
+        "contentColRuns": 4,
         "promoBackground": false,
-        "spriteSheetGrid": false,
+        "spriteSheetGrid": true,
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Sprbogslium2 is a static 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Sprbogslium2 Strip 39x26.Sheet is an animated 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -227,35 +227,35 @@
       ],
       "tags": [
         "2d",
+        "animated",
         "art",
         "character",
         "fantasy",
-        "medieval",
-        "static"
+        "medieval"
       ],
-      "searchText": "sprbogslium2 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprbogslium2.gif debts in the depths - free pixel art dungeon asset pack character sprbogslium2 is a static 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art medieval static"
+      "searchText": "sprbogslium2 strip 39x26.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprbogslium2__strip-39x26.sheet.png debts in the depths - free pixel art dungeon asset pack character sprbogslium2 strip 39x26.sheet is an animated 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprbogslium3.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprbogslium3.gif",
-      "label": "Sprbogslium3",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprbogslium3__strip-39x26.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprbogslium3__strip-39x26.sheet.png",
+      "label": "Sprbogslium3 Strip 39x26.Sheet",
       "kind": "character",
-      "animated": false,
+      "animated": true,
       "inspection": {
-        "width": 39,
+        "width": 156,
         "height": 26,
         "bgKind": "transparent",
-        "alphaCoverage": 0.3510848126232742,
-        "transparentCoverage": 0.6489151873767258,
+        "alphaCoverage": 0.32741617357001973,
+        "transparentCoverage": 0.6725838264299803,
         "contentRowRuns": 1,
-        "contentColRuns": 1,
+        "contentColRuns": 4,
         "promoBackground": false,
-        "spriteSheetGrid": false,
+        "spriteSheetGrid": true,
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Sprbogslium3 is a static 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Sprbogslium3 Strip 39x26.Sheet is an animated 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -268,35 +268,35 @@
       ],
       "tags": [
         "2d",
+        "animated",
         "art",
         "character",
         "fantasy",
-        "medieval",
-        "static"
+        "medieval"
       ],
-      "searchText": "sprbogslium3 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprbogslium3.gif debts in the depths - free pixel art dungeon asset pack character sprbogslium3 is a static 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art medieval static"
+      "searchText": "sprbogslium3 strip 39x26.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprbogslium3__strip-39x26.sheet.png debts in the depths - free pixel art dungeon asset pack character sprbogslium3 strip 39x26.sheet is an animated 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprdragon.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprdragon.gif",
-      "label": "Sprdragon",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprdragon__strip-70x73.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprdragon__strip-70x73.sheet.png",
+      "label": "Sprdragon Strip 70x73.Sheet",
       "kind": "character",
-      "animated": false,
+      "animated": true,
       "inspection": {
-        "width": 70,
+        "width": 420,
         "height": 73,
         "bgKind": "transparent",
-        "alphaCoverage": 0.43796477495107633,
-        "transparentCoverage": 0.5620352250489237,
+        "alphaCoverage": 0.41273082386363635,
+        "transparentCoverage": 0.5872691761363636,
         "contentRowRuns": 1,
-        "contentColRuns": 1,
+        "contentColRuns": 6,
         "promoBackground": false,
-        "spriteSheetGrid": false,
+        "spriteSheetGrid": true,
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Sprdragon is a static 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Sprdragon Strip 70x73.Sheet is an animated 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -309,35 +309,35 @@
       ],
       "tags": [
         "2d",
+        "animated",
         "art",
         "character",
         "fantasy",
-        "medieval",
-        "static"
+        "medieval"
       ],
-      "searchText": "sprdragon 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprdragon.gif debts in the depths - free pixel art dungeon asset pack character sprdragon is a static 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art medieval static"
+      "searchText": "sprdragon strip 70x73.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprdragon__strip-70x73.sheet.png debts in the depths - free pixel art dungeon asset pack character sprdragon strip 70x73.sheet is an animated 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprghost1.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprghost1.gif",
-      "label": "Sprghost1",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprghost1__strip-19x28.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprghost1__strip-19x28.sheet.png",
+      "label": "Sprghost1 Strip 19x28.Sheet",
       "kind": "character",
-      "animated": false,
+      "animated": true,
       "inspection": {
-        "width": 19,
+        "width": 76,
         "height": 28,
         "bgKind": "transparent",
         "alphaCoverage": 0.18045112781954886,
         "transparentCoverage": 0.8195488721804511,
         "contentRowRuns": 1,
-        "contentColRuns": 1,
+        "contentColRuns": 4,
         "promoBackground": false,
-        "spriteSheetGrid": false,
+        "spriteSheetGrid": true,
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Sprghost1 is a static 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Sprghost1 Strip 19x28.Sheet is an animated 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -350,35 +350,35 @@
       ],
       "tags": [
         "2d",
+        "animated",
         "art",
         "character",
         "fantasy",
-        "medieval",
-        "static"
+        "medieval"
       ],
-      "searchText": "sprghost1 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprghost1.gif debts in the depths - free pixel art dungeon asset pack character sprghost1 is a static 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art medieval static"
+      "searchText": "sprghost1 strip 19x28.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprghost1__strip-19x28.sheet.png debts in the depths - free pixel art dungeon asset pack character sprghost1 strip 19x28.sheet is an animated 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprghost2.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprghost2.gif",
-      "label": "Sprghost2",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprghost2__strip-19x28.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprghost2__strip-19x28.sheet.png",
+      "label": "Sprghost2 Strip 19x28.Sheet",
       "kind": "character",
-      "animated": false,
+      "animated": true,
       "inspection": {
-        "width": 19,
+        "width": 76,
         "height": 28,
         "bgKind": "transparent",
-        "alphaCoverage": 0.2744360902255639,
-        "transparentCoverage": 0.7255639097744361,
+        "alphaCoverage": 0.2758458646616541,
+        "transparentCoverage": 0.7241541353383458,
         "contentRowRuns": 1,
-        "contentColRuns": 1,
+        "contentColRuns": 4,
         "promoBackground": false,
-        "spriteSheetGrid": false,
+        "spriteSheetGrid": true,
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Sprghost2 is a static 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Sprghost2 Strip 19x28.Sheet is an animated 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -391,35 +391,35 @@
       ],
       "tags": [
         "2d",
+        "animated",
         "art",
         "character",
         "fantasy",
-        "medieval",
-        "static"
+        "medieval"
       ],
-      "searchText": "sprghost2 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprghost2.gif debts in the depths - free pixel art dungeon asset pack character sprghost2 is a static 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art medieval static"
+      "searchText": "sprghost2 strip 19x28.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprghost2__strip-19x28.sheet.png debts in the depths - free pixel art dungeon asset pack character sprghost2 strip 19x28.sheet is an animated 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprghost3.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprghost3.gif",
-      "label": "Sprghost3",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprghost3__strip-19x28.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprghost3__strip-19x28.sheet.png",
+      "label": "Sprghost3 Strip 19x28.Sheet",
       "kind": "character",
-      "animated": false,
+      "animated": true,
       "inspection": {
-        "width": 19,
+        "width": 76,
         "height": 28,
         "bgKind": "transparent",
-        "alphaCoverage": 0.2744360902255639,
-        "transparentCoverage": 0.7255639097744361,
+        "alphaCoverage": 0.2758458646616541,
+        "transparentCoverage": 0.7241541353383458,
         "contentRowRuns": 1,
-        "contentColRuns": 1,
+        "contentColRuns": 4,
         "promoBackground": false,
-        "spriteSheetGrid": false,
+        "spriteSheetGrid": true,
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Sprghost3 is a static 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Sprghost3 Strip 19x28.Sheet is an animated 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -432,35 +432,35 @@
       ],
       "tags": [
         "2d",
+        "animated",
         "art",
         "character",
         "fantasy",
-        "medieval",
-        "static"
+        "medieval"
       ],
-      "searchText": "sprghost3 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprghost3.gif debts in the depths - free pixel art dungeon asset pack character sprghost3 is a static 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art medieval static"
+      "searchText": "sprghost3 strip 19x28.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprghost3__strip-19x28.sheet.png debts in the depths - free pixel art dungeon asset pack character sprghost3 strip 19x28.sheet is an animated 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprgoblin1.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprgoblin1.gif",
-      "label": "Sprgoblin1",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprgoblin1__strip-25x25.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprgoblin1__strip-25x25.sheet.png",
+      "label": "Sprgoblin1 Strip 25x25.Sheet",
       "kind": "character",
-      "animated": false,
+      "animated": true,
       "inspection": {
-        "width": 25,
+        "width": 100,
         "height": 25,
         "bgKind": "transparent",
-        "alphaCoverage": 0.1872,
-        "transparentCoverage": 0.8128,
+        "alphaCoverage": 0.1756,
+        "transparentCoverage": 0.8244,
         "contentRowRuns": 1,
-        "contentColRuns": 1,
+        "contentColRuns": 4,
         "promoBackground": false,
-        "spriteSheetGrid": false,
+        "spriteSheetGrid": true,
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Sprgoblin1 is a static 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Sprgoblin1 Strip 25x25.Sheet is an animated 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -473,35 +473,35 @@
       ],
       "tags": [
         "2d",
+        "animated",
         "art",
         "character",
         "fantasy",
-        "medieval",
-        "static"
+        "medieval"
       ],
-      "searchText": "sprgoblin1 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprgoblin1.gif debts in the depths - free pixel art dungeon asset pack character sprgoblin1 is a static 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art medieval static"
+      "searchText": "sprgoblin1 strip 25x25.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprgoblin1__strip-25x25.sheet.png debts in the depths - free pixel art dungeon asset pack character sprgoblin1 strip 25x25.sheet is an animated 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprgoblin2.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprgoblin2.gif",
-      "label": "Sprgoblin2",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprgoblin2__strip-25x25.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprgoblin2__strip-25x25.sheet.png",
+      "label": "Sprgoblin2 Strip 25x25.Sheet",
       "kind": "character",
-      "animated": false,
+      "animated": true,
       "inspection": {
-        "width": 25,
+        "width": 100,
         "height": 25,
         "bgKind": "transparent",
-        "alphaCoverage": 0.2,
-        "transparentCoverage": 0.8,
+        "alphaCoverage": 0.1884,
+        "transparentCoverage": 0.8116,
         "contentRowRuns": 1,
-        "contentColRuns": 1,
+        "contentColRuns": 4,
         "promoBackground": false,
-        "spriteSheetGrid": false,
+        "spriteSheetGrid": true,
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Sprgoblin2 is a static 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Sprgoblin2 Strip 25x25.Sheet is an animated 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -514,35 +514,35 @@
       ],
       "tags": [
         "2d",
+        "animated",
         "art",
         "character",
         "fantasy",
-        "medieval",
-        "static"
+        "medieval"
       ],
-      "searchText": "sprgoblin2 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprgoblin2.gif debts in the depths - free pixel art dungeon asset pack character sprgoblin2 is a static 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art medieval static"
+      "searchText": "sprgoblin2 strip 25x25.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprgoblin2__strip-25x25.sheet.png debts in the depths - free pixel art dungeon asset pack character sprgoblin2 strip 25x25.sheet is an animated 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprgoblin3.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprgoblin3.gif",
-      "label": "Sprgoblin3",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprgoblin3__strip-25x25.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprgoblin3__strip-25x25.sheet.png",
+      "label": "Sprgoblin3 Strip 25x25.Sheet",
       "kind": "character",
-      "animated": false,
+      "animated": true,
       "inspection": {
-        "width": 25,
+        "width": 100,
         "height": 25,
         "bgKind": "transparent",
-        "alphaCoverage": 0.2032,
-        "transparentCoverage": 0.7968,
+        "alphaCoverage": 0.1916,
+        "transparentCoverage": 0.8084,
         "contentRowRuns": 1,
-        "contentColRuns": 1,
+        "contentColRuns": 4,
         "promoBackground": false,
-        "spriteSheetGrid": false,
+        "spriteSheetGrid": true,
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Sprgoblin3 is a static 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Sprgoblin3 Strip 25x25.Sheet is an animated 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -555,35 +555,35 @@
       ],
       "tags": [
         "2d",
+        "animated",
         "art",
         "character",
         "fantasy",
-        "medieval",
-        "static"
+        "medieval"
       ],
-      "searchText": "sprgoblin3 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprgoblin3.gif debts in the depths - free pixel art dungeon asset pack character sprgoblin3 is a static 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art medieval static"
+      "searchText": "sprgoblin3 strip 25x25.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprgoblin3__strip-25x25.sheet.png debts in the depths - free pixel art dungeon asset pack character sprgoblin3 strip 25x25.sheet is an animated 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprlizardmonk1.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprlizardmonk1.gif",
-      "label": "Sprlizardmonk1",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprlizardmonk1__strip-21x20.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprlizardmonk1__strip-21x20.sheet.png",
+      "label": "Sprlizardmonk1 Strip 21x20.Sheet",
       "kind": "character",
-      "animated": false,
+      "animated": true,
       "inspection": {
-        "width": 21,
+        "width": 84,
         "height": 20,
         "bgKind": "transparent",
-        "alphaCoverage": 0.2976190476190476,
-        "transparentCoverage": 0.7023809523809523,
+        "alphaCoverage": 0.30952380952380953,
+        "transparentCoverage": 0.6904761904761905,
         "contentRowRuns": 1,
-        "contentColRuns": 1,
+        "contentColRuns": 4,
         "promoBackground": false,
-        "spriteSheetGrid": false,
+        "spriteSheetGrid": true,
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Sprlizardmonk1 is a static 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Sprlizardmonk1 Strip 21x20.Sheet is an animated 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -596,35 +596,35 @@
       ],
       "tags": [
         "2d",
+        "animated",
         "art",
         "character",
         "fantasy",
-        "medieval",
-        "static"
+        "medieval"
       ],
-      "searchText": "sprlizardmonk1 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprlizardmonk1.gif debts in the depths - free pixel art dungeon asset pack character sprlizardmonk1 is a static 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art medieval static"
+      "searchText": "sprlizardmonk1 strip 21x20.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprlizardmonk1__strip-21x20.sheet.png debts in the depths - free pixel art dungeon asset pack character sprlizardmonk1 strip 21x20.sheet is an animated 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprlizardmonk2.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprlizardmonk2.gif",
-      "label": "Sprlizardmonk2",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprlizardmonk2__strip-21x20.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprlizardmonk2__strip-21x20.sheet.png",
+      "label": "Sprlizardmonk2 Strip 21x20.Sheet",
       "kind": "character",
-      "animated": false,
+      "animated": true,
       "inspection": {
-        "width": 21,
+        "width": 84,
         "height": 20,
         "bgKind": "transparent",
-        "alphaCoverage": 0.2976190476190476,
-        "transparentCoverage": 0.7023809523809523,
+        "alphaCoverage": 0.30952380952380953,
+        "transparentCoverage": 0.6904761904761905,
         "contentRowRuns": 1,
-        "contentColRuns": 1,
+        "contentColRuns": 4,
         "promoBackground": false,
-        "spriteSheetGrid": false,
+        "spriteSheetGrid": true,
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Sprlizardmonk2 is a static 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Sprlizardmonk2 Strip 21x20.Sheet is an animated 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -637,35 +637,35 @@
       ],
       "tags": [
         "2d",
+        "animated",
         "art",
         "character",
         "fantasy",
-        "medieval",
-        "static"
+        "medieval"
       ],
-      "searchText": "sprlizardmonk2 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprlizardmonk2.gif debts in the depths - free pixel art dungeon asset pack character sprlizardmonk2 is a static 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art medieval static"
+      "searchText": "sprlizardmonk2 strip 21x20.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprlizardmonk2__strip-21x20.sheet.png debts in the depths - free pixel art dungeon asset pack character sprlizardmonk2 strip 21x20.sheet is an animated 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprlizardmonk3.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprlizardmonk3.gif",
-      "label": "Sprlizardmonk3",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprlizardmonk3__strip-21x20.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprlizardmonk3__strip-21x20.sheet.png",
+      "label": "Sprlizardmonk3 Strip 21x20.Sheet",
       "kind": "character",
-      "animated": false,
+      "animated": true,
       "inspection": {
-        "width": 21,
+        "width": 84,
         "height": 20,
         "bgKind": "transparent",
-        "alphaCoverage": 0.30714285714285716,
-        "transparentCoverage": 0.6928571428571428,
+        "alphaCoverage": 0.319047619047619,
+        "transparentCoverage": 0.680952380952381,
         "contentRowRuns": 1,
-        "contentColRuns": 1,
+        "contentColRuns": 4,
         "promoBackground": false,
-        "spriteSheetGrid": false,
+        "spriteSheetGrid": true,
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Sprlizardmonk3 is a static 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Sprlizardmonk3 Strip 21x20.Sheet is an animated 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -678,35 +678,35 @@
       ],
       "tags": [
         "2d",
+        "animated",
         "art",
         "character",
         "fantasy",
-        "medieval",
-        "static"
+        "medieval"
       ],
-      "searchText": "sprlizardmonk3 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprlizardmonk3.gif debts in the depths - free pixel art dungeon asset pack character sprlizardmonk3 is a static 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art medieval static"
+      "searchText": "sprlizardmonk3 strip 21x20.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprlizardmonk3__strip-21x20.sheet.png debts in the depths - free pixel art dungeon asset pack character sprlizardmonk3 strip 21x20.sheet is an animated 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprminotaur1.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprminotaur1.gif",
-      "label": "Sprminotaur1",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprminotaur1__strip-31x24.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprminotaur1__strip-31x24.sheet.png",
+      "label": "Sprminotaur1 Strip 31x24.Sheet",
       "kind": "character",
-      "animated": false,
+      "animated": true,
       "inspection": {
-        "width": 31,
+        "width": 124,
         "height": 24,
         "bgKind": "transparent",
-        "alphaCoverage": 0.2728494623655914,
-        "transparentCoverage": 0.7271505376344086,
+        "alphaCoverage": 0.260752688172043,
+        "transparentCoverage": 0.739247311827957,
         "contentRowRuns": 1,
-        "contentColRuns": 1,
+        "contentColRuns": 4,
         "promoBackground": false,
-        "spriteSheetGrid": false,
+        "spriteSheetGrid": true,
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Sprminotaur1 is a static 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Sprminotaur1 Strip 31x24.Sheet is an animated 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -719,35 +719,35 @@
       ],
       "tags": [
         "2d",
+        "animated",
         "art",
         "character",
         "fantasy",
-        "medieval",
-        "static"
+        "medieval"
       ],
-      "searchText": "sprminotaur1 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprminotaur1.gif debts in the depths - free pixel art dungeon asset pack character sprminotaur1 is a static 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art medieval static"
+      "searchText": "sprminotaur1 strip 31x24.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprminotaur1__strip-31x24.sheet.png debts in the depths - free pixel art dungeon asset pack character sprminotaur1 strip 31x24.sheet is an animated 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprminotaur2.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprminotaur2.gif",
-      "label": "Sprminotaur2",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprminotaur2__strip-31x24.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprminotaur2__strip-31x24.sheet.png",
+      "label": "Sprminotaur2 Strip 31x24.Sheet",
       "kind": "character",
-      "animated": false,
+      "animated": true,
       "inspection": {
-        "width": 31,
+        "width": 124,
         "height": 24,
         "bgKind": "transparent",
-        "alphaCoverage": 0.29838709677419356,
-        "transparentCoverage": 0.7016129032258065,
+        "alphaCoverage": 0.2872983870967742,
+        "transparentCoverage": 0.7127016129032258,
         "contentRowRuns": 1,
-        "contentColRuns": 1,
+        "contentColRuns": 4,
         "promoBackground": false,
-        "spriteSheetGrid": false,
+        "spriteSheetGrid": true,
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Sprminotaur2 is a static 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Sprminotaur2 Strip 31x24.Sheet is an animated 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -760,35 +760,35 @@
       ],
       "tags": [
         "2d",
+        "animated",
         "art",
         "character",
         "fantasy",
-        "medieval",
-        "static"
+        "medieval"
       ],
-      "searchText": "sprminotaur2 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprminotaur2.gif debts in the depths - free pixel art dungeon asset pack character sprminotaur2 is a static 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art medieval static"
+      "searchText": "sprminotaur2 strip 31x24.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprminotaur2__strip-31x24.sheet.png debts in the depths - free pixel art dungeon asset pack character sprminotaur2 strip 31x24.sheet is an animated 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprminotaur3.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprminotaur3.gif",
-      "label": "Sprminotaur3",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprminotaur3__strip-31x24.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprminotaur3__strip-31x24.sheet.png",
+      "label": "Sprminotaur3 Strip 31x24.Sheet",
       "kind": "character",
-      "animated": false,
+      "animated": true,
       "inspection": {
-        "width": 31,
+        "width": 124,
         "height": 24,
         "bgKind": "transparent",
-        "alphaCoverage": 0.29838709677419356,
-        "transparentCoverage": 0.7016129032258065,
+        "alphaCoverage": 0.28998655913978494,
+        "transparentCoverage": 0.710013440860215,
         "contentRowRuns": 1,
-        "contentColRuns": 1,
+        "contentColRuns": 4,
         "promoBackground": false,
-        "spriteSheetGrid": false,
+        "spriteSheetGrid": true,
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Sprminotaur3 is a static 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Sprminotaur3 Strip 31x24.Sheet is an animated 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -801,35 +801,35 @@
       ],
       "tags": [
         "2d",
+        "animated",
         "art",
         "character",
         "fantasy",
-        "medieval",
-        "static"
+        "medieval"
       ],
-      "searchText": "sprminotaur3 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprminotaur3.gif debts in the depths - free pixel art dungeon asset pack character sprminotaur3 is a static 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art medieval static"
+      "searchText": "sprminotaur3 strip 31x24.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprminotaur3__strip-31x24.sheet.png debts in the depths - free pixel art dungeon asset pack character sprminotaur3 strip 31x24.sheet is an animated 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprorcarcher1.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprorcarcher1.gif",
-      "label": "Sprorcarcher1",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprorcarcher1__strip-20x18.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprorcarcher1__strip-20x18.sheet.png",
+      "label": "Sprorcarcher1 Strip 20x18.Sheet",
       "kind": "character",
-      "animated": false,
+      "animated": true,
       "inspection": {
-        "width": 20,
+        "width": 80,
         "height": 18,
         "bgKind": "transparent",
-        "alphaCoverage": 0.3138888888888889,
-        "transparentCoverage": 0.6861111111111111,
+        "alphaCoverage": 0.325,
+        "transparentCoverage": 0.675,
         "contentRowRuns": 1,
-        "contentColRuns": 1,
+        "contentColRuns": 4,
         "promoBackground": false,
-        "spriteSheetGrid": false,
+        "spriteSheetGrid": true,
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Sprorcarcher1 is a static 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Sprorcarcher1 Strip 20x18.Sheet is an animated 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -842,35 +842,35 @@
       ],
       "tags": [
         "2d",
+        "animated",
         "art",
         "character",
         "fantasy",
-        "medieval",
-        "static"
+        "medieval"
       ],
-      "searchText": "sprorcarcher1 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprorcarcher1.gif debts in the depths - free pixel art dungeon asset pack character sprorcarcher1 is a static 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art medieval static"
+      "searchText": "sprorcarcher1 strip 20x18.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprorcarcher1__strip-20x18.sheet.png debts in the depths - free pixel art dungeon asset pack character sprorcarcher1 strip 20x18.sheet is an animated 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprorcarcher2.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprorcarcher2.gif",
-      "label": "Sprorcarcher2",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprorcarcher2__strip-20x18.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprorcarcher2__strip-20x18.sheet.png",
+      "label": "Sprorcarcher2 Strip 20x18.Sheet",
       "kind": "character",
-      "animated": false,
+      "animated": true,
       "inspection": {
-        "width": 20,
+        "width": 80,
         "height": 18,
         "bgKind": "transparent",
-        "alphaCoverage": 0.34444444444444444,
-        "transparentCoverage": 0.6555555555555556,
+        "alphaCoverage": 0.35625,
+        "transparentCoverage": 0.64375,
         "contentRowRuns": 1,
-        "contentColRuns": 1,
+        "contentColRuns": 4,
         "promoBackground": false,
-        "spriteSheetGrid": false,
+        "spriteSheetGrid": true,
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Sprorcarcher2 is a static 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Sprorcarcher2 Strip 20x18.Sheet is an animated 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -883,35 +883,35 @@
       ],
       "tags": [
         "2d",
+        "animated",
         "art",
         "character",
         "fantasy",
-        "medieval",
-        "static"
+        "medieval"
       ],
-      "searchText": "sprorcarcher2 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprorcarcher2.gif debts in the depths - free pixel art dungeon asset pack character sprorcarcher2 is a static 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art medieval static"
+      "searchText": "sprorcarcher2 strip 20x18.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprorcarcher2__strip-20x18.sheet.png debts in the depths - free pixel art dungeon asset pack character sprorcarcher2 strip 20x18.sheet is an animated 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprorcarcher3.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprorcarcher3.gif",
-      "label": "Sprorcarcher3",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprorcarcher3__strip-20x18.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprorcarcher3__strip-20x18.sheet.png",
+      "label": "Sprorcarcher3 Strip 20x18.Sheet",
       "kind": "character",
-      "animated": false,
+      "animated": true,
       "inspection": {
-        "width": 20,
+        "width": 80,
         "height": 18,
         "bgKind": "transparent",
-        "alphaCoverage": 0.3638888888888889,
-        "transparentCoverage": 0.6361111111111111,
+        "alphaCoverage": 0.37083333333333335,
+        "transparentCoverage": 0.6291666666666667,
         "contentRowRuns": 1,
-        "contentColRuns": 1,
+        "contentColRuns": 4,
         "promoBackground": false,
-        "spriteSheetGrid": false,
+        "spriteSheetGrid": true,
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Sprorcarcher3 is a static 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Sprorcarcher3 Strip 20x18.Sheet is an animated 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -924,35 +924,35 @@
       ],
       "tags": [
         "2d",
+        "animated",
         "art",
         "character",
         "fantasy",
-        "medieval",
-        "static"
+        "medieval"
       ],
-      "searchText": "sprorcarcher3 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprorcarcher3.gif debts in the depths - free pixel art dungeon asset pack character sprorcarcher3 is a static 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art medieval static"
+      "searchText": "sprorcarcher3 strip 20x18.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprorcarcher3__strip-20x18.sheet.png debts in the depths - free pixel art dungeon asset pack character sprorcarcher3 strip 20x18.sheet is an animated 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprskeleton1.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprskeleton1.gif",
-      "label": "Sprskeleton1",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprskeleton1__strip-19x20.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprskeleton1__strip-19x20.sheet.png",
+      "label": "Sprskeleton1 Strip 19x20.Sheet",
       "kind": "character",
-      "animated": false,
+      "animated": true,
       "inspection": {
-        "width": 19,
+        "width": 76,
         "height": 20,
         "bgKind": "transparent",
-        "alphaCoverage": 0.17894736842105263,
-        "transparentCoverage": 0.8210526315789474,
+        "alphaCoverage": 0.1723684210526316,
+        "transparentCoverage": 0.8276315789473684,
         "contentRowRuns": 1,
-        "contentColRuns": 1,
+        "contentColRuns": 4,
         "promoBackground": false,
-        "spriteSheetGrid": false,
+        "spriteSheetGrid": true,
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Sprskeleton1 is a static 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Sprskeleton1 Strip 19x20.Sheet is an animated 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -965,35 +965,35 @@
       ],
       "tags": [
         "2d",
+        "animated",
         "art",
         "character",
         "fantasy",
-        "medieval",
-        "static"
+        "medieval"
       ],
-      "searchText": "sprskeleton1 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprskeleton1.gif debts in the depths - free pixel art dungeon asset pack character sprskeleton1 is a static 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art medieval static"
+      "searchText": "sprskeleton1 strip 19x20.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprskeleton1__strip-19x20.sheet.png debts in the depths - free pixel art dungeon asset pack character sprskeleton1 strip 19x20.sheet is an animated 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprskeleton2.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprskeleton2.gif",
-      "label": "Sprskeleton2",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprskeleton2__strip-19x20.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprskeleton2__strip-19x20.sheet.png",
+      "label": "Sprskeleton2 Strip 19x20.Sheet",
       "kind": "character",
-      "animated": false,
+      "animated": true,
       "inspection": {
-        "width": 19,
+        "width": 76,
         "height": 20,
         "bgKind": "transparent",
-        "alphaCoverage": 0.20526315789473684,
-        "transparentCoverage": 0.7947368421052632,
+        "alphaCoverage": 0.20065789473684212,
+        "transparentCoverage": 0.7993421052631579,
         "contentRowRuns": 1,
-        "contentColRuns": 1,
+        "contentColRuns": 4,
         "promoBackground": false,
-        "spriteSheetGrid": false,
+        "spriteSheetGrid": true,
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Sprskeleton2 is a static 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Sprskeleton2 Strip 19x20.Sheet is an animated 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -1006,35 +1006,35 @@
       ],
       "tags": [
         "2d",
+        "animated",
         "art",
         "character",
         "fantasy",
-        "medieval",
-        "static"
+        "medieval"
       ],
-      "searchText": "sprskeleton2 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprskeleton2.gif debts in the depths - free pixel art dungeon asset pack character sprskeleton2 is a static 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art medieval static"
+      "searchText": "sprskeleton2 strip 19x20.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprskeleton2__strip-19x20.sheet.png debts in the depths - free pixel art dungeon asset pack character sprskeleton2 strip 19x20.sheet is an animated 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprskeleton3.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprskeleton3.gif",
-      "label": "Sprskeleton3",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprskeleton3__strip-19x20.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprskeleton3__strip-19x20.sheet.png",
+      "label": "Sprskeleton3 Strip 19x20.Sheet",
       "kind": "character",
-      "animated": false,
+      "animated": true,
       "inspection": {
-        "width": 19,
+        "width": 76,
         "height": 20,
         "bgKind": "transparent",
-        "alphaCoverage": 0.22631578947368422,
-        "transparentCoverage": 0.7736842105263158,
+        "alphaCoverage": 0.2236842105263158,
+        "transparentCoverage": 0.7763157894736842,
         "contentRowRuns": 1,
-        "contentColRuns": 1,
+        "contentColRuns": 4,
         "promoBackground": false,
-        "spriteSheetGrid": false,
+        "spriteSheetGrid": true,
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Sprskeleton3 is a static 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Sprskeleton3 Strip 19x20.Sheet is an animated 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -1047,35 +1047,35 @@
       ],
       "tags": [
         "2d",
+        "animated",
         "art",
         "character",
         "fantasy",
-        "medieval",
-        "static"
+        "medieval"
       ],
-      "searchText": "sprskeleton3 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprskeleton3.gif debts in the depths - free pixel art dungeon asset pack character sprskeleton3 is a static 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art medieval static"
+      "searchText": "sprskeleton3 strip 19x20.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprskeleton3__strip-19x20.sheet.png debts in the depths - free pixel art dungeon asset pack character sprskeleton3 strip 19x20.sheet is an animated 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprwizard.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprwizard.gif",
-      "label": "Sprwizard",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprwizard__strip-26x18.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprwizard__strip-26x18.sheet.png",
+      "label": "Sprwizard Strip 26x18.Sheet",
       "kind": "character",
-      "animated": false,
+      "animated": true,
       "inspection": {
-        "width": 26,
+        "width": 104,
         "height": 18,
         "bgKind": "transparent",
-        "alphaCoverage": 0.4017094017094017,
-        "transparentCoverage": 0.5982905982905983,
+        "alphaCoverage": 0.4155982905982906,
+        "transparentCoverage": 0.5844017094017094,
         "contentRowRuns": 1,
-        "contentColRuns": 1,
+        "contentColRuns": 4,
         "promoBackground": false,
-        "spriteSheetGrid": false,
+        "spriteSheetGrid": true,
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Sprwizard is a static 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Sprwizard Strip 26x18.Sheet is an animated 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -1088,35 +1088,35 @@
       ],
       "tags": [
         "2d",
+        "animated",
         "art",
         "character",
         "fantasy",
-        "medieval",
-        "static"
+        "medieval"
       ],
-      "searchText": "sprwizard 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprwizard.gif debts in the depths - free pixel art dungeon asset pack character sprwizard is a static 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art medieval static"
+      "searchText": "sprwizard strip 26x18.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprwizard__strip-26x18.sheet.png debts in the depths - free pixel art dungeon asset pack character sprwizard strip 26x18.sheet is an animated 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprwizardfire.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprwizardfire.gif",
-      "label": "Sprwizardfire",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprwizardidle__strip-26x18.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprwizardidle__strip-26x18.sheet.png",
+      "label": "Sprwizardidle Strip 26x18.Sheet",
       "kind": "character",
-      "animated": false,
+      "animated": true,
       "inspection": {
-        "width": 26,
+        "width": 104,
         "height": 18,
         "bgKind": "transparent",
-        "alphaCoverage": 0.37606837606837606,
-        "transparentCoverage": 0.6239316239316239,
+        "alphaCoverage": 0.4155982905982906,
+        "transparentCoverage": 0.5844017094017094,
         "contentRowRuns": 1,
-        "contentColRuns": 1,
+        "contentColRuns": 4,
         "promoBackground": false,
-        "spriteSheetGrid": false,
+        "spriteSheetGrid": true,
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Sprwizardfire is a static 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Sprwizardidle Strip 26x18.Sheet is an animated 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -1129,13 +1129,712 @@
       ],
       "tags": [
         "2d",
+        "animated",
         "art",
         "character",
         "fantasy",
-        "medieval",
-        "static"
+        "medieval"
       ],
-      "searchText": "sprwizardfire 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprwizardfire.gif debts in the depths - free pixel art dungeon asset pack character sprwizardfire is a static 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art medieval static"
+      "searchText": "sprwizardidle strip 26x18.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprwizardidle__strip-26x18.sheet.png debts in the depths - free pixel art dungeon asset pack character sprwizardidle strip 26x18.sheet is an animated 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "reaktori-debts-in-the-depths-asset-pack",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/spracidprojectile__strip-20x12.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/spracidprojectile__strip-20x12.sheet.png",
+      "label": "Spracidprojectile Strip 20x12.Sheet",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 200,
+        "height": 12,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.26708333333333334,
+        "transparentCoverage": 0.7329166666666667,
+        "contentRowRuns": 1,
+        "contentColRuns": 13,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Spracidprojectile Strip 20x12.Sheet is an animated 2D effect sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "fantasy"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "spracidprojectile strip 20x12.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/spracidprojectile__strip-20x12.sheet.png debts in the depths - free pixel art dungeon asset pack effect spracidprojectile strip 20x12.sheet is an animated 2d effect sample from debts in the depths - free pixel art dungeon asset pack. useful for combat vfx, spell effects, hit feedback. fantasy combat vfx spell effects hit feedback 2d animated art medieval"
+    },
+    {
+      "packFolder": "reaktori-debts-in-the-depths-asset-pack",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprexplosion__strip-51x51.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprexplosion__strip-51x51.sheet.png",
+      "label": "Sprexplosion Strip 51x51.Sheet",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 255,
+        "height": 51,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.4276047673971549,
+        "transparentCoverage": 0.5723952326028451,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Sprexplosion Strip 51x51.Sheet is an animated 2D effect sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "fantasy"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "sprexplosion strip 51x51.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprexplosion__strip-51x51.sheet.png debts in the depths - free pixel art dungeon asset pack effect sprexplosion strip 51x51.sheet is an animated 2d effect sample from debts in the depths - free pixel art dungeon asset pack. useful for combat vfx, spell effects, hit feedback. fantasy combat vfx spell effects hit feedback 2d animated art medieval"
+    },
+    {
+      "packFolder": "reaktori-debts-in-the-depths-asset-pack",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprghostorb__strip-18x12.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprghostorb__strip-18x12.sheet.png",
+      "label": "Sprghostorb Strip 18x12.Sheet",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 144,
+        "height": 12,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.2986111111111111,
+        "transparentCoverage": 0.7013888888888888,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Sprghostorb Strip 18x12.Sheet is an animated 2D effect sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "fantasy"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "sprghostorb strip 18x12.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprghostorb__strip-18x12.sheet.png debts in the depths - free pixel art dungeon asset pack effect sprghostorb strip 18x12.sheet is an animated 2d effect sample from debts in the depths - free pixel art dungeon asset pack. useful for combat vfx, spell effects, hit feedback. fantasy combat vfx spell effects hit feedback 2d animated art medieval"
+    },
+    {
+      "packFolder": "reaktori-debts-in-the-depths-asset-pack",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprhealparticle__strip-6x6.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprhealparticle__strip-6x6.sheet.png",
+      "label": "Sprhealparticle Strip 6x6.Sheet",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 24,
+        "height": 6,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.3888888888888889,
+        "transparentCoverage": 0.6111111111111112,
+        "contentRowRuns": 1,
+        "contentColRuns": 3,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Sprhealparticle Strip 6x6.Sheet is an animated 2D effect sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "fantasy"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "sprhealparticle strip 6x6.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprhealparticle__strip-6x6.sheet.png debts in the depths - free pixel art dungeon asset pack effect sprhealparticle strip 6x6.sheet is an animated 2d effect sample from debts in the depths - free pixel art dungeon asset pack. useful for combat vfx, spell effects, hit feedback. fantasy combat vfx spell effects hit feedback 2d animated art medieval"
+    },
+    {
+      "packFolder": "reaktori-debts-in-the-depths-asset-pack",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprshockwave__strip-46x46.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprshockwave__strip-46x46.sheet.png",
+      "label": "Sprshockwave Strip 46x46.Sheet",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 230,
+        "height": 46,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.3795841209829868,
+        "transparentCoverage": 0.6204158790170132,
+        "contentRowRuns": 1,
+        "contentColRuns": 7,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Sprshockwave Strip 46x46.Sheet is an animated 2D effect sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "fantasy"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "sprshockwave strip 46x46.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprshockwave__strip-46x46.sheet.png debts in the depths - free pixel art dungeon asset pack effect sprshockwave strip 46x46.sheet is an animated 2d effect sample from debts in the depths - free pixel art dungeon asset pack. useful for combat vfx, spell effects, hit feedback. fantasy combat vfx spell effects hit feedback 2d animated art medieval"
+    },
+    {
+      "packFolder": "reaktori-debts-in-the-depths-asset-pack",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprsparkle__strip-7x7.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprsparkle__strip-7x7.sheet.png",
+      "label": "Sprsparkle Strip 7x7.Sheet",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 28,
+        "height": 7,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.10204081632653061,
+        "transparentCoverage": 0.8979591836734694,
+        "contentRowRuns": 1,
+        "contentColRuns": 3,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Sprsparkle Strip 7x7.Sheet is an animated 2D effect sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "fantasy"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "sprsparkle strip 7x7.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprsparkle__strip-7x7.sheet.png debts in the depths - free pixel art dungeon asset pack effect sprsparkle strip 7x7.sheet is an animated 2d effect sample from debts in the depths - free pixel art dungeon asset pack. useful for combat vfx, spell effects, hit feedback. fantasy combat vfx spell effects hit feedback 2d animated art medieval"
+    },
+    {
+      "packFolder": "reaktori-debts-in-the-depths-asset-pack",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprfirebolt__strip-15x5.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprfirebolt__strip-15x5.sheet.png",
+      "label": "Sprfirebolt Strip 15x5.Sheet",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 60,
+        "height": 5,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.5666666666666667,
+        "transparentCoverage": 0.43333333333333335,
+        "contentRowRuns": 1,
+        "contentColRuns": 5,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Sprfirebolt Strip 15x5.Sheet is an animated 2D effect sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "fantasy"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "sprfirebolt strip 15x5.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprfirebolt__strip-15x5.sheet.png debts in the depths - free pixel art dungeon asset pack effect sprfirebolt strip 15x5.sheet is an animated 2d effect sample from debts in the depths - free pixel art dungeon asset pack. useful for combat vfx, spell effects, hit feedback. fantasy combat vfx spell effects hit feedback 2d animated art medieval"
+    },
+    {
+      "packFolder": "reaktori-debts-in-the-depths-asset-pack",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprfireexplosion__strip-13x13.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprfireexplosion__strip-13x13.sheet.png",
+      "label": "Sprfireexplosion Strip 13x13.Sheet",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 52,
+        "height": 13,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.514792899408284,
+        "transparentCoverage": 0.48520710059171596,
+        "contentRowRuns": 1,
+        "contentColRuns": 3,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Sprfireexplosion Strip 13x13.Sheet is an animated 2D effect sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "fantasy"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "sprfireexplosion strip 13x13.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprfireexplosion__strip-13x13.sheet.png debts in the depths - free pixel art dungeon asset pack effect sprfireexplosion strip 13x13.sheet is an animated 2d effect sample from debts in the depths - free pixel art dungeon asset pack. useful for combat vfx, spell effects, hit feedback. fantasy combat vfx spell effects hit feedback 2d animated art medieval"
+    },
+    {
+      "packFolder": "reaktori-debts-in-the-depths-asset-pack",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprmagicbolt__strip-15x5.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprmagicbolt__strip-15x5.sheet.png",
+      "label": "Sprmagicbolt Strip 15x5.Sheet",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 60,
+        "height": 5,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.5666666666666667,
+        "transparentCoverage": 0.43333333333333335,
+        "contentRowRuns": 1,
+        "contentColRuns": 5,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Sprmagicbolt Strip 15x5.Sheet is an animated 2D effect sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "fantasy"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "sprmagicbolt strip 15x5.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprmagicbolt__strip-15x5.sheet.png debts in the depths - free pixel art dungeon asset pack effect sprmagicbolt strip 15x5.sheet is an animated 2d effect sample from debts in the depths - free pixel art dungeon asset pack. useful for combat vfx, spell effects, hit feedback. fantasy combat vfx spell effects hit feedback 2d animated art medieval"
+    },
+    {
+      "packFolder": "reaktori-debts-in-the-depths-asset-pack",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprmagicexplosion__strip-13x13.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprmagicexplosion__strip-13x13.sheet.png",
+      "label": "Sprmagicexplosion Strip 13x13.Sheet",
+      "kind": "effect",
+      "animated": true,
+      "inspection": {
+        "width": 52,
+        "height": 13,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.514792899408284,
+        "transparentCoverage": 0.48520710059171596,
+        "contentRowRuns": 1,
+        "contentColRuns": 3,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Sprmagicexplosion Strip 13x13.Sheet is an animated 2D effect sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for combat VFX, spell effects, hit feedback.",
+      "category": "effect",
+      "themes": [
+        "effect",
+        "fantasy"
+      ],
+      "useCases": [
+        "combat VFX",
+        "spell effects",
+        "hit feedback"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "effect",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "sprmagicexplosion strip 13x13.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprmagicexplosion__strip-13x13.sheet.png debts in the depths - free pixel art dungeon asset pack effect sprmagicexplosion strip 13x13.sheet is an animated 2d effect sample from debts in the depths - free pixel art dungeon asset pack. useful for combat vfx, spell effects, hit feedback. fantasy combat vfx spell effects hit feedback 2d animated art medieval"
+    },
+    {
+      "packFolder": "reaktori-debts-in-the-depths-asset-pack",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprgoldvein__strip-20x20.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprgoldvein__strip-20x20.sheet.png",
+      "label": "Sprgoldvein Strip 20x20.Sheet",
+      "kind": "sprite",
+      "animated": true,
+      "inspection": {
+        "width": 60,
+        "height": 20,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.02,
+        "transparentCoverage": 0.98,
+        "contentRowRuns": 2,
+        "contentColRuns": 4,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false,
+        "cellMedianWidth": 3,
+        "cellMedianHeight": 3
+      },
+      "promo": false,
+      "description": "Sprgoldvein Strip 20x20.Sheet is an animated 2D sprite sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for level building, tilemaps, environment dressing.",
+      "category": "sprite",
+      "themes": [
+        "fantasy",
+        "sprite"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "fantasy",
+        "medieval",
+        "sprite"
+      ],
+      "searchText": "sprgoldvein strip 20x20.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprgoldvein__strip-20x20.sheet.png debts in the depths - free pixel art dungeon asset pack sprite sprgoldvein strip 20x20.sheet is an animated 2d sprite sample from debts in the depths - free pixel art dungeon asset pack. useful for level building, tilemaps, environment dressing. fantasy level building tilemaps environment dressing 2d animated art medieval"
+    },
+    {
+      "packFolder": "reaktori-debts-in-the-depths-asset-pack",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprpropscatacombs__strip-16x21.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprpropscatacombs__strip-16x21.sheet.png",
+      "label": "Sprpropscatacombs Strip 16x21.Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 112,
+        "height": 21,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.1832482993197279,
+        "transparentCoverage": 0.8167517006802721,
+        "contentRowRuns": 1,
+        "contentColRuns": 7,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Sprpropscatacombs Strip 16x21.Sheet is an animated 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "sprpropscatacombs strip 16x21.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprpropscatacombs__strip-16x21.sheet.png debts in the depths - free pixel art dungeon asset pack character sprpropscatacombs strip 16x21.sheet is an animated 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+    },
+    {
+      "packFolder": "reaktori-debts-in-the-depths-asset-pack",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprpropscorpses__strip-12x9.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprpropscorpses__strip-12x9.sheet.png",
+      "label": "Sprpropscorpses Strip 12x9.Sheet",
+      "kind": "sprite",
+      "animated": true,
+      "inspection": {
+        "width": 72,
+        "height": 9,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.2638888888888889,
+        "transparentCoverage": 0.7361111111111112,
+        "contentRowRuns": 1,
+        "contentColRuns": 6,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Sprpropscorpses Strip 12x9.Sheet is an animated 2D sprite sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for level building, tilemaps, environment dressing.",
+      "category": "sprite",
+      "themes": [
+        "fantasy",
+        "sprite"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "fantasy",
+        "medieval",
+        "sprite"
+      ],
+      "searchText": "sprpropscorpses strip 12x9.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprpropscorpses__strip-12x9.sheet.png debts in the depths - free pixel art dungeon asset pack sprite sprpropscorpses strip 12x9.sheet is an animated 2d sprite sample from debts in the depths - free pixel art dungeon asset pack. useful for level building, tilemaps, environment dressing. fantasy level building tilemaps environment dressing 2d animated art medieval"
+    },
+    {
+      "packFolder": "reaktori-debts-in-the-depths-asset-pack",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprpropsinferno__strip-11x15.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprpropsinferno__strip-11x15.sheet.png",
+      "label": "Sprpropsinferno Strip 11x15.Sheet",
+      "kind": "sprite",
+      "animated": true,
+      "inspection": {
+        "width": 33,
+        "height": 15,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.21818181818181817,
+        "transparentCoverage": 0.7818181818181819,
+        "contentRowRuns": 1,
+        "contentColRuns": 3,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Sprpropsinferno Strip 11x15.Sheet is an animated 2D sprite sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for level building, tilemaps, environment dressing.",
+      "category": "sprite",
+      "themes": [
+        "fantasy",
+        "sprite"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "fantasy",
+        "medieval",
+        "sprite"
+      ],
+      "searchText": "sprpropsinferno strip 11x15.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprpropsinferno__strip-11x15.sheet.png debts in the depths - free pixel art dungeon asset pack sprite sprpropsinferno strip 11x15.sheet is an animated 2d sprite sample from debts in the depths - free pixel art dungeon asset pack. useful for level building, tilemaps, environment dressing. fantasy level building tilemaps environment dressing 2d animated art medieval"
+    },
+    {
+      "packFolder": "reaktori-debts-in-the-depths-asset-pack",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprpropsswamp__strip-15x13.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprpropsswamp__strip-15x13.sheet.png",
+      "label": "Sprpropsswamp Strip 15x13.Sheet",
+      "kind": "sprite",
+      "animated": true,
+      "inspection": {
+        "width": 105,
+        "height": 13,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.22564102564102564,
+        "transparentCoverage": 0.7743589743589744,
+        "contentRowRuns": 1,
+        "contentColRuns": 7,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Sprpropsswamp Strip 15x13.Sheet is an animated 2D sprite sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for level building, tilemaps, environment dressing.",
+      "category": "sprite",
+      "themes": [
+        "fantasy",
+        "sprite"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "fantasy",
+        "medieval",
+        "sprite"
+      ],
+      "searchText": "sprpropsswamp strip 15x13.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprpropsswamp__strip-15x13.sheet.png debts in the depths - free pixel art dungeon asset pack sprite sprpropsswamp strip 15x13.sheet is an animated 2d sprite sample from debts in the depths - free pixel art dungeon asset pack. useful for level building, tilemaps, environment dressing. fantasy level building tilemaps environment dressing 2d animated art medieval"
+    },
+    {
+      "packFolder": "reaktori-debts-in-the-depths-asset-pack",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/ui/sprcursor__strip-45x45.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/ui/sprcursor__strip-45x45.sheet.png",
+      "label": "Sprcursor Strip 45x45.Sheet",
+      "kind": "ui",
+      "animated": true,
+      "inspection": {
+        "width": 360,
+        "height": 45,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.173583984375,
+        "transparentCoverage": 0.826416015625,
+        "contentRowRuns": 1,
+        "contentColRuns": 8,
+        "promoBackground": false,
+        "spriteSheetGrid": true,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Sprcursor Strip 45x45.Sheet is an animated 2D ui sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for level building, tilemaps, environment dressing.",
+      "category": "ui",
+      "themes": [
+        "fantasy",
+        "ui"
+      ],
+      "useCases": [
+        "level building",
+        "tilemaps",
+        "environment dressing"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "fantasy",
+        "medieval",
+        "ui"
+      ],
+      "searchText": "sprcursor strip 45x45.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/ui/sprcursor__strip-45x45.sheet.png debts in the depths - free pixel art dungeon asset pack ui sprcursor strip 45x45.sheet is an animated 2d ui sample from debts in the depths - free pixel art dungeon asset pack. useful for level building, tilemaps, environment dressing. fantasy level building tilemaps environment dressing 2d animated art medieval"
+    },
+    {
+      "packFolder": "reaktori-debts-in-the-depths-asset-pack",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprwizardfire__strip-26x18.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprwizardfire__strip-26x18.sheet.png",
+      "label": "Sprwizardfire Strip 26x18.Sheet",
+      "kind": "character",
+      "animated": true,
+      "inspection": {
+        "width": 52,
+        "height": 18,
+        "bgKind": "transparent",
+        "alphaCoverage": 0.36538461538461536,
+        "transparentCoverage": 0.6346153846153846,
+        "contentRowRuns": 1,
+        "contentColRuns": 2,
+        "promoBackground": false,
+        "spriteSheetGrid": false,
+        "uniformGrid": false
+      },
+      "promo": false,
+      "description": "Sprwizardfire Strip 26x18.Sheet is an animated 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
+      "category": "character",
+      "themes": [
+        "character",
+        "fantasy"
+      ],
+      "useCases": [
+        "player characters",
+        "NPCs",
+        "animation prototyping"
+      ],
+      "tags": [
+        "2d",
+        "animated",
+        "art",
+        "character",
+        "fantasy",
+        "medieval"
+      ],
+      "searchText": "sprwizardfire strip 26x18.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprwizardfire__strip-26x18.sheet.png debts in the depths - free pixel art dungeon asset pack character sprwizardfire strip 26x18.sheet is an animated 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "reaktori-debts-in-the-depths-asset-pack",
@@ -1180,218 +1879,218 @@
     },
     {
       "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprwizardidle.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprwizardidle.gif",
-      "label": "Sprwizardidle",
-      "kind": "character",
-      "animated": false,
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprbrick__strip-20x20.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprbrick__strip-20x20.sheet.png",
+      "label": "Sprbrick Strip 20x20.Sheet",
+      "kind": "sprite",
+      "animated": true,
       "inspection": {
-        "width": 26,
-        "height": 18,
+        "width": 60,
+        "height": 20,
         "bgKind": "transparent",
-        "alphaCoverage": 0.4017094017094017,
-        "transparentCoverage": 0.5982905982905983,
+        "alphaCoverage": 0.7,
+        "transparentCoverage": 0.3,
         "contentRowRuns": 1,
-        "contentColRuns": 1,
+        "contentColRuns": 3,
         "promoBackground": false,
-        "spriteSheetGrid": false,
+        "spriteSheetGrid": true,
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Sprwizardidle is a static 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
-      "category": "character",
+      "description": "Sprbrick Strip 20x20.Sheet is an animated 2D sprite sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for level building, tilemaps, environment dressing.",
+      "category": "sprite",
       "themes": [
-        "character",
-        "fantasy"
+        "fantasy",
+        "sprite"
       ],
       "useCases": [
-        "player characters",
-        "NPCs",
-        "animation prototyping"
+        "level building",
+        "tilemaps",
+        "environment dressing"
       ],
       "tags": [
         "2d",
+        "animated",
         "art",
-        "character",
         "fantasy",
         "medieval",
-        "static"
+        "sprite"
       ],
-      "searchText": "sprwizardidle 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprwizardidle.gif debts in the depths - free pixel art dungeon asset pack character sprwizardidle is a static 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art medieval static"
+      "searchText": "sprbrick strip 20x20.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprbrick__strip-20x20.sheet.png debts in the depths - free pixel art dungeon asset pack sprite sprbrick strip 20x20.sheet is an animated 2d sprite sample from debts in the depths - free pixel art dungeon asset pack. useful for level building, tilemaps, environment dressing. fantasy level building tilemaps environment dressing 2d animated art medieval"
     },
     {
       "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/spracidprojectile.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/spracidprojectile.gif",
-      "label": "Spracidprojectile",
-      "kind": "effect",
-      "animated": false,
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprbrimstone__strip-20x20.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprbrimstone__strip-20x20.sheet.png",
+      "label": "Sprbrimstone Strip 20x20.Sheet",
+      "kind": "sprite",
+      "animated": true,
       "inspection": {
-        "width": 20,
-        "height": 12,
+        "width": 60,
+        "height": 20,
         "bgKind": "transparent",
-        "alphaCoverage": 0.30416666666666664,
-        "transparentCoverage": 0.6958333333333333,
+        "alphaCoverage": 0.6558333333333334,
+        "transparentCoverage": 0.3441666666666667,
         "contentRowRuns": 1,
-        "contentColRuns": 1,
+        "contentColRuns": 3,
         "promoBackground": false,
-        "spriteSheetGrid": false,
+        "spriteSheetGrid": true,
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Spracidprojectile is a static 2D effect sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for combat VFX, spell effects, hit feedback.",
-      "category": "effect",
+      "description": "Sprbrimstone Strip 20x20.Sheet is an animated 2D sprite sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for level building, tilemaps, environment dressing.",
+      "category": "sprite",
       "themes": [
-        "effect",
-        "fantasy"
+        "fantasy",
+        "sprite"
       ],
       "useCases": [
-        "combat VFX",
-        "spell effects",
-        "hit feedback"
+        "level building",
+        "tilemaps",
+        "environment dressing"
       ],
       "tags": [
         "2d",
+        "animated",
         "art",
-        "effect",
         "fantasy",
         "medieval",
-        "static"
+        "sprite"
       ],
-      "searchText": "spracidprojectile 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/spracidprojectile.gif debts in the depths - free pixel art dungeon asset pack effect spracidprojectile is a static 2d effect sample from debts in the depths - free pixel art dungeon asset pack. useful for combat vfx, spell effects, hit feedback. fantasy combat vfx spell effects hit feedback 2d art medieval static"
+      "searchText": "sprbrimstone strip 20x20.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprbrimstone__strip-20x20.sheet.png debts in the depths - free pixel art dungeon asset pack sprite sprbrimstone strip 20x20.sheet is an animated 2d sprite sample from debts in the depths - free pixel art dungeon asset pack. useful for level building, tilemaps, environment dressing. fantasy level building tilemaps environment dressing 2d animated art medieval"
     },
     {
       "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprghostorb.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprghostorb.gif",
-      "label": "Sprghostorb",
-      "kind": "effect",
-      "animated": false,
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprlava__strip-20x20.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprlava__strip-20x20.sheet.png",
+      "label": "Sprlava Strip 20x20.Sheet",
+      "kind": "sprite",
+      "animated": true,
       "inspection": {
-        "width": 18,
-        "height": 12,
+        "width": 60,
+        "height": 20,
         "bgKind": "transparent",
-        "alphaCoverage": 0.30092592592592593,
-        "transparentCoverage": 0.6990740740740741,
+        "alphaCoverage": 0.715,
+        "transparentCoverage": 0.285,
         "contentRowRuns": 1,
-        "contentColRuns": 1,
+        "contentColRuns": 3,
         "promoBackground": false,
-        "spriteSheetGrid": false,
+        "spriteSheetGrid": true,
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Sprghostorb is a static 2D effect sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for combat VFX, spell effects, hit feedback.",
-      "category": "effect",
+      "description": "Sprlava Strip 20x20.Sheet is an animated 2D sprite sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for level building, tilemaps, environment dressing.",
+      "category": "sprite",
       "themes": [
-        "effect",
-        "fantasy"
+        "fantasy",
+        "sprite"
       ],
       "useCases": [
-        "combat VFX",
-        "spell effects",
-        "hit feedback"
+        "level building",
+        "tilemaps",
+        "environment dressing"
       ],
       "tags": [
         "2d",
+        "animated",
         "art",
-        "effect",
         "fantasy",
         "medieval",
-        "static"
+        "sprite"
       ],
-      "searchText": "sprghostorb 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprghostorb.gif debts in the depths - free pixel art dungeon asset pack effect sprghostorb is a static 2d effect sample from debts in the depths - free pixel art dungeon asset pack. useful for combat vfx, spell effects, hit feedback. fantasy combat vfx spell effects hit feedback 2d art medieval static"
+      "searchText": "sprlava strip 20x20.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprlava__strip-20x20.sheet.png debts in the depths - free pixel art dungeon asset pack sprite sprlava strip 20x20.sheet is an animated 2d sprite sample from debts in the depths - free pixel art dungeon asset pack. useful for level building, tilemaps, environment dressing. fantasy level building tilemaps environment dressing 2d animated art medieval"
     },
     {
       "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprshockwave.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprshockwave.gif",
-      "label": "Sprshockwave",
-      "kind": "effect",
-      "animated": false,
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprrock__strip-20x20.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprrock__strip-20x20.sheet.png",
+      "label": "Sprrock Strip 20x20.Sheet",
+      "kind": "sprite",
+      "animated": true,
       "inspection": {
-        "width": 46,
-        "height": 46,
+        "width": 60,
+        "height": 20,
         "bgKind": "transparent",
-        "alphaCoverage": 0.3686200378071834,
-        "transparentCoverage": 0.6313799621928167,
+        "alphaCoverage": 0.6541666666666667,
+        "transparentCoverage": 0.3458333333333333,
         "contentRowRuns": 1,
-        "contentColRuns": 1,
+        "contentColRuns": 3,
         "promoBackground": false,
-        "spriteSheetGrid": false,
+        "spriteSheetGrid": true,
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Sprshockwave is a static 2D effect sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for combat VFX, spell effects, hit feedback.",
-      "category": "effect",
+      "description": "Sprrock Strip 20x20.Sheet is an animated 2D sprite sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for level building, tilemaps, environment dressing.",
+      "category": "sprite",
       "themes": [
-        "effect",
-        "fantasy"
+        "fantasy",
+        "sprite"
       ],
       "useCases": [
-        "combat VFX",
-        "spell effects",
-        "hit feedback"
+        "level building",
+        "tilemaps",
+        "environment dressing"
       ],
       "tags": [
         "2d",
+        "animated",
         "art",
-        "effect",
         "fantasy",
         "medieval",
-        "static"
+        "sprite"
       ],
-      "searchText": "sprshockwave 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprshockwave.gif debts in the depths - free pixel art dungeon asset pack effect sprshockwave is a static 2d effect sample from debts in the depths - free pixel art dungeon asset pack. useful for combat vfx, spell effects, hit feedback. fantasy combat vfx spell effects hit feedback 2d art medieval static"
+      "searchText": "sprrock strip 20x20.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprrock__strip-20x20.sheet.png debts in the depths - free pixel art dungeon asset pack sprite sprrock strip 20x20.sheet is an animated 2d sprite sample from debts in the depths - free pixel art dungeon asset pack. useful for level building, tilemaps, environment dressing. fantasy level building tilemaps environment dressing 2d animated art medieval"
     },
     {
       "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprsparkle.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprsparkle.gif",
-      "label": "Sprsparkle",
-      "kind": "effect",
-      "animated": false,
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprwater__strip-20x20.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprwater__strip-20x20.sheet.png",
+      "label": "Sprwater Strip 20x20.Sheet",
+      "kind": "sprite",
+      "animated": true,
       "inspection": {
-        "width": 7,
-        "height": 7,
+        "width": 80,
+        "height": 20,
         "bgKind": "transparent",
-        "alphaCoverage": 0.10204081632653061,
-        "transparentCoverage": 0.8979591836734694,
+        "alphaCoverage": 0.7175,
+        "transparentCoverage": 0.2825,
         "contentRowRuns": 1,
-        "contentColRuns": 1,
+        "contentColRuns": 4,
         "promoBackground": false,
-        "spriteSheetGrid": false,
+        "spriteSheetGrid": true,
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Sprsparkle is a static 2D effect sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for combat VFX, spell effects, hit feedback.",
-      "category": "effect",
+      "description": "Sprwater Strip 20x20.Sheet is an animated 2D sprite sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for level building, tilemaps, environment dressing.",
+      "category": "sprite",
       "themes": [
-        "effect",
-        "fantasy"
+        "fantasy",
+        "sprite"
       ],
       "useCases": [
-        "combat VFX",
-        "spell effects",
-        "hit feedback"
+        "level building",
+        "tilemaps",
+        "environment dressing"
       ],
       "tags": [
         "2d",
+        "animated",
         "art",
-        "effect",
         "fantasy",
         "medieval",
-        "static"
+        "sprite"
       ],
-      "searchText": "sprsparkle 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprsparkle.gif debts in the depths - free pixel art dungeon asset pack effect sprsparkle is a static 2d effect sample from debts in the depths - free pixel art dungeon asset pack. useful for combat vfx, spell effects, hit feedback. fantasy combat vfx spell effects hit feedback 2d art medieval static"
+      "searchText": "sprwater strip 20x20.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprwater__strip-20x20.sheet.png debts in the depths - free pixel art dungeon asset pack sprite sprwater strip 20x20.sheet is an animated 2d sprite sample from debts in the depths - free pixel art dungeon asset pack. useful for level building, tilemaps, environment dressing. fantasy level building tilemaps environment dressing 2d animated art medieval"
     },
     {
       "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprarrow.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprarrow.gif",
-      "label": "Sprarrow",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprarrow__strip-14x3.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprarrow__strip-14x3.sheet.png",
+      "label": "Sprarrow Strip 14x3.Sheet",
       "kind": "effect",
       "animated": false,
       "inspection": {
-        "width": 14,
+        "width": 84,
         "height": 3,
         "bgKind": "transparent",
         "alphaCoverage": 0.6190476190476191,
@@ -1403,7 +2102,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Sprarrow is a static 2D effect sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for combat VFX, spell effects, hit feedback.",
+      "description": "Sprarrow Strip 14x3.Sheet is a static 2D effect sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for combat VFX, spell effects, hit feedback.",
       "category": "effect",
       "themes": [
         "effect",
@@ -1422,17 +2121,17 @@
         "medieval",
         "static"
       ],
-      "searchText": "sprarrow 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprarrow.gif debts in the depths - free pixel art dungeon asset pack effect sprarrow is a static 2d effect sample from debts in the depths - free pixel art dungeon asset pack. useful for combat vfx, spell effects, hit feedback. fantasy combat vfx spell effects hit feedback 2d art medieval static"
+      "searchText": "sprarrow strip 14x3.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprarrow__strip-14x3.sheet.png debts in the depths - free pixel art dungeon asset pack effect sprarrow strip 14x3.sheet is a static 2d effect sample from debts in the depths - free pixel art dungeon asset pack. useful for combat vfx, spell effects, hit feedback. fantasy combat vfx spell effects hit feedback 2d art medieval static"
     },
     {
       "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprattackspear.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprattackspear.gif",
-      "label": "Sprattackspear",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprattackspear__strip-23x5.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprattackspear__strip-23x5.sheet.png",
+      "label": "Sprattackspear Strip 23x5.Sheet",
       "kind": "effect",
       "animated": false,
       "inspection": {
-        "width": 23,
+        "width": 92,
         "height": 5,
         "bgKind": "transparent",
         "alphaCoverage": 0.6,
@@ -1444,7 +2143,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Sprattackspear is a static 2D effect sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for combat VFX, spell effects, hit feedback.",
+      "description": "Sprattackspear Strip 23x5.Sheet is a static 2D effect sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for combat VFX, spell effects, hit feedback.",
       "category": "effect",
       "themes": [
         "effect",
@@ -1463,253 +2162,7 @@
         "medieval",
         "static"
       ],
-      "searchText": "sprattackspear 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprattackspear.gif debts in the depths - free pixel art dungeon asset pack effect sprattackspear is a static 2d effect sample from debts in the depths - free pixel art dungeon asset pack. useful for combat vfx, spell effects, hit feedback. fantasy combat vfx spell effects hit feedback 2d art medieval static"
-    },
-    {
-      "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprexplosion.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprexplosion.gif",
-      "label": "Sprexplosion",
-      "kind": "effect",
-      "animated": false,
-      "inspection": {
-        "width": 51,
-        "height": 51,
-        "bgKind": "transparent",
-        "alphaCoverage": 0.6428296808919647,
-        "transparentCoverage": 0.3571703191080354,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Sprexplosion is a static 2D effect sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for combat VFX, spell effects, hit feedback.",
-      "category": "effect",
-      "themes": [
-        "effect",
-        "fantasy"
-      ],
-      "useCases": [
-        "combat VFX",
-        "spell effects",
-        "hit feedback"
-      ],
-      "tags": [
-        "2d",
-        "art",
-        "effect",
-        "fantasy",
-        "medieval",
-        "static"
-      ],
-      "searchText": "sprexplosion 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprexplosion.gif debts in the depths - free pixel art dungeon asset pack effect sprexplosion is a static 2d effect sample from debts in the depths - free pixel art dungeon asset pack. useful for combat vfx, spell effects, hit feedback. fantasy combat vfx spell effects hit feedback 2d art medieval static"
-    },
-    {
-      "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprfirebolt.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprfirebolt.gif",
-      "label": "Sprfirebolt",
-      "kind": "effect",
-      "animated": true,
-      "inspection": {
-        "width": 15,
-        "height": 5,
-        "bgKind": "transparent",
-        "alphaCoverage": 0.56,
-        "transparentCoverage": 0.44,
-        "contentRowRuns": 1,
-        "contentColRuns": 2,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Sprfirebolt is an animated 2D effect sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for combat VFX, spell effects, hit feedback.",
-      "category": "effect",
-      "themes": [
-        "effect",
-        "fantasy"
-      ],
-      "useCases": [
-        "combat VFX",
-        "spell effects",
-        "hit feedback"
-      ],
-      "tags": [
-        "2d",
-        "animated",
-        "art",
-        "effect",
-        "fantasy",
-        "medieval"
-      ],
-      "searchText": "sprfirebolt 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprfirebolt.gif debts in the depths - free pixel art dungeon asset pack effect sprfirebolt is an animated 2d effect sample from debts in the depths - free pixel art dungeon asset pack. useful for combat vfx, spell effects, hit feedback. fantasy combat vfx spell effects hit feedback 2d animated art medieval"
-    },
-    {
-      "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprfireexplosion.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprfireexplosion.gif",
-      "label": "Sprfireexplosion",
-      "kind": "effect",
-      "animated": false,
-      "inspection": {
-        "width": 13,
-        "height": 13,
-        "bgKind": "transparent",
-        "alphaCoverage": 0.7633136094674556,
-        "transparentCoverage": 0.23668639053254437,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Sprfireexplosion is a static 2D effect sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for combat VFX, spell effects, hit feedback.",
-      "category": "effect",
-      "themes": [
-        "effect",
-        "fantasy"
-      ],
-      "useCases": [
-        "combat VFX",
-        "spell effects",
-        "hit feedback"
-      ],
-      "tags": [
-        "2d",
-        "art",
-        "effect",
-        "fantasy",
-        "medieval",
-        "static"
-      ],
-      "searchText": "sprfireexplosion 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprfireexplosion.gif debts in the depths - free pixel art dungeon asset pack effect sprfireexplosion is a static 2d effect sample from debts in the depths - free pixel art dungeon asset pack. useful for combat vfx, spell effects, hit feedback. fantasy combat vfx spell effects hit feedback 2d art medieval static"
-    },
-    {
-      "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprhealparticle.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprhealparticle.gif",
-      "label": "Sprhealparticle",
-      "kind": "effect",
-      "animated": false,
-      "inspection": {
-        "width": 6,
-        "height": 6,
-        "bgKind": "transparent",
-        "alphaCoverage": 0.5555555555555556,
-        "transparentCoverage": 0.4444444444444444,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Sprhealparticle is a static 2D effect sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for combat VFX, spell effects, hit feedback.",
-      "category": "effect",
-      "themes": [
-        "effect",
-        "fantasy"
-      ],
-      "useCases": [
-        "combat VFX",
-        "spell effects",
-        "hit feedback"
-      ],
-      "tags": [
-        "2d",
-        "art",
-        "effect",
-        "fantasy",
-        "medieval",
-        "static"
-      ],
-      "searchText": "sprhealparticle 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprhealparticle.gif debts in the depths - free pixel art dungeon asset pack effect sprhealparticle is a static 2d effect sample from debts in the depths - free pixel art dungeon asset pack. useful for combat vfx, spell effects, hit feedback. fantasy combat vfx spell effects hit feedback 2d art medieval static"
-    },
-    {
-      "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprmagicbolt.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprmagicbolt.gif",
-      "label": "Sprmagicbolt",
-      "kind": "effect",
-      "animated": true,
-      "inspection": {
-        "width": 15,
-        "height": 5,
-        "bgKind": "transparent",
-        "alphaCoverage": 0.56,
-        "transparentCoverage": 0.44,
-        "contentRowRuns": 1,
-        "contentColRuns": 2,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Sprmagicbolt is an animated 2D effect sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for combat VFX, spell effects, hit feedback.",
-      "category": "effect",
-      "themes": [
-        "effect",
-        "fantasy"
-      ],
-      "useCases": [
-        "combat VFX",
-        "spell effects",
-        "hit feedback"
-      ],
-      "tags": [
-        "2d",
-        "animated",
-        "art",
-        "effect",
-        "fantasy",
-        "medieval"
-      ],
-      "searchText": "sprmagicbolt 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprmagicbolt.gif debts in the depths - free pixel art dungeon asset pack effect sprmagicbolt is an animated 2d effect sample from debts in the depths - free pixel art dungeon asset pack. useful for combat vfx, spell effects, hit feedback. fantasy combat vfx spell effects hit feedback 2d animated art medieval"
-    },
-    {
-      "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprmagicexplosion.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprmagicexplosion.gif",
-      "label": "Sprmagicexplosion",
-      "kind": "effect",
-      "animated": false,
-      "inspection": {
-        "width": 13,
-        "height": 13,
-        "bgKind": "transparent",
-        "alphaCoverage": 0.7633136094674556,
-        "transparentCoverage": 0.23668639053254437,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Sprmagicexplosion is a static 2D effect sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for combat VFX, spell effects, hit feedback.",
-      "category": "effect",
-      "themes": [
-        "effect",
-        "fantasy"
-      ],
-      "useCases": [
-        "combat VFX",
-        "spell effects",
-        "hit feedback"
-      ],
-      "tags": [
-        "2d",
-        "art",
-        "effect",
-        "fantasy",
-        "medieval",
-        "static"
-      ],
-      "searchText": "sprmagicexplosion 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprmagicexplosion.gif debts in the depths - free pixel art dungeon asset pack effect sprmagicexplosion is a static 2d effect sample from debts in the depths - free pixel art dungeon asset pack. useful for combat vfx, spell effects, hit feedback. fantasy combat vfx spell effects hit feedback 2d art medieval static"
+      "searchText": "sprattackspear strip 23x5.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprattackspear__strip-23x5.sheet.png debts in the depths - free pixel art dungeon asset pack effect sprattackspear strip 23x5.sheet is a static 2d effect sample from debts in the depths - free pixel art dungeon asset pack. useful for combat vfx, spell effects, hit feedback. fantasy combat vfx spell effects hit feedback 2d art medieval static"
     },
     {
       "packFolder": "reaktori-debts-in-the-depths-asset-pack",
@@ -3025,259 +3478,13 @@
     },
     {
       "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprgoldvein.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprgoldvein.gif",
-      "label": "Sprgoldvein",
-      "kind": "sprite",
-      "animated": false,
-      "inspection": {
-        "width": 20,
-        "height": 20,
-        "bgKind": "transparent",
-        "alphaCoverage": 0.01,
-        "transparentCoverage": 0.99,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Sprgoldvein is a static 2D sprite sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for level building, tilemaps, environment dressing.",
-      "category": "sprite",
-      "themes": [
-        "fantasy",
-        "sprite"
-      ],
-      "useCases": [
-        "level building",
-        "tilemaps",
-        "environment dressing"
-      ],
-      "tags": [
-        "2d",
-        "art",
-        "fantasy",
-        "medieval",
-        "sprite",
-        "static"
-      ],
-      "searchText": "sprgoldvein 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprgoldvein.gif debts in the depths - free pixel art dungeon asset pack sprite sprgoldvein is a static 2d sprite sample from debts in the depths - free pixel art dungeon asset pack. useful for level building, tilemaps, environment dressing. fantasy level building tilemaps environment dressing 2d art medieval static"
-    },
-    {
-      "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprpropscatacombs.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprpropscatacombs.gif",
-      "label": "Sprpropscatacombs",
-      "kind": "character",
-      "animated": false,
-      "inspection": {
-        "width": 16,
-        "height": 21,
-        "bgKind": "transparent",
-        "alphaCoverage": 0.2976190476190476,
-        "transparentCoverage": 0.7023809523809523,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Sprpropscatacombs is a static 2D character sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for player characters, NPCs, animation prototyping.",
-      "category": "character",
-      "themes": [
-        "character",
-        "fantasy"
-      ],
-      "useCases": [
-        "player characters",
-        "NPCs",
-        "animation prototyping"
-      ],
-      "tags": [
-        "2d",
-        "art",
-        "character",
-        "fantasy",
-        "medieval",
-        "static"
-      ],
-      "searchText": "sprpropscatacombs 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprpropscatacombs.gif debts in the depths - free pixel art dungeon asset pack character sprpropscatacombs is a static 2d character sample from debts in the depths - free pixel art dungeon asset pack. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art medieval static"
-    },
-    {
-      "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprpropscorpses.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprpropscorpses.gif",
-      "label": "Sprpropscorpses",
-      "kind": "sprite",
-      "animated": false,
-      "inspection": {
-        "width": 12,
-        "height": 9,
-        "bgKind": "transparent",
-        "alphaCoverage": 0.2962962962962963,
-        "transparentCoverage": 0.7037037037037037,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Sprpropscorpses is a static 2D sprite sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for level building, tilemaps, environment dressing.",
-      "category": "sprite",
-      "themes": [
-        "fantasy",
-        "sprite"
-      ],
-      "useCases": [
-        "level building",
-        "tilemaps",
-        "environment dressing"
-      ],
-      "tags": [
-        "2d",
-        "art",
-        "fantasy",
-        "medieval",
-        "sprite",
-        "static"
-      ],
-      "searchText": "sprpropscorpses 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprpropscorpses.gif debts in the depths - free pixel art dungeon asset pack sprite sprpropscorpses is a static 2d sprite sample from debts in the depths - free pixel art dungeon asset pack. useful for level building, tilemaps, environment dressing. fantasy level building tilemaps environment dressing 2d art medieval static"
-    },
-    {
-      "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprpropsinferno.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprpropsinferno.gif",
-      "label": "Sprpropsinferno",
-      "kind": "sprite",
-      "animated": false,
-      "inspection": {
-        "width": 11,
-        "height": 15,
-        "bgKind": "transparent",
-        "alphaCoverage": 0.4,
-        "transparentCoverage": 0.6,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Sprpropsinferno is a static 2D sprite sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for level building, tilemaps, environment dressing.",
-      "category": "sprite",
-      "themes": [
-        "fantasy",
-        "sprite"
-      ],
-      "useCases": [
-        "level building",
-        "tilemaps",
-        "environment dressing"
-      ],
-      "tags": [
-        "2d",
-        "art",
-        "fantasy",
-        "medieval",
-        "sprite",
-        "static"
-      ],
-      "searchText": "sprpropsinferno 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprpropsinferno.gif debts in the depths - free pixel art dungeon asset pack sprite sprpropsinferno is a static 2d sprite sample from debts in the depths - free pixel art dungeon asset pack. useful for level building, tilemaps, environment dressing. fantasy level building tilemaps environment dressing 2d art medieval static"
-    },
-    {
-      "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprpropsswamp.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprpropsswamp.gif",
-      "label": "Sprpropsswamp",
-      "kind": "sprite",
-      "animated": false,
-      "inspection": {
-        "width": 15,
-        "height": 13,
-        "bgKind": "transparent",
-        "alphaCoverage": 0.39487179487179486,
-        "transparentCoverage": 0.6051282051282051,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Sprpropsswamp is a static 2D sprite sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for level building, tilemaps, environment dressing.",
-      "category": "sprite",
-      "themes": [
-        "fantasy",
-        "sprite"
-      ],
-      "useCases": [
-        "level building",
-        "tilemaps",
-        "environment dressing"
-      ],
-      "tags": [
-        "2d",
-        "art",
-        "fantasy",
-        "medieval",
-        "sprite",
-        "static"
-      ],
-      "searchText": "sprpropsswamp 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprpropsswamp.gif debts in the depths - free pixel art dungeon asset pack sprite sprpropsswamp is a static 2d sprite sample from debts in the depths - free pixel art dungeon asset pack. useful for level building, tilemaps, environment dressing. fantasy level building tilemaps environment dressing 2d art medieval static"
-    },
-    {
-      "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/ui/sprcursor.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/ui/sprcursor.gif",
-      "label": "Sprcursor",
-      "kind": "ui",
-      "animated": false,
-      "inspection": {
-        "width": 45,
-        "height": 45,
-        "bgKind": "transparent",
-        "alphaCoverage": 0.2019753086419753,
-        "transparentCoverage": 0.7980246913580247,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Sprcursor is a static 2D ui sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for level building, tilemaps, environment dressing.",
-      "category": "ui",
-      "themes": [
-        "fantasy",
-        "ui"
-      ],
-      "useCases": [
-        "level building",
-        "tilemaps",
-        "environment dressing"
-      ],
-      "tags": [
-        "2d",
-        "art",
-        "fantasy",
-        "medieval",
-        "static",
-        "ui"
-      ],
-      "searchText": "sprcursor 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/ui/sprcursor.gif debts in the depths - free pixel art dungeon asset pack ui sprcursor is a static 2d ui sample from debts in the depths - free pixel art dungeon asset pack. useful for level building, tilemaps, environment dressing. fantasy level building tilemaps environment dressing 2d art medieval static"
-    },
-    {
-      "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprattacklarge.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprattacklarge.gif",
-      "label": "Sprattacklarge",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprattacklarge__strip-15x36.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprattacklarge__strip-15x36.sheet.png",
+      "label": "Sprattacklarge Strip 15x36.Sheet",
       "kind": "effect",
       "animated": true,
       "inspection": {
-        "width": 15,
+        "width": 60,
         "height": 36,
         "bgKind": "mixed",
         "alphaCoverage": 0.4740740740740741,
@@ -3289,7 +3496,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Sprattacklarge is an animated 2D effect sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for combat VFX, spell effects, hit feedback.",
+      "description": "Sprattacklarge Strip 15x36.Sheet is an animated 2D effect sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for combat VFX, spell effects, hit feedback.",
       "category": "effect",
       "themes": [
         "effect",
@@ -3308,17 +3515,17 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "sprattacklarge 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprattacklarge.gif debts in the depths - free pixel art dungeon asset pack effect sprattacklarge is an animated 2d effect sample from debts in the depths - free pixel art dungeon asset pack. useful for combat vfx, spell effects, hit feedback. fantasy combat vfx spell effects hit feedback 2d animated art medieval"
+      "searchText": "sprattacklarge strip 15x36.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprattacklarge__strip-15x36.sheet.png debts in the depths - free pixel art dungeon asset pack effect sprattacklarge strip 15x36.sheet is an animated 2d effect sample from debts in the depths - free pixel art dungeon asset pack. useful for combat vfx, spell effects, hit feedback. fantasy combat vfx spell effects hit feedback 2d animated art medieval"
     },
     {
       "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprattackswing.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprattackswing.gif",
-      "label": "Sprattackswing",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprattackswing__strip-10x20.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprattackswing__strip-10x20.sheet.png",
+      "label": "Sprattackswing Strip 10x20.Sheet",
       "kind": "effect",
       "animated": true,
       "inspection": {
-        "width": 10,
+        "width": 40,
         "height": 20,
         "bgKind": "mixed",
         "alphaCoverage": 0.49,
@@ -3330,7 +3537,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Sprattackswing is an animated 2D effect sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for combat VFX, spell effects, hit feedback.",
+      "description": "Sprattackswing Strip 10x20.Sheet is an animated 2D effect sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for combat VFX, spell effects, hit feedback.",
       "category": "effect",
       "themes": [
         "effect",
@@ -3349,7 +3556,7 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "sprattackswing 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprattackswing.gif debts in the depths - free pixel art dungeon asset pack effect sprattackswing is an animated 2d effect sample from debts in the depths - free pixel art dungeon asset pack. useful for combat vfx, spell effects, hit feedback. fantasy combat vfx spell effects hit feedback 2d animated art medieval"
+      "searchText": "sprattackswing strip 10x20.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprattackswing__strip-10x20.sheet.png debts in the depths - free pixel art dungeon asset pack effect sprattackswing strip 10x20.sheet is an animated 2d effect sample from debts in the depths - free pixel art dungeon asset pack. useful for combat vfx, spell effects, hit feedback. fantasy combat vfx spell effects hit feedback 2d animated art medieval"
     },
     {
       "packFolder": "reaktori-debts-in-the-depths-asset-pack",
@@ -3514,211 +3721,6 @@
         "medieval"
       ],
       "searchText": "sprmagicexplosion 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/effects/sprmagicexplosion.png debts in the depths - free pixel art dungeon asset pack effect sprmagicexplosion is an animated 2d effect sample from debts in the depths - free pixel art dungeon asset pack. useful for combat vfx, spell effects, hit feedback. fantasy combat vfx spell effects hit feedback 2d animated art medieval"
-    },
-    {
-      "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprbrick.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprbrick.gif",
-      "label": "Sprbrick",
-      "kind": "sprite",
-      "animated": false,
-      "inspection": {
-        "width": 20,
-        "height": 20,
-        "bgKind": "transparent",
-        "alphaCoverage": 0.7025,
-        "transparentCoverage": 0.2975,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Sprbrick is a static 2D sprite sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for level building, tilemaps, environment dressing.",
-      "category": "sprite",
-      "themes": [
-        "fantasy",
-        "sprite"
-      ],
-      "useCases": [
-        "level building",
-        "tilemaps",
-        "environment dressing"
-      ],
-      "tags": [
-        "2d",
-        "art",
-        "fantasy",
-        "medieval",
-        "sprite",
-        "static"
-      ],
-      "searchText": "sprbrick 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprbrick.gif debts in the depths - free pixel art dungeon asset pack sprite sprbrick is a static 2d sprite sample from debts in the depths - free pixel art dungeon asset pack. useful for level building, tilemaps, environment dressing. fantasy level building tilemaps environment dressing 2d art medieval static"
-    },
-    {
-      "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprbrimstone.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprbrimstone.gif",
-      "label": "Sprbrimstone",
-      "kind": "sprite",
-      "animated": false,
-      "inspection": {
-        "width": 20,
-        "height": 20,
-        "bgKind": "transparent",
-        "alphaCoverage": 0.675,
-        "transparentCoverage": 0.325,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Sprbrimstone is a static 2D sprite sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for level building, tilemaps, environment dressing.",
-      "category": "sprite",
-      "themes": [
-        "fantasy",
-        "sprite"
-      ],
-      "useCases": [
-        "level building",
-        "tilemaps",
-        "environment dressing"
-      ],
-      "tags": [
-        "2d",
-        "art",
-        "fantasy",
-        "medieval",
-        "sprite",
-        "static"
-      ],
-      "searchText": "sprbrimstone 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprbrimstone.gif debts in the depths - free pixel art dungeon asset pack sprite sprbrimstone is a static 2d sprite sample from debts in the depths - free pixel art dungeon asset pack. useful for level building, tilemaps, environment dressing. fantasy level building tilemaps environment dressing 2d art medieval static"
-    },
-    {
-      "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprlava.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprlava.gif",
-      "label": "Sprlava",
-      "kind": "sprite",
-      "animated": false,
-      "inspection": {
-        "width": 20,
-        "height": 20,
-        "bgKind": "transparent",
-        "alphaCoverage": 0.715,
-        "transparentCoverage": 0.285,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Sprlava is a static 2D sprite sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for level building, tilemaps, environment dressing.",
-      "category": "sprite",
-      "themes": [
-        "fantasy",
-        "sprite"
-      ],
-      "useCases": [
-        "level building",
-        "tilemaps",
-        "environment dressing"
-      ],
-      "tags": [
-        "2d",
-        "art",
-        "fantasy",
-        "medieval",
-        "sprite",
-        "static"
-      ],
-      "searchText": "sprlava 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprlava.gif debts in the depths - free pixel art dungeon asset pack sprite sprlava is a static 2d sprite sample from debts in the depths - free pixel art dungeon asset pack. useful for level building, tilemaps, environment dressing. fantasy level building tilemaps environment dressing 2d art medieval static"
-    },
-    {
-      "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprrock.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprrock.gif",
-      "label": "Sprrock",
-      "kind": "sprite",
-      "animated": false,
-      "inspection": {
-        "width": 20,
-        "height": 20,
-        "bgKind": "transparent",
-        "alphaCoverage": 0.6725,
-        "transparentCoverage": 0.3275,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Sprrock is a static 2D sprite sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for level building, tilemaps, environment dressing.",
-      "category": "sprite",
-      "themes": [
-        "fantasy",
-        "sprite"
-      ],
-      "useCases": [
-        "level building",
-        "tilemaps",
-        "environment dressing"
-      ],
-      "tags": [
-        "2d",
-        "art",
-        "fantasy",
-        "medieval",
-        "sprite",
-        "static"
-      ],
-      "searchText": "sprrock 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprrock.gif debts in the depths - free pixel art dungeon asset pack sprite sprrock is a static 2d sprite sample from debts in the depths - free pixel art dungeon asset pack. useful for level building, tilemaps, environment dressing. fantasy level building tilemaps environment dressing 2d art medieval static"
-    },
-    {
-      "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprwater.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprwater.gif",
-      "label": "Sprwater",
-      "kind": "sprite",
-      "animated": false,
-      "inspection": {
-        "width": 20,
-        "height": 20,
-        "bgKind": "transparent",
-        "alphaCoverage": 0.7175,
-        "transparentCoverage": 0.2825,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Sprwater is a static 2D sprite sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for level building, tilemaps, environment dressing.",
-      "category": "sprite",
-      "themes": [
-        "fantasy",
-        "sprite"
-      ],
-      "useCases": [
-        "level building",
-        "tilemaps",
-        "environment dressing"
-      ],
-      "tags": [
-        "2d",
-        "art",
-        "fantasy",
-        "medieval",
-        "sprite",
-        "static"
-      ],
-      "searchText": "sprwater 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/environment/sprwater.gif debts in the depths - free pixel art dungeon asset pack sprite sprwater is a static 2d sprite sample from debts in the depths - free pixel art dungeon asset pack. useful for level building, tilemaps, environment dressing. fantasy level building tilemaps environment dressing 2d art medieval static"
     },
     {
       "packFolder": "reaktori-debts-in-the-depths-asset-pack",
@@ -4216,13 +4218,13 @@
     },
     {
       "packFolder": "reaktori-debts-in-the-depths-asset-pack",
-      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/ui/sprheart.gif",
-      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/ui/sprheart.gif",
-      "label": "Sprheart",
+      "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/ui/sprheart__strip-6x4.sheet.png",
+      "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/ui/sprheart__strip-6x4.sheet.png",
+      "label": "Sprheart Strip 6x4.Sheet",
       "kind": "ui",
       "animated": true,
       "inspection": {
-        "width": 6,
+        "width": 18,
         "height": 4,
         "bgKind": "mixed",
         "alphaCoverage": 0.6666666666666666,
@@ -4234,7 +4236,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Sprheart is an animated 2D ui sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for level building, tilemaps, environment dressing.",
+      "description": "Sprheart Strip 6x4.Sheet is an animated 2D ui sample from Debts in the Depths - Free Pixel Art Dungeon Asset Pack. Useful for level building, tilemaps, environment dressing.",
       "category": "ui",
       "themes": [
         "fantasy",
@@ -4253,7 +4255,7 @@
         "medieval",
         "ui"
       ],
-      "searchText": "sprheart 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/ui/sprheart.gif debts in the depths - free pixel art dungeon asset pack ui sprheart is an animated 2d ui sample from debts in the depths - free pixel art dungeon asset pack. useful for level building, tilemaps, environment dressing. fantasy level building tilemaps environment dressing 2d animated art medieval"
+      "searchText": "sprheart strip 6x4.sheet 2d/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/ui/sprheart__strip-6x4.sheet.png debts in the depths - free pixel art dungeon asset pack ui sprheart strip 6x4.sheet is an animated 2d ui sample from debts in the depths - free pixel art dungeon asset pack. useful for level building, tilemaps, environment dressing. fantasy level building tilemaps environment dressing 2d animated art medieval"
     },
     {
       "packFolder": "reaktori-debts-in-the-depths-asset-pack",

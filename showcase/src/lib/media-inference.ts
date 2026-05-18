@@ -65,6 +65,33 @@ function hasToken(text: string, pattern: string): boolean {
   return new RegExp(`(^|\\s)(${pattern})(\\s|$)`, "i").test(tokenText(text));
 }
 
+/**
+ * Clean up Freesound/Kenney-style noise from an audio display label:
+ *   "176741 Deleted User 3277771 Buffer Spell" -> "Buffer Spell"
+ *   "Jingles Hit00" -> "Jingles Hit"
+ *   "Cinematic ... Nexawave 228295" -> "Cinematic ... Nexawave"
+ * File paths stay untouched; this only affects display.
+ */
+export function normalizeAudioDisplayName(input: string): string {
+  let s = input
+    .replace(/([A-Za-z])(\d)/g, "$1 $2")
+    .replace(/(\d)([A-Za-z])/g, "$1 $2")
+    .replace(/[_\-.]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  s = s.replace(/\bdeleted\s+user\s+\d+\b/gi, " ");
+  s = s.replace(/(^|\s)\d{4,}(?=\s|$)/g, " ");
+  s = s.replace(/^\s*\d{3,}\s+/, "");
+  while (/\s\d{2,}$/.test(s)) {
+    s = s.replace(/\s\d{2,}$/, "");
+  }
+
+  s = s.replace(/\s+/g, " ").trim();
+  if (!s) return input.trim();
+  return s.replace(/\b\w/g, (c) => c.toUpperCase());
+}
+
 export function isLikelyMarketingPreviewPath(path: string): boolean {
   const pathParts = parts(path);
   const name = tokenText(basenameWithoutExtension(path));
