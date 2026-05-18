@@ -49,6 +49,7 @@ type ArtTypeFilter = "all" | "ui-icons" | "spritesheets";
 type SpriteSubjectFilter = "all" | "characters" | "environments" | "effects-items" | "other";
 type SpriteMotionFilter = "all" | "animated" | "static";
 type SoundTypeFilter = "all" | "sfx" | "music";
+type SoundSortMode = "shuffle" | "alpha";
 type SoundOrganization = SoundCollection["organization"];
 type SpriteLayoutMode = "static" | "grid" | "variable" | "atlas" | "hybrid-atlas" | "sequence-pack";
 type SpriteSequenceMode = "off" | "hybrid-atlas" | "sequence-pack";
@@ -60,6 +61,9 @@ type SoundEffectItem = SoundSample & {
   organizationLabel: string;
   packHref: string;
 };
+type SoundResult =
+  | { kind: "sfx"; key: string; sortLabel: string; item: SoundEffectItem }
+  | { kind: "music"; key: string; sortLabel: string; track: MusicTrack };
 type SpriteGrid = {
   cols: number;
   rows: number;
@@ -327,7 +331,6 @@ const SOUND_CATEGORY_NAMES: Record<string, string> = {
 };
 const TEXTURE_LIST_PAGE_SIZE = 80;
 const SOUND_LIST_PAGE_SIZE = 32;
-const MUSIC_LIST_PAGE_SIZE = 60;
 const ART_LIST_PAGE_SIZE = 48;
 
 function soundCategoryLabel(category: string): string {
@@ -2834,6 +2837,7 @@ export function MediaExplorer({
   const [spriteMotionFilter, setSpriteMotionFilter] = useState<SpriteMotionFilter>(initialSpriteMotion);
   const [soundTypeFilter, setSoundTypeFilter] = useState<SoundTypeFilter>(initialSoundType);
   const [soundCategoryFilter, setSoundCategoryFilter] = useState("all");
+  const [soundSortMode, setSoundSortMode] = useState<SoundSortMode>("shuffle");
   const [selectedArtFolder, setSelectedArtFolder] = useState(artPacks[0]?.folder ?? "");
   const [selectedSoundPath, setSelectedSoundPath] = useState(
     soundCollections.find((item) => item.samples.length > 0)?.samples[0]?.path ?? "",
@@ -2899,11 +2903,51 @@ export function MediaExplorer({
     });
   }, [query, soundCategoryFilter, soundEffectItems, soundTypeFilter]);
 
-  const filteredMusic = useMemo(() => {
-    if (soundTypeFilter === "sfx") return [];
+  const allSoundResults = useMemo<SoundResult[]>(
+    () => [
+      ...soundEffectItems.map((item) => ({
+        kind: "sfx" as const,
+        key: `sfx:${item.path}`,
+        sortLabel: item.label.toLowerCase(),
+        item,
+      })),
+      ...musicTracks.map((track) => ({
+        kind: "music" as const,
+        key: `music:${track.path}`,
+        sortLabel: track.title.toLowerCase(),
+        track,
+      })),
+    ],
+    [musicTracks, soundEffectItems],
+  );
+
+  const shuffleOrder = useMemo(() => {
+    const order = new Map<string, number>();
+    for (const result of allSoundResults) order.set(result.key, Math.random());
+    return order;
+  }, [allSoundResults]);
+
+  const filteredSoundResults = useMemo(() => {
     const q = query.trim().toLowerCase();
-    return musicTracks.filter((track) => searchMatches(track.searchText, q));
-  }, [musicTracks, query, soundTypeFilter]);
+    const filtered = allSoundResults.filter((result) => {
+      if (result.kind === "sfx") {
+        if (soundTypeFilter === "music") return false;
+        const { item } = result;
+        if (soundCategoryFilter !== "all" && item.category !== soundCategoryFilter) return false;
+        return searchMatches(`${item.searchText} ${item.collection.searchText}`.toLowerCase(), q);
+      }
+      if (soundTypeFilter === "sfx") return false;
+      if (soundCategoryFilter !== "all") return false;
+      const { track } = result;
+      return searchMatches(track.searchText, q);
+    });
+    if (soundSortMode === "alpha") {
+      return [...filtered].sort((a, b) => a.sortLabel.localeCompare(b.sortLabel));
+    }
+    return [...filtered].sort(
+      (a, b) => (shuffleOrder.get(a.key) ?? 0) - (shuffleOrder.get(b.key) ?? 0),
+    );
+  }, [allSoundResults, query, shuffleOrder, soundCategoryFilter, soundSortMode, soundTypeFilter]);
 
   const filteredArt = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -2936,32 +2980,16 @@ export function MediaExplorer({
       .filter((group) => group.packs.length > 0);
   }, [filteredArt, groupMode]);
 
-  const groupedSounds = useMemo(() => {
-    return Array.from(new Set(filteredSounds.map((item) => item.category)))
-      .sort(compareSoundCategories)
-      .map((category) => ({
-        category,
-        label: soundCategoryLabel(category),
-        items: filteredSounds.filter((item) => item.category === category),
-      }))
-      .filter((group) => group.items.length > 0);
-  }, [filteredSounds]);
-
   const soundList = useInfiniteList({
-    total: filteredSounds.length,
+    total: filteredSoundResults.length,
     pageSize: SOUND_LIST_PAGE_SIZE,
-    resetKey: ["sounds", query, soundCategoryFilter, soundTypeFilter].join("|"),
+    resetKey: ["sounds", query, soundCategoryFilter, soundTypeFilter, soundSortMode].join("|"),
   });
 
-  const visibleGroupedSounds = useMemo(() => {
-    let remaining = soundList.visibleCount;
-    return groupedSounds.flatMap((group) => {
-      if (remaining <= 0) return [];
-      const items = group.items.slice(0, remaining);
-      remaining -= items.length;
-      return items.length > 0 ? [{ ...group, items, totalItems: group.items.length }] : [];
-    });
-  }, [groupedSounds, soundList.visibleCount]);
+  const visibleSoundResults = useMemo(
+    () => filteredSoundResults.slice(0, soundList.visibleCount),
+    [filteredSoundResults, soundList.visibleCount],
+  );
 
   const musicPackCount = useMemo(() => new Set(musicTracks.map((track) => musicTrackPackId(track))).size, [musicTracks]);
 
@@ -2993,13 +3021,6 @@ export function MediaExplorer({
     resetKey: `sources:${query}`,
   });
   const visibleTextureMappings = filteredTextureMappings.slice(0, textureList.visibleCount);
-
-  const musicList = useInfiniteList({
-    total: filteredMusic.length,
-    pageSize: MUSIC_LIST_PAGE_SIZE,
-    resetKey: ["music", query, soundTypeFilter].join("|"),
-  });
-  const visibleMusic = filteredMusic.slice(0, musicList.visibleCount);
 
   const artList = useInfiniteList({
     total: filteredArt.length,
@@ -3094,18 +3115,25 @@ export function MediaExplorer({
               ]}
             />
             {soundTypeFilter !== "music" && (
-              <>
-                <SelectDropdown
-                  ariaLabel="Sound category"
-                  value={soundCategoryFilter}
-                  onChange={setSoundCategoryFilter}
-                  options={soundCategories.map((category) => ({
-                    value: category,
-                    label: category === "all" ? "All SFX categories" : soundCategoryLabel(category),
-                  }))}
-                />
-              </>
+              <SelectDropdown
+                ariaLabel="Sound category"
+                value={soundCategoryFilter}
+                onChange={setSoundCategoryFilter}
+                options={soundCategories.map((category) => ({
+                  value: category,
+                  label: category === "all" ? "All SFX categories" : soundCategoryLabel(category),
+                }))}
+              />
             )}
+            <SelectDropdown<SoundSortMode>
+              ariaLabel="Sound sort"
+              value={soundSortMode}
+              onChange={setSoundSortMode}
+              options={[
+                { value: "shuffle", label: "Shuffle" },
+                { value: "alpha", label: "Name (A–Z)" },
+              ]}
+            />
           </>
         ) : (
           <>
@@ -3232,81 +3260,60 @@ export function MediaExplorer({
       ) : view === "sounds" ? (
         <div className={soundTypeFilter === "music" ? "media-single-column" : "media-columns"}>
           <section className="media-panel">
-            {soundTypeFilter !== "music" && (
-              <>
-                <div className="panel-heading">
-                  <h3>Sound effects</h3>
-                  <span>{filteredSounds.length} sounds · {soundEffectCollections.length} packs</span>
-                </div>
-                <div className="sound-groups">
-                  {visibleGroupedSounds.map((group) => (
-                    <section className="sound-group" key={group.category}>
-                      <div className="sound-group-heading">
-                        <h4>{group.label}</h4>
-                        <span>{group.totalItems} sounds</span>
+            <div className="panel-heading">
+              <h3>Sounds</h3>
+              <span>
+                {filteredSoundResults.length} {filteredSoundResults.length === 1 ? "result" : "results"}
+              </span>
+            </div>
+            <div className="media-list">
+              {visibleSoundResults.map((result) =>
+                result.kind === "sfx" ? (
+                  <article
+                    className={`media-row ${result.item.path === selectedSoundPath ? "active" : ""}`}
+                    key={result.key}
+                  >
+                    <button
+                      type="button"
+                      className="row-button"
+                      onClick={() => setSelectedSoundPath(result.item.path)}
+                    >
+                      <div>
+                        <div className="media-row-kicker">
+                          <span className="sound-org sound-org-user-collection">
+                            {soundCategoryLabel(result.item.category)}
+                          </span>
+                        </div>
+                        <div className="media-title">{result.item.label}</div>
+                        <div className="media-detail">{result.item.collection.title}</div>
+                        <p>{result.item.description}</p>
                       </div>
-                      <div className="media-list">
-                        {group.items.map((item) => (
-                          <article className={`media-row ${item.path === selectedSoundPath ? "active" : ""}`} key={item.path}>
-                            <button type="button" className="row-button" onClick={() => setSelectedSoundPath(item.path)}>
-                              <div>
-                                <div className="media-row-kicker">
-                                  <span className="sound-org sound-org-user-collection">
-                                    {soundCategoryLabel(item.category)}
-                                  </span>
-                                </div>
-                                <div className="media-title">{item.label}</div>
-                                <div className="media-detail">{item.collection.title}</div>
-                                <p>{item.description}</p>
-                              </div>
-                            </button>
-                            <div className="media-actions">
-                              {item.collection.url && (
-                                <a href={item.collection.url} target="_blank" rel="noreferrer">
-                                  source
-                                </a>
-                              )}
-                            </div>
-                          </article>
-                        ))}
-                      </div>
-                    </section>
-                  ))}
-                  <InfiniteListSentinel
-                    className="media-list-sentinel"
-                    hasMore={soundList.hasMore}
-                    label="Loading sounds"
-                    onLoadMore={soundList.loadMore}
-                    pageSize={SOUND_LIST_PAGE_SIZE}
-                    remaining={soundList.remaining}
-                    sentinelRef={soundList.sentinelRef}
-                  />
-                  {groupedSounds.length === 0 && <div className="empty-preview">No sound effects match.</div>}
-                </div>
-              </>
-            )}
-
-            {soundTypeFilter !== "sfx" && (
-              <section className="sound-group sound-music-group">
-                <div className="panel-heading">
-                  <h3>Music</h3>
-                  <span>{filteredMusic.length} tracks · {musicPackCount} packs</span>
-                </div>
-                <div className="track-list">
-                  {visibleMusic.map((track) => <MusicTrackRow key={track.path} track={track} />)}
-                  <InfiniteListSentinel
-                    className="media-list-sentinel"
-                    hasMore={musicList.hasMore}
-                    label="Loading tracks"
-                    onLoadMore={musicList.loadMore}
-                    pageSize={MUSIC_LIST_PAGE_SIZE}
-                    remaining={musicList.remaining}
-                    sentinelRef={musicList.sentinelRef}
-                  />
-                  {filteredMusic.length === 0 && <div className="empty-preview">No music tracks match.</div>}
-                </div>
-              </section>
-            )}
+                    </button>
+                    <div className="media-actions">
+                      {result.item.collection.url && (
+                        <a href={result.item.collection.url} target="_blank" rel="noreferrer">
+                          source
+                        </a>
+                      )}
+                    </div>
+                  </article>
+                ) : (
+                  <MusicTrackRow key={result.key} track={result.track} />
+                ),
+              )}
+              <InfiniteListSentinel
+                className="media-list-sentinel"
+                hasMore={soundList.hasMore}
+                label="Loading sounds"
+                onLoadMore={soundList.loadMore}
+                pageSize={SOUND_LIST_PAGE_SIZE}
+                remaining={soundList.remaining}
+                sentinelRef={soundList.sentinelRef}
+              />
+              {filteredSoundResults.length === 0 && (
+                <div className="empty-preview">No sounds match.</div>
+              )}
+            </div>
           </section>
 
           {soundTypeFilter !== "music" && (
