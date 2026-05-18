@@ -139,12 +139,29 @@ function drawFrame(
   );
 }
 
+const SHEET_PNG_PATTERN = /__strip-\d+x\d+\.sheet\.png(\?.*)?$/i;
+
+function deriveGifFallback(url: string): string | null {
+  const match = url.match(/^(.+)__strip-\d+x\d+\.sheet\.png(\?.*)?$/i);
+  if (!match) return null;
+  return `${match[1]}.gif${match[2] ?? ""}`;
+}
+
 export function SpriteLoop({ sample, index }: { sample: LibrarySpritePreview; index: number }) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const [failed, setFailed] = useState(false);
   const [frameCount, setFrameCount] = useState(1);
-  const gif = /\.gif($|[?#])/i.test(sample.path);
+  const [imageSrc, setImageSrc] = useState(sample.src);
+  const fallbackTriedRef = useRef(false);
+  const isStripSheet = SHEET_PNG_PATTERN.test(sample.src);
+  const gif = /\.gif($|[?#])/i.test(sample.path) || (failed && !isStripSheet);
   const renderAsImage = gif || !sample.animated;
+
+  useEffect(() => {
+    setImageSrc(sample.src);
+    setFailed(false);
+    fallbackTriedRef.current = false;
+  }, [sample.src]);
 
   useEffect(() => {
     if (renderAsImage) return;
@@ -182,15 +199,31 @@ export function SpriteLoop({ sample, index }: { sample: LibrarySpritePreview; in
 
     image.onerror = () => {
       if (cancelled) return;
+      if (!fallbackTriedRef.current) {
+        const fallback = deriveGifFallback(imageSrc);
+        if (fallback && fallback !== imageSrc) {
+          fallbackTriedRef.current = true;
+          setImageSrc(fallback);
+          return;
+        }
+      }
       setFailed(true);
     };
-    image.src = sample.src;
+    image.src = imageSrc;
 
     return () => {
       cancelled = true;
       cancelAnimationFrame(raf);
     };
-  }, [renderAsImage, sample.kind, sample.path, sample.src]);
+  }, [renderAsImage, sample.kind, sample.path, imageSrc]);
+
+  const handleImgError = () => {
+    if (fallbackTriedRef.current) return;
+    const fallback = deriveGifFallback(imageSrc);
+    if (!fallback || fallback === imageSrc) return;
+    fallbackTriedRef.current = true;
+    setImageSrc(fallback);
+  };
 
   const animatedFlag =
     sample.animated && (sample.category === "character" || sample.category === "icons");
@@ -212,7 +245,7 @@ export function SpriteLoop({ sample, index }: { sample: LibrarySpritePreview; in
       </div>
       <div className="library-tile-stage">
         {renderAsImage || failed ? (
-          <img src={sample.src} alt="" />
+          <img src={imageSrc} alt="" onError={handleImgError} />
         ) : (
           <canvas
             ref={canvasRef}
