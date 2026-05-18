@@ -3,6 +3,8 @@ const fs = require("node:fs");
 const { PHASE_DEVELOPMENT_SERVER } = require("next/constants");
 
 const DEV_LOCK = path.join(__dirname, ".next-dev.lock.json");
+const IMMUTABLE_BINARY_CACHE_CONTROL = "public, max-age=31536000, immutable";
+const IMMUTABLE_BINARY_ASSET_EXTENSIONS = "glb|gltf|fbx|obj|mp3|wav|ogg|png";
 
 function isPidAlive(pid) {
   if (!Number.isInteger(pid) || pid <= 0) return false;
@@ -56,6 +58,19 @@ const nextConfig = {
     resolveAlias: {
       three: "./node_modules/three",
     },
+  },
+  async headers() {
+    return [
+      {
+        source: `/:path*.:ext(${IMMUTABLE_BINARY_ASSET_EXTENSIONS})`,
+        headers: [
+          {
+            key: "Cache-Control",
+            value: IMMUTABLE_BINARY_CACHE_CONTROL,
+          },
+        ],
+      },
+    ];
   },
   webpack(config) {
     // pnpm + webpack can resolve `three` through multiple symlink paths,
