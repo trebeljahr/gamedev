@@ -9,6 +9,7 @@ import {
   buildSourceMappingMetadata,
 } from "../src/lib/catalog-metadata";
 import {
+  dropFramesCoveredBySheet,
   groupSequenceFrames,
   isLikelyMarketingPreviewPath,
   isLikelyPromoArt,
@@ -482,7 +483,8 @@ async function main() {
     const packSamples = artSamplesByPack.get(pack.folder) ?? [];
     const nonPromoSamples = packSamples.filter((sample) => !sample.promo);
     // Keep promos only when the pack has *nothing else* — better than an empty pack.
-    const visibleSamples = nonPromoSamples.length > 0 ? nonPromoSamples : packSamples;
+    const candidateSamples = nonPromoSamples.length > 0 ? nonPromoSamples : packSamples;
+    const visibleSamples = dropFramesCoveredBySheet(candidateSamples);
     const samples: ArtSampleWithMeta[] = visibleSamples.map((sample) => ({
       ...sample,
       ...buildArtSampleMetadata({

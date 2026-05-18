@@ -342,6 +342,85 @@ export function groupSequenceFrames<T extends { path: string }>(samples: readonl
   return [...buckets.values()].filter((list) => list.length >= 2);
 }
 
+type FrameDedupInput = { path: string; inspection?: ArtInspection };
+
+// Strip explicit sheet-suffix tokens ("coin-sheet" → "coin"). Returns null if
+// the name doesn't carry a sheet token, signalling we shouldn't treat
+// arbitrary numbered siblings as its frames.
+function sheetNameRoot(base: string): string | null {
+  const stripped = base.replace(
+    /[-_\s]*(?:sprite[-_\s]?sheet|spritesheet|sheet|strip|allanim|all[-_\s]?anim)s?$/i,
+    "",
+  );
+  if (stripped === base) return null;
+  const trimmed = stripped.replace(/[-_\s]+$/, "");
+  return trimmed.length > 0 ? trimmed : null;
+}
+
+// When a pack ships a stitched sprite sheet alongside the same frames as
+// individual PNGs (e.g. `coin-sheet.png` + `coin1.png`..`coin6.png`), drop the
+// individuals — the sheet is already the canonical animated sample. Also drops
+// a same-named preview file (e.g. `walk.png` sheet + `walk.gif` preview).
+// Matches by shared parent dir + per-cell dimensions + naming relationship to
+// the sheet (frame-numbered child or exact-stem alternate format).
+export function dropFramesCoveredBySheet<T extends FrameDedupInput>(samples: readonly T[]): T[] {
+  const drop = new Set<T>();
+  const byDir = new Map<string, T[]>();
+  for (const sample of samples) {
+    const dir = sample.path.split("/").slice(0, -1).join("/");
+    const list = byDir.get(dir) ?? [];
+    list.push(sample);
+    byDir.set(dir, list);
+  }
+
+  for (const sheet of samples) {
+    const ins = sheet.inspection;
+    if (!ins || !ins.spriteSheetGrid) continue;
+    const rows = Math.max(1, ins.contentRowRuns);
+    const cols = Math.max(1, ins.contentColRuns);
+    const frameCount = rows * cols;
+    if (frameCount < 2) continue;
+    const cellH = ins.cellMedianHeight ?? Math.round(ins.height / rows);
+    const cellW = ins.cellMedianWidth ?? Math.round(ins.width / cols);
+    if (cellW <= 0 || cellH <= 0) continue;
+
+    const sheetBase = basenameWithoutExtension(sheet.path);
+    const root = sheetNameRoot(sheetBase);
+    const childPattern = root
+      ? new RegExp(`^${root.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}[-_\\s]*\\d{1,4}$`, "i")
+      : null;
+
+    const dir = sheet.path.split("/").slice(0, -1).join("/");
+    const siblings = byDir.get(dir) ?? [];
+    const matches: T[] = [];
+    for (const sib of siblings) {
+      if (sib === sheet) continue;
+      if (drop.has(sib)) continue;
+      const sibIns = sib.inspection;
+      if (!sibIns) continue;
+      if (sibIns.spriteSheetGrid) continue;
+      const sibBase = basenameWithoutExtension(sib.path);
+      const isAlternateOfSheet =
+        sibBase.toLowerCase() === sheetBase.toLowerCase() &&
+        Math.abs(sibIns.width - ins.width) <= 2 &&
+        Math.abs(sibIns.height - ins.height) <= 2;
+      const isChildFrame =
+        childPattern !== null &&
+        childPattern.test(sibBase) &&
+        Math.abs(sibIns.width - cellW) <= 2 &&
+        Math.abs(sibIns.height - cellH) <= 2 &&
+        frameNumberFromPath(sib.path) !== null;
+      if (!isAlternateOfSheet && !isChildFrame) continue;
+      matches.push(sib);
+    }
+    if (matches.length === 0) continue;
+    if (matches.length > frameCount + 2) continue;
+    for (const sib of matches) drop.add(sib);
+  }
+
+  return samples.filter((sample) => !drop.has(sample));
+}
+
 export function frameNumberFromPath(path: string): number | null {
   const base = basenameWithoutExtension(path);
   const match = base.match(/(?:^|[^0-9])(\d{1,5})$/);
