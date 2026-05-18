@@ -2826,7 +2826,6 @@ export function MediaExplorer({
 }: MediaExplorerProps) {
   const [view, setView] = useState<View>(initialView);
   const [query, setQuery] = useState("");
-  const [sourceFilter, setSourceFilter] = useState("all");
   const [licenseFilter, setLicenseFilter] = useState("all");
   const [creatorFilter, setCreatorFilter] = useState("all");
   const [groupMode, setGroupMode] = useState<GroupMode>("type");
@@ -2875,11 +2874,6 @@ export function MediaExplorer({
     [soundEffectCollections],
   );
 
-  const soundSources = useMemo(
-    () => ["all", ...Array.from(new Set(soundEffectItems.map((item) => item.source))).sort()],
-    [soundEffectItems],
-  );
-
   const soundCategories = useMemo(
     () => ["all", ...Array.from(new Set(soundEffectItems.map((item) => item.category))).sort(compareSoundCategories)],
     [soundEffectItems],
@@ -2900,11 +2894,10 @@ export function MediaExplorer({
     if (soundTypeFilter === "music") return [];
     const q = query.trim().toLowerCase();
     return soundEffectItems.filter((item) => {
-      if (sourceFilter !== "all" && item.source !== sourceFilter) return false;
       if (soundCategoryFilter !== "all" && item.category !== soundCategoryFilter) return false;
       return searchMatches(`${item.searchText} ${item.collection.searchText}`.toLowerCase(), q);
     });
-  }, [query, soundCategoryFilter, soundEffectItems, soundTypeFilter, sourceFilter]);
+  }, [query, soundCategoryFilter, soundEffectItems, soundTypeFilter]);
 
   const filteredMusic = useMemo(() => {
     if (soundTypeFilter === "sfx") return [];
@@ -2957,7 +2950,7 @@ export function MediaExplorer({
   const soundList = useInfiniteList({
     total: filteredSounds.length,
     pageSize: SOUND_LIST_PAGE_SIZE,
-    resetKey: ["sounds", query, soundCategoryFilter, soundTypeFilter, sourceFilter].join("|"),
+    resetKey: ["sounds", query, soundCategoryFilter, soundTypeFilter].join("|"),
   });
 
   const visibleGroupedSounds = useMemo(() => {
@@ -3040,7 +3033,6 @@ export function MediaExplorer({
     setSoundTypeFilter(value);
     if (value === "all") {
       setSoundCategoryFilter("all");
-      setSourceFilter("all");
     }
   }
 
@@ -3110,15 +3102,6 @@ export function MediaExplorer({
                   options={soundCategories.map((category) => ({
                     value: category,
                     label: category === "all" ? "All SFX categories" : soundCategoryLabel(category),
-                  }))}
-                />
-                <SelectDropdown
-                  ariaLabel="Sound source"
-                  value={sourceFilter}
-                  onChange={setSourceFilter}
-                  options={soundSources.map((source) => ({
-                    value: source,
-                    label: source === "all" ? "All sources" : source,
                   }))}
                 />
               </>
