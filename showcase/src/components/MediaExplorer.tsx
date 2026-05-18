@@ -18,6 +18,11 @@ import type {
 import { materialSamplesFor, mediaPackHref } from "@/lib/media";
 import { useLoudnessEnvelope, waveformPath } from "@/lib/loudness";
 import {
+  exportAudioSelection,
+  type AudioExportFormat,
+  type AudioExportProgress,
+} from "@/lib/audio-export";
+import {
   artDesignKey,
   isLikelyHybridSpriteAtlasPath,
   isLikelySeparateFramePath,
@@ -2911,6 +2916,11 @@ function SoundPad({ collection, initialSamplePath }: { collection: SoundCollecti
   const [playSignal, setPlaySignal] = useState(0);
   const [selection, setSelection] = useState<AudioSelection | null>(null);
   const [sampleDuration, setSampleDuration] = useState(0);
+  const [downloadFormat, setDownloadFormat] = useState<AudioExportFormat>("mp3");
+  const [exportBusy, setExportBusy] = useState(false);
+  const [exportProgress, setExportProgress] = useState<AudioExportProgress | null>(null);
+  const [exportError, setExportError] = useState<string | null>(null);
+  const exportAbortRef = useRef<AbortController | null>(null);
 
   useEffect(() => {
     setSample(collection.samples.find((item) => item.path === initialSamplePath) ?? collection.samples[0]);
@@ -2922,7 +2932,15 @@ function SoundPad({ collection, initialSamplePath }: { collection: SoundCollecti
   useEffect(() => {
     setSelection(null);
     setSampleDuration(0);
+    setExportError(null);
+    setExportProgress(null);
   }, [sample?.src]);
+
+  useEffect(() => {
+    return () => {
+      exportAbortRef.current?.abort();
+    };
+  }, []);
 
   function play(next: SoundSample | undefined = sample) {
     if (!next) return;
@@ -2939,10 +2957,69 @@ function SoundPad({ collection, initialSamplePath }: { collection: SoundCollecti
     setSelection(null);
   }
 
+  async function handleDownload() {
+    if (!sample?.src || sampleDuration <= 0 || exportBusy) return;
+    setExportError(null);
+    setExportBusy(true);
+    const controller = new AbortController();
+    exportAbortRef.current = controller;
+    const selectionStart = selection?.start ?? 0;
+    const selectionEnd = selection?.end ?? sampleDuration;
+    try {
+      const result = await exportAudioSelection({
+        src: sample.src,
+        format: downloadFormat,
+        selectionStart,
+        selectionEnd,
+        speed: rate,
+        signal: controller.signal,
+        onProgress: (progress) => setExportProgress(progress),
+      });
+      const url = URL.createObjectURL(result.blob);
+      const baseLabel = (sample.label || sample.path.split("/").pop() || "sample").replace(/\.[^.]+$/, "");
+      const safeLabel = baseLabel.replace(/[^a-z0-9-_]+/gi, "-").replace(/-+/g, "-").replace(/^-|-$/g, "") || "sample";
+      const speedTag = rate !== 1 ? `-${rate.toFixed(2)}x` : "";
+      const trimTag = selection ? `-${Math.round(selectionStart * 1000)}-${Math.round(selectionEnd * 1000)}ms` : "";
+      const filename = `${safeLabel}${trimTag}${speedTag}.${downloadFormat}`;
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      window.setTimeout(() => URL.revokeObjectURL(url), 30_000);
+    } catch (error) {
+      if ((error as DOMException)?.name === "AbortError") {
+        // ignore — user-initiated
+      } else {
+        setExportError(error instanceof Error ? error.message : String(error));
+      }
+    } finally {
+      if (exportAbortRef.current === controller) exportAbortRef.current = null;
+      setExportBusy(false);
+      setExportProgress(null);
+    }
+  }
+
+  function cancelDownload() {
+    exportAbortRef.current?.abort();
+  }
+
   const selectionDuration = selection ? Math.max(0, selection.end - selection.start) : sampleDuration;
   const exportDuration = rate > 0 ? selectionDuration / rate : selectionDuration;
   const hasNonTrivialSelection =
     Boolean(selection) && sampleDuration > 0 && (selection!.start > 0.01 || selection!.end < sampleDuration - 0.01);
+  const canDownload = Boolean(sample?.src) && sampleDuration > 0 && selectionDuration > 0.05;
+  const progressLabel = exportProgress
+    ? `${exportProgress.message ?? exportProgress.stage} · ${Math.round(exportProgress.ratio * 100)}%`
+    : null;
+  const progressBarValue = exportProgress
+    ? exportProgress.stage === "decode"
+      ? exportProgress.ratio * 0.25
+      : exportProgress.stage === "render"
+        ? 0.25 + exportProgress.ratio * 0.25
+        : 0.5 + exportProgress.ratio * 0.5
+    : 0;
 
   return (
     <section className="sound-pad">
@@ -3009,6 +3086,70 @@ function SoundPad({ collection, initialSamplePath }: { collection: SoundCollecti
           </div>
         )}
       </div>
+      {sample?.src && (
+        <div className="sound-download">
+          <div className="sound-download-head">
+            <div className="sound-download-summary">
+              <span>Download selection</span>
+              <strong>
+                {selectionDuration > 0 ? `${exportDuration.toFixed(2)}s` : "—"}
+                {rate !== 1 && <small> @ {rate.toFixed(2)}x</small>}
+              </strong>
+            </div>
+            <div className="sound-download-actions">
+              <label className="sound-download-format">
+                Format
+                <select
+                  value={downloadFormat}
+                  onChange={(event) => setDownloadFormat(event.target.value as AudioExportFormat)}
+                  disabled={exportBusy}
+                >
+                  <option value="mp3">MP3</option>
+                  <option value="wav">WAV (lossless)</option>
+                </select>
+              </label>
+              {exportBusy ? (
+                <button type="button" className="sound-download-button danger" onClick={cancelDownload}>
+                  Cancel
+                </button>
+              ) : (
+                <button
+                  type="button"
+                  className="sound-download-button primary"
+                  onClick={handleDownload}
+                  disabled={!canDownload}
+                >
+                  Download {downloadFormat.toUpperCase()}
+                </button>
+              )}
+            </div>
+          </div>
+          {(exportBusy || exportProgress || exportError) && (
+            <div className="sound-download-progress" role="status" aria-live="polite">
+              {exportBusy && (
+                <>
+                  <div className="sound-download-bar">
+                    <div
+                      className="sound-download-bar-fill"
+                      style={{ width: `${Math.round(progressBarValue * 100)}%` }}
+                    />
+                  </div>
+                  <span className="sound-download-stage">
+                    {progressLabel ?? "Preparing…"}
+                  </span>
+                </>
+              )}
+              {!exportBusy && exportError && (
+                <span className="sound-download-error">Export failed: {exportError}</span>
+              )}
+            </div>
+          )}
+          <p className="sound-download-hint">
+            MP3 encoding happens in a background worker so the UI stays responsive. WAV is lossless but larger.
+            Source audio is unchanged — re-select to export a different range.
+          </p>
+        </div>
+      )}
       <div className="sound-buttons">
         {collection.samples.length > 0 ? (
           collection.samples.map((item) => (
