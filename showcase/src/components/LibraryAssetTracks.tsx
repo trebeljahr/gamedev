@@ -113,9 +113,6 @@ export function LibraryAssetTracks({
             <Link className="landing-button primary" href="/media?view=art&type=all">
               Browse 2D art
             </Link>
-            <Link className="landing-button secondary" href="/media?view=art&type=spritesheets&motion=animated">
-              Animated only
-            </Link>
           </div>
         </div>
       </article>
@@ -138,9 +135,6 @@ export function LibraryAssetTracks({
           <div className="library-track-actions">
             <Link className="landing-button primary" href="/media?view=sounds&type=all">
               Browse sounds
-            </Link>
-            <Link className="landing-button secondary" href="/media?view=sounds&type=music">
-              Music only
             </Link>
           </div>
         </div>
