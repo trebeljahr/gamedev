@@ -166,7 +166,14 @@ export function NavDrawer({
 
     positionPanel();
     window.addEventListener("resize", positionPanel);
-    window.addEventListener("scroll", positionPanel, true);
+
+    function closeOnScroll(event: Event) {
+      const target = event.target;
+      if (target instanceof Node && panelRef.current?.contains(target)) return;
+      setOpen(false);
+    }
+
+    window.addEventListener("scroll", closeOnScroll, true);
 
     const resizeObserver = typeof ResizeObserver === "undefined" ? null : new ResizeObserver(positionPanel);
     if (resizeObserver) {
@@ -176,10 +183,10 @@ export function NavDrawer({
 
     return () => {
       window.removeEventListener("resize", positionPanel);
-      window.removeEventListener("scroll", positionPanel, true);
+      window.removeEventListener("scroll", closeOnScroll, true);
       resizeObserver?.disconnect();
     };
-  }, [isOpen, positionPanel]);
+  }, [isOpen, positionPanel, setOpen]);
 
   function handleTriggerKeyDown(event: KeyboardEvent<HTMLElement>) {
     if (event.key === "ArrowDown") {
