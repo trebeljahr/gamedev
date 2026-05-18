@@ -90,7 +90,12 @@ export function LibraryAssetTracks({
           </p>
         </div>
         <div className="library-track-visual library-track-visual--3d">
-          <LandingModelBackdrop models={models} />
+          <LandingModelBackdrop
+            models={models}
+            cameraPosition={[4.5, 3, 8.5]}
+            fov={42}
+            contactShadowScale={18}
+          />
           <div className="library-tile-chip library-tile-chip--floating" data-tone="model">
             <span>3D</span>
             <strong>{models.length} live models</strong>

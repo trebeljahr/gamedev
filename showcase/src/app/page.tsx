@@ -121,70 +121,36 @@ const audioAnalysisItems = (() => {
   }).items ?? {};
 })();
 
-const FEATURED_MODEL_PICKS = [
-  {
-    packId: "kaykit/medieval-builder-pack",
-    name: "castle",
-    position: [-0.4, -0.78, -1.6],
-    rotation: [0, 0.45, 0],
-    scale: 0.4,
-  },
-  {
-    packId: "kaykit/medieval-builder-pack",
-    name: "barracks",
-    position: [-2.9, -0.78, -0.4],
-    rotation: [0, 0.95, 0],
-    scale: 0.42,
-  },
-  {
-    packId: "kaykit/adventurers",
-    name: "Barbarian",
-    position: [1.6, -0.78, 0.5],
-    rotation: [0, -0.55, 0],
-    scale: 0.34,
-  },
-  {
-    packId: "kenney/cube-pets",
-    name: "animal-bunny",
-    position: [-1.7, -0.78, 1.7],
-    rotation: [0, 0.6, 0],
-    scale: 0.35,
-  },
-  {
-    packId: "kenney/cube-pets",
-    name: "animal-cat",
-    position: [2.85, -0.78, 1.85],
-    rotation: [0, -0.85, 0],
-    scale: 0.38,
-  },
-  {
-    packId: "quaternius/spaceships-by-quaternius",
-    name: "Spaceship3",
-    position: [3.3, 1.5, -0.1],
-    rotation: [-0.18, -0.85, 0.08],
-    scale: 0.16,
-  },
-  {
-    packId: "quaternius/animated-robot-oct-2018",
-    name: "Robot",
-    position: [3.8, -0.78, 0.6],
-    rotation: [0, -0.55, 0],
-    scale: 0.24,
-  },
-  {
-    packId: "kaykit/adventurers",
-    name: "Mage",
-    position: [-2.2, -0.78, 1.0],
-    rotation: [0, 0.55, 0],
-    scale: 0.32,
-  },
-] satisfies Array<{
+type ModelSlot = {
   packId: string;
   name: string;
-  position: [number, number, number];
-  rotation: [number, number, number];
   scale: number;
-}>;
+  yLift?: number;
+  floats?: boolean;
+};
+
+const HERO_MODEL_SLOTS: ModelSlot[] = [
+  { packId: "kaykit/medieval-builder-pack", name: "castle", scale: 0.3 },
+  { packId: "kaykit/medieval-builder-pack", name: "barracks", scale: 0.32 },
+  { packId: "kaykit/medieval-builder-pack", name: "bridge", scale: 0.32 },
+  { packId: "kaykit/adventurers", name: "barbarian", scale: 0.32 },
+  { packId: "kaykit/adventurers", name: "knight", scale: 0.32 },
+  { packId: "kaykit/adventurers", name: "mage", scale: 0.32 },
+  { packId: "kaykit/adventurers", name: "ranger", scale: 0.32 },
+  { packId: "kaykit/adventurers", name: "rogue", scale: 0.32 },
+  { packId: "kaykit/skeletons", name: "skeleton-minion", scale: 0.5 },
+  { packId: "kaykit/skeletons", name: "skeleton-mage", scale: 0.5 },
+  { packId: "kenney/cube-pets", name: "animal-bunny", scale: 0.34 },
+  { packId: "kenney/cube-pets", name: "animal-cat", scale: 0.34 },
+  { packId: "kenney/cube-pets", name: "animal-fox", scale: 0.34 },
+  { packId: "kenney/cube-pets", name: "animal-tiger", scale: 0.34 },
+  { packId: "kenney/car-kit", name: "ambulance", scale: 0.4 },
+  { packId: "quaternius/animated-robot-oct-2018", name: "robot", scale: 0.22 },
+  { packId: "quaternius/cube-world-aug-2023", name: "skeleton", scale: 0.45 },
+  { packId: "quaternius/ultimate-space-kit-march-2023", name: "astronaut-barbarathebee", scale: 0.36 },
+  { packId: "quaternius/spaceships-by-quaternius", name: "spaceship3", scale: 0.16, floats: true, yLift: 2.4 },
+  { packId: "quaternius/spaceships-by-quaternius", name: "spaceship", scale: 0.14, floats: true, yLift: 2.8 },
+];
 
 type FeaturedSoundPick = {
   kind: "music" | "sfx";
@@ -216,49 +182,28 @@ const FEATURED_SOUND_PICKS: FeaturedSoundPick[] = [
   },
 ];
 
-const TRACK_MODEL_PICKS = [
-  {
-    packId: "kaykit/medieval-builder-pack",
-    name: "castle",
-    position: [-1.8, -0.74, -0.2],
-    rotation: [0, 0.4, 0],
-    scale: 0.5,
-  },
-  {
-    packId: "kaykit/adventurers",
-    name: "Knight",
-    position: [-0.55, -0.74, 0.3],
-    rotation: [0, 0.25, 0],
-    scale: 0.5,
-  },
-  {
-    packId: "kenney/car-kit",
-    name: "ambulance",
-    position: [0.8, -0.74, -0.25],
-    rotation: [0, -0.55, 0],
-    scale: 0.42,
-  },
-  {
-    packId: "quaternius/ultimate-space-kit-march-2023",
-    name: "Astronaut_BarbaraTheBee",
-    position: [0.55, -0.74, 0.55],
-    rotation: [0, -0.4, 0],
-    scale: 0.42,
-  },
-  {
-    packId: "kaykit/skeletons",
-    name: "Skeleton_Blade",
-    position: [1.85, -0.74, 0.1],
-    rotation: [0, -0.3, 0],
-    scale: 0.6,
-  },
-] satisfies Array<{
-  packId: string;
-  name: string;
-  position: [number, number, number];
-  rotation: [number, number, number];
-  scale: number;
-}>;
+const TRACK_MODEL_SLOTS: ModelSlot[] = [
+  { packId: "kaykit/medieval-builder-pack", name: "castle", scale: 0.3 },
+  { packId: "kaykit/medieval-builder-pack", name: "barracks", scale: 0.32 },
+  { packId: "kaykit/medieval-builder-pack", name: "farm-plot", scale: 0.34 },
+  { packId: "kaykit/adventurers", name: "knight", scale: 0.34 },
+  { packId: "kaykit/adventurers", name: "mage", scale: 0.34 },
+  { packId: "kaykit/adventurers", name: "ranger", scale: 0.34 },
+  { packId: "kaykit/skeletons", name: "skeleton-blade", scale: 0.5 },
+  { packId: "kenney/cube-pets", name: "animal-elephant", scale: 0.34 },
+  { packId: "kenney/cube-pets", name: "animal-giraffe", scale: 0.32 },
+  { packId: "kenney/cube-pets", name: "animal-monkey", scale: 0.34 },
+  { packId: "kenney/cube-pets", name: "animal-penguin", scale: 0.34 },
+  { packId: "kenney/cube-pets", name: "animal-cow", scale: 0.34 },
+  { packId: "kenney/car-kit", name: "sedan-sports", scale: 0.42 },
+  { packId: "kenney/car-kit", name: "police", scale: 0.42 },
+  { packId: "quaternius/animated-robot-oct-2018", name: "robot", scale: 0.22 },
+  { packId: "quaternius/cube-world-aug-2023", name: "character-male-1", scale: 0.45 },
+  { packId: "quaternius/cube-world-aug-2023", name: "cat", scale: 0.45 },
+  { packId: "quaternius/ultimate-space-kit-march-2023", name: "astronaut-fernandotheflamingo", scale: 0.36 },
+  { packId: "quaternius/spaceships-by-quaternius", name: "spaceship2", scale: 0.16, floats: true, yLift: 2.4 },
+  { packId: "quaternius/ultimate-fantasy-rts-aug-2022", name: "archery-firstage-level1", scale: 0.4 },
+];
 
 const TRACK_MUSIC_PICKS: FeaturedSoundPick[] = [
   { kind: "music", tone: "music", collectionLabel: "Kevin MacLeod", matchTitle: "Clash Defiant" },
@@ -268,39 +213,89 @@ const TRACK_MUSIC_PICKS: FeaturedSoundPick[] = [
   { kind: "music", tone: "jingle", collectionLabel: "Kenney Jingles", matchTitle: "Jingles Hit 03" },
 ];
 
-type ModelPick = {
-  packId: string;
-  name: string;
+const GROUNDED_Y = -0.78;
+const GROUND_RING_RADII = [1.7, 3.2, 4.7] as const;
+const GROUND_RING_COUNTS = [5, 7, 6] as const;
+const FLOAT_X_POSITIONS = [-3.4, 3.6] as const;
+const FLOAT_Z_POSITIONS = [-2.6, -1.4] as const;
+
+function layoutGroundedSlot(index: number): {
   position: [number, number, number];
   rotation: [number, number, number];
-  scale: number;
-};
+} {
+  let remaining = index;
+  let ring = 0;
+  for (; ring < GROUND_RING_COUNTS.length; ring += 1) {
+    if (remaining < GROUND_RING_COUNTS[ring]) break;
+    remaining -= GROUND_RING_COUNTS[ring];
+  }
+  const safeRing = Math.min(ring, GROUND_RING_COUNTS.length - 1);
+  const count = GROUND_RING_COUNTS[safeRing];
+  const radius = GROUND_RING_RADII[safeRing];
+  const arcStart = -(Math.PI * 0.62);
+  const arcEnd = Math.PI * 0.42;
+  const t = (count as number) <= 1 ? 0.5 : remaining / (count - 1);
+  const ringOffset = safeRing % 2 === 0 ? 0 : (arcEnd - arcStart) / count / 2;
+  const angle = arcStart + (arcEnd - arcStart) * t + ringOffset;
+  const x = Math.cos(angle) * radius;
+  const z = Math.sin(angle) * radius * 0.55 + (safeRing === 0 ? 0.4 : 0);
+  const rotY = Math.atan2(4.5 - x, 8.5 - z) + (((index * 73) % 17) - 8) / 70;
+  return {
+    position: [x, GROUNDED_Y, z],
+    rotation: [0, rotY, 0],
+  };
+}
 
-function picksToPreviews(picks: ModelPick[]): LibraryModelPreview[] {
-  return picks.flatMap((pick) => {
-    const pack = manifest.packs.find((item) => item.id === pick.packId);
-    const model = pack?.models.find((item) => item.name === pick.name);
+function layoutFloatingSlot(
+  index: number,
+  yLift: number,
+): {
+  position: [number, number, number];
+  rotation: [number, number, number];
+} {
+  const x = FLOAT_X_POSITIONS[index % FLOAT_X_POSITIONS.length];
+  const z = FLOAT_Z_POSITIONS[index % FLOAT_Z_POSITIONS.length];
+  const rotY = Math.atan2(4.5 - x, 8.5 - z) - 0.4;
+  return {
+    position: [x, GROUNDED_Y + yLift, z],
+    rotation: [-0.12, rotY, 0.06],
+  };
+}
+
+function slotsToPreviews(slots: ModelSlot[]): LibraryModelPreview[] {
+  let groundedIndex = 0;
+  let floatingIndex = 0;
+  return slots.flatMap((slot, slotIndex) => {
+    const pack = manifest.packs.find((item) => item.id === slot.packId);
+    const model = pack?.models.find((item) => item.name === slot.name);
     if (!pack || !model) return [];
     const optimized = downloadsForModel(model).find((download) => download.optimized);
-
+    const placement = slot.floats
+      ? layoutFloatingSlot(floatingIndex++, slot.yLift ?? 2.4)
+      : layoutGroundedSlot(groundedIndex++);
+    const spinSpeed =
+      (0.045 + ((slotIndex * 31) % 11) / 110) * (slotIndex % 2 === 0 ? 1 : -1);
+    const spinPhase = ((slotIndex * 97) % 360) * (Math.PI / 180);
     return {
       label: model.title,
       file: optimized?.file ?? model.file,
       source: pack.source,
       minY: model.minY,
-      position: pick.position,
-      rotation: pick.rotation,
-      scale: pick.scale,
+      position: placement.position,
+      rotation: placement.rotation,
+      scale: slot.scale,
+      spinSpeed,
+      spinPhase,
     };
   });
 }
 
 function selectFeaturedModels(): LibraryModelPreview[] {
-  return picksToPreviews(FEATURED_MODEL_PICKS);
+  return slotsToPreviews(HERO_MODEL_SLOTS);
 }
 
 function selectTrackModels(): LibraryModelPreview[] {
-  return picksToPreviews(TRACK_MODEL_PICKS);
+  return slotsToPreviews(TRACK_MODEL_SLOTS);
 }
 
 function landingSpriteScore(
