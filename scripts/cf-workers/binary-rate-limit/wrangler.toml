@@ -1,0 +1,17 @@
+name = "gamedev-binary-rate-limit"
+main = "src/index.ts"
+compatibility_date = "2026-05-19"
+workers_dev = false
+preview_urls = false
+
+# Fill these IDs after creating the namespace:
+#   wrangler kv namespace create BINARY_REQ_COUNTS
+#   wrangler kv namespace create BINARY_REQ_COUNTS --preview
+[[kv_namespaces]]
+binding = "BINARY_REQ_COUNTS"
+id = "REPLACE_WITH_BINARY_REQ_COUNTS_KV_ID"
+preview_id = "REPLACE_WITH_BINARY_REQ_COUNTS_PREVIEW_KV_ID"
+
+# Attach routes manually after confirming the binary asset host/prefixes.
+# Suggested production route:
+#   assets.gamedev.trebeljahr.com/*
