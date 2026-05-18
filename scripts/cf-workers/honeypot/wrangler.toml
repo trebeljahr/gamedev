@@ -1,0 +1,13 @@
+name = "gamedev-honeypot"
+main = "src/index.ts"
+compatibility_date = "2026-05-18"
+workers_dev = false
+
+[[kv_namespaces]]
+binding = "HONEYPOT_BLOCKLIST"
+id = "replace-with-honeypot-blocklist-kv-id"
+
+[assets]
+directory = "../../../assets/honey-trap"
+binding = "ASSETS"
+run_worker_first = true
