@@ -74,7 +74,7 @@ export function SiteHeader({ meta, compact = false, active }: SiteHeaderProps) {
     <header className={`app-header ${compact ? "compact" : ""}`}>
       <div className="app-header-main">
         <h1>
-          <Link className="app-title" href="/landing-page">
+          <Link className="app-title" href="/">
             GameDev Asset Library
           </Link>
         </h1>

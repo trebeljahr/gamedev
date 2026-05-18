@@ -3247,15 +3247,6 @@ select:focus-visible {
   letter-spacing: 0.06em;
 }
 
-.landing-page {
-  min-height: 100vh;
-  overflow-x: hidden;
-  background:
-    linear-gradient(180deg, rgba(14,14,16,0) 0%, var(--bg) 58%),
-    linear-gradient(112deg, rgba(255,216,77,0.09), rgba(255,216,77,0) 38%),
-    #0b0b0d;
-  color: var(--text);
-}
 .landing-hero {
   position: relative;
   min-height: 94svh;
