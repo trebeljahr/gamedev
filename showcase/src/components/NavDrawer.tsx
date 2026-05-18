@@ -106,7 +106,17 @@ export function NavDrawer({
     const panelWidth = Math.min(panelRect.width || panel.offsetWidth, maxWidth);
     const panelHeight = Math.min(panelRect.height || panel.offsetHeight, maxHeight);
 
-    const left = clamp(triggerRect.left, VIEWPORT_MARGIN, viewportWidth - panelWidth - VIEWPORT_MARGIN);
+    const leftAnchored = triggerRect.left;
+    const rightAnchored = triggerRect.right - panelWidth;
+    const fitsLeftAnchored = leftAnchored + panelWidth <= viewportWidth - VIEWPORT_MARGIN;
+    const fitsRightAnchored = rightAnchored >= VIEWPORT_MARGIN;
+    const preferredLeft = fitsLeftAnchored
+      ? leftAnchored
+      : fitsRightAnchored
+        ? rightAnchored
+        : leftAnchored;
+    const left = clamp(preferredLeft, VIEWPORT_MARGIN, viewportWidth - panelWidth - VIEWPORT_MARGIN);
+
     const belowTop = triggerRect.bottom + PANEL_GAP;
     const aboveTop = triggerRect.top - PANEL_GAP - panelHeight;
     const hasRoomBelow = belowTop + panelHeight <= viewportHeight - VIEWPORT_MARGIN;

@@ -2118,20 +2118,23 @@ select:focus-visible {
   min-height: 38px;
 }
 .filter-dropdown {
-  flex: 0 1 190px;
-  min-width: 150px;
+  flex: 0 0 auto;
+  max-width: 100%;
 }
 .filter-dropdown .nav-trigger {
-  width: 100%;
-  justify-content: space-between;
+  max-width: 100%;
+  gap: 8px;
   padding: 0 10px;
   background: var(--surface);
   border-color: var(--border);
   color: var(--text);
 }
+.filter-dropdown .nav-trigger .dropdown-label {
+  max-width: 220px;
+}
 .filter-dropdown .nav-panel {
   z-index: 25;
-  min-width: max(100%, 190px);
+  min-width: 190px;
   max-width: min(360px, calc(100vw - 32px));
   max-height: min(340px, 70vh);
   overflow: auto;
@@ -4062,8 +4065,10 @@ select:focus-visible {
     max-height: none;
   }
   .filter-dropdown {
-    width: 100%;
-    flex-basis: auto;
+    max-width: 100%;
+  }
+  .filter-dropdown .nav-trigger .dropdown-label {
+    max-width: 60vw;
   }
   .library-hero {
     display: grid;
