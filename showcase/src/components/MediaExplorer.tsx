@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { type CSSProperties, type ReactNode, useEffect, useId, useMemo, useRef, useState } from "react";
+import { type CSSProperties, type PointerEvent as ReactPointerEvent, type ReactNode, useEffect, useId, useMemo, useRef, useState } from "react";
 import { LicenseLink } from "@/components/LicenseLink";
 import { NavDrawer, SelectDropdown } from "@/components/NavDrawer";
 import { InfiniteListSentinel, useInfiniteList } from "@/components/useInfiniteList";
@@ -2531,6 +2531,8 @@ function ArtPackCard({
   );
 }
 
+type AudioSelection = { start: number; end: number };
+
 function AudioPlayer({
   src,
   title,
@@ -2541,6 +2543,9 @@ function AudioPlayer({
   playSignal = 0,
   compact = false,
   audio,
+  selection,
+  onSelectionChange,
+  onDurationChange,
 }: {
   src: string | undefined;
   title: string;
@@ -2551,8 +2556,12 @@ function AudioPlayer({
   playSignal?: number;
   compact?: boolean;
   audio?: AudioAnalysis;
+  selection?: AudioSelection;
+  onSelectionChange?: (next: AudioSelection) => void;
+  onDurationChange?: (duration: number) => void;
 }) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const waveformShellRef = useRef<HTMLDivElement | null>(null);
   const waveformClipId = `audio-waveform-${useId().replace(/:/g, "")}`;
   const [playing, setPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
@@ -2564,8 +2573,20 @@ function AudioPlayer({
   const progressStyle = { "--progress": `${progress}%` } as CSSProperties;
   const waveformClipWidth = (progress / 100) * 1000;
 
+  const hasSelection = Boolean(selection && onSelectionChange);
+  const effectiveSelection = useMemo<AudioSelection | null>(() => {
+    if (!hasSelection || !selection || duration <= 0) return null;
+    const start = clamp(selection.start, 0, duration);
+    const end = clamp(selection.end > start ? selection.end : duration, start, duration);
+    return { start, end };
+  }, [hasSelection, selection, duration]);
+  const selectionStartPct = effectiveSelection && duration > 0 ? (effectiveSelection.start / duration) * 100 : 0;
+  const selectionEndPct = effectiveSelection && duration > 0 ? (effectiveSelection.end / duration) * 100 : 100;
+
   function setMediaDuration(value: number) {
-    setDuration(Number.isFinite(value) && value > 0 ? value : 0);
+    const next = Number.isFinite(value) && value > 0 ? value : 0;
+    setDuration(next);
+    if (next > 0) onDurationChange?.(next);
   }
 
   useEffect(() => {
@@ -2573,8 +2594,8 @@ function AudioPlayer({
     if (!audio) return;
     audio.volume = volume;
     audio.playbackRate = rate;
-    audio.loop = loop;
-  }, [loop, rate, volume]);
+    audio.loop = false;
+  }, [rate, volume]);
 
   useEffect(() => {
     setCurrentTime(0);
@@ -2585,10 +2606,10 @@ function AudioPlayer({
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio || !src || playSignal === 0) return;
-    audio.currentTime = 0;
+    audio.currentTime = effectiveSelection?.start ?? 0;
     const playPromise = audio.play();
     void playPromise?.catch(() => setPlaying(false));
-  }, [playSignal, src]);
+  }, [playSignal, src, effectiveSelection?.start]);
 
   useEffect(() => {
     if (!playing) return;
@@ -2597,21 +2618,41 @@ function AudioPlayer({
       const audio = audioRef.current;
       if (!audio || audio.paused || audio.ended) return;
       const target = audio.currentTime || 0;
-      setCurrentTime((previous) => {
-        if (!Number.isFinite(previous) || Math.abs(target - previous) > 0.35) return target;
-        const eased = previous + (target - previous) * 0.45;
-        return Math.abs(eased - target) < 0.004 ? target : eased;
-      });
+      if (effectiveSelection && target >= effectiveSelection.end - 0.005) {
+        if (loop) {
+          audio.currentTime = effectiveSelection.start;
+          setCurrentTime(effectiveSelection.start);
+        } else {
+          audio.pause();
+          setCurrentTime(effectiveSelection.end);
+          return;
+        }
+      } else if (!effectiveSelection && loop && duration > 0 && target >= duration - 0.005) {
+        audio.currentTime = 0;
+        setCurrentTime(0);
+      } else {
+        setCurrentTime((previous) => {
+          if (!Number.isFinite(previous) || Math.abs(target - previous) > 0.35) return target;
+          const eased = previous + (target - previous) * 0.45;
+          return Math.abs(eased - target) < 0.004 ? target : eased;
+        });
+      }
       raf = requestAnimationFrame(tick);
     };
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [playing]);
+  }, [playing, effectiveSelection, loop, duration]);
 
   function togglePlay() {
     const audio = audioRef.current;
     if (!audio || !src) return;
     if (audio.paused) {
+      if (effectiveSelection) {
+        const t = audio.currentTime;
+        if (t < effectiveSelection.start || t >= effectiveSelection.end - 0.005) {
+          audio.currentTime = effectiveSelection.start;
+        }
+      }
       void audio.play().catch(() => setPlaying(false));
     } else {
       audio.pause();
@@ -2625,8 +2666,51 @@ function AudioPlayer({
     setCurrentTime(value);
   }
 
+  function beginHandleDrag(which: "start" | "end") {
+    return (event: ReactPointerEvent<HTMLDivElement>) => {
+      if (!effectiveSelection || !onSelectionChange || !waveformShellRef.current) return;
+      event.preventDefault();
+      event.stopPropagation();
+      const shell = waveformShellRef.current;
+      const target = event.currentTarget;
+      try {
+        target.setPointerCapture(event.pointerId);
+      } catch {
+        // ignore
+      }
+      const updateFromClientX = (clientX: number) => {
+        const rect = shell.getBoundingClientRect();
+        const ratio = clamp((clientX - rect.left) / Math.max(rect.width, 1), 0, 1);
+        const value = ratio * duration;
+        const minGap = Math.min(0.1, duration * 0.01);
+        if (which === "start") {
+          const next = clamp(value, 0, effectiveSelection.end - minGap);
+          onSelectionChange({ start: next, end: effectiveSelection.end });
+        } else {
+          const next = clamp(value, effectiveSelection.start + minGap, duration);
+          onSelectionChange({ start: effectiveSelection.start, end: next });
+        }
+      };
+      updateFromClientX(event.clientX);
+      const move = (ev: PointerEvent) => updateFromClientX(ev.clientX);
+      const up = () => {
+        try {
+          target.releasePointerCapture(event.pointerId);
+        } catch {
+          // ignore
+        }
+        window.removeEventListener("pointermove", move);
+        window.removeEventListener("pointerup", up);
+        window.removeEventListener("pointercancel", up);
+      };
+      window.addEventListener("pointermove", move);
+      window.addEventListener("pointerup", up);
+      window.addEventListener("pointercancel", up);
+    };
+  }
+
   return (
-    <div className={`audio-player ${compact ? "compact" : ""} ${playing ? "playing" : ""}`}>
+    <div className={`audio-player ${compact ? "compact" : ""} ${playing ? "playing" : ""} ${effectiveSelection ? "has-selection" : ""}`}>
       <audio
         ref={audioRef}
         preload="none"
@@ -2664,7 +2748,7 @@ function AudioPlayer({
           </div>
         </div>
         <div className="audio-strip">
-          <div className="audio-waveform-shell" style={progressStyle}>
+          <div className="audio-waveform-shell" style={progressStyle} ref={waveformShellRef}>
             <svg className="audio-waveform" viewBox="0 0 1000 100" preserveAspectRatio="none" aria-hidden="true">
               <defs>
                 <clipPath id={waveformClipId}>
@@ -2675,6 +2759,21 @@ function AudioPlayer({
               <path className="audio-waveform-path audio-waveform-base" d={waveform} />
               <path className="audio-waveform-path audio-waveform-played" clipPath={`url(#${waveformClipId})`} d={waveform} />
             </svg>
+            {effectiveSelection && (
+              <>
+                <div className="audio-selection-mask audio-selection-mask-left" style={{ width: `${selectionStartPct}%` }} aria-hidden="true" />
+                <div
+                  className="audio-selection-mask audio-selection-mask-right"
+                  style={{ left: `${selectionEndPct}%`, width: `${100 - selectionEndPct}%` }}
+                  aria-hidden="true"
+                />
+                <div
+                  className="audio-selection-region"
+                  style={{ left: `${selectionStartPct}%`, width: `${selectionEndPct - selectionStartPct}%` }}
+                  aria-hidden="true"
+                />
+              </>
+            )}
             <input
               aria-label={`Seek ${title}`}
               className="audio-seeker"
@@ -2686,6 +2785,70 @@ function AudioPlayer({
               onChange={(event) => seek(Number(event.target.value))}
               disabled={!src || duration <= 0}
             />
+            {effectiveSelection && (
+              <>
+                <div
+                  className="audio-selection-handle audio-selection-handle-start"
+                  style={{ left: `${selectionStartPct}%` }}
+                  role="slider"
+                  aria-label="Selection start"
+                  aria-valuemin={0}
+                  aria-valuemax={duration}
+                  aria-valuenow={effectiveSelection.start}
+                  tabIndex={0}
+                  onPointerDown={beginHandleDrag("start")}
+                  onKeyDown={(event) => {
+                    if (!onSelectionChange) return;
+                    const step = event.shiftKey ? 1 : 0.1;
+                    if (event.key === "ArrowLeft") {
+                      event.preventDefault();
+                      onSelectionChange({
+                        start: clamp(effectiveSelection.start - step, 0, effectiveSelection.end - 0.1),
+                        end: effectiveSelection.end,
+                      });
+                    } else if (event.key === "ArrowRight") {
+                      event.preventDefault();
+                      onSelectionChange({
+                        start: clamp(effectiveSelection.start + step, 0, effectiveSelection.end - 0.1),
+                        end: effectiveSelection.end,
+                      });
+                    }
+                  }}
+                >
+                  <span className="audio-selection-handle-label">{formatTime(effectiveSelection.start)}</span>
+                </div>
+                <div
+                  className="audio-selection-handle audio-selection-handle-end"
+                  style={{ left: `${selectionEndPct}%` }}
+                  role="slider"
+                  aria-label="Selection end"
+                  aria-valuemin={0}
+                  aria-valuemax={duration}
+                  aria-valuenow={effectiveSelection.end}
+                  tabIndex={0}
+                  onPointerDown={beginHandleDrag("end")}
+                  onKeyDown={(event) => {
+                    if (!onSelectionChange) return;
+                    const step = event.shiftKey ? 1 : 0.1;
+                    if (event.key === "ArrowLeft") {
+                      event.preventDefault();
+                      onSelectionChange({
+                        start: effectiveSelection.start,
+                        end: clamp(effectiveSelection.end - step, effectiveSelection.start + 0.1, duration),
+                      });
+                    } else if (event.key === "ArrowRight") {
+                      event.preventDefault();
+                      onSelectionChange({
+                        start: effectiveSelection.start,
+                        end: clamp(effectiveSelection.end + step, effectiveSelection.start + 0.1, duration),
+                      });
+                    }
+                  }}
+                >
+                  <span className="audio-selection-handle-label">{formatTime(effectiveSelection.end)}</span>
+                </div>
+              </>
+            )}
           </div>
         </div>
       </div>
@@ -2746,17 +2909,40 @@ function SoundPad({ collection, initialSamplePath }: { collection: SoundCollecti
   const [rate, setRate] = useState(1);
   const [loop, setLoop] = useState(false);
   const [playSignal, setPlaySignal] = useState(0);
+  const [selection, setSelection] = useState<AudioSelection | null>(null);
+  const [sampleDuration, setSampleDuration] = useState(0);
 
   useEffect(() => {
     setSample(collection.samples.find((item) => item.path === initialSamplePath) ?? collection.samples[0]);
     setPlaySignal(0);
+    setSelection(null);
+    setSampleDuration(0);
   }, [collection.id, collection.samples, initialSamplePath]);
+
+  useEffect(() => {
+    setSelection(null);
+    setSampleDuration(0);
+  }, [sample?.src]);
 
   function play(next: SoundSample | undefined = sample) {
     if (!next) return;
     setSample(next);
     setPlaySignal((value) => value + 1);
   }
+
+  function handleDurationChange(value: number) {
+    setSampleDuration(value);
+    setSelection((current) => current ?? { start: 0, end: value });
+  }
+
+  function clearSelection() {
+    setSelection(null);
+  }
+
+  const selectionDuration = selection ? Math.max(0, selection.end - selection.start) : sampleDuration;
+  const exportDuration = rate > 0 ? selectionDuration / rate : selectionDuration;
+  const hasNonTrivialSelection =
+    Boolean(selection) && sampleDuration > 0 && (selection!.start > 0.01 || selection!.end < sampleDuration - 0.01);
 
   return (
     <section className="sound-pad">
@@ -2785,6 +2971,9 @@ function SoundPad({ collection, initialSamplePath }: { collection: SoundCollecti
         loop={loop}
         playSignal={playSignal}
         audio={sample?.audio}
+        selection={selection ?? undefined}
+        onSelectionChange={setSelection}
+        onDurationChange={handleDurationChange}
       />
       <div className="sound-controls">
         <label>
@@ -2799,6 +2988,26 @@ function SoundPad({ collection, initialSamplePath }: { collection: SoundCollecti
           <input type="checkbox" checked={loop} onChange={(event) => setLoop(event.target.checked)} />
           Loop
         </label>
+        {sampleDuration > 0 && (
+          <div className="sound-selection-info">
+            <span>Selection</span>
+            <strong>
+              {formatTime(selection?.start ?? 0)} – {formatTime(selection?.end ?? sampleDuration)}
+              <small>
+                {" "}({selectionDuration.toFixed(2)}s
+                {rate !== 1 ? ` · ${exportDuration.toFixed(2)}s @ ${rate.toFixed(2)}x` : ""})
+              </small>
+            </strong>
+            <button
+              type="button"
+              className="sound-selection-reset"
+              onClick={clearSelection}
+              disabled={!hasNonTrivialSelection}
+            >
+              Reset selection
+            </button>
+          </div>
+        )}
       </div>
       <div className="sound-buttons">
         {collection.samples.length > 0 ? (
