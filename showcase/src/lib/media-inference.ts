@@ -497,6 +497,27 @@ export function selectDisplayArtSamples(
     .map(({ path }) => path);
 }
 
+// Some packs ship the original asset tree plus a parallel `extracted/` mirror
+// (zip extraction artifact). The two trees contain the same files, so without
+// dedup every preview shows up twice (or more, once per design × mirror).
+export function dedupeExtractedMirrors<T extends { path: string }>(
+  items: readonly T[],
+): T[] {
+  const map = new Map<string, T>();
+  for (const item of items) {
+    const key = item.path.replace(/\/extracted\//g, "/");
+    const existing = map.get(key);
+    if (!existing) {
+      map.set(key, item);
+      continue;
+    }
+    const existingIsMirror = existing.path.includes("/extracted/");
+    const candidateIsMirror = item.path.includes("/extracted/");
+    if (existingIsMirror && !candidateIsMirror) map.set(key, item);
+  }
+  return [...map.values()];
+}
+
 // Inspection-aware classifiers — fall back to path heuristics when inspection
 // is missing or "mixed" (i.e. inconclusive).
 export function isLikelyPromoArt(path: string, inspection?: ArtInspection): boolean {

@@ -31,6 +31,7 @@ import {
 } from "../src/lib/catalog-metadata";
 import type { ArtInspection } from "../src/lib/media-inference";
 import {
+  dedupeExtractedMirrors,
   inferArtKind,
   isAnimatedArt,
   isLikelyPromoArt,
@@ -268,14 +269,16 @@ async function writeMediaManifest(): Promise<void> {
         (path, name) => !isJunkMediaPath(path) && /\.(png|jpe?g|webp|gif)$/i.test(name),
       );
       const filteredImages = dropGifsWithSheetSiblings(images);
-      const relImages = filteredImages.map((abs) => relative(ASSETS_ROOT, abs).split("/").join("/"));
+      const imagePairs = dedupeExtractedMirrors(
+        filteredImages.map((abs) => ({ abs, path: relative(ASSETS_ROOT, abs).split("/").join("/") })),
+      );
+      const relImages = imagePairs.map((pair) => pair.path);
       process.stdout.write(
-        `[media] ${packCounter} ▶ ${packFolder} (${filteredImages.length} image${filteredImages.length === 1 ? "" : "s"})\n`,
+        `[media] ${packCounter} ▶ ${packFolder} (${imagePairs.length} image${imagePairs.length === 1 ? "" : "s"})\n`,
       );
       const inspections = new Map<string, ArtInspection>();
       let inspected = 0;
-      for (const abs of filteredImages) {
-        const rel = relative(ASSETS_ROOT, abs).split("/").join("/");
+      for (const { abs, path: rel } of imagePairs) {
         try {
           const inspection = await inspectArtImageCached(IMAGE_INSPECT_CACHE, abs, rel);
           inspections.set(rel, {
@@ -299,7 +302,7 @@ async function writeMediaManifest(): Promise<void> {
         inspected += 1;
         if (inspected % 200 === 0) {
           process.stdout.write(
-            `[media] ${packCounter}   inspected ${inspected}/${filteredImages.length} in ${Date.now() - packStart}ms…\n`,
+            `[media] ${packCounter}   inspected ${inspected}/${imagePairs.length} in ${Date.now() - packStart}ms…\n`,
           );
         }
       }

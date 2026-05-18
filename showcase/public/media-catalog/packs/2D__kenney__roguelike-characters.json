@@ -27,50 +27,8 @@
     "sprite"
   ],
   "searchText": "roguelike characters 2d/kenney/roguelike-characters kenney characters cc0 1.0 (creative commons zero) optional roguelike characters is a 2d characters art pack by kenney. use it for player characters, npcs, animation prototyping. license: cc0 1.0 (creative commons zero). attribution: optional. characters roguelike characters player characters npcs animation prototyping 2d art sprite",
-  "sampleCount": 4,
+  "sampleCount": 2,
   "samples": [
-    {
-      "packFolder": "2D/kenney/roguelike-characters",
-      "path": "2D/kenney/roguelike-characters/extracted/spritesheet/roguelikechar-transparent.png",
-      "src": "/2D/kenney/roguelike-characters/extracted/spritesheet/roguelikechar-transparent.png",
-      "label": "Roguelikechar Transparent",
-      "kind": "character",
-      "animated": true,
-      "inspection": {
-        "width": 918,
-        "height": 203,
-        "bgKind": "transparent",
-        "alphaCoverage": 0.14432565789473684,
-        "transparentCoverage": 0.8556743421052632,
-        "contentRowRuns": 4,
-        "contentColRuns": 35,
-        "promoBackground": false,
-        "spriteSheetGrid": true,
-        "uniformGrid": false,
-        "cellMedianWidth": 2,
-        "cellMedianHeight": 13
-      },
-      "promo": false,
-      "description": "Roguelikechar Transparent is an animated 2D character sample from Roguelike Characters. Useful for player characters, NPCs, animation prototyping.",
-      "category": "character",
-      "themes": [
-        "character",
-        "roguelike characters"
-      ],
-      "useCases": [
-        "player characters",
-        "NPCs",
-        "animation prototyping"
-      ],
-      "tags": [
-        "2d",
-        "animated",
-        "art",
-        "character",
-        "roguelike characters"
-      ],
-      "searchText": "roguelikechar transparent 2d/kenney/roguelike-characters/extracted/spritesheet/roguelikechar-transparent.png roguelike characters character roguelikechar transparent is an animated 2d character sample from roguelike characters. useful for player characters, npcs, animation prototyping. roguelike characters player characters npcs animation prototyping 2d animated art"
-    },
     {
       "packFolder": "2D/kenney/roguelike-characters",
       "path": "2D/kenney/roguelike-characters/spritesheet/roguelikechar-transparent.png",
@@ -112,46 +70,6 @@
         "roguelike characters"
       ],
       "searchText": "roguelikechar transparent 2d/kenney/roguelike-characters/spritesheet/roguelikechar-transparent.png roguelike characters character roguelikechar transparent is an animated 2d character sample from roguelike characters. useful for player characters, npcs, animation prototyping. roguelike characters player characters npcs animation prototyping 2d animated art"
-    },
-    {
-      "packFolder": "2D/kenney/roguelike-characters",
-      "path": "2D/kenney/roguelike-characters/extracted/spritesheet/roguelikechar-magenta.png",
-      "src": "/2D/kenney/roguelike-characters/extracted/spritesheet/roguelikechar-magenta.png",
-      "label": "Roguelikechar Magenta",
-      "kind": "character",
-      "animated": false,
-      "inspection": {
-        "width": 918,
-        "height": 203,
-        "bgKind": "mixed",
-        "alphaCoverage": 1,
-        "transparentCoverage": 0,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Roguelikechar Magenta is a static 2D character sample from Roguelike Characters. Useful for player characters, NPCs, animation prototyping.",
-      "category": "character",
-      "themes": [
-        "character",
-        "roguelike characters"
-      ],
-      "useCases": [
-        "player characters",
-        "NPCs",
-        "animation prototyping"
-      ],
-      "tags": [
-        "2d",
-        "art",
-        "character",
-        "roguelike characters",
-        "static"
-      ],
-      "searchText": "roguelikechar magenta 2d/kenney/roguelike-characters/extracted/spritesheet/roguelikechar-magenta.png roguelike characters character roguelikechar magenta is a static 2d character sample from roguelike characters. useful for player characters, npcs, animation prototyping. roguelike characters player characters npcs animation prototyping 2d art static"
     },
     {
       "packFolder": "2D/kenney/roguelike-characters",
