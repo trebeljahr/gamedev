@@ -16,6 +16,7 @@ import type {
   SourceMapping,
 } from "@/lib/media";
 import { materialSamplesFor, mediaPackHref } from "@/lib/media";
+import { resolveSoundAttribution, type SoundAttribution } from "@/lib/sound-attribution";
 import { useLoudnessEnvelope, waveformPath } from "@/lib/loudness";
 import {
   exportAudioSelection,
@@ -66,6 +67,7 @@ type SoundEffectItem = SoundSample & {
   organization: SoundOrganization;
   organizationLabel: string;
   packHref: string;
+  attribution: SoundAttribution;
 };
 type SoundResult =
   | { kind: "sfx"; key: string; sortLabel: string; item: SoundEffectItem }
@@ -3225,9 +3227,10 @@ export function MediaExplorer({
           organization: collection.organization,
           organizationLabel: collection.organizationLabel,
           packHref: mediaPackHref("sound", collection.id),
+          attribution: resolveSoundAttribution(sample, collection, sourceMappings),
         })),
       ),
-    [soundEffectCollections],
+    [soundEffectCollections, sourceMappings],
   );
 
   const soundCategories = useMemo(
@@ -3680,17 +3683,71 @@ export function MediaExplorer({
                           {result.item.subcategory && (
                             <span>{SOUND_SUBCATEGORY_LABELS[result.item.subcategory] ?? result.item.subcategory}</span>
                           )}
+                          <span>{result.item.attribution.source}</span>
+                          <span
+                            className="sound-org sound-org-license"
+                            title={
+                              result.item.attribution.attributionRequired
+                                ? `${result.item.attribution.license} — attribution required`
+                                : result.item.attribution.notes ?? result.item.attribution.license
+                            }
+                          >
+                            <LicenseLink
+                              license={result.item.attribution.license}
+                              source={result.item.attribution.source}
+                              fallbackUrl={result.item.attribution.fallbackUrl}
+                              label={licenseBucket(result.item.attribution.license)}
+                              title={
+                                result.item.attribution.attributionRequired
+                                  ? `${result.item.attribution.license} — attribution required`
+                                  : result.item.attribution.license
+                              }
+                              className="inline-license-link"
+                              fallbackElement="span"
+                            />
+                          </span>
                         </div>
                         <div className="media-title">{result.item.label}</div>
                         <div className="media-detail">{result.item.collection.title}</div>
                         <p>{result.item.description}</p>
                       </div>
                     </button>
-                    <div className="media-actions">
-                      {result.item.collection.url && (
-                        <a href={result.item.collection.url} target="_blank" rel="noreferrer">
-                          source
+                    <div className="media-actions media-actions-attribution">
+                      {result.item.attribution.creator && (
+                        result.item.attribution.creatorUrl ? (
+                          <a
+                            href={result.item.attribution.creatorUrl}
+                            target="_blank"
+                            rel="noreferrer"
+                            title={`${result.item.attribution.creator} on ${result.item.attribution.source}`}
+                          >
+                            {result.item.attribution.creator}
+                          </a>
+                        ) : (
+                          <span title={result.item.attribution.creator}>{result.item.attribution.creator}</span>
+                        )
+                      )}
+                      {(result.item.attribution.sourceUrl ?? result.item.attribution.fallbackUrl) && (
+                        <a
+                          href={result.item.attribution.sourceUrl ?? result.item.attribution.fallbackUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          title={
+                            result.item.attribution.sourceUrl
+                              ? `Original sound on ${result.item.attribution.source}`
+                              : `${result.item.attribution.source} pack page`
+                          }
+                        >
+                          {result.item.attribution.sourceUrl ? "original" : "source"}
                         </a>
+                      )}
+                      {result.item.attribution.attributionRequired && (
+                        <span
+                          className="attribution-required"
+                          title="License requires creator attribution when redistributing"
+                        >
+                          credit required
+                        </span>
                       )}
                     </div>
                   </article>

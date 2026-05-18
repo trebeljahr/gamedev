@@ -2268,6 +2268,39 @@ select:focus-visible {
 .media-actions a {
   color: var(--accent);
 }
+.media-actions-attribution {
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  max-width: 160px;
+  white-space: normal;
+  text-align: right;
+  font-size: 11px;
+}
+.media-actions-attribution a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.attribution-required {
+  padding: 1px 6px;
+  border: 1px solid rgba(255,216,77,0.32);
+  border-radius: 999px;
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.sound-org-license {
+  border-color: rgba(255,255,255,0.18);
+  color: rgba(232,230,227,0.92);
+  background: rgba(255,255,255,0.05);
+}
+.sound-org-license a,
+.sound-org-license .inline-license-link {
+  color: inherit;
+  text-decoration: none;
+}
 .inline-tags {
   display: flex;
   flex-wrap: wrap;
