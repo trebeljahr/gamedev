@@ -997,24 +997,6 @@ select:focus-visible {
   color: var(--muted);
   font-size: 12px;
 }
-.format-filter-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 40px;
-  padding: 0 12px;
-  color: var(--accent);
-  background: rgba(255,216,77,0.08);
-  border: 1px solid rgba(255,216,77,0.28);
-  border-radius: 6px;
-  font-size: 12px;
-  font-weight: 750;
-  white-space: nowrap;
-}
-.format-filter-link:hover {
-  color: #11100b;
-  background: var(--accent);
-}
 
 .model-catalog-page {
   min-height: 100vh;
@@ -1045,39 +1027,6 @@ select:focus-visible {
   font-size: 15px;
   line-height: 1.5;
 }
-.format-catalog-heading {
-  align-items: start;
-}
-.format-compatibility-note {
-  color: rgba(232,230,227,0.82);
-}
-.format-model-summary {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px;
-  width: min(1180px, calc(100% - 44px));
-  margin: 18px auto 0;
-}
-.format-model-summary div {
-  display: grid;
-  gap: 4px;
-  min-width: 0;
-  padding: 14px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-}
-.format-model-summary span {
-  color: var(--muted);
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-.format-model-summary strong {
-  color: var(--text);
-  font-size: 20px;
-  line-height: 1.1;
-}
 .model-catalog-tools {
   align-items: stretch;
 }
@@ -1103,15 +1052,6 @@ select:focus-visible {
 .model-card:hover {
   border-color: rgba(255,216,77,0.55);
   transform: translateY(-1px);
-}
-.format-model-card {
-  grid-template-columns: minmax(0, 1fr) minmax(230px, 320px);
-}
-.format-model-card h3 a {
-  color: inherit;
-}
-.format-model-card h3 a:hover {
-  color: var(--accent);
 }
 .model-card-preview {
   min-width: 0;
@@ -4294,7 +4234,6 @@ select:focus-visible {
   .catalog-heading,
   .model-catalog-heading,
   .catalog-tools,
-  .format-model-summary,
   .vendor-section,
   .creator-hero,
   .creator-pack-section,
@@ -4305,13 +4244,8 @@ select:focus-visible {
   .model-catalog-heading,
   .model-card,
   .creator-section-header,
-  .format-model-summary,
   .creator-hero {
     grid-template-columns: 1fr;
-  }
-  .format-filter-link {
-    width: 100%;
-    white-space: normal;
   }
   .model-card-preview .pack-preview {
     height: 150px;
