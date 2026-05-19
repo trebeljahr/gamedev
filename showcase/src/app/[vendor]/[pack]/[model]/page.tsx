@@ -4,7 +4,7 @@ import { PackViewer } from "@/components/PackViewer";
 import { exactLicenseUrlFor, licenseForVendor } from "@/lib/license";
 import { findPack, modelDescription } from "@/lib/manifest";
 import { findModelRouteRef, modelHref } from "@/lib/model-routes";
-import { pageMetadata } from "@/lib/seo";
+import { assetJsonLd, jsonLdScriptContent, pageMetadata } from "@/lib/seo";
 
 type ModelPageProps = {
   params: Promise<{ vendor: string; pack: string; model: string }>;
@@ -62,6 +62,17 @@ export default async function ModelPage({ params }: ModelPageProps) {
   if (!data) notFound();
   const ref = findModelRouteRef(data, model);
   if (!ref) notFound();
+  const pathname = modelHref(data, ref);
+  const jsonLd = assetJsonLd({ pack: data, model: ref.model, pathname });
 
-  return <PackViewer pack={data} initialModelSlug={ref.slug} />;
+  return (
+    <>
+      <script
+        id="model-json-ld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLdScriptContent(jsonLd) }}
+      />
+      <PackViewer pack={data} initialModelSlug={ref.slug} />
+    </>
+  );
 }
