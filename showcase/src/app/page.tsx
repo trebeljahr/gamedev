@@ -564,6 +564,9 @@ export default function HomePage() {
               <Link className="landing-button primary" href="/media?view=sounds&type=all">
                 Browse sounds
               </Link>
+              <Link className="landing-button secondary" href="/curation">
+                Curation criteria
+              </Link>
             </div>
           </div>
           <LibraryHeroShowreel models={featuredModels} sprites={featuredSprites} sounds={featuredSounds} />
@@ -584,6 +587,14 @@ export default function HomePage() {
           sounds={trackSounds}
         />
       </main>
+      <footer className="library-footer" aria-label="Site footer">
+        <p>Free game assets, checked for permissive licenses and practical formats.</p>
+        <nav aria-label="Footer links">
+          <Link href="/curation">Curation criteria</Link>
+          <Link href="/build-with-ai">Build with AI</Link>
+          <Link href="/api/catalog.json">Catalog API</Link>
+        </nav>
+      </footer>
     </>
   );
 }
