@@ -1,0 +1,36 @@
+{
+  "name": "@trebeljahr/gamedev-asset-mcp",
+  "version": "0.1.0",
+  "description": "MCP stdio server for the gamedev.trebeljahr.com asset catalog.",
+  "type": "module",
+  "bin": {
+    "gamedev-asset-mcp": "./dist/cli.js"
+  },
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "pnpm build && node --test test/*.test.mjs",
+    "prepack": "pnpm build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "gamedev",
+    "assets"
+  ],
+  "engines": {
+    "node": ">=18.17"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^25.7.0",
+    "typescript": "^6.0.3"
+  }
+}

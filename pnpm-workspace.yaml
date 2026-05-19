@@ -1,5 +1,6 @@
 packages:
   - showcase
+  - packages/asset-mcp
 # pnpm 11 errors on ignored build scripts (strictDepBuilds=true by
 # default). sharp powers next/image runtime image optimization;
 # esbuild and unrs-resolver are pulled in by the toolchain. Approve
