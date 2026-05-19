@@ -34,6 +34,7 @@ import {
   isLikelyTextureAtlasPath,
 } from "@/lib/media-inference";
 import { SiteHeader } from "@/components/SiteHeader";
+import { trackAudioExport, trackSearchNoResults } from "@/lib/analytics";
 import { navGroups, type NavKey } from "@/lib/navigation";
 import { uniqueTags } from "@/lib/tags";
 import { SOUND_SUBCATEGORIES, SOUND_SUBCATEGORY_LABELS } from "@/lib/catalog-metadata";
@@ -358,6 +359,15 @@ function compareSoundCategories(a: string, b: string): number {
     return (aIndex === -1 ? Number.MAX_SAFE_INTEGER : aIndex) - (bIndex === -1 ? Number.MAX_SAFE_INTEGER : bIndex);
   }
   return soundCategoryLabel(a).localeCompare(soundCategoryLabel(b));
+}
+
+function stableShuffleScore(value: string): number {
+  let hash = 2166136261;
+  for (let index = 0; index < value.length; index += 1) {
+    hash ^= value.charCodeAt(index);
+    hash = Math.imul(hash, 16777619);
+  }
+  return (hash >>> 0) / 0xffffffff;
 }
 
 function musicTrackPackId(track: MusicTrack): string {
@@ -2990,6 +3000,7 @@ function SoundPad({ collection, initialSamplePath }: { collection: SoundCollecti
       document.body.appendChild(a);
       a.click();
       a.remove();
+      trackAudioExport({ format: downloadFormat });
       window.setTimeout(() => URL.revokeObjectURL(url), 30_000);
     } catch (error) {
       if ((error as DOMException)?.name === "AbortError") {
@@ -3183,6 +3194,7 @@ export function MediaExplorer({
 }: MediaExplorerProps) {
   const [view, setView] = useState<View>(initialView);
   const [query, setQuery] = useState("");
+  const lastNoResultsKey = useRef("");
   const [licenseFilter, setLicenseFilter] = useState("all");
   const [creatorFilter, setCreatorFilter] = useState("all");
   const [groupMode, setGroupMode] = useState<GroupMode>("type");
@@ -3299,7 +3311,7 @@ export function MediaExplorer({
 
   const shuffleOrder = useMemo(() => {
     const order = new Map<string, number>();
-    for (const result of allSoundResults) order.set(result.key, Math.random());
+    for (const result of allSoundResults) order.set(result.key, stableShuffleScore(result.key));
     return order;
   }, [allSoundResults]);
 
@@ -3417,6 +3429,23 @@ export function MediaExplorer({
   const selectedArt = filteredArt.find((pack) => pack.folder === selectedArtFolder) ?? filteredArt[0] ?? artPacks[0];
   const selectedSound = filteredSounds.find((item) => item.path === selectedSoundPath) ?? filteredSounds[0] ?? soundEffectItems[0];
   const selectedSoundCollection = selectedSound?.collection;
+  const normalizedQuery = query.trim().toLowerCase();
+
+  useEffect(() => {
+    if (!normalizedQuery) return;
+    const resultCount =
+      view === "sounds"
+        ? filteredSoundResults.length
+        : view === "sources"
+          ? filteredTextureMappings.length
+          : filteredArt.length;
+    if (resultCount > 0) return;
+    const type = view === "art" ? "2d" : view;
+    const key = `${type}:${normalizedQuery}`;
+    if (lastNoResultsKey.current === key) return;
+    lastNoResultsKey.current = key;
+    trackSearchNoResults({ query: normalizedQuery, type });
+  }, [filteredArt.length, filteredSoundResults.length, filteredTextureMappings.length, normalizedQuery, view]);
 
   function selectArtType(value: ArtTypeFilter) {
     setArtTypeFilter(value);

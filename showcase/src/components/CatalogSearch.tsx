@@ -2,12 +2,13 @@
 
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { InfiniteListSentinel, useInfiniteList } from "@/components/useInfiniteList";
 import { LicenseLink } from "@/components/LicenseLink";
 import { PackGrid } from "@/components/PackGrid";
 import { PackDownloadButton } from "@/components/PackDownloadButton";
 import { SiteHeader } from "@/components/SiteHeader";
+import { trackSearchNoResults } from "@/lib/analytics";
 import { licenseForVendor } from "@/lib/license";
 import { modelSearchText, packSearchText, type Manifest, type Pack } from "@/lib/manifest";
 import { previewModelFilesFor } from "@/lib/preview-model";
@@ -59,6 +60,7 @@ function slug(value: string): string {
 
 export function CatalogSearch({ manifest, children, showHeader = true, modelMotion = "all" }: CatalogSearchProps) {
   const [query, setQuery] = useState("");
+  const lastNoResultsKey = useRef("");
   const normalizedQuery = query.trim().toLowerCase();
   const terms = useMemo(() => normalizedQuery.split(/\s+/).filter(Boolean), [normalizedQuery]);
 
@@ -110,6 +112,14 @@ export function CatalogSearch({ manifest, children, showHeader = true, modelMoti
     (n, item) => n + item.modelMatches,
     0,
   );
+
+  useEffect(() => {
+    if (!normalizedQuery || matches.length > 0) return;
+    const key = `${normalizedQuery}:${modelMotion}`;
+    if (lastNoResultsKey.current === key) return;
+    lastNoResultsKey.current = key;
+    trackSearchNoResults({ query: normalizedQuery, type: "3d_packs" });
+  }, [matches.length, modelMotion, normalizedQuery]);
 
   return (
     <>

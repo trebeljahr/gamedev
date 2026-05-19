@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { AnalyticsBeacon } from "@/components/AnalyticsBeacon";
 import { LicenseLink } from "@/components/LicenseLink";
 import { MediaPackTrackList } from "@/components/MediaPackTrackList";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -71,6 +72,7 @@ export default async function MediaPackPage({ params }: MediaPackPageProps) {
 
   return (
     <div className="media-page">
+      <AnalyticsBeacon event="bundle_view" />
       <script
         id="audio-json-ld"
         type="application/ld+json"

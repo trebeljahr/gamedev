@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import type { Pack } from "@/lib/manifest";
 import { downloadPackZip } from "@/lib/download-pack-zip";
 import type { PackZipProgress } from "@/lib/pack-zip";
+import { trackAssetDownload } from "@/lib/analytics";
 
 type DownloadState =
   | { status: "idle" }
@@ -63,6 +64,7 @@ export function PackDownloadButton({ pack }: { pack: Pack }) {
         signal: controller.signal,
         onProgress: (progress) => setState({ status: "working", ...progress }),
       });
+      trackAssetDownload({ format: "zip" });
       setState({ status: "done", skipped: result.skipped.length });
       resetTimerRef.current = window.setTimeout(() => {
         setState({ status: "idle" });

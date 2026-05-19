@@ -2,12 +2,13 @@
 
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { SelectDropdown } from "@/components/NavDrawer";
 import { InfiniteListSentinel, useInfiniteList } from "@/components/useInfiniteList";
 import { LicenseLink } from "@/components/LicenseLink";
 import { ModelDownloadLinks } from "@/components/ModelDownloadLinks";
 import { SiteHeader } from "@/components/SiteHeader";
+import { trackSearchNoResults } from "@/lib/analytics";
 import { licenseForVendor, type VendorLicense } from "@/lib/license";
 import {
   displayPackTitle,
@@ -63,6 +64,7 @@ function visibleModelTags(model: Model): string[] {
 
 export function ModelCatalog({ manifest }: ModelCatalogProps) {
   const [query, setQuery] = useState("");
+  const lastNoResultsKey = useRef("");
   const [vendor, setVendor] = useState(ALL);
   const [category, setCategory] = useState(ALL);
   const [style, setStyle] = useState(ALL);
@@ -112,6 +114,14 @@ export function ModelCatalog({ manifest }: ModelCatalogProps) {
     resetKey: listResetKey,
   });
   const visibleEntries = filtered.slice(0, infinite.visibleCount);
+
+  useEffect(() => {
+    if (!normalizedQuery || filtered.length > 0) return;
+    const key = [normalizedQuery, vendor, category, style, theme].join("|");
+    if (lastNoResultsKey.current === key) return;
+    lastNoResultsKey.current = key;
+    trackSearchNoResults({ query: normalizedQuery, type: "models" });
+  }, [category, filtered.length, normalizedQuery, style, theme, vendor]);
 
   return (
     <>

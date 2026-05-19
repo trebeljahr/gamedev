@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound, redirect } from "next/navigation";
 import { exactLicenseUrlFor, licenseForVendor } from "@/lib/license";
 import { manifest, findPack } from "@/lib/manifest";
+import { AnalyticsBeacon } from "@/components/AnalyticsBeacon";
 import { PackViewer } from "@/components/PackViewer";
 import { pageMetadata, routePath } from "@/lib/seo";
 import { findModelRouteRef, modelHref } from "@/lib/model-routes";
@@ -69,5 +70,10 @@ export default async function PackPage({ params, searchParams }: PackPageProps) 
     if (!ref) notFound();
     redirect(modelHref(data, ref));
   }
-  return <PackViewer pack={data} />;
+  return (
+    <>
+      <AnalyticsBeacon event="bundle_view" />
+      <PackViewer pack={data} />
+    </>
+  );
 }

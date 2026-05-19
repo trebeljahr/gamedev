@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import type { CSSProperties, ReactNode } from "react";
+import { AnalyticsBeacon } from "@/components/AnalyticsBeacon";
 import { SiteHeader } from "@/components/SiteHeader";
 import { pageMetadata } from "@/lib/seo";
 
@@ -163,6 +164,8 @@ function ExternalLink({
 export default function BuildWithAiPage() {
   return (
     <main style={shellStyle}>
+      <AnalyticsBeacon event="build_with_ai_view" />
+      <AnalyticsBeacon event="mcp_doc_view" />
       <SiteHeader active="buildWithAi" />
 
       <section className="library-hero">

@@ -6,6 +6,7 @@ import {
   type Model,
   type ModelDownload,
 } from "@/lib/manifest";
+import { trackAssetDownload } from "@/lib/analytics";
 
 type ModelDownloadLinksProps = {
   model: Model;
@@ -52,6 +53,7 @@ export function ModelDownloadLinks({ model, className, compact = false }: ModelD
         href={downloadProxyUrl(primaryDownload.file, primaryFilename)}
         download={primaryFilename}
         title={primaryDownload.file}
+        onClick={() => trackAssetDownload({ format: primaryDownload.format })}
       >
         {primaryDownloadLabel(primaryDownload)}
       </a>
@@ -69,6 +71,7 @@ export function ModelDownloadLinks({ model, className, compact = false }: ModelD
                   href={downloadProxyUrl(download.file, filename)}
                   download={filename}
                   title={download.file}
+                  onClick={() => trackAssetDownload({ format: download.format })}
                 >
                   {label}
                 </a>

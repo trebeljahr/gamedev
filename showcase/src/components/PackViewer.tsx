@@ -1,12 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 import { useInfiniteList } from "@/components/useInfiniteList";
 import { LicenseLink } from "@/components/LicenseLink";
 import { PackDownloadButton } from "@/components/PackDownloadButton";
 import { ModelDownloadLinks } from "@/components/ModelDownloadLinks";
+import { trackSearchNoResults } from "@/lib/analytics";
 import { licenseForVendor } from "@/lib/license";
 import {
   assetUrl,
@@ -119,6 +120,7 @@ export function PackViewer({ pack, initialModelSlug }: { pack: Pack; initialMode
 function PackGroupViewer({ pack, modelRefs }: { pack: Pack; modelRefs: ModelRouteRef[] }) {
   const router = useRouter();
   const [query, setQuery] = useState("");
+  const lastNoResultsKey = useRef("");
   const credit = licenseForVendor(pack.vendor);
   const license = pack.license || credit.license;
   const packTitle = displayPackTitle(pack);
@@ -137,6 +139,14 @@ function PackGroupViewer({ pack, modelRefs }: { pack: Pack; modelRefs: ModelRout
     resetKey: `${pack.id}:${normalizedQuery}`,
   });
   const listedModels = visibleModels.slice(0, modelList.visibleCount);
+
+  useEffect(() => {
+    if (!normalizedQuery || visibleModels.length > 0) return;
+    const key = `${pack.id}:${normalizedQuery}`;
+    if (lastNoResultsKey.current === key) return;
+    lastNoResultsKey.current = key;
+    trackSearchNoResults({ query: normalizedQuery, type: "pack_models" });
+  }, [normalizedQuery, pack.id, visibleModels.length]);
 
   const openModel = useCallback(
     (index: number) => {
