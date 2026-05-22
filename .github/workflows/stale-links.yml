@@ -1,0 +1,69 @@
+name: Stale Links
+
+on:
+  schedule:
+    - cron: "23 5 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: stale-links
+  cancel-in-progress: false
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+  STALE_LINKS_R2_CONCURRENCY: "6"
+  STALE_LINKS_SOURCE_CONCURRENCY: "2"
+  STALE_LINKS_TIMEOUT_MS: "5000"
+  STALE_LINKS_REPORT_MAX_ROWS: "200"
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.1.2
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Check stale links
+        env:
+          STALE_LINKS_REPORT_PATH: ${{ runner.temp }}/stale-links-report.md
+        run: pnpm links:check
+
+      - name: Open or update tracking issue
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPORT_PATH: ${{ runner.temp }}/stale-links-report.md
+        run: |
+          set -euo pipefail
+
+          if [ ! -s "$REPORT_PATH" ]; then
+            {
+              echo "# Stale link check"
+              echo
+              echo "Script did not produce a report. See workflow run: ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+            } > "$REPORT_PATH"
+          fi
+
+          title="Stale links: $(date -u +%F)"
+          issue_number="$(gh issue list --state open --limit 100 --json number,title --jq '.[] | select(.title == "'"$title"'") | .number' | head -n 1)"
+
+          if [ -n "$issue_number" ]; then
+            gh issue edit "$issue_number" --body-file "$REPORT_PATH"
+          else
+            gh issue create --title "$title" --body-file "$REPORT_PATH"
+          fi

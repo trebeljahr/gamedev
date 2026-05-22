@@ -13,6 +13,7 @@
     "media:assets": "pnpm --filter 3d-assets-showcase media:assets",
     "media:catalog": "pnpm --filter 3d-assets-showcase media:catalog",
     "manifest:enrich": "pnpm --filter 3d-assets-showcase manifest:enrich",
+    "links:check": "pnpm --dir showcase exec tsx ../scripts/check-stale-links.ts",
     "assets:serve": "node scripts/serve-assets.mjs",
     "assets:sync": "dotenvx run -f .env.production -f .env.local --ignore=MISSING_ENV_FILE --overload --quiet -- bash scripts/sync-assets.sh",
     "assets:sync:dry": "dotenvx run -f .env.production -f .env.local --ignore=MISSING_ENV_FILE --overload --quiet -- bash scripts/sync-assets.sh --dry-run"
