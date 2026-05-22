@@ -13,12 +13,20 @@ import { creatorHref } from "@/lib/creator-routing";
 import { licenseForVendor, type VendorLicense } from "@/lib/license";
 import {
   displayPackTitle,
+  downloadsForModel,
   modelSearchText,
   packSearchText,
   type Manifest,
   type Model,
   type Pack,
 } from "@/lib/manifest";
+import {
+  formatLandingPath,
+  isModelFormat,
+  MODEL_FORMAT_DETAILS,
+  MODEL_FORMATS,
+  type ModelFormat,
+} from "@/lib/model-formats";
 import { modelHref } from "@/lib/model-routes";
 import { uniqueTags } from "@/lib/tags";
 
@@ -37,6 +45,7 @@ type ModelEntry = {
   license: string;
   vendorCredit: VendorLicense;
   searchText: string;
+  formats: ModelFormat[];
 };
 
 const ALL = "all";
@@ -70,6 +79,7 @@ export function ModelCatalog({ manifest }: ModelCatalogProps) {
   const [category, setCategory] = useState(ALL);
   const [style, setStyle] = useState(ALL);
   const [theme, setTheme] = useState(ALL);
+  const [format, setFormat] = useState<ModelFormat | typeof ALL>(ALL);
   const normalizedQuery = query.trim().toLowerCase();
   const terms = useMemo(() => normalizedQuery.split(/\s+/).filter(Boolean), [normalizedQuery]);
 
@@ -79,13 +89,21 @@ export function ModelCatalog({ manifest }: ModelCatalogProps) {
         const vendorCredit = licenseForVendor(pack.vendor);
         const license = pack.license || vendorCredit.license;
         const packIndex = packSearchText(pack);
-        return pack.models.map((model) => ({
-          model,
-          pack,
-          license,
-          vendorCredit,
-          searchText: `${modelSearchText(model, pack)} ${packIndex} ${vendorCredit.vendorLabel.toLowerCase()} ${license.toLowerCase()}`,
-        }));
+        return pack.models.map((model) => {
+          const formats = uniqueSorted(
+            downloadsForModel(model)
+              .map((download) => download.format)
+              .filter(isModelFormat),
+          ) as ModelFormat[];
+          return {
+            model,
+            pack,
+            license,
+            vendorCredit,
+            formats,
+            searchText: `${modelSearchText(model, pack)} ${packIndex} ${vendorCredit.vendorLabel.toLowerCase()} ${license.toLowerCase()} ${formats.join(" ")}`,
+          };
+        });
       }),
     [manifest.packs],
   );
@@ -94,6 +112,10 @@ export function ModelCatalog({ manifest }: ModelCatalogProps) {
   const categories = useMemo(() => uniqueSorted(entries.map((entry) => entry.model.category)), [entries]);
   const styles = useMemo(() => uniqueSorted(entries.flatMap((entry) => entry.model.style)), [entries]);
   const themes = useMemo(() => uniqueSorted(entries.flatMap((entry) => entry.model.themes)), [entries]);
+  const formats = useMemo(
+    () => MODEL_FORMATS.filter((item) => entries.some((entry) => entry.formats.includes(item))),
+    [entries],
+  );
 
   const filtered = useMemo(
     () =>
@@ -102,13 +124,14 @@ export function ModelCatalog({ manifest }: ModelCatalogProps) {
         if (category !== ALL && entry.model.category !== category) return false;
         if (style !== ALL && !entry.model.style.includes(style)) return false;
         if (theme !== ALL && !entry.model.themes.includes(theme)) return false;
+        if (format !== ALL && !entry.formats.includes(format)) return false;
         return terms.every((term) => entry.searchText.includes(term));
       }),
-    [category, entries, style, terms, theme, vendor],
+    [category, entries, format, style, terms, theme, vendor],
   );
 
   const totalModels = entries.length;
-  const listResetKey = [category, normalizedQuery, style, theme, vendor].join("|");
+  const listResetKey = [category, format, normalizedQuery, style, theme, vendor].join("|");
   const infinite = useInfiniteList({
     total: filtered.length,
     pageSize: PAGE_SIZE,
@@ -183,6 +206,20 @@ export function ModelCatalog({ manifest }: ModelCatalogProps) {
             onChange={setTheme}
             options={[{ value: ALL, label: "All themes" }, ...themes.map((item) => ({ value: item, label: item }))]}
           />
+          <SelectDropdown
+            ariaLabel="Format"
+            value={format}
+            onChange={setFormat}
+            options={[
+              { value: ALL, label: "All formats" },
+              ...formats.map((item) => ({ value: item, label: MODEL_FORMAT_DETAILS[item].label })),
+            ]}
+          />
+          {format !== ALL && (
+            <Link className="catalog-format-page-link" href={formatLandingPath(format)}>
+              View all {MODEL_FORMAT_DETAILS[format].label} models
+            </Link>
+          )}
           <div className="catalog-result-count">
             {filtered.length.toLocaleString()} of {totalModels.toLocaleString()} models
           </div>

@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getCreatorSlugs } from "@/lib/creator-pages";
 import { manifest } from "@/lib/manifest";
+import { formatLandingPath, MODEL_FORMATS } from "@/lib/model-formats";
 import { absoluteUrl, routePath } from "@/lib/seo";
 
 const staticRoutes = [
@@ -43,10 +44,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .sort((a, b) => a.localeCompare(b))
     .map((slug) => sitemapEntry(`/creators/${slug}`, 0.72, "weekly", lastModified));
 
+  const formatRoutes = MODEL_FORMATS.map((format) =>
+    sitemapEntry(formatLandingPath(format), 0.78, "weekly", lastModified),
+  );
+
   return [
     ...staticRoutes.map((route) =>
       sitemapEntry(route.pathname, route.priority, route.changeFrequency, lastModified),
     ),
+    ...formatRoutes,
     ...vendorRoutes,
     ...creatorRoutes,
     ...packRoutes,
