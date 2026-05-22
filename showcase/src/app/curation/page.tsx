@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { SiteHeader } from "@/components/SiteHeader";
+import { suggestPackIssueUrl } from "@/lib/github-issue";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
@@ -52,6 +53,8 @@ const rejectionCriteria = [
 ] as const;
 
 export default function CurationPage() {
+  const suggestPackUrl = suggestPackIssueUrl();
+
   return (
     <>
       <SiteHeader compact active="library" />
@@ -73,6 +76,9 @@ export default function CurationPage() {
               <Link className="landing-button secondary" href="/media?view=art&type=all">
                 Search 2D and audio
               </Link>
+              <a className="landing-button secondary" href={suggestPackUrl} target="_blank" rel="noreferrer">
+                Suggest a pack
+              </a>
             </div>
           </div>
           <ol className="curation-flow" aria-label="Curation workflow">

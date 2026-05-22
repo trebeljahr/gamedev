@@ -35,6 +35,7 @@ import {
 } from "@/lib/media-inference";
 import { SiteHeader } from "@/components/SiteHeader";
 import { trackAudioExport, trackSearchNoResults } from "@/lib/analytics";
+import { brokenAssetIssueUrl } from "@/lib/github-issue";
 import { navGroups, type NavKey } from "@/lib/navigation";
 import { uniqueTags } from "@/lib/tags";
 import { SOUND_SUBCATEGORIES, SOUND_SUBCATEGORY_LABELS } from "@/lib/catalog-metadata";
@@ -2414,6 +2415,14 @@ function ArtWorkbench({ summary }: { summary: ArtPackSummary }) {
   const selectedGroup = groups.find((group) => group.id === selectedGroupId) ?? groups[0];
   const selectedSample = selectedGroup?.primary;
   const materialCount = pack ? materialSamples.length : summary.materialSampleCount;
+  const reportUrl = brokenAssetIssueUrl({
+    id: summary.folder,
+    name: summary.title,
+    kind: "sprite",
+    license: summary.license_class,
+    sourceUrl: summary.url,
+    catalogPath: "/media?view=art&type=all",
+  });
 
   useEffect(() => {
     if (!subjects.some((subject) => subject.subject === activeSubject)) {
@@ -2461,6 +2470,9 @@ function ArtWorkbench({ summary }: { summary: ArtPackSummary }) {
                 Source pack
               </a>
             )}
+            <a className="source-link" href={reportUrl} target="_blank" rel="noreferrer">
+              Report broken asset
+            </a>
             <small>{materialCount} material files</small>
           </div>
         </div>
@@ -2876,6 +2888,15 @@ function AudioPlayer({
 
 function MusicTrackRow({ track }: { track: MusicTrack }) {
   const packId = musicTrackPackId(track);
+  const reportUrl = brokenAssetIssueUrl({
+    id: track.path,
+    name: cleanAudioLabel(track.title),
+    kind: "music",
+    license: track.license,
+    sourceUrl: track.url,
+    catalogPath: mediaPackHref("music", packId),
+  });
+
   return (
     <article className="track-row">
       <div className="media-row-kicker">
@@ -2909,6 +2930,9 @@ function MusicTrackRow({ track }: { track: MusicTrack }) {
             source
           </a>
         )}
+        <a href={reportUrl} target="_blank" rel="noreferrer">
+          Report broken asset
+        </a>
       </div>
       <div className="inline-tags">
         {uniqueTags(track.tags).slice(0, 5).map((tag) => (
@@ -3024,6 +3048,14 @@ function SoundPad({ collection, initialSamplePath }: { collection: SoundCollecti
   const hasNonTrivialSelection =
     Boolean(selection) && sampleDuration > 0 && (selection!.start > 0.01 || selection!.end < sampleDuration - 0.01);
   const canDownload = Boolean(sample?.src) && sampleDuration > 0 && selectionDuration > 0.05;
+  const reportUrl = brokenAssetIssueUrl({
+    id: sample?.path ?? collection.id,
+    name: sample ? cleanAudioLabel(sample.label) : collection.title,
+    kind: "sound",
+    license: collection.license,
+    sourceUrl: collection.url,
+    catalogPath: mediaPackHref("sound", collection.id),
+  });
   const progressLabel = exportProgress
     ? `${exportProgress.message ?? exportProgress.stage} · ${Math.round(exportProgress.ratio * 100)}%`
     : null;
@@ -3049,7 +3081,11 @@ function SoundPad({ collection, initialSamplePath }: { collection: SoundCollecti
               className="inline-license-link"
               fallbackElement="span"
             />{" "}
-            · <Link href={mediaPackHref("sound", collection.id)}>Pack page</Link>
+            · <Link href={mediaPackHref("sound", collection.id)}>Pack page</Link>{" "}
+            ·{" "}
+            <a href={reportUrl} target="_blank" rel="noreferrer">
+              Report broken asset
+            </a>
           </div>
         </div>
       </div>

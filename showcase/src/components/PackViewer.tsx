@@ -9,6 +9,7 @@ import { PackDownloadButton } from "@/components/PackDownloadButton";
 import { ModelDownloadLinks } from "@/components/ModelDownloadLinks";
 import { trackSearchNoResults } from "@/lib/analytics";
 import { creatorHref } from "@/lib/creator-routing";
+import { brokenAssetIssueUrl } from "@/lib/github-issue";
 import { licenseForVendor } from "@/lib/license";
 import {
   assetUrl,
@@ -259,6 +260,14 @@ function SingleAssetViewer({
   const credit = licenseForVendor(pack.vendor);
   const license = pack.license || credit.license;
   const packTitle = displayPackTitle(pack);
+  const reportUrl = brokenAssetIssueUrl({
+    id: `${pack.id}/${model.name}`,
+    name: model.title,
+    kind: "model",
+    license,
+    sourceUrl: credit.links[0]?.url || credit.vendorUrl || assetUrl(model.file),
+    catalogPath: modelHref(pack, activeRef),
+  });
   const singleListInitialLimit = Math.max(MODEL_LIST_PAGE_SIZE, index + 1);
   const modelList = useInfiniteList({
     total: modelRefs.length,
@@ -306,6 +315,14 @@ function SingleAssetViewer({
           </div>
           <div className="viewer-controls">
             <ModelDownloadLinks model={model} compact />
+            <a
+              className="model-download-primary report-asset-link"
+              href={reportUrl}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Report broken asset
+            </a>
             <div className="nav">
               <Link href={modelHref(pack, prevModel)} aria-label="Previous">
                 ←

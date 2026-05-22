@@ -2,6 +2,7 @@
 
 import { InfiniteListSentinel, useInfiniteList } from "@/components/useInfiniteList";
 import { cleanAudioLabel } from "@/lib/audio-label";
+import { brokenAssetIssueUrl } from "@/lib/github-issue";
 import type { MediaPack, MediaPackSoundSample, MusicTrack } from "@/lib/media";
 import { uniqueTags } from "@/lib/tags";
 
@@ -13,6 +14,7 @@ type MediaPackTrackListProps = {
 
 export function MediaPackTrackList({ pack }: MediaPackTrackListProps) {
   const items = pack.kind === "music" ? pack.musicTracks : pack.soundSamples;
+  const catalogPath = `/media/packs/${pack.slug}`;
   const infinite = useInfiniteList({
     total: items.length,
     pageSize: PAGE_SIZE,
@@ -24,9 +26,11 @@ export function MediaPackTrackList({ pack }: MediaPackTrackListProps) {
     <>
       <div className="track-list media-pack-list">
         {pack.kind === "music"
-          ? (visible as MusicTrack[]).map((track) => <MusicRow key={track.path} track={track} />)
+          ? (visible as MusicTrack[]).map((track) => (
+              <MusicRow key={track.path} track={track} catalogPath={catalogPath} />
+            ))
           : (visible as MediaPackSoundSample[]).map((sample) => (
-              <SoundRow key={sample.path} sample={sample} />
+              <SoundRow key={sample.path} sample={sample} catalogPath={catalogPath} />
             ))}
       </div>
       <InfiniteListSentinel
@@ -42,7 +46,16 @@ export function MediaPackTrackList({ pack }: MediaPackTrackListProps) {
   );
 }
 
-function MusicRow({ track }: { track: MusicTrack }) {
+function MusicRow({ track, catalogPath }: { track: MusicTrack; catalogPath: string }) {
+  const reportUrl = brokenAssetIssueUrl({
+    id: track.path,
+    name: cleanAudioLabel(track.title),
+    kind: "music",
+    license: track.license,
+    sourceUrl: track.url,
+    catalogPath,
+  });
+
   return (
     <article className="track-row">
       <div className="media-row-kicker">
@@ -53,6 +66,11 @@ function MusicRow({ track }: { track: MusicTrack }) {
       <div className="media-detail">{track.path}</div>
       <audio className="media-pack-audio" controls preload="none" src={track.src} />
       <p>{track.description}</p>
+      <div className="media-actions">
+        <a href={reportUrl} target="_blank" rel="noreferrer">
+          Report broken asset
+        </a>
+      </div>
       <div className="inline-tags">
         {uniqueTags(track.tags).slice(0, 5).map((tag) => (
           <span key={tag}>{tag}</span>
@@ -62,7 +80,16 @@ function MusicRow({ track }: { track: MusicTrack }) {
   );
 }
 
-function SoundRow({ sample }: { sample: MediaPackSoundSample }) {
+function SoundRow({ sample, catalogPath }: { sample: MediaPackSoundSample; catalogPath: string }) {
+  const reportUrl = brokenAssetIssueUrl({
+    id: sample.path,
+    name: cleanAudioLabel(sample.label),
+    kind: "sound",
+    license: sample.license,
+    sourceUrl: sample.url,
+    catalogPath,
+  });
+
   return (
     <article className="track-row">
       <div className="media-row-kicker">
@@ -75,6 +102,11 @@ function SoundRow({ sample }: { sample: MediaPackSoundSample }) {
       <div className="media-detail">{sample.category} · {sample.path}</div>
       <audio className="media-pack-audio" controls preload="none" src={sample.src} />
       <p>{sample.description}</p>
+      <div className="media-actions">
+        <a href={reportUrl} target="_blank" rel="noreferrer">
+          Report broken asset
+        </a>
+      </div>
       <div className="inline-tags">
         {uniqueTags(sample.tags).slice(0, 5).map((tag) => (
           <span key={tag}>{tag}</span>

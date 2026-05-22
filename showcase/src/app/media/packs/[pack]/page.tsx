@@ -7,6 +7,7 @@ import { MediaPackTrackList } from "@/components/MediaPackTrackList";
 import { SiteHeader } from "@/components/SiteHeader";
 import { cleanAudioLabel } from "@/lib/audio-label";
 import { creatorHref } from "@/lib/creator-routing";
+import { brokenAssetIssueUrl } from "@/lib/github-issue";
 import { findMediaPack, mediaPackHref, mediaPacks } from "@/lib/media";
 import { jsonLdGraph, jsonLdScriptContent, pageMetadata, soundJsonLd } from "@/lib/seo";
 
@@ -35,6 +36,14 @@ export default async function MediaPackPage({ params }: MediaPackPageProps) {
   const pack = findMediaPack(slug);
   if (!pack) notFound();
   const pathname = mediaPackHref(pack.kind, pack.id);
+  const reportUrl = brokenAssetIssueUrl({
+    id: pack.id,
+    name: pack.title,
+    kind: pack.kind,
+    license: pack.license,
+    sourceUrl: pack.url,
+    catalogPath: pathname,
+  });
   const sourceNames = pack.source.split(", ").filter(Boolean);
   const sourceNode =
     sourceNames.length === 1 ? (
@@ -125,6 +134,9 @@ export default async function MediaPackPage({ params }: MediaPackPageProps) {
                   Source pack
                 </a>
               )}
+              <a className="source-link" href={reportUrl} target="_blank" rel="noreferrer">
+                Report broken asset
+              </a>
               <small>{pack.itemCount} audio files</small>
             </div>
           </div>
