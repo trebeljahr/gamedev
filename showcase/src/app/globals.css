@@ -186,6 +186,136 @@ select:focus-visible {
   font-weight: 700;
 }
 
+.site-footer {
+  width: min(1180px, calc(100% - 44px));
+  margin: 0 auto;
+  padding: 24px 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+  color: rgba(232,230,227,0.58);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  font-size: 13px;
+}
+.site-footer p {
+  margin: 0;
+}
+.site-footer nav {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.site-footer a {
+  color: rgba(232,230,227,0.82);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: rgba(255,216,77,0.42);
+  text-underline-offset: 4px;
+}
+.site-footer a:hover {
+  color: var(--accent);
+}
+
+.info-page {
+  min-height: 100vh;
+  background:
+    linear-gradient(180deg, rgba(255,216,77,0.06), rgba(255,216,77,0) 220px),
+    var(--bg);
+}
+.info-page-inner {
+  width: min(980px, calc(100% - 44px));
+  margin: 0 auto;
+  padding: clamp(56px, 8vw, 92px) 0 clamp(72px, 9vw, 118px);
+  display: grid;
+  gap: clamp(34px, 5vw, 54px);
+}
+.info-hero,
+.info-section {
+  display: grid;
+  gap: 16px;
+}
+.info-hero {
+  max-width: 760px;
+}
+.info-kicker {
+  margin: 0;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 800;
+}
+.info-hero h1,
+.info-section h2,
+.info-panel h3 {
+  margin: 0;
+  color: var(--text);
+}
+.info-hero h1 {
+  font-size: clamp(42px, 7vw, 78px);
+  line-height: 0.96;
+}
+.info-section h2 {
+  font-size: clamp(24px, 4vw, 36px);
+  line-height: 1.04;
+}
+.info-panel h3 {
+  font-size: 16px;
+}
+.info-hero p,
+.info-section p {
+  max-width: 760px;
+  margin: 0;
+  color: rgba(232,230,227,0.74);
+  font-size: 16px;
+  line-height: 1.65;
+}
+.info-section {
+  padding-top: 26px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+}
+.info-panel {
+  min-width: 0;
+  padding: 18px;
+  display: grid;
+  gap: 10px;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px;
+  background: rgba(17,18,22,0.78);
+}
+.info-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.info-button,
+.info-inline-link {
+  justify-self: start;
+  color: var(--accent);
+  font-weight: 800;
+}
+.info-button {
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 15px;
+  border: 1px solid rgba(255,216,77,0.36);
+  border-radius: 8px;
+  background: rgba(255,216,77,0.1);
+}
+.info-button:hover,
+.info-inline-link:hover {
+  color: #fff1a5;
+}
+
 .all-scene-shell {
   position: fixed;
   inset: 0;
