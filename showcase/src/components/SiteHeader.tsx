@@ -21,6 +21,7 @@ function activeKey(pathname: string, search: string, hash: string): NavKey | und
   if (pathname === "/build-with-ai") return "buildWithAi";
   if (pathname === "/models") return "packs";
   if (pathname === "/all") return undefined;
+  if (pathname.startsWith("/sounds")) return "sounds";
   if (pathname === "/media") {
     const view = new URLSearchParams(search).get("view");
     if (view === "art") return "art";

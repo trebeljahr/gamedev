@@ -590,6 +590,7 @@ export default function HomePage() {
       <footer className="library-footer" aria-label="Site footer">
         <p>Free game assets, checked for permissive licenses and practical formats.</p>
         <nav aria-label="Footer links">
+          <Link href="/sounds/editor">Audio editor</Link>
           <Link href="/curation">Curation criteria</Link>
           <Link href="/build-with-ai">Build with AI</Link>
           <Link href="/api/catalog.json">Catalog API</Link>

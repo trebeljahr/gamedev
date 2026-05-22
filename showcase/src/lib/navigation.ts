@@ -23,6 +23,7 @@ export const navGroups = [
     label: "Sounds",
     key: "sounds",
     items: [
+      { label: "Audio editor", href: "/sounds/editor" },
       { label: "All sounds", href: "/media?view=sounds&type=all" },
       { label: "Sound effects", href: "/media?view=sounds&type=sfx" },
       { label: "Music", href: "/media?view=sounds&type=music" },

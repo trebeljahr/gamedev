@@ -2682,6 +2682,73 @@ select:focus-visible {
   top: 16px;
   align-self: start;
 }
+.sound-editor-page {
+  width: min(1120px, calc(100% - 44px));
+  margin: 0 auto;
+  padding: clamp(34px, 5vw, 68px) 0 42px;
+  display: grid;
+  gap: 22px;
+}
+.sound-editor-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 26px;
+  align-items: end;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--border);
+}
+.sound-editor-hero h2 {
+  margin: 8px 0 12px;
+  max-width: 760px;
+  font-size: clamp(34px, 6vw, 76px);
+  line-height: 0.96;
+  letter-spacing: 0;
+}
+.sound-editor-hero p {
+  max-width: 680px;
+  margin: 0;
+  color: rgba(232,230,227,0.74);
+  font-size: 16px;
+  line-height: 1.7;
+}
+.sound-editor-proof {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.sound-editor-proof span {
+  min-height: 30px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 10px;
+  border: 1px solid rgba(255,216,77,0.28);
+  border-radius: 999px;
+  color: rgba(255,216,77,0.92);
+  background: rgba(255,216,77,0.08);
+  font-size: 12px;
+  font-weight: 760;
+}
+.sound-editor-page .sound-pad {
+  margin-bottom: 0;
+}
+.sound-editor-footer {
+  color: var(--muted);
+  font-size: 13px;
+}
+.sound-editor-footer p {
+  margin: 0;
+}
+.sound-editor-footer a {
+  color: var(--text);
+  font-weight: 750;
+  text-decoration: underline;
+  text-decoration-color: rgba(255,216,77,0.42);
+  text-underline-offset: 4px;
+}
+.sound-editor-footer a:hover {
+  color: var(--accent);
+}
 .sound-pad {
   display: grid;
   gap: 12px;
@@ -4425,6 +4492,20 @@ select:focus-visible {
   }
   .top-nav {
     align-items: flex-start;
+  }
+  .sound-editor-page {
+    width: min(100% - 32px, 1120px);
+    padding-top: 26px;
+  }
+  .sound-editor-hero {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+  .sound-editor-hero h2 {
+    font-size: clamp(34px, 13vw, 54px);
+  }
+  .sound-editor-proof {
+    justify-content: flex-start;
   }
   .nav-panel {
     position: static;
