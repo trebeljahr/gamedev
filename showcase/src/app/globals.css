@@ -998,6 +998,67 @@ select:focus-visible {
     radial-gradient(120% 80% at 100% 0%, rgba(255,92,79,0.14), transparent 60%),
     rgba(15,17,22,0.92);
 }
+.costs-page {
+  min-height: calc(100vh - 90px);
+  background:
+    linear-gradient(180deg, rgba(116,201,255,0.08), rgba(116,201,255,0) 260px),
+    var(--bg);
+}
+.costs-shell {
+  width: min(980px, calc(100% - 44px));
+  margin: 0 auto;
+  padding: clamp(54px, 8vw, 96px) 0 clamp(64px, 9vw, 108px);
+  display: grid;
+  gap: 24px;
+}
+.costs-intro {
+  display: grid;
+  gap: 14px;
+  max-width: 780px;
+}
+.costs-intro h2 {
+  margin: 4px 0 0;
+  font-size: clamp(34px, 5vw, 58px);
+  line-height: 1.02;
+  letter-spacing: 0;
+}
+.costs-intro p,
+.costs-note {
+  margin: 0;
+  color: rgba(232,230,227,0.76);
+  font-size: clamp(15px, 1.5vw, 18px);
+  line-height: 1.55;
+}
+.costs-log {
+  max-width: 100%;
+  overflow-x: auto;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  background: rgba(12,13,17,0.9);
+  box-shadow: 0 22px 60px rgba(0,0,0,0.28);
+}
+.costs-log pre {
+  min-width: 860px;
+  margin: 0;
+  padding: 18px;
+  color: rgba(232,230,227,0.9);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 13px;
+  line-height: 1.7;
+  white-space: pre;
+}
+.costs-note {
+  max-width: 760px;
+  color: rgba(232,230,227,0.7);
+}
+.costs-updated {
+  margin: 0;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
 .all-link,
 .catalog-heading a {
   display: inline-flex;
