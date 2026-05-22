@@ -1,19 +1,23 @@
-import { licenseForVendor } from "@/lib/license";
-import { manifest } from "@/lib/manifest";
+const CREATOR_SLUG_ALIASES: Record<string, string> = {
+  "kay lousberg": "kaykit",
+  "kay lousberg kaykit": "kaykit",
+  kaykit: "kaykit",
+  "kevin macleod": "kevin-macleod",
+  "kevin macleod incompetech": "kevin-macleod",
+  "poly haven": "poly-haven",
+  polyhaven: "poly-haven",
+  "poly-haven": "poly-haven",
+};
 
 function normalizeCreator(value: string): string {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
 }
 
-export function creatorHref(creator: string): string {
+export function creatorSlug(creator: string): string {
   const normalized = normalizeCreator(creator);
-  const vendor = manifest.packs.find((pack) => {
-    const credit = licenseForVendor(pack.vendor);
-    return (
-      normalizeCreator(pack.vendor) === normalized ||
-      normalizeCreator(credit.vendorLabel) === normalized
-    );
-  })?.vendor;
+  return CREATOR_SLUG_ALIASES[normalized] ?? (normalized.replace(/\s+/g, "-") || "unknown");
+}
 
-  return vendor ? `/${vendor}` : "/media?view=sounds&type=all";
+export function creatorHref(creator: string): string {
+  return `/creators/${creatorSlug(creator)}`;
 }

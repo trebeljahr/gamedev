@@ -8,6 +8,7 @@ import { LicenseLink } from "@/components/LicenseLink";
 import { PackDownloadButton } from "@/components/PackDownloadButton";
 import { ModelDownloadLinks } from "@/components/ModelDownloadLinks";
 import { trackSearchNoResults } from "@/lib/analytics";
+import { creatorHref } from "@/lib/creator-routing";
 import { licenseForVendor } from "@/lib/license";
 import {
   assetUrl,
@@ -92,6 +93,10 @@ function CreatorAttributionPanel({ pack, license }: { pack: Pack; license: strin
         </button>
       </div>
       <div className="attribution-license-row">
+        <span>Creator</span>
+        <Link href={creatorHref(credit.vendorLabel)}>{credit.vendorLabel}</Link>
+      </div>
+      <div className="attribution-license-row">
         <span>License</span>
         <LicenseLink license={license} source={credit.vendorLabel} fallbackUrl={credit.licenseUrl} />
       </div>
@@ -103,7 +108,7 @@ function CreatorAttributionPanel({ pack, license }: { pack: Pack; license: strin
           </a>
         ))}
       </div>
-      <Link className="creator-browse-button" href={`/${pack.vendor}`}>
+      <Link className="creator-browse-button" href={creatorHref(credit.vendorLabel)}>
         Browse other models by this creator
       </Link>
     </section>
@@ -162,7 +167,7 @@ function PackGroupViewer({ pack, modelRefs }: { pack: Pack; modelRefs: ModelRout
         <Link className="back" href="/models">
           ← model index
         </Link>
-        <Link className="vendor-tag vendor-link" href={`/${pack.vendor}`}>
+        <Link className="vendor-tag vendor-link" href={creatorHref(credit.vendorLabel)}>
           {credit.vendorLabel}
         </Link>
         <div className="pack-context-label">Part of pack</div>
@@ -171,7 +176,7 @@ function PackGroupViewer({ pack, modelRefs }: { pack: Pack; modelRefs: ModelRout
         <div className="pack-credit-panel">
           <div>
             <span>Creator</span>
-            <Link href={`/${pack.vendor}`}>{credit.vendorLabel}</Link>
+            <Link href={creatorHref(credit.vendorLabel)}>{credit.vendorLabel}</Link>
           </div>
           <div>
             <span>License</span>

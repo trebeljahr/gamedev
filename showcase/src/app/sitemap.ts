@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { getCreatorSlugs } from "@/lib/creator-pages";
 import { manifest } from "@/lib/manifest";
 import { absoluteUrl, routePath } from "@/lib/seo";
 
@@ -38,12 +39,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const packRoutes = [...manifest.packs]
     .sort((a, b) => routePath(a.vendor, a.pack).localeCompare(routePath(b.vendor, b.pack)))
     .map((pack) => sitemapEntry(routePath(pack.vendor, pack.pack), 0.66, "monthly", lastModified));
+  const creatorRoutes = getCreatorSlugs()
+    .sort((a, b) => a.localeCompare(b))
+    .map((slug) => sitemapEntry(`/creators/${slug}`, 0.72, "weekly", lastModified));
 
   return [
     ...staticRoutes.map((route) =>
       sitemapEntry(route.pathname, route.priority, route.changeFrequency, lastModified),
     ),
     ...vendorRoutes,
+    ...creatorRoutes,
     ...packRoutes,
   ];
 }

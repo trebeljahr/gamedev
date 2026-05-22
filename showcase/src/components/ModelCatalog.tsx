@@ -9,6 +9,7 @@ import { LicenseLink } from "@/components/LicenseLink";
 import { ModelDownloadLinks } from "@/components/ModelDownloadLinks";
 import { SiteHeader } from "@/components/SiteHeader";
 import { trackSearchNoResults } from "@/lib/analytics";
+import { creatorHref } from "@/lib/creator-routing";
 import { licenseForVendor, type VendorLicense } from "@/lib/license";
 import {
   displayPackTitle,
@@ -220,7 +221,7 @@ export function ModelCatalog({ manifest }: ModelCatalogProps) {
                 <div>
                   <dt>Creator</dt>
                   <dd>
-                    <Link href={`/${entry.pack.vendor}`}>{entry.vendorCredit.vendorLabel}</Link>
+                    <Link href={creatorHref(entry.vendorCredit.vendorLabel)}>{entry.vendorCredit.vendorLabel}</Link>
                   </dd>
                 </div>
                 <div>
