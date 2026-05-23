@@ -61,7 +61,7 @@ type SoundTypeFilter = "all" | "sfx" | "music";
 type SoundSortMode = "shuffle" | "alpha";
 type SoundOrganization = SoundCollection["organization"];
 type SpriteLayoutMode = "static" | "grid" | "variable" | "atlas" | "hybrid-atlas" | "sequence-pack";
-type SpriteSequenceMode = "off" | "hybrid-atlas" | "sequence-pack";
+type SpriteSequenceMode = "off" | "auto" | "hybrid-atlas" | "sequence-pack";
 type SoundEffectItem = SoundSample & {
   collection: SoundCollection;
   source: string;
@@ -815,6 +815,20 @@ function hasVariableSpanSizes(spans: Array<{ start: number; end: number }>): boo
   return max - min > Math.max(3, max * 0.18);
 }
 
+// Distinguishes a multi-animation sheet (each row a separate animation, so the
+// per-row frame counts differ) from a single animation wrapped across a uniform
+// grid (every row the same length, with at most a shorter final row). Without a
+// filename hint, only the former should be split into separate animations — a
+// uniform grid stays one wrapped animation read in row-major order.
+function hasMultiAnimationSignature(sequences: SpriteSequence[]): boolean {
+  if (sequences.length < 2) return false;
+  const lengths = sequences.map((sequence) => sequence.frames.length);
+  const head = lengths.slice(0, -1);
+  const last = lengths[lengths.length - 1];
+  const uniformWrap = head.every((length) => length === head[0]) && last <= head[0];
+  return !uniformWrap;
+}
+
 function scoreDivisorGrid(integral: ContentIntegral, cols: number, rows: number): number {
   if (cols <= 0 || rows <= 0) return 0;
   const total = cols * rows;
@@ -1046,13 +1060,17 @@ function detectGridFromImageData(
   const sequenceLayoutMode = sequenceMode === "off" ? null : sequenceMode;
   const rawSequences = sequenceLayoutMode ? detectAnimationSequences(imageData, bg, rowActivity, colActivity) : [];
   const sequences = sequenceLayoutMode ? snapSequencesToRegularCells(imageData, integral, rawSequences) : [];
-  if (sequenceLayoutMode && sequences.length > 1) {
+  // "auto" probes for a multi-animation sheet that has no filename hint, so it
+  // only commits to per-row sequences when the rows look like distinct animations.
+  const acceptSequences =
+    sequences.length > 1 && (sequenceMode !== "auto" || hasMultiAnimationSignature(sequences));
+  if (sequenceLayoutMode && acceptSequences) {
     const first = sequences[0];
     return finalize({
       cols: first.frames.length,
       rows: 1,
       confidence: 0.72,
-      mode: sequenceLayoutMode,
+      mode: sequenceLayoutMode === "auto" ? "sequence-pack" : sequenceLayoutMode,
       frames: first.frames,
       sequences,
     });
@@ -1764,12 +1782,20 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
     const imageWidth = image.naturalWidth || image.width;
     const imageHeight = image.naturalHeight || image.height;
     const hybridAtlas = isLikelyHybridSpriteAtlasPath(sample.path);
+    const pureAtlas = isLikelyTextureAtlas(sample.path, sample.inspection) && !hybridAtlas;
+    const canAnimateSample =
+      sample.animated && isLikelySpriteSheet(sample.path, sample.inspection) && !pureAtlas;
+    // Character/effect sheets often pack one animation per row without any
+    // filename hint (e.g. "nightborne.png", "skeleton-enemy.png"). Probe those
+    // with "auto" so each row becomes its own animation instead of one grid that
+    // sweeps through every animation at once.
     const sequenceMode: SpriteSequenceMode = hybridAtlas
       ? "hybrid-atlas"
       : isLikelySpriteSequencePackPath(sample.path)
         ? "sequence-pack"
-        : "off";
-    const pureAtlas = isLikelyTextureAtlas(sample.path, sample.inspection) && !hybridAtlas;
+        : canAnimateSample
+          ? "auto"
+          : "off";
     const sheetLike =
       sample.animated || isLikelySpriteSheet(sample.path, sample.inspection) || pureAtlas || hybridAtlas;
     const requireCleanGutters = !sheetLike;
@@ -1781,8 +1807,6 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
         : fallbackSequenceGrid ?? fallbackStaticGrid;
     }
     const detectedFromPixels = detectGridFromImageData(imageData, { sequenceMode, requireCleanGutters });
-    const canAnimateSample =
-      sample.animated && isLikelySpriteSheet(sample.path, sample.inspection) && !pureAtlas;
     const hintedLayout = canAnimateSample
       ? parseSpriteSizeHint(sample.path, imageData.width, imageData.height) ?? parseGridHint(sample.path, imageData.width, imageData.height)
       : null;
