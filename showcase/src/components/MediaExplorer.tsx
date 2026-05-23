@@ -916,6 +916,31 @@ function parseGridHint(path: string, imageWidth: number, imageHeight: number): S
   return null;
 }
 
+// Build-generated sheets (`build-gif-sheets.ts`) encode the exact per-frame
+// pixel size in the filename suffix `__strip-<frameW>x<frameH>.sheet.png` and
+// place frames row-major. Recover the grid straight from that suffix so the
+// preview never depends on pixel heuristics or canvas CORS.
+function stripSheetGrid(path: string, imageWidth: number, imageHeight: number): { cols: number; rows: number } | null {
+  const match = path.match(/__strip-(\d+)x(\d+)\.sheet\.png(?:[?#].*)?$/i);
+  if (!match) return null;
+  const frameWidth = Number(match[1]);
+  const frameHeight = Number(match[2]);
+  if (frameWidth <= 0 || frameHeight <= 0) return null;
+  const cols = Math.round(imageWidth / frameWidth);
+  const rows = Math.round(imageHeight / frameHeight);
+  if (cols < 1 || rows < 1 || cols * rows < 2) return null;
+  return { cols, rows };
+}
+
+// The original animated GIF sits next to every build-generated sheet. When the
+// `.sheet.png` can't be loaded (e.g. not yet mirrored to the CDN), fall back to
+// the GIF so the preview still animates instead of going blank.
+function deriveGifFallbackUrl(url: string): string | null {
+  const match = url.match(/^(.+)__strip-\d+x\d+\.sheet\.png(\?.*)?$/i);
+  if (!match) return null;
+  return `${match[1]}.gif${match[2] ?? ""}`;
+}
+
 function buildRowSequenceGrid(cols: number, rows: number, imageWidth: number, imageHeight: number, confidence = 0.54): SpriteGrid | null {
   if (cols <= 1 || rows <= 1 || cols > 32 || rows > 32) return null;
   if (imageWidth % cols !== 0 || imageHeight % rows !== 0) return null;
@@ -1404,12 +1429,14 @@ function SpriteSheetOverview({
 
 function SquareArtPreview({ sample, label }: { sample: ArtSample; label: string }) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const [gifFallback, setGifFallback] = useState<string | null>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     const context = canvas?.getContext("2d", { willReadFrequently: true });
     if (!canvas || !context) return;
 
+    setGifFallback(null);
     let cancelled = false;
     let raf = 0;
     let lastFrameTime = 0;
@@ -1448,6 +1475,22 @@ function SquareArtPreview({ sample, label }: { sample: ArtSample; label: string 
         const size = canvas.width;
         context.clearRect(0, 0, size, size);
         context.imageSmoothingEnabled = false;
+
+        const naturalWidth = image.naturalWidth || image.width;
+        const naturalHeight = image.naturalHeight || image.height;
+
+        // Build-generated sheets carry exact per-frame size in the filename, so
+        // animate the row-major grid directly — no getImageData (CORS-safe) and
+        // no pixel guessing that can crop the frame.
+        const stripGrid = stripSheetGrid(sample.path, naturalWidth, naturalHeight);
+        if (sample.animated && stripGrid) {
+          const total = stripGrid.cols * stripGrid.rows;
+          const frames = Array.from({ length: total }, (_, index) =>
+            spriteGridCellRect(naturalWidth, naturalHeight, stripGrid.cols, stripGrid.rows, index),
+          );
+          startAnimation(image, frames, size);
+          return;
+        }
 
         try {
           const scratch = document.createElement("canvas");
@@ -1493,6 +1536,8 @@ function SquareArtPreview({ sample, label }: { sample: ArtSample; label: string 
           return;
         }
         context.clearRect(0, 0, canvas.width, canvas.height);
+        const gif = deriveGifFallbackUrl(sample.src);
+        if (gif) setGifFallback(gif);
       };
       image.src = sample.src;
     };
@@ -1504,7 +1549,19 @@ function SquareArtPreview({ sample, label }: { sample: ArtSample; label: string 
     };
   }, [sample.animated, sample.path, sample.src]);
 
-  return <canvas ref={canvasRef} width={128} height={128} role="img" aria-label={label} />;
+  return (
+    <>
+      <canvas
+        ref={canvasRef}
+        width={128}
+        height={128}
+        role="img"
+        aria-label={label}
+        style={gifFallback ? { display: "none" } : undefined}
+      />
+      {gifFallback ? <img src={gifFallback} alt="" loading="lazy" decoding="async" /> : null}
+    </>
+  );
 }
 
 function MultiFileSequencePreview({ srcs, label }: { srcs: readonly string[]; label: string }) {
