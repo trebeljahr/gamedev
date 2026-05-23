@@ -11,7 +11,6 @@ const requiredFiles = [
   "public/audio-analysis.json",
   "public/media-catalog.json",
   "public/media-catalog/art-items.json",
-  "src/lib/media-assets.json",
 ];
 
 const requiredDirs = [

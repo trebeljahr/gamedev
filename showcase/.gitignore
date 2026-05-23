@@ -8,11 +8,18 @@ dist/
 next-env.d.ts.bak
 
 # Bbox cache rebuilt by `pnpm manifest` — keyed by mtime,
-# committing it just churns. Generated catalog JSON under src/lib and
-# public/ (including the per-pack files in public/media-catalog/packs/)
-# is checked in: CI and fresh checkouts do not have assets/, so the
-# committed catalogs are what the deployed bundle ships with.
+# committing it just churns. The slim public/ catalogs (media-catalog.json
+# plus the per-pack files in public/media-catalog/packs/) ARE checked in:
+# CI and fresh checkouts have no assets/, so the committed catalogs are what
+# the deployed bundle ships with.
 .manifest-bbox-cache.json
+
+# Build-time intermediate (~40MB) that inspects every raw asset. Only the
+# build scripts read it (build-media-catalog.ts / build-audio-analysis.ts);
+# nothing in the app imports it, and CI never regenerates the catalog. It is
+# rebuilt from assets/ via `pnpm media:assets`, so committing it just bloated
+# the repo and broke pushes (>50MB versions). Regenerate locally instead.
+src/lib/media-assets.json
 
 # Symlinks to asset trees (point at gitignored content)
 public/glb
