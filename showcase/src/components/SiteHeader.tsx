@@ -19,7 +19,7 @@ function activeKey(pathname: string, search: string, hash: string): NavKey | und
     return "library";
   }
   if (pathname === "/build-with-ai") return "buildWithAi";
-  if (pathname === "/costs" || pathname === "/supporters") return undefined;
+  if (pathname === "/costs" || pathname === "/support") return undefined;
   if (pathname === "/models") return "packs";
   if (pathname === "/all") return undefined;
   if (pathname.startsWith("/sounds")) return "sounds";
