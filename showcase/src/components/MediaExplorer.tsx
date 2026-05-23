@@ -16,6 +16,10 @@ import type {
   SourceMapping,
 } from "@/lib/media";
 import { materialSamplesFor, mediaPackHref } from "@/lib/media";
+import { assetUrl } from "@/lib/manifest";
+import { artItemHref, artPackHref } from "@/lib/art-routing";
+import { expandArtItemIndex, type ArtItemIndex, type ArtItemSummary } from "@/lib/art-items";
+import { ArtItemThumb } from "@/components/ArtItemMedia";
 import { resolveSoundAttribution, type SoundAttribution } from "@/lib/sound-attribution";
 import { cleanAudioLabel } from "@/lib/audio-label";
 import { useLoudnessEnvelope, waveformPath } from "@/lib/loudness";
@@ -279,27 +283,6 @@ function searchMatches(searchText: string, query: string): boolean {
   return terms.every((term) => normalizedSearchText.includes(term));
 }
 
-function creatorUrlForPacks(packs: ArtPackSummary[]): string | undefined {
-  return packs.find((pack) => pack.author_url)?.author_url;
-}
-
-function previewSampleStub(pack: ArtPackSummary, preview: NonNullable<ArtPackSummary["preview"]>): ArtSample {
-  return {
-    packFolder: pack.folder,
-    path: preview.path,
-    src: preview.src,
-    label: preview.label,
-    kind: preview.kind,
-    animated: preview.animated,
-    description: "",
-    category: pack.category,
-    themes: pack.themes,
-    useCases: pack.useCases,
-    tags: pack.tags,
-    searchText: "",
-  };
-}
-
 const ART_SUBJECT_LABELS: Record<SpriteSubjectFilter & string, string> = {
   all: "All",
   characters: "Characters",
@@ -308,10 +291,10 @@ const ART_SUBJECT_LABELS: Record<SpriteSubjectFilter & string, string> = {
   other: "Other",
 };
 
-function artTaxonomyLabel(pack: ArtPackSummary): string {
-  if (pack.artType === "ui-icons") return "UI / Icons";
-  const motion = pack.spriteMotion === "animated" ? "Animated" : "Static";
-  return `Spritesheets / ${ART_SUBJECT_LABELS[pack.spriteSubject]} / ${motion}`;
+function artTaxonomyLabel(entry: Pick<ArtPackSummary, "artType" | "spriteSubject" | "spriteMotion">): string {
+  if (entry.artType === "ui-icons") return "UI / Icons";
+  const motion = entry.spriteMotion === "animated" ? "Animated" : "Static";
+  return `Spritesheets / ${ART_SUBJECT_LABELS[entry.spriteSubject]} / ${motion}`;
 }
 
 const ART_TAXONOMY_ORDER = [
@@ -2532,7 +2515,7 @@ function PackSubjectTabs({
 
 const SEQUENCES_GROUP_ID = "__sequences__";
 
-function ArtWorkbench({ summary }: { summary: ArtPackSummary }) {
+export function ArtWorkbench({ summary }: { summary: ArtPackSummary }) {
   const { pack, loading, error } = useArtPack(summary.folder);
   const materialSamples = useMemo(() => (pack ? materialSamplesFor(pack) : []), [pack]);
   const subjects = useMemo(() => (pack ? packSubjectGroups(materialSamples) : []), [materialSamples, pack]);
@@ -2647,60 +2630,35 @@ function ArtWorkbench({ summary }: { summary: ArtPackSummary }) {
   );
 }
 
-function ArtPackCard({
-  pack,
-  active,
-  onSelect,
-}: {
-  pack: ArtPackSummary;
-  active: boolean;
-  onSelect: () => void;
-}) {
-  const preview = pack.preview;
-  const materialCount = pack.materialSampleCount;
+function ArtItemCard({ item }: { item: ArtItemSummary }) {
   return (
-    <article className={`art-card ${active ? "active" : ""}`}>
-      <button type="button" onClick={onSelect}>
+    <article className="art-card">
+      <Link className="art-card-link" href={artItemHref(item.packFolder, item.id)}>
         <div className="art-thumb">
-          {preview ? (
-            <ArtSamplePreview sample={previewSampleStub(pack, preview)} sequenceSrcs={preview.sequenceSrcs} />
-          ) : (
-            <span>{initials(pack.title)}</span>
-          )}
+          <ArtItemThumb src={item.src} label={item.label} />
         </div>
         <div className="art-card-body">
-          <strong>{pack.title}</strong>
-          <span>{pack.theme} · {materialCount} materials</span>
-          <small>{pack.tags.slice(0, 3).join(" · ")}</small>
+          <strong>{item.label}</strong>
+          <span>
+            {item.kind}
+            {item.animated ? " · animated" : ""}
+          </span>
+          <small>{item.theme}</small>
         </div>
-      </button>
+      </Link>
       <div className="art-card-credit">
         <div>
-          <span>Creator</span>
-          <strong>{pack.author}</strong>
+          <span>Pack</span>
+          <Link href={artPackHref(item.packFolder)}>{item.packTitle}</Link>
         </div>
         <div>
           <span>License</span>
           <LicenseLink
-            license={pack.license_class}
-            fallbackUrl={pack.url}
-            label={licenseBucket(pack.license_class)}
-            title={pack.license_class}
+            license={item.license_class}
+            label={licenseBucket(item.license_class)}
+            title={item.license_class}
           />
         </div>
-      </div>
-      <div className="media-actions">
-        <span>{pack.attribution}</span>
-        {pack.author_url && (
-          <a href={pack.author_url} target="_blank" rel="noreferrer">
-            creator
-          </a>
-        )}
-        {pack.url && (
-          <a href={pack.url} target="_blank" rel="noreferrer">
-            source
-          </a>
-        )}
       </div>
     </article>
   );
@@ -3649,12 +3607,31 @@ export function MediaExplorer({
   const [soundCategoryFilter, setSoundCategoryFilter] = useState("all");
   const [soundSubcategoryFilter, setSoundSubcategoryFilter] = useState("all");
   const [soundSortMode, setSoundSortMode] = useState<SoundSortMode>("shuffle");
-  const [selectedArtFolder, setSelectedArtFolder] = useState(artPacks[0]?.folder ?? "");
+  const [artItems, setArtItems] = useState<ArtItemSummary[]>([]);
+  const [artItemsStatus, setArtItemsStatus] = useState<"idle" | "loading" | "ready" | "error">("idle");
+  const artItemsRequested = useRef(false);
   const [selectedKey, setSelectedKey] = useState<string>("");
 
   useEffect(() => {
     setView(initialView);
   }, [initialView]);
+
+  // The per-asset index (~40k items) is fetched lazily the first time the 2D
+  // view opens — too large to ship as page props. Guarded by a ref so it runs
+  // exactly once; deliberately not cancelled mid-flight (a cleanup that aborts
+  // would deadlock against StrictMode's double-invoke and never resolve).
+  useEffect(() => {
+    if (view !== "art" || artItemsRequested.current) return;
+    artItemsRequested.current = true;
+    setArtItemsStatus("loading");
+    fetch("/media-catalog/art-items.json")
+      .then((response) => (response.ok ? response.json() : Promise.reject(new Error(`HTTP ${response.status}`))))
+      .then((index: ArtItemIndex) => {
+        setArtItems(expandArtItemIndex(index).map((item) => ({ ...item, src: assetUrl(item.src) })));
+        setArtItemsStatus("ready");
+      })
+      .catch(() => setArtItemsStatus("error"));
+  }, [view]);
 
   useEffect(() => {
     setArtTypeFilter(initialArtType);
@@ -3769,36 +3746,38 @@ export function MediaExplorer({
     );
   }, [allSoundResults, query, shuffleOrder, soundCategoryFilter, soundSortMode, soundTypeFilter]);
 
-  const filteredArt = useMemo(() => {
+  const filteredArtItems = useMemo(() => {
     const q = query.trim().toLowerCase();
-    return artPacks.filter((pack) => {
-      if (licenseFilter !== "all" && licenseBucket(pack.license_class) !== licenseFilter) return false;
-      if (creatorFilter !== "all" && pack.author !== creatorFilter) return false;
-      if (artTypeFilter !== "all" && pack.artType !== artTypeFilter) return false;
-      if (pack.artType === "spritesheets") {
-        if (spriteSubjectFilter !== "all" && pack.spriteSubject !== spriteSubjectFilter) return false;
-        if (spriteMotionFilter !== "all" && pack.spriteMotion !== spriteMotionFilter) return false;
+    return artItems.filter((item) => {
+      if (licenseFilter !== "all" && licenseBucket(item.license_class) !== licenseFilter) return false;
+      if (creatorFilter !== "all" && item.author !== creatorFilter) return false;
+      if (artTypeFilter !== "all" && item.artType !== artTypeFilter) return false;
+      if (item.artType === "spritesheets") {
+        if (spriteSubjectFilter !== "all" && item.spriteSubject !== spriteSubjectFilter) return false;
+        if (spriteMotionFilter !== "all" && item.spriteMotion !== spriteMotionFilter) return false;
       }
-      return searchMatches(pack.searchText, q);
+      return searchMatches(item.searchText, q);
     });
-  }, [artPacks, artTypeFilter, creatorFilter, licenseFilter, query, spriteMotionFilter, spriteSubjectFilter]);
+  }, [artItems, artTypeFilter, creatorFilter, licenseFilter, query, spriteMotionFilter, spriteSubjectFilter]);
 
-  const groupedArt = useMemo(() => {
+  const groupedArtItems = useMemo(() => {
     const labels =
       groupMode === "type"
         ? ART_TAXONOMY_ORDER
-        : Array.from(new Set(filteredArt.map((pack) => pack.author))).sort();
+        : Array.from(new Set(filteredArtItems.map((item) => item.author))).sort();
     return labels
       .map((label) => {
-        const packs = filteredArt.filter((pack) => (groupMode === "type" ? artTaxonomyLabel(pack) === label : pack.author === label));
+        const items = filteredArtItems.filter((item) =>
+          groupMode === "type" ? artTaxonomyLabel(item) === label : item.author === label,
+        );
         return {
           label,
-          packs,
-          creatorUrl: groupMode === "creator" ? creatorUrlForPacks(packs) : undefined,
+          items,
+          creatorUrl: groupMode === "creator" ? items.find((item) => item.author_url)?.author_url : undefined,
         };
       })
-      .filter((group) => group.packs.length > 0);
-  }, [filteredArt, groupMode]);
+      .filter((group) => group.items.length > 0);
+  }, [filteredArtItems, groupMode]);
 
   const soundList = useInfiniteList({
     total: filteredSoundResults.length,
@@ -3812,12 +3791,6 @@ export function MediaExplorer({
   );
 
   const musicPackCount = useMemo(() => new Set(musicTracks.map((track) => musicTrackPackId(track))).size, [musicTracks]);
-
-  useEffect(() => {
-    if (!filteredArt.some((pack) => pack.folder === selectedArtFolder)) {
-      setSelectedArtFolder(filteredArt[0]?.folder ?? "");
-    }
-  }, [filteredArt, selectedArtFolder]);
 
   useEffect(() => {
     if (!filteredSoundResults.some((result) => result.key === selectedKey)) {
@@ -3843,22 +3816,21 @@ export function MediaExplorer({
   const visibleTextureMappings = filteredTextureMappings.slice(0, textureList.visibleCount);
 
   const artList = useInfiniteList({
-    total: filteredArt.length,
+    total: filteredArtItems.length,
     pageSize: ART_LIST_PAGE_SIZE,
     resetKey: ["art", query, artTypeFilter, creatorFilter, groupMode, licenseFilter, spriteMotionFilter, spriteSubjectFilter].join("|"),
   });
-  const visibleGroupedArt = useMemo(() => {
+  const visibleGroupedArtItems = useMemo(() => {
     let remaining = artList.visibleCount;
-    return groupedArt.flatMap((group) => {
+    return groupedArtItems.flatMap((group) => {
       if (remaining <= 0) return [];
-      const packs = group.packs.slice(0, remaining);
-      remaining -= packs.length;
-      return packs.length > 0 ? [{ ...group, packs }] : [];
+      const items = group.items.slice(0, remaining);
+      remaining -= items.length;
+      return items.length > 0 ? [{ ...group, items }] : [];
     });
-  }, [artList.visibleCount, groupedArt]);
+  }, [artList.visibleCount, groupedArtItems]);
 
   const activeAssetGroup: NavKey = view === "sounds" ? "sounds" : view === "sources" ? "packs" : "art";
-  const selectedArt = filteredArt.find((pack) => pack.folder === selectedArtFolder) ?? filteredArt[0] ?? artPacks[0];
   const selectedResult = useMemo(
     () =>
       filteredSoundResults.find((result) => result.key === selectedKey) ??
@@ -3878,19 +3850,20 @@ export function MediaExplorer({
 
   useEffect(() => {
     if (!normalizedQuery) return;
+    if (view === "art" && artItemsStatus !== "ready") return;
     const resultCount =
       view === "sounds"
         ? filteredSoundResults.length
         : view === "sources"
           ? filteredTextureMappings.length
-          : filteredArt.length;
+          : filteredArtItems.length;
     if (resultCount > 0) return;
     const type = view === "art" ? "2d" : view;
     const key = `${type}:${normalizedQuery}`;
     if (lastNoResultsKey.current === key) return;
     lastNoResultsKey.current = key;
     trackSearchNoResults({ query: normalizedQuery, type });
-  }, [filteredArt.length, filteredSoundResults.length, filteredTextureMappings.length, normalizedQuery, view]);
+  }, [artItemsStatus, filteredArtItems.length, filteredSoundResults.length, filteredTextureMappings.length, normalizedQuery, view]);
 
   function selectArtType(value: ArtTypeFilter) {
     setArtTypeFilter(value);
@@ -4260,46 +4233,54 @@ export function MediaExplorer({
           </section>
         </div>
       ) : view === "art" ? (
-        <div className="art-layout">
-          {selectedArt && <ArtWorkbench summary={selectedArt} />}
+        <div className="media-single-column">
           <section className="media-panel">
             <div className="panel-heading">
-              <h3>2D asset sets</h3>
-              <span>{filteredArt.length} sets</span>
+              <h3>2D assets</h3>
+              <span>
+                {artItemsStatus === "ready"
+                  ? `${filteredArtItems.length} ${filteredArtItems.length === 1 ? "asset" : "assets"}`
+                  : artItemsStatus === "error"
+                    ? "Failed to load"
+                    : "Loading…"}
+              </span>
             </div>
             <div className="art-groups">
-              {visibleGroupedArt.map((group) => (
-                <section className="art-group" key={group.label}>
-                  <div className="art-group-heading">
-                    <h4>{group.label}</h4>
-                    {group.creatorUrl && (
-                      <a href={group.creatorUrl} target="_blank" rel="noreferrer">
-                        Creator page
-                      </a>
-                    )}
-                  </div>
-                  <div className="art-card-grid">
-                    {group.packs.map((pack) => (
-                      <ArtPackCard
-                        key={pack.folder}
-                        pack={pack}
-                        active={pack.folder === selectedArtFolder}
-                        onSelect={() => setSelectedArtFolder(pack.folder)}
-                      />
-                    ))}
-                  </div>
-                </section>
-              ))}
-              <InfiniteListSentinel
-                className="media-list-sentinel"
-                hasMore={artList.hasMore}
-                label="Loading 2D sets"
-                onLoadMore={artList.loadMore}
-                pageSize={ART_LIST_PAGE_SIZE}
-                remaining={artList.remaining}
-                sentinelRef={artList.sentinelRef}
-              />
-              {groupedArt.length === 0 && <div className="empty-preview">No 2D sets match.</div>}
+              {artItemsStatus === "error" ? (
+                <div className="empty-preview">Failed to load 2D assets. Reload to try again.</div>
+              ) : (
+                <>
+                  {visibleGroupedArtItems.map((group) => (
+                    <section className="art-group" key={group.label}>
+                      <div className="art-group-heading">
+                        <h4>{group.label}</h4>
+                        {group.creatorUrl && (
+                          <a href={group.creatorUrl} target="_blank" rel="noreferrer">
+                            Creator page
+                          </a>
+                        )}
+                      </div>
+                      <div className="art-card-grid">
+                        {group.items.map((item) => (
+                          <ArtItemCard key={`${item.packSlug}/${item.id}`} item={item} />
+                        ))}
+                      </div>
+                    </section>
+                  ))}
+                  <InfiniteListSentinel
+                    className="media-list-sentinel"
+                    hasMore={artList.hasMore}
+                    label="Loading 2D assets"
+                    onLoadMore={artList.loadMore}
+                    pageSize={ART_LIST_PAGE_SIZE}
+                    remaining={artList.remaining}
+                    sentinelRef={artList.sentinelRef}
+                  />
+                  {artItemsStatus === "ready" && groupedArtItems.length === 0 && (
+                    <div className="empty-preview">No 2D assets match.</div>
+                  )}
+                </>
+              )}
             </div>
           </section>
         </div>

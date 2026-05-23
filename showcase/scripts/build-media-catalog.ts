@@ -15,6 +15,8 @@ import {
   isLikelyPromoArt,
   sortByFrameNumber,
 } from "../src/lib/media-inference";
+import { buildArtItemIndex } from "../src/lib/art-items";
+import type { ArtPack as MediaArtPack } from "../src/lib/media";
 
 type MetadataMapping = {
   path_pattern: string;
@@ -168,6 +170,7 @@ const mediaAssetsPath = join(showcaseDir, "src", "lib", "media-assets.json");
 const audioAnalysisPath = join(showcaseDir, "public", "audio-analysis.json");
 const outPath = join(showcaseDir, "public", "media-catalog.json");
 const packsDir = join(showcaseDir, "public", "media-catalog", "packs");
+const artItemsPath = join(showcaseDir, "public", "media-catalog", "art-items.json");
 
 const NON_COMMERCIAL_ART_PACKS = new Set([
   "bdragon1727-fire-pixel-bullet-16x16",
@@ -774,6 +777,22 @@ async function main() {
 
   console.log(`[media-catalog] writing index → ${relative(showcaseDir, outPath)}`);
   await writeJson(outPath, catalog);
+
+  const artItemIndex = buildArtItemIndex(artPacks as unknown as MediaArtPack[]);
+  console.log(
+    `[media-catalog] writing ${artItemIndex.items.length} art items → ${relative(showcaseDir, artItemsPath)}`,
+  );
+  await writeFile(
+    artItemsPath,
+    `${JSON.stringify({
+      description:
+        "Per-asset search index for the 2D catalog. Each item is one sprite/image; animation frame runs are collapsed into a single item. Normalized + short-keyed wire format — expand with expandArtItemIndex; srcs are raw and resolved through assetUrl at render time.",
+      stats: { packCount: artItemIndex.packs.length, itemCount: artItemIndex.items.length },
+      packs: artItemIndex.packs,
+      items: artItemIndex.items,
+    })}\n`,
+  );
+
   const elapsed = Date.now() - startedAt;
   console.log(
     `[media-catalog] done in ${elapsed}ms · ${artPacks.length} art packs · ${soundCollections.length} sound groups · ${musicTracks.length} music tracks · ${sourceMappings.length} path mappings`,
