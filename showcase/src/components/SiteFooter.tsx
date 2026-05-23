@@ -1,15 +1,16 @@
 import Link from "next/link";
+import { suggestPackIssueUrl } from "@/lib/github-issue";
 
 export function SiteFooter() {
+  const suggestPackUrl = suggestPackIssueUrl();
   return (
     <footer className="site-footer">
-      <p>GameDev Asset Library</p>
+      <p>Free game assets, checked for permissive licenses and practical formats.</p>
       <nav aria-label="Footer navigation">
         <Link href="/support">Support the project</Link>
-        <Link href="/costs">Costs</Link>
-        <Link href="/takedown-response">Takedown policy</Link>
-        <Link href="/build-with-ai">Build with AI</Link>
-        <Link href="/api/catalog.json">Catalog JSON</Link>
+        <a href={suggestPackUrl} target="_blank" rel="noreferrer">
+          Suggest a pack
+        </a>
       </nav>
     </footer>
   );

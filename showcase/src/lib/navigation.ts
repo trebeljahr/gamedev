@@ -33,7 +33,6 @@ export const navGroups = [
 
 export const navItems = [
   { label: "Home", href: "/", key: "library" },
-  { label: "Build with AI", href: "/build-with-ai", key: "buildWithAi" },
   ...navGroups,
 ] as const;
 

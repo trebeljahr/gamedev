@@ -6,7 +6,6 @@ import fs from "node:fs";
 import path from "node:path";
 import { catalog, findArtPack, mediaStats, sourceMappings } from "@/lib/media";
 import { cleanAudioLabel } from "@/lib/audio-label";
-import { suggestPackIssueUrl } from "@/lib/github-issue";
 import { pageMetadata } from "@/lib/seo";
 import {
   LibraryHeroShowreel,
@@ -522,7 +521,6 @@ function selectTrackSounds(): LibrarySoundPreview[] {
 }
 
 export default function HomePage() {
-  const suggestPackUrl = suggestPackIssueUrl();
   const featuredModels = selectFeaturedModels();
   const featuredSprites = selectFeaturedSprites();
   const featuredSounds = selectFeaturedSounds();
@@ -595,18 +593,6 @@ export default function HomePage() {
           sounds={trackSounds}
         />
       </main>
-      <footer className="library-footer" aria-label="Site footer">
-        <p>Free game assets, checked for permissive licenses and practical formats.</p>
-        <nav aria-label="Footer links">
-          <Link href="/sounds/editor">Audio editor</Link>
-          <Link href="/curation">Curation criteria</Link>
-          <Link href="/build-with-ai">Build with AI</Link>
-          <Link href="/api/catalog.json">Catalog API</Link>
-          <a href={suggestPackUrl} target="_blank" rel="noreferrer">
-            Suggest a pack
-          </a>
-        </nav>
-      </footer>
     </>
   );
 }

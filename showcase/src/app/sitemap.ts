@@ -9,7 +9,6 @@ const staticRoutes = [
   { pathname: "/models", priority: 0.92, changeFrequency: "weekly" },
   { pathname: "/media", priority: 0.88, changeFrequency: "weekly" },
   { pathname: "/curation", priority: 0.7, changeFrequency: "monthly" },
-  { pathname: "/takedown-response", priority: 0.34, changeFrequency: "yearly" },
   { pathname: "/all", priority: 0.68, changeFrequency: "monthly" },
 ] as const satisfies Array<{
   pathname: string;

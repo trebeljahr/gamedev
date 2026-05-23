@@ -819,39 +819,6 @@ select:focus-visible {
   gap: clamp(48px, 7vw, 96px);
   padding-bottom: clamp(48px, 8vw, 96px);
 }
-.library-footer {
-  width: min(1180px, calc(100% - 44px));
-  margin: 0 auto;
-  padding: 24px 0 30px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  flex-wrap: wrap;
-  color: rgba(232,230,227,0.58);
-  border-top: 1px solid rgba(255,255,255,0.08);
-  font-size: 13px;
-}
-.library-footer p {
-  margin: 0;
-  max-width: 520px;
-}
-.library-footer nav {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-.library-footer a {
-  color: rgba(232,230,227,0.82);
-  font-weight: 700;
-  text-decoration: underline;
-  text-decoration-color: rgba(255,216,77,0.42);
-  text-underline-offset: 4px;
-}
-.library-footer a:hover {
-  color: var(--accent);
-}
 .library-tracks-intro {
   display: grid;
   gap: 14px;
@@ -4998,7 +4965,7 @@ select:focus-visible {
   .library-track-actions .landing-button {
     width: 100%;
   }
-  .library-footer {
+  .site-footer {
     width: min(100% - 36px, 1180px);
     display: grid;
     justify-items: start;
