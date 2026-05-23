@@ -30,7 +30,7 @@
     "urban"
   ],
   "searchText": "free knight 2d pixel art xzany-free-knight-2d-pixel-art xzany characters free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms) appreciated / not required free knight 2 d pixel art is a 2d characters art pack by xzany. use it for player characters, npcs, animation prototyping. license: free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). attribution: appreciated / not required. characters fantasy urban player characters npcs animation prototyping 2d art medieval sprite",
-  "sampleCount": 229,
+  "sampleCount": 228,
   "samples": [
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
@@ -8395,47 +8395,6 @@
         "medieval"
       ],
       "searchText": "wallslide 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-pngsheets/wallslide.png free knight 2d pixel art character wallslide is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
-    },
-    {
-      "packFolder": "xzany-free-knight-2d-pixel-art",
-      "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/promoanimated2x__strip-640x360.sheet.png",
-      "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/promoanimated2x__strip-640x360.sheet.png",
-      "label": "Promoanimated2x",
-      "kind": "character",
-      "animated": true,
-      "inspection": {
-        "width": 6400,
-        "height": 360,
-        "bgKind": "mixed",
-        "alphaCoverage": 1,
-        "transparentCoverage": 0,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Promoanimated2x is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
-      "category": "character",
-      "themes": [
-        "character",
-        "fantasy"
-      ],
-      "useCases": [
-        "player characters",
-        "NPCs",
-        "animation prototyping"
-      ],
-      "tags": [
-        "2d",
-        "animated",
-        "art",
-        "character",
-        "fantasy",
-        "medieval"
-      ],
-      "searchText": "promoanimated2x 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/promoanimated2x__strip-640x360.sheet.png free knight 2d pixel art character promoanimated2x is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",

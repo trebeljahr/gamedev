@@ -280,7 +280,7 @@
       "packFolder": "luizmelo-medieval-warrior-pack-2",
       "path": "2D/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/attack1.png",
       "src": "/2D/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/attack1.png",
-      "label": "Attack 1",
+      "label": "Attack1",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -296,7 +296,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Attack 1 is an animated 2D character sample from Medieval Warrior Pack 2. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Attack1 is an animated 2D character sample from Medieval Warrior Pack 2. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -315,13 +315,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "attack 1 2d/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/attack1.png medieval warrior pack 2 character attack 1 is an animated 2d character sample from medieval warrior pack 2. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "attack1 2d/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/attack1.png medieval warrior pack 2 character attack1 is an animated 2d character sample from medieval warrior pack 2. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "luizmelo-medieval-warrior-pack-2",
       "path": "2D/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/attack2.png",
       "src": "/2D/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/attack2.png",
-      "label": "Attack 2",
+      "label": "Attack2",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -337,7 +337,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Attack 2 is an animated 2D character sample from Medieval Warrior Pack 2. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Attack2 is an animated 2D character sample from Medieval Warrior Pack 2. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -356,13 +356,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "attack 2 2d/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/attack2.png medieval warrior pack 2 character attack 2 is an animated 2d character sample from medieval warrior pack 2. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "attack2 2d/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/attack2.png medieval warrior pack 2 character attack2 is an animated 2d character sample from medieval warrior pack 2. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "luizmelo-medieval-warrior-pack-2",
       "path": "2D/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/attack3.png",
       "src": "/2D/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/attack3.png",
-      "label": "Attack 3",
+      "label": "Attack3",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -378,7 +378,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Attack 3 is an animated 2D character sample from Medieval Warrior Pack 2. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Attack3 is an animated 2D character sample from Medieval Warrior Pack 2. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -397,13 +397,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "attack 3 2d/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/attack3.png medieval warrior pack 2 character attack 3 is an animated 2d character sample from medieval warrior pack 2. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "attack3 2d/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/attack3.png medieval warrior pack 2 character attack3 is an animated 2d character sample from medieval warrior pack 2. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "luizmelo-medieval-warrior-pack-2",
       "path": "2D/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/attack4.png",
       "src": "/2D/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/attack4.png",
-      "label": "Attack 4",
+      "label": "Attack4",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -419,7 +419,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Attack 4 is an animated 2D character sample from Medieval Warrior Pack 2. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Attack4 is an animated 2D character sample from Medieval Warrior Pack 2. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -438,7 +438,7 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "attack 4 2d/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/attack4.png medieval warrior pack 2 character attack 4 is an animated 2d character sample from medieval warrior pack 2. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "attack4 2d/luizmelo-medieval-warrior-pack-2/extracted/medieval-warrior-pack-2/medieval-warrior-pack-2/sprites/attack4.png medieval warrior pack 2 character attack4 is an animated 2d character sample from medieval warrior pack 2. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     }
   ]
 }

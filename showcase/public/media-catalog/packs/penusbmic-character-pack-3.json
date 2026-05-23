@@ -27,7 +27,7 @@
     "urban"
   ],
   "searchText": "character pack 3 penusbmic-character-pack-3 penusbmic characters free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms) appreciated / not required character pack 3 is a 2d characters art pack by penusbmic. use it for player characters, npcs, animation prototyping. license: free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). attribution: appreciated / not required. characters urban player characters npcs animation prototyping 2d art sprite",
-  "sampleCount": 2,
+  "sampleCount": 1,
   "samples": [
     {
       "packFolder": "penusbmic-character-pack-3",
@@ -70,46 +70,6 @@
         "character pack 3"
       ],
       "searchText": "guardian sprite sheet 2d/penusbmic-character-pack-3/extracted/guardian/guardian/guardian-sprite-sheet.png character pack 3 character guardian sprite sheet is an animated 2d character sample from character pack 3. useful for player characters, npcs, animation prototyping. character pack 3 player characters npcs animation prototyping 2d animated art"
-    },
-    {
-      "packFolder": "penusbmic-character-pack-3",
-      "path": "2D/penusbmic-character-pack-3/extracted/guardian/guardian/guardian__strip-256x96.sheet.png",
-      "src": "/2D/penusbmic-character-pack-3/extracted/guardian/guardian/guardian__strip-256x96.sheet.png",
-      "label": "Guardian",
-      "kind": "character",
-      "animated": true,
-      "inspection": {
-        "width": 7424,
-        "height": 96,
-        "bgKind": "mixed",
-        "alphaCoverage": 1,
-        "transparentCoverage": 0,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Guardian is an animated 2D character sample from Character Pack 3. Useful for player characters, NPCs, animation prototyping.",
-      "category": "character",
-      "themes": [
-        "character",
-        "character pack 3"
-      ],
-      "useCases": [
-        "player characters",
-        "NPCs",
-        "animation prototyping"
-      ],
-      "tags": [
-        "2d",
-        "animated",
-        "art",
-        "character",
-        "character pack 3"
-      ],
-      "searchText": "guardian 2d/penusbmic-character-pack-3/extracted/guardian/guardian/guardian__strip-256x96.sheet.png character pack 3 character guardian is an animated 2d character sample from character pack 3. useful for player characters, npcs, animation prototyping. character pack 3 player characters npcs animation prototyping 2d animated art"
     }
   ]
 }

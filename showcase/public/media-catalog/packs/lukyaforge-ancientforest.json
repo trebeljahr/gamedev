@@ -29,7 +29,7 @@
     "urban"
   ],
   "searchText": "free: ancient forest 1.6 lukyaforge-ancientforest lukyaforge environments free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms) appreciated / not required free: ancient forest 1 is a 2d environments art pack by lukyaforge. use it for level building, tilemaps, environment dressing. license: free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). attribution: appreciated / not required. environments nature urban level building tilemaps environment dressing 2d art sprite",
-  "sampleCount": 587,
+  "sampleCount": 584,
   "samples": [
     {
       "packFolder": "lukyaforge-ancientforest",
@@ -21693,47 +21693,6 @@
     },
     {
       "packFolder": "lukyaforge-ancientforest",
-      "path": "2D/lukyaforge-ancientforest/extracted/ancient-forest-1-4/ancient-forest-1-5/animated-tiles/watterfall/waterfall__strip-64x48.sheet.png",
-      "src": "/2D/lukyaforge-ancientforest/extracted/ancient-forest-1-4/ancient-forest-1-5/animated-tiles/watterfall/waterfall__strip-64x48.sheet.png",
-      "label": "Waterfall",
-      "kind": "tile",
-      "animated": true,
-      "inspection": {
-        "width": 256,
-        "height": 48,
-        "bgKind": "mixed",
-        "alphaCoverage": 0.9576822916666666,
-        "transparentCoverage": 0.042317708333333336,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Waterfall is an animated 2D tile sample from FREE: Ancient Forest 1.6. Useful for level building, tilemaps, environment dressing.",
-      "category": "tile",
-      "themes": [
-        "nature",
-        "tile"
-      ],
-      "useCases": [
-        "level building",
-        "tilemaps",
-        "environment dressing"
-      ],
-      "tags": [
-        "2d",
-        "animated",
-        "art",
-        "modular",
-        "nature",
-        "tile"
-      ],
-      "searchText": "waterfall 2d/lukyaforge-ancientforest/extracted/ancient-forest-1-4/ancient-forest-1-5/animated-tiles/watterfall/waterfall__strip-64x48.sheet.png free: ancient forest 1.6 tile waterfall is an animated 2d tile sample from free: ancient forest 1.6. useful for level building, tilemaps, environment dressing. nature level building tilemaps environment dressing 2d animated art modular"
-    },
-    {
-      "packFolder": "lukyaforge-ancientforest",
       "path": "2D/lukyaforge-ancientforest/extracted/ancient-forest-1-4/ancient-forest-1-5/animated-tiles/watterfall/waterfall-sheet.png",
       "src": "/2D/lukyaforge-ancientforest/extracted/ancient-forest-1-4/ancient-forest-1-5/animated-tiles/watterfall/waterfall-sheet.png",
       "label": "Waterfall Sheet",
@@ -21816,47 +21775,6 @@
     },
     {
       "packFolder": "lukyaforge-ancientforest",
-      "path": "2D/lukyaforge-ancientforest/extracted/ancient-forest-1-6/ancient-forest-1-6/animated-tiles/watterfall/waterfall__strip-64x48.sheet.png",
-      "src": "/2D/lukyaforge-ancientforest/extracted/ancient-forest-1-6/ancient-forest-1-6/animated-tiles/watterfall/waterfall__strip-64x48.sheet.png",
-      "label": "Waterfall",
-      "kind": "tile",
-      "animated": true,
-      "inspection": {
-        "width": 256,
-        "height": 48,
-        "bgKind": "mixed",
-        "alphaCoverage": 0.9576822916666666,
-        "transparentCoverage": 0.042317708333333336,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Waterfall is an animated 2D tile sample from FREE: Ancient Forest 1.6. Useful for level building, tilemaps, environment dressing.",
-      "category": "tile",
-      "themes": [
-        "nature",
-        "tile"
-      ],
-      "useCases": [
-        "level building",
-        "tilemaps",
-        "environment dressing"
-      ],
-      "tags": [
-        "2d",
-        "animated",
-        "art",
-        "modular",
-        "nature",
-        "tile"
-      ],
-      "searchText": "waterfall 2d/lukyaforge-ancientforest/extracted/ancient-forest-1-6/ancient-forest-1-6/animated-tiles/watterfall/waterfall__strip-64x48.sheet.png free: ancient forest 1.6 tile waterfall is an animated 2d tile sample from free: ancient forest 1.6. useful for level building, tilemaps, environment dressing. nature level building tilemaps environment dressing 2d animated art modular"
-    },
-    {
-      "packFolder": "lukyaforge-ancientforest",
       "path": "2D/lukyaforge-ancientforest/extracted/ancient-forest-1-6/ancient-forest-1-6/animated-tiles/watterfall/waterfall-sheet.png",
       "src": "/2D/lukyaforge-ancientforest/extracted/ancient-forest-1-6/ancient-forest-1-6/animated-tiles/watterfall/waterfall-sheet.png",
       "label": "Waterfall Sheet",
@@ -21936,47 +21854,6 @@
         "tile"
       ],
       "searchText": "mountain 2d/lukyaforge-ancientforest/extracted/ancient-forest-1-6/ancient-forest-1-6/background/mountain/mountain.png free: ancient forest 1.6 tile mountain is a static 2d tile sample from free: ancient forest 1.6. useful for level building, tilemaps, environment dressing. nature level building tilemaps environment dressing 2d art modular static"
-    },
-    {
-      "packFolder": "lukyaforge-ancientforest",
-      "path": "2D/lukyaforge-ancientforest/extracted/dark-forest-1-0/dark-forest-1-0/animated-tiles/waterfall__strip-64x48.sheet.png",
-      "src": "/2D/lukyaforge-ancientforest/extracted/dark-forest-1-0/dark-forest-1-0/animated-tiles/waterfall__strip-64x48.sheet.png",
-      "label": "Waterfall",
-      "kind": "tile",
-      "animated": true,
-      "inspection": {
-        "width": 256,
-        "height": 48,
-        "bgKind": "mixed",
-        "alphaCoverage": 0.9576822916666666,
-        "transparentCoverage": 0.042317708333333336,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Waterfall is an animated 2D tile sample from FREE: Ancient Forest 1.6. Useful for level building, tilemaps, environment dressing.",
-      "category": "tile",
-      "themes": [
-        "nature",
-        "tile"
-      ],
-      "useCases": [
-        "level building",
-        "tilemaps",
-        "environment dressing"
-      ],
-      "tags": [
-        "2d",
-        "animated",
-        "art",
-        "modular",
-        "nature",
-        "tile"
-      ],
-      "searchText": "waterfall 2d/lukyaforge-ancientforest/extracted/dark-forest-1-0/dark-forest-1-0/animated-tiles/waterfall__strip-64x48.sheet.png free: ancient forest 1.6 tile waterfall is an animated 2d tile sample from free: ancient forest 1.6. useful for level building, tilemaps, environment dressing. nature level building tilemaps environment dressing 2d animated art modular"
     },
     {
       "packFolder": "lukyaforge-ancientforest",

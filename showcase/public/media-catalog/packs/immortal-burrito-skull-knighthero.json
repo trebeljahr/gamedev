@@ -29,7 +29,7 @@
     "urban"
   ],
   "searchText": "skull knighthero immortal-burrito-skull-knighthero immortal-burrito general free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms) appreciated / not required skull knighthero is a 2d general art pack by immortal-burrito. use it for player characters, npcs, animation prototyping. license: free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). attribution: appreciated / not required. general horror urban player characters npcs animation prototyping 2d art sprite",
-  "sampleCount": 2,
+  "sampleCount": 1,
   "samples": [
     {
       "packFolder": "immortal-burrito-skull-knighthero",
@@ -75,46 +75,6 @@
         "medieval"
       ],
       "searchText": "skull knight 2d/immortal-burrito-skull-knighthero/extracted/skullknight/skull-knight.png skull knighthero character skull knight is an animated 2d character sample from skull knighthero. useful for player characters, npcs, animation prototyping. fantasy horror player characters npcs animation prototyping 2d animated art medieval"
-    },
-    {
-      "packFolder": "immortal-burrito-skull-knighthero",
-      "path": "2D/immortal-burrito-skull-knighthero/extracted/skullknight/a-gif__strip-520x512.sheet.png",
-      "src": "/2D/immortal-burrito-skull-knighthero/extracted/skullknight/a-gif__strip-520x512.sheet.png",
-      "label": "A Gif",
-      "kind": "character",
-      "animated": true,
-      "inspection": {
-        "width": 2600,
-        "height": 2560,
-        "bgKind": "mixed",
-        "alphaCoverage": 0.9604724702380952,
-        "transparentCoverage": 0.03952752976190476,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "A Gif is an animated 2D character sample from Skull Knighthero. Useful for player characters, NPCs, animation prototyping.",
-      "category": "character",
-      "themes": [
-        "character",
-        "horror"
-      ],
-      "useCases": [
-        "player characters",
-        "NPCs",
-        "animation prototyping"
-      ],
-      "tags": [
-        "2d",
-        "animated",
-        "art",
-        "character",
-        "horror"
-      ],
-      "searchText": "a gif 2d/immortal-burrito-skull-knighthero/extracted/skullknight/a-gif__strip-520x512.sheet.png skull knighthero character a gif is an animated 2d character sample from skull knighthero. useful for player characters, npcs, animation prototyping. horror player characters npcs animation prototyping 2d animated art"
     }
   ]
 }

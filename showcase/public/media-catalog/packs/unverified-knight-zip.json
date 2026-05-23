@@ -30,7 +30,7 @@
     "urban"
   ],
   "searchText": "knight zip unverified-knight-zip unverified characters free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms) appreciated / not required knight zip is a 2d characters art pack by unverified. use it for player characters, npcs, animation prototyping. license: free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). attribution: appreciated / not required. characters fantasy urban player characters npcs animation prototyping 2d art medieval sprite",
-  "sampleCount": 2,
+  "sampleCount": 1,
   "samples": [
     {
       "packFolder": "unverified-knight-zip",
@@ -74,47 +74,6 @@
         "medieval"
       ],
       "searchText": "knight 2d/unverified-knight-zip/extracted/knight/knight.png knight zip character knight is an animated 2d character sample from knight zip. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
-    },
-    {
-      "packFolder": "unverified-knight-zip",
-      "path": "2D/unverified-knight-zip/extracted/knight/knghtt__strip-160x87.sheet.png",
-      "src": "/2D/unverified-knight-zip/extracted/knight/knghtt__strip-160x87.sheet.png",
-      "label": "Knghtt",
-      "kind": "character",
-      "animated": true,
-      "inspection": {
-        "width": 1120,
-        "height": 87,
-        "bgKind": "mixed",
-        "alphaCoverage": 1,
-        "transparentCoverage": 0,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Knghtt is an animated 2D character sample from Knight Zip. Useful for player characters, NPCs, animation prototyping.",
-      "category": "character",
-      "themes": [
-        "character",
-        "fantasy"
-      ],
-      "useCases": [
-        "player characters",
-        "NPCs",
-        "animation prototyping"
-      ],
-      "tags": [
-        "2d",
-        "animated",
-        "art",
-        "character",
-        "fantasy",
-        "medieval"
-      ],
-      "searchText": "knghtt 2d/unverified-knight-zip/extracted/knight/knghtt__strip-160x87.sheet.png knight zip character knghtt is an animated 2d character sample from knight zip. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     }
   ]
 }

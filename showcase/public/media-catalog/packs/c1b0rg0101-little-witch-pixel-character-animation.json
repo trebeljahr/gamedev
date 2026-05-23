@@ -28,7 +28,7 @@
     "urban"
   ],
   "searchText": "little witch pixel character animation c1b0rg0101-little-witch-pixel-character-animation c1b0rg0101 characters free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms) appreciated / not required little witch pixel character animation is a 2d characters art pack by c1b0rg0101. use it for player characters, npcs, animation prototyping. license: free for personal + commercial use, modification allowed, no redistribution/resale (custom per-author terms). attribution: appreciated / not required. characters urban player characters npcs animation prototyping 2d animated art sprite",
-  "sampleCount": 180,
+  "sampleCount": 179,
   "samples": [
     {
       "packFolder": "c1b0rg0101-little-witch-pixel-character-animation",
@@ -7336,46 +7336,6 @@
         "static"
       ],
       "searchText": "magicspell6 2d/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/magic-spell/pngs/magicspell6.png little witch pixel character animation effect magicspell6 is a static 2d effect sample from little witch pixel character animation. useful for player characters, npcs, animation prototyping. little witch pixel character animation player characters npcs animation prototyping 2d animated art static"
-    },
-    {
-      "packFolder": "c1b0rg0101-little-witch-pixel-character-animation",
-      "path": "2D/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/redwitchanimationspreviewfinal__strip-630x500.sheet.png",
-      "src": "/2D/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/redwitchanimationspreviewfinal__strip-630x500.sheet.png",
-      "label": "Redwitchanimationspreviewfinal",
-      "kind": "character",
-      "animated": true,
-      "inspection": {
-        "width": 6930,
-        "height": 5000,
-        "bgKind": "mixed",
-        "alphaCoverage": 0.973250679347826,
-        "transparentCoverage": 0.026749320652173912,
-        "contentRowRuns": 1,
-        "contentColRuns": 1,
-        "promoBackground": false,
-        "spriteSheetGrid": false,
-        "uniformGrid": false
-      },
-      "promo": false,
-      "description": "Redwitchanimationspreviewfinal is an animated 2D character sample from Little Witch Pixel Character Animation. Useful for player characters, NPCs, animation prototyping.",
-      "category": "character",
-      "themes": [
-        "character",
-        "little witch pixel character animation"
-      ],
-      "useCases": [
-        "player characters",
-        "NPCs",
-        "animation prototyping"
-      ],
-      "tags": [
-        "2d",
-        "animated",
-        "art",
-        "character",
-        "little witch pixel character animation"
-      ],
-      "searchText": "redwitchanimationspreviewfinal 2d/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/redwitchanimationspreviewfinal__strip-630x500.sheet.png little witch pixel character animation character redwitchanimationspreviewfinal is an animated 2d character sample from little witch pixel character animation. useful for player characters, npcs, animation prototyping. little witch pixel character animation player characters npcs animation prototyping 2d animated art"
     }
   ]
 }

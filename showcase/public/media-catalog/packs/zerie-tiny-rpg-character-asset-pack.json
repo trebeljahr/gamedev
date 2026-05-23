@@ -195,7 +195,7 @@
       "packFolder": "zerie-tiny-rpg-character-asset-pack",
       "path": "2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-demo-soldier-and-orc/tiny-rpg-character-asset-pack-demo-soldier-and-orc/soldier/soldier-attack03-no-special-effects.png",
       "src": "/2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-demo-soldier-and-orc/tiny-rpg-character-asset-pack-demo-soldier-and-orc/soldier/soldier-attack03-no-special-effects.png",
-      "label": "Soldier Attack 03 No Special Effects",
+      "label": "Soldier Attack03 No Special Effects",
       "kind": "effect",
       "animated": true,
       "inspection": {
@@ -211,7 +211,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Soldier Attack 03 No Special Effects is an animated 2D effect sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Soldier Attack03 No Special Effects is an animated 2D effect sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
       "category": "effect",
       "themes": [
         "effect",
@@ -229,7 +229,7 @@
         "effect",
         "fantasy"
       ],
-      "searchText": "soldier attack 03 no special effects 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-demo-soldier-and-orc/tiny-rpg-character-asset-pack-demo-soldier-and-orc/soldier/soldier-attack03-no-special-effects.png tiny rpg character asset pack v1.03 effect soldier attack 03 no special effects is an animated 2d effect sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
+      "searchText": "soldier attack03 no special effects 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-demo-soldier-and-orc/tiny-rpg-character-asset-pack-demo-soldier-and-orc/soldier/soldier-attack03-no-special-effects.png tiny rpg character asset pack v1.03 effect soldier attack03 no special effects is an animated 2d effect sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "zerie-tiny-rpg-character-asset-pack",
@@ -1835,7 +1835,7 @@
       "packFolder": "zerie-tiny-rpg-character-asset-pack",
       "path": "2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/orc/orc-split-effects/orc-attack01-effect.png",
       "src": "/2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/orc/orc-split-effects/orc-attack01-effect.png",
-      "label": "Orc Attack 01 Effect",
+      "label": "Orc Attack01 Effect",
       "kind": "effect",
       "animated": true,
       "inspection": {
@@ -1851,7 +1851,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Orc Attack 01 Effect is an animated 2D effect sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Orc Attack01 Effect is an animated 2D effect sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
       "category": "effect",
       "themes": [
         "effect",
@@ -1869,13 +1869,13 @@
         "effect",
         "fantasy"
       ],
-      "searchText": "orc attack 01 effect 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/orc/orc-split-effects/orc-attack01-effect.png tiny rpg character asset pack v1.03 effect orc attack 01 effect is an animated 2d effect sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
+      "searchText": "orc attack01 effect 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/orc/orc-split-effects/orc-attack01-effect.png tiny rpg character asset pack v1.03 effect orc attack01 effect is an animated 2d effect sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "zerie-tiny-rpg-character-asset-pack",
       "path": "2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/orc/orc-split-effects/orc-attack02-effect.png",
       "src": "/2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/orc/orc-split-effects/orc-attack02-effect.png",
-      "label": "Orc Attack 02 Effect",
+      "label": "Orc Attack02 Effect",
       "kind": "effect",
       "animated": true,
       "inspection": {
@@ -1891,7 +1891,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Orc Attack 02 Effect is an animated 2D effect sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Orc Attack02 Effect is an animated 2D effect sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
       "category": "effect",
       "themes": [
         "effect",
@@ -1909,13 +1909,13 @@
         "effect",
         "fantasy"
       ],
-      "searchText": "orc attack 02 effect 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/orc/orc-split-effects/orc-attack02-effect.png tiny rpg character asset pack v1.03 effect orc attack 02 effect is an animated 2d effect sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
+      "searchText": "orc attack02 effect 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/orc/orc-split-effects/orc-attack02-effect.png tiny rpg character asset pack v1.03 effect orc attack02 effect is an animated 2d effect sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "zerie-tiny-rpg-character-asset-pack",
       "path": "2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/soldier-split-effects/soldier-attack01-effect.png",
       "src": "/2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/soldier-split-effects/soldier-attack01-effect.png",
-      "label": "Soldier Attack 01 Effect",
+      "label": "Soldier Attack01 Effect",
       "kind": "effect",
       "animated": true,
       "inspection": {
@@ -1931,7 +1931,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Soldier Attack 01 Effect is an animated 2D effect sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Soldier Attack01 Effect is an animated 2D effect sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
       "category": "effect",
       "themes": [
         "effect",
@@ -1949,13 +1949,13 @@
         "effect",
         "fantasy"
       ],
-      "searchText": "soldier attack 01 effect 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/soldier-split-effects/soldier-attack01-effect.png tiny rpg character asset pack v1.03 effect soldier attack 01 effect is an animated 2d effect sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
+      "searchText": "soldier attack01 effect 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/soldier-split-effects/soldier-attack01-effect.png tiny rpg character asset pack v1.03 effect soldier attack01 effect is an animated 2d effect sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "zerie-tiny-rpg-character-asset-pack",
       "path": "2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/soldier-split-effects/soldier-attack02-effect.png",
       "src": "/2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/soldier-split-effects/soldier-attack02-effect.png",
-      "label": "Soldier Attack 02 Effect",
+      "label": "Soldier Attack02 Effect",
       "kind": "effect",
       "animated": true,
       "inspection": {
@@ -1971,7 +1971,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Soldier Attack 02 Effect is an animated 2D effect sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Soldier Attack02 Effect is an animated 2D effect sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
       "category": "effect",
       "themes": [
         "effect",
@@ -1989,13 +1989,13 @@
         "effect",
         "fantasy"
       ],
-      "searchText": "soldier attack 02 effect 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/soldier-split-effects/soldier-attack02-effect.png tiny rpg character asset pack v1.03 effect soldier attack 02 effect is an animated 2d effect sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
+      "searchText": "soldier attack02 effect 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/soldier-split-effects/soldier-attack02-effect.png tiny rpg character asset pack v1.03 effect soldier attack02 effect is an animated 2d effect sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "zerie-tiny-rpg-character-asset-pack",
       "path": "2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/soldier-split-effects/soldier-attack03-effect.png",
       "src": "/2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/soldier-split-effects/soldier-attack03-effect.png",
-      "label": "Soldier Attack 03 Effect",
+      "label": "Soldier Attack03 Effect",
       "kind": "effect",
       "animated": true,
       "inspection": {
@@ -2011,7 +2011,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Soldier Attack 03 Effect is an animated 2D effect sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Soldier Attack03 Effect is an animated 2D effect sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
       "category": "effect",
       "themes": [
         "effect",
@@ -2029,7 +2029,7 @@
         "effect",
         "fantasy"
       ],
-      "searchText": "soldier attack 03 effect 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/soldier-split-effects/soldier-attack03-effect.png tiny rpg character asset pack v1.03 effect soldier attack 03 effect is an animated 2d effect sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
+      "searchText": "soldier attack03 effect 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/soldier-split-effects/soldier-attack03-effect.png tiny rpg character asset pack v1.03 effect soldier attack03 effect is an animated 2d effect sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "zerie-tiny-rpg-character-asset-pack",
@@ -2287,7 +2287,7 @@
       "packFolder": "zerie-tiny-rpg-character-asset-pack",
       "path": "2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-demo-soldier-and-orc/tiny-rpg-character-asset-pack-demo-soldier-and-orc/orc/orc-attack01.png",
       "src": "/2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-demo-soldier-and-orc/tiny-rpg-character-asset-pack-demo-soldier-and-orc/orc/orc-attack01.png",
-      "label": "Orc Attack 01",
+      "label": "Orc Attack01",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -2303,7 +2303,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Orc Attack 01 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Orc Attack01 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -2321,13 +2321,13 @@
         "character",
         "fantasy"
       ],
-      "searchText": "orc attack 01 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-demo-soldier-and-orc/tiny-rpg-character-asset-pack-demo-soldier-and-orc/orc/orc-attack01.png tiny rpg character asset pack v1.03 character orc attack 01 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
+      "searchText": "orc attack01 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-demo-soldier-and-orc/tiny-rpg-character-asset-pack-demo-soldier-and-orc/orc/orc-attack01.png tiny rpg character asset pack v1.03 character orc attack01 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "zerie-tiny-rpg-character-asset-pack",
       "path": "2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-demo-soldier-and-orc/tiny-rpg-character-asset-pack-demo-soldier-and-orc/orc/orc-attack02.png",
       "src": "/2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-demo-soldier-and-orc/tiny-rpg-character-asset-pack-demo-soldier-and-orc/orc/orc-attack02.png",
-      "label": "Orc Attack 02",
+      "label": "Orc Attack02",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -2343,7 +2343,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Orc Attack 02 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Orc Attack02 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -2361,13 +2361,13 @@
         "character",
         "fantasy"
       ],
-      "searchText": "orc attack 02 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-demo-soldier-and-orc/tiny-rpg-character-asset-pack-demo-soldier-and-orc/orc/orc-attack02.png tiny rpg character asset pack v1.03 character orc attack 02 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
+      "searchText": "orc attack02 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-demo-soldier-and-orc/tiny-rpg-character-asset-pack-demo-soldier-and-orc/orc/orc-attack02.png tiny rpg character asset pack v1.03 character orc attack02 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "zerie-tiny-rpg-character-asset-pack",
       "path": "2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-demo-soldier-and-orc/tiny-rpg-character-asset-pack-demo-soldier-and-orc/soldier/soldier-attack01.png",
       "src": "/2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-demo-soldier-and-orc/tiny-rpg-character-asset-pack-demo-soldier-and-orc/soldier/soldier-attack01.png",
-      "label": "Soldier Attack 01",
+      "label": "Soldier Attack01",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -2383,7 +2383,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Soldier Attack 01 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Soldier Attack01 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -2401,13 +2401,13 @@
         "character",
         "fantasy"
       ],
-      "searchText": "soldier attack 01 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-demo-soldier-and-orc/tiny-rpg-character-asset-pack-demo-soldier-and-orc/soldier/soldier-attack01.png tiny rpg character asset pack v1.03 character soldier attack 01 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
+      "searchText": "soldier attack01 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-demo-soldier-and-orc/tiny-rpg-character-asset-pack-demo-soldier-and-orc/soldier/soldier-attack01.png tiny rpg character asset pack v1.03 character soldier attack01 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "zerie-tiny-rpg-character-asset-pack",
       "path": "2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-demo-soldier-and-orc/tiny-rpg-character-asset-pack-demo-soldier-and-orc/soldier/soldier-attack02.png",
       "src": "/2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-demo-soldier-and-orc/tiny-rpg-character-asset-pack-demo-soldier-and-orc/soldier/soldier-attack02.png",
-      "label": "Soldier Attack 02",
+      "label": "Soldier Attack02",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -2423,7 +2423,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Soldier Attack 02 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Soldier Attack02 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -2441,13 +2441,13 @@
         "character",
         "fantasy"
       ],
-      "searchText": "soldier attack 02 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-demo-soldier-and-orc/tiny-rpg-character-asset-pack-demo-soldier-and-orc/soldier/soldier-attack02.png tiny rpg character asset pack v1.03 character soldier attack 02 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
+      "searchText": "soldier attack02 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-demo-soldier-and-orc/tiny-rpg-character-asset-pack-demo-soldier-and-orc/soldier/soldier-attack02.png tiny rpg character asset pack v1.03 character soldier attack02 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "zerie-tiny-rpg-character-asset-pack",
       "path": "2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-demo-soldier-and-orc/tiny-rpg-character-asset-pack-demo-soldier-and-orc/soldier/soldier-attack03.png",
       "src": "/2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-demo-soldier-and-orc/tiny-rpg-character-asset-pack-demo-soldier-and-orc/soldier/soldier-attack03.png",
-      "label": "Soldier Attack 03",
+      "label": "Soldier Attack03",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -2463,7 +2463,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Soldier Attack 03 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Soldier Attack03 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -2481,13 +2481,13 @@
         "character",
         "fantasy"
       ],
-      "searchText": "soldier attack 03 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-demo-soldier-and-orc/tiny-rpg-character-asset-pack-demo-soldier-and-orc/soldier/soldier-attack03.png tiny rpg character asset pack v1.03 character soldier attack 03 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
+      "searchText": "soldier attack03 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-demo-soldier-and-orc/tiny-rpg-character-asset-pack-demo-soldier-and-orc/soldier/soldier-attack03.png tiny rpg character asset pack v1.03 character soldier attack03 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "zerie-tiny-rpg-character-asset-pack",
       "path": "2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/orc/orc-with-shadows/orc-attack01.png",
       "src": "/2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/orc/orc-with-shadows/orc-attack01.png",
-      "label": "Orc Attack 01",
+      "label": "Orc Attack01",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -2503,7 +2503,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Orc Attack 01 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Orc Attack01 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -2521,13 +2521,13 @@
         "character",
         "fantasy"
       ],
-      "searchText": "orc attack 01 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/orc/orc-with-shadows/orc-attack01.png tiny rpg character asset pack v1.03 character orc attack 01 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
+      "searchText": "orc attack01 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/orc/orc-with-shadows/orc-attack01.png tiny rpg character asset pack v1.03 character orc attack01 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "zerie-tiny-rpg-character-asset-pack",
       "path": "2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/orc/orc-with-shadows/orc-attack02.png",
       "src": "/2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/orc/orc-with-shadows/orc-attack02.png",
-      "label": "Orc Attack 02",
+      "label": "Orc Attack02",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -2543,7 +2543,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Orc Attack 02 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Orc Attack02 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -2561,13 +2561,13 @@
         "character",
         "fantasy"
       ],
-      "searchText": "orc attack 02 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/orc/orc-with-shadows/orc-attack02.png tiny rpg character asset pack v1.03 character orc attack 02 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
+      "searchText": "orc attack02 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/orc/orc-with-shadows/orc-attack02.png tiny rpg character asset pack v1.03 character orc attack02 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "zerie-tiny-rpg-character-asset-pack",
       "path": "2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/orc/orc/orc-attack01.png",
       "src": "/2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/orc/orc/orc-attack01.png",
-      "label": "Orc Attack 01",
+      "label": "Orc Attack01",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -2583,7 +2583,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Orc Attack 01 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Orc Attack01 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -2601,13 +2601,13 @@
         "character",
         "fantasy"
       ],
-      "searchText": "orc attack 01 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/orc/orc/orc-attack01.png tiny rpg character asset pack v1.03 character orc attack 01 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
+      "searchText": "orc attack01 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/orc/orc/orc-attack01.png tiny rpg character asset pack v1.03 character orc attack01 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "zerie-tiny-rpg-character-asset-pack",
       "path": "2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/orc/orc/orc-attack02.png",
       "src": "/2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/orc/orc/orc-attack02.png",
-      "label": "Orc Attack 02",
+      "label": "Orc Attack02",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -2623,7 +2623,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Orc Attack 02 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Orc Attack02 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -2641,13 +2641,13 @@
         "character",
         "fantasy"
       ],
-      "searchText": "orc attack 02 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/orc/orc/orc-attack02.png tiny rpg character asset pack v1.03 character orc attack 02 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
+      "searchText": "orc attack02 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/orc/orc/orc-attack02.png tiny rpg character asset pack v1.03 character orc attack02 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "zerie-tiny-rpg-character-asset-pack",
       "path": "2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/orc/orc/orc-shadow-attack02.png",
       "src": "/2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/orc/orc/orc-shadow-attack02.png",
-      "label": "Orc Shadow Attack 02",
+      "label": "Orc Shadow Attack02",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -2663,7 +2663,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Orc Shadow Attack 02 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Orc Shadow Attack02 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -2681,13 +2681,13 @@
         "character",
         "fantasy"
       ],
-      "searchText": "orc shadow attack 02 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/orc/orc/orc-shadow-attack02.png tiny rpg character asset pack v1.03 character orc shadow attack 02 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
+      "searchText": "orc shadow attack02 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/orc/orc/orc-shadow-attack02.png tiny rpg character asset pack v1.03 character orc shadow attack02 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "zerie-tiny-rpg-character-asset-pack",
       "path": "2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/soldier/soldier-with-shadows/soldier-attack01.png",
       "src": "/2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/soldier/soldier-with-shadows/soldier-attack01.png",
-      "label": "Soldier Attack 01",
+      "label": "Soldier Attack01",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -2703,7 +2703,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Soldier Attack 01 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Soldier Attack01 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -2721,13 +2721,13 @@
         "character",
         "fantasy"
       ],
-      "searchText": "soldier attack 01 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/soldier/soldier-with-shadows/soldier-attack01.png tiny rpg character asset pack v1.03 character soldier attack 01 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
+      "searchText": "soldier attack01 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/soldier/soldier-with-shadows/soldier-attack01.png tiny rpg character asset pack v1.03 character soldier attack01 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "zerie-tiny-rpg-character-asset-pack",
       "path": "2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/soldier/soldier-with-shadows/soldier-attack02.png",
       "src": "/2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/soldier/soldier-with-shadows/soldier-attack02.png",
-      "label": "Soldier Attack 02",
+      "label": "Soldier Attack02",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -2743,7 +2743,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Soldier Attack 02 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Soldier Attack02 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -2761,13 +2761,13 @@
         "character",
         "fantasy"
       ],
-      "searchText": "soldier attack 02 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/soldier/soldier-with-shadows/soldier-attack02.png tiny rpg character asset pack v1.03 character soldier attack 02 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
+      "searchText": "soldier attack02 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/soldier/soldier-with-shadows/soldier-attack02.png tiny rpg character asset pack v1.03 character soldier attack02 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "zerie-tiny-rpg-character-asset-pack",
       "path": "2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/soldier/soldier-with-shadows/soldier-attack03.png",
       "src": "/2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/soldier/soldier-with-shadows/soldier-attack03.png",
-      "label": "Soldier Attack 03",
+      "label": "Soldier Attack03",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -2783,7 +2783,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Soldier Attack 03 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Soldier Attack03 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -2801,13 +2801,13 @@
         "character",
         "fantasy"
       ],
-      "searchText": "soldier attack 03 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/soldier/soldier-with-shadows/soldier-attack03.png tiny rpg character asset pack v1.03 character soldier attack 03 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
+      "searchText": "soldier attack03 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/soldier/soldier-with-shadows/soldier-attack03.png tiny rpg character asset pack v1.03 character soldier attack03 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "zerie-tiny-rpg-character-asset-pack",
       "path": "2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/soldier/soldier/soldier-attack01.png",
       "src": "/2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/soldier/soldier/soldier-attack01.png",
-      "label": "Soldier Attack 01",
+      "label": "Soldier Attack01",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -2823,7 +2823,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Soldier Attack 01 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Soldier Attack01 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -2841,13 +2841,13 @@
         "character",
         "fantasy"
       ],
-      "searchText": "soldier attack 01 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/soldier/soldier/soldier-attack01.png tiny rpg character asset pack v1.03 character soldier attack 01 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
+      "searchText": "soldier attack01 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/soldier/soldier/soldier-attack01.png tiny rpg character asset pack v1.03 character soldier attack01 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "zerie-tiny-rpg-character-asset-pack",
       "path": "2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/soldier/soldier/soldier-attack02.png",
       "src": "/2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/soldier/soldier/soldier-attack02.png",
-      "label": "Soldier Attack 02",
+      "label": "Soldier Attack02",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -2863,7 +2863,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Soldier Attack 02 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Soldier Attack02 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -2881,13 +2881,13 @@
         "character",
         "fantasy"
       ],
-      "searchText": "soldier attack 02 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/soldier/soldier/soldier-attack02.png tiny rpg character asset pack v1.03 character soldier attack 02 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
+      "searchText": "soldier attack02 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/soldier/soldier/soldier-attack02.png tiny rpg character asset pack v1.03 character soldier attack02 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "zerie-tiny-rpg-character-asset-pack",
       "path": "2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/soldier/soldier/soldier-attack03.png",
       "src": "/2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/soldier/soldier/soldier-attack03.png",
-      "label": "Soldier Attack 03",
+      "label": "Soldier Attack03",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -2903,7 +2903,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Soldier Attack 03 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Soldier Attack03 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -2921,13 +2921,13 @@
         "character",
         "fantasy"
       ],
-      "searchText": "soldier attack 03 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/soldier/soldier/soldier-attack03.png tiny rpg character asset pack v1.03 character soldier attack 03 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
+      "searchText": "soldier attack03 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/soldier/soldier/soldier-attack03.png tiny rpg character asset pack v1.03 character soldier attack03 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "zerie-tiny-rpg-character-asset-pack",
       "path": "2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/soldier/soldier/soldier-shadow-attack2.png",
       "src": "/2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/soldier/soldier/soldier-shadow-attack2.png",
-      "label": "Soldier Shadow Attack 2",
+      "label": "Soldier Shadow Attack2",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -2943,7 +2943,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Soldier Shadow Attack 2 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Soldier Shadow Attack2 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -2961,13 +2961,13 @@
         "character",
         "fantasy"
       ],
-      "searchText": "soldier shadow attack 2 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/soldier/soldier/soldier-shadow-attack2.png tiny rpg character asset pack v1.03 character soldier shadow attack 2 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
+      "searchText": "soldier shadow attack2 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-02-free-soldier-and-orc/soldier/soldier/soldier-shadow-attack2.png tiny rpg character asset pack v1.03 character soldier shadow attack2 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "zerie-tiny-rpg-character-asset-pack",
       "path": "2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/orc/orc-with-shadows/orc-attack01.png",
       "src": "/2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/orc/orc-with-shadows/orc-attack01.png",
-      "label": "Orc Attack 01",
+      "label": "Orc Attack01",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -2983,7 +2983,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Orc Attack 01 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Orc Attack01 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -3001,13 +3001,13 @@
         "character",
         "fantasy"
       ],
-      "searchText": "orc attack 01 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/orc/orc-with-shadows/orc-attack01.png tiny rpg character asset pack v1.03 character orc attack 01 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
+      "searchText": "orc attack01 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/orc/orc-with-shadows/orc-attack01.png tiny rpg character asset pack v1.03 character orc attack01 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "zerie-tiny-rpg-character-asset-pack",
       "path": "2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/orc/orc-with-shadows/orc-attack02.png",
       "src": "/2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/orc/orc-with-shadows/orc-attack02.png",
-      "label": "Orc Attack 02",
+      "label": "Orc Attack02",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -3023,7 +3023,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Orc Attack 02 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Orc Attack02 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -3041,13 +3041,13 @@
         "character",
         "fantasy"
       ],
-      "searchText": "orc attack 02 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/orc/orc-with-shadows/orc-attack02.png tiny rpg character asset pack v1.03 character orc attack 02 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
+      "searchText": "orc attack02 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/orc/orc-with-shadows/orc-attack02.png tiny rpg character asset pack v1.03 character orc attack02 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "zerie-tiny-rpg-character-asset-pack",
       "path": "2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/orc/orc/orc-attack01.png",
       "src": "/2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/orc/orc/orc-attack01.png",
-      "label": "Orc Attack 01",
+      "label": "Orc Attack01",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -3063,7 +3063,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Orc Attack 01 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Orc Attack01 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -3081,13 +3081,13 @@
         "character",
         "fantasy"
       ],
-      "searchText": "orc attack 01 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/orc/orc/orc-attack01.png tiny rpg character asset pack v1.03 character orc attack 01 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
+      "searchText": "orc attack01 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/orc/orc/orc-attack01.png tiny rpg character asset pack v1.03 character orc attack01 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "zerie-tiny-rpg-character-asset-pack",
       "path": "2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/orc/orc/orc-attack02.png",
       "src": "/2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/orc/orc/orc-attack02.png",
-      "label": "Orc Attack 02",
+      "label": "Orc Attack02",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -3103,7 +3103,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Orc Attack 02 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Orc Attack02 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -3121,13 +3121,13 @@
         "character",
         "fantasy"
       ],
-      "searchText": "orc attack 02 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/orc/orc/orc-attack02.png tiny rpg character asset pack v1.03 character orc attack 02 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
+      "searchText": "orc attack02 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/orc/orc/orc-attack02.png tiny rpg character asset pack v1.03 character orc attack02 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "zerie-tiny-rpg-character-asset-pack",
       "path": "2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/orc/orc/shadow-sprites/orc-shadow-attack02.png",
       "src": "/2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/orc/orc/shadow-sprites/orc-shadow-attack02.png",
-      "label": "Orc Shadow Attack 02",
+      "label": "Orc Shadow Attack02",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -3143,7 +3143,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Orc Shadow Attack 02 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Orc Shadow Attack02 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -3161,13 +3161,13 @@
         "character",
         "fantasy"
       ],
-      "searchText": "orc shadow attack 02 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/orc/orc/shadow-sprites/orc-shadow-attack02.png tiny rpg character asset pack v1.03 character orc shadow attack 02 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
+      "searchText": "orc shadow attack02 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/orc/orc/shadow-sprites/orc-shadow-attack02.png tiny rpg character asset pack v1.03 character orc shadow attack02 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "zerie-tiny-rpg-character-asset-pack",
       "path": "2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/soldier-with-shadows/soldier-attack01.png",
       "src": "/2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/soldier-with-shadows/soldier-attack01.png",
-      "label": "Soldier Attack 01",
+      "label": "Soldier Attack01",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -3183,7 +3183,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Soldier Attack 01 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Soldier Attack01 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -3201,13 +3201,13 @@
         "character",
         "fantasy"
       ],
-      "searchText": "soldier attack 01 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/soldier-with-shadows/soldier-attack01.png tiny rpg character asset pack v1.03 character soldier attack 01 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
+      "searchText": "soldier attack01 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/soldier-with-shadows/soldier-attack01.png tiny rpg character asset pack v1.03 character soldier attack01 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "zerie-tiny-rpg-character-asset-pack",
       "path": "2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/soldier-with-shadows/soldier-attack02.png",
       "src": "/2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/soldier-with-shadows/soldier-attack02.png",
-      "label": "Soldier Attack 02",
+      "label": "Soldier Attack02",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -3223,7 +3223,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Soldier Attack 02 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Soldier Attack02 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -3241,13 +3241,13 @@
         "character",
         "fantasy"
       ],
-      "searchText": "soldier attack 02 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/soldier-with-shadows/soldier-attack02.png tiny rpg character asset pack v1.03 character soldier attack 02 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
+      "searchText": "soldier attack02 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/soldier-with-shadows/soldier-attack02.png tiny rpg character asset pack v1.03 character soldier attack02 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "zerie-tiny-rpg-character-asset-pack",
       "path": "2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/soldier-with-shadows/soldier-attack03.png",
       "src": "/2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/soldier-with-shadows/soldier-attack03.png",
-      "label": "Soldier Attack 03",
+      "label": "Soldier Attack03",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -3263,7 +3263,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Soldier Attack 03 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Soldier Attack03 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -3281,13 +3281,13 @@
         "character",
         "fantasy"
       ],
-      "searchText": "soldier attack 03 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/soldier-with-shadows/soldier-attack03.png tiny rpg character asset pack v1.03 character soldier attack 03 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
+      "searchText": "soldier attack03 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/soldier-with-shadows/soldier-attack03.png tiny rpg character asset pack v1.03 character soldier attack03 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "zerie-tiny-rpg-character-asset-pack",
       "path": "2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/soldier/soldier-attack01.png",
       "src": "/2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/soldier/soldier-attack01.png",
-      "label": "Soldier Attack 01",
+      "label": "Soldier Attack01",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -3303,7 +3303,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Soldier Attack 01 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Soldier Attack01 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -3321,13 +3321,13 @@
         "character",
         "fantasy"
       ],
-      "searchText": "soldier attack 01 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/soldier/soldier-attack01.png tiny rpg character asset pack v1.03 character soldier attack 01 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
+      "searchText": "soldier attack01 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/soldier/soldier-attack01.png tiny rpg character asset pack v1.03 character soldier attack01 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "zerie-tiny-rpg-character-asset-pack",
       "path": "2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/soldier/soldier-attack02.png",
       "src": "/2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/soldier/soldier-attack02.png",
-      "label": "Soldier Attack 02",
+      "label": "Soldier Attack02",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -3343,7 +3343,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Soldier Attack 02 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Soldier Attack02 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -3361,13 +3361,13 @@
         "character",
         "fantasy"
       ],
-      "searchText": "soldier attack 02 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/soldier/soldier-attack02.png tiny rpg character asset pack v1.03 character soldier attack 02 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
+      "searchText": "soldier attack02 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/soldier/soldier-attack02.png tiny rpg character asset pack v1.03 character soldier attack02 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "zerie-tiny-rpg-character-asset-pack",
       "path": "2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/soldier/soldier-attack03.png",
       "src": "/2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/soldier/soldier-attack03.png",
-      "label": "Soldier Attack 03",
+      "label": "Soldier Attack03",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -3383,7 +3383,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Soldier Attack 03 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Soldier Attack03 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -3401,13 +3401,13 @@
         "character",
         "fantasy"
       ],
-      "searchText": "soldier attack 03 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/soldier/soldier-attack03.png tiny rpg character asset pack v1.03 character soldier attack 03 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
+      "searchText": "soldier attack03 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/soldier/soldier-attack03.png tiny rpg character asset pack v1.03 character soldier attack03 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "zerie-tiny-rpg-character-asset-pack",
       "path": "2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/soldier/soldier-shadow-attack2.png",
       "src": "/2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/soldier/soldier-shadow-attack2.png",
-      "label": "Soldier Shadow Attack 2",
+      "label": "Soldier Shadow Attack2",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -3423,7 +3423,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Soldier Shadow Attack 2 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Soldier Shadow Attack2 is an animated 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -3441,7 +3441,7 @@
         "character",
         "fantasy"
       ],
-      "searchText": "soldier shadow attack 2 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/soldier/soldier-shadow-attack2.png tiny rpg character asset pack v1.03 character soldier shadow attack 2 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
+      "searchText": "soldier shadow attack2 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/soldier/soldier-shadow-attack2.png tiny rpg character asset pack v1.03 character soldier shadow attack2 is an animated 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "zerie-tiny-rpg-character-asset-pack",
@@ -3527,7 +3527,7 @@
       "packFolder": "zerie-tiny-rpg-character-asset-pack",
       "path": "2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/arrow-projectile/arrow01-100x100.png",
       "src": "/2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/arrow-projectile/arrow01-100x100.png",
-      "label": "Arrow 01 100 X 100",
+      "label": "Arrow01 100x100",
       "kind": "character",
       "animated": false,
       "inspection": {
@@ -3543,7 +3543,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Arrow 01 100 X 100 is a static 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Arrow01 100x100 is a static 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -3561,13 +3561,13 @@
         "fantasy",
         "static"
       ],
-      "searchText": "arrow 01 100 x 100 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/arrow-projectile/arrow01-100x100.png tiny rpg character asset pack v1.03 character arrow 01 100 x 100 is a static 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art static"
+      "searchText": "arrow01 100x100 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/arrow-projectile/arrow01-100x100.png tiny rpg character asset pack v1.03 character arrow01 100x100 is a static 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art static"
     },
     {
       "packFolder": "zerie-tiny-rpg-character-asset-pack",
       "path": "2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/arrow-projectile/arrow01-32x32.png",
       "src": "/2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/arrow-projectile/arrow01-32x32.png",
-      "label": "Arrow 01 32 X 32",
+      "label": "Arrow01 32x32",
       "kind": "character",
       "animated": false,
       "inspection": {
@@ -3583,7 +3583,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Arrow 01 32 X 32 is a static 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Arrow01 32x32 is a static 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -3601,7 +3601,7 @@
         "fantasy",
         "static"
       ],
-      "searchText": "arrow 01 32 x 32 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/arrow-projectile/arrow01-32x32.png tiny rpg character asset pack v1.03 character arrow 01 32 x 32 is a static 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art static"
+      "searchText": "arrow01 32x32 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/arrow-projectile/arrow01-32x32.png tiny rpg character asset pack v1.03 character arrow01 32x32 is a static 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art static"
     },
     {
       "packFolder": "zerie-tiny-rpg-character-asset-pack",
@@ -3647,7 +3647,7 @@
       "packFolder": "zerie-tiny-rpg-character-asset-pack",
       "path": "2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/arrow-projectile/arrow01-100x100.png",
       "src": "/2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/arrow-projectile/arrow01-100x100.png",
-      "label": "Arrow 01 100 X 100",
+      "label": "Arrow01 100x100",
       "kind": "character",
       "animated": false,
       "inspection": {
@@ -3663,7 +3663,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Arrow 01 100 X 100 is a static 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Arrow01 100x100 is a static 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -3681,13 +3681,13 @@
         "fantasy",
         "static"
       ],
-      "searchText": "arrow 01 100 x 100 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/arrow-projectile/arrow01-100x100.png tiny rpg character asset pack v1.03 character arrow 01 100 x 100 is a static 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art static"
+      "searchText": "arrow01 100x100 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/arrow-projectile/arrow01-100x100.png tiny rpg character asset pack v1.03 character arrow01 100x100 is a static 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art static"
     },
     {
       "packFolder": "zerie-tiny-rpg-character-asset-pack",
       "path": "2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/arrow-projectile/arrow01-32x32.png",
       "src": "/2D/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/arrow-projectile/arrow01-32x32.png",
-      "label": "Arrow 01 32 X 32",
+      "label": "Arrow01 32x32",
       "kind": "character",
       "animated": false,
       "inspection": {
@@ -3703,7 +3703,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Arrow 01 32 X 32 is a static 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Arrow01 32x32 is a static 2D character sample from Tiny RPG Character Asset Pack v1.03. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -3721,7 +3721,7 @@
         "fantasy",
         "static"
       ],
-      "searchText": "arrow 01 32 x 32 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/arrow-projectile/arrow01-32x32.png tiny rpg character asset pack v1.03 character arrow 01 32 x 32 is a static 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art static"
+      "searchText": "arrow01 32x32 2d/zerie-tiny-rpg-character-asset-pack/extracted/tiny-rpg-character-asset-pack-v1-03b-free-soldier-and-orc/tiny-rpg-character-asset-pack-v1-03-free-soldier-and-orc/characters-100x100/soldier/arrow-projectile/arrow01-32x32.png tiny rpg character asset pack v1.03 character arrow01 32x32 is a static 2d character sample from tiny rpg character asset pack v1.03. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d art static"
     },
     {
       "packFolder": "zerie-tiny-rpg-character-asset-pack",
