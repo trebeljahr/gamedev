@@ -37,7 +37,6 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { trackAudioExport, trackSearchNoResults } from "@/lib/analytics";
 import { brokenAssetIssueUrl } from "@/lib/github-issue";
 import { navGroups, type NavKey } from "@/lib/navigation";
-import { uniqueTags } from "@/lib/tags";
 import { SOUND_SUBCATEGORIES, SOUND_SUBCATEGORY_LABELS } from "@/lib/catalog-metadata";
 
 type MediaExplorerProps = {
@@ -2943,60 +2942,323 @@ function AudioPlayer({
   );
 }
 
-function MusicTrackRow({ track }: { track: MusicTrack }) {
+function MusicTrackRow({
+  track,
+  active,
+  onSelect,
+}: {
+  track: MusicTrack;
+  active: boolean;
+  onSelect: () => void;
+}) {
   const packId = musicTrackPackId(track);
-  const reportUrl = brokenAssetIssueUrl({
-    id: track.path,
-    name: cleanAudioLabel(track.title),
-    kind: "music",
-    license: track.license,
-    sourceUrl: track.url,
-    catalogPath: mediaPackHref("music", packId),
-  });
 
   return (
-    <article className="track-row">
-      <div className="media-row-kicker">
-        <span className="sound-org sound-org-music">Music</span>
-        <span>{track.source}</span>
-        {track.packTitle && <span>{track.packTitle}</span>}
-      </div>
-      <AudioPlayer
-        src={track.src}
-        title={cleanAudioLabel(track.title)}
-        detail={
-          <>
-            {track.source} ·{" "}
-            <LicenseLink
-              license={track.license}
-              source={track.source}
-              fallbackUrl={track.url}
-              className="inline-license-link"
-              fallbackElement="span"
-            />
-          </>
-        }
-        compact
-        audio={track.audio}
-      />
-      <p>{track.description}</p>
-      <div className="media-actions">
+    <article className={`media-row ${active ? "active" : ""}`}>
+      <button type="button" className="row-button" onClick={onSelect}>
+        <div>
+          <div className="media-row-kicker">
+            <span className="sound-org sound-org-music">Music</span>
+            <span>{track.source}</span>
+            <span className="sound-org sound-org-license" title={track.license}>
+              <LicenseLink
+                license={track.license}
+                source={track.source}
+                fallbackUrl={track.url}
+                label={licenseBucket(track.license)}
+                title={track.license}
+                className="inline-license-link"
+                fallbackElement="span"
+              />
+            </span>
+          </div>
+          <div className="media-title">{cleanAudioLabel(track.title)}</div>
+          {track.packTitle && <div className="media-detail">{track.packTitle}</div>}
+          <p>{track.description}</p>
+        </div>
+      </button>
+      <div className="media-actions media-actions-attribution">
         <Link href={mediaPackHref("music", packId)}>{track.packTitle ? "pack" : "group"}</Link>
         {track.url && (
           <a href={track.url} target="_blank" rel="noreferrer">
             source
           </a>
         )}
-        <a href={reportUrl} target="_blank" rel="noreferrer">
-          Report broken asset
-        </a>
-      </div>
-      <div className="inline-tags">
-        {uniqueTags(track.tags).slice(0, 5).map((tag) => (
-          <span key={tag}>{tag}</span>
-        ))}
       </div>
     </article>
+  );
+}
+
+function MusicPad({ track, packTracks }: { track: MusicTrack; packTracks: MusicTrack[] }) {
+  const [active, setActive] = useState<MusicTrack>(track);
+  const [volume, setVolume] = useState(0.8);
+  const [rate, setRate] = useState(1);
+  const [loop, setLoop] = useState(false);
+  const [playSignal, setPlaySignal] = useState(0);
+  const [selection, setSelection] = useState<AudioSelection | null>(null);
+  const [trackDuration, setTrackDuration] = useState(0);
+  const [downloadFormat, setDownloadFormat] = useState<AudioExportFormat>("mp3");
+  const [exportBusy, setExportBusy] = useState(false);
+  const [exportProgress, setExportProgress] = useState<AudioExportProgress | null>(null);
+  const [exportError, setExportError] = useState<string | null>(null);
+  const exportAbortRef = useRef<AbortController | null>(null);
+
+  useEffect(() => {
+    setActive(track);
+    setPlaySignal(0);
+    setSelection(null);
+    setTrackDuration(0);
+  }, [track]);
+
+  useEffect(() => {
+    setSelection(null);
+    setTrackDuration(0);
+    setExportError(null);
+    setExportProgress(null);
+  }, [active.src]);
+
+  useEffect(() => {
+    return () => {
+      exportAbortRef.current?.abort();
+    };
+  }, []);
+
+  function play(next: MusicTrack = active) {
+    setActive(next);
+    setPlaySignal((value) => value + 1);
+  }
+
+  function handleDurationChange(value: number) {
+    setTrackDuration(value);
+    setSelection((current) => current ?? { start: 0, end: value });
+  }
+
+  function clearSelection() {
+    setSelection(null);
+  }
+
+  async function handleDownload() {
+    if (!active.src || trackDuration <= 0 || exportBusy) return;
+    setExportError(null);
+    setExportBusy(true);
+    const controller = new AbortController();
+    exportAbortRef.current = controller;
+    const selectionStart = selection?.start ?? 0;
+    const selectionEnd = selection?.end ?? trackDuration;
+    try {
+      const result = await exportAudioSelection({
+        src: active.src,
+        format: downloadFormat,
+        selectionStart,
+        selectionEnd,
+        speed: rate,
+        signal: controller.signal,
+        onProgress: (progress) => setExportProgress(progress),
+      });
+      const url = URL.createObjectURL(result.blob);
+      const baseLabel = (active.title || active.path.split("/").pop() || "track").replace(/\.[^.]+$/, "");
+      const safeLabel = baseLabel.replace(/[^a-z0-9-_]+/gi, "-").replace(/-+/g, "-").replace(/^-|-$/g, "") || "track";
+      const speedTag = rate !== 1 ? `-${rate.toFixed(2)}x` : "";
+      const trimTag = selection ? `-${Math.round(selectionStart * 1000)}-${Math.round(selectionEnd * 1000)}ms` : "";
+      const filename = `${safeLabel}${trimTag}${speedTag}.${downloadFormat}`;
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      trackAudioExport({ format: downloadFormat });
+      window.setTimeout(() => URL.revokeObjectURL(url), 30_000);
+    } catch (error) {
+      if ((error as DOMException)?.name === "AbortError") {
+        // ignore — user-initiated
+      } else {
+        setExportError(error instanceof Error ? error.message : String(error));
+      }
+    } finally {
+      if (exportAbortRef.current === controller) exportAbortRef.current = null;
+      setExportBusy(false);
+      setExportProgress(null);
+    }
+  }
+
+  function cancelDownload() {
+    exportAbortRef.current?.abort();
+  }
+
+  const packId = musicTrackPackId(active);
+  const selectionDuration = selection ? Math.max(0, selection.end - selection.start) : trackDuration;
+  const exportDuration = rate > 0 ? selectionDuration / rate : selectionDuration;
+  const hasNonTrivialSelection =
+    Boolean(selection) && trackDuration > 0 && (selection!.start > 0.01 || selection!.end < trackDuration - 0.01);
+  const canDownload = Boolean(active.src) && trackDuration > 0 && selectionDuration > 0.05;
+  const reportUrl = brokenAssetIssueUrl({
+    id: active.path,
+    name: cleanAudioLabel(active.title),
+    kind: "music",
+    license: active.license,
+    sourceUrl: active.url,
+    catalogPath: mediaPackHref("music", packId),
+  });
+  const progressLabel = exportProgress
+    ? `${exportProgress.message ?? exportProgress.stage} · ${Math.round(exportProgress.ratio * 100)}%`
+    : null;
+  const progressBarValue = exportProgress
+    ? exportProgress.stage === "decode"
+      ? exportProgress.ratio * 0.25
+      : exportProgress.stage === "render"
+        ? 0.25 + exportProgress.ratio * 0.25
+        : 0.5 + exportProgress.ratio * 0.5
+    : 0;
+
+  return (
+    <section className="sound-pad">
+      <div className="sound-pad-head">
+        <div>
+          <h3>{active.packTitle ?? cleanAudioLabel(active.title)}</h3>
+          <div className="media-detail">
+            {active.source} ·{" "}
+            <LicenseLink
+              license={active.license}
+              source={active.source}
+              fallbackUrl={active.url}
+              className="inline-license-link"
+              fallbackElement="span"
+            />{" "}
+            · <Link href={mediaPackHref("music", packId)}>Pack page</Link>{" "}
+            ·{" "}
+            <a href={reportUrl} target="_blank" rel="noreferrer">
+              Report broken asset
+            </a>
+          </div>
+        </div>
+      </div>
+      <AudioPlayer
+        src={active.src}
+        title={cleanAudioLabel(active.title)}
+        detail={active.path.split("/").pop()}
+        volume={volume}
+        rate={rate}
+        loop={loop}
+        playSignal={playSignal}
+        audio={active.audio}
+        selection={selection ?? undefined}
+        onSelectionChange={setSelection}
+        onDurationChange={handleDurationChange}
+      />
+      <div className="sound-controls">
+        <label>
+          Volume
+          <input type="range" min="0" max="1" step="0.05" value={volume} onChange={(event) => setVolume(Number(event.target.value))} />
+        </label>
+        <label>
+          Speed
+          <input type="range" min="0.5" max="1.5" step="0.05" value={rate} onChange={(event) => setRate(Number(event.target.value))} />
+        </label>
+        <label className="inline-check">
+          <input type="checkbox" checked={loop} onChange={(event) => setLoop(event.target.checked)} />
+          Loop
+        </label>
+        {trackDuration > 0 && (
+          <div className="sound-selection-info">
+            <span>Selection</span>
+            <strong>
+              {formatTime(selection?.start ?? 0)} – {formatTime(selection?.end ?? trackDuration)}
+              <small>
+                {" "}({selectionDuration.toFixed(2)}s
+                {rate !== 1 ? ` · ${exportDuration.toFixed(2)}s @ ${rate.toFixed(2)}x` : ""})
+              </small>
+            </strong>
+            <button
+              type="button"
+              className="sound-selection-reset"
+              onClick={clearSelection}
+              disabled={!hasNonTrivialSelection}
+            >
+              Reset selection
+            </button>
+          </div>
+        )}
+      </div>
+      {active.src && (
+        <div className="sound-download">
+          <div className="sound-download-head">
+            <div className="sound-download-summary">
+              <span>Download selection</span>
+              <strong>
+                {selectionDuration > 0 ? `${exportDuration.toFixed(2)}s` : "—"}
+                {rate !== 1 && <small> @ {rate.toFixed(2)}x</small>}
+              </strong>
+            </div>
+            <div className="sound-download-actions">
+              <label className="sound-download-format">
+                Format
+                <select
+                  value={downloadFormat}
+                  onChange={(event) => setDownloadFormat(event.target.value as AudioExportFormat)}
+                  disabled={exportBusy}
+                >
+                  <option value="mp3">MP3</option>
+                  <option value="wav">WAV (lossless)</option>
+                </select>
+              </label>
+              {exportBusy ? (
+                <button type="button" className="sound-download-button danger" onClick={cancelDownload}>
+                  Cancel
+                </button>
+              ) : (
+                <button
+                  type="button"
+                  className="sound-download-button primary"
+                  onClick={handleDownload}
+                  disabled={!canDownload}
+                >
+                  Download {downloadFormat.toUpperCase()}
+                </button>
+              )}
+            </div>
+          </div>
+          {(exportBusy || exportProgress || exportError) && (
+            <div className="sound-download-progress" role="status" aria-live="polite">
+              {exportBusy && (
+                <>
+                  <div className="sound-download-bar">
+                    <div
+                      className="sound-download-bar-fill"
+                      style={{ width: `${Math.round(progressBarValue * 100)}%` }}
+                    />
+                  </div>
+                  <span className="sound-download-stage">
+                    {progressLabel ?? "Preparing…"}
+                  </span>
+                </>
+              )}
+              {!exportBusy && exportError && (
+                <span className="sound-download-error">Export failed: {exportError}</span>
+              )}
+            </div>
+          )}
+          <p className="sound-download-hint">
+            MP3 encoding happens in a background worker so the UI stays responsive. WAV is lossless but larger.
+            Source audio is unchanged — re-select to export a different range.
+          </p>
+        </div>
+      )}
+      {packTracks.length > 1 && (
+        <div className="sound-buttons">
+          {packTracks.map((item) => (
+            <button
+              key={item.path}
+              type="button"
+              className={item.path === active.path ? "active" : ""}
+              onClick={() => play(item)}
+            >
+              {cleanAudioLabel(item.title)}
+            </button>
+          ))}
+        </div>
+      )}
+    </section>
   );
 }
 
@@ -3299,9 +3561,7 @@ export function MediaExplorer({
   const [soundSubcategoryFilter, setSoundSubcategoryFilter] = useState("all");
   const [soundSortMode, setSoundSortMode] = useState<SoundSortMode>("shuffle");
   const [selectedArtFolder, setSelectedArtFolder] = useState(artPacks[0]?.folder ?? "");
-  const [selectedSoundPath, setSelectedSoundPath] = useState(
-    soundCollections.find((item) => item.samples.length > 0)?.samples[0]?.path ?? "",
-  );
+  const [selectedKey, setSelectedKey] = useState<string>("");
 
   useEffect(() => {
     setView(initialView);
@@ -3373,16 +3633,6 @@ export function MediaExplorer({
     () => ["all", ...Array.from(new Set(artPacks.map((p) => licenseBucket(p.license_class))))],
     [artPacks],
   );
-
-  const filteredSounds = useMemo(() => {
-    if (soundTypeFilter === "music") return [];
-    const q = query.trim().toLowerCase();
-    return soundEffectItems.filter((item) => {
-      if (soundCategoryFilter !== "all" && item.category !== soundCategoryFilter) return false;
-      if (soundSubcategoryFilter !== "all" && item.subcategory !== soundSubcategoryFilter) return false;
-      return searchMatches(`${item.searchText} ${item.collection.searchText}`.toLowerCase(), q);
-    });
-  }, [query, soundCategoryFilter, soundSubcategoryFilter, soundEffectItems, soundTypeFilter]);
 
   const allSoundResults = useMemo<SoundResult[]>(
     () => [
@@ -3481,10 +3731,10 @@ export function MediaExplorer({
   }, [filteredArt, selectedArtFolder]);
 
   useEffect(() => {
-    if (!filteredSounds.some((item) => item.path === selectedSoundPath)) {
-      setSelectedSoundPath(filteredSounds[0]?.path ?? "");
+    if (!filteredSoundResults.some((result) => result.key === selectedKey)) {
+      setSelectedKey(filteredSoundResults[0]?.key ?? "");
     }
-  }, [filteredSounds, selectedSoundPath]);
+  }, [filteredSoundResults, selectedKey]);
 
   const textureMappings = useMemo(
     () => sourceMappings.filter((mapping) => mapping.medium === "texture" || mapping.category === "texture"),
@@ -3520,8 +3770,21 @@ export function MediaExplorer({
 
   const activeAssetGroup: NavKey = view === "sounds" ? "sounds" : view === "sources" ? "packs" : "art";
   const selectedArt = filteredArt.find((pack) => pack.folder === selectedArtFolder) ?? filteredArt[0] ?? artPacks[0];
-  const selectedSound = filteredSounds.find((item) => item.path === selectedSoundPath) ?? filteredSounds[0] ?? soundEffectItems[0];
-  const selectedSoundCollection = selectedSound?.collection;
+  const selectedResult = useMemo(
+    () =>
+      filteredSoundResults.find((result) => result.key === selectedKey) ??
+      filteredSoundResults[0] ??
+      allSoundResults[0],
+    [allSoundResults, filteredSoundResults, selectedKey],
+  );
+  const selectedSoundCollection = selectedResult?.kind === "sfx" ? selectedResult.item.collection : undefined;
+  const selectedSoundSamplePath = selectedResult?.kind === "sfx" ? selectedResult.item.path : undefined;
+  const selectedMusicTrack = selectedResult?.kind === "music" ? selectedResult.track : undefined;
+  const selectedMusicPackTracks = useMemo(() => {
+    if (!selectedMusicTrack) return [];
+    const packId = musicTrackPackId(selectedMusicTrack);
+    return musicTracks.filter((track) => musicTrackPackId(track) === packId);
+  }, [musicTracks, selectedMusicTrack]);
   const normalizedQuery = query.trim().toLowerCase();
 
   useEffect(() => {
@@ -3778,7 +4041,7 @@ export function MediaExplorer({
           </section>
         </div>
       ) : view === "sounds" ? (
-        <div className={soundTypeFilter === "music" ? "media-single-column" : "media-columns"}>
+        <div className="media-columns">
           <section className="media-panel">
             <div className="panel-heading">
               <h3>Sounds</h3>
@@ -3790,13 +4053,13 @@ export function MediaExplorer({
               {visibleSoundResults.map((result) =>
                 result.kind === "sfx" ? (
                   <article
-                    className={`media-row ${result.item.path === selectedSoundPath ? "active" : ""}`}
+                    className={`media-row ${result.key === selectedKey ? "active" : ""}`}
                     key={result.key}
                   >
                     <button
                       type="button"
                       className="row-button"
-                      onClick={() => setSelectedSoundPath(result.item.path)}
+                      onClick={() => setSelectedKey(result.key)}
                     >
                       <div>
                         <div className="media-row-kicker">
@@ -3875,7 +4138,12 @@ export function MediaExplorer({
                     </div>
                   </article>
                 ) : (
-                  <MusicTrackRow key={result.key} track={result.track} />
+                  <MusicTrackRow
+                    key={result.key}
+                    track={result.track}
+                    active={result.key === selectedKey}
+                    onSelect={() => setSelectedKey(result.key)}
+                  />
                 ),
               )}
               <InfiniteListSentinel
@@ -3893,11 +4161,14 @@ export function MediaExplorer({
             </div>
           </section>
 
-          {soundTypeFilter !== "music" && (
-            <section className="media-panel sticky-panel">
-              {selectedSoundCollection && <SoundPad collection={selectedSoundCollection} initialSamplePath={selectedSound?.path} />}
-            </section>
-          )}
+          <section className="media-panel sticky-panel">
+            {selectedSoundCollection && (
+              <SoundPad collection={selectedSoundCollection} initialSamplePath={selectedSoundSamplePath} />
+            )}
+            {selectedMusicTrack && (
+              <MusicPad track={selectedMusicTrack} packTracks={selectedMusicPackTracks} />
+            )}
+          </section>
         </div>
       ) : view === "art" ? (
         <div className="art-layout">
