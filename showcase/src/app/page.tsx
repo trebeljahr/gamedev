@@ -208,11 +208,11 @@ const TRACK_MODEL_SLOTS: ModelSlot[] = [
 ];
 
 const TRACK_MUSIC_PICKS: FeaturedSoundPick[] = [
-  { kind: "music", tone: "music", collectionLabel: "Kevin MacLeod", matchTitle: "Clash Defiant" },
+  { kind: "music", tone: "music", collectionLabel: "AlkaKrab", matchTitle: "Moonspire" },
+  { kind: "music", tone: "music", collectionLabel: "Pixabay", matchTitle: "Cosmic Glow" },
   { kind: "music", tone: "music", collectionLabel: "Kevin MacLeod", matchTitle: "Magic Forest" },
-  { kind: "music", tone: "music", collectionLabel: "Kevin MacLeod", matchTitle: "Peppers Theme" },
-  { kind: "music", tone: "music", collectionLabel: "Kevin MacLeod", matchTitle: "Midnight Tale" },
-  { kind: "music", tone: "jingle", collectionLabel: "Kenney Jingles", matchTitle: "Jingles Hit 03" },
+  { kind: "music", tone: "music", collectionLabel: "Deisnberg", matchTitle: "Deisnberg Trailer" },
+  { kind: "music", tone: "music", collectionLabel: "Audiocoffee", matchTitle: "Audiocoffee Relaxing Ambient Meditation Short Ver" },
 ];
 
 const GROUNDED_Y = -0.78;

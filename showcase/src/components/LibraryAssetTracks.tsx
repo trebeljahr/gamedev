@@ -158,7 +158,7 @@ export function LibraryAssetTracks({
           </div>
         </div>
         <div className="library-track-visual library-track-visual--sounds">
-          <SoundSignal sounds={sounds} limit={5} chipLabel="Music & SFX" />
+          <SoundSignal sounds={sounds} limit={5} chipLabel="Music & SFX" colorByIndex />
         </div>
       </article>
     </section>

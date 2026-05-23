@@ -263,13 +263,22 @@ export function SpriteLoop({ sample, index }: { sample: LibrarySpritePreview; in
   );
 }
 
-function SoundEnvelope({ sound, index }: { sound: LibrarySoundPreview; index: number }) {
+function SoundEnvelope({
+  sound,
+  index,
+  colorByIndex,
+}: {
+  sound: LibrarySoundPreview;
+  index: number;
+  colorByIndex?: boolean;
+}) {
   const path = useMemo(() => waveformPath(sound.loudness), [sound.loudness]);
 
   return (
     <div
       className="library-signal-row"
       data-tone={sound.tone}
+      data-variant={colorByIndex ? index % 5 : undefined}
       style={{ "--signal-delay": `${index * 140}ms` } as CSSProperties}
     >
       <div className="library-signal-meta">
@@ -292,10 +301,12 @@ export function SoundSignal({
   sounds,
   limit = 3,
   chipLabel = "Music & SFX",
+  colorByIndex = false,
 }: {
   sounds: LibrarySoundPreview[];
   limit?: number;
   chipLabel?: string;
+  colorByIndex?: boolean;
 }) {
   const rows = sounds.slice(0, limit);
   if (rows.length === 0) return null;
@@ -308,7 +319,7 @@ export function SoundSignal({
       </div>
       <div className="library-signal-rows">
         {rows.map((sound, index) => (
-          <SoundEnvelope key={sound.path} sound={sound} index={index} />
+          <SoundEnvelope key={sound.path} sound={sound} index={index} colorByIndex={colorByIndex} />
         ))}
       </div>
     </div>

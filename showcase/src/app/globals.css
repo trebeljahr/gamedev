@@ -744,6 +744,26 @@ select:focus-visible {
   --signal-accent: rgba(255, 216, 77, 0.95);
   --signal-accent-soft: rgba(255, 216, 77, 0.32);
 }
+.library-signal-row[data-variant="0"] {
+  --signal-accent: rgba(255, 118, 102, 0.92);
+  --signal-accent-soft: rgba(255, 118, 102, 0.34);
+}
+.library-signal-row[data-variant="1"] {
+  --signal-accent: rgba(255, 196, 84, 0.95);
+  --signal-accent-soft: rgba(255, 196, 84, 0.32);
+}
+.library-signal-row[data-variant="2"] {
+  --signal-accent: rgba(120, 222, 160, 0.92);
+  --signal-accent-soft: rgba(120, 222, 160, 0.32);
+}
+.library-signal-row[data-variant="3"] {
+  --signal-accent: rgba(116, 201, 255, 0.9);
+  --signal-accent-soft: rgba(116, 201, 255, 0.32);
+}
+.library-signal-row[data-variant="4"] {
+  --signal-accent: rgba(189, 147, 255, 0.95);
+  --signal-accent-soft: rgba(189, 147, 255, 0.34);
+}
 .library-signal-meta {
   min-width: 0;
 }
