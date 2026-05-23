@@ -127,6 +127,20 @@ export function isLikelyPromoImagePath(path: string): boolean {
   return isLikelyMarketingPreviewPath(path) || hasGenericFilename(path);
 }
 
+// `*.sheet.png` files are produced by build-gif-sheets.ts compositing GIF frames
+// onto a transparent canvas, so a clean conversion is transparent. An opaque
+// result means the source GIF had a baked-in solid background (GIF has no real
+// alpha) — a promo-style animation on a solid color block, not a usable sprite.
+// "mixed" with near-zero transparency is a solid bg the 8-corner heuristic missed
+// (sprite content touched a corner, or a checkerboard/gradient backdrop); real
+// transparent strips stay ≥0.30 transparent coverage while baked ones sit ≤0.19.
+function isBakedBackgroundSheet(path: string, inspection?: ArtInspection): boolean {
+  if (!/\.sheet\.png$/i.test(path)) return false;
+  if (!inspection || inspection.bgKind === "transparent") return false;
+  if (inspection.bgKind === "solid") return true;
+  return inspection.transparentCoverage < 0.25;
+}
+
 function hasCharacterHint(path: string): boolean {
   return hasToken(path, CHARACTER_WORDS) || /(character|hero|knight|warrior|wizard|witch|mage|archer|samurai|bandit|huntress|dino|frog|cat|dog|bird|wolf|fish|shark|turtle|crab|rat|snake|worm|skeleton|monster|enemy|creature|animal|alien|king|goblin|demon)/i.test(path);
 }
@@ -320,6 +334,7 @@ export function scoreArtSample(path: string, inspection?: ArtInspection): number
   if (isLikelyMarketingPreviewPath(path)) score -= 45;
   if (hasGenericFilename(path)) score -= 25;
   if (/(license|readme|credit|cover|banner|thumbnail|__macosx|[\\/]\._)/.test(lower)) score -= 40;
+  if (isBakedBackgroundSheet(path, inspection)) score -= 60;
 
   if (inspection) {
     if (inspection.promoBackground) score -= 45;
@@ -531,6 +546,7 @@ export function dedupeExtractedMirrors<T extends { path: string }>(
 // is missing or "mixed" (i.e. inconclusive).
 export function isLikelyPromoArt(path: string, inspection?: ArtInspection): boolean {
   if (inspection?.promoBackground) return true;
+  if (isBakedBackgroundSheet(path, inspection)) return true;
   return isLikelyPromoImagePath(path);
 }
 
@@ -550,6 +566,8 @@ export function isLikelyTextureAtlas(path: string, inspection?: ArtInspection): 
 }
 
 export function isAnimatedArt(path: string, inspection?: ArtInspection): boolean {
+  // A gif-sheet on a baked solid background is a promo montage, not a sprite.
+  if (isBakedBackgroundSheet(path, inspection)) return false;
   if (inspection?.promoBackground) {
     // promo gifs are still animated *images* but not useful sprite sheets
     if (/\.gif$/i.test(path)) return true;
