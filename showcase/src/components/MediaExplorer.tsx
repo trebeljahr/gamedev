@@ -1803,6 +1803,11 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
     return detectedFromPixels;
   }, [loadedImage, sample]);
 
+  // True once the grid detection effect has processed the current loadedImage
+  // (it stores the exact resolvedGrid reference). Until then, drawing would show
+  // the full, uncropped sprite sheet for one frame — the pre-detection flash.
+  const detectionReady = detectedGrid === resolvedGrid;
+
   const canAnimateSample = Boolean(
     sample?.animated &&
       isLikelySpriteSheet(sample.path, sample.inspection) &&
@@ -1907,7 +1912,7 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
       }
       const currentFrame = Math.min(frameRef.current, totalFrames - 1);
 
-      if (image && !loadFailed && drawFrames.length > 0) {
+      if (image && !loadFailed && detectionReady && drawFrames.length > 0) {
         context.imageSmoothingEnabled = false;
         const drawFrame = drawFrames[currentFrame % drawFrames.length];
         const ratio = Math.min(
@@ -1947,7 +1952,7 @@ function ArtCanvasRunner({ pack, sample }: { pack: ArtPack; sample?: ArtSample }
 
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [autoDetect, columns, detectedGrid, flip, layoutFrameBoxes, layoutFrames, loadFailed, loadedImage, pack.title, playing, rows, sample?.animated, sample?.label, speed]);
+  }, [autoDetect, columns, detectedGrid, detectionReady, flip, layoutFrameBoxes, layoutFrames, loadFailed, loadedImage, pack.title, playing, rows, sample?.animated, sample?.label, speed]);
 
   const detectionLabel = detectedGrid
     ? detectedGrid.mode === "atlas"
