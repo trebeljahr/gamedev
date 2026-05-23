@@ -398,7 +398,10 @@ function matchKey(file: string): string {
 // non-humanoid rigs — Quaternius tanks/dinosaurs got a tiny square footprint
 // under a multi-metre model (overlap on /all, wrong maxDim on the landing
 // grid). getBounds already returns exactly what three.js draws at bind pose.
-const CACHE_VERSION = 5;
+// v6: sanitize out-of-range texture sampler refs before read (see
+// sanitizeGlbSamplers). Two Quaternius woman-animated GLBs threw on io.read
+// and cached a [1,1,1] fallback; bump invalidates those so they recompute.
+const CACHE_VERSION = 6;
 
 type CacheEntry = {
   v: number;
@@ -425,11 +428,78 @@ async function saveCache(c: Cache): Promise<void> {
 // visible base plate (some kenney pieces have one axis effectively zero).
 const MIN_DIM = 0.3;
 
+const GLB_MAGIC = 0x46546c67;
+const GLB_CHUNK_JSON = 0x4e4f534a;
+
+// A couple Quaternius GLBs (woman-animated-dec-2017) carry a texture whose
+// `sampler` index points past the end of the samplers array. gltf-transform's
+// reader does `samplers[textureDef.sampler].magFilter` and throws "Cannot read
+// properties of undefined (reading 'magFilter')", so io.read aborts before
+// getBounds can run and the model falls back to a [1,1,1] bbox (wrong scale on
+// /all + pack pages). bbox only needs geometry, so strip the dangling sampler
+// references — the glTF reader skips textures with no sampler — and hand the
+// repacked GLB to io.readBinary. Returns null when the file is not a GLB or has
+// nothing to repair, so the caller re-throws the original read error.
+function sanitizeGlbSamplers(bytes: Uint8Array): Uint8Array | null {
+  const view = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength);
+  if (bytes.length < 12 || view.getUint32(0, true) !== GLB_MAGIC) return null;
+  const chunks: { type: number; data: Uint8Array }[] = [];
+  let off = 12;
+  while (off + 8 <= bytes.length) {
+    const len = view.getUint32(off, true);
+    const type = view.getUint32(off + 4, true);
+    chunks.push({ type, data: bytes.subarray(off + 8, off + 8 + len) });
+    off += 8 + len;
+  }
+  const jsonChunk = chunks.find((c) => c.type === GLB_CHUNK_JSON);
+  if (!jsonChunk) return null;
+  const json = JSON.parse(Buffer.from(jsonChunk.data).toString("utf8"));
+  const samplers: unknown[] = Array.isArray(json.samplers) ? json.samplers : [];
+  let patched = false;
+  for (const tex of json.textures ?? []) {
+    if (typeof tex.sampler === "number" && samplers[tex.sampler] === undefined) {
+      delete tex.sampler;
+      patched = true;
+    }
+  }
+  if (!patched) return null;
+
+  let jsonBytes: Buffer = Buffer.from(JSON.stringify(json), "utf8");
+  const pad = (4 - (jsonBytes.length % 4)) % 4;
+  if (pad) jsonBytes = Buffer.concat([jsonBytes, Buffer.alloc(pad, 0x20)]);
+  jsonChunk.data = jsonBytes;
+
+  const total = 12 + chunks.reduce((n, c) => n + 8 + c.data.length, 0);
+  const out = Buffer.alloc(total);
+  out.writeUInt32LE(GLB_MAGIC, 0);
+  out.writeUInt32LE(2, 4);
+  out.writeUInt32LE(total, 8);
+  let p = 12;
+  for (const c of chunks) {
+    out.writeUInt32LE(c.data.length, p);
+    out.writeUInt32LE(c.type, p + 4);
+    Buffer.from(c.data).copy(out, p + 8);
+    p += 8 + c.data.length;
+  }
+  return out;
+}
+
+async function readDocResilient(absPath: string, io: NodeIO) {
+  try {
+    return await io.read(absPath);
+  } catch (err) {
+    if (!absPath.toLowerCase().endsWith(".glb")) throw err;
+    const repaired = sanitizeGlbSamplers(await readFile(absPath));
+    if (!repaired) throw err;
+    return io.readBinary(repaired);
+  }
+}
+
 async function computeBbox(
   absPath: string,
   io: NodeIO,
 ): Promise<{ size: Size; minY: number }> {
-  const doc = await io.read(absPath);
+  const doc = await readDocResilient(absPath, io);
   const root = doc.getRoot();
   const scene = root.getDefaultScene() || root.listScenes()[0];
   if (!scene) return { size: [1, 1, 1], minY: 0 };
