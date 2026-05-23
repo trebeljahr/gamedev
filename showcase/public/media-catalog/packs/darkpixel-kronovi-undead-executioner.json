@@ -199,7 +199,7 @@
       "packFolder": "darkpixel-kronovi-undead-executioner",
       "path": "2D/darkpixel-kronovi-undead-executioner/extracted/undead-executioner/undead-executioner-puppet/png/idle2.png",
       "src": "/2D/darkpixel-kronovi-undead-executioner/extracted/undead-executioner/undead-executioner-puppet/png/idle2.png",
-      "label": "Idle2",
+      "label": "Idle 2",
       "kind": "image",
       "animated": true,
       "inspection": {
@@ -217,7 +217,7 @@
         "cellMedianHeight": 40
       },
       "promo": false,
-      "description": "Idle2 is an animated 2D image sample from Undead Executioner. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Idle 2 is an animated 2D image sample from Undead Executioner. Useful for player characters, NPCs, animation prototyping.",
       "category": "image",
       "themes": [
         "image",
@@ -235,7 +235,7 @@
         "image",
         "undead executioner"
       ],
-      "searchText": "idle2 2d/darkpixel-kronovi-undead-executioner/extracted/undead-executioner/undead-executioner-puppet/png/idle2.png undead executioner image idle2 is an animated 2d image sample from undead executioner. useful for player characters, npcs, animation prototyping. undead executioner player characters npcs animation prototyping 2d animated art"
+      "searchText": "idle 2 2d/darkpixel-kronovi-undead-executioner/extracted/undead-executioner/undead-executioner-puppet/png/idle2.png undead executioner image idle 2 is an animated 2d image sample from undead executioner. useful for player characters, npcs, animation prototyping. undead executioner player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "darkpixel-kronovi-undead-executioner",
@@ -365,7 +365,7 @@
       "packFolder": "darkpixel-kronovi-undead-executioner",
       "path": "2D/darkpixel-kronovi-undead-executioner/extracted/undead-executioner/undead-executioner-puppet/png/skill1.png",
       "src": "/2D/darkpixel-kronovi-undead-executioner/extracted/undead-executioner/undead-executioner-puppet/png/skill1.png",
-      "label": "Skill1",
+      "label": "Skill 1",
       "kind": "image",
       "animated": true,
       "inspection": {
@@ -383,7 +383,7 @@
         "cellMedianHeight": 28
       },
       "promo": false,
-      "description": "Skill1 is an animated 2D image sample from Undead Executioner. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Skill 1 is an animated 2D image sample from Undead Executioner. Useful for player characters, NPCs, animation prototyping.",
       "category": "image",
       "themes": [
         "image",
@@ -401,7 +401,7 @@
         "image",
         "undead executioner"
       ],
-      "searchText": "skill1 2d/darkpixel-kronovi-undead-executioner/extracted/undead-executioner/undead-executioner-puppet/png/skill1.png undead executioner image skill1 is an animated 2d image sample from undead executioner. useful for player characters, npcs, animation prototyping. undead executioner player characters npcs animation prototyping 2d animated art"
+      "searchText": "skill 1 2d/darkpixel-kronovi-undead-executioner/extracted/undead-executioner/undead-executioner-puppet/png/skill1.png undead executioner image skill 1 is an animated 2d image sample from undead executioner. useful for player characters, npcs, animation prototyping. undead executioner player characters npcs animation prototyping 2d animated art"
     }
   ]
 }

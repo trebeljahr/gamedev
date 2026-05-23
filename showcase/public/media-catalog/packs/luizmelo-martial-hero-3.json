@@ -235,7 +235,7 @@
       "packFolder": "luizmelo-martial-hero-3",
       "path": "2D/luizmelo-martial-hero-3/extracted/martial-hero-3/martial-hero-3/sprite/attack1.png",
       "src": "/2D/luizmelo-martial-hero-3/extracted/martial-hero-3/martial-hero-3/sprite/attack1.png",
-      "label": "Attack1",
+      "label": "Attack 1",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -251,7 +251,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Attack1 is an animated 2D character sample from Martial Hero 3. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Attack 1 is an animated 2D character sample from Martial Hero 3. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -269,13 +269,13 @@
         "character",
         "martial hero 3"
       ],
-      "searchText": "attack1 2d/luizmelo-martial-hero-3/extracted/martial-hero-3/martial-hero-3/sprite/attack1.png martial hero 3 character attack1 is an animated 2d character sample from martial hero 3. useful for player characters, npcs, animation prototyping. martial hero 3 player characters npcs animation prototyping 2d animated art"
+      "searchText": "attack 1 2d/luizmelo-martial-hero-3/extracted/martial-hero-3/martial-hero-3/sprite/attack1.png martial hero 3 character attack 1 is an animated 2d character sample from martial hero 3. useful for player characters, npcs, animation prototyping. martial hero 3 player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "luizmelo-martial-hero-3",
       "path": "2D/luizmelo-martial-hero-3/extracted/martial-hero-3/martial-hero-3/sprite/attack2.png",
       "src": "/2D/luizmelo-martial-hero-3/extracted/martial-hero-3/martial-hero-3/sprite/attack2.png",
-      "label": "Attack2",
+      "label": "Attack 2",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -291,7 +291,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Attack2 is an animated 2D character sample from Martial Hero 3. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Attack 2 is an animated 2D character sample from Martial Hero 3. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -309,13 +309,13 @@
         "character",
         "martial hero 3"
       ],
-      "searchText": "attack2 2d/luizmelo-martial-hero-3/extracted/martial-hero-3/martial-hero-3/sprite/attack2.png martial hero 3 character attack2 is an animated 2d character sample from martial hero 3. useful for player characters, npcs, animation prototyping. martial hero 3 player characters npcs animation prototyping 2d animated art"
+      "searchText": "attack 2 2d/luizmelo-martial-hero-3/extracted/martial-hero-3/martial-hero-3/sprite/attack2.png martial hero 3 character attack 2 is an animated 2d character sample from martial hero 3. useful for player characters, npcs, animation prototyping. martial hero 3 player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "luizmelo-martial-hero-3",
       "path": "2D/luizmelo-martial-hero-3/extracted/martial-hero-3/martial-hero-3/sprite/attack3.png",
       "src": "/2D/luizmelo-martial-hero-3/extracted/martial-hero-3/martial-hero-3/sprite/attack3.png",
-      "label": "Attack3",
+      "label": "Attack 3",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -331,7 +331,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Attack3 is an animated 2D character sample from Martial Hero 3. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Attack 3 is an animated 2D character sample from Martial Hero 3. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -349,7 +349,7 @@
         "character",
         "martial hero 3"
       ],
-      "searchText": "attack3 2d/luizmelo-martial-hero-3/extracted/martial-hero-3/martial-hero-3/sprite/attack3.png martial hero 3 character attack3 is an animated 2d character sample from martial hero 3. useful for player characters, npcs, animation prototyping. martial hero 3 player characters npcs animation prototyping 2d animated art"
+      "searchText": "attack 3 2d/luizmelo-martial-hero-3/extracted/martial-hero-3/martial-hero-3/sprite/attack3.png martial hero 3 character attack 3 is an animated 2d character sample from martial hero 3. useful for player characters, npcs, animation prototyping. martial hero 3 player characters npcs animation prototyping 2d animated art"
     }
   ]
 }

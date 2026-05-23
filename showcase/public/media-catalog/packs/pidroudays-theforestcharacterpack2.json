@@ -33,7 +33,7 @@
       "packFolder": "pidroudays-theforestcharacterpack2",
       "path": "2D/pidroudays-theforestcharacterpack2/extracted/theforestcharacterpack2-freeversion/theforestcharacterpack2-freeversion/character1-spritesheet.png",
       "src": "/2D/pidroudays-theforestcharacterpack2/extracted/theforestcharacterpack2-freeversion/theforestcharacterpack2-freeversion/character1-spritesheet.png",
-      "label": "Character1 Spritesheet",
+      "label": "Character 1 Spritesheet",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -51,7 +51,7 @@
         "cellMedianHeight": 30
       },
       "promo": false,
-      "description": "Character1 Spritesheet is an animated 2D character sample from Theforestcharacterpack2. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Character 1 Spritesheet is an animated 2D character sample from Theforestcharacterpack2. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -69,13 +69,13 @@
         "character",
         "theforestcharacterpack2"
       ],
-      "searchText": "character1 spritesheet 2d/pidroudays-theforestcharacterpack2/extracted/theforestcharacterpack2-freeversion/theforestcharacterpack2-freeversion/character1-spritesheet.png theforestcharacterpack2 character character1 spritesheet is an animated 2d character sample from theforestcharacterpack2. useful for player characters, npcs, animation prototyping. theforestcharacterpack2 player characters npcs animation prototyping 2d animated art"
+      "searchText": "character 1 spritesheet 2d/pidroudays-theforestcharacterpack2/extracted/theforestcharacterpack2-freeversion/theforestcharacterpack2-freeversion/character1-spritesheet.png theforestcharacterpack2 character character 1 spritesheet is an animated 2d character sample from theforestcharacterpack2. useful for player characters, npcs, animation prototyping. theforestcharacterpack2 player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "pidroudays-theforestcharacterpack2",
       "path": "2D/pidroudays-theforestcharacterpack2/extracted/theforestcharacterpack2-freeversion/theforestcharacterpack2-freeversion/character2-spritesheet.png",
       "src": "/2D/pidroudays-theforestcharacterpack2/extracted/theforestcharacterpack2-freeversion/theforestcharacterpack2-freeversion/character2-spritesheet.png",
-      "label": "Character2 Spritesheet",
+      "label": "Character 2 Spritesheet",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -93,7 +93,7 @@
         "cellMedianHeight": 46
       },
       "promo": false,
-      "description": "Character2 Spritesheet is an animated 2D character sample from Theforestcharacterpack2. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Character 2 Spritesheet is an animated 2D character sample from Theforestcharacterpack2. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -111,7 +111,7 @@
         "character",
         "theforestcharacterpack2"
       ],
-      "searchText": "character2 spritesheet 2d/pidroudays-theforestcharacterpack2/extracted/theforestcharacterpack2-freeversion/theforestcharacterpack2-freeversion/character2-spritesheet.png theforestcharacterpack2 character character2 spritesheet is an animated 2d character sample from theforestcharacterpack2. useful for player characters, npcs, animation prototyping. theforestcharacterpack2 player characters npcs animation prototyping 2d animated art"
+      "searchText": "character 2 spritesheet 2d/pidroudays-theforestcharacterpack2/extracted/theforestcharacterpack2-freeversion/theforestcharacterpack2-freeversion/character2-spritesheet.png theforestcharacterpack2 character character 2 spritesheet is an animated 2d character sample from theforestcharacterpack2. useful for player characters, npcs, animation prototyping. theforestcharacterpack2 player characters npcs animation prototyping 2d animated art"
     }
   ]
 }

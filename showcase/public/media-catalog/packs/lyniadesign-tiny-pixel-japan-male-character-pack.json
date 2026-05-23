@@ -33,7 +33,7 @@
       "packFolder": "lyniadesign-tiny-pixel-japan-male-character-pack",
       "path": "2D/lyniadesign-tiny-pixel-japan-male-character-pack/extracted/tiny-pixel-japan-male-character-pack/tiny-pixel-japan-male-character-pack/npc-lord.png",
       "src": "/2D/lyniadesign-tiny-pixel-japan-male-character-pack/extracted/tiny-pixel-japan-male-character-pack/tiny-pixel-japan-male-character-pack/npc-lord.png",
-      "label": "Npc Lord",
+      "label": "NPC Lord",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -49,7 +49,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Npc Lord is an animated 2D character sample from Tiny Pixel Japan Male Character Pack. Useful for player characters, NPCs, animation prototyping.",
+      "description": "NPC Lord is an animated 2D character sample from Tiny Pixel Japan Male Character Pack. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -73,7 +73,7 @@
       "packFolder": "lyniadesign-tiny-pixel-japan-male-character-pack",
       "path": "2D/lyniadesign-tiny-pixel-japan-male-character-pack/extracted/tiny-pixel-japan-male-character-pack/tiny-pixel-japan-male-character-pack/npc-ronin.png",
       "src": "/2D/lyniadesign-tiny-pixel-japan-male-character-pack/extracted/tiny-pixel-japan-male-character-pack/tiny-pixel-japan-male-character-pack/npc-ronin.png",
-      "label": "Npc Ronin",
+      "label": "NPC Ronin",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -89,7 +89,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Npc Ronin is an animated 2D character sample from Tiny Pixel Japan Male Character Pack. Useful for player characters, NPCs, animation prototyping.",
+      "description": "NPC Ronin is an animated 2D character sample from Tiny Pixel Japan Male Character Pack. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -113,7 +113,7 @@
       "packFolder": "lyniadesign-tiny-pixel-japan-male-character-pack",
       "path": "2D/lyniadesign-tiny-pixel-japan-male-character-pack/extracted/tiny-pixel-japan-male-character-pack/tiny-pixel-japan-male-character-pack/npc-samurai.png",
       "src": "/2D/lyniadesign-tiny-pixel-japan-male-character-pack/extracted/tiny-pixel-japan-male-character-pack/tiny-pixel-japan-male-character-pack/npc-samurai.png",
-      "label": "Npc Samurai",
+      "label": "NPC Samurai",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -129,7 +129,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Npc Samurai is an animated 2D character sample from Tiny Pixel Japan Male Character Pack. Useful for player characters, NPCs, animation prototyping.",
+      "description": "NPC Samurai is an animated 2D character sample from Tiny Pixel Japan Male Character Pack. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -153,7 +153,7 @@
       "packFolder": "lyniadesign-tiny-pixel-japan-male-character-pack",
       "path": "2D/lyniadesign-tiny-pixel-japan-male-character-pack/extracted/tiny-pixel-japan-male-character-pack/tiny-pixel-japan-male-character-pack/npc-villager.png",
       "src": "/2D/lyniadesign-tiny-pixel-japan-male-character-pack/extracted/tiny-pixel-japan-male-character-pack/tiny-pixel-japan-male-character-pack/npc-villager.png",
-      "label": "Npc Villager",
+      "label": "NPC Villager",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -169,7 +169,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Npc Villager is an animated 2D character sample from Tiny Pixel Japan Male Character Pack. Useful for player characters, NPCs, animation prototyping.",
+      "description": "NPC Villager is an animated 2D character sample from Tiny Pixel Japan Male Character Pack. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",

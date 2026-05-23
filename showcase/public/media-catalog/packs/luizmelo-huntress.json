@@ -273,7 +273,7 @@
       "packFolder": "luizmelo-huntress",
       "path": "2D/luizmelo-huntress/extracted/huntress/huntress/sprites/attack1.png",
       "src": "/2D/luizmelo-huntress/extracted/huntress/huntress/sprites/attack1.png",
-      "label": "Attack1",
+      "label": "Attack 1",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -289,7 +289,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Attack1 is an animated 2D character sample from Huntress. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Attack 1 is an animated 2D character sample from Huntress. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -307,13 +307,13 @@
         "character",
         "huntress"
       ],
-      "searchText": "attack1 2d/luizmelo-huntress/extracted/huntress/huntress/sprites/attack1.png huntress character attack1 is an animated 2d character sample from huntress. useful for player characters, npcs, animation prototyping. huntress player characters npcs animation prototyping 2d animated art"
+      "searchText": "attack 1 2d/luizmelo-huntress/extracted/huntress/huntress/sprites/attack1.png huntress character attack 1 is an animated 2d character sample from huntress. useful for player characters, npcs, animation prototyping. huntress player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "luizmelo-huntress",
       "path": "2D/luizmelo-huntress/extracted/huntress/huntress/sprites/attack2.png",
       "src": "/2D/luizmelo-huntress/extracted/huntress/huntress/sprites/attack2.png",
-      "label": "Attack2",
+      "label": "Attack 2",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -329,7 +329,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Attack2 is an animated 2D character sample from Huntress. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Attack 2 is an animated 2D character sample from Huntress. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -347,13 +347,13 @@
         "character",
         "huntress"
       ],
-      "searchText": "attack2 2d/luizmelo-huntress/extracted/huntress/huntress/sprites/attack2.png huntress character attack2 is an animated 2d character sample from huntress. useful for player characters, npcs, animation prototyping. huntress player characters npcs animation prototyping 2d animated art"
+      "searchText": "attack 2 2d/luizmelo-huntress/extracted/huntress/huntress/sprites/attack2.png huntress character attack 2 is an animated 2d character sample from huntress. useful for player characters, npcs, animation prototyping. huntress player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "luizmelo-huntress",
       "path": "2D/luizmelo-huntress/extracted/huntress/huntress/sprites/attack3.png",
       "src": "/2D/luizmelo-huntress/extracted/huntress/huntress/sprites/attack3.png",
-      "label": "Attack3",
+      "label": "Attack 3",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -369,7 +369,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Attack3 is an animated 2D character sample from Huntress. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Attack 3 is an animated 2D character sample from Huntress. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -387,7 +387,7 @@
         "character",
         "huntress"
       ],
-      "searchText": "attack3 2d/luizmelo-huntress/extracted/huntress/huntress/sprites/attack3.png huntress character attack3 is an animated 2d character sample from huntress. useful for player characters, npcs, animation prototyping. huntress player characters npcs animation prototyping 2d animated art"
+      "searchText": "attack 3 2d/luizmelo-huntress/extracted/huntress/huntress/sprites/attack3.png huntress character attack 3 is an animated 2d character sample from huntress. useful for player characters, npcs, animation prototyping. huntress player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "luizmelo-huntress",

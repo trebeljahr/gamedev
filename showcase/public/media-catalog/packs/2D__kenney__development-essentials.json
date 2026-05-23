@@ -33,7 +33,7 @@
       "packFolder": "2D/kenney/development-essentials",
       "path": "2D/kenney/development-essentials/extracted/uv-texture/uv-texture.png",
       "src": "/2D/kenney/development-essentials/extracted/uv-texture/uv-texture.png",
-      "label": "Uv Texture",
+      "label": "UV Texture",
       "kind": "image",
       "animated": false,
       "inspection": {
@@ -49,7 +49,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Uv Texture is a static 2D image sample from Development Essentials. Useful for player characters, NPCs, animation prototyping.",
+      "description": "UV Texture is a static 2D image sample from Development Essentials. Useful for player characters, NPCs, animation prototyping.",
       "category": "image",
       "themes": [
         "development essentials",
