@@ -549,12 +549,12 @@ export default function HomePage() {
           <div className="library-hero-copy">
             <div className="landing-kicker">GameDev Asset Library</div>
             <h2 id="library-heading">
-              Search free, hand-picked, high-quality game assets with permissive licenses, all in one place.
+              Search free, high-quality game assets, all in one place.
             </h2>
             <p>
-              Models, sprites, textures, sounds, and music sit behind the
-              same search and filters, so you can jump between them in a
-              single click instead of opening five different sites.
+              Browse models, sprites, textures, sounds, and music in one
+              place, with previews so you can see and hear each asset before
+              you download it.
             </p>
             <div className="library-actions" aria-label="Primary catalog actions">
               <Link className="landing-button primary" href="/models">
