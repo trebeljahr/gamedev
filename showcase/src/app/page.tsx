@@ -566,9 +566,6 @@ export default function HomePage() {
               <Link className="landing-button primary" href="/media?view=sounds&type=all">
                 Browse sounds
               </Link>
-              <Link className="landing-button secondary" href="/curation">
-                Curation criteria
-              </Link>
             </div>
           </div>
           <LibraryHeroShowreel models={featuredModels} sprites={featuredSprites} sounds={featuredSounds} />
