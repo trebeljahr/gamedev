@@ -232,7 +232,7 @@ export function PackCardPreview({
           camera={{ position: [5.5, 4.2, 7], fov: 40, near: 0.1, far: 500 }}
           dpr={[1, 1.5]}
           frameloop={active ? "always" : "demand"}
-          shadows
+          shadows="percentage"
           gl={{ antialias: true, alpha: true, preserveDrawingBuffer: true }}
         >
           <ambientLight intensity={0.62} />

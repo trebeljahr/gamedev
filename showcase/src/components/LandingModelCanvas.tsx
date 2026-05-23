@@ -25,7 +25,7 @@ export default function LandingModelCanvas({
     <Canvas
       camera={{ position: cameraPosition, fov, near: 0.1, far: 80 }}
       dpr={[1, 1.75]}
-      shadows
+      shadows="percentage"
       gl={{ antialias: true, alpha: true }}
     >
       <ambientLight intensity={0.82} />

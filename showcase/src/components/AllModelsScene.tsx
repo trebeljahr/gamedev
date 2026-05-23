@@ -335,7 +335,7 @@ function ModelGridScene({
         // tile is a stack of road body / sidewalks / building bases at
         // similar Y) z-fight in stripey bands once you're 50+ units away.
         camera={{ position: start, fov: 60, near: 0.5, far: 800 }}
-        shadows
+        shadows="percentage"
         dpr={[1, 2]}
         gl={{ antialias: true, logarithmicDepthBuffer: true }}
       >

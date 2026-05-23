@@ -15,7 +15,7 @@ export function Viewer({ url }: { url: string }) {
     <>
       <Canvas
         camera={{ position: [8, 6, 12], fov: 45, near: 0.1, far: 1000 }}
-        shadows
+        shadows="percentage"
         dpr={[1, 2]}
       >
         <color attach="background" args={["#f5efe6"]} />
