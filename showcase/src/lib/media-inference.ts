@@ -51,6 +51,15 @@ function basenameWithoutExtension(path: string): string {
   return basename(path).replace(/\.[^.]+$/i, "");
 }
 
+// build-gif-sheets.ts renames animated GIFs to `<base>__strip-<W>x<H>.sheet.png`.
+// That suffix is a build artifact, not part of the human-readable name — strip it
+// before deriving display labels.
+//   "demochar-animation__strip-536x362.sheet.png" -> "demochar-animation.png"
+//   "idle__strip-128x128.sheet"                   -> "idle"
+export function stripBuiltSheetSuffix(name: string): string {
+  return name.replace(/__strip-\d+x\d+\.sheet(?=\.|$)/i, "");
+}
+
 function tokenText(value: string): string {
   return value
     .replace(/([a-z])([A-Z])/g, "$1 $2")

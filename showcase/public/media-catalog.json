@@ -775,7 +775,7 @@
       "preview": {
         "path": "2D/devkidd-pixel-fire-asset-pack/extracted/pixel-fire-asset-pack-v1-2/pixel-fire-asset-pack-v1-2/pixel-fire-asset-pack-colored/fire-asset-blue/group-4-1/group-4-1__strip-32x48.sheet.png",
         "src": "/2D/devkidd-pixel-fire-asset-pack/extracted/pixel-fire-asset-pack-v1-2/pixel-fire-asset-pack-v1-2/pixel-fire-asset-pack-colored/fire-asset-blue/group-4-1/group-4-1__strip-32x48.sheet.png",
-        "label": "Group 4 1 Strip 32x48.Sheet",
+        "label": "Group 4 1",
         "kind": "effect",
         "animated": true
       }
@@ -1419,7 +1419,7 @@
       "preview": {
         "path": "2D/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/dash-left-right/dash-left-right-v2__strip-32x32.sheet.png",
         "src": "/2D/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/dash-left-right/dash-left-right-v2__strip-32x32.sheet.png",
-        "label": "Dash Left Right V2 Strip 32x32.Sheet",
+        "label": "Dash Left Right V2",
         "kind": "character",
         "animated": true
       }
@@ -1633,7 +1633,7 @@
       "preview": {
         "path": "2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-apple__strip-24x24.sheet.png",
         "src": "/2D/ivelsoul-pf-freeicons/extracted/pixel-fable-free-icons/pixel-fable-free-icons/gif/pf-icon-apple__strip-24x24.sheet.png",
-        "label": "Pf Icon Apple Strip 24x24.Sheet",
+        "label": "Pf Icon Apple",
         "kind": "icon",
         "animated": true
       }
@@ -1763,7 +1763,7 @@
       "preview": {
         "path": "2D/kaboff-120-items-psx-rotation-animation-pack/extracted/120-items-menu-rotation-free-pack-74-items/120-items-menu-rotation-free-pack-74-items/10__strip-32x32.sheet.png",
         "src": "/2D/kaboff-120-items-psx-rotation-animation-pack/extracted/120-items-menu-rotation-free-pack-74-items/120-items-menu-rotation-free-pack-74-items/10__strip-32x32.sheet.png",
-        "label": "10 Strip 32x32.Sheet",
+        "label": "10",
         "kind": "icon",
         "animated": true
       }
@@ -2836,7 +2836,7 @@
       "preview": {
         "path": "2D/lukyaforge-ancientforest/extracted/ancient-forest-1-1/ancient-forest-1-1/character-ruby/attack/attack-1/ruby-attack-1__strip-80x64.sheet.png",
         "src": "/2D/lukyaforge-ancientforest/extracted/ancient-forest-1-1/ancient-forest-1-1/character-ruby/attack/attack-1/ruby-attack-1__strip-80x64.sheet.png",
-        "label": "Ruby Attack 1 Strip 80x64.Sheet",
+        "label": "Ruby Attack 1",
         "kind": "character",
         "animated": true
       }
@@ -3784,7 +3784,7 @@
       "preview": {
         "path": "2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprbatilisk1__strip-25x25.sheet.png",
         "src": "/2D/reaktori-debts-in-the-depths-asset-pack/extracted/debtsinthedepthsassets/debtsinthedepthsassets/characters/sprbatilisk1__strip-25x25.sheet.png",
-        "label": "Sprbatilisk1 Strip 25x25.Sheet",
+        "label": "Sprbatilisk1",
         "kind": "character",
         "animated": true
       }
@@ -4306,7 +4306,7 @@
       "preview": {
         "path": "2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/giftest__strip-1920x1680.sheet.png",
         "src": "/2D/wxhaust-robo-character-pack2/extracted/character-pack/character-pack/giftest__strip-1920x1680.sheet.png",
-        "label": "Giftest Strip 1920x1680.Sheet",
+        "label": "Giftest",
         "kind": "character",
         "animated": true
       }
@@ -4351,7 +4351,7 @@
       "preview": {
         "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/attack__strip-120x80.sheet.png",
         "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/attack__strip-120x80.sheet.png",
-        "label": "Attack Strip 120x80.Sheet",
+        "label": "Attack",
         "kind": "character",
         "animated": true
       }
@@ -4438,7 +4438,7 @@
       "preview": {
         "path": "2D/xzany-samurai-2d-pixel-art/extracted/samuraizipp/samurai__strip-512x256.sheet.png",
         "src": "/2D/xzany-samurai-2d-pixel-art/extracted/samuraizipp/samurai__strip-512x256.sheet.png",
-        "label": "Samurai Strip 512x256.Sheet",
+        "label": "Samurai",
         "kind": "character",
         "animated": true
       }

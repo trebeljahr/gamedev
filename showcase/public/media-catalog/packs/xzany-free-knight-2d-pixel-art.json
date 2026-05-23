@@ -36,7 +36,7 @@
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/attack__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/attack__strip-120x80.sheet.png",
-      "label": "Attack Strip 120x80.Sheet",
+      "label": "Attack",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -52,7 +52,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Attack Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Attack is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -71,13 +71,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "attack strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/attack__strip-120x80.sheet.png free knight 2d pixel art character attack strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "attack 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/attack__strip-120x80.sheet.png free knight 2d pixel art character attack is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/attack2__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/attack2__strip-120x80.sheet.png",
-      "label": "Attack2 Strip 120x80.Sheet",
+      "label": "Attack2",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -93,7 +93,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Attack2 Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Attack2 is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -112,13 +112,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "attack2 strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/attack2__strip-120x80.sheet.png free knight 2d pixel art character attack2 strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "attack2 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/attack2__strip-120x80.sheet.png free knight 2d pixel art character attack2 is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/attack2nomovement__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/attack2nomovement__strip-120x80.sheet.png",
-      "label": "Attack2nomovement Strip 120x80.Sheet",
+      "label": "Attack2nomovement",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -134,7 +134,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Attack2nomovement Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Attack2nomovement is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -153,13 +153,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "attack2nomovement strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/attack2nomovement__strip-120x80.sheet.png free knight 2d pixel art character attack2nomovement strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "attack2nomovement 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/attack2nomovement__strip-120x80.sheet.png free knight 2d pixel art character attack2nomovement is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/attackcombo2hit__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/attackcombo2hit__strip-120x80.sheet.png",
-      "label": "Attackcombo2hit Strip 120x80.Sheet",
+      "label": "Attackcombo2hit",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -175,7 +175,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Attackcombo2hit Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Attackcombo2hit is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -194,13 +194,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "attackcombo2hit strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/attackcombo2hit__strip-120x80.sheet.png free knight 2d pixel art character attackcombo2hit strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "attackcombo2hit 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/attackcombo2hit__strip-120x80.sheet.png free knight 2d pixel art character attackcombo2hit is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/death__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/death__strip-120x80.sheet.png",
-      "label": "Death Strip 120x80.Sheet",
+      "label": "Death",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -216,7 +216,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Death Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Death is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -235,13 +235,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "death strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/death__strip-120x80.sheet.png free knight 2d pixel art character death strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "death 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/death__strip-120x80.sheet.png free knight 2d pixel art character death is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/fall__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/fall__strip-120x80.sheet.png",
-      "label": "Fall Strip 120x80.Sheet",
+      "label": "Fall",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -257,7 +257,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Fall Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Fall is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -276,13 +276,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "fall strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/fall__strip-120x80.sheet.png free knight 2d pixel art character fall strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "fall 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/fall__strip-120x80.sheet.png free knight 2d pixel art character fall is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/idle__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/idle__strip-120x80.sheet.png",
-      "label": "Idle Strip 120x80.Sheet",
+      "label": "Idle",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -298,7 +298,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Idle Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Idle is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -317,13 +317,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "idle strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/idle__strip-120x80.sheet.png free knight 2d pixel art character idle strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "idle 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/idle__strip-120x80.sheet.png free knight 2d pixel art character idle is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/jump__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/jump__strip-120x80.sheet.png",
-      "label": "Jump Strip 120x80.Sheet",
+      "label": "Jump",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -339,7 +339,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Jump Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Jump is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -358,13 +358,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "jump strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/jump__strip-120x80.sheet.png free knight 2d pixel art character jump strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "jump 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/jump__strip-120x80.sheet.png free knight 2d pixel art character jump is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/roll__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/roll__strip-120x80.sheet.png",
-      "label": "Roll Strip 120x80.Sheet",
+      "label": "Roll",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -380,7 +380,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Roll Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Roll is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -399,13 +399,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "roll strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/roll__strip-120x80.sheet.png free knight 2d pixel art character roll strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "roll 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/roll__strip-120x80.sheet.png free knight 2d pixel art character roll is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/run__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/run__strip-120x80.sheet.png",
-      "label": "Run Strip 120x80.Sheet",
+      "label": "Run",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -421,7 +421,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Run Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Run is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -440,7 +440,7 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "run strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/run__strip-120x80.sheet.png free knight 2d pixel art character run strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "run 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/run__strip-120x80.sheet.png free knight 2d pixel art character run is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
@@ -774,7 +774,7 @@
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/attack__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/attack__strip-120x80.sheet.png",
-      "label": "Attack Strip 120x80.Sheet",
+      "label": "Attack",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -790,7 +790,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Attack Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Attack is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -809,13 +809,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "attack strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/attack__strip-120x80.sheet.png free knight 2d pixel art character attack strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "attack 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/attack__strip-120x80.sheet.png free knight 2d pixel art character attack is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/attack2__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/attack2__strip-120x80.sheet.png",
-      "label": "Attack2 Strip 120x80.Sheet",
+      "label": "Attack2",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -831,7 +831,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Attack2 Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Attack2 is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -850,13 +850,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "attack2 strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/attack2__strip-120x80.sheet.png free knight 2d pixel art character attack2 strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "attack2 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/attack2__strip-120x80.sheet.png free knight 2d pixel art character attack2 is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/attack2nomovement__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/attack2nomovement__strip-120x80.sheet.png",
-      "label": "Attack2nomovement Strip 120x80.Sheet",
+      "label": "Attack2nomovement",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -872,7 +872,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Attack2nomovement Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Attack2nomovement is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -891,13 +891,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "attack2nomovement strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/attack2nomovement__strip-120x80.sheet.png free knight 2d pixel art character attack2nomovement strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "attack2nomovement 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/attack2nomovement__strip-120x80.sheet.png free knight 2d pixel art character attack2nomovement is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/attackcombo2hit__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/attackcombo2hit__strip-120x80.sheet.png",
-      "label": "Attackcombo2hit Strip 120x80.Sheet",
+      "label": "Attackcombo2hit",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -913,7 +913,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Attackcombo2hit Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Attackcombo2hit is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -932,13 +932,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "attackcombo2hit strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/attackcombo2hit__strip-120x80.sheet.png free knight 2d pixel art character attackcombo2hit strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "attackcombo2hit 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/attackcombo2hit__strip-120x80.sheet.png free knight 2d pixel art character attackcombo2hit is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/death__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/death__strip-120x80.sheet.png",
-      "label": "Death Strip 120x80.Sheet",
+      "label": "Death",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -954,7 +954,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Death Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Death is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -973,13 +973,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "death strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/death__strip-120x80.sheet.png free knight 2d pixel art character death strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "death 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/death__strip-120x80.sheet.png free knight 2d pixel art character death is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/fall__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/fall__strip-120x80.sheet.png",
-      "label": "Fall Strip 120x80.Sheet",
+      "label": "Fall",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -995,7 +995,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Fall Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Fall is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -1014,13 +1014,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "fall strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/fall__strip-120x80.sheet.png free knight 2d pixel art character fall strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "fall 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/fall__strip-120x80.sheet.png free knight 2d pixel art character fall is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/idle__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/idle__strip-120x80.sheet.png",
-      "label": "Idle Strip 120x80.Sheet",
+      "label": "Idle",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -1036,7 +1036,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Idle Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Idle is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -1055,13 +1055,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "idle strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/idle__strip-120x80.sheet.png free knight 2d pixel art character idle strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "idle 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/idle__strip-120x80.sheet.png free knight 2d pixel art character idle is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/jump__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/jump__strip-120x80.sheet.png",
-      "label": "Jump Strip 120x80.Sheet",
+      "label": "Jump",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -1077,7 +1077,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Jump Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Jump is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -1096,13 +1096,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "jump strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/jump__strip-120x80.sheet.png free knight 2d pixel art character jump strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "jump 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/jump__strip-120x80.sheet.png free knight 2d pixel art character jump is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/roll__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/roll__strip-120x80.sheet.png",
-      "label": "Roll Strip 120x80.Sheet",
+      "label": "Roll",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -1118,7 +1118,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Roll Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Roll is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -1137,13 +1137,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "roll strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/roll__strip-120x80.sheet.png free knight 2d pixel art character roll strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "roll 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/roll__strip-120x80.sheet.png free knight 2d pixel art character roll is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/run__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/run__strip-120x80.sheet.png",
-      "label": "Run Strip 120x80.Sheet",
+      "label": "Run",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -1159,7 +1159,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Run Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Run is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -1178,7 +1178,7 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "run strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/run__strip-120x80.sheet.png free knight 2d pixel art character run strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "run 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/run__strip-120x80.sheet.png free knight 2d pixel art character run is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
@@ -1553,7 +1553,7 @@
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/attack__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/attack__strip-120x80.sheet.png",
-      "label": "Attack Strip 120x80.Sheet",
+      "label": "Attack",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -1569,7 +1569,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Attack Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Attack is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -1588,13 +1588,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "attack strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/attack__strip-120x80.sheet.png free knight 2d pixel art character attack strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "attack 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/attack__strip-120x80.sheet.png free knight 2d pixel art character attack is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/attack2__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/attack2__strip-120x80.sheet.png",
-      "label": "Attack2 Strip 120x80.Sheet",
+      "label": "Attack2",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -1610,7 +1610,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Attack2 Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Attack2 is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -1629,13 +1629,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "attack2 strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/attack2__strip-120x80.sheet.png free knight 2d pixel art character attack2 strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "attack2 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/attack2__strip-120x80.sheet.png free knight 2d pixel art character attack2 is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/attack2nomovement__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/attack2nomovement__strip-120x80.sheet.png",
-      "label": "Attack2nomovement Strip 120x80.Sheet",
+      "label": "Attack2nomovement",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -1651,7 +1651,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Attack2nomovement Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Attack2nomovement is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -1670,13 +1670,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "attack2nomovement strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/attack2nomovement__strip-120x80.sheet.png free knight 2d pixel art character attack2nomovement strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "attack2nomovement 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/attack2nomovement__strip-120x80.sheet.png free knight 2d pixel art character attack2nomovement is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/attackcombo2hit__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/attackcombo2hit__strip-120x80.sheet.png",
-      "label": "Attackcombo2hit Strip 120x80.Sheet",
+      "label": "Attackcombo2hit",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -1692,7 +1692,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Attackcombo2hit Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Attackcombo2hit is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -1711,13 +1711,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "attackcombo2hit strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/attackcombo2hit__strip-120x80.sheet.png free knight 2d pixel art character attackcombo2hit strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "attackcombo2hit 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/attackcombo2hit__strip-120x80.sheet.png free knight 2d pixel art character attackcombo2hit is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/death__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/death__strip-120x80.sheet.png",
-      "label": "Death Strip 120x80.Sheet",
+      "label": "Death",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -1733,7 +1733,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Death Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Death is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -1752,13 +1752,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "death strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/death__strip-120x80.sheet.png free knight 2d pixel art character death strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "death 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/death__strip-120x80.sheet.png free knight 2d pixel art character death is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/fall__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/fall__strip-120x80.sheet.png",
-      "label": "Fall Strip 120x80.Sheet",
+      "label": "Fall",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -1774,7 +1774,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Fall Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Fall is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -1793,13 +1793,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "fall strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/fall__strip-120x80.sheet.png free knight 2d pixel art character fall strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "fall 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/fall__strip-120x80.sheet.png free knight 2d pixel art character fall is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/idle__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/idle__strip-120x80.sheet.png",
-      "label": "Idle Strip 120x80.Sheet",
+      "label": "Idle",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -1815,7 +1815,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Idle Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Idle is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -1834,13 +1834,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "idle strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/idle__strip-120x80.sheet.png free knight 2d pixel art character idle strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "idle 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/idle__strip-120x80.sheet.png free knight 2d pixel art character idle is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/jump__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/jump__strip-120x80.sheet.png",
-      "label": "Jump Strip 120x80.Sheet",
+      "label": "Jump",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -1856,7 +1856,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Jump Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Jump is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -1875,13 +1875,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "jump strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/jump__strip-120x80.sheet.png free knight 2d pixel art character jump strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "jump 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/jump__strip-120x80.sheet.png free knight 2d pixel art character jump is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/roll__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/roll__strip-120x80.sheet.png",
-      "label": "Roll Strip 120x80.Sheet",
+      "label": "Roll",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -1897,7 +1897,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Roll Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Roll is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -1916,13 +1916,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "roll strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/roll__strip-120x80.sheet.png free knight 2d pixel art character roll strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "roll 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/roll__strip-120x80.sheet.png free knight 2d pixel art character roll is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/run__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/run__strip-120x80.sheet.png",
-      "label": "Run Strip 120x80.Sheet",
+      "label": "Run",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -1938,7 +1938,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Run Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Run is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -1957,7 +1957,7 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "run strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/run__strip-120x80.sheet.png free knight 2d pixel art character run strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "run 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/run__strip-120x80.sheet.png free knight 2d pixel art character run is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
@@ -2291,7 +2291,7 @@
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/attack__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/attack__strip-120x80.sheet.png",
-      "label": "Attack Strip 120x80.Sheet",
+      "label": "Attack",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -2307,7 +2307,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Attack Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Attack is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -2326,13 +2326,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "attack strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/attack__strip-120x80.sheet.png free knight 2d pixel art character attack strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "attack 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/attack__strip-120x80.sheet.png free knight 2d pixel art character attack is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/attack2__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/attack2__strip-120x80.sheet.png",
-      "label": "Attack2 Strip 120x80.Sheet",
+      "label": "Attack2",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -2348,7 +2348,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Attack2 Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Attack2 is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -2367,13 +2367,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "attack2 strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/attack2__strip-120x80.sheet.png free knight 2d pixel art character attack2 strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "attack2 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/attack2__strip-120x80.sheet.png free knight 2d pixel art character attack2 is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/attack2nomovement__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/attack2nomovement__strip-120x80.sheet.png",
-      "label": "Attack2nomovement Strip 120x80.Sheet",
+      "label": "Attack2nomovement",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -2389,7 +2389,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Attack2nomovement Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Attack2nomovement is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -2408,13 +2408,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "attack2nomovement strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/attack2nomovement__strip-120x80.sheet.png free knight 2d pixel art character attack2nomovement strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "attack2nomovement 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/attack2nomovement__strip-120x80.sheet.png free knight 2d pixel art character attack2nomovement is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/attackcombo2hit__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/attackcombo2hit__strip-120x80.sheet.png",
-      "label": "Attackcombo2hit Strip 120x80.Sheet",
+      "label": "Attackcombo2hit",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -2430,7 +2430,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Attackcombo2hit Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Attackcombo2hit is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -2449,13 +2449,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "attackcombo2hit strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/attackcombo2hit__strip-120x80.sheet.png free knight 2d pixel art character attackcombo2hit strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "attackcombo2hit 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/attackcombo2hit__strip-120x80.sheet.png free knight 2d pixel art character attackcombo2hit is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/death__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/death__strip-120x80.sheet.png",
-      "label": "Death Strip 120x80.Sheet",
+      "label": "Death",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -2471,7 +2471,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Death Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Death is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -2490,13 +2490,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "death strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/death__strip-120x80.sheet.png free knight 2d pixel art character death strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "death 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/death__strip-120x80.sheet.png free knight 2d pixel art character death is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/fall__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/fall__strip-120x80.sheet.png",
-      "label": "Fall Strip 120x80.Sheet",
+      "label": "Fall",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -2512,7 +2512,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Fall Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Fall is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -2531,13 +2531,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "fall strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/fall__strip-120x80.sheet.png free knight 2d pixel art character fall strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "fall 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/fall__strip-120x80.sheet.png free knight 2d pixel art character fall is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/idle__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/idle__strip-120x80.sheet.png",
-      "label": "Idle Strip 120x80.Sheet",
+      "label": "Idle",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -2553,7 +2553,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Idle Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Idle is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -2572,13 +2572,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "idle strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/idle__strip-120x80.sheet.png free knight 2d pixel art character idle strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "idle 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/idle__strip-120x80.sheet.png free knight 2d pixel art character idle is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/jump__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/jump__strip-120x80.sheet.png",
-      "label": "Jump Strip 120x80.Sheet",
+      "label": "Jump",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -2594,7 +2594,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Jump Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Jump is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -2613,13 +2613,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "jump strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/jump__strip-120x80.sheet.png free knight 2d pixel art character jump strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "jump 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/jump__strip-120x80.sheet.png free knight 2d pixel art character jump is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/roll__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/roll__strip-120x80.sheet.png",
-      "label": "Roll Strip 120x80.Sheet",
+      "label": "Roll",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -2635,7 +2635,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Roll Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Roll is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -2654,13 +2654,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "roll strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/roll__strip-120x80.sheet.png free knight 2d pixel art character roll strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "roll 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/roll__strip-120x80.sheet.png free knight 2d pixel art character roll is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/run__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/run__strip-120x80.sheet.png",
-      "label": "Run Strip 120x80.Sheet",
+      "label": "Run",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -2676,7 +2676,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Run Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Run is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -2695,7 +2695,7 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "run strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/run__strip-120x80.sheet.png free knight 2d pixel art character run strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "run 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/run__strip-120x80.sheet.png free knight 2d pixel art character run is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
@@ -3029,7 +3029,7 @@
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/attackcombonomovement__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/attackcombonomovement__strip-120x80.sheet.png",
-      "label": "Attackcombonomovement Strip 120x80.Sheet",
+      "label": "Attackcombonomovement",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -3045,7 +3045,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Attackcombonomovement Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Attackcombonomovement is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -3064,13 +3064,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "attackcombonomovement strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/attackcombonomovement__strip-120x80.sheet.png free knight 2d pixel art character attackcombonomovement strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "attackcombonomovement 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/attackcombonomovement__strip-120x80.sheet.png free knight 2d pixel art character attackcombonomovement is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/attacknomovement__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/attacknomovement__strip-120x80.sheet.png",
-      "label": "Attacknomovement Strip 120x80.Sheet",
+      "label": "Attacknomovement",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -3086,7 +3086,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Attacknomovement Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Attacknomovement is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -3105,13 +3105,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "attacknomovement strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/attacknomovement__strip-120x80.sheet.png free knight 2d pixel art character attacknomovement strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "attacknomovement 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/attacknomovement__strip-120x80.sheet.png free knight 2d pixel art character attacknomovement is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/crouchall__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/crouchall__strip-120x80.sheet.png",
-      "label": "Crouchall Strip 120x80.Sheet",
+      "label": "Crouchall",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -3127,7 +3127,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Crouchall Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Crouchall is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -3146,13 +3146,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "crouchall strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/crouchall__strip-120x80.sheet.png free knight 2d pixel art character crouchall strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "crouchall 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/crouchall__strip-120x80.sheet.png free knight 2d pixel art character crouchall is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/crouchattack__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/crouchattack__strip-120x80.sheet.png",
-      "label": "Crouchattack Strip 120x80.Sheet",
+      "label": "Crouchattack",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -3168,7 +3168,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Crouchattack Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Crouchattack is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -3187,13 +3187,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "crouchattack strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/crouchattack__strip-120x80.sheet.png free knight 2d pixel art character crouchattack strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "crouchattack 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/crouchattack__strip-120x80.sheet.png free knight 2d pixel art character crouchattack is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/crouchwalk__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/crouchwalk__strip-120x80.sheet.png",
-      "label": "Crouchwalk Strip 120x80.Sheet",
+      "label": "Crouchwalk",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -3209,7 +3209,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Crouchwalk Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Crouchwalk is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -3228,13 +3228,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "crouchwalk strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/crouchwalk__strip-120x80.sheet.png free knight 2d pixel art character crouchwalk strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "crouchwalk 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/crouchwalk__strip-120x80.sheet.png free knight 2d pixel art character crouchwalk is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/deathnomovement__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/deathnomovement__strip-120x80.sheet.png",
-      "label": "Deathnomovement Strip 120x80.Sheet",
+      "label": "Deathnomovement",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -3250,7 +3250,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Deathnomovement Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Deathnomovement is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -3269,13 +3269,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "deathnomovement strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/deathnomovement__strip-120x80.sheet.png free knight 2d pixel art character deathnomovement strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "deathnomovement 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/deathnomovement__strip-120x80.sheet.png free knight 2d pixel art character deathnomovement is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/slideall__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/slideall__strip-120x80.sheet.png",
-      "label": "Slideall Strip 120x80.Sheet",
+      "label": "Slideall",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -3291,7 +3291,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Slideall Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Slideall is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -3310,13 +3310,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "slideall strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/slideall__strip-120x80.sheet.png free knight 2d pixel art character slideall strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "slideall 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/slideall__strip-120x80.sheet.png free knight 2d pixel art character slideall is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/turnaround__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/turnaround__strip-120x80.sheet.png",
-      "label": "Turnaround Strip 120x80.Sheet",
+      "label": "Turnaround",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -3332,7 +3332,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Turnaround Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Turnaround is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -3351,13 +3351,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "turnaround strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/turnaround__strip-120x80.sheet.png free knight 2d pixel art character turnaround strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "turnaround 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/turnaround__strip-120x80.sheet.png free knight 2d pixel art character turnaround is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/wallclimb__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/wallclimb__strip-120x80.sheet.png",
-      "label": "Wallclimb Strip 120x80.Sheet",
+      "label": "Wallclimb",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -3373,7 +3373,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Wallclimb Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Wallclimb is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -3392,13 +3392,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "wallclimb strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/wallclimb__strip-120x80.sheet.png free knight 2d pixel art character wallclimb strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "wallclimb 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/wallclimb__strip-120x80.sheet.png free knight 2d pixel art character wallclimb is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/wallclimbnomovement__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/wallclimbnomovement__strip-120x80.sheet.png",
-      "label": "Wallclimbnomovement Strip 120x80.Sheet",
+      "label": "Wallclimbnomovement",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -3414,7 +3414,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Wallclimbnomovement Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Wallclimbnomovement is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -3433,13 +3433,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "wallclimbnomovement strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/wallclimbnomovement__strip-120x80.sheet.png free knight 2d pixel art character wallclimbnomovement strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "wallclimbnomovement 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/wallclimbnomovement__strip-120x80.sheet.png free knight 2d pixel art character wallclimbnomovement is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/wallslide__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/wallslide__strip-120x80.sheet.png",
-      "label": "Wallslide Strip 120x80.Sheet",
+      "label": "Wallslide",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -3455,7 +3455,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Wallslide Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Wallslide is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -3474,13 +3474,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "wallslide strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/wallslide__strip-120x80.sheet.png free knight 2d pixel art character wallslide strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "wallslide 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/wallslide__strip-120x80.sheet.png free knight 2d pixel art character wallslide is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/attackcombonomovement__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/attackcombonomovement__strip-120x80.sheet.png",
-      "label": "Attackcombonomovement Strip 120x80.Sheet",
+      "label": "Attackcombonomovement",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -3496,7 +3496,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Attackcombonomovement Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Attackcombonomovement is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -3515,13 +3515,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "attackcombonomovement strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/attackcombonomovement__strip-120x80.sheet.png free knight 2d pixel art character attackcombonomovement strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "attackcombonomovement 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/attackcombonomovement__strip-120x80.sheet.png free knight 2d pixel art character attackcombonomovement is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/attacknomovement__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/attacknomovement__strip-120x80.sheet.png",
-      "label": "Attacknomovement Strip 120x80.Sheet",
+      "label": "Attacknomovement",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -3537,7 +3537,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Attacknomovement Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Attacknomovement is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -3556,13 +3556,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "attacknomovement strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/attacknomovement__strip-120x80.sheet.png free knight 2d pixel art character attacknomovement strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "attacknomovement 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/attacknomovement__strip-120x80.sheet.png free knight 2d pixel art character attacknomovement is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/crouchall__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/crouchall__strip-120x80.sheet.png",
-      "label": "Crouchall Strip 120x80.Sheet",
+      "label": "Crouchall",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -3578,7 +3578,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Crouchall Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Crouchall is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -3597,13 +3597,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "crouchall strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/crouchall__strip-120x80.sheet.png free knight 2d pixel art character crouchall strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "crouchall 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/crouchall__strip-120x80.sheet.png free knight 2d pixel art character crouchall is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/crouchattack__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/crouchattack__strip-120x80.sheet.png",
-      "label": "Crouchattack Strip 120x80.Sheet",
+      "label": "Crouchattack",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -3619,7 +3619,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Crouchattack Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Crouchattack is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -3638,13 +3638,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "crouchattack strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/crouchattack__strip-120x80.sheet.png free knight 2d pixel art character crouchattack strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "crouchattack 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/crouchattack__strip-120x80.sheet.png free knight 2d pixel art character crouchattack is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/crouchwalk__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/crouchwalk__strip-120x80.sheet.png",
-      "label": "Crouchwalk Strip 120x80.Sheet",
+      "label": "Crouchwalk",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -3660,7 +3660,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Crouchwalk Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Crouchwalk is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -3679,13 +3679,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "crouchwalk strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/crouchwalk__strip-120x80.sheet.png free knight 2d pixel art character crouchwalk strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "crouchwalk 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/crouchwalk__strip-120x80.sheet.png free knight 2d pixel art character crouchwalk is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/deathnomovement__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/deathnomovement__strip-120x80.sheet.png",
-      "label": "Deathnomovement Strip 120x80.Sheet",
+      "label": "Deathnomovement",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -3701,7 +3701,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Deathnomovement Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Deathnomovement is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -3720,13 +3720,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "deathnomovement strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/deathnomovement__strip-120x80.sheet.png free knight 2d pixel art character deathnomovement strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "deathnomovement 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/deathnomovement__strip-120x80.sheet.png free knight 2d pixel art character deathnomovement is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/slideall__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/slideall__strip-120x80.sheet.png",
-      "label": "Slideall Strip 120x80.Sheet",
+      "label": "Slideall",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -3742,7 +3742,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Slideall Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Slideall is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -3761,13 +3761,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "slideall strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/slideall__strip-120x80.sheet.png free knight 2d pixel art character slideall strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "slideall 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/slideall__strip-120x80.sheet.png free knight 2d pixel art character slideall is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/turnaround__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/turnaround__strip-120x80.sheet.png",
-      "label": "Turnaround Strip 120x80.Sheet",
+      "label": "Turnaround",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -3783,7 +3783,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Turnaround Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Turnaround is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -3802,13 +3802,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "turnaround strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/turnaround__strip-120x80.sheet.png free knight 2d pixel art character turnaround strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "turnaround 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/turnaround__strip-120x80.sheet.png free knight 2d pixel art character turnaround is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/wallclimb__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/wallclimb__strip-120x80.sheet.png",
-      "label": "Wallclimb Strip 120x80.Sheet",
+      "label": "Wallclimb",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -3824,7 +3824,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Wallclimb Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Wallclimb is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -3843,13 +3843,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "wallclimb strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/wallclimb__strip-120x80.sheet.png free knight 2d pixel art character wallclimb strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "wallclimb 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/wallclimb__strip-120x80.sheet.png free knight 2d pixel art character wallclimb is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/wallclimbnomovement__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/wallclimbnomovement__strip-120x80.sheet.png",
-      "label": "Wallclimbnomovement Strip 120x80.Sheet",
+      "label": "Wallclimbnomovement",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -3865,7 +3865,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Wallclimbnomovement Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Wallclimbnomovement is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -3884,13 +3884,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "wallclimbnomovement strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/wallclimbnomovement__strip-120x80.sheet.png free knight 2d pixel art character wallclimbnomovement strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "wallclimbnomovement 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/wallclimbnomovement__strip-120x80.sheet.png free knight 2d pixel art character wallclimbnomovement is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/wallslide__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/wallslide__strip-120x80.sheet.png",
-      "label": "Wallslide Strip 120x80.Sheet",
+      "label": "Wallslide",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -3906,7 +3906,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Wallslide Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Wallslide is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -3925,13 +3925,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "wallslide strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/wallslide__strip-120x80.sheet.png free knight 2d pixel art character wallslide strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "wallslide 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/wallslide__strip-120x80.sheet.png free knight 2d pixel art character wallslide is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/attackcombonomovement__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/attackcombonomovement__strip-120x80.sheet.png",
-      "label": "Attackcombonomovement Strip 120x80.Sheet",
+      "label": "Attackcombonomovement",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -3947,7 +3947,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Attackcombonomovement Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Attackcombonomovement is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -3966,13 +3966,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "attackcombonomovement strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/attackcombonomovement__strip-120x80.sheet.png free knight 2d pixel art character attackcombonomovement strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "attackcombonomovement 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/attackcombonomovement__strip-120x80.sheet.png free knight 2d pixel art character attackcombonomovement is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/attacknomovement__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/attacknomovement__strip-120x80.sheet.png",
-      "label": "Attacknomovement Strip 120x80.Sheet",
+      "label": "Attacknomovement",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -3988,7 +3988,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Attacknomovement Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Attacknomovement is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -4007,13 +4007,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "attacknomovement strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/attacknomovement__strip-120x80.sheet.png free knight 2d pixel art character attacknomovement strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "attacknomovement 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/attacknomovement__strip-120x80.sheet.png free knight 2d pixel art character attacknomovement is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/crouchall__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/crouchall__strip-120x80.sheet.png",
-      "label": "Crouchall Strip 120x80.Sheet",
+      "label": "Crouchall",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -4029,7 +4029,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Crouchall Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Crouchall is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -4048,13 +4048,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "crouchall strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/crouchall__strip-120x80.sheet.png free knight 2d pixel art character crouchall strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "crouchall 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/crouchall__strip-120x80.sheet.png free knight 2d pixel art character crouchall is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/crouchattack__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/crouchattack__strip-120x80.sheet.png",
-      "label": "Crouchattack Strip 120x80.Sheet",
+      "label": "Crouchattack",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -4070,7 +4070,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Crouchattack Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Crouchattack is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -4089,13 +4089,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "crouchattack strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/crouchattack__strip-120x80.sheet.png free knight 2d pixel art character crouchattack strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "crouchattack 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/crouchattack__strip-120x80.sheet.png free knight 2d pixel art character crouchattack is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/crouchwalk__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/crouchwalk__strip-120x80.sheet.png",
-      "label": "Crouchwalk Strip 120x80.Sheet",
+      "label": "Crouchwalk",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -4111,7 +4111,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Crouchwalk Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Crouchwalk is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -4130,13 +4130,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "crouchwalk strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/crouchwalk__strip-120x80.sheet.png free knight 2d pixel art character crouchwalk strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "crouchwalk 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/crouchwalk__strip-120x80.sheet.png free knight 2d pixel art character crouchwalk is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/deathnomovement__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/deathnomovement__strip-120x80.sheet.png",
-      "label": "Deathnomovement Strip 120x80.Sheet",
+      "label": "Deathnomovement",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -4152,7 +4152,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Deathnomovement Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Deathnomovement is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -4171,13 +4171,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "deathnomovement strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/deathnomovement__strip-120x80.sheet.png free knight 2d pixel art character deathnomovement strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "deathnomovement 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/deathnomovement__strip-120x80.sheet.png free knight 2d pixel art character deathnomovement is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/slideall__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/slideall__strip-120x80.sheet.png",
-      "label": "Slideall Strip 120x80.Sheet",
+      "label": "Slideall",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -4193,7 +4193,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Slideall Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Slideall is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -4212,13 +4212,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "slideall strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/slideall__strip-120x80.sheet.png free knight 2d pixel art character slideall strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "slideall 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/slideall__strip-120x80.sheet.png free knight 2d pixel art character slideall is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/turnaround__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/turnaround__strip-120x80.sheet.png",
-      "label": "Turnaround Strip 120x80.Sheet",
+      "label": "Turnaround",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -4234,7 +4234,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Turnaround Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Turnaround is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -4253,13 +4253,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "turnaround strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/turnaround__strip-120x80.sheet.png free knight 2d pixel art character turnaround strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "turnaround 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/turnaround__strip-120x80.sheet.png free knight 2d pixel art character turnaround is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/wallclimb__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/wallclimb__strip-120x80.sheet.png",
-      "label": "Wallclimb Strip 120x80.Sheet",
+      "label": "Wallclimb",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -4275,7 +4275,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Wallclimb Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Wallclimb is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -4294,13 +4294,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "wallclimb strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/wallclimb__strip-120x80.sheet.png free knight 2d pixel art character wallclimb strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "wallclimb 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/wallclimb__strip-120x80.sheet.png free knight 2d pixel art character wallclimb is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/wallclimbnomovement__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/wallclimbnomovement__strip-120x80.sheet.png",
-      "label": "Wallclimbnomovement Strip 120x80.Sheet",
+      "label": "Wallclimbnomovement",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -4316,7 +4316,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Wallclimbnomovement Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Wallclimbnomovement is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -4335,13 +4335,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "wallclimbnomovement strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/wallclimbnomovement__strip-120x80.sheet.png free knight 2d pixel art character wallclimbnomovement strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "wallclimbnomovement 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/wallclimbnomovement__strip-120x80.sheet.png free knight 2d pixel art character wallclimbnomovement is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/wallslide__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/wallslide__strip-120x80.sheet.png",
-      "label": "Wallslide Strip 120x80.Sheet",
+      "label": "Wallslide",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -4357,7 +4357,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Wallslide Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Wallslide is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -4376,13 +4376,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "wallslide strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/wallslide__strip-120x80.sheet.png free knight 2d pixel art character wallslide strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "wallslide 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/wallslide__strip-120x80.sheet.png free knight 2d pixel art character wallslide is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/attackcombonomovement__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/attackcombonomovement__strip-120x80.sheet.png",
-      "label": "Attackcombonomovement Strip 120x80.Sheet",
+      "label": "Attackcombonomovement",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -4398,7 +4398,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Attackcombonomovement Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Attackcombonomovement is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -4417,13 +4417,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "attackcombonomovement strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/attackcombonomovement__strip-120x80.sheet.png free knight 2d pixel art character attackcombonomovement strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "attackcombonomovement 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/attackcombonomovement__strip-120x80.sheet.png free knight 2d pixel art character attackcombonomovement is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/attacknomovement__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/attacknomovement__strip-120x80.sheet.png",
-      "label": "Attacknomovement Strip 120x80.Sheet",
+      "label": "Attacknomovement",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -4439,7 +4439,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Attacknomovement Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Attacknomovement is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -4458,13 +4458,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "attacknomovement strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/attacknomovement__strip-120x80.sheet.png free knight 2d pixel art character attacknomovement strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "attacknomovement 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/attacknomovement__strip-120x80.sheet.png free knight 2d pixel art character attacknomovement is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/crouchall__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/crouchall__strip-120x80.sheet.png",
-      "label": "Crouchall Strip 120x80.Sheet",
+      "label": "Crouchall",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -4480,7 +4480,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Crouchall Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Crouchall is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -4499,13 +4499,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "crouchall strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/crouchall__strip-120x80.sheet.png free knight 2d pixel art character crouchall strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "crouchall 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/crouchall__strip-120x80.sheet.png free knight 2d pixel art character crouchall is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/crouchattack__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/crouchattack__strip-120x80.sheet.png",
-      "label": "Crouchattack Strip 120x80.Sheet",
+      "label": "Crouchattack",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -4521,7 +4521,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Crouchattack Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Crouchattack is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -4540,13 +4540,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "crouchattack strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/crouchattack__strip-120x80.sheet.png free knight 2d pixel art character crouchattack strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "crouchattack 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/crouchattack__strip-120x80.sheet.png free knight 2d pixel art character crouchattack is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/crouchwalk__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/crouchwalk__strip-120x80.sheet.png",
-      "label": "Crouchwalk Strip 120x80.Sheet",
+      "label": "Crouchwalk",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -4562,7 +4562,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Crouchwalk Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Crouchwalk is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -4581,13 +4581,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "crouchwalk strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/crouchwalk__strip-120x80.sheet.png free knight 2d pixel art character crouchwalk strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "crouchwalk 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/crouchwalk__strip-120x80.sheet.png free knight 2d pixel art character crouchwalk is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/deathnomovement__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/deathnomovement__strip-120x80.sheet.png",
-      "label": "Deathnomovement Strip 120x80.Sheet",
+      "label": "Deathnomovement",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -4603,7 +4603,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Deathnomovement Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Deathnomovement is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -4622,13 +4622,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "deathnomovement strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/deathnomovement__strip-120x80.sheet.png free knight 2d pixel art character deathnomovement strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "deathnomovement 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/deathnomovement__strip-120x80.sheet.png free knight 2d pixel art character deathnomovement is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/slideall__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/slideall__strip-120x80.sheet.png",
-      "label": "Slideall Strip 120x80.Sheet",
+      "label": "Slideall",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -4644,7 +4644,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Slideall Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Slideall is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -4663,13 +4663,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "slideall strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/slideall__strip-120x80.sheet.png free knight 2d pixel art character slideall strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "slideall 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/slideall__strip-120x80.sheet.png free knight 2d pixel art character slideall is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/turnaround__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/turnaround__strip-120x80.sheet.png",
-      "label": "Turnaround Strip 120x80.Sheet",
+      "label": "Turnaround",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -4685,7 +4685,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Turnaround Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Turnaround is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -4704,13 +4704,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "turnaround strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/turnaround__strip-120x80.sheet.png free knight 2d pixel art character turnaround strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "turnaround 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/turnaround__strip-120x80.sheet.png free knight 2d pixel art character turnaround is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/wallclimb__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/wallclimb__strip-120x80.sheet.png",
-      "label": "Wallclimb Strip 120x80.Sheet",
+      "label": "Wallclimb",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -4726,7 +4726,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Wallclimb Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Wallclimb is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -4745,13 +4745,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "wallclimb strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/wallclimb__strip-120x80.sheet.png free knight 2d pixel art character wallclimb strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "wallclimb 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/wallclimb__strip-120x80.sheet.png free knight 2d pixel art character wallclimb is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/wallclimbnomovement__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/wallclimbnomovement__strip-120x80.sheet.png",
-      "label": "Wallclimbnomovement Strip 120x80.Sheet",
+      "label": "Wallclimbnomovement",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -4767,7 +4767,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Wallclimbnomovement Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Wallclimbnomovement is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -4786,13 +4786,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "wallclimbnomovement strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/wallclimbnomovement__strip-120x80.sheet.png free knight 2d pixel art character wallclimbnomovement strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "wallclimbnomovement 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/wallclimbnomovement__strip-120x80.sheet.png free knight 2d pixel art character wallclimbnomovement is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/wallslide__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/wallslide__strip-120x80.sheet.png",
-      "label": "Wallslide Strip 120x80.Sheet",
+      "label": "Wallslide",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -4808,7 +4808,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Wallslide Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Wallslide is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -4827,7 +4827,7 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "wallslide strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/wallslide__strip-120x80.sheet.png free knight 2d pixel art character wallslide strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "wallslide 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/wallslide__strip-120x80.sheet.png free knight 2d pixel art character wallslide is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
@@ -4874,7 +4874,7 @@
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/dash__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/dash__strip-120x80.sheet.png",
-      "label": "Dash Strip 120x80.Sheet",
+      "label": "Dash",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -4890,7 +4890,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Dash Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Dash is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -4909,13 +4909,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "dash strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/dash__strip-120x80.sheet.png free knight 2d pixel art character dash strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "dash 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/dash__strip-120x80.sheet.png free knight 2d pixel art character dash is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/slide__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/slide__strip-120x80.sheet.png",
-      "label": "Slide Strip 120x80.Sheet",
+      "label": "Slide",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -4931,7 +4931,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Slide Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Slide is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -4950,7 +4950,7 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "slide strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/slide__strip-120x80.sheet.png free knight 2d pixel art character slide strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "slide 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/slide__strip-120x80.sheet.png free knight 2d pixel art character slide is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
@@ -5079,7 +5079,7 @@
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/dash__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/dash__strip-120x80.sheet.png",
-      "label": "Dash Strip 120x80.Sheet",
+      "label": "Dash",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -5095,7 +5095,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Dash Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Dash is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -5114,13 +5114,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "dash strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/dash__strip-120x80.sheet.png free knight 2d pixel art character dash strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "dash 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/dash__strip-120x80.sheet.png free knight 2d pixel art character dash is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/slide__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/slide__strip-120x80.sheet.png",
-      "label": "Slide Strip 120x80.Sheet",
+      "label": "Slide",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -5136,7 +5136,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Slide Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Slide is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -5155,7 +5155,7 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "slide strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/slide__strip-120x80.sheet.png free knight 2d pixel art character slide strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "slide 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/slide__strip-120x80.sheet.png free knight 2d pixel art character slide is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
@@ -5284,7 +5284,7 @@
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/dash__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/dash__strip-120x80.sheet.png",
-      "label": "Dash Strip 120x80.Sheet",
+      "label": "Dash",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -5300,7 +5300,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Dash Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Dash is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -5319,13 +5319,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "dash strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/dash__strip-120x80.sheet.png free knight 2d pixel art character dash strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "dash 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/dash__strip-120x80.sheet.png free knight 2d pixel art character dash is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/slide__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/slide__strip-120x80.sheet.png",
-      "label": "Slide Strip 120x80.Sheet",
+      "label": "Slide",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -5341,7 +5341,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Slide Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Slide is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -5360,7 +5360,7 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "slide strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/slide__strip-120x80.sheet.png free knight 2d pixel art character slide strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "slide 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/slide__strip-120x80.sheet.png free knight 2d pixel art character slide is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
@@ -5489,7 +5489,7 @@
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/dash__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/dash__strip-120x80.sheet.png",
-      "label": "Dash Strip 120x80.Sheet",
+      "label": "Dash",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -5505,7 +5505,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Dash Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Dash is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -5524,13 +5524,13 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "dash strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/dash__strip-120x80.sheet.png free knight 2d pixel art character dash strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "dash 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/dash__strip-120x80.sheet.png free knight 2d pixel art character dash is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/slide__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/slide__strip-120x80.sheet.png",
-      "label": "Slide Strip 120x80.Sheet",
+      "label": "Slide",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -5546,7 +5546,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Slide Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Slide is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -5565,7 +5565,7 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "slide strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/slide__strip-120x80.sheet.png free knight 2d pixel art character slide strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "slide 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/slide__strip-120x80.sheet.png free knight 2d pixel art character slide is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
@@ -5694,7 +5694,7 @@
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/jumpfallinbetween__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/jumpfallinbetween__strip-120x80.sheet.png",
-      "label": "Jumpfallinbetween Strip 120x80.Sheet",
+      "label": "Jumpfallinbetween",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -5710,7 +5710,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Jumpfallinbetween Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Jumpfallinbetween is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -5729,7 +5729,7 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "jumpfallinbetween strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/jumpfallinbetween__strip-120x80.sheet.png free knight 2d pixel art character jumpfallinbetween strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "jumpfallinbetween 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/nooutline/120x80-gifs/jumpfallinbetween__strip-120x80.sheet.png free knight 2d pixel art character jumpfallinbetween is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
@@ -5899,7 +5899,7 @@
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/jumpfallinbetween__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/jumpfallinbetween__strip-120x80.sheet.png",
-      "label": "Jumpfallinbetween Strip 120x80.Sheet",
+      "label": "Jumpfallinbetween",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -5915,7 +5915,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Jumpfallinbetween Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Jumpfallinbetween is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -5934,7 +5934,7 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "jumpfallinbetween strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/jumpfallinbetween__strip-120x80.sheet.png free knight 2d pixel art character jumpfallinbetween strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "jumpfallinbetween 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour1/outline/120x80-gifs/jumpfallinbetween__strip-120x80.sheet.png free knight 2d pixel art character jumpfallinbetween is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
@@ -6104,7 +6104,7 @@
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/jumpfallinbetween__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/jumpfallinbetween__strip-120x80.sheet.png",
-      "label": "Jumpfallinbetween Strip 120x80.Sheet",
+      "label": "Jumpfallinbetween",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -6120,7 +6120,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Jumpfallinbetween Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Jumpfallinbetween is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -6139,7 +6139,7 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "jumpfallinbetween strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/jumpfallinbetween__strip-120x80.sheet.png free knight 2d pixel art character jumpfallinbetween strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "jumpfallinbetween 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/nooutline/120x80-gifs/jumpfallinbetween__strip-120x80.sheet.png free knight 2d pixel art character jumpfallinbetween is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
@@ -6309,7 +6309,7 @@
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/jumpfallinbetween__strip-120x80.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/jumpfallinbetween__strip-120x80.sheet.png",
-      "label": "Jumpfallinbetween Strip 120x80.Sheet",
+      "label": "Jumpfallinbetween",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -6325,7 +6325,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Jumpfallinbetween Strip 120x80.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Jumpfallinbetween is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -6344,7 +6344,7 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "jumpfallinbetween strip 120x80.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/jumpfallinbetween__strip-120x80.sheet.png free knight 2d pixel art character jumpfallinbetween strip 120x80.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "jumpfallinbetween 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/colour2/outline/120x80-gifs/jumpfallinbetween__strip-120x80.sheet.png free knight 2d pixel art character jumpfallinbetween is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",
@@ -8400,7 +8400,7 @@
       "packFolder": "xzany-free-knight-2d-pixel-art",
       "path": "2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/promoanimated2x__strip-640x360.sheet.png",
       "src": "/2D/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/promoanimated2x__strip-640x360.sheet.png",
-      "label": "Promoanimated2x Strip 640x360.Sheet",
+      "label": "Promoanimated2x",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -8416,7 +8416,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Promoanimated2x Strip 640x360.Sheet is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Promoanimated2x is an animated 2D character sample from Free Knight 2D Pixel Art. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -8435,7 +8435,7 @@
         "fantasy",
         "medieval"
       ],
-      "searchText": "promoanimated2x strip 640x360.sheet 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/promoanimated2x__strip-640x360.sheet.png free knight 2d pixel art character promoanimated2x strip 640x360.sheet is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
+      "searchText": "promoanimated2x 2d/xzany-free-knight-2d-pixel-art/extracted/freeknight-v1/promoanimated2x__strip-640x360.sheet.png free knight 2d pixel art character promoanimated2x is an animated 2d character sample from free knight 2d pixel art. useful for player characters, npcs, animation prototyping. fantasy player characters npcs animation prototyping 2d animated art medieval"
     },
     {
       "packFolder": "xzany-free-knight-2d-pixel-art",

@@ -34,7 +34,7 @@
       "packFolder": "ginkgogames-animated-pixel-character-for-prototyping",
       "path": "2D/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/dash-left-right/dash-left-right-v2__strip-32x32.sheet.png",
       "src": "/2D/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/dash-left-right/dash-left-right-v2__strip-32x32.sheet.png",
-      "label": "Dash Left Right V2 Strip 32x32.Sheet",
+      "label": "Dash Left Right V2",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -50,7 +50,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Dash Left Right V2 Strip 32x32.Sheet is an animated 2D character sample from Animated Pixel Character for Prototyping!. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Dash Left Right V2 is an animated 2D character sample from Animated Pixel Character for Prototyping!. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "animated pixel character for prototyping!",
@@ -68,7 +68,7 @@
         "art",
         "character"
       ],
-      "searchText": "dash left right v2 strip 32x32.sheet 2d/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/dash-left-right/dash-left-right-v2__strip-32x32.sheet.png animated pixel character for prototyping! character dash left right v2 strip 32x32.sheet is an animated 2d character sample from animated pixel character for prototyping!. useful for player characters, npcs, animation prototyping. animated pixel character for prototyping! player characters npcs animation prototyping 2d animated art"
+      "searchText": "dash left right v2 2d/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/dash-left-right/dash-left-right-v2__strip-32x32.sheet.png animated pixel character for prototyping! character dash left right v2 is an animated 2d character sample from animated pixel character for prototyping!. useful for player characters, npcs, animation prototyping. animated pixel character for prototyping! player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "ginkgogames-animated-pixel-character-for-prototyping",
@@ -114,7 +114,7 @@
       "packFolder": "ginkgogames-animated-pixel-character-for-prototyping",
       "path": "2D/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/die/die-v2__strip-40x40.sheet.png",
       "src": "/2D/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/die/die-v2__strip-40x40.sheet.png",
-      "label": "Die V2 Strip 40x40.Sheet",
+      "label": "Die V2",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -130,7 +130,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Die V2 Strip 40x40.Sheet is an animated 2D character sample from Animated Pixel Character for Prototyping!. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Die V2 is an animated 2D character sample from Animated Pixel Character for Prototyping!. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "animated pixel character for prototyping!",
@@ -148,7 +148,7 @@
         "art",
         "character"
       ],
-      "searchText": "die v2 strip 40x40.sheet 2d/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/die/die-v2__strip-40x40.sheet.png animated pixel character for prototyping! character die v2 strip 40x40.sheet is an animated 2d character sample from animated pixel character for prototyping!. useful for player characters, npcs, animation prototyping. animated pixel character for prototyping! player characters npcs animation prototyping 2d animated art"
+      "searchText": "die v2 2d/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/die/die-v2__strip-40x40.sheet.png animated pixel character for prototyping! character die v2 is an animated 2d character sample from animated pixel character for prototyping!. useful for player characters, npcs, animation prototyping. animated pixel character for prototyping! player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "ginkgogames-animated-pixel-character-for-prototyping",
@@ -194,7 +194,7 @@
       "packFolder": "ginkgogames-animated-pixel-character-for-prototyping",
       "path": "2D/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/double-jump/djump-40x40-v6__strip-40x40.sheet.png",
       "src": "/2D/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/double-jump/djump-40x40-v6__strip-40x40.sheet.png",
-      "label": "Djump 40x40 V6 Strip 40x40.Sheet",
+      "label": "Djump 40x40 V6",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -210,7 +210,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Djump 40x40 V6 Strip 40x40.Sheet is an animated 2D character sample from Animated Pixel Character for Prototyping!. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Djump 40x40 V6 is an animated 2D character sample from Animated Pixel Character for Prototyping!. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "animated pixel character for prototyping!",
@@ -228,7 +228,7 @@
         "art",
         "character"
       ],
-      "searchText": "djump 40x40 v6 strip 40x40.sheet 2d/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/double-jump/djump-40x40-v6__strip-40x40.sheet.png animated pixel character for prototyping! character djump 40x40 v6 strip 40x40.sheet is an animated 2d character sample from animated pixel character for prototyping!. useful for player characters, npcs, animation prototyping. animated pixel character for prototyping! player characters npcs animation prototyping 2d animated art"
+      "searchText": "djump 40x40 v6 2d/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/double-jump/djump-40x40-v6__strip-40x40.sheet.png animated pixel character for prototyping! character djump 40x40 v6 is an animated 2d character sample from animated pixel character for prototyping!. useful for player characters, npcs, animation prototyping. animated pixel character for prototyping! player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "ginkgogames-animated-pixel-character-for-prototyping",
@@ -274,7 +274,7 @@
       "packFolder": "ginkgogames-animated-pixel-character-for-prototyping",
       "path": "2D/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/drone-idle/drone-idle-v4__strip-32x32.sheet.png",
       "src": "/2D/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/drone-idle/drone-idle-v4__strip-32x32.sheet.png",
-      "label": "Drone Idle V4 Strip 32x32.Sheet",
+      "label": "Drone Idle V4",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -290,7 +290,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Drone Idle V4 Strip 32x32.Sheet is an animated 2D character sample from Animated Pixel Character for Prototyping!. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Drone Idle V4 is an animated 2D character sample from Animated Pixel Character for Prototyping!. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "animated pixel character for prototyping!",
@@ -308,7 +308,7 @@
         "art",
         "character"
       ],
-      "searchText": "drone idle v4 strip 32x32.sheet 2d/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/drone-idle/drone-idle-v4__strip-32x32.sheet.png animated pixel character for prototyping! character drone idle v4 strip 32x32.sheet is an animated 2d character sample from animated pixel character for prototyping!. useful for player characters, npcs, animation prototyping. animated pixel character for prototyping! player characters npcs animation prototyping 2d animated art"
+      "searchText": "drone idle v4 2d/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/drone-idle/drone-idle-v4__strip-32x32.sheet.png animated pixel character for prototyping! character drone idle v4 is an animated 2d character sample from animated pixel character for prototyping!. useful for player characters, npcs, animation prototyping. animated pixel character for prototyping! player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "ginkgogames-animated-pixel-character-for-prototyping",
@@ -354,7 +354,7 @@
       "packFolder": "ginkgogames-animated-pixel-character-for-prototyping",
       "path": "2D/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/flow-move/flow-betterref-v7__strip-32x32.sheet.png",
       "src": "/2D/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/flow-move/flow-betterref-v7__strip-32x32.sheet.png",
-      "label": "Flow Betterref V7 Strip 32x32.Sheet",
+      "label": "Flow Betterref V7",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -370,7 +370,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Flow Betterref V7 Strip 32x32.Sheet is an animated 2D character sample from Animated Pixel Character for Prototyping!. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Flow Betterref V7 is an animated 2D character sample from Animated Pixel Character for Prototyping!. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "animated pixel character for prototyping!",
@@ -388,7 +388,7 @@
         "art",
         "character"
       ],
-      "searchText": "flow betterref v7 strip 32x32.sheet 2d/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/flow-move/flow-betterref-v7__strip-32x32.sheet.png animated pixel character for prototyping! character flow betterref v7 strip 32x32.sheet is an animated 2d character sample from animated pixel character for prototyping!. useful for player characters, npcs, animation prototyping. animated pixel character for prototyping! player characters npcs animation prototyping 2d animated art"
+      "searchText": "flow betterref v7 2d/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/flow-move/flow-betterref-v7__strip-32x32.sheet.png animated pixel character for prototyping! character flow betterref v7 is an animated 2d character sample from animated pixel character for prototyping!. useful for player characters, npcs, animation prototyping. animated pixel character for prototyping! player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "ginkgogames-animated-pixel-character-for-prototyping",
@@ -434,7 +434,7 @@
       "packFolder": "ginkgogames-animated-pixel-character-for-prototyping",
       "path": "2D/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/jump/g3stalt-jump-v13__strip-32x32.sheet.png",
       "src": "/2D/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/jump/g3stalt-jump-v13__strip-32x32.sheet.png",
-      "label": "G3stalt Jump V13 Strip 32x32.Sheet",
+      "label": "G3stalt Jump V13",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -450,7 +450,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "G3stalt Jump V13 Strip 32x32.Sheet is an animated 2D character sample from Animated Pixel Character for Prototyping!. Useful for player characters, NPCs, animation prototyping.",
+      "description": "G3stalt Jump V13 is an animated 2D character sample from Animated Pixel Character for Prototyping!. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "animated pixel character for prototyping!",
@@ -468,7 +468,7 @@
         "art",
         "character"
       ],
-      "searchText": "g3stalt jump v13 strip 32x32.sheet 2d/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/jump/g3stalt-jump-v13__strip-32x32.sheet.png animated pixel character for prototyping! character g3stalt jump v13 strip 32x32.sheet is an animated 2d character sample from animated pixel character for prototyping!. useful for player characters, npcs, animation prototyping. animated pixel character for prototyping! player characters npcs animation prototyping 2d animated art"
+      "searchText": "g3stalt jump v13 2d/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/jump/g3stalt-jump-v13__strip-32x32.sheet.png animated pixel character for prototyping! character g3stalt jump v13 is an animated 2d character sample from animated pixel character for prototyping!. useful for player characters, npcs, animation prototyping. animated pixel character for prototyping! player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "ginkgogames-animated-pixel-character-for-prototyping",
@@ -514,7 +514,7 @@
       "packFolder": "ginkgogames-animated-pixel-character-for-prototyping",
       "path": "2D/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/pipe-slide-grind-brush-boarding-lol/grind-pipe-slide-v4__strip-32x32.sheet.png",
       "src": "/2D/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/pipe-slide-grind-brush-boarding-lol/grind-pipe-slide-v4__strip-32x32.sheet.png",
-      "label": "Grind Pipe Slide V4 Strip 32x32.Sheet",
+      "label": "Grind Pipe Slide V4",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -530,7 +530,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Grind Pipe Slide V4 Strip 32x32.Sheet is an animated 2D character sample from Animated Pixel Character for Prototyping!. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Grind Pipe Slide V4 is an animated 2D character sample from Animated Pixel Character for Prototyping!. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "animated pixel character for prototyping!",
@@ -548,7 +548,7 @@
         "art",
         "character"
       ],
-      "searchText": "grind pipe slide v4 strip 32x32.sheet 2d/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/pipe-slide-grind-brush-boarding-lol/grind-pipe-slide-v4__strip-32x32.sheet.png animated pixel character for prototyping! character grind pipe slide v4 strip 32x32.sheet is an animated 2d character sample from animated pixel character for prototyping!. useful for player characters, npcs, animation prototyping. animated pixel character for prototyping! player characters npcs animation prototyping 2d animated art"
+      "searchText": "grind pipe slide v4 2d/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/pipe-slide-grind-brush-boarding-lol/grind-pipe-slide-v4__strip-32x32.sheet.png animated pixel character for prototyping! character grind pipe slide v4 is an animated 2d character sample from animated pixel character for prototyping!. useful for player characters, npcs, animation prototyping. animated pixel character for prototyping! player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "ginkgogames-animated-pixel-character-for-prototyping",
@@ -594,7 +594,7 @@
       "packFolder": "ginkgogames-animated-pixel-character-for-prototyping",
       "path": "2D/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/run-anim/g3stalt-run-32x32-v7__strip-32x32.sheet.png",
       "src": "/2D/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/run-anim/g3stalt-run-32x32-v7__strip-32x32.sheet.png",
-      "label": "G3stalt Run 32x32 V7 Strip 32x32.Sheet",
+      "label": "G3stalt Run 32x32 V7",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -610,7 +610,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "G3stalt Run 32x32 V7 Strip 32x32.Sheet is an animated 2D character sample from Animated Pixel Character for Prototyping!. Useful for player characters, NPCs, animation prototyping.",
+      "description": "G3stalt Run 32x32 V7 is an animated 2D character sample from Animated Pixel Character for Prototyping!. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "animated pixel character for prototyping!",
@@ -628,7 +628,7 @@
         "art",
         "character"
       ],
-      "searchText": "g3stalt run 32x32 v7 strip 32x32.sheet 2d/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/run-anim/g3stalt-run-32x32-v7__strip-32x32.sheet.png animated pixel character for prototyping! character g3stalt run 32x32 v7 strip 32x32.sheet is an animated 2d character sample from animated pixel character for prototyping!. useful for player characters, npcs, animation prototyping. animated pixel character for prototyping! player characters npcs animation prototyping 2d animated art"
+      "searchText": "g3stalt run 32x32 v7 2d/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/run-anim/g3stalt-run-32x32-v7__strip-32x32.sheet.png animated pixel character for prototyping! character g3stalt run 32x32 v7 is an animated 2d character sample from animated pixel character for prototyping!. useful for player characters, npcs, animation prototyping. animated pixel character for prototyping! player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "ginkgogames-animated-pixel-character-for-prototyping",
@@ -674,7 +674,7 @@
       "packFolder": "ginkgogames-animated-pixel-character-for-prototyping",
       "path": "2D/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/slide/slide-v2__strip-32x32.sheet.png",
       "src": "/2D/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/slide/slide-v2__strip-32x32.sheet.png",
-      "label": "Slide V2 Strip 32x32.Sheet",
+      "label": "Slide V2",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -690,7 +690,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Slide V2 Strip 32x32.Sheet is an animated 2D character sample from Animated Pixel Character for Prototyping!. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Slide V2 is an animated 2D character sample from Animated Pixel Character for Prototyping!. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "animated pixel character for prototyping!",
@@ -708,7 +708,7 @@
         "art",
         "character"
       ],
-      "searchText": "slide v2 strip 32x32.sheet 2d/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/slide/slide-v2__strip-32x32.sheet.png animated pixel character for prototyping! character slide v2 strip 32x32.sheet is an animated 2d character sample from animated pixel character for prototyping!. useful for player characters, npcs, animation prototyping. animated pixel character for prototyping! player characters npcs animation prototyping 2d animated art"
+      "searchText": "slide v2 2d/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/slide/slide-v2__strip-32x32.sheet.png animated pixel character for prototyping! character slide v2 is an animated 2d character sample from animated pixel character for prototyping!. useful for player characters, npcs, animation prototyping. animated pixel character for prototyping! player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "ginkgogames-animated-pixel-character-for-prototyping",
@@ -754,7 +754,7 @@
       "packFolder": "ginkgogames-animated-pixel-character-for-prototyping",
       "path": "2D/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/stretch-idle/stretch-v4__strip-40x40.sheet.png",
       "src": "/2D/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/stretch-idle/stretch-v4__strip-40x40.sheet.png",
-      "label": "Stretch V4 Strip 40x40.Sheet",
+      "label": "Stretch V4",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -770,7 +770,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Stretch V4 Strip 40x40.Sheet is an animated 2D character sample from Animated Pixel Character for Prototyping!. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Stretch V4 is an animated 2D character sample from Animated Pixel Character for Prototyping!. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "animated pixel character for prototyping!",
@@ -788,7 +788,7 @@
         "art",
         "character"
       ],
-      "searchText": "stretch v4 strip 40x40.sheet 2d/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/stretch-idle/stretch-v4__strip-40x40.sheet.png animated pixel character for prototyping! character stretch v4 strip 40x40.sheet is an animated 2d character sample from animated pixel character for prototyping!. useful for player characters, npcs, animation prototyping. animated pixel character for prototyping! player characters npcs animation prototyping 2d animated art"
+      "searchText": "stretch v4 2d/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/stretch-idle/stretch-v4__strip-40x40.sheet.png animated pixel character for prototyping! character stretch v4 is an animated 2d character sample from animated pixel character for prototyping!. useful for player characters, npcs, animation prototyping. animated pixel character for prototyping! player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "ginkgogames-animated-pixel-character-for-prototyping",
@@ -834,7 +834,7 @@
       "packFolder": "ginkgogames-animated-pixel-character-for-prototyping",
       "path": "2D/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/wall-jump/g3stalt-walljumpv4__strip-40x40.sheet.png",
       "src": "/2D/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/wall-jump/g3stalt-walljumpv4__strip-40x40.sheet.png",
-      "label": "G3stalt Walljumpv4 Strip 40x40.Sheet",
+      "label": "G3stalt Walljumpv4",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -850,7 +850,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "G3stalt Walljumpv4 Strip 40x40.Sheet is an animated 2D character sample from Animated Pixel Character for Prototyping!. Useful for player characters, NPCs, animation prototyping.",
+      "description": "G3stalt Walljumpv4 is an animated 2D character sample from Animated Pixel Character for Prototyping!. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "animated pixel character for prototyping!",
@@ -869,7 +869,7 @@
         "character",
         "modular"
       ],
-      "searchText": "g3stalt walljumpv4 strip 40x40.sheet 2d/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/wall-jump/g3stalt-walljumpv4__strip-40x40.sheet.png animated pixel character for prototyping! character g3stalt walljumpv4 strip 40x40.sheet is an animated 2d character sample from animated pixel character for prototyping!. useful for player characters, npcs, animation prototyping. animated pixel character for prototyping! player characters npcs animation prototyping 2d animated art modular"
+      "searchText": "g3stalt walljumpv4 2d/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/wall-jump/g3stalt-walljumpv4__strip-40x40.sheet.png animated pixel character for prototyping! character g3stalt walljumpv4 is an animated 2d character sample from animated pixel character for prototyping!. useful for player characters, npcs, animation prototyping. animated pixel character for prototyping! player characters npcs animation prototyping 2d animated art modular"
     },
     {
       "packFolder": "ginkgogames-animated-pixel-character-for-prototyping",
@@ -916,7 +916,7 @@
       "packFolder": "ginkgogames-animated-pixel-character-for-prototyping",
       "path": "2D/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/respawn/respawn-v1__strip-40x40.sheet.png",
       "src": "/2D/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/respawn/respawn-v1__strip-40x40.sheet.png",
-      "label": "Respawn V1 Strip 40x40.Sheet",
+      "label": "Respawn V1",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -932,7 +932,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Respawn V1 Strip 40x40.Sheet is an animated 2D character sample from Animated Pixel Character for Prototyping!. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Respawn V1 is an animated 2D character sample from Animated Pixel Character for Prototyping!. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "animated pixel character for prototyping!",
@@ -950,7 +950,7 @@
         "art",
         "character"
       ],
-      "searchText": "respawn v1 strip 40x40.sheet 2d/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/respawn/respawn-v1__strip-40x40.sheet.png animated pixel character for prototyping! character respawn v1 strip 40x40.sheet is an animated 2d character sample from animated pixel character for prototyping!. useful for player characters, npcs, animation prototyping. animated pixel character for prototyping! player characters npcs animation prototyping 2d animated art"
+      "searchText": "respawn v1 2d/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/respawn/respawn-v1__strip-40x40.sheet.png animated pixel character for prototyping! character respawn v1 is an animated 2d character sample from animated pixel character for prototyping!. useful for player characters, npcs, animation prototyping. animated pixel character for prototyping! player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "ginkgogames-animated-pixel-character-for-prototyping",
@@ -996,7 +996,7 @@
       "packFolder": "ginkgogames-animated-pixel-character-for-prototyping",
       "path": "2D/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/skate-fast/skate-faster-v6__strip-32x32.sheet.png",
       "src": "/2D/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/skate-fast/skate-faster-v6__strip-32x32.sheet.png",
-      "label": "Skate Faster V6 Strip 32x32.Sheet",
+      "label": "Skate Faster V6",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -1012,7 +1012,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Skate Faster V6 Strip 32x32.Sheet is an animated 2D character sample from Animated Pixel Character for Prototyping!. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Skate Faster V6 is an animated 2D character sample from Animated Pixel Character for Prototyping!. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "animated pixel character for prototyping!",
@@ -1030,7 +1030,7 @@
         "art",
         "character"
       ],
-      "searchText": "skate faster v6 strip 32x32.sheet 2d/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/skate-fast/skate-faster-v6__strip-32x32.sheet.png animated pixel character for prototyping! character skate faster v6 strip 32x32.sheet is an animated 2d character sample from animated pixel character for prototyping!. useful for player characters, npcs, animation prototyping. animated pixel character for prototyping! player characters npcs animation prototyping 2d animated art"
+      "searchText": "skate faster v6 2d/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/skate-fast/skate-faster-v6__strip-32x32.sheet.png animated pixel character for prototyping! character skate faster v6 is an animated 2d character sample from animated pixel character for prototyping!. useful for player characters, npcs, animation prototyping. animated pixel character for prototyping! player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "ginkgogames-animated-pixel-character-for-prototyping",
@@ -1076,7 +1076,7 @@
       "packFolder": "ginkgogames-animated-pixel-character-for-prototyping",
       "path": "2D/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/stop-skate-fast/g3stalt-skatefaststop-v3__strip-32x32.sheet.png",
       "src": "/2D/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/stop-skate-fast/g3stalt-skatefaststop-v3__strip-32x32.sheet.png",
-      "label": "G3stalt Skatefaststop V3 Strip 32x32.Sheet",
+      "label": "G3stalt Skatefaststop V3",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -1092,7 +1092,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "G3stalt Skatefaststop V3 Strip 32x32.Sheet is an animated 2D character sample from Animated Pixel Character for Prototyping!. Useful for player characters, NPCs, animation prototyping.",
+      "description": "G3stalt Skatefaststop V3 is an animated 2D character sample from Animated Pixel Character for Prototyping!. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "animated pixel character for prototyping!",
@@ -1110,7 +1110,7 @@
         "art",
         "character"
       ],
-      "searchText": "g3stalt skatefaststop v3 strip 32x32.sheet 2d/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/stop-skate-fast/g3stalt-skatefaststop-v3__strip-32x32.sheet.png animated pixel character for prototyping! character g3stalt skatefaststop v3 strip 32x32.sheet is an animated 2d character sample from animated pixel character for prototyping!. useful for player characters, npcs, animation prototyping. animated pixel character for prototyping! player characters npcs animation prototyping 2d animated art"
+      "searchText": "g3stalt skatefaststop v3 2d/ginkgogames-animated-pixel-character-for-prototyping/extracted/aseprite-15-prototyped-animations-pack/aseprite-15-prototyped-animations-pack/stop-skate-fast/g3stalt-skatefaststop-v3__strip-32x32.sheet.png animated pixel character for prototyping! character g3stalt skatefaststop v3 is an animated 2d character sample from animated pixel character for prototyping!. useful for player characters, npcs, animation prototyping. animated pixel character for prototyping! player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "ginkgogames-animated-pixel-character-for-prototyping",

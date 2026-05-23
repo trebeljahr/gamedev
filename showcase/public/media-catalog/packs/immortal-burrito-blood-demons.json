@@ -77,7 +77,7 @@
       "packFolder": "immortal-burrito-blood-demons",
       "path": "2D/immortal-burrito-blood-demons/extracted/demon-sword/sword/eg/sword-eg__strip-768x750.sheet.png",
       "src": "/2D/immortal-burrito-blood-demons/extracted/demon-sword/sword/eg/sword-eg__strip-768x750.sheet.png",
-      "label": "Sword Eg Strip 768x750.Sheet",
+      "label": "Sword Eg",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -93,7 +93,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Sword Eg Strip 768x750.Sheet is an animated 2D character sample from Blood Demons. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Sword Eg is an animated 2D character sample from Blood Demons. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "blood demons",
@@ -112,7 +112,7 @@
         "character",
         "horror"
       ],
-      "searchText": "sword eg strip 768x750.sheet 2d/immortal-burrito-blood-demons/extracted/demon-sword/sword/eg/sword-eg__strip-768x750.sheet.png blood demons character sword eg strip 768x750.sheet is an animated 2d character sample from blood demons. useful for player characters, npcs, animation prototyping. blood demons player characters npcs animation prototyping 2d animated art horror"
+      "searchText": "sword eg 2d/immortal-burrito-blood-demons/extracted/demon-sword/sword/eg/sword-eg__strip-768x750.sheet.png blood demons character sword eg is an animated 2d character sample from blood demons. useful for player characters, npcs, animation prototyping. blood demons player characters npcs animation prototyping 2d animated art horror"
     }
   ]
 }

@@ -606,7 +606,7 @@
       "packFolder": "c1b0rg0101-little-witch-pixel-character-animation",
       "path": "2D/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/69x56/gifs/attackanimation__strip-69x56.sheet.png",
       "src": "/2D/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/69x56/gifs/attackanimation__strip-69x56.sheet.png",
-      "label": "Attackanimation Strip 69x56.Sheet",
+      "label": "Attackanimation",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -622,7 +622,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Attackanimation Strip 69x56.Sheet is an animated 2D character sample from Little Witch Pixel Character Animation. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Attackanimation is an animated 2D character sample from Little Witch Pixel Character Animation. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -640,13 +640,13 @@
         "character",
         "little witch pixel character animation"
       ],
-      "searchText": "attackanimation strip 69x56.sheet 2d/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/69x56/gifs/attackanimation__strip-69x56.sheet.png little witch pixel character animation character attackanimation strip 69x56.sheet is an animated 2d character sample from little witch pixel character animation. useful for player characters, npcs, animation prototyping. little witch pixel character animation player characters npcs animation prototyping 2d animated art"
+      "searchText": "attackanimation 2d/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/69x56/gifs/attackanimation__strip-69x56.sheet.png little witch pixel character animation character attackanimation is an animated 2d character sample from little witch pixel character animation. useful for player characters, npcs, animation prototyping. little witch pixel character animation player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "c1b0rg0101-little-witch-pixel-character-animation",
       "path": "2D/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/69x56/gifs/deathanimation__strip-69x56.sheet.png",
       "src": "/2D/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/69x56/gifs/deathanimation__strip-69x56.sheet.png",
-      "label": "Deathanimation Strip 69x56.Sheet",
+      "label": "Deathanimation",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -662,7 +662,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Deathanimation Strip 69x56.Sheet is an animated 2D character sample from Little Witch Pixel Character Animation. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Deathanimation is an animated 2D character sample from Little Witch Pixel Character Animation. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -680,13 +680,13 @@
         "character",
         "little witch pixel character animation"
       ],
-      "searchText": "deathanimation strip 69x56.sheet 2d/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/69x56/gifs/deathanimation__strip-69x56.sheet.png little witch pixel character animation character deathanimation strip 69x56.sheet is an animated 2d character sample from little witch pixel character animation. useful for player characters, npcs, animation prototyping. little witch pixel character animation player characters npcs animation prototyping 2d animated art"
+      "searchText": "deathanimation 2d/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/69x56/gifs/deathanimation__strip-69x56.sheet.png little witch pixel character animation character deathanimation is an animated 2d character sample from little witch pixel character animation. useful for player characters, npcs, animation prototyping. little witch pixel character animation player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "c1b0rg0101-little-witch-pixel-character-animation",
       "path": "2D/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/69x56/gifs/hitanimation__strip-69x56.sheet.png",
       "src": "/2D/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/69x56/gifs/hitanimation__strip-69x56.sheet.png",
-      "label": "Hitanimation Strip 69x56.Sheet",
+      "label": "Hitanimation",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -702,7 +702,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Hitanimation Strip 69x56.Sheet is an animated 2D character sample from Little Witch Pixel Character Animation. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Hitanimation is an animated 2D character sample from Little Witch Pixel Character Animation. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -720,13 +720,13 @@
         "character",
         "little witch pixel character animation"
       ],
-      "searchText": "hitanimation strip 69x56.sheet 2d/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/69x56/gifs/hitanimation__strip-69x56.sheet.png little witch pixel character animation character hitanimation strip 69x56.sheet is an animated 2d character sample from little witch pixel character animation. useful for player characters, npcs, animation prototyping. little witch pixel character animation player characters npcs animation prototyping 2d animated art"
+      "searchText": "hitanimation 2d/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/69x56/gifs/hitanimation__strip-69x56.sheet.png little witch pixel character animation character hitanimation is an animated 2d character sample from little witch pixel character animation. useful for player characters, npcs, animation prototyping. little witch pixel character animation player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "c1b0rg0101-little-witch-pixel-character-animation",
       "path": "2D/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/69x56/gifs/idleanimation__strip-69x56.sheet.png",
       "src": "/2D/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/69x56/gifs/idleanimation__strip-69x56.sheet.png",
-      "label": "Idleanimation Strip 69x56.Sheet",
+      "label": "Idleanimation",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -742,7 +742,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Idleanimation Strip 69x56.Sheet is an animated 2D character sample from Little Witch Pixel Character Animation. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Idleanimation is an animated 2D character sample from Little Witch Pixel Character Animation. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -760,13 +760,13 @@
         "character",
         "little witch pixel character animation"
       ],
-      "searchText": "idleanimation strip 69x56.sheet 2d/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/69x56/gifs/idleanimation__strip-69x56.sheet.png little witch pixel character animation character idleanimation strip 69x56.sheet is an animated 2d character sample from little witch pixel character animation. useful for player characters, npcs, animation prototyping. little witch pixel character animation player characters npcs animation prototyping 2d animated art"
+      "searchText": "idleanimation 2d/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/69x56/gifs/idleanimation__strip-69x56.sheet.png little witch pixel character animation character idleanimation is an animated 2d character sample from little witch pixel character animation. useful for player characters, npcs, animation prototyping. little witch pixel character animation player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "c1b0rg0101-little-witch-pixel-character-animation",
       "path": "2D/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/69x56/gifs/jumpanimation__strip-69x56.sheet.png",
       "src": "/2D/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/69x56/gifs/jumpanimation__strip-69x56.sheet.png",
-      "label": "Jumpanimation Strip 69x56.Sheet",
+      "label": "Jumpanimation",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -782,7 +782,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Jumpanimation Strip 69x56.Sheet is an animated 2D character sample from Little Witch Pixel Character Animation. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Jumpanimation is an animated 2D character sample from Little Witch Pixel Character Animation. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -800,13 +800,13 @@
         "character",
         "little witch pixel character animation"
       ],
-      "searchText": "jumpanimation strip 69x56.sheet 2d/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/69x56/gifs/jumpanimation__strip-69x56.sheet.png little witch pixel character animation character jumpanimation strip 69x56.sheet is an animated 2d character sample from little witch pixel character animation. useful for player characters, npcs, animation prototyping. little witch pixel character animation player characters npcs animation prototyping 2d animated art"
+      "searchText": "jumpanimation 2d/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/69x56/gifs/jumpanimation__strip-69x56.sheet.png little witch pixel character animation character jumpanimation is an animated 2d character sample from little witch pixel character animation. useful for player characters, npcs, animation prototyping. little witch pixel character animation player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "c1b0rg0101-little-witch-pixel-character-animation",
       "path": "2D/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/69x56/gifs/redwitchanimations__strip-69x56.sheet.png",
       "src": "/2D/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/69x56/gifs/redwitchanimations__strip-69x56.sheet.png",
-      "label": "Redwitchanimations Strip 69x56.Sheet",
+      "label": "Redwitchanimations",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -822,7 +822,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Redwitchanimations Strip 69x56.Sheet is an animated 2D character sample from Little Witch Pixel Character Animation. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Redwitchanimations is an animated 2D character sample from Little Witch Pixel Character Animation. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -840,13 +840,13 @@
         "character",
         "little witch pixel character animation"
       ],
-      "searchText": "redwitchanimations strip 69x56.sheet 2d/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/69x56/gifs/redwitchanimations__strip-69x56.sheet.png little witch pixel character animation character redwitchanimations strip 69x56.sheet is an animated 2d character sample from little witch pixel character animation. useful for player characters, npcs, animation prototyping. little witch pixel character animation player characters npcs animation prototyping 2d animated art"
+      "searchText": "redwitchanimations 2d/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/69x56/gifs/redwitchanimations__strip-69x56.sheet.png little witch pixel character animation character redwitchanimations is an animated 2d character sample from little witch pixel character animation. useful for player characters, npcs, animation prototyping. little witch pixel character animation player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "c1b0rg0101-little-witch-pixel-character-animation",
       "path": "2D/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/69x56/gifs/runanimation__strip-69x56.sheet.png",
       "src": "/2D/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/69x56/gifs/runanimation__strip-69x56.sheet.png",
-      "label": "Runanimation Strip 69x56.Sheet",
+      "label": "Runanimation",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -862,7 +862,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Runanimation Strip 69x56.Sheet is an animated 2D character sample from Little Witch Pixel Character Animation. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Runanimation is an animated 2D character sample from Little Witch Pixel Character Animation. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -880,7 +880,7 @@
         "character",
         "little witch pixel character animation"
       ],
-      "searchText": "runanimation strip 69x56.sheet 2d/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/69x56/gifs/runanimation__strip-69x56.sheet.png little witch pixel character animation character runanimation strip 69x56.sheet is an animated 2d character sample from little witch pixel character animation. useful for player characters, npcs, animation prototyping. little witch pixel character animation player characters npcs animation prototyping 2d animated art"
+      "searchText": "runanimation 2d/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/69x56/gifs/runanimation__strip-69x56.sheet.png little witch pixel character animation character runanimation is an animated 2d character sample from little witch pixel character animation. useful for player characters, npcs, animation prototyping. little witch pixel character animation player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "c1b0rg0101-little-witch-pixel-character-animation",
@@ -1166,7 +1166,7 @@
       "packFolder": "c1b0rg0101-little-witch-pixel-character-animation",
       "path": "2D/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/85x56/gifs/attackanimation__strip-85x56.sheet.png",
       "src": "/2D/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/85x56/gifs/attackanimation__strip-85x56.sheet.png",
-      "label": "Attackanimation Strip 85x56.Sheet",
+      "label": "Attackanimation",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -1182,7 +1182,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Attackanimation Strip 85x56.Sheet is an animated 2D character sample from Little Witch Pixel Character Animation. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Attackanimation is an animated 2D character sample from Little Witch Pixel Character Animation. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -1200,13 +1200,13 @@
         "character",
         "little witch pixel character animation"
       ],
-      "searchText": "attackanimation strip 85x56.sheet 2d/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/85x56/gifs/attackanimation__strip-85x56.sheet.png little witch pixel character animation character attackanimation strip 85x56.sheet is an animated 2d character sample from little witch pixel character animation. useful for player characters, npcs, animation prototyping. little witch pixel character animation player characters npcs animation prototyping 2d animated art"
+      "searchText": "attackanimation 2d/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/85x56/gifs/attackanimation__strip-85x56.sheet.png little witch pixel character animation character attackanimation is an animated 2d character sample from little witch pixel character animation. useful for player characters, npcs, animation prototyping. little witch pixel character animation player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "c1b0rg0101-little-witch-pixel-character-animation",
       "path": "2D/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/85x56/gifs/deathanimation__strip-85x56.sheet.png",
       "src": "/2D/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/85x56/gifs/deathanimation__strip-85x56.sheet.png",
-      "label": "Deathanimation Strip 85x56.Sheet",
+      "label": "Deathanimation",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -1222,7 +1222,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Deathanimation Strip 85x56.Sheet is an animated 2D character sample from Little Witch Pixel Character Animation. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Deathanimation is an animated 2D character sample from Little Witch Pixel Character Animation. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -1240,13 +1240,13 @@
         "character",
         "little witch pixel character animation"
       ],
-      "searchText": "deathanimation strip 85x56.sheet 2d/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/85x56/gifs/deathanimation__strip-85x56.sheet.png little witch pixel character animation character deathanimation strip 85x56.sheet is an animated 2d character sample from little witch pixel character animation. useful for player characters, npcs, animation prototyping. little witch pixel character animation player characters npcs animation prototyping 2d animated art"
+      "searchText": "deathanimation 2d/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/85x56/gifs/deathanimation__strip-85x56.sheet.png little witch pixel character animation character deathanimation is an animated 2d character sample from little witch pixel character animation. useful for player characters, npcs, animation prototyping. little witch pixel character animation player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "c1b0rg0101-little-witch-pixel-character-animation",
       "path": "2D/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/85x56/gifs/hitanimation__strip-85x56.sheet.png",
       "src": "/2D/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/85x56/gifs/hitanimation__strip-85x56.sheet.png",
-      "label": "Hitanimation Strip 85x56.Sheet",
+      "label": "Hitanimation",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -1262,7 +1262,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Hitanimation Strip 85x56.Sheet is an animated 2D character sample from Little Witch Pixel Character Animation. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Hitanimation is an animated 2D character sample from Little Witch Pixel Character Animation. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -1280,13 +1280,13 @@
         "character",
         "little witch pixel character animation"
       ],
-      "searchText": "hitanimation strip 85x56.sheet 2d/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/85x56/gifs/hitanimation__strip-85x56.sheet.png little witch pixel character animation character hitanimation strip 85x56.sheet is an animated 2d character sample from little witch pixel character animation. useful for player characters, npcs, animation prototyping. little witch pixel character animation player characters npcs animation prototyping 2d animated art"
+      "searchText": "hitanimation 2d/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/85x56/gifs/hitanimation__strip-85x56.sheet.png little witch pixel character animation character hitanimation is an animated 2d character sample from little witch pixel character animation. useful for player characters, npcs, animation prototyping. little witch pixel character animation player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "c1b0rg0101-little-witch-pixel-character-animation",
       "path": "2D/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/85x56/gifs/idleanimation__strip-85x56.sheet.png",
       "src": "/2D/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/85x56/gifs/idleanimation__strip-85x56.sheet.png",
-      "label": "Idleanimation Strip 85x56.Sheet",
+      "label": "Idleanimation",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -1302,7 +1302,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Idleanimation Strip 85x56.Sheet is an animated 2D character sample from Little Witch Pixel Character Animation. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Idleanimation is an animated 2D character sample from Little Witch Pixel Character Animation. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -1320,13 +1320,13 @@
         "character",
         "little witch pixel character animation"
       ],
-      "searchText": "idleanimation strip 85x56.sheet 2d/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/85x56/gifs/idleanimation__strip-85x56.sheet.png little witch pixel character animation character idleanimation strip 85x56.sheet is an animated 2d character sample from little witch pixel character animation. useful for player characters, npcs, animation prototyping. little witch pixel character animation player characters npcs animation prototyping 2d animated art"
+      "searchText": "idleanimation 2d/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/85x56/gifs/idleanimation__strip-85x56.sheet.png little witch pixel character animation character idleanimation is an animated 2d character sample from little witch pixel character animation. useful for player characters, npcs, animation prototyping. little witch pixel character animation player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "c1b0rg0101-little-witch-pixel-character-animation",
       "path": "2D/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/85x56/gifs/jumpanimation__strip-85x56.sheet.png",
       "src": "/2D/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/85x56/gifs/jumpanimation__strip-85x56.sheet.png",
-      "label": "Jumpanimation Strip 85x56.Sheet",
+      "label": "Jumpanimation",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -1342,7 +1342,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Jumpanimation Strip 85x56.Sheet is an animated 2D character sample from Little Witch Pixel Character Animation. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Jumpanimation is an animated 2D character sample from Little Witch Pixel Character Animation. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -1360,13 +1360,13 @@
         "character",
         "little witch pixel character animation"
       ],
-      "searchText": "jumpanimation strip 85x56.sheet 2d/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/85x56/gifs/jumpanimation__strip-85x56.sheet.png little witch pixel character animation character jumpanimation strip 85x56.sheet is an animated 2d character sample from little witch pixel character animation. useful for player characters, npcs, animation prototyping. little witch pixel character animation player characters npcs animation prototyping 2d animated art"
+      "searchText": "jumpanimation 2d/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/85x56/gifs/jumpanimation__strip-85x56.sheet.png little witch pixel character animation character jumpanimation is an animated 2d character sample from little witch pixel character animation. useful for player characters, npcs, animation prototyping. little witch pixel character animation player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "c1b0rg0101-little-witch-pixel-character-animation",
       "path": "2D/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/85x56/gifs/runanimation__strip-85x56.sheet.png",
       "src": "/2D/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/85x56/gifs/runanimation__strip-85x56.sheet.png",
-      "label": "Runanimation Strip 85x56.Sheet",
+      "label": "Runanimation",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -1382,7 +1382,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Runanimation Strip 85x56.Sheet is an animated 2D character sample from Little Witch Pixel Character Animation. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Runanimation is an animated 2D character sample from Little Witch Pixel Character Animation. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -1400,7 +1400,7 @@
         "character",
         "little witch pixel character animation"
       ],
-      "searchText": "runanimation strip 85x56.sheet 2d/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/85x56/gifs/runanimation__strip-85x56.sheet.png little witch pixel character animation character runanimation strip 85x56.sheet is an animated 2d character sample from little witch pixel character animation. useful for player characters, npcs, animation prototyping. little witch pixel character animation player characters npcs animation prototyping 2d animated art"
+      "searchText": "runanimation 2d/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/85x56/gifs/runanimation__strip-85x56.sheet.png little witch pixel character animation character runanimation is an animated 2d character sample from little witch pixel character animation. useful for player characters, npcs, animation prototyping. little witch pixel character animation player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "c1b0rg0101-little-witch-pixel-character-animation",
@@ -1646,7 +1646,7 @@
       "packFolder": "c1b0rg0101-little-witch-pixel-character-animation",
       "path": "2D/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/magic-spell/magicspell__strip-27x16.sheet.png",
       "src": "/2D/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/magic-spell/magicspell__strip-27x16.sheet.png",
-      "label": "Magicspell Strip 27x16.Sheet",
+      "label": "Magicspell",
       "kind": "effect",
       "animated": true,
       "inspection": {
@@ -1662,7 +1662,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Magicspell Strip 27x16.Sheet is an animated 2D effect sample from Little Witch Pixel Character Animation. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Magicspell is an animated 2D effect sample from Little Witch Pixel Character Animation. Useful for player characters, NPCs, animation prototyping.",
       "category": "effect",
       "themes": [
         "effect",
@@ -1680,7 +1680,7 @@
         "effect",
         "little witch pixel character animation"
       ],
-      "searchText": "magicspell strip 27x16.sheet 2d/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/magic-spell/magicspell__strip-27x16.sheet.png little witch pixel character animation effect magicspell strip 27x16.sheet is an animated 2d effect sample from little witch pixel character animation. useful for player characters, npcs, animation prototyping. little witch pixel character animation player characters npcs animation prototyping 2d animated art"
+      "searchText": "magicspell 2d/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/magic-spell/magicspell__strip-27x16.sheet.png little witch pixel character animation effect magicspell is an animated 2d effect sample from little witch pixel character animation. useful for player characters, npcs, animation prototyping. little witch pixel character animation player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "c1b0rg0101-little-witch-pixel-character-animation",
@@ -1726,7 +1726,7 @@
       "packFolder": "c1b0rg0101-little-witch-pixel-character-animation",
       "path": "2D/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/redwitchanimationspreview__strip-96x100.sheet.png",
       "src": "/2D/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/redwitchanimationspreview__strip-96x100.sheet.png",
-      "label": "Redwitchanimationspreview Strip 96x100.Sheet",
+      "label": "Redwitchanimationspreview",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -1744,7 +1744,7 @@
         "cellMedianHeight": 12
       },
       "promo": false,
-      "description": "Redwitchanimationspreview Strip 96x100.Sheet is an animated 2D character sample from Little Witch Pixel Character Animation. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Redwitchanimationspreview is an animated 2D character sample from Little Witch Pixel Character Animation. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -1762,7 +1762,7 @@
         "character",
         "little witch pixel character animation"
       ],
-      "searchText": "redwitchanimationspreview strip 96x100.sheet 2d/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/redwitchanimationspreview__strip-96x100.sheet.png little witch pixel character animation character redwitchanimationspreview strip 96x100.sheet is an animated 2d character sample from little witch pixel character animation. useful for player characters, npcs, animation prototyping. little witch pixel character animation player characters npcs animation prototyping 2d animated art"
+      "searchText": "redwitchanimationspreview 2d/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/redwitchanimationspreview__strip-96x100.sheet.png little witch pixel character animation character redwitchanimationspreview is an animated 2d character sample from little witch pixel character animation. useful for player characters, npcs, animation prototyping. little witch pixel character animation player characters npcs animation prototyping 2d animated art"
     },
     {
       "packFolder": "c1b0rg0101-little-witch-pixel-character-animation",
@@ -6973,7 +6973,7 @@
       "packFolder": "c1b0rg0101-little-witch-pixel-character-animation",
       "path": "2D/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/85x56/gifs/redwitchanimations__strip-85x56.sheet.png",
       "src": "/2D/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/85x56/gifs/redwitchanimations__strip-85x56.sheet.png",
-      "label": "Redwitchanimations Strip 85x56.Sheet",
+      "label": "Redwitchanimations",
       "kind": "character",
       "animated": false,
       "inspection": {
@@ -6989,7 +6989,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Redwitchanimations Strip 85x56.Sheet is a static 2D character sample from Little Witch Pixel Character Animation. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Redwitchanimations is a static 2D character sample from Little Witch Pixel Character Animation. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -7008,7 +7008,7 @@
         "little witch pixel character animation",
         "static"
       ],
-      "searchText": "redwitchanimations strip 85x56.sheet 2d/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/85x56/gifs/redwitchanimations__strip-85x56.sheet.png little witch pixel character animation character redwitchanimations strip 85x56.sheet is a static 2d character sample from little witch pixel character animation. useful for player characters, npcs, animation prototyping. little witch pixel character animation player characters npcs animation prototyping 2d animated art static"
+      "searchText": "redwitchanimations 2d/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/85x56/gifs/redwitchanimations__strip-85x56.sheet.png little witch pixel character animation character redwitchanimations is a static 2d character sample from little witch pixel character animation. useful for player characters, npcs, animation prototyping. little witch pixel character animation player characters npcs animation prototyping 2d animated art static"
     },
     {
       "packFolder": "c1b0rg0101-little-witch-pixel-character-animation",
@@ -7341,7 +7341,7 @@
       "packFolder": "c1b0rg0101-little-witch-pixel-character-animation",
       "path": "2D/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/redwitchanimationspreviewfinal__strip-630x500.sheet.png",
       "src": "/2D/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/redwitchanimationspreviewfinal__strip-630x500.sheet.png",
-      "label": "Redwitchanimationspreviewfinal Strip 630x500.Sheet",
+      "label": "Redwitchanimationspreviewfinal",
       "kind": "character",
       "animated": true,
       "inspection": {
@@ -7357,7 +7357,7 @@
         "uniformGrid": false
       },
       "promo": false,
-      "description": "Redwitchanimationspreviewfinal Strip 630x500.Sheet is an animated 2D character sample from Little Witch Pixel Character Animation. Useful for player characters, NPCs, animation prototyping.",
+      "description": "Redwitchanimationspreviewfinal is an animated 2D character sample from Little Witch Pixel Character Animation. Useful for player characters, NPCs, animation prototyping.",
       "category": "character",
       "themes": [
         "character",
@@ -7375,7 +7375,7 @@
         "character",
         "little witch pixel character animation"
       ],
-      "searchText": "redwitchanimationspreviewfinal strip 630x500.sheet 2d/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/redwitchanimationspreviewfinal__strip-630x500.sheet.png little witch pixel character animation character redwitchanimationspreviewfinal strip 630x500.sheet is an animated 2d character sample from little witch pixel character animation. useful for player characters, npcs, animation prototyping. little witch pixel character animation player characters npcs animation prototyping 2d animated art"
+      "searchText": "redwitchanimationspreviewfinal 2d/c1b0rg0101-little-witch-pixel-character-animation/extracted/little-witch/little-witch/redwitchanimationspreviewfinal__strip-630x500.sheet.png little witch pixel character animation character redwitchanimationspreviewfinal is an animated 2d character sample from little witch pixel character animation. useful for player characters, npcs, animation prototyping. little witch pixel character animation player characters npcs animation prototyping 2d animated art"
     }
   ]
 }

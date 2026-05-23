@@ -9,6 +9,7 @@ import {
   isLikelyPromoArt,
   normalizeAudioDisplayName,
   selectDisplayArtSamples,
+  stripBuiltSheetSuffix,
 } from "../src/lib/media-inference";
 import { flushInspectionCache, inspectArtImageCached } from "./inspect-art-image";
 
@@ -149,9 +150,7 @@ async function discoverArtPackDirs(assetsRoot: string): Promise<ArtPackDir[]> {
 
 function labelFromAssetPath(path: string): string {
   return humanize(
-    path
-      .split("/")
-      .pop()!
+    stripBuiltSheetSuffix(path.split("/").pop()!)
       .replace(/\.[^.]+$/i, "")
       .replace(/^\d+__.+?__/, ""),
   );
