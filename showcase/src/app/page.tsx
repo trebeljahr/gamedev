@@ -216,10 +216,16 @@ const TRACK_MUSIC_PICKS: FeaturedSoundPick[] = [
 ];
 
 const GROUNDED_Y = -0.78;
-const GROUND_RING_RADII = [1.7, 3.2, 4.7] as const;
+const GROUND_RING_RADII = [1.9, 3.5, 5.1] as const;
 const GROUND_RING_COUNTS = [5, 7, 6] as const;
 const FLOAT_X_POSITIONS = [-3.4, 3.6] as const;
 const FLOAT_Z_POSITIONS = [-2.6, -1.4] as const;
+
+// KayKit's adventurer + skeleton character packs lost their texture atlas during
+// GLB optimization: the optimized .glb embeds a 1×1 placeholder image, so those
+// models render as flat untextured "yellow" figures. Their raw GLBs still carry
+// the real 1024² atlas, so the landing previews load raw for these packs.
+const RAW_TEXTURE_PACKS = new Set(["kaykit/adventurers", "kaykit/skeletons"]);
 
 function layoutGroundedSlot(index: number): {
   position: [number, number, number];
@@ -240,8 +246,8 @@ function layoutGroundedSlot(index: number): {
   const ringOffset = safeRing % 2 === 0 ? 0 : (arcEnd - arcStart) / count / 2;
   const angle = arcStart + (arcEnd - arcStart) * t + ringOffset;
   const x = Math.cos(angle) * radius;
-  const z = Math.sin(angle) * radius * 0.55 + (safeRing === 0 ? 0.4 : 0);
-  const rotY = Math.atan2(4.5 - x, 8.5 - z) + (((index * 73) % 17) - 8) / 70;
+  const z = Math.sin(angle) * radius * 0.72 + (safeRing === 0 ? 0.4 : 0);
+  const rotY = Math.atan2(2.5 - x, 5.8 - z) + (((index * 73) % 17) - 8) / 70;
   return {
     position: [x, GROUNDED_Y, z],
     rotation: [0, rotY, 0],
@@ -257,7 +263,7 @@ function layoutFloatingSlot(
 } {
   const x = FLOAT_X_POSITIONS[index % FLOAT_X_POSITIONS.length];
   const z = FLOAT_Z_POSITIONS[index % FLOAT_Z_POSITIONS.length];
-  const rotY = Math.atan2(4.5 - x, 8.5 - z) - 0.4;
+  const rotY = Math.atan2(2.5 - x, 5.8 - z) - 0.4;
   return {
     position: [x, GROUNDED_Y + yLift, z],
     rotation: [-0.12, rotY, 0.06],
@@ -272,6 +278,9 @@ function slotsToPreviews(slots: ModelSlot[]): LibraryModelPreview[] {
     const model = pack?.models.find((item) => item.name === slot.name);
     if (!pack || !model) return [];
     const optimized = downloadsForModel(model).find((download) => download.optimized);
+    const file = RAW_TEXTURE_PACKS.has(slot.packId)
+      ? model.file
+      : optimized?.file ?? model.file;
     const placement = slot.floats
       ? layoutFloatingSlot(floatingIndex++, slot.yLift ?? 2.4)
       : layoutGroundedSlot(groundedIndex++);
@@ -280,7 +289,7 @@ function slotsToPreviews(slots: ModelSlot[]): LibraryModelPreview[] {
     const spinPhase = ((slotIndex * 97) % 360) * (Math.PI / 180);
     return {
       label: model.title,
-      file: optimized?.file ?? model.file,
+      file,
       source: pack.source,
       minY: model.minY,
       position: placement.position,

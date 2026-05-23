@@ -378,7 +378,7 @@ export function LibraryHeroShowreel({
       <div className="library-model-stage">
         <LandingModelBackdrop
           models={models}
-          cameraPosition={[4.5, 3, 8.5]}
+          cameraPosition={[2.5, 4, 5.8]}
           fov={42}
           contactShadowScale={18}
         />

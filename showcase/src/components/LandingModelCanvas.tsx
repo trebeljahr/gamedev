@@ -2,7 +2,7 @@
 
 import { ContactShadows, Environment } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Component, Suspense, useRef, type ReactNode } from "react";
+import { Component, Suspense, useMemo, useRef, type ReactNode } from "react";
 import type { Group } from "three";
 import { assetUrl } from "@/lib/manifest";
 import { Model } from "./Model";
@@ -55,6 +55,26 @@ export default function LandingModelCanvas({
 function ModelCluster({ models }: { models: LandingModelPreviewItem[] }) {
   const groupRef = useRef<Group>(null);
 
+  // Recenter the arrangement horizontally on the origin so it sits centered in
+  // the canvas (the camera always looks at [0,0,0]). Without this the ground
+  // arc's mass skews to one side and the crowd clumps off-center. Only X/Z are
+  // centered — Y is left alone so grounded models keep their feet on the
+  // ContactShadows plane.
+  const center = useMemo<[number, number, number]>(() => {
+    if (models.length === 0) return [0, 0, 0];
+    let minX = Infinity, maxX = -Infinity;
+    let minZ = Infinity, maxZ = -Infinity;
+    for (const m of models) {
+      const x = m.position[0];
+      const z = m.position[2];
+      if (x < minX) minX = x;
+      if (x > maxX) maxX = x;
+      if (z < minZ) minZ = z;
+      if (z > maxZ) maxZ = z;
+    }
+    return [(minX + maxX) / 2, 0, (minZ + maxZ) / 2];
+  }, [models]);
+
   useFrame(({ clock }) => {
     if (!groupRef.current) return;
     const t = clock.getElapsedTime();
@@ -64,14 +84,16 @@ function ModelCluster({ models }: { models: LandingModelPreviewItem[] }) {
 
   return (
     <group ref={groupRef} rotation={[0, -0.28, 0]}>
-      {models.map((model) => (
-        <ModelErrorBoundary
-          key={`${model.label}-${model.file}`}
-          resetKey={model.file}
-        >
-          <PreviewModel model={model} />
-        </ModelErrorBoundary>
-      ))}
+      <group position={[-center[0], -center[1], -center[2]]}>
+        {models.map((model) => (
+          <ModelErrorBoundary
+            key={`${model.label}-${model.file}`}
+            resetKey={model.file}
+          >
+            <PreviewModel model={model} />
+          </ModelErrorBoundary>
+        ))}
+      </group>
     </group>
   );
 }
