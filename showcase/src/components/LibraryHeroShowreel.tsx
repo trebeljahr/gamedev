@@ -378,9 +378,8 @@ export function LibraryHeroShowreel({
       <div className="library-model-stage">
         <LandingModelBackdrop
           models={models}
-          cameraPosition={[2.5, 4, 5.8]}
-          fov={42}
-          contactShadowScale={18}
+          cameraPosition={[0, 0, 8]}
+          fov={30}
         />
         <div className="library-tile-chip library-tile-chip--floating" data-tone="model">
           <span>3D</span>

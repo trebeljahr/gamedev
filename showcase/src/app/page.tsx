@@ -125,32 +125,29 @@ const audioAnalysisItems = (() => {
 type ModelSlot = {
   packId: string;
   name: string;
-  scale: number;
-  yLift?: number;
-  floats?: boolean;
+  scaleBoost?: number;
 };
 
+// A deliberately diverse cross-section of the catalog — buildings, fantasy
+// heroes, undead, a monster, a dinosaur, two animals, a car, a spaceship, a
+// robot, a mech, a tree, an astronaut, a fish — so the hero grid showcases the
+// breadth of the library rather than a single genre.
 const HERO_MODEL_SLOTS: ModelSlot[] = [
-  { packId: "kaykit/medieval-builder-pack", name: "castle", scale: 0.3 },
-  { packId: "kaykit/medieval-builder-pack", name: "barracks", scale: 0.32 },
-  { packId: "kaykit/medieval-builder-pack", name: "bridge", scale: 0.32 },
-  { packId: "kaykit/adventurers", name: "barbarian", scale: 0.32 },
-  { packId: "kaykit/adventurers", name: "knight", scale: 0.32 },
-  { packId: "kaykit/adventurers", name: "mage", scale: 0.32 },
-  { packId: "kaykit/adventurers", name: "ranger", scale: 0.32 },
-  { packId: "kaykit/adventurers", name: "rogue", scale: 0.32 },
-  { packId: "kaykit/skeletons", name: "skeleton-minion", scale: 0.5 },
-  { packId: "kaykit/skeletons", name: "skeleton-mage", scale: 0.5 },
-  { packId: "kenney/cube-pets", name: "animal-bunny", scale: 0.34 },
-  { packId: "kenney/cube-pets", name: "animal-cat", scale: 0.34 },
-  { packId: "kenney/cube-pets", name: "animal-fox", scale: 0.34 },
-  { packId: "kenney/cube-pets", name: "animal-tiger", scale: 0.34 },
-  { packId: "kenney/car-kit", name: "ambulance", scale: 0.4 },
-  { packId: "quaternius/animated-robot-oct-2018", name: "robot", scale: 0.22 },
-  { packId: "quaternius/cube-world-aug-2023", name: "skeleton", scale: 0.45 },
-  { packId: "quaternius/ultimate-space-kit-march-2023", name: "astronaut-barbarathebee", scale: 0.36 },
-  { packId: "quaternius/spaceships-by-quaternius", name: "spaceship3", scale: 0.16, floats: true, yLift: 2.4 },
-  { packId: "quaternius/spaceships-by-quaternius", name: "spaceship", scale: 0.14, floats: true, yLift: 2.8 },
+  { packId: "kaykit/medieval-builder-pack", name: "castle" },
+  { packId: "kaykit/adventurers", name: "knight" },
+  { packId: "kaykit/adventurers", name: "mage" },
+  { packId: "kaykit/skeletons", name: "skeleton-warrior" },
+  { packId: "quaternius/ultimate-monsters", name: "bluedemon" },
+  { packId: "quaternius/dinosaur-animated-pack-dec-2018", name: "velociraptor" },
+  { packId: "kenney/cube-pets", name: "animal-fox" },
+  { packId: "quaternius/ultimate-animated-animals-july-2021", name: "horse" },
+  { packId: "kenney/car-kit", name: "ambulance" },
+  { packId: "quaternius/spaceships-by-quaternius", name: "spaceship2" },
+  { packId: "quaternius/animated-robot-oct-2018", name: "robot" },
+  { packId: "quaternius/animated-mech-pack-march-2021", name: "stan" },
+  { packId: "quaternius/textured-stylized-trees-may-2020", name: "birch-1" },
+  { packId: "quaternius/ultimate-space-kit-march-2023", name: "astronaut-finnthefrog" },
+  { packId: "quaternius/cute-fish-pack-feb-2020", name: "clownfish" },
 ];
 
 type FeaturedSoundPick = {
@@ -183,27 +180,22 @@ const FEATURED_SOUND_PICKS: FeaturedSoundPick[] = [
   },
 ];
 
+// A second, distinct slice for the "what's inside" 3D track visual — different
+// picks from the hero so the two grids don't read as duplicates.
 const TRACK_MODEL_SLOTS: ModelSlot[] = [
-  { packId: "kaykit/medieval-builder-pack", name: "castle", scale: 0.3 },
-  { packId: "kaykit/medieval-builder-pack", name: "barracks", scale: 0.32 },
-  { packId: "kaykit/medieval-builder-pack", name: "farm-plot", scale: 0.34 },
-  { packId: "kaykit/adventurers", name: "knight", scale: 0.34 },
-  { packId: "kaykit/adventurers", name: "mage", scale: 0.34 },
-  { packId: "kaykit/adventurers", name: "ranger", scale: 0.34 },
-  { packId: "kaykit/skeletons", name: "skeleton-blade", scale: 0.5 },
-  { packId: "kenney/cube-pets", name: "animal-elephant", scale: 0.34 },
-  { packId: "kenney/cube-pets", name: "animal-giraffe", scale: 0.32 },
-  { packId: "kenney/cube-pets", name: "animal-monkey", scale: 0.34 },
-  { packId: "kenney/cube-pets", name: "animal-penguin", scale: 0.34 },
-  { packId: "kenney/cube-pets", name: "animal-cow", scale: 0.34 },
-  { packId: "kenney/car-kit", name: "sedan-sports", scale: 0.42 },
-  { packId: "kenney/car-kit", name: "police", scale: 0.42 },
-  { packId: "quaternius/animated-robot-oct-2018", name: "robot", scale: 0.22 },
-  { packId: "quaternius/cube-world-aug-2023", name: "character-male-1", scale: 0.45 },
-  { packId: "quaternius/cube-world-aug-2023", name: "cat", scale: 0.45 },
-  { packId: "quaternius/ultimate-space-kit-march-2023", name: "astronaut-fernandotheflamingo", scale: 0.36 },
-  { packId: "quaternius/spaceships-by-quaternius", name: "spaceship2", scale: 0.16, floats: true, yLift: 2.4 },
-  { packId: "quaternius/ultimate-fantasy-rts-aug-2022", name: "archery-firstage-level1", scale: 0.4 },
+  { packId: "kaykit/medieval-builder-pack", name: "barracks" },
+  { packId: "kaykit/adventurers", name: "knight" },
+  { packId: "kaykit/skeletons", name: "skeleton-blade" },
+  { packId: "kenney/cube-pets", name: "animal-elephant" },
+  { packId: "kenney/cube-pets", name: "animal-cow" },
+  { packId: "kenney/car-kit", name: "sedan-sports" },
+  { packId: "kenney/car-kit", name: "police" },
+  { packId: "quaternius/animated-robot-oct-2018", name: "robot" },
+  { packId: "quaternius/cube-world-aug-2023", name: "character-male-1" },
+  { packId: "quaternius/cube-world-aug-2023", name: "cat" },
+  { packId: "quaternius/ultimate-space-kit-march-2023", name: "astronaut-fernandotheflamingo" },
+  { packId: "quaternius/spaceships-by-quaternius", name: "spaceship2" },
+  { packId: "quaternius/ultimate-fantasy-rts-aug-2022", name: "archery-firstage-level1" },
 ];
 
 const TRACK_MUSIC_PICKS: FeaturedSoundPick[] = [
@@ -214,11 +206,15 @@ const TRACK_MUSIC_PICKS: FeaturedSoundPick[] = [
   { kind: "music", tone: "music", collectionLabel: "Audiocoffee", matchTitle: "Audiocoffee Relaxing Ambient Meditation Short Ver" },
 ];
 
-const GROUNDED_Y = -0.78;
-const GROUND_RING_RADII = [1.9, 3.5, 5.1] as const;
-const GROUND_RING_COUNTS = [5, 7, 6] as const;
-const FLOAT_X_POSITIONS = [-3.4, 3.6] as const;
-const FLOAT_Z_POSITIONS = [-2.6, -1.4] as const;
+// Flat-front staggered grid. Every model is normalized to fit a cube of side
+// GRID_TARGET_SIZE (so wildly different source scales read at a comparable
+// size), laid out on a brick-staggered grid that intentionally overflows the
+// frustum so edge models clip. The camera looks straight on, each model spins
+// on its own axis.
+const GRID_TARGET_SIZE = 1.3;
+const GRID_DX = 1.8;
+const GRID_DY = 1.65;
+const GRID_Z_JITTER = 0.4;
 
 // KayKit's adventurer + skeleton character packs lost their texture atlas during
 // GLB optimization: the optimized .glb embeds a 1×1 placeholder image, so those
@@ -226,53 +222,30 @@ const FLOAT_Z_POSITIONS = [-2.6, -1.4] as const;
 // the real 1024² atlas, so the landing previews load raw for these packs.
 const RAW_TEXTURE_PACKS = new Set(["kaykit/adventurers", "kaykit/skeletons"]);
 
-function layoutGroundedSlot(index: number): {
-  position: [number, number, number];
-  rotation: [number, number, number];
-} {
-  let remaining = index;
-  let ring = 0;
-  for (; ring < GROUND_RING_COUNTS.length; ring += 1) {
-    if (remaining < GROUND_RING_COUNTS[ring]) break;
-    remaining -= GROUND_RING_COUNTS[ring];
-  }
-  const safeRing = Math.min(ring, GROUND_RING_COUNTS.length - 1);
-  const count = GROUND_RING_COUNTS[safeRing];
-  const radius = GROUND_RING_RADII[safeRing];
-  const arcStart = -(Math.PI * 0.62);
-  const arcEnd = Math.PI * 0.42;
-  const t = (count as number) <= 1 ? 0.5 : remaining / (count - 1);
-  const ringOffset = safeRing % 2 === 0 ? 0 : (arcEnd - arcStart) / count / 2;
-  const angle = arcStart + (arcEnd - arcStart) * t + ringOffset;
-  const x = Math.cos(angle) * radius;
-  const z = Math.sin(angle) * radius * 0.72 + (safeRing === 0 ? 0.4 : 0);
-  const rotY = Math.atan2(2.5 - x, 5.8 - z) + (((index * 73) % 17) - 8) / 70;
-  return {
-    position: [x, GROUNDED_Y, z],
-    rotation: [0, rotY, 0],
-  };
+function gridRowsFor(total: number): number {
+  if (total <= 9) return 2;
+  if (total <= 18) return 3;
+  return 4;
 }
 
-function layoutFloatingSlot(
-  index: number,
-  yLift: number,
-): {
-  position: [number, number, number];
-  rotation: [number, number, number];
-} {
-  const x = FLOAT_X_POSITIONS[index % FLOAT_X_POSITIONS.length];
-  const z = FLOAT_Z_POSITIONS[index % FLOAT_Z_POSITIONS.length];
-  const rotY = Math.atan2(2.5 - x, 5.8 - z) - 0.4;
-  return {
-    position: [x, GROUNDED_Y + yLift, z],
-    rotation: [-0.12, rotY, 0.06],
-  };
+// Grid cell center for `index` of `total` models. Rows are brick-staggered and
+// each row is centered on its own member count, so a short final row still sits
+// centered. Alternating depth gives the wall a little dimensionality.
+function layoutGridCell(index: number, total: number): [number, number, number] {
+  const rows = gridRowsFor(total);
+  const cols = Math.ceil(total / rows);
+  const row = Math.floor(index / cols);
+  const col = index % cols;
+  const countInRow = Math.min(cols, total - row * cols);
+  const stagger = (row % 2 === 0 ? -1 : 1) * GRID_DX * 0.25;
+  const x = (col - (countInRow - 1) / 2) * GRID_DX + stagger;
+  const y = ((rows - 1) / 2 - row) * GRID_DY;
+  const z = ((row + col) % 2 === 0 ? 1 : -1) * GRID_Z_JITTER;
+  return [x, y, z];
 }
 
 function slotsToPreviews(slots: ModelSlot[]): LibraryModelPreview[] {
-  let groundedIndex = 0;
-  let floatingIndex = 0;
-  return slots.flatMap((slot, slotIndex) => {
+  const resolved = slots.flatMap((slot) => {
     const pack = manifest.packs.find((item) => item.id === slot.packId);
     const model = pack?.models.find((item) => item.name === slot.name);
     if (!pack || !model) return [];
@@ -280,20 +253,29 @@ function slotsToPreviews(slots: ModelSlot[]): LibraryModelPreview[] {
     const file = RAW_TEXTURE_PACKS.has(slot.packId)
       ? model.file
       : optimized?.file ?? model.file;
-    const placement = slot.floats
-      ? layoutFloatingSlot(floatingIndex++, slot.yLift ?? 2.4)
-      : layoutGroundedSlot(groundedIndex++);
+    return [{ slot, pack, model, file }];
+  });
+
+  const total = resolved.length;
+  return resolved.map(({ slot, pack, model, file }, index) => {
+    const maxDim = Math.max(model.size[0], model.size[1], model.size[2]) || 1;
+    const scale = (GRID_TARGET_SIZE / maxDim) * (slot.scaleBoost ?? 1);
+    const [gx, gy, gz] = layoutGridCell(index, total);
+    // Vertically center the model's bbox on its grid row. Source models ground
+    // at wildly different minY (a fish bbox sits below its pivot), so center by
+    // the box midpoint rather than the pivot.
+    const centerY = model.minY + model.size[1] / 2;
     const spinSpeed =
-      (0.045 + ((slotIndex * 31) % 11) / 110) * (slotIndex % 2 === 0 ? 1 : -1);
-    const spinPhase = ((slotIndex * 97) % 360) * (Math.PI / 180);
+      (0.22 + ((index * 37) % 13) / 80) * (index % 2 === 0 ? 1 : -1);
+    const spinPhase = ((index * 137) % 360) * (Math.PI / 180);
     return {
       label: model.title,
       file,
       source: pack.source,
       minY: model.minY,
-      position: placement.position,
-      rotation: placement.rotation,
-      scale: slot.scale,
+      position: [gx, gy - centerY * scale, gz] as [number, number, number],
+      rotation: [0, 0, 0] as [number, number, number],
+      scale,
       spinSpeed,
       spinPhase,
     };

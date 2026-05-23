@@ -24,14 +24,12 @@ type LandingModelBackdropProps = {
   models: LandingModelPreviewItem[];
   cameraPosition?: [number, number, number];
   fov?: number;
-  contactShadowScale?: number;
 };
 
 export function LandingModelBackdrop({
   models,
   cameraPosition,
   fov,
-  contactShadowScale,
 }: LandingModelBackdropProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [mounted, setMounted] = useState(false);
@@ -73,7 +71,6 @@ export function LandingModelBackdrop({
           models={models}
           cameraPosition={cameraPosition}
           fov={fov}
-          contactShadowScale={contactShadowScale}
         />
       ) : null}
     </div>
