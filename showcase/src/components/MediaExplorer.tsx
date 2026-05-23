@@ -1318,7 +1318,28 @@ function SequencePreviewCanvas({
     const previewCanvas = canvas;
     const previewContext = context;
     const previewImage = image;
-    const drawFrames = spriteDrawFrames(frames, frameBoxes);
+    // Trim frames to content for a tight stage so the sprite fills this small
+    // preview instead of floating inside a padded grid cell. Falls back to the
+    // raw frame boxes if pixels can't be read (CORS-tainted image).
+    let stageFrames = frames;
+    let stageBoxes = frameBoxes;
+    try {
+      const scratch = document.createElement("canvas");
+      scratch.width = image.naturalWidth || image.width;
+      scratch.height = image.naturalHeight || image.height;
+      const scratchContext = scratch.getContext("2d", { willReadFrequently: true });
+      if (scratchContext) {
+        scratchContext.drawImage(image, 0, 0);
+        const imageData = scratchContext.getImageData(0, 0, scratch.width, scratch.height);
+        const bg = sampleImageBackground(imageData);
+        stageFrames = frames.map((rect) => computeTrimRect(imageData, rect, bg, 2));
+        stageBoxes = undefined;
+      }
+    } catch {
+      stageFrames = frames;
+      stageBoxes = frameBoxes;
+    }
+    const drawFrames = spriteDrawFrames(stageFrames, stageBoxes);
     const stageWidth = Math.max(1, ...drawFrames.map((frame) => frame.box.w));
     const stageHeight = Math.max(1, ...drawFrames.map((frame) => frame.box.h));
 
@@ -1463,6 +1484,54 @@ function SquareArtPreview({ sample, label }: { sample: ArtSample; label: string 
       raf = requestAnimationFrame(tick);
     };
 
+    const readImageData = (image: HTMLImageElement, width: number, height: number) => {
+      try {
+        const scratch = document.createElement("canvas");
+        scratch.width = width;
+        scratch.height = height;
+        const scratchContext = scratch.getContext("2d", { willReadFrequently: true });
+        if (!scratchContext) return null;
+        scratchContext.drawImage(image, 0, 0);
+        const imageData = scratchContext.getImageData(0, 0, width, height);
+        return { imageData, bg: sampleImageBackground(imageData) };
+      } catch {
+        return null;
+      }
+    };
+
+    // Trim each frame to its content and lay them out on one shared stage so the
+    // animation fills the canvas instead of leaving the sprite small inside a
+    // padded grid cell. A shared stage (max trimmed extent) keeps the scale
+    // constant across frames — no per-frame size jumps — and never crops, since
+    // the stage contains every frame's content.
+    const startStageAnimation = (
+      image: HTMLImageElement,
+      frames: SpriteRect[],
+      size: number,
+      imageData: ImageData,
+      bg: ReturnType<typeof sampleImageBackground>,
+    ) => {
+      const drawFrames = spriteDrawFrames(frames.map((rect) => computeTrimRect(imageData, rect, bg, 2)));
+      const stageWidth = Math.max(1, ...drawFrames.map((item) => item.box.w));
+      const stageHeight = Math.max(1, ...drawFrames.map((item) => item.box.h));
+      const renderFrame = (index: number) => {
+        context.clearRect(0, 0, size, size);
+        drawSpriteFrameInStage(context, image, drawFrames[index], stageWidth, stageHeight, size, size);
+      };
+      renderFrame(0);
+      if (drawFrames.length < 2) return;
+      const tick = (time: number) => {
+        if (cancelled) return;
+        if (time - lastFrameTime >= 120) {
+          frameIndex = (frameIndex + 1) % drawFrames.length;
+          renderFrame(frameIndex);
+          lastFrameTime = time;
+        }
+        raf = requestAnimationFrame(tick);
+      };
+      raf = requestAnimationFrame(tick);
+    };
+
     const loadImage = (useCors: boolean) => {
       const image = new Image();
       if (useCors) image.crossOrigin = "anonymous";
@@ -1484,7 +1553,9 @@ function SquareArtPreview({ sample, label }: { sample: ArtSample; label: string 
           const frames = Array.from({ length: total }, (_, index) =>
             spriteGridCellRect(naturalWidth, naturalHeight, stripGrid.cols, stripGrid.rows, index),
           );
-          startAnimation(image, frames, size);
+          const decoded = readImageData(image, naturalWidth, naturalHeight);
+          if (decoded) startStageAnimation(image, frames, size, decoded.imageData, decoded.bg);
+          else startAnimation(image, frames, size);
           return;
         }
 
@@ -1509,7 +1580,7 @@ function SquareArtPreview({ sample, label }: { sample: ArtSample; label: string 
           const animationFrames = usableFrames.length >= 2 ? usableFrames : allFrames;
 
           if (sample.animated && animationFrames.length >= 2) {
-            startAnimation(image, animationFrames, size);
+            startStageAnimation(image, animationFrames, size, imageData, bg);
             return;
           }
           if (
@@ -1584,19 +1655,6 @@ function MultiFileSequencePreview({
     let frameIndex = 0;
     let lastFrameTime = 0;
 
-    const drawFrame = (image: HTMLImageElement, source: SpriteRect) => {
-      const stageW = canvas.width;
-      const stageH = canvas.height;
-      context.clearRect(0, 0, stageW, stageH);
-      context.imageSmoothingEnabled = false;
-      const scale = Math.min(stageW / source.w, stageH / source.h);
-      const w = source.w * scale;
-      const h = source.h * scale;
-      const x = (stageW - w) / 2;
-      const y = (stageH - h) / 2;
-      context.drawImage(image, source.x, source.y, source.w, source.h, x, y, w, h);
-    };
-
     const loadFrame = (src: string): Promise<{ image: HTMLImageElement; source: SpriteRect } | null> =>
       new Promise((resolve) => {
         const load = (useCors: boolean) => {
@@ -1634,14 +1692,25 @@ function MultiFileSequencePreview({
       if (cancelled) return;
       const frames = results.filter((item): item is { image: HTMLImageElement; source: SpriteRect } => Boolean(item));
       if (frames.length === 0) return;
-      drawFrame(frames[0].image, frames[0].source);
+      const drawW = canvas.width;
+      const drawH = canvas.height;
+      // Lay every (already content-trimmed) frame on one shared stage so the
+      // whole sequence fills the card at a constant scale — no per-frame size
+      // jumps from scaling each frame to fit independently.
+      const drawFrames = spriteDrawFrames(frames.map((item) => item.source));
+      const stageWidth = Math.max(1, ...drawFrames.map((item) => item.box.w));
+      const stageHeight = Math.max(1, ...drawFrames.map((item) => item.box.h));
+      const renderFrame = (index: number) => {
+        context.clearRect(0, 0, drawW, drawH);
+        drawSpriteFrameInStage(context, frames[index].image, drawFrames[index], stageWidth, stageHeight, drawW, drawH);
+      };
+      renderFrame(0);
       if (frames.length < 2) return;
       const tick = (time: number) => {
         if (cancelled) return;
         if (time - lastFrameTime >= 120) {
           frameIndex = (frameIndex + 1) % frames.length;
-          const frame = frames[frameIndex];
-          drawFrame(frame.image, frame.source);
+          renderFrame(frameIndex);
           lastFrameTime = time;
         }
         raf = requestAnimationFrame(tick);
