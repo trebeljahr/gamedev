@@ -166,10 +166,6 @@ function humanizePathSegment(value: string): string {
     .replace(/\b\w/g, (char) => char.toUpperCase());
 }
 
-function sampleFileName(path: string): string {
-  return path.split("/").pop() ?? path;
-}
-
 function sortSamplesByFrame(a: ArtSample, b: ArtSample): number {
   const parent = samplePathParent(a.path).localeCompare(samplePathParent(b.path));
   if (parent !== 0) return parent;
@@ -1563,7 +1559,17 @@ function SquareArtPreview({ sample, label }: { sample: ArtSample; label: string 
   );
 }
 
-function MultiFileSequencePreview({ srcs, label }: { srcs: readonly string[]; label: string }) {
+function MultiFileSequencePreview({
+  srcs,
+  label,
+  width = 128,
+  height = 128,
+}: {
+  srcs: readonly string[];
+  label: string;
+  width?: number;
+  height?: number;
+}) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   useEffect(() => {
@@ -1577,14 +1583,16 @@ function MultiFileSequencePreview({ srcs, label }: { srcs: readonly string[]; la
     let frameIndex = 0;
     let lastFrameTime = 0;
 
-    const drawFrame = (image: HTMLImageElement, source: SpriteRect, size: number) => {
-      context.clearRect(0, 0, size, size);
+    const drawFrame = (image: HTMLImageElement, source: SpriteRect) => {
+      const stageW = canvas.width;
+      const stageH = canvas.height;
+      context.clearRect(0, 0, stageW, stageH);
       context.imageSmoothingEnabled = false;
-      const scale = Math.min(size / source.w, size / source.h);
+      const scale = Math.min(stageW / source.w, stageH / source.h);
       const w = source.w * scale;
       const h = source.h * scale;
-      const x = (size - w) / 2;
-      const y = (size - h) / 2;
+      const x = (stageW - w) / 2;
+      const y = (stageH - h) / 2;
       context.drawImage(image, source.x, source.y, source.w, source.h, x, y, w, h);
     };
 
@@ -1594,21 +1602,21 @@ function MultiFileSequencePreview({ srcs, label }: { srcs: readonly string[]; la
           const image = new Image();
           if (useCors) image.crossOrigin = "anonymous";
           image.onload = () => {
-            const width = image.naturalWidth || image.width;
-            const height = image.naturalHeight || image.height;
-            let source: SpriteRect = { x: 0, y: 0, w: width, h: height };
+            const imgW = image.naturalWidth || image.width;
+            const imgH = image.naturalHeight || image.height;
+            let source: SpriteRect = { x: 0, y: 0, w: imgW, h: imgH };
             try {
               const scratch = document.createElement("canvas");
-              scratch.width = width;
-              scratch.height = height;
+              scratch.width = imgW;
+              scratch.height = imgH;
               const scratchCtx = scratch.getContext("2d", { willReadFrequently: true });
               if (scratchCtx) {
                 scratchCtx.drawImage(image, 0, 0);
-                const imageData = scratchCtx.getImageData(0, 0, width, height);
+                const imageData = scratchCtx.getImageData(0, 0, imgW, imgH);
                 source = computeTrimRect(imageData, source, sampleImageBackground(imageData), 2);
               }
             } catch {
-              source = { x: 0, y: 0, w: width, h: height };
+              source = { x: 0, y: 0, w: imgW, h: imgH };
             }
             resolve({ image, source });
           };
@@ -1625,15 +1633,14 @@ function MultiFileSequencePreview({ srcs, label }: { srcs: readonly string[]; la
       if (cancelled) return;
       const frames = results.filter((item): item is { image: HTMLImageElement; source: SpriteRect } => Boolean(item));
       if (frames.length === 0) return;
-      const size = canvas.width;
-      drawFrame(frames[0].image, frames[0].source, size);
+      drawFrame(frames[0].image, frames[0].source);
       if (frames.length < 2) return;
       const tick = (time: number) => {
         if (cancelled) return;
         if (time - lastFrameTime >= 120) {
           frameIndex = (frameIndex + 1) % frames.length;
           const frame = frames[frameIndex];
-          drawFrame(frame.image, frame.source, size);
+          drawFrame(frame.image, frame.source);
           lastFrameTime = time;
         }
         raf = requestAnimationFrame(tick);
@@ -1647,7 +1654,7 @@ function MultiFileSequencePreview({ srcs, label }: { srcs: readonly string[]; la
     };
   }, [srcs]);
 
-  return <canvas ref={canvasRef} width={128} height={128} role="img" aria-label={label} />;
+  return <canvas ref={canvasRef} width={width} height={height} role="img" aria-label={label} />;
 }
 
 function ArtSamplePreview({ sample, sequenceSrcs }: { sample: ArtSample; sequenceSrcs?: readonly string[] }) {
@@ -2150,9 +2157,10 @@ function loadSequenceFrame(sample: ArtSample): Promise<LoadedSequenceFrame | nul
   });
 }
 
-function FrameSequenceRunner({ pack, group }: { pack: ArtPack; group: ArtSampleGroup }) {
+function FrameSequenceRunner({ pack, groups }: { pack: ArtPack; groups: ArtSampleGroup[] }) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const frameRef = useRef(0);
+  const [activeIndex, setActiveIndex] = useState(0);
   const [loadedFrames, setLoadedFrames] = useState<LoadedSequenceFrame[]>([]);
   const [frame, setFrame] = useState(0);
   const [playing, setPlaying] = useState(true);
@@ -2161,17 +2169,42 @@ function FrameSequenceRunner({ pack, group }: { pack: ArtPack; group: ArtSampleG
   const [loadFailed, setLoadFailed] = useState(false);
   const background = "#15171c";
 
+  const groupsKey = groups.map((item) => item.id).join("|");
+  const safeIndex = Math.min(activeIndex, Math.max(0, groups.length - 1));
+  const activeGroup = groups[safeIndex];
+  const activeSamples = activeGroup?.samples ?? [];
+
+  // One animated thumbnail descriptor per animation, kept stable across the
+  // per-frame re-renders so the picker previews don't reload their images.
+  const animationThumbs = useMemo(
+    () =>
+      groups.map((item) => ({
+        id: item.id,
+        label: item.label,
+        frames: item.samples.length,
+        srcs: item.samples.map((sample) => sample.src),
+      })),
+    // groupsKey captures identity of the animation set; samples derive from it.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [groupsKey],
+  );
+
+  useEffect(() => {
+    setActiveIndex(0);
+  }, [groupsKey]);
+
   useEffect(() => {
     frameRef.current = 0;
     setFrame(0);
     setPlaying(true);
     setLoadedFrames([]);
     setLoadFailed(false);
-  }, [group.id]);
+  }, [activeGroup?.id]);
 
   useEffect(() => {
+    if (!activeGroup) return;
     let cancelled = false;
-    Promise.all(group.samples.map(loadSequenceFrame)).then((frames) => {
+    Promise.all(activeGroup.samples.map(loadSequenceFrame)).then((frames) => {
       if (cancelled) return;
       const loaded = frames.filter((item): item is LoadedSequenceFrame => Boolean(item));
       setLoadedFrames(loaded);
@@ -2180,7 +2213,8 @@ function FrameSequenceRunner({ pack, group }: { pack: ArtPack; group: ArtSampleG
     return () => {
       cancelled = true;
     };
-  }, [group.samples]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeGroup?.id]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -2257,43 +2291,52 @@ function FrameSequenceRunner({ pack, group }: { pack: ArtPack; group: ArtSampleG
       drawingContext.fillStyle = "rgba(255,255,255,0.62)";
       drawingContext.font = "12px system-ui";
       drawingContext.textAlign = "left";
-      drawingContext.fillText(`${group.label} · frame ${currentFrame + 1}/${totalFrames}`, 16, drawingCanvas.height - 18);
+      drawingContext.fillText(`${activeGroup?.label ?? ""} · frame ${currentFrame + 1}/${totalFrames}`, 16, drawingCanvas.height - 18);
       raf = requestAnimationFrame(tick);
     }
 
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [flip, group.label, loadFailed, loadedFrames, pack.title, playing, speed]);
+  }, [activeGroup?.label, flip, loadFailed, loadedFrames, pack.title, playing, speed]);
 
-  const frameCount = Math.max(1, loadedFrames.length || group.samples.length);
+  const frameCount = Math.max(1, loadedFrames.length || activeSamples.length);
+
+  function selectAnimation(index: number) {
+    setActiveIndex(index);
+  }
 
   return (
     <div className="art-runner">
-      <div className="art-runner-stage sequence-stage">
+      <div className="art-runner-stage">
         <canvas ref={canvasRef} width={960} height={540} />
-        <aside className="animation-overview" aria-label="Frame sequence files">
-          <div className="animation-overview-head">
-            <span>{group.samples.length} files</span>
-            <strong>{group.label}</strong>
-          </div>
-          <div className="sequence-file-list">
-            {group.samples.map((sample, index) => (
-              <button
-                key={sample.path}
-                type="button"
-                className={index === Math.min(frame, group.samples.length - 1) ? "active" : ""}
-                onClick={() => {
-                  frameRef.current = index;
-                  setFrame(index);
-                  setPlaying(false);
-                }}
-              >
-                <span>{index + 1}</span>
-                <strong>{sampleFileName(sample.path)}</strong>
-              </button>
-            ))}
-          </div>
-        </aside>
+        {animationThumbs.length > 1 && (
+          <aside className="animation-overview" aria-label="Detected animations">
+            <div className="animation-overview-head">
+              <span>{animationThumbs.length} animations</span>
+              <strong>{activeGroup?.label ?? "Animations"}</strong>
+            </div>
+            <div className="animation-list">
+              {animationThumbs.map((thumb, index) => {
+                const active = index === safeIndex;
+                return (
+                  <button
+                    key={thumb.id}
+                    type="button"
+                    className={active ? "active" : ""}
+                    aria-pressed={active}
+                    onClick={() => selectAnimation(index)}
+                  >
+                    <MultiFileSequencePreview srcs={thumb.srcs} label={thumb.label} width={92} height={58} />
+                    <span>
+                      <strong>{thumb.label}</strong>
+                      <small>{thumb.frames} frames</small>
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          </aside>
+        )}
       </div>
       <div className="runner-controls">
         <button type="button" onClick={() => setPlaying((value) => !value)} disabled={frameCount <= 1}>
@@ -2458,6 +2501,8 @@ function PackSubjectTabs({
   );
 }
 
+const SEQUENCES_GROUP_ID = "__sequences__";
+
 function ArtWorkbench({ summary }: { summary: ArtPackSummary }) {
   const { pack, loading, error } = useArtPack(summary.folder);
   const materialSamples = useMemo(() => (pack ? materialSamplesFor(pack) : []), [pack]);
@@ -2467,8 +2512,23 @@ function ArtWorkbench({ summary }: { summary: ArtPackSummary }) {
     subjects.find((subject) => subject.subject === activeSubject) ?? subjects[0];
   const subjectSamples = resolvedSubject?.samples ?? materialSamples;
   const groups = useMemo(() => (pack ? artSampleGroups(subjectSamples) : []), [pack, subjectSamples]);
+  const sequenceGroups = useMemo(() => groups.filter((group) => group.sequence), [groups]);
+  const browserGroups = useMemo(() => {
+    const singles = groups.filter((group) => !group.sequence);
+    if (sequenceGroups.length === 0) return singles;
+    const lead = sequenceGroups[0];
+    const gateway: ArtSampleGroup = {
+      id: SEQUENCES_GROUP_ID,
+      label: "Animations",
+      layout: `${sequenceGroups.length} animation${sequenceGroups.length === 1 ? "" : "s"}`,
+      primary: lead.primary,
+      samples: lead.samples,
+      sequence: true,
+    };
+    return [gateway, ...singles];
+  }, [groups, sequenceGroups]);
   const [selectedGroupId, setSelectedGroupId] = useState("");
-  const selectedGroup = groups.find((group) => group.id === selectedGroupId) ?? groups[0];
+  const selectedGroup = browserGroups.find((group) => group.id === selectedGroupId) ?? browserGroups[0];
   const selectedSample = selectedGroup?.primary;
   const materialCount = pack ? materialSamples.length : summary.materialSampleCount;
   const reportUrl = brokenAssetIssueUrl({
@@ -2487,10 +2547,10 @@ function ArtWorkbench({ summary }: { summary: ArtPackSummary }) {
   }, [activeSubject, subjects]);
 
   useEffect(() => {
-    if (!groups.some((group) => group.id === selectedGroupId)) {
-      setSelectedGroupId(groups[0]?.id ?? "");
+    if (!browserGroups.some((group) => group.id === selectedGroupId)) {
+      setSelectedGroupId(browserGroups[0]?.id ?? "");
     }
-  }, [groups, selectedGroupId]);
+  }, [browserGroups, selectedGroupId]);
 
   return (
     <section className="art-workbench">
@@ -2543,9 +2603,9 @@ function ArtWorkbench({ summary }: { summary: ArtPackSummary }) {
               activeSubject={resolvedSubject?.subject ?? ""}
               onSelect={setActiveSubject}
             />
-            <ArtSampleBrowser groups={groups} activeId={selectedGroup?.id ?? ""} onSelect={setSelectedGroupId} />
-            {selectedGroup?.sequence ? (
-              <FrameSequenceRunner pack={pack} group={selectedGroup} />
+            <ArtSampleBrowser groups={browserGroups} activeId={selectedGroup?.id ?? ""} onSelect={setSelectedGroupId} />
+            {selectedGroup?.id === SEQUENCES_GROUP_ID ? (
+              <FrameSequenceRunner pack={pack} groups={sequenceGroups} />
             ) : selectedSample && isGifSample(selectedSample) ? (
               <GifInspector sample={selectedSample} />
             ) : (
