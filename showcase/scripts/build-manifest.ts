@@ -72,13 +72,6 @@ const NON_COMMERCIAL_MODEL_PATTERNS: RegExp[] = [
 // Vendors where we should prefer source files over the optimized GLBs.
 const PREFER_SOURCE = new Set(["kaykit"]);
 
-// getBounds returns the bind-pose (static) bbox. For rigged/skinned meshes
-// the bind pose puts arms out (T-pose) and sometimes up, so a 2m human
-// comes back with a 5×4.8m bbox. The runtime idle pose is much narrower.
-// When a Skin is present we clamp horizontal extents to RIGGED_HORIZ_RATIO ×
-// the height — a typical person at idle is ~0.4 wide for a 2m height.
-const RIGGED_HORIZ_RATIO = 0.5;
-
 // Per-model size we serialize: [width X, height Y, depth Z] + min Y so we
 // can ground the model on a base.
 type Size = [number, number, number];
@@ -399,7 +392,13 @@ function matchKey(file: string): string {
 // v4: register Draco decoder so `-transformed.glb` files (Draco-compressed,
 // most Quaternius packs) compute real bboxes instead of falling back to
 // [1,1,1] — was making pedestals undersized and models overlap.
-const CACHE_VERSION = 4;
+// v5: drop the rigged horizontal clamp. Nothing animates until a model is
+// selected, so every model renders at its bind pose and `size` must equal
+// the real bind-pose bbox. The old y*0.5 clamp squashed the long axis of
+// non-humanoid rigs — Quaternius tanks/dinosaurs got a tiny square footprint
+// under a multi-metre model (overlap on /all, wrong maxDim on the landing
+// grid). getBounds already returns exactly what three.js draws at bind pose.
+const CACHE_VERSION = 5;
 
 type CacheEntry = {
   v: number;
@@ -422,12 +421,6 @@ async function saveCache(c: Cache): Promise<void> {
   await writeFile(BBOX_CACHE, JSON.stringify(c));
 }
 
-function clampRiggedHoriz(size: Size): Size {
-  const [x, y, z] = size;
-  const maxHoriz = y * RIGGED_HORIZ_RATIO;
-  return [Math.min(x, maxHoriz), y, Math.min(z, maxHoriz)];
-}
-
 // Models flatter than this in any axis get bumped up so they still get a
 // visible base plate (some kenney pieces have one axis effectively zero).
 const MIN_DIM = 0.3;
@@ -445,8 +438,7 @@ async function computeBbox(
   for (let i = 0; i < 3; i++) {
     if (!Number.isFinite(size[i]) || size[i] < MIN_DIM) size[i] = MIN_DIM;
   }
-  const rigged = root.listSkins().length > 0;
-  return { size: rigged ? clampRiggedHoriz(size) : size, minY: b.min[1] };
+  return { size, minY: b.min[1] };
 }
 
 /* -------- model discovery ------------------------------------------------ */
