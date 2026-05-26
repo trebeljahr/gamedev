@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { type CSSProperties, type PointerEvent as ReactPointerEvent, type ReactNode, useEffect, useId, useMemo, useRef, useState } from "react";
 import { LicenseLink } from "@/components/LicenseLink";
+import { licenseBucket } from "@/lib/license";
 import { NavDrawer, SelectDropdown } from "@/components/NavDrawer";
 import { InfiniteListSentinel, useInfiniteList } from "@/components/useInfiniteList";
 import type {
@@ -131,16 +132,6 @@ function formatTime(value: number): string {
 
 function clamp(value: number, min: number, max: number): number {
   return Math.min(max, Math.max(min, value));
-}
-
-function licenseBucket(license: string): string {
-  const lower = license.toLowerCase();
-  if (lower.includes("cc0") || lower.includes("creative commons zero")) return "CC0";
-  if (lower.includes("non-commercial")) return "Non-commercial";
-  if (lower.includes("pixabay")) return "Pixabay";
-  if (lower.includes("cc-by")) return "CC-BY";
-  if (lower.includes("custom") || lower.includes("redistribution")) return "Custom";
-  return "Varies";
 }
 
 function initials(value: string): string {

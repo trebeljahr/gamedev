@@ -92,6 +92,16 @@ export function exactLicenseUrlFor(license: string | undefined, options: License
   return fallbackUrl;
 }
 
+export function licenseBucket(license: string): string {
+  const lower = license.toLowerCase();
+  if (lower.includes("cc0") || lower.includes("creative commons zero")) return "CC0 (1.0)";
+  if (lower.includes("non-commercial")) return "Non-commercial";
+  if (lower.includes("pixabay")) return "Pixabay";
+  if (lower.includes("cc-by")) return "CC-BY";
+  if (lower.includes("custom") || lower.includes("redistribution")) return "Custom";
+  return "Varies";
+}
+
 export function licenseForVendor(vendor: string): VendorLicense {
   return (
     VENDORS[vendor] ?? {

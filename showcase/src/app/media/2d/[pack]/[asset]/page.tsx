@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { ArtItemThumb, ArtItemViewer } from "@/components/ArtItemMedia";
 import { LicenseLink } from "@/components/LicenseLink";
+import { licenseBucket } from "@/lib/license";
 import { SiteHeader } from "@/components/SiteHeader";
 import { artItemHref, artPackHref, folderFromArtPackSlug } from "@/lib/art-routing";
 import { packArtItems, type ArtItem } from "@/lib/art-items";
@@ -110,7 +111,12 @@ export default async function Art2DAssetPage({ params }: Art2DAssetPageProps) {
             </div>
             <div>
               <span>License</span>
-              <LicenseLink license={summary.license_class} fallbackUrl={summary.url} title={summary.license_class} />
+              <LicenseLink
+                license={summary.license_class}
+                fallbackUrl={summary.url}
+                label={licenseBucket(summary.license_class)}
+                title={summary.license_class}
+              />
             </div>
             <div>
               <span>Type</span>

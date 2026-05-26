@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { ArtWorkbench } from "@/components/MediaExplorer";
 import { LicenseLink } from "@/components/LicenseLink";
+import { licenseBucket } from "@/lib/license";
 import { SiteHeader } from "@/components/SiteHeader";
 import { artPackHref, folderFromArtPackSlug } from "@/lib/art-routing";
 import { artPackSummaries } from "@/lib/media";
@@ -101,6 +102,7 @@ export default async function Art2DPackPage({ params }: Art2DPackPageProps) {
                       <LicenseLink
                         license={pack.license_class}
                         fallbackUrl={pack.url}
+                        label={licenseBucket(pack.license_class)}
                         title={pack.license_class}
                       />
                     </div>
