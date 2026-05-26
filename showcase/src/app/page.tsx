@@ -128,12 +128,13 @@ type ModelSlot = {
   scaleBoost?: number;
 };
 
-// A deliberately diverse cross-section of the catalog — buildings, fantasy
+// A deliberately diverse cross-section of the catalog — a windmill, fantasy
 // heroes, undead, a monster, a dinosaur, two animals, a car, a spaceship, a
 // robot, a mech, a tree, an astronaut, a fish — so the hero grid showcases the
-// breadth of the library rather than a single genre.
+// breadth of the library rather than a single genre. Picked the windmill over
+// the castle because rotating blocky buildings read as featureless cubes.
 const HERO_MODEL_SLOTS: ModelSlot[] = [
-  { packId: "kaykit/medieval-builder-pack", name: "castle" },
+  { packId: "kaykit/medieval-builder-pack", name: "mill" },
   { packId: "kaykit/adventurers", name: "knight" },
   { packId: "kaykit/adventurers", name: "mage" },
   { packId: "kaykit/skeletons", name: "skeleton-warrior" },
@@ -183,7 +184,7 @@ const FEATURED_SOUND_PICKS: FeaturedSoundPick[] = [
 // A second, distinct slice for the "what's inside" 3D track visual — different
 // picks from the hero so the two grids don't read as duplicates.
 const TRACK_MODEL_SLOTS: ModelSlot[] = [
-  { packId: "kaykit/medieval-builder-pack", name: "barracks" },
+  { packId: "kaykit/medieval-builder-pack", name: "house" },
   { packId: "kaykit/adventurers", name: "knight" },
   { packId: "kaykit/skeletons", name: "skeleton-blade" },
   { packId: "kenney/cube-pets", name: "animal-elephant" },
@@ -195,7 +196,7 @@ const TRACK_MODEL_SLOTS: ModelSlot[] = [
   { packId: "quaternius/cube-world-aug-2023", name: "cat" },
   { packId: "quaternius/ultimate-space-kit-march-2023", name: "astronaut-fernandotheflamingo" },
   { packId: "quaternius/spaceships-by-quaternius", name: "spaceship2" },
-  { packId: "quaternius/ultimate-fantasy-rts-aug-2022", name: "archery-firstage-level1" },
+  { packId: "kaykit/medieval-builder-pack", name: "watermill" },
 ];
 
 const TRACK_MUSIC_PICKS: FeaturedSoundPick[] = [
