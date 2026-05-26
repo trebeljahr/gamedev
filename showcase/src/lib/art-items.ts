@@ -197,7 +197,7 @@ export function packArtItems(pack: ArtPack): ArtItem[] {
  * an order of magnitude smaller. Reconstruct with `expandArtItemIndex`.
  */
 export type ArtItemIndexPack = {
-  f: string; // folder
+  f: string; // folder (routing slug source)
   s: string; // slug
   t: string; // title
   a: string; // author
@@ -205,6 +205,12 @@ export type ArtItemIndexPack = {
   h: string; // theme
   l: string; // license_class
   q: string; // pack search tokens
+  // On-disk path prefix shared by every sample. For kenney packs it equals
+  // `f` (folder lives at the disk root); for itch packs `f` is just the
+  // vendor slug while files live under `2D/<slug>/...`, so the two diverge.
+  // Stored explicitly so `expandArtItemIndex` can reconstruct correct URLs
+  // without re-discovering the prefix.
+  pp: string;
 };
 
 export type ArtItemIndexEntry = {
@@ -254,9 +260,25 @@ const SUBJECT_BY_CODE: Record<string, ArtSubject> = {
   o: "other",
 };
 
-function relativeSrc(folder: string, src: string): string {
-  const prefix = `/${folder}/`;
+function relativeSrc(pathPrefix: string, src: string): string {
+  const prefix = `/${pathPrefix}/`;
   return src.startsWith(prefix) ? src.slice(prefix.length) : src.replace(/^\//, "");
+}
+
+/**
+ * On-disk prefix shared by every sample in the pack. For kenney packs the
+ * folder is already the prefix (`2D/kenney/foo`). For itch packs the folder
+ * is just the slug (`ivelsoul-pf-freeicons`) but files live one level
+ * deeper (`2D/ivelsoul-pf-freeicons/...`), so we derive the prefix from the
+ * first sample's path.
+ */
+function packPathPrefix(pack: ArtPack): string {
+  const first = pack.samples[0]?.path ?? "";
+  if (first.startsWith(`${pack.folder}/`) || first === pack.folder) return pack.folder;
+  const marker = `/${pack.folder}/`;
+  const idx = first.indexOf(marker);
+  if (idx >= 0) return first.slice(0, idx + pack.folder.length + 1).replace(/\/$/, "");
+  return pack.folder;
 }
 
 function searchTokens(values: string[]): string {
@@ -270,6 +292,7 @@ export function buildArtItemIndex(packs: ArtPack[]): ArtItemIndex {
   const indexPacks: ArtItemIndexPack[] = [];
   const items: ArtItemIndexEntry[] = [];
   packs.forEach((pack, packIndex) => {
+    const pp = packPathPrefix(pack);
     indexPacks.push({
       f: pack.folder,
       s: artPackSlug(pack.folder),
@@ -279,9 +302,10 @@ export function buildArtItemIndex(packs: ArtPack[]): ArtItemIndex {
       h: pack.theme,
       l: pack.license_class,
       q: searchTokens([pack.title, pack.author, pack.theme, ...pack.tags, ...pack.themes, ...pack.useCases]),
+      pp,
     });
     for (const item of packArtItems(pack)) {
-      const rel = relativeSrc(pack.folder, item.src);
+      const rel = relativeSrc(pp, item.src);
       items.push({
         i: item.id,
         p: packIndex,
@@ -320,7 +344,7 @@ export function expandArtItemIndex(index: ArtItemIndex): ArtItemSummary[] {
       kind: KIND_BY_CODE[entry.k] ?? "image",
       animated: entry.a === 1,
       label: entry.l,
-      src: `/${pack.f}/${entry.r}`,
+      src: `/${pack.pp}/${entry.r}`,
       searchText: `${entry.l} ${entry.q} ${pack.q}`.toLowerCase(),
     };
   });
