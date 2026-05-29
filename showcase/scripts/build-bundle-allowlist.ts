@@ -87,7 +87,7 @@ type SourceInfo = {
 
 type CandidateType = "modelPack" | "artPack" | "soundCollection" | "musicTrack" | "sourceMapping";
 type AllowlistCategory = "models" | "sprites" | "sounds" | "music" | "textures";
-type LicenseKind = "cc0" | "cc-by" | "pixabay";
+type LicenseKind = "cc0" | "cc-by";
 type Decision = "include" | "exclude";
 
 type Candidate = {
@@ -178,13 +178,13 @@ const POLICY = {
   include: [
     "CC0 / Creative Commons Zero",
     "CC-BY only when attribution metadata is recorded",
-    "Pixabay License",
   ],
   exclude: [
     "CC-BY-NC and other non-commercial licenses",
     "CC-BY-SA and other share-alike licenses",
     "Mixamo / Adobe raw asset redistribution terms",
     "Adobe Fuse raw asset redistribution terms",
+    "Pixabay standalone content redistribution terms",
     "Sketchfab personal-use-only or non-commercial assets",
     "Missing, unknown, varied, custom, or otherwise non-permissive license fields",
   ],
@@ -237,7 +237,6 @@ function ccByLicenseUrl(license: string): string | undefined {
 function defaultLicenseUrl(kind: LicenseKind, license: string): string | undefined {
   if (kind === "cc0") return "https://creativecommons.org/publicdomain/zero/1.0/";
   if (kind === "cc-by") return ccByLicenseUrl(license);
-  if (kind === "pixabay") return "https://pixabay.com/service/terms/#license";
   return undefined;
 }
 
@@ -338,10 +337,8 @@ function licenseVerdict(candidate: Candidate): LicenseVerdict {
   }
   if (cleanLicense.includes("pixabay")) {
     return {
-      include: true,
-      kind: "pixabay",
-      reason: "Included: Pixabay License is commercial-redistribution safe for this bundle.",
-      attributionRequired: false,
+      include: false,
+      reason: "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
     };
   }
   if (/\bcc0\b|creative commons zero/.test(cleanLicense)) {
@@ -377,7 +374,6 @@ function attributionFor(candidate: Candidate, verdict: LicenseVerdict): string |
   if (!verdict.include) return candidate.attribution;
   if (candidate.attribution) return candidate.attribution;
   if (verdict.kind === "cc0") return "Optional";
-  if (verdict.kind === "pixabay") return "Not required";
   return `${candidate.title} by ${candidate.creator} - ${candidate.license}`;
 }
 

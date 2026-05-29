@@ -5,6 +5,8 @@ import type { Pack } from "@/lib/manifest";
 import { downloadPackZip } from "@/lib/download-pack-zip";
 import type { PackZipProgress } from "@/lib/pack-zip";
 import { trackAssetDownload } from "@/lib/analytics";
+import { licenseForVendor } from "@/lib/license";
+import { canRedistributeRawAssets } from "@/lib/license-policy";
 
 type DownloadState =
   | { status: "idle" }
@@ -36,6 +38,7 @@ export function PackDownloadButton({ pack }: { pack: Pack }) {
   const abortRef = useRef<AbortController | null>(null);
   const resetTimerRef = useRef<number | null>(null);
   const busy = state.status === "working";
+  const sourceUrl = licenseForVendor(pack.vendor).vendorUrl;
 
   useEffect(
     () => () => {
@@ -44,6 +47,14 @@ export function PackDownloadButton({ pack }: { pack: Pack }) {
     },
     [],
   );
+
+  if (!canRedistributeRawAssets(pack.license)) {
+    return sourceUrl ? (
+      <a className="pack-download-button" href={sourceUrl} target="_blank" rel="noreferrer">
+        Open source pack
+      </a>
+    ) : null;
+  }
 
   async function onDownload() {
     if (busy) return;

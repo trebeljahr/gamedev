@@ -1,4 +1,5 @@
 import { assetUrl } from "./manifest";
+import { canRedistributeRawAssets, shouldShowRestrictedAssets } from "./license-policy";
 import type { ArtInspection } from "./media-inference";
 import { isLikelyMarketingPreviewPath, isLikelyPromoArt } from "./media-inference";
 
@@ -248,11 +249,69 @@ if (isServer) {
   _catalog = JSON.parse(raw) as SlimMediaCatalog;
 }
 
-export const catalog: SlimMediaCatalog = _catalog;
-
 function normalizeCreator(value: string): string {
   return value.trim().toLowerCase().replace(/[\s_-]+/g, "-");
 }
+
+function normalizeSourceKey(value: string | undefined): string {
+  return (value ?? "").trim().toLowerCase().replace(/[\s_]+/g, "-");
+}
+
+function sourceLicense(source: string | undefined, sources: Record<string, unknown>): string | undefined {
+  const key = normalizeSourceKey(source);
+  const found = Object.entries(sources).find(([sourceKey, info]) => {
+    if (normalizeSourceKey(sourceKey) !== key) return false;
+    return Boolean(info && typeof info === "object" && "license" in info);
+  })?.[1];
+  if (!found || typeof found !== "object" || !("license" in found)) return undefined;
+  const license = found.license;
+  return typeof license === "string" ? license : undefined;
+}
+
+function sourceMappingLicense(mapping: SourceMapping, sources: Record<string, unknown>): string | undefined {
+  return mapping.license ?? sourceLicense(mapping.source, sources);
+}
+
+function visibleStats(catalog: SlimMediaCatalog): SlimMediaCatalog["stats"] {
+  const artLicenseSplit = catalog.artPacks.reduce<Record<string, number>>((acc, pack) => {
+    const key = canRedistributeRawAssets(pack.license_class) ? "redistributable" : "restricted";
+    acc[key] = (acc[key] ?? 0) + 1;
+    return acc;
+  }, {});
+  const soundSampleCount = catalog.soundCollections.reduce((sum, collection) => sum + collection.samples.length, 0);
+  const audioAnalysisCount =
+    catalog.soundCollections.reduce(
+      (sum, collection) => sum + collection.samples.filter((sample) => Boolean(sample.audio)).length,
+      0,
+    ) + catalog.musicTracks.filter((track) => Boolean(track.audio)).length;
+
+  return {
+    artPackCount: catalog.artPacks.length,
+    artSampleCount: catalog.artPacks.reduce((sum, pack) => sum + pack.sampleCount, 0),
+    soundCollectionCount: catalog.soundCollections.length,
+    soundSampleCount,
+    musicTrackCount: catalog.musicTracks.length,
+    audioAnalysisCount,
+    sourceMappingCount: catalog.sourceMappings.length,
+    artLicenseSplit,
+  };
+}
+
+function filterCatalogForRawRedistribution(catalog: SlimMediaCatalog): SlimMediaCatalog {
+  if (shouldShowRestrictedAssets()) return catalog;
+  const filtered: SlimMediaCatalog = {
+    ...catalog,
+    artPacks: catalog.artPacks.filter((pack) => canRedistributeRawAssets(pack.license_class)),
+    soundCollections: catalog.soundCollections.filter((collection) => canRedistributeRawAssets(collection.license)),
+    musicTracks: catalog.musicTracks.filter((track) => canRedistributeRawAssets(track.license)),
+    sourceMappings: catalog.sourceMappings.filter((mapping) =>
+      canRedistributeRawAssets(sourceMappingLicense(mapping, catalog.sources)),
+    ),
+  };
+  return { ...filtered, stats: visibleStats(filtered) };
+}
+
+export const catalog: SlimMediaCatalog = filterCatalogForRawRedistribution(_catalog);
 
 function unique<T>(values: T[]): T[] {
   return Array.from(new Set(values));
@@ -440,6 +499,7 @@ const artPackCache = new Map<string, ArtPack | null>();
  */
 export function findArtPack(folder: string): ArtPack | undefined {
   if (!isServer) return undefined;
+  if (!artPackSummaries.some((summary) => summary.folder === folder)) return undefined;
   if (artPackCache.has(folder)) return artPackCache.get(folder) ?? undefined;
 
   // eslint-disable-next-line @typescript-eslint/no-require-imports
@@ -485,12 +545,16 @@ export const artThemes: ArtTheme[] = [
 ];
 
 export const mediaStats = {
-  artPackCount: catalog.stats.artPackCount,
-  artSampleCount: catalog.stats.artSampleCount,
+  artPackCount: artPackSummaries.length,
+  artSampleCount: artPackSummaries.reduce((sum, pack) => sum + pack.sampleCount, 0),
   artLicenseSplit: catalog.stats.artLicenseSplit,
   soundCollectionCount: soundCollections.length,
-  soundSampleCount: catalog.stats.soundSampleCount,
+  soundSampleCount: soundCollections.reduce((sum, collection) => sum + collection.samples.length, 0),
   musicTrackCount: musicTracks.length,
-  audioAnalysisCount: catalog.stats.audioAnalysisCount ?? 0,
-  sourceMappingCount: catalog.stats.sourceMappingCount,
+  audioAnalysisCount:
+    soundCollections.reduce(
+      (sum, collection) => sum + collection.samples.filter((sample) => Boolean(sample.audio)).length,
+      0,
+    ) + musicTracks.filter((track) => Boolean(track.audio)).length,
+  sourceMappingCount: sourceMappings.length,
 };

@@ -7,21 +7,21 @@
   "policy": {
     "include": [
       "CC0 / Creative Commons Zero",
-      "CC-BY only when attribution metadata is recorded",
-      "Pixabay License"
+      "CC-BY only when attribution metadata is recorded"
     ],
     "exclude": [
       "CC-BY-NC and other non-commercial licenses",
       "CC-BY-SA and other share-alike licenses",
       "Mixamo / Adobe raw asset redistribution terms",
       "Adobe Fuse raw asset redistribution terms",
+      "Pixabay standalone content redistribution terms",
       "Sketchfab personal-use-only or non-commercial assets",
       "Missing, unknown, varied, custom, or otherwise non-permissive license fields"
     ]
   },
   "summary": {
-    "included": 400,
-    "excluded": 914,
+    "included": 336,
+    "excluded": 978,
     "byType": {
       "modelPack": {
         "included": 114,
@@ -36,12 +36,12 @@
         "excluded": 10
       },
       "musicTrack": {
-        "included": 38,
-        "excluded": 355
+        "included": 6,
+        "excluded": 387
       },
       "sourceMapping": {
-        "included": 49,
-        "excluded": 476
+        "included": 17,
+        "excluded": 508
       }
     }
   },
@@ -5755,11 +5755,11 @@
       "sourceUrl": null,
       "creator": "Pixabay",
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/10-ambient-rpg-tracks/extracted/mp3/ambient-1.mp3",
@@ -7420,11 +7420,11 @@
       "sourceUrl": null,
       "creator": "Pixabay",
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/a-space-journey-through-the-solar-system-153272.mp3",
@@ -7435,11 +7435,11 @@
       "sourceUrl": null,
       "creator": "Pixabay",
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/adventures-loop-music-226836.mp3",
@@ -7450,11 +7450,11 @@
       "sourceUrl": null,
       "creator": "Pixabay",
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/afternoon-ambient-piano-solo-24367.mp3",
@@ -7465,11 +7465,11 @@
       "sourceUrl": null,
       "creator": "Pixabay",
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/ambient-background-atmosphere-167994.mp3",
@@ -7480,11 +7480,11 @@
       "sourceUrl": null,
       "creator": "Pixabay",
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/ambient-game-67014.mp3",
@@ -7495,11 +7495,11 @@
       "sourceUrl": null,
       "creator": "Pixabay",
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/ambient-pads-loop-296968.mp3",
@@ -7510,11 +7510,11 @@
       "sourceUrl": null,
       "creator": "Pixabay",
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/ambient-piano-logo-165357.mp3",
@@ -7525,11 +7525,11 @@
       "sourceUrl": null,
       "creator": "Pixabay",
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/ambient-soundscapes-001-space-atmosphere-303246.mp3",
@@ -7540,11 +7540,11 @@
       "sourceUrl": null,
       "creator": "Pixabay",
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/ambient-soundscapes-003-space-atmosphere-303242.mp3",
@@ -7555,11 +7555,11 @@
       "sourceUrl": null,
       "creator": "Pixabay",
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/ambient-soundscapes-004-space-atmosphere-303243.mp3",
@@ -7570,11 +7570,11 @@
       "sourceUrl": null,
       "creator": "Pixabay",
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/ambient-soundscapes-006-space-atmosphere-303245.mp3",
@@ -7585,11 +7585,11 @@
       "sourceUrl": null,
       "creator": "Pixabay",
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/ambient-soundscapes-007-space-atmosphere-304974.mp3",
@@ -7600,11 +7600,11 @@
       "sourceUrl": null,
       "creator": "Pixabay",
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/ancient-winds.mp3",
@@ -7630,11 +7630,11 @@
       "sourceUrl": null,
       "creator": "Pixabay",
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/bittersweet.mp3",
@@ -7720,11 +7720,11 @@
       "sourceUrl": null,
       "creator": "Pixabay",
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/dunes-7115.mp3",
@@ -7735,11 +7735,11 @@
       "sourceUrl": null,
       "creator": "Pixabay",
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/embrace-of-the-mist-192897.mp3",
@@ -7750,11 +7750,11 @@
       "sourceUrl": null,
       "creator": "Pixabay",
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/estampe-galactus-barbare-epaul-giraffe-ennui-215.mp3",
@@ -7780,11 +7780,11 @@
       "sourceUrl": null,
       "creator": "Pixabay",
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/fantasy-rpg-music-pack-vol-3/extracted/loops/mp3/action-1-loop.mp3",
@@ -9295,11 +9295,11 @@
       "sourceUrl": null,
       "creator": "Pixabay",
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/freesound-community-8bit-music-for-game-68698.mp3",
@@ -9310,11 +9310,11 @@
       "sourceUrl": null,
       "creator": "Pixabay",
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/freesound-community-wandering-6394.mp3",
@@ -9325,11 +9325,11 @@
       "sourceUrl": null,
       "creator": "Pixabay",
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/game-piano-music/extracted/mp3/piano-1.mp3",
@@ -9460,11 +9460,11 @@
       "sourceUrl": null,
       "creator": "Pixabay",
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/loops-medieval-vol-2/extracted/mp3/medieval-vol-2-1-loop.mp3",
@@ -9625,11 +9625,11 @@
       "sourceUrl": null,
       "creator": "Pixabay",
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/old-key-249.mp3",
@@ -9655,11 +9655,11 @@
       "sourceUrl": null,
       "creator": "Pixabay",
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/peppers-theme.mp3",
@@ -11020,11 +11020,11 @@
       "sourceUrl": null,
       "creator": "Pixabay",
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/soothing-background-flute-for-documentaries-165918.mp3",
@@ -11035,11 +11035,11 @@
       "sourceUrl": null,
       "creator": "Pixabay",
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/spooky-game-music-pack/extracted/spooky-game-music-pack/mp3/spooky-1.mp3",
@@ -11185,11 +11185,11 @@
       "sourceUrl": null,
       "creator": "Pixabay",
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/suspense-dark-ambient-for-video-games-153278.mp3",
@@ -11200,11 +11200,11 @@
       "sourceUrl": null,
       "creator": "Pixabay",
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/the-open-fields-99449.mp3",
@@ -11215,11 +11215,11 @@
       "sourceUrl": null,
       "creator": "Pixabay",
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/the-secret-of-life-674.mp3",
@@ -11350,11 +11350,11 @@
       "sourceUrl": null,
       "creator": "Pixabay",
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/viking-folk-music-pack/extracted/loops/mp3/1-echoes-of-valhalla.mp3",
@@ -11545,11 +11545,11 @@
       "sourceUrl": null,
       "creator": "Pixabay",
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/ambience/**",
@@ -13945,11 +13945,11 @@
       "sourceUrl": "https://pixabay.com/",
       "creator": null,
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle. Covered by a typed manifest/media catalog entry.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/10-ambient-rpg-tracks/extracted/mp3/ambient-1.mp3",
@@ -15610,11 +15610,11 @@
       "sourceUrl": "https://pixabay.com/",
       "creator": null,
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle. Covered by a typed manifest/media catalog entry.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/a-space-journey-through-the-solar-system-153272.mp3",
@@ -15625,11 +15625,11 @@
       "sourceUrl": "https://pixabay.com/",
       "creator": null,
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle. Covered by a typed manifest/media catalog entry.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/adventures-loop-music-226836.mp3",
@@ -15640,11 +15640,11 @@
       "sourceUrl": "https://pixabay.com/",
       "creator": null,
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle. Covered by a typed manifest/media catalog entry.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/afternoon-ambient-piano-solo-24367.mp3",
@@ -15655,11 +15655,11 @@
       "sourceUrl": "https://pixabay.com/",
       "creator": null,
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle. Covered by a typed manifest/media catalog entry.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/ambient-background-atmosphere-167994.mp3",
@@ -15670,11 +15670,11 @@
       "sourceUrl": "https://pixabay.com/",
       "creator": null,
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle. Covered by a typed manifest/media catalog entry.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/ambient-game-67014.mp3",
@@ -15685,11 +15685,11 @@
       "sourceUrl": "https://pixabay.com/",
       "creator": null,
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle. Covered by a typed manifest/media catalog entry.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/ambient-pads-loop-296968.mp3",
@@ -15700,11 +15700,11 @@
       "sourceUrl": "https://pixabay.com/",
       "creator": null,
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle. Covered by a typed manifest/media catalog entry.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/ambient-piano-logo-165357.mp3",
@@ -15715,11 +15715,11 @@
       "sourceUrl": "https://pixabay.com/",
       "creator": null,
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle. Covered by a typed manifest/media catalog entry.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/ambient-soundscapes-001-space-atmosphere-303246.mp3",
@@ -15730,11 +15730,11 @@
       "sourceUrl": "https://pixabay.com/",
       "creator": null,
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle. Covered by a typed manifest/media catalog entry.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/ambient-soundscapes-003-space-atmosphere-303242.mp3",
@@ -15745,11 +15745,11 @@
       "sourceUrl": "https://pixabay.com/",
       "creator": null,
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle. Covered by a typed manifest/media catalog entry.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/ambient-soundscapes-004-space-atmosphere-303243.mp3",
@@ -15760,11 +15760,11 @@
       "sourceUrl": "https://pixabay.com/",
       "creator": null,
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle. Covered by a typed manifest/media catalog entry.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/ambient-soundscapes-006-space-atmosphere-303245.mp3",
@@ -15775,11 +15775,11 @@
       "sourceUrl": "https://pixabay.com/",
       "creator": null,
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle. Covered by a typed manifest/media catalog entry.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/ambient-soundscapes-007-space-atmosphere-304974.mp3",
@@ -15790,11 +15790,11 @@
       "sourceUrl": "https://pixabay.com/",
       "creator": null,
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle. Covered by a typed manifest/media catalog entry.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/ancient-winds.mp3",
@@ -15820,11 +15820,11 @@
       "sourceUrl": "https://pixabay.com/",
       "creator": null,
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle. Covered by a typed manifest/media catalog entry.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/bittersweet.mp3",
@@ -15910,11 +15910,11 @@
       "sourceUrl": "https://pixabay.com/",
       "creator": null,
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle. Covered by a typed manifest/media catalog entry.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/dunes-7115.mp3",
@@ -15925,11 +15925,11 @@
       "sourceUrl": "https://pixabay.com/",
       "creator": null,
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle. Covered by a typed manifest/media catalog entry.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/embrace-of-the-mist-192897.mp3",
@@ -15940,11 +15940,11 @@
       "sourceUrl": "https://pixabay.com/",
       "creator": null,
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle. Covered by a typed manifest/media catalog entry.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/estampe-galactus-barbare-epaul-giraffe-ennui-215.mp3",
@@ -15970,11 +15970,11 @@
       "sourceUrl": "https://pixabay.com/",
       "creator": null,
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle. Covered by a typed manifest/media catalog entry.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/fantasy-rpg-music-pack-vol-3/extracted/loops/mp3/action-1-loop.mp3",
@@ -17485,11 +17485,11 @@
       "sourceUrl": "https://pixabay.com/",
       "creator": null,
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle. Covered by a typed manifest/media catalog entry.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/freesound-community-8bit-music-for-game-68698.mp3",
@@ -17500,11 +17500,11 @@
       "sourceUrl": "https://pixabay.com/",
       "creator": null,
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle. Covered by a typed manifest/media catalog entry.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/freesound-community-wandering-6394.mp3",
@@ -17515,11 +17515,11 @@
       "sourceUrl": "https://pixabay.com/",
       "creator": null,
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle. Covered by a typed manifest/media catalog entry.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/game-piano-music/extracted/mp3/piano-1.mp3",
@@ -17650,11 +17650,11 @@
       "sourceUrl": "https://pixabay.com/",
       "creator": null,
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle. Covered by a typed manifest/media catalog entry.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/loops-medieval-vol-2/extracted/mp3/medieval-vol-2-1-loop.mp3",
@@ -17815,11 +17815,11 @@
       "sourceUrl": "https://pixabay.com/",
       "creator": null,
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle. Covered by a typed manifest/media catalog entry.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/old-key-249.mp3",
@@ -17845,11 +17845,11 @@
       "sourceUrl": "https://pixabay.com/",
       "creator": null,
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle. Covered by a typed manifest/media catalog entry.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/peppers-theme.mp3",
@@ -19210,11 +19210,11 @@
       "sourceUrl": "https://pixabay.com/",
       "creator": null,
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle. Covered by a typed manifest/media catalog entry.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/soothing-background-flute-for-documentaries-165918.mp3",
@@ -19225,11 +19225,11 @@
       "sourceUrl": "https://pixabay.com/",
       "creator": null,
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle. Covered by a typed manifest/media catalog entry.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/spooky-game-music-pack/extracted/spooky-game-music-pack/mp3/spooky-1.mp3",
@@ -19375,11 +19375,11 @@
       "sourceUrl": "https://pixabay.com/",
       "creator": null,
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle. Covered by a typed manifest/media catalog entry.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/suspense-dark-ambient-for-video-games-153278.mp3",
@@ -19390,11 +19390,11 @@
       "sourceUrl": "https://pixabay.com/",
       "creator": null,
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle. Covered by a typed manifest/media catalog entry.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/the-open-fields-99449.mp3",
@@ -19405,11 +19405,11 @@
       "sourceUrl": "https://pixabay.com/",
       "creator": null,
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle. Covered by a typed manifest/media catalog entry.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/the-secret-of-life-674.mp3",
@@ -19540,11 +19540,11 @@
       "sourceUrl": "https://pixabay.com/",
       "creator": null,
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle. Covered by a typed manifest/media catalog entry.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "sounds/music/viking-folk-music-pack/extracted/loops/mp3/1-echoes-of-valhalla.mp3",
@@ -19735,11 +19735,11 @@
       "sourceUrl": "https://pixabay.com/",
       "creator": null,
       "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "decision": "include",
-      "reason": "Included: Pixabay License is commercial-redistribution safe for this bundle. Covered by a typed manifest/media catalog entry.",
-      "allowlistCategory": "music"
+      "licenseUrl": null,
+      "attribution": null,
+      "decision": "exclude",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "allowlistCategory": null
     },
     {
       "id": "textures/**",

@@ -1,9 +1,15 @@
-import { assetUrl } from "@/lib/manifest";
+import { assetUrl, downloadsForModel, manifest } from "@/lib/manifest";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 const ALLOWED_PREFIXES = ["/glb/", "/raw/"];
+
+function isCatalogDownload(file: string): boolean {
+  return manifest.packs.some((pack) =>
+    pack.models.some((model) => model.file === file || downloadsForModel(model).some((download) => download.file === file)),
+  );
+}
 
 function fallbackName(file: string): string {
   const path = file.split(/[?#]/, 1)[0];
@@ -26,6 +32,9 @@ export async function GET(req: Request) {
 
   if (!ALLOWED_PREFIXES.some((prefix) => file.startsWith(prefix))) {
     return new Response("unsupported asset path", { status: 400 });
+  }
+  if (!isCatalogDownload(file)) {
+    return new Response("asset download not available", { status: 404 });
   }
 
   const upstream = assetUrl(file);

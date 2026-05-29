@@ -7,21 +7,21 @@
   "policy": {
     "include": [
       "CC0 / Creative Commons Zero",
-      "CC-BY only when attribution metadata is recorded",
-      "Pixabay License"
+      "CC-BY only when attribution metadata is recorded"
     ],
     "exclude": [
       "CC-BY-NC and other non-commercial licenses",
       "CC-BY-SA and other share-alike licenses",
       "Mixamo / Adobe raw asset redistribution terms",
       "Adobe Fuse raw asset redistribution terms",
+      "Pixabay standalone content redistribution terms",
       "Sketchfab personal-use-only or non-commercial assets",
       "Missing, unknown, varied, custom, or otherwise non-permissive license fields"
     ]
   },
   "stats": {
-    "included": 400,
-    "excluded": 914,
+    "included": 336,
+    "excluded": 978,
     "byType": {
       "modelPack": {
         "included": 114,
@@ -36,12 +36,12 @@
         "excluded": 10
       },
       "musicTrack": {
-        "included": 38,
-        "excluded": 355
+        "included": 6,
+        "excluded": 387
       },
       "sourceMapping": {
-        "included": 49,
-        "excluded": 476
+        "included": 17,
+        "excluded": 508
       }
     }
   },
@@ -4034,358 +4034,6 @@
       "attribution": "Optional",
       "path": "sounds/kenney/music-jingles/extracted/audio/hit-jingles/jingles-hit05.ogg",
       "pack": "jingles-hit05.ogg"
-    },
-    {
-      "title": "Space Ambient Music Fragmentwav",
-      "creator": "Pixabay",
-      "author": "Pixabay",
-      "source": "Pixabay",
-      "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "notes": "Filename pattern matches Pixabay-hosted music. Confirm source page before shipping.",
-      "path": "sounds/music/020216-space-ambient-music-fragmentwav-66481.mp3"
-    },
-    {
-      "title": "A Calm And Pleasant Atmosphere For Nature Documentaries",
-      "creator": "Pixabay",
-      "author": "Pixabay",
-      "source": "Pixabay",
-      "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "notes": "Filename pattern matches Pixabay-hosted music. Confirm source page before shipping.",
-      "path": "sounds/music/a-calm-and-pleasant-atmosphere-for-nature-documentaries-158461.mp3"
-    },
-    {
-      "title": "A Space Journey Through The Solar System",
-      "creator": "Pixabay",
-      "author": "Pixabay",
-      "source": "Pixabay",
-      "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "notes": "Filename pattern matches Pixabay-hosted music. Confirm source page before shipping.",
-      "path": "sounds/music/a-space-journey-through-the-solar-system-153272.mp3"
-    },
-    {
-      "title": "Adventures Loop Music",
-      "creator": "Pixabay",
-      "author": "Pixabay",
-      "source": "Pixabay",
-      "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "notes": "Filename pattern matches Pixabay-hosted music. Confirm source page before shipping.",
-      "path": "sounds/music/adventures-loop-music-226836.mp3"
-    },
-    {
-      "title": "Afternoon Ambient Piano Solo",
-      "creator": "Pixabay",
-      "author": "Pixabay",
-      "source": "Pixabay",
-      "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "notes": "Filename pattern matches Pixabay-hosted music. Confirm source page before shipping.",
-      "path": "sounds/music/afternoon-ambient-piano-solo-24367.mp3"
-    },
-    {
-      "title": "Ambient Background Atmosphere",
-      "creator": "Pixabay",
-      "author": "Pixabay",
-      "source": "Pixabay",
-      "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "notes": "Filename pattern matches Pixabay-hosted music. Confirm source page before shipping.",
-      "path": "sounds/music/ambient-background-atmosphere-167994.mp3"
-    },
-    {
-      "title": "Ambient Game",
-      "creator": "Pixabay",
-      "author": "Pixabay",
-      "source": "Pixabay",
-      "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "notes": "Filename pattern matches Pixabay-hosted music. Confirm source page before shipping.",
-      "path": "sounds/music/ambient-game-67014.mp3"
-    },
-    {
-      "title": "Ambient Pads Loop",
-      "creator": "Pixabay",
-      "author": "Pixabay",
-      "source": "Pixabay",
-      "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "notes": "Filename pattern matches Pixabay-hosted music. Confirm source page before shipping.",
-      "path": "sounds/music/ambient-pads-loop-296968.mp3"
-    },
-    {
-      "title": "Ambient Piano Logo",
-      "creator": "Pixabay",
-      "author": "Pixabay",
-      "source": "Pixabay",
-      "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "notes": "Filename pattern matches Pixabay-hosted music. Confirm source page before shipping.",
-      "path": "sounds/music/ambient-piano-logo-165357.mp3"
-    },
-    {
-      "title": "Ambient Soundscapes 001 Space Atmosphere",
-      "creator": "Pixabay",
-      "author": "Pixabay",
-      "source": "Pixabay",
-      "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "notes": "Filename pattern matches Pixabay-hosted music. Confirm source page before shipping.",
-      "path": "sounds/music/ambient-soundscapes-001-space-atmosphere-303246.mp3"
-    },
-    {
-      "title": "Ambient Soundscapes 003 Space Atmosphere",
-      "creator": "Pixabay",
-      "author": "Pixabay",
-      "source": "Pixabay",
-      "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "notes": "Filename pattern matches Pixabay-hosted music. Confirm source page before shipping.",
-      "path": "sounds/music/ambient-soundscapes-003-space-atmosphere-303242.mp3"
-    },
-    {
-      "title": "Ambient Soundscapes 004 Space Atmosphere",
-      "creator": "Pixabay",
-      "author": "Pixabay",
-      "source": "Pixabay",
-      "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "notes": "Filename pattern matches Pixabay-hosted music. Confirm source page before shipping.",
-      "path": "sounds/music/ambient-soundscapes-004-space-atmosphere-303243.mp3"
-    },
-    {
-      "title": "Ambient Soundscapes 006 Space Atmosphere",
-      "creator": "Pixabay",
-      "author": "Pixabay",
-      "source": "Pixabay",
-      "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "notes": "Filename pattern matches Pixabay-hosted music. Confirm source page before shipping.",
-      "path": "sounds/music/ambient-soundscapes-006-space-atmosphere-303245.mp3"
-    },
-    {
-      "title": "Ambient Soundscapes 007 Space Atmosphere",
-      "creator": "Pixabay",
-      "author": "Pixabay",
-      "source": "Pixabay",
-      "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "notes": "Filename pattern matches Pixabay-hosted music. Confirm source page before shipping.",
-      "path": "sounds/music/ambient-soundscapes-007-space-atmosphere-304974.mp3"
-    },
-    {
-      "title": "Atmosphere Soundscape",
-      "creator": "Pixabay",
-      "author": "Pixabay",
-      "source": "Pixabay",
-      "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "notes": "Filename pattern matches Pixabay-hosted music. Confirm source page before shipping.",
-      "path": "sounds/music/atmosphere-soundscape-302345.mp3"
-    },
-    {
-      "title": "Cosmic Glow",
-      "creator": "Pixabay",
-      "author": "Pixabay",
-      "source": "Pixabay",
-      "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "notes": "Filename pattern matches Pixabay-hosted music. Confirm source page before shipping.",
-      "path": "sounds/music/cosmic-glow-6703.mp3"
-    },
-    {
-      "title": "Dunes",
-      "creator": "Pixabay",
-      "author": "Pixabay",
-      "source": "Pixabay",
-      "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "notes": "Filename pattern matches Pixabay-hosted music. Confirm source page before shipping.",
-      "path": "sounds/music/dunes-7115.mp3"
-    },
-    {
-      "title": "Embrace Of The Mist",
-      "creator": "Pixabay",
-      "author": "Pixabay",
-      "source": "Pixabay",
-      "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "notes": "Filename pattern matches Pixabay-hosted music. Confirm source page before shipping.",
-      "path": "sounds/music/embrace-of-the-mist-192897.mp3"
-    },
-    {
-      "title": "Ethereal Ambient Music",
-      "creator": "Pixabay",
-      "author": "Pixabay",
-      "source": "Pixabay",
-      "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "notes": "Filename pattern matches Pixabay-hosted music. Confirm source page before shipping.",
-      "path": "sounds/music/ethereal-ambient-music-55115.mp3"
-    },
-    {
-      "title": "Floating Piano Melodies",
-      "creator": "Pixabay",
-      "author": "Pixabay",
-      "source": "Pixabay",
-      "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "notes": "Filename pattern matches Pixabay-hosted music. Confirm source page before shipping.",
-      "path": "sounds/music/floating-piano-melodies-191756.mp3"
-    },
-    {
-      "title": "Freesound Community 8 Bit Music For Game",
-      "creator": "Pixabay",
-      "author": "Pixabay",
-      "source": "Pixabay",
-      "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "notes": "Filename pattern matches Pixabay-hosted music. Confirm source page before shipping.",
-      "path": "sounds/music/freesound-community-8bit-music-for-game-68698.mp3"
-    },
-    {
-      "title": "Freesound Community Wandering",
-      "creator": "Pixabay",
-      "author": "Pixabay",
-      "source": "Pixabay",
-      "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "notes": "Filename pattern matches Pixabay-hosted music. Confirm source page before shipping.",
-      "path": "sounds/music/freesound-community-wandering-6394.mp3"
-    },
-    {
-      "title": "Looped Beat",
-      "creator": "Pixabay",
-      "author": "Pixabay",
-      "source": "Pixabay",
-      "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "notes": "Filename pattern matches Pixabay-hosted music. Confirm source page before shipping.",
-      "path": "sounds/music/looped-beat-62827.mp3"
-    },
-    {
-      "title": "Mystical Music",
-      "creator": "Pixabay",
-      "author": "Pixabay",
-      "source": "Pixabay",
-      "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "notes": "Filename pattern matches Pixabay-hosted music. Confirm source page before shipping.",
-      "path": "sounds/music/mystical-music-54294.mp3"
-    },
-    {
-      "title": "Pad Grand Piano And Drone Thought Provoking Background",
-      "creator": "Pixabay",
-      "author": "Pixabay",
-      "source": "Pixabay",
-      "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "notes": "Filename pattern matches Pixabay-hosted music. Confirm source page before shipping.",
-      "path": "sounds/music/pad-grand-piano-and-drone-thought-provoking-background-304897.mp3"
-    },
-    {
-      "title": "Seamless Loop Happy",
-      "creator": "Pixabay",
-      "author": "Pixabay",
-      "source": "Pixabay",
-      "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "notes": "Filename pattern matches Pixabay-hosted music. Confirm source page before shipping.",
-      "path": "sounds/music/seamless-loop-happy-226834.mp3"
-    },
-    {
-      "title": "Soothing Background Flute For Documentaries",
-      "creator": "Pixabay",
-      "author": "Pixabay",
-      "source": "Pixabay",
-      "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "notes": "Filename pattern matches Pixabay-hosted music. Confirm source page before shipping.",
-      "path": "sounds/music/soothing-background-flute-for-documentaries-165918.mp3"
-    },
-    {
-      "title": "Surrealism Ambient Mix",
-      "creator": "Pixabay",
-      "author": "Pixabay",
-      "source": "Pixabay",
-      "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "notes": "Filename pattern matches Pixabay-hosted music. Confirm source page before shipping.",
-      "path": "sounds/music/surrealism-ambient-mix-14454.mp3"
-    },
-    {
-      "title": "Suspense Dark Ambient For Video Games",
-      "creator": "Pixabay",
-      "author": "Pixabay",
-      "source": "Pixabay",
-      "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "notes": "Filename pattern matches Pixabay-hosted music. Confirm source page before shipping.",
-      "path": "sounds/music/suspense-dark-ambient-for-video-games-153278.mp3"
-    },
-    {
-      "title": "The Open Fields",
-      "creator": "Pixabay",
-      "author": "Pixabay",
-      "source": "Pixabay",
-      "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "notes": "Filename pattern matches Pixabay-hosted music. Confirm source page before shipping.",
-      "path": "sounds/music/the-open-fields-99449.mp3"
-    },
-    {
-      "title": "Uplifting Pad Texture",
-      "creator": "Pixabay",
-      "author": "Pixabay",
-      "source": "Pixabay",
-      "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "notes": "Filename pattern matches Pixabay-hosted music. Confirm source page before shipping.",
-      "path": "sounds/music/uplifting-pad-texture-113842.mp3"
-    },
-    {
-      "title": "Wandering",
-      "creator": "Pixabay",
-      "author": "Pixabay",
-      "source": "Pixabay",
-      "license": "Pixabay License",
-      "licenseUrl": "https://pixabay.com/service/terms/#license",
-      "attribution": "Not required",
-      "notes": "Filename pattern matches Pixabay-hosted music. Confirm source page before shipping.",
-      "path": "sounds/music/wandering-6394.mp3"
     }
   ],
   "exclusions": [
@@ -4753,6 +4401,10 @@
       "label": "Tiny RPG Character Asset Pack v1.03 (2D/zerie-tiny-rpg-character-asset-pack)",
       "reason": "License text restricts personal use, resale, or raw redistribution.",
       "url": "https://zerie.itch.io/tiny-rpg-character-asset-pack"
+    },
+    {
+      "label": "Space Ambient Music Fragmentwav (sounds/music/020216-space-ambient-music-fragmentwav-66481.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle."
     },
     {
       "label": "Ambient 1 (sounds/music/10-ambient-rpg-tracks/extracted/mp3/ambient-1.mp3)",
@@ -5195,9 +4847,65 @@
       "reason": "License field is not a concrete bundle-safe license: Check source metadata."
     },
     {
+      "label": "A Calm And Pleasant Atmosphere For Nature Documentaries (sounds/music/a-calm-and-pleasant-atmosphere-for-nature-documentaries-158461.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle."
+    },
+    {
+      "label": "A Space Journey Through The Solar System (sounds/music/a-space-journey-through-the-solar-system-153272.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle."
+    },
+    {
+      "label": "Adventures Loop Music (sounds/music/adventures-loop-music-226836.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle."
+    },
+    {
+      "label": "Afternoon Ambient Piano Solo (sounds/music/afternoon-ambient-piano-solo-24367.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle."
+    },
+    {
+      "label": "Ambient Background Atmosphere (sounds/music/ambient-background-atmosphere-167994.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle."
+    },
+    {
+      "label": "Ambient Game (sounds/music/ambient-game-67014.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle."
+    },
+    {
+      "label": "Ambient Pads Loop (sounds/music/ambient-pads-loop-296968.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle."
+    },
+    {
+      "label": "Ambient Piano Logo (sounds/music/ambient-piano-logo-165357.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle."
+    },
+    {
+      "label": "Ambient Soundscapes 001 Space Atmosphere (sounds/music/ambient-soundscapes-001-space-atmosphere-303246.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle."
+    },
+    {
+      "label": "Ambient Soundscapes 003 Space Atmosphere (sounds/music/ambient-soundscapes-003-space-atmosphere-303242.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle."
+    },
+    {
+      "label": "Ambient Soundscapes 004 Space Atmosphere (sounds/music/ambient-soundscapes-004-space-atmosphere-303243.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle."
+    },
+    {
+      "label": "Ambient Soundscapes 006 Space Atmosphere (sounds/music/ambient-soundscapes-006-space-atmosphere-303245.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle."
+    },
+    {
+      "label": "Ambient Soundscapes 007 Space Atmosphere (sounds/music/ambient-soundscapes-007-space-atmosphere-304974.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle."
+    },
+    {
       "label": "Ancient Winds (sounds/music/ancient-winds.mp3)",
       "reason": "License field is not a concrete bundle-safe license: Check source metadata.",
       "url": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1500052"
+    },
+    {
+      "label": "Atmosphere Soundscape (sounds/music/atmosphere-soundscape-302345.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle."
     },
     {
       "label": "Bittersweet (sounds/music/bittersweet.mp3)",
@@ -5220,8 +4928,24 @@
       "reason": "License field is not a concrete bundle-safe license: Check source metadata."
     },
     {
+      "label": "Cosmic Glow (sounds/music/cosmic-glow-6703.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle."
+    },
+    {
+      "label": "Dunes (sounds/music/dunes-7115.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle."
+    },
+    {
+      "label": "Embrace Of The Mist (sounds/music/embrace-of-the-mist-192897.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle."
+    },
+    {
       "label": "Estampe Galactus Barbare Epaul Giraffe Ennui (sounds/music/estampe-galactus-barbare-epaul-giraffe-ennui-215.mp3)",
       "reason": "License field is not a concrete bundle-safe license: Check source metadata."
+    },
+    {
+      "label": "Ethereal Ambient Music (sounds/music/ethereal-ambient-music-55115.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle."
     },
     {
       "label": "Action 1 Loop (sounds/music/fantasy-rpg-music-pack-vol-3/extracted/loops/mp3/action-1-loop.mp3)",
@@ -5624,6 +5348,18 @@
       "reason": "License field is not a concrete bundle-safe license: Royalty-free custom terms."
     },
     {
+      "label": "Floating Piano Melodies (sounds/music/floating-piano-melodies-191756.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle."
+    },
+    {
+      "label": "Freesound Community 8 Bit Music For Game (sounds/music/freesound-community-8bit-music-for-game-68698.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle."
+    },
+    {
+      "label": "Freesound Community Wandering (sounds/music/freesound-community-wandering-6394.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle."
+    },
+    {
       "label": "Piano 1 (sounds/music/game-piano-music/extracted/mp3/piano-1.mp3)",
       "reason": "License field is not a concrete bundle-safe license: Royalty-free custom terms."
     },
@@ -5654,6 +5390,10 @@
     {
       "label": "Piano 8 (sounds/music/game-piano-music/extracted/mp3/piano-8.mp3)",
       "reason": "License field is not a concrete bundle-safe license: Royalty-free custom terms."
+    },
+    {
+      "label": "Looped Beat (sounds/music/looped-beat-62827.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle."
     },
     {
       "label": "Medieval Vol 2 1 Loop (sounds/music/loops-medieval-vol-2/extracted/mp3/medieval-vol-2-1-loop.mp3)",
@@ -5696,8 +5436,16 @@
       "reason": "License field is not a concrete bundle-safe license: Check source metadata."
     },
     {
+      "label": "Mystical Music (sounds/music/mystical-music-54294.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle."
+    },
+    {
       "label": "Old Key (sounds/music/old-key-249.mp3)",
       "reason": "License field is not a concrete bundle-safe license: Check source metadata."
+    },
+    {
+      "label": "Pad Grand Piano And Drone Thought Provoking Background (sounds/music/pad-grand-piano-and-drone-thought-provoking-background-304897.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle."
     },
     {
       "label": "Peppers Theme (sounds/music/peppers-theme.mp3)",
@@ -6060,6 +5808,14 @@
       "reason": "License field is not a concrete bundle-safe license: Royalty-free custom terms."
     },
     {
+      "label": "Seamless Loop Happy (sounds/music/seamless-loop-happy-226834.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle."
+    },
+    {
+      "label": "Soothing Background Flute For Documentaries (sounds/music/soothing-background-flute-for-documentaries-165918.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle."
+    },
+    {
       "label": "Spooky 1 (sounds/music/spooky-game-music-pack/extracted/spooky-game-music-pack/mp3/spooky-1.mp3)",
       "reason": "License field is not a concrete bundle-safe license: Royalty-free custom terms."
     },
@@ -6096,6 +5852,18 @@
       "reason": "License field is not a concrete bundle-safe license: Check source metadata."
     },
     {
+      "label": "Surrealism Ambient Mix (sounds/music/surrealism-ambient-mix-14454.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle."
+    },
+    {
+      "label": "Suspense Dark Ambient For Video Games (sounds/music/suspense-dark-ambient-for-video-games-153278.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle."
+    },
+    {
+      "label": "The Open Fields (sounds/music/the-open-fields-99449.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle."
+    },
+    {
       "label": "The Secret Of Life (sounds/music/the-secret-of-life-674.mp3)",
       "reason": "License field is not a concrete bundle-safe license: Check source metadata."
     },
@@ -6126,6 +5894,10 @@
     {
       "label": "Veil Of Eternal Nightfall (sounds/music/tracks-mp3/extracted/tracks-mp3/6-veil-of-eternal-nightfall.mp3)",
       "reason": "License field is not a concrete bundle-safe license: Royalty-free custom terms."
+    },
+    {
+      "label": "Uplifting Pad Texture (sounds/music/uplifting-pad-texture-113842.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle."
     },
     {
       "label": "Echoes Of Valhalla Loop (sounds/music/viking-folk-music-pack/extracted/loops/mp3/1-echoes-of-valhalla.mp3)",
@@ -6174,6 +5946,10 @@
     {
       "label": "Throne Of The Fjords (sounds/music/viking-folk-music-pack/extracted/mp3/6-throne-of-the-fjords.mp3)",
       "reason": "License field is not a concrete bundle-safe license: Royalty-free custom terms."
+    },
+    {
+      "label": "Wandering (sounds/music/wandering-6394.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle."
     },
     {
       "label": "Ambience (sounds/ambience/**)",
@@ -6811,6 +6587,11 @@
       "url": "https://freesound.org/people/falcospizaetus/packs/27652/"
     },
     {
+      "label": "020216 Space Ambient Music Fragmentwav 66481 (sounds/music/020216-space-ambient-music-fragmentwav-66481.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "url": "https://pixabay.com/"
+    },
+    {
       "label": "Ambient 1 (sounds/music/10-ambient-rpg-tracks/extracted/mp3/ambient-1.mp3)",
       "reason": "License field is not a concrete bundle-safe license: Royalty-free custom terms."
     },
@@ -7251,9 +7032,79 @@
       "reason": "License field is not a concrete bundle-safe license: Check source metadata."
     },
     {
+      "label": "A Calm And Pleasant Atmosphere For Nature Documentaries 158461 (sounds/music/a-calm-and-pleasant-atmosphere-for-nature-documentaries-158461.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "url": "https://pixabay.com/"
+    },
+    {
+      "label": "A Space Journey Through The Solar System 153272 (sounds/music/a-space-journey-through-the-solar-system-153272.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "url": "https://pixabay.com/"
+    },
+    {
+      "label": "Adventures Loop Music 226836 (sounds/music/adventures-loop-music-226836.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "url": "https://pixabay.com/"
+    },
+    {
+      "label": "Afternoon Ambient Piano Solo 24367 (sounds/music/afternoon-ambient-piano-solo-24367.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "url": "https://pixabay.com/"
+    },
+    {
+      "label": "Ambient Background Atmosphere 167994 (sounds/music/ambient-background-atmosphere-167994.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "url": "https://pixabay.com/"
+    },
+    {
+      "label": "Ambient Game 67014 (sounds/music/ambient-game-67014.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "url": "https://pixabay.com/"
+    },
+    {
+      "label": "Ambient Pads Loop 296968 (sounds/music/ambient-pads-loop-296968.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "url": "https://pixabay.com/"
+    },
+    {
+      "label": "Ambient Piano Logo 165357 (sounds/music/ambient-piano-logo-165357.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "url": "https://pixabay.com/"
+    },
+    {
+      "label": "Ambient Soundscapes 001 Space Atmosphere 303246 (sounds/music/ambient-soundscapes-001-space-atmosphere-303246.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "url": "https://pixabay.com/"
+    },
+    {
+      "label": "Ambient Soundscapes 003 Space Atmosphere 303242 (sounds/music/ambient-soundscapes-003-space-atmosphere-303242.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "url": "https://pixabay.com/"
+    },
+    {
+      "label": "Ambient Soundscapes 004 Space Atmosphere 303243 (sounds/music/ambient-soundscapes-004-space-atmosphere-303243.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "url": "https://pixabay.com/"
+    },
+    {
+      "label": "Ambient Soundscapes 006 Space Atmosphere 303245 (sounds/music/ambient-soundscapes-006-space-atmosphere-303245.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "url": "https://pixabay.com/"
+    },
+    {
+      "label": "Ambient Soundscapes 007 Space Atmosphere 304974 (sounds/music/ambient-soundscapes-007-space-atmosphere-304974.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "url": "https://pixabay.com/"
+    },
+    {
       "label": "Ancient Winds (sounds/music/ancient-winds.mp3)",
       "reason": "Missing license field.",
       "url": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1500052"
+    },
+    {
+      "label": "Atmosphere Soundscape 302345 (sounds/music/atmosphere-soundscape-302345.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "url": "https://pixabay.com/"
     },
     {
       "label": "Bittersweet (sounds/music/bittersweet.mp3)",
@@ -7281,8 +7132,28 @@
       "url": "https://incompetech.com/music/royalty-free/"
     },
     {
+      "label": "Cosmic Glow 6703 (sounds/music/cosmic-glow-6703.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "url": "https://pixabay.com/"
+    },
+    {
+      "label": "Dunes 7115 (sounds/music/dunes-7115.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "url": "https://pixabay.com/"
+    },
+    {
+      "label": "Embrace Of The Mist 192897 (sounds/music/embrace-of-the-mist-192897.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "url": "https://pixabay.com/"
+    },
+    {
       "label": "Estampe Galactus Barbare Epaul Giraffe Ennui 215 (sounds/music/estampe-galactus-barbare-epaul-giraffe-ennui-215.mp3)",
       "reason": "License field is not a concrete bundle-safe license: Check source metadata."
+    },
+    {
+      "label": "Ethereal Ambient Music 55115 (sounds/music/ethereal-ambient-music-55115.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "url": "https://pixabay.com/"
     },
     {
       "label": "Action 1 Loop (sounds/music/fantasy-rpg-music-pack-vol-3/extracted/loops/mp3/action-1-loop.mp3)",
@@ -7685,6 +7556,21 @@
       "reason": "License field is not a concrete bundle-safe license: Royalty-free custom terms."
     },
     {
+      "label": "Floating Piano Melodies 191756 (sounds/music/floating-piano-melodies-191756.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "url": "https://pixabay.com/"
+    },
+    {
+      "label": "Freesound Community 8 Bit Music For Game 68698 (sounds/music/freesound-community-8bit-music-for-game-68698.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "url": "https://pixabay.com/"
+    },
+    {
+      "label": "Freesound Community Wandering 6394 (sounds/music/freesound-community-wandering-6394.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "url": "https://pixabay.com/"
+    },
+    {
       "label": "Piano 1 (sounds/music/game-piano-music/extracted/mp3/piano-1.mp3)",
       "reason": "License field is not a concrete bundle-safe license: Royalty-free custom terms."
     },
@@ -7715,6 +7601,11 @@
     {
       "label": "Piano 8 (sounds/music/game-piano-music/extracted/mp3/piano-8.mp3)",
       "reason": "License field is not a concrete bundle-safe license: Royalty-free custom terms."
+    },
+    {
+      "label": "Looped Beat 62827 (sounds/music/looped-beat-62827.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "url": "https://pixabay.com/"
     },
     {
       "label": "Medieval Vol 2 1 Loop (sounds/music/loops-medieval-vol-2/extracted/mp3/medieval-vol-2-1-loop.mp3)",
@@ -7759,8 +7650,18 @@
       "url": "https://incompetech.com/music/royalty-free/"
     },
     {
+      "label": "Mystical Music 54294 (sounds/music/mystical-music-54294.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "url": "https://pixabay.com/"
+    },
+    {
       "label": "Old Key 249 (sounds/music/old-key-249.mp3)",
       "reason": "License field is not a concrete bundle-safe license: Check source metadata."
+    },
+    {
+      "label": "Pad Grand Piano And Drone Thought Provoking Background 304897 (sounds/music/pad-grand-piano-and-drone-thought-provoking-background-304897.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "url": "https://pixabay.com/"
     },
     {
       "label": "Peppers Theme (sounds/music/peppers-theme.mp3)",
@@ -8124,6 +8025,16 @@
       "reason": "License field is not a concrete bundle-safe license: Royalty-free custom terms."
     },
     {
+      "label": "Seamless Loop Happy 226834 (sounds/music/seamless-loop-happy-226834.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "url": "https://pixabay.com/"
+    },
+    {
+      "label": "Soothing Background Flute For Documentaries 165918 (sounds/music/soothing-background-flute-for-documentaries-165918.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "url": "https://pixabay.com/"
+    },
+    {
       "label": "Spooky 1 (sounds/music/spooky-game-music-pack/extracted/spooky-game-music-pack/mp3/spooky-1.mp3)",
       "reason": "License field is not a concrete bundle-safe license: Royalty-free custom terms."
     },
@@ -8161,6 +8072,21 @@
       "url": "https://incompetech.com/music/royalty-free/"
     },
     {
+      "label": "Surrealism Ambient Mix 14454 (sounds/music/surrealism-ambient-mix-14454.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "url": "https://pixabay.com/"
+    },
+    {
+      "label": "Suspense Dark Ambient For Video Games 153278 (sounds/music/suspense-dark-ambient-for-video-games-153278.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "url": "https://pixabay.com/"
+    },
+    {
+      "label": "The Open Fields 99449 (sounds/music/the-open-fields-99449.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "url": "https://pixabay.com/"
+    },
+    {
       "label": "The Secret Of Life 674 (sounds/music/the-secret-of-life-674.mp3)",
       "reason": "License field is not a concrete bundle-safe license: Check source metadata."
     },
@@ -8191,6 +8117,11 @@
     {
       "label": "6 Veil Of Eternal Nightfall (sounds/music/tracks-mp3/extracted/tracks-mp3/6-veil-of-eternal-nightfall.mp3)",
       "reason": "License field is not a concrete bundle-safe license: Royalty-free custom terms."
+    },
+    {
+      "label": "Uplifting Pad Texture 113842 (sounds/music/uplifting-pad-texture-113842.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "url": "https://pixabay.com/"
     },
     {
       "label": "1 Echoes Of Valhalla (sounds/music/viking-folk-music-pack/extracted/loops/mp3/1-echoes-of-valhalla.mp3)",
@@ -8239,6 +8170,11 @@
     {
       "label": "6 Throne Of The Fjords (sounds/music/viking-folk-music-pack/extracted/mp3/6-throne-of-the-fjords.mp3)",
       "reason": "License field is not a concrete bundle-safe license: Royalty-free custom terms."
+    },
+    {
+      "label": "Wandering 6394 (sounds/music/wandering-6394.mp3)",
+      "reason": "Pixabay terms prohibit selling or distributing standalone content in a raw asset bundle.",
+      "url": "https://pixabay.com/"
     },
     {
       "label": "Textures (textures/**)",

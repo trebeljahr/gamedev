@@ -72,6 +72,24 @@ const nextConfig = {
       },
     ];
   },
+  async rewrites() {
+    return {
+      beforeFiles: [
+        {
+          source: "/manifest.json",
+          destination: "/api/models/manifest",
+        },
+        {
+          source: "/media-catalog.json",
+          destination: "/api/media/catalog",
+        },
+        {
+          source: "/media-catalog/packs/:file",
+          destination: "/api/media/catalog/packs/:file",
+        },
+      ],
+    };
+  },
   webpack(config) {
     // pnpm + webpack can resolve `three` through multiple symlink paths,
     // producing two module instances and breaking R3F's `<primitive>` (instanceof checks).

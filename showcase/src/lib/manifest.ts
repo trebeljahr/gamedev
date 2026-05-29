@@ -1,4 +1,5 @@
 import { type ModelCategory, usagePhrase } from "./catalog-metadata";
+import { canRedistributeRawAssets, shouldShowRestrictedAssets } from "./license-policy";
 
 export type Model = {
   name: string;
@@ -66,7 +67,9 @@ if (isServer) {
   const raw = fs.readFileSync(path.join(process.cwd(), "public", "manifest.json"), "utf8");
   _manifest = JSON.parse(raw) as Manifest;
 }
-export const manifest: Manifest = _manifest;
+export const manifest: Manifest = shouldShowRestrictedAssets()
+  ? _manifest
+  : { packs: _manifest.packs.filter((pack) => canRedistributeRawAssets(pack.license)) };
 
 export function findPack(vendor: string, pack: string): Pack | undefined {
   return manifest.packs.find((p) => p.vendor === vendor && p.pack === pack);
