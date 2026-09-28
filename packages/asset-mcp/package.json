@@ -29,6 +29,7 @@
     "node": ">=18.17"
   },
   "license": "MIT",
+  "funding": "https://ricos.site/donate?from=gamedev-asset-library",
   "devDependencies": {
     "@types/node": "^25.7.0",
     "typescript": "^6.0.3"

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { DonationReturnHandler } from "@/components/DonationReturnHandler";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/seo";
 import "./globals.css";
@@ -69,6 +70,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </Script>
         {children}
         <SiteFooter />
+        <DonationReturnHandler />
       </body>
     </html>
   );
