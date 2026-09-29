@@ -1,3 +1,4 @@
+import { ProjectDonateLink } from "./ProjectDonateLink";
 import Link from "next/link";
 import { suggestPackIssueUrl } from "@/lib/github-issue";
 
@@ -8,7 +9,7 @@ export function SiteFooter() {
       <p>Free game assets, checked for permissive licenses and practical formats.</p>
       <nav aria-label="Footer navigation">
         <Link href="/support">Support the project</Link>
-        <a href="https://ricos.site/donate?from=gamedev-asset-library">Donate</a>
+        <ProjectDonateLink href="https://ricos.site/donate/gamedev-asset-library">Donate</ProjectDonateLink>
         <a href={suggestPackUrl} target="_blank" rel="noreferrer">
           Suggest a pack
         </a>
