@@ -14,3 +14,11 @@ onlyBuiltDependencies:
   - esbuild
   - sharp
   - unrs-resolver
+
+overrides:
+  "@babel/core@7": "7.29.6"
+  "browserslist@4": "4.28.7"
+  "baseline-browser-mapping@2": "2.11.0"
+  "fflate@0.8": "0.8.3"
+  "fflate@0.6": "0.6.11"
+  "colord@2": "2.9.4"

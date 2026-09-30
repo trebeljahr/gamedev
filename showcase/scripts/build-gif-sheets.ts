@@ -13,7 +13,7 @@
 import { existsSync } from "node:fs";
 import { mkdir, readdir, stat, writeFile } from "node:fs/promises";
 import { dirname, join, relative } from "node:path";
-import sharp from "sharp";
+import sharp, { type OverlayOptions } from "sharp";
 
 const SHOWCASE_DIR = join(__dirname, "..");
 const REPO_ROOT = join(SHOWCASE_DIR, "..");
@@ -147,7 +147,7 @@ async function buildSheet(gifAbs: string): Promise<"written" | "skipped" | "sing
     );
   }
 
-  const composites: sharp.OverlayOptions[] = new Array(pages);
+  const composites: OverlayOptions[] = new Array(pages);
   for (let i = 0; i < pages; i += 1) {
     const slice = data.subarray(i * stride, (i + 1) * stride);
     const col = i % cols;
