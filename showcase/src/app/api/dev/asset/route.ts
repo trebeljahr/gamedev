@@ -1,5 +1,5 @@
 import { createReadStream } from "node:fs";
-import { stat } from "node:fs/promises";
+import { realpath, stat } from "node:fs/promises";
 import { extname, join, normalize, resolve, sep } from "node:path";
 import { NextResponse } from "next/server";
 import { Readable } from "node:stream";
@@ -29,13 +29,18 @@ export async function GET(req: Request) {
   if (!rel) return new NextResponse("missing path", { status: 400 });
 
   const normalized = normalize(rel).replace(/^[/\\]+/, "");
-  const abs = resolve(ASSETS_ROOT, normalized);
+  let abs = resolve(ASSETS_ROOT, normalized);
   if (!abs.startsWith(ASSETS_ROOT + sep) && abs !== ASSETS_ROOT) {
     return new NextResponse("forbidden", { status: 403 });
   }
 
   let st: Awaited<ReturnType<typeof stat>>;
   try {
+    const root = await realpath(ASSETS_ROOT);
+    abs = await realpath(abs);
+    if (!abs.startsWith(root + sep)) {
+      return new NextResponse("forbidden", { status: 403 });
+    }
     st = await stat(abs);
   } catch {
     return new NextResponse("not found", { status: 404 });
@@ -43,7 +48,8 @@ export async function GET(req: Request) {
   if (!st.isFile()) return new NextResponse("not a file", { status: 404 });
 
   const ext = extname(abs).toLowerCase();
-  const mime = MIME[ext] ?? "application/octet-stream";
+  const mime = MIME[ext];
+  if (!mime) return new NextResponse("unsupported image", { status: 415 });
   const nodeStream = createReadStream(abs);
   const webStream = Readable.toWeb(nodeStream) as unknown as ReadableStream<Uint8Array>;
   return new NextResponse(webStream, {
@@ -52,6 +58,8 @@ export async function GET(req: Request) {
       "content-type": mime,
       "content-length": String(st.size),
       "cache-control": "no-store",
+      "x-content-type-options": "nosniff",
+      "content-security-policy": "sandbox",
     },
   });
 }

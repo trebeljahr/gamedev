@@ -147,3 +147,17 @@ hatchkit destroy
 
 …also removes `~/.config/dev/projects/gamedev.caddy`. Other projects'
 fragments stay put.
+
+## Frame classification inspector
+
+The development-only `/dev/frame-groups` page displays a local classification report and lets you save review verdicts in your browser. It is unavailable in production.
+
+With source images present under `assets/`, run from `showcase/`:
+
+```sh
+ASSETS_DIR=../assets pnpm exec tsx scripts/analyze-frame-groups.ts
+```
+
+The analyzer reads the per-pack catalogs in `showcase/public/media-catalog/packs/` and writes `showcase/.cache/frame-group-classifications.json`. Its perceptual hashes also remain in `.cache/`. Results are heuristic classifications for review, not edits to the shipped catalog. The page and asset endpoint require a development server; the endpoint serves only supported image files resolved inside `ASSETS_DIR`.
+
+Run its filesystem-boundary test from `showcase/` with `node --import tsx --test tests/dev-asset.test.ts`.

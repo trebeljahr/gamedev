@@ -57,9 +57,9 @@ export type Manifest = { packs: Pack[] };
  * Any client component that touches manifest data directly is a bug — it
  * should receive a serialized subset from a server component.
  */
-const isServer = typeof window === "undefined";
 let _manifest: Manifest = { packs: [] };
-if (isServer) {
+// Keep the condition inline so Next can remove Node imports from the browser bundle.
+if (typeof window === "undefined") {
   // eslint-disable-next-line @typescript-eslint/no-require-imports
   const fs = require("node:fs") as typeof import("node:fs");
   // eslint-disable-next-line @typescript-eslint/no-require-imports

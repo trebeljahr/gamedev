@@ -276,7 +276,8 @@ function ModelGridScene({
   const [mounted, setMounted] = useState<Slot[]>([]);
   const [internalSelected, setInternalSelected] = useState<Slot | null>(null);
   const [hoverInspect, setHoverInspect] = useState(false);
-  const [playAnim, setPlayAnim] = useState<string | null>(null);
+  // Playback belongs to the model, so closing or changing the inspector keeps it running.
+  const [playing, setPlaying] = useState<{ slotIndex: number; name: string } | null>(null);
   const animsRef = useRef<Map<number, AnimationInfo>>(new Map());
   const controlledSelected = selectedIndex == null
     ? null
@@ -304,7 +305,6 @@ function ModelGridScene({
   const onSelect = useCallback((slot: Slot) => {
     if (onSelectedIndexChange) onSelectedIndexChange(slot.index);
     else setInternalSelected(slot);
-    setPlayAnim(null);
     document.exitPointerLock?.();
   }, [onSelectedIndexChange]);
 
@@ -319,12 +319,14 @@ function ModelGridScene({
   useEffect(() => {
     setMounted([]);
     setInternalSelected(null);
+    setPlaying(null);
     animsRef.current.clear();
   }, [slots]);
 
-  useEffect(() => {
-    setPlayAnim(null);
-  }, [selected?.index]);
+  const selectedPlayAnim = selected && playing?.slotIndex === selected.index ? playing.name : null;
+  const onPlayForSelected = useCallback((name: string | null) => {
+    if (selected) setPlaying(name ? { slotIndex: selected.index, name } : null);
+  }, [selected]);
 
   return (
     <div className="model-grid-scene all-scene-canvas" ref={sceneHostRef}>
@@ -369,8 +371,7 @@ function ModelGridScene({
           layouts={layouts}
           mounted={mounted}
           onMountedChange={setMounted}
-          selectedIndex={selected?.index ?? null}
-          playAnim={playAnim}
+          playing={playing}
           onAnimInfo={setAnimInfo}
           loadAll={loadAll}
           groundY={groundY}
@@ -402,8 +403,8 @@ function ModelGridScene({
         <ModelPanel
           slot={selected}
           animationInfo={animsRef.current.get(selected.index) ?? null}
-          playAnim={playAnim}
-          onPlay={setPlayAnim}
+          playAnim={selectedPlayAnim}
+          onPlay={onPlayForSelected}
           onClose={() => setInternalSelected(null)}
         />
       )}
@@ -764,8 +765,7 @@ function ActiveModels({
   layouts,
   mounted,
   onMountedChange,
-  selectedIndex,
-  playAnim,
+  playing,
   onAnimInfo,
   loadAll = false,
   groundY,
@@ -774,8 +774,7 @@ function ActiveModels({
   layouts: PackLayout[];
   mounted: Slot[];
   onMountedChange: (next: Slot[] | ((prev: Slot[]) => Slot[])) => void;
-  selectedIndex: number | null;
-  playAnim: string | null;
+  playing: { slotIndex: number; name: string } | null;
   onAnimInfo: (slotIndex: number, info: AnimationInfo | null) => void;
   loadAll?: boolean;
   groundY: number;
@@ -871,7 +870,7 @@ function ActiveModels({
               slot={slot}
               groundY={groundY}
               playAnimation={
-                selectedIndex === slot.index ? playAnim ?? undefined : undefined
+                playing?.slotIndex === slot.index ? playing.name : undefined
               }
               onAnimInfo={onAnimInfo}
             />

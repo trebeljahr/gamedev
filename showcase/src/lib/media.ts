@@ -238,9 +238,9 @@ const EMPTY_CATALOG: SlimMediaCatalog = {
   sources: {},
 };
 
-const isServer = typeof window === "undefined";
 let _catalog: SlimMediaCatalog = EMPTY_CATALOG;
-if (isServer) {
+// Inline guards let Next eliminate Node imports from browser bundles.
+if (typeof window === "undefined") {
   // eslint-disable-next-line @typescript-eslint/no-require-imports
   const fs = require("node:fs") as typeof import("node:fs");
   // eslint-disable-next-line @typescript-eslint/no-require-imports
@@ -498,24 +498,26 @@ const artPackCache = new Map<string, ArtPack | null>();
  * client; landing pages with their own base URL consume the raw form.
  */
 export function findArtPack(folder: string): ArtPack | undefined {
-  if (!isServer) return undefined;
-  if (!artPackSummaries.some((summary) => summary.folder === folder)) return undefined;
-  if (artPackCache.has(folder)) return artPackCache.get(folder) ?? undefined;
+  if (typeof window === "undefined") {
+    if (!artPackSummaries.some((summary) => summary.folder === folder)) return undefined;
+    if (artPackCache.has(folder)) return artPackCache.get(folder) ?? undefined;
 
-  // eslint-disable-next-line @typescript-eslint/no-require-imports
-  const fs = require("node:fs") as typeof import("node:fs");
-  // eslint-disable-next-line @typescript-eslint/no-require-imports
-  const path = require("node:path") as typeof import("node:path");
-  const file = path.join(process.cwd(), "public", "media-catalog", "packs", `${packFileSlug(folder)}.json`);
-  let pack: ArtPack | null = null;
-  try {
-    const raw = fs.readFileSync(file, "utf8");
-    pack = JSON.parse(raw) as ArtPack;
-  } catch {
-    pack = null;
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    const fs = require("node:fs") as typeof import("node:fs");
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    const path = require("node:path") as typeof import("node:path");
+    const file = path.join(process.cwd(), "public", "media-catalog", "packs", `${packFileSlug(folder)}.json`);
+    let pack: ArtPack | null = null;
+    try {
+      const raw = fs.readFileSync(file, "utf8");
+      pack = JSON.parse(raw) as ArtPack;
+    } catch {
+      pack = null;
+    }
+    artPackCache.set(folder, pack);
+    return pack ?? undefined;
   }
-  artPackCache.set(folder, pack);
-  return pack ?? undefined;
+  return undefined;
 }
 
 /** Rewrites `samples[].src` through `assetUrl`. Used by API route handlers. */

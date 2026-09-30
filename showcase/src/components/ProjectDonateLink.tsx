@@ -6,7 +6,7 @@ type Props = ComponentPropsWithoutRef<"a"> & { href: string };
 
 /** Keep the current page, including filters and hash, through donation checkout. */
 export function ProjectDonateLink({ href, ...props }: Props) {
-	const donationHref = import.meta.env.DEV
+	const donationHref = process.env.NODE_ENV === "development"
 		? href.replace(/^https:\/\/ricos\.site(?=\/|$)/, "http://localhost:3713")
 		: href;
 
