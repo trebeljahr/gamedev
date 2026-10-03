@@ -45,6 +45,9 @@ jobs:
       - name: Release and drain contract tests
         run: node --test scripts/release.test.mjs
 
+      - name: Verify retained download objects before publishing an image
+        run: node showcase/scripts/check-download-artifacts.mjs --remote
+
       - uses: docker/setup-buildx-action@v3
 
       - uses: docker/login-action@v3

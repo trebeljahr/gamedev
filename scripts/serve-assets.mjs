@@ -21,6 +21,7 @@ import { fileURLToPath } from "node:url";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 const ROOT = resolve(process.env.ASSETS_DIR ?? join(__dirname, "..", "assets"));
+const DOWNLOADS_ROOT = process.env.DOWNLOAD_ARTIFACTS_DIR ? resolve(process.env.DOWNLOAD_ARTIFACTS_DIR) : null;
 const PORT = Number.parseInt(process.env.PORT ?? "9412", 10);
 const HOST = process.env.HOST ?? "127.0.0.1";
 
@@ -65,6 +66,11 @@ const REWRITES = /** @type {Record<string, string>} */ ({
 function safeResolve(reqPath) {
   const decoded = decodeURIComponent(reqPath.replace(/^\/+/, ""));
   if (!decoded) return null;
+  if (decoded.startsWith("downloads/v1/") && DOWNLOADS_ROOT) {
+    const relative = decoded.slice("downloads/v1/".length);
+    if (!/^[a-f0-9]{64}\/[a-z0-9._-]+$/i.test(relative)) return null;
+    return join(DOWNLOADS_ROOT, relative);
+  }
   const [head, ...rest] = decoded.split("/");
   // Top-level prefix lookup so `/glb/foo.glb` and `/raw/bar.gltf` stay
   // structurally explicit; everything else falls through to the literal
@@ -106,6 +112,7 @@ const server = http.createServer(async (req, res) => {
       return;
     }
 
+    const downloadHeaders = url.startsWith("/downloads/v1/") ? { "Content-Disposition": "attachment" } : {};
     const mime =
       MIME[/** @type {keyof typeof MIME} */ (extname(path).toLowerCase())] ??
       "application/octet-stream";
@@ -129,6 +136,7 @@ const server = http.createServer(async (req, res) => {
         }
         res.writeHead(206, {
           ...CORS_HEADERS,
+          ...downloadHeaders,
           "Content-Type": mime,
           "Content-Range": `bytes ${start}-${end}/${stats.size}`,
           "Accept-Ranges": "bytes",
@@ -146,6 +154,7 @@ const server = http.createServer(async (req, res) => {
 
     res.writeHead(200, {
       ...CORS_HEADERS,
+      ...downloadHeaders,
       "Content-Type": mime,
       "Content-Length": String(stats.size),
       "Accept-Ranges": "bytes",

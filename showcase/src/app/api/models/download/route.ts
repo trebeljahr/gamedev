@@ -1,62 +1,21 @@
-import { assetUrl, downloadsForModel, manifest } from "@/lib/manifest";
+import { downloadsForModel, manifest } from "@/lib/manifest";
+import { downloadCatalog } from "@/lib/download-catalog";
+import { redirectDownload } from "@/lib/durable-download";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-const ALLOWED_PREFIXES = ["/glb/", "/raw/"];
-
-function isCatalogDownload(file: string): boolean {
-  return manifest.packs.some((pack) =>
-    pack.models.some((model) => model.file === file || downloadsForModel(model).some((download) => download.file === file)),
-  );
-}
-
-function fallbackName(file: string): string {
-  const path = file.split(/[?#]/, 1)[0];
-  const last = path.split("/").filter(Boolean).pop() ?? "model";
-  try {
-    return decodeURIComponent(last);
-  } catch {
-    return last;
-  }
-}
-
-function attachmentName(value: string): string {
-  return value.replace(/[\\"]/g, "_").replace(/[\r\n]/g, " ").slice(0, 140) || "model";
-}
-
 export async function GET(req: Request) {
   const url = new URL(req.url);
   const file = url.searchParams.get("file") ?? "";
-  const name = url.searchParams.get("name") ?? fallbackName(file);
-
-  if (!ALLOWED_PREFIXES.some((prefix) => file.startsWith(prefix))) {
+  if (!file.startsWith("/glb/") && !file.startsWith("/raw/")) {
     return new Response("unsupported asset path", { status: 400 });
   }
-  if (!isCatalogDownload(file)) {
-    return new Response("asset download not available", { status: 404 });
-  }
-
-  const upstream = assetUrl(file);
-  const upstreamUrl = upstream.startsWith("/") ? new URL(upstream, req.url).toString() : upstream;
-  let res: Response;
-  try {
-    res = await fetch(upstreamUrl);
-  } catch {
-    return new Response("asset fetch failed", { status: 502 });
-  }
-  if (!res.ok) {
-    return new Response(`asset fetch failed: ${res.status}`, {
-      status: res.status === 404 ? 404 : 502,
-    });
-  }
-
-  const headers = new Headers();
-  headers.set("Content-Type", res.headers.get("Content-Type") ?? "application/octet-stream");
-  headers.set("Content-Disposition", `attachment; filename="${attachmentName(name)}"`);
-  headers.set("Cache-Control", "public, max-age=86400");
-  const length = res.headers.get("Content-Length");
-  if (length) headers.set("Content-Length", length);
-
-  return new Response(res.body, { headers });
+  const allowed = manifest.packs.some((pack) =>
+    pack.models.some((model) => model.file === file || downloadsForModel(model).some((d) => d.file === file)),
+  );
+  if (!allowed) return new Response("asset download not available", { status: 404 });
+  const artifacts = downloadCatalog.models[file];
+  const artifact = artifacts?.find((item) => item.filename === url.searchParams.get("name")) ?? artifacts?.[0];
+  return redirectDownload(req, artifact, process.env.NEXT_PUBLIC_ASSETS_BASE_URL ?? "");
 }
