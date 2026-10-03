@@ -147,3 +147,6 @@ venv/
 # Each worktree picks its own preview port to avoid collisions across
 # parallel previews. Copy .claude/launch.json.example as a starter.
 .claude/launch.json
+
+# Generated immutable image identity.
+/showcase/public/version.json

@@ -3,11 +3,11 @@
 # pushed to GHCR; Coolify pulls it and (re)starts the service when
 # the workflow's deploy webhook fires.
 #
-# To pin a specific version, change the tag below from `latest` to a
-# git sha, semver tag, or whatever your release process uses.
+# Retained solely as the legacy rollback target during Image-app migration.
+# Keep this exact pre-migration digest until the legacy app is retired.
 services:
   app:
-    image: ghcr.io/trebeljahr/gamedev:latest
+    image: ghcr.io/trebeljahr/gamedev@sha256:ddd43ef776d9ed8e33c15cfb033ccdfdec3bf3f58ebc371f98d75aa1e712e2c7
     # Force a registry pull on every `compose up`, otherwise Coolify
     # happily reuses a previously-cached `:latest` whose digest hasn't
     # been refreshed in this engine's image store. The deploy webhook

@@ -10,6 +10,9 @@ const plausibleScriptUrl =
   "https://plausible.trebeljahr.com/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js";
 
 export const metadata: Metadata = {
+  other: process.env.NEXT_PUBLIC_BUILD_COMMIT
+    ? { "build-commit": process.env.NEXT_PUBLIC_BUILD_COMMIT }
+    : {},
   metadataBase: new URL(SITE_URL),
   applicationName: SITE_NAME,
   title: {

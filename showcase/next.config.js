@@ -54,6 +54,7 @@ function ensureSingleDevServer(isDevServer) {
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: false,
+  deploymentId: process.env.NEXT_DEPLOYMENT_ID,
   turbopack: {
     resolveAlias: {
       three: "./node_modules/three",
@@ -61,6 +62,10 @@ const nextConfig = {
   },
   async headers() {
     return [
+      {
+        source: "/version.json",
+        headers: [{ key: "Cache-Control", value: "no-store, max-age=0" }],
+      },
       {
         source: `/:path*.:ext(${IMMUTABLE_BINARY_ASSET_EXTENSIONS})`,
         headers: [

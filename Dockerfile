@@ -8,7 +8,7 @@
 #   /.env.production   dotenvx-encrypted, decrypted in-memory at build + runtime
 #
 # Built by .github/workflows/deploy.yml, pushed to GHCR, pulled by
-# Coolify via docker-compose.yml.
+# Coolify as a Docker Image application after migration.
 #
 # Differs from the stock hatchkit Next.js template in three ways:
 #   1. `pnpm install` happens at the workspace root with showcase/'s
@@ -44,6 +44,11 @@ RUN pnpm install --frozen-lockfile
 # Source
 COPY . .
 
+ARG DEPLOYMENT_ID
+ENV NEXT_DEPLOYMENT_ID=${DEPLOYMENT_ID}
+ENV NEXT_PUBLIC_BUILD_COMMIT=${DEPLOYMENT_ID}
+RUN node scripts/write-version.mjs showcase/public
+
 # Validate that the BuildKit secret was supplied. Split into its own
 # RUN step so a missing-secret failure doesn't get drowned out by a
 # later `next build` echo.
@@ -56,7 +61,7 @@ RUN --mount=type=secret,id=dotenvx_private_key,env=DOTENV_PRIVATE_KEY_PRODUCTION
 # Decrypt .env.production in memory, re-export each KEY=VALUE for
 # `pnpm build`. next build bakes NEXT_PUBLIC_* into the client bundle.
 RUN --mount=type=secret,id=dotenvx_private_key,env=DOTENV_PRIVATE_KEY_PRODUCTION \
-    pnpm dlx @dotenvx/dotenvx run -- pnpm --filter 3d-assets-showcase build
+    pnpm dlx @dotenvx/dotenvx@1.64.0 run -- pnpm --filter 3d-assets-showcase build
 
 # ---------------------------------------------------------------------------
 # Runtime — `next start` on PORT=3000.
@@ -64,12 +69,23 @@ RUN --mount=type=secret,id=dotenvx_private_key,env=DOTENV_PRIVATE_KEY_PRODUCTION
 FROM node:${NODE_VERSION}-bookworm-slim AS runtime
 WORKDIR /app
 
+# curl for Coolify's health check. Coolify probes the container by
+# running `curl … || wget … || exit 1` INSIDE it, in place of any
+# HEALTHCHECK here, and bookworm-slim ships neither. Without one the
+# probe can never pass and every deploy is rolled back. With it, a
+# deploy is a rolling update: the old container serves until this one
+# is healthy.
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends curl \
+  && rm -rf /var/lib/apt/lists/*
+
 ENV NODE_ENV=production
 ENV PORT=3000
+ENV HOSTNAME=0.0.0.0
 
 # dotenvx isn't in package.json — install it globally so the CMD can
 # decrypt .env.production at startup.
-RUN npm install -g @dotenvx/dotenvx@latest \
+RUN npm install -g @dotenvx/dotenvx@1.64.0 \
     && npm cache clean --force
 
 # Workspace metadata + hoisted deps. pnpm symlinks showcase's
@@ -87,17 +103,26 @@ COPY --from=build /app/showcase/package.json ./showcase/package.json
 COPY --from=build /app/showcase/next.config.js ./showcase/next.config.js
 COPY --from=build /app/showcase/node_modules ./showcase/node_modules
 COPY --from=build /app/showcase/.next ./showcase/.next
-# showcase/ has no public/ today — add a `COPY --from=build /app/showcase/public ./showcase/public`
-# line above if you add one. `next start` tolerates its absence.
+COPY --chmod=755 drain-entrypoint.sh /usr/local/bin/drain-entrypoint
+COPY drain.cjs /usr/local/lib/drain.cjs
+COPY --from=build /app/showcase/public ./showcase/public
 
 WORKDIR /app/showcase
+ENV SHUTDOWN_DRAIN_SECONDS=20
+ENV HEALTH_CHECK_PATH=/
+STOPSIGNAL SIGTERM
+ENTRYPOINT ["/usr/local/bin/drain-entrypoint"]
+
+# Next writes image and incremental-render caches at runtime.
+RUN mkdir -p /app/showcase/.next/cache && chown -R node:node /app/showcase/.next
+USER node
 
 EXPOSE 3000
 
-HEALTHCHECK --interval=30s --timeout=10s --start-period=30s --retries=5 \
+HEALTHCHECK --interval=2s --timeout=5s --start-period=30s --retries=5 \
   CMD node -e "require('http').get('http://127.0.0.1:3000/',r=>{process.exit(r.statusCode<400?0:1)}).on('error',()=>process.exit(1))"
 
 # dotenvx reads /app/.env.production (one level up — `-f` makes the
 # path explicit so the working-directory move doesn't break it).
 # `next` resolves out of showcase/node_modules via pnpm's symlink farm.
-CMD ["dotenvx", "run", "-f", "/app/.env.production", "--", "./node_modules/.bin/next", "start", "--port", "3000"]
+CMD ["dotenvx", "run", "-f", "/app/.env.production", "--", "node", "--require", "/usr/local/lib/drain.cjs", "./node_modules/next/dist/bin/next", "start", "--port", "3000"]
