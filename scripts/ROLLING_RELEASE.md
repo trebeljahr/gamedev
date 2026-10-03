@@ -35,3 +35,12 @@ Validation: `node --test scripts/release.test.mjs`; `node scripts/verify-release
 <full-sha>`. The latter requires 16 consecutive matching version and HTML samples,
 separated by 2 seconds. A successful webhook response alone never proves a
 release finished.
+
+## Download verification gate
+
+The model-download endpoint proxies upstream asset bodies. The pack ZIP endpoint
+fetches a pack's models and streams a generated archive. Either request can
+outlast Coolify's 30-second stop deadline. The drain tests verify bounded accepted
+requests; they do not certify uninterrupted large downloads. Keep automatic
+rollouts disabled until a realistic long-download cutover passes or those
+responses move to resumable delivery that survives a web-container replacement.
