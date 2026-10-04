@@ -39,5 +39,6 @@
   },
   "localDev": {
     "slug": "gamedev"
-  }
+  },
+  "coolifyRuntime": "image"
 }

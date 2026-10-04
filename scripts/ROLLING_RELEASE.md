@@ -44,3 +44,13 @@ outlast Coolify's 30-second stop deadline. The drain tests verify bounded accept
 requests; they do not certify uninterrupted large downloads. Keep automatic
 rollouts disabled until a realistic long-download cutover passes or those
 responses move to resumable delivery that survives a web-container replacement.
+
+## Current runtime
+
+Production runs as the Coolify Docker Image app `emmze606u6pn9zxpdyzpj80s`.
+The stopped Compose app `sqfl8zi2uuwni5cflrmzxwax` (`gamedev-legacy-compose`)
+is the rollback resource. Its Git source is pinned to
+`68dae74143a9665f992f49a3ee71cb35647027ec`, whose `docker-compose.yml` holds the
+pre-migration digest. Its auto-deploy is off. Release by setting the Image app's
+tag to a full-SHA build's digest and deploying that app; never redeploy the
+legacy app while the Image app serves.
