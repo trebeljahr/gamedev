@@ -59,12 +59,16 @@ Before promotion, the controller hashes the target manifest bytes and config,
 checks Linux amd64 and the full OCI revision, matches the full-SHA tag to the
 reviewed digest, and verifies the public baseline against current `latest`. It
 copies the reviewed manifest bytes to `latest`, reads back the digest, and sends
-one signed hook. Queue acceptance must identify this app and one deployment UUID.
+one signed hook. A read-back that still shows the previous manifest is repeated
+for four seconds, because a registry read can lag its write. Queue acceptance
+must identify this app and one deployment UUID.
 
 Public verification requires the homepage and uncached `/version.json` to name
-the same full commit for 16 consecutive samples, 2 seconds apart. This is HTTP
-evidence; `http-verified` is not a claim that the Coolify job finished or that
-the old container retired. Inspect the exact Coolify deployment for that.
+the same full commit for 16 consecutive samples, 2 seconds apart. It waits up to
+nine minutes for that, because the old build keeps answering until the new image
+is pulled, started and the old container has drained. This is HTTP evidence;
+`http-verified` is not a claim that the Coolify job finished or that the old
+container retired. Inspect the exact Coolify deployment for that.
 
 `rolling-started` and `rolling-verified` must both agree with current `latest`
 before another run can mutate anything. A crash, unknown hook outcome, external
