@@ -63,7 +63,8 @@ assets.gamedev.trebeljahr.com, unchanged.
    `cli/src/templates/client-host/scripts/carry-static.mjs`.
 2. `wrangler versions upload --tag <sha>`. Nothing is live yet. (A Worker
    that was never deployed refuses `versions upload`; the job then uses
-   `wrangler deploy`, which only happens before the route exists.)
+   `wrangler deploy`, which only happens before the route exists. The
+   `first-deploy` dispatch forces that path if the deployment list errors.)
 3. Deploy job, when `GAMEDEV_WORKER_MODE=automatic` or on a `deploy` dispatch:
    `wrangler versions deploy <version>@100%`, then
    `scripts/verify-release.mjs` waits until `/version.json` and the homepage
