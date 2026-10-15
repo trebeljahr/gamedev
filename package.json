@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "node scripts/dev.mjs",
     "build": "pnpm --filter 3d-assets-showcase build",
-    "start": "pnpm --filter 3d-assets-showcase start",
+    "preview": "wrangler dev --port 3679",
     "lint": "pnpm --filter 3d-assets-showcase lint",
     "catalog:check": "pnpm --filter 3d-assets-showcase catalog:check",
     "catalog:refresh": "pnpm --filter 3d-assets-showcase catalog:refresh",
@@ -18,5 +18,8 @@
     "assets:sync": "dotenvx run -f .env.production -f .env.local --ignore=MISSING_ENV_FILE --overload --quiet -- bash scripts/sync-assets.sh",
     "assets:sync:dry": "dotenvx run -f .env.production -f .env.local --ignore=MISSING_ENV_FILE --overload --quiet -- bash scripts/sync-assets.sh --dry-run"
   },
-  "packageManager": "pnpm@11.1.2+sha512.415a1cc25974731e75455c1468371be74c5aa5fb7621b50d4056d222451609f11412f23fd602e6169f1e060466641f798597e1be961a10688836a67b16569499"
+  "packageManager": "pnpm@11.1.2+sha512.415a1cc25974731e75455c1468371be74c5aa5fb7621b50d4056d222451609f11412f23fd602e6169f1e060466641f798597e1be961a10688836a67b16569499",
+  "devDependencies": {
+    "wrangler": "4.145.0"
+  }
 }

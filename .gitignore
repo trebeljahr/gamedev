@@ -150,3 +150,6 @@ venv/
 
 # Generated immutable image identity.
 /showcase/public/version.json
+
+# wrangler dev / deploy state
+.wrangler/

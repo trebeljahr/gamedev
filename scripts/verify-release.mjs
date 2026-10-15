@@ -5,11 +5,11 @@ const ORIGIN = "https://gamedev.trebeljahr.com";
 const ALIASES = [];
 const pause = (ms) => new Promise((done) => setTimeout(done, ms));
 
-// This proves which build public HTTP serves. The deployment operator must
-// also inspect Coolify's exact deployment and running container image digest.
-// After the hook the old build keeps answering until the new image is pulled,
-// passes its start period and the old container has drained. The wait is nine
-// minutes, bounded by time so slow requests cannot extend it.
+// This proves which build public HTTP serves: /version.json and the homepage
+// `build-commit` meta must both name the commit for 16 samples in a row. A
+// Worker version is live within seconds of `wrangler versions deploy`, but the
+// edge may answer from cache briefly. The wait is bounded by time (nine
+// minutes) so slow requests cannot extend it.
 export async function verifyRelease(
   commit,
   {

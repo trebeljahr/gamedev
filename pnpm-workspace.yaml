@@ -3,17 +3,20 @@ packages:
   - packages/asset-mcp
 # pnpm 11 errors on ignored build scripts (strictDepBuilds=true by
 # default). sharp powers next/image runtime image optimization;
-# esbuild and unrs-resolver are pulled in by the toolchain. Approve
+# esbuild and unrs-resolver are pulled in by the toolchain; workerd is
+# wrangler's local runtime (`wrangler dev`). Approve
 # them so install completes cleanly. pnpm 11.1+ reads `allowBuilds`; the older
 # `onlyBuiltDependencies` is kept for back-compat.
 allowBuilds:
   esbuild: true
   sharp: true
   unrs-resolver: true
+  workerd: true
 onlyBuiltDependencies:
   - esbuild
   - sharp
   - unrs-resolver
+  - workerd
 
 overrides:
   "@babel/core@7": "7.29.6"

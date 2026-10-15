@@ -1,6 +1,16 @@
-# Candidate builds never move a live tag. Deployment requires explicit activation.
-# GAMEDEV_ROLLOUT_MODE: unset/off, manual, or automatic. See scripts/ROLLING_RELEASE.md.
-name: Build & Release
+# Builds the static export and serves it from the Cloudflare Worker `gamedev`
+# (Workers static assets, no Worker script). See docs/cloudflare-hosting.md.
+#
+# build:  export, carry the previous releases' hashed files, then
+#         `wrangler versions upload`. Nothing goes live in this job.
+# deploy: `wrangler versions deploy <version>@100%`, then check that
+#         https://gamedev.trebeljahr.com/version.json names this commit.
+#
+# GAMEDEV_WORKER_MODE (repository variable) gates deploy on push:
+#   automatic  every push to main goes live after its build
+#   unset/off  pushes only upload; a `deploy` dispatch activates
+# `rollback` activates an earlier uploaded version (see `wrangler versions list`).
+name: Build & Deploy
 
 on:
   push:
@@ -8,20 +18,12 @@ on:
   workflow_dispatch:
     inputs:
       operation:
-        description: Build, deploy a reviewed image, or verify a release
+        description: deploy (build, upload, activate) or rollback (activate an uploaded version)
         type: choice
-        options: [build, deploy, verify]
-        default: build
-      target_sha:
-        description: Full commit SHA required for deploy or verify
-        type: string
-        required: false
-      image_digest:
-        description: Exact sha256 image digest from the build artifact (deploy only)
-        type: string
-        required: false
-      expected_current_digest:
-        description: Reviewed current latest digest (deploy only)
+        options: [deploy, rollback]
+        default: deploy
+      version_id:
+        description: Worker version id to activate (rollback only)
         type: string
         required: false
 
@@ -34,140 +36,108 @@ concurrency:
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+  SITE: https://gamedev.trebeljahr.com
 
 jobs:
   build:
-    outputs:
-      digest: ${{ steps.image.outputs.digest }}
-    if: github.repository == 'trebeljahr/gamedev' && github.ref == 'refs/heads/main' && inputs.operation != 'verify' && inputs.operation != 'deploy'
+    if: github.repository == 'trebeljahr/gamedev' && github.ref == 'refs/heads/main' && inputs.operation != 'rollback'
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
+    timeout-minutes: 45
+    outputs:
+      version_id: ${{ steps.upload.outputs.version_id }}
     steps:
       - uses: actions/checkout@v5
+
+      - uses: pnpm/action-setup@v4
 
       - uses: actions/setup-node@v6
         with:
           node-version: "24"
+          cache: pnpm
 
-      - name: Release, drain and rollout contract tests
-        run: node --test scripts/release.test.mjs scripts/rolling-release.test.mjs
+      - run: pnpm install --frozen-lockfile
 
-      - name: Verify retained download objects before publishing an image
+      - name: Release and download contract tests
+        run: |
+          node --test scripts/release.test.mjs
+          (cd showcase && node --import tsx --test scripts/durable-download.test.ts)
+
+      - name: Verify retained download objects before publishing
         run: node showcase/scripts/check-download-artifacts.mjs --remote
 
-      - uses: docker/setup-buildx-action@v3
-
-      - uses: docker/login-action@v3
-        with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-
-      - id: meta
-        uses: docker/metadata-action@v5
-        with:
-          images: ghcr.io/trebeljahr/gamedev
-          flavor: latest=false
-          tags: |
-            type=raw,value=${{ github.sha }}
-
-      - id: image
-        uses: docker/build-push-action@v6
-        with:
-          context: .
-          push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
-          platforms: linux/amd64
-          # Next's skew protection id, see the Dockerfile.
-          build-args: |
-            DEPLOYMENT_ID=${{ github.sha }}
-          # BuildKit secret for decrypting .env.production at build
-          # time. Mounted as tmpfs inside the Dockerfile's RUN step,
-          # never written to a layer or `docker history`. The Dockerfile
-          # exposes it as the DOTENV_PRIVATE_KEY_PRODUCTION env var for
-          # `dotenvx run -- pnpm build`, which decrypts in memory and
-          # bakes NEXT_PUBLIC_* / VITE_* values into the bundle.
-          secrets: |
-            dotenvx_private_key=${{ secrets.DOTENV_PRIVATE_KEY_PRODUCTION }}
-
-      - name: Record immutable release identity
+      # .env.production is dotenvx-encrypted; it holds the public asset origin
+      # (NEXT_PUBLIC_ASSETS_BASE_URL) that the export bakes into the pages.
+      - name: Build the static export
         env:
-          IMAGE: ghcr.io/trebeljahr/gamedev
-          IMAGE_DIGEST: ${{ steps.image.outputs.digest }}
+          DOTENV_PRIVATE_KEY_PRODUCTION: ${{ secrets.DOTENV_PRIVATE_KEY_PRODUCTION }}
+          NEXT_DEPLOYMENT_ID: ${{ github.sha }}
+          NEXT_PUBLIC_BUILD_COMMIT: ${{ github.sha }}
+          NEXT_TELEMETRY_DISABLED: "1"
         run: |
-          node --input-type=module <<'NODE'
-          import { writeFileSync } from 'node:fs';
-          const { GITHUB_SHA: commit, IMAGE: image, IMAGE_DIGEST: digest } = process.env;
-          if (!/^[a-f0-9]{40}$/.test(commit) || !/^sha256:[a-f0-9]{64}$/.test(digest)) {
-            throw new Error('Build did not provide a full commit and image digest.');
-          }
-          writeFileSync('release.json', JSON.stringify({ commit, image, digest, reference: `${image}@${digest}` }, null, 2) + '\n');
-          NODE
+          node scripts/write-version.mjs showcase/public
+          pnpm dlx @dotenvx/dotenvx@1.64.0 run -f .env.production -- pnpm build
 
-      - uses: actions/upload-artifact@v4
-        with:
-          name: release-${{ github.sha }}-${{ github.run_id }}-${{ github.run_attempt }}
-          path: release.json
-          if-no-files-found: error
+      # A Worker version serves only its own files; tabs opened before this
+      # deploy still ask for the previous releases' chunks.
+      - name: Carry the previous releases' hashed files
+        run: node scripts/carry-static.mjs --site "$SITE" --out showcase/out --release "$GITHUB_SHA"
 
-  # This only observes public HTTP responses. It never queues a deployment,
-  # changes a registry tag, or treats a webhook commit as proof of image identity.
-  verify:
-    if: github.repository == 'trebeljahr/gamedev' && github.ref == 'refs/heads/main' && github.event_name == 'workflow_dispatch' && inputs.operation == 'verify'
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-    permissions:
-      contents: read
-    steps:
-      - uses: actions/checkout@v5
-      - uses: actions/setup-node@v6
-        with:
-          node-version: '24'
-      - name: Verify the serving commit
+      - name: Upload a new Worker version (not live yet)
+        id: upload
         env:
-          EXPECTED_SHA: ${{ inputs.target_sha }}
-        run: node scripts/verify-release.mjs "$EXPECTED_SHA"
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          set -o pipefail
+          # Any failure here stops the job: only a confirmed empty list may
+          # take the one-step path below.
+          pnpm exec wrangler deployments list --json > deployments.json
+          deployments=$(node -p 'JSON.parse(require("fs").readFileSync("deployments.json","utf8")).length')
+          if [ "$deployments" -gt 0 ]; then
+            pnpm exec wrangler versions upload --tag "$GITHUB_SHA" --message "gamedev $GITHUB_SHA" | tee upload.log
+          else
+            # Cloudflare refuses `versions upload` for a Worker that was never
+            # deployed. This only happens before the zone route exists, so the
+            # one-step deploy reaches no visitor.
+            echo "::warning::Worker has no deployment yet; first upload uses wrangler deploy."
+            pnpm exec wrangler deploy --tag "$GITHUB_SHA" --message "gamedev $GITHUB_SHA" | tee upload.log
+          fi
+          version_id=$(grep -oE 'Version ID: *[0-9a-f-]{36}' upload.log | grep -oE '[0-9a-f-]{36}' | tail -1)
+          if [ -z "$version_id" ]; then echo "No version id in wrangler output." >&2; exit 1; fi
+          echo "version_id=$version_id" >> "$GITHUB_OUTPUT"
+          echo "Uploaded Worker version $version_id for $GITHUB_SHA" >> "$GITHUB_STEP_SUMMARY"
 
-  # The only writer of latest and the rolling-* journal tags. A push releases
-  # the image its own build job produced; a dispatch releases a reviewed one.
   deploy:
     needs: build
     if: >-
       always() && !cancelled() &&
       github.repository == 'trebeljahr/gamedev' && github.ref == 'refs/heads/main' &&
-      ((github.event_name == 'push' && vars.GAMEDEV_ROLLOUT_MODE == 'automatic' && needs.build.result == 'success') ||
-       (github.event_name == 'workflow_dispatch' && inputs.operation == 'deploy'))
+      ((github.event_name == 'push' && vars.GAMEDEV_WORKER_MODE == 'automatic' && needs.build.result == 'success') ||
+       (github.event_name == 'workflow_dispatch' && inputs.operation == 'deploy' && needs.build.result == 'success') ||
+       (github.event_name == 'workflow_dispatch' && inputs.operation == 'rollback'))
     runs-on: ubuntu-latest
-    timeout-minutes: 30
-    permissions:
-      contents: read
-      packages: write
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v5
+
+      - uses: pnpm/action-setup@v4
+
       - uses: actions/setup-node@v6
         with:
-          node-version: '24'
-      - name: Promote, queue this app, and verify the release
+          node-version: "24"
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Activate the version
         env:
-          ROLLOUT_MODE: ${{ vars.GAMEDEV_ROLLOUT_MODE }}
-          TARGET_SHA: ${{ github.event_name == 'push' && github.sha || inputs.target_sha }}
-          TARGET_DIGEST: ${{ github.event_name == 'push' && needs.build.outputs.digest || inputs.image_digest }}
-          EXPECTED_CURRENT_DIGEST: ${{ inputs.expected_current_digest }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          COOLIFY_BASE_URL: ${{ secrets.COOLIFY_BASE_URL }}
-          COOLIFY_RESOURCE_UUID: ${{ secrets.COOLIFY_RESOURCE_UUID }}
-          COOLIFY_DEPLOY_SECRET: ${{ secrets.COOLIFY_DEPLOY_SECRET }}
-          COOLIFY_DEPLOY_REPOSITORY: ${{ secrets.COOLIFY_DEPLOY_REPOSITORY }}
-          COOLIFY_DEPLOY_BRANCH: ${{ secrets.COOLIFY_DEPLOY_BRANCH }}
-        run: node scripts/rolling-release.mjs
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: rollout-${{ github.run_id }}-${{ github.run_attempt }}
-          path: rollout.json
-          if-no-files-found: warn
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          VERSION_ID: ${{ inputs.operation == 'rollback' && inputs.version_id || needs.build.outputs.version_id }}
+        run: |
+          if ! [[ "$VERSION_ID" =~ ^[0-9a-f-]{36}$ ]]; then echo "Expected a Worker version id, got '$VERSION_ID'." >&2; exit 1; fi
+          pnpm exec wrangler versions deploy "$VERSION_ID@100%" --yes --message "gamedev ${{ github.event_name }} $GITHUB_SHA"
+
+      - name: Verify the serving commit
+        if: inputs.operation != 'rollback'
+        run: node scripts/verify-release.mjs "$GITHUB_SHA"

@@ -11,7 +11,7 @@
   "mlServices": [],
   "s3Provider": "existing",
   "deployTarget": "existing",
-  "deploymentMode": "coolify",
+  "deploymentMode": "cloudflare",
   "ports": {
     "server": 3000,
     "client": 3001
@@ -39,6 +39,5 @@
   },
   "localDev": {
     "slug": "gamedev"
-  },
-  "coolifyRuntime": "image"
+  }
 }

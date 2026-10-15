@@ -1,6 +1,4 @@
 import assert from "node:assert/strict";
-import { spawn } from "node:child_process";
-import { once } from "node:events";
 import { mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
@@ -139,84 +137,4 @@ test("verification stops at its time budget when requests are slow", async () =>
     /Release did not remain healthy/,
   );
   assert.equal(http.requests.length, 9);
-});
-
-test("entrypoint bypasses wrapper signals and finishes in-flight work after the drain", {
-  timeout: 10000,
-}, async () => {
-  const directory = mkdtempSync(join(tmpdir(), "gamedev-drain-"));
-  const server = join(directory, "server.mjs");
-  const wrapper = join(directory, "wrapper.mjs");
-  const pidfile = join(directory, "drain.pid");
-  writeFileSync(
-    server,
-    `
-    import { createServer } from 'node:http';
-    const server = createServer((request, response) => {
-      if (request.url === '/slow') {
-        response.writeHead(200);
-        response.write('accepted\\n');
-        setTimeout(() => response.end('completed\\n'), 1300);
-      } else response.end('ok');
-    });
-    server.listen(0, '127.0.0.1', () => console.log('PORT=' + server.address().port));
-    process.once('SIGTERM', () => server.close(() => process.exit(7)));
-  `,
-  );
-  writeFileSync(
-    wrapper,
-    `
-    import { spawn } from 'node:child_process';
-    const child = spawn(process.execPath, ['--require', process.argv[2], process.argv[3]], { stdio: 'inherit' });
-    process.on('SIGTERM', () => { child.kill('SIGKILL'); process.exit(99); });
-    child.on('exit', code => process.exit(code ?? 98));
-  `,
-  );
-  const child = spawn(
-    "sh",
-    [join(ROOT, "drain-entrypoint.sh"), process.execPath, wrapper, join(ROOT, "drain.cjs"), server],
-    {
-      env: {
-        PATH: process.env.PATH,
-        SHUTDOWN_DRAIN_SECONDS: "0.3",
-        HEALTH_CHECK_PATH: "/",
-        HATCHKIT_DRAIN_PIDFILE: pidfile,
-      },
-      stdio: ["ignore", "pipe", "pipe"],
-    },
-  );
-  const exited = once(child, "exit");
-  let output = "";
-  child.stdout.on("data", (data) => {
-    output += data;
-  });
-  child.stderr.on("data", (data) => {
-    output += data;
-  });
-  try {
-    for (let attempt = 0; !output.includes("PORT=") && attempt < 100; attempt += 1) await sleep(20);
-    const port = output.match(/PORT=(\d+)/)?.[1];
-    assert.ok(port, `Fixture did not start: ${output}`);
-    const base = `http://127.0.0.1:${port}`;
-    const options = { signal: AbortSignal.timeout(5000) };
-    assert.equal((await fetch(`${base}/`, options)).status, 200);
-    const accepted = await fetch(`${base}/slow`, options);
-    const started = Date.now();
-    child.kill("SIGTERM");
-    await sleep(80);
-    assert.equal((await fetch(`${base}/?probe=1`, options)).status, 503);
-    assert.equal((await fetch(`${base}/gallery-3d`, options)).status, 200);
-    assert.equal(await accepted.text(), "accepted\ncompleted\n");
-    assert.ok(Date.now() - started > 900, "In-flight request must outlast the drain.");
-    assert.deepEqual(await exited, [7, null], "App exit status must survive both wrappers.");
-  } finally {
-    try {
-      process.kill(Number(readFileSync(pidfile, "utf8")), "SIGKILL");
-    } catch {
-      /* Fixture already stopped. */
-    }
-    child.kill("SIGKILL");
-    await exited;
-    rmSync(directory, { recursive: true, force: true });
-  }
 });
