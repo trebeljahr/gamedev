@@ -6,6 +6,11 @@ import { OG_IMAGE_SIZE, ShowcaseOgImage } from "@/lib/og-image";
 export const alt = "Game asset creator preview";
 export const size = OG_IMAGE_SIZE;
 export const contentType = "image/png";
+export const dynamic = "force-static";
+
+export function generateStaticParams() {
+  return Array.from(new Set(manifest.packs.map((pack) => pack.vendor))).map((vendor) => ({ vendor }));
+}
 
 type Props = { params: Promise<{ vendor: string }> };
 

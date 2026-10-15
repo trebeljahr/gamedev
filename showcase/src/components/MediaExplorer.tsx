@@ -16,9 +16,9 @@ import type {
   SoundSample,
   SourceMapping,
 } from "@/lib/media";
-import { materialSamplesFor, mediaPackHref } from "@/lib/media";
+import { materialSamplesFor, mediaPackHref, withResolvedSampleUrls } from "@/lib/media";
 import { assetUrl } from "@/lib/manifest";
-import { artItemHref, artPackHref } from "@/lib/art-routing";
+import { artItemHref, artPackHref, artPackJsonPath } from "@/lib/art-routing";
 import { expandArtItemIndex, type ArtItemIndex, type ArtItemSummary } from "@/lib/art-items";
 import { ArtItemThumb } from "@/components/ArtItemMedia";
 import { resolveSoundAttribution, type SoundAttribution } from "@/lib/sound-attribution";
@@ -2520,10 +2520,11 @@ function useArtPack(folder: string): { pack: ArtPack | undefined; loading: boole
     setPack(undefined);
     setLoading(true);
     setError(undefined);
-    fetch(`/api/media/art/${encodeURIComponent(folder)}`)
+    fetch(artPackJsonPath(folder))
       .then((response) => (response.ok ? response.json() : Promise.reject(new Error(`HTTP ${response.status}`))))
-      .then((data: ArtPack) => {
+      .then((raw: ArtPack) => {
         if (cancelled) return;
+        const data = withResolvedSampleUrls(raw);
         artPackCache.set(folder, data);
         setPack(data);
       })
@@ -2693,7 +2694,9 @@ export function ArtWorkbench({ summary }: { summary: ArtPackSummary }) {
 function ArtItemCard({ item }: { item: ArtItemSummary }) {
   return (
     <article className="art-card">
-      <Link className="art-card-link" href={artItemHref(item.packFolder, item.id)}>
+      {/* 2D asset pages are one client-rendered page in the static export
+          (out/_redirects), with no payload for a client route change. */}
+      <a className="art-card-link" href={artItemHref(item.packFolder, item.id)}>
         <div className="art-thumb">
           <ArtItemThumb src={item.src} label={item.label} />
         </div>
@@ -2705,7 +2708,7 @@ function ArtItemCard({ item }: { item: ArtItemSummary }) {
           </span>
           <small>{item.theme}</small>
         </div>
-      </Link>
+      </a>
       <div className="art-card-credit">
         <div>
           <span>Pack</span>

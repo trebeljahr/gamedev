@@ -20,7 +20,6 @@ import {
 } from "@/lib/manifest";
 import { findModelRouteRef, modelHref, modelRouteRefsForPack, type ModelRouteRef } from "@/lib/model-routes";
 import { uniqueTags } from "@/lib/tags";
-import { useRouter } from "next/navigation";
 
 const PackModelsScene = dynamic(() => import("./AllModelsScene").then((m) => m.PackModelsScene), {
   ssr: false,
@@ -123,8 +122,19 @@ export function PackViewer({ pack, initialModelSlug }: { pack: Pack; initialMode
   return <PackGroupViewer pack={pack} modelRefs={modelRefs} />;
 }
 
+// Model pages ship as HTML only (no RSC payload): 7,000+ pages with their
+// payload files would pass the hosting limit of 20,000 files per version. So
+// every link to a model page is a plain document navigation, never a client
+// route change that would request the missing payload first.
 function PackGroupViewer({ pack, modelRefs }: { pack: Pack; modelRefs: ModelRouteRef[] }) {
-  const router = useRouter();
+
+  // Legacy `/<vendor>/<pack>?model=<slug>` links. The export has no server to
+  // redirect them, so the pack page forwards to the model page in the browser.
+  useEffect(() => {
+    const model = new URLSearchParams(window.location.search).get("model");
+    const ref = model ? findModelRouteRef(pack, model) : undefined;
+    if (ref) window.location.replace(modelHref(pack, ref));
+  }, [pack]);
   const [query, setQuery] = useState("");
   const lastNoResultsKey = useRef("");
   const credit = licenseForVendor(pack.vendor);
@@ -157,9 +167,9 @@ function PackGroupViewer({ pack, modelRefs }: { pack: Pack; modelRefs: ModelRout
   const openModel = useCallback(
     (index: number) => {
       const ref = modelRefs[index];
-      if (ref) router.push(modelHref(pack, ref));
+      if (ref) window.location.assign(modelHref(pack, ref));
     },
-    [modelRefs, pack, router],
+    [modelRefs, pack],
   );
 
   return (
@@ -211,7 +221,7 @@ function PackGroupViewer({ pack, modelRefs }: { pack: Pack; modelRefs: ModelRout
         <ul className="model-list">
           {listedModels.map((ref) => (
             <li key={ref.model.file}>
-              <Link href={modelHref(pack, ref)}>{ref.model.title}</Link>
+              <a href={modelHref(pack, ref)}>{ref.model.title}</a>
             </li>
           ))}
           {visibleModels.length === 0 && <li className="empty-model-list">No model matches.</li>}
@@ -288,9 +298,9 @@ function SingleAssetViewer({
         <ul className="model-list">
           {listedModels.map((ref) => (
             <li key={ref.model.file}>
-              <Link className={ref.index === index ? "active" : ""} href={modelHref(pack, ref)}>
+              <a className={ref.index === index ? "active" : ""} href={modelHref(pack, ref)}>
                 {ref.model.title}
-              </Link>
+              </a>
             </li>
           ))}
           {modelList.hasMore && (
@@ -324,12 +334,12 @@ function SingleAssetViewer({
               Report broken asset
             </a>
             <div className="nav">
-              <Link href={modelHref(pack, prevModel)} aria-label="Previous">
+              <a href={modelHref(pack, prevModel)} aria-label="Previous">
                 ←
-              </Link>
-              <Link href={modelHref(pack, nextModel)} aria-label="Next">
+              </a>
+              <a href={modelHref(pack, nextModel)} aria-label="Next">
                 →
-              </Link>
+              </a>
             </div>
           </div>
         </div>

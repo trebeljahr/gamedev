@@ -1,11 +1,16 @@
 import { ImageResponse } from "next/og";
 import { licenseForVendor } from "@/lib/license";
-import { findPack } from "@/lib/manifest";
+import { findPack, manifest } from "@/lib/manifest";
 import { OG_IMAGE_SIZE, ShowcaseOgImage } from "@/lib/og-image";
 
 export const alt = "3D model pack preview";
 export const size = OG_IMAGE_SIZE;
 export const contentType = "image/png";
+export const dynamic = "force-static";
+
+export function generateStaticParams() {
+  return manifest.packs.map((pack) => ({ vendor: pack.vendor, pack: pack.pack }));
+}
 
 type Props = { params: Promise<{ vendor: string; pack: string }> };
 

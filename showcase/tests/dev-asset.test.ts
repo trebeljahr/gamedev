@@ -17,7 +17,7 @@ test("development asset endpoint confines images and stays closed in production"
     await symlink(join(temporary, "outside.png"), join(root, "escape.png"));
     process.env.ASSETS_DIR = root;
     Object.assign(process.env, { NODE_ENV: "development" });
-    const { GET } = await import("../src/app/api/dev/asset/route");
+    const { GET } = await import("../src/app/api/dev/asset/route.dev");
     const request = (path: string) => GET(new Request(`http://localhost/api/dev/asset?path=${encodeURIComponent(path)}`));
     const response = await request("sample.png");
     assert.equal(response.status, 200);

@@ -21,3 +21,12 @@ export function artPackHref(folder: string): string {
 export function artItemHref(folder: string, itemId: string): string {
   return `/media/2d/${artPackSlug(folder)}/${itemId}`;
 }
+
+/**
+ * The pack's full catalog file, served as a static file in production and from
+ * `public/` in development. Its sample `src`s are raw; resolve them with
+ * `withResolvedSampleUrls` from `@/lib/media`.
+ */
+export function artPackJsonPath(folder: string): string {
+  return `/media-catalog/packs/${artPackSlug(folder)}.json`;
+}

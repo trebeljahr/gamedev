@@ -1,10 +1,13 @@
 # Durable model and pack downloads
 
-The existing `/api/models/download` and pack ZIP URLs validate the catalog,
-then redirect to immutable objects on the independent asset origin. The app
-never owns the byte stream. Storage continues serving a download after the
-20-second application drain and container retirement. R2 supports byte ranges;
-clients may resume the same content-addressed URL.
+Download links point straight at immutable objects on the independent asset
+origin; the site never owns the byte stream. The static build
+(`scripts/build-static-site.ts`) validates every object path and writes one map
+per pack (`/api/downloads/<vendor>/<pack>.json`), which the download buttons
+fetch, plus a `_redirects` 307 per pack ZIP URL (`/api/packs/<vendor>/<pack>/zip`).
+Old `/api/models/download?file=…` links land on a static page that forwards in
+the browser. R2 supports byte ranges; clients may resume the same
+content-addressed URL.
 
 `public/downloads.json` maps allowed catalog paths and existing UI filenames
 to SHA256-addressed model snapshots and deterministic ZIP files. Pack generation
@@ -26,12 +29,12 @@ When the manifest or downloadable bytes change:
    This is a read-only public-object verification, with eight workers.
 4. Commit the generated `downloads.json` with the source manifest/change, then
    build the release. The build checks the manifest hash. CI also checks every
-   referenced remote object's headers before publishing an image.
+   referenced remote object's headers before uploading a site version.
 
 Keep all published `/downloads/v1/` objects. Deleting one can break an open tab,
 a paused download, or a rollback. The regular asset sync excludes that namespace.
-Storage retention is an external requirement; application shutdown limits do not
-bound download duration. Regenerate and publish before changing a source asset
+Storage retention is an external requirement; the site's deploys do not bound
+download duration. Regenerate and publish before changing a source asset
 whose path remains the same.
 
 For local development, pass `DOWNLOAD_ARTIFACTS_DIR` to `scripts/serve-assets.mjs`;
@@ -40,9 +43,3 @@ it serves the same immutable paths with attachment and Range support.
 Validation (inside `showcase`):
 
 - `node --import tsx --test scripts/durable-download.test.ts`
-- `DOWNLOAD_ARTIFACTS_DIR=/absolute/download-objects node --import tsx --test scripts/download-drain.test.ts`
-
-The latter runs the real route handlers under the production drain wrapper, with
-an independent slow storage fixture. It requires both model and ZIP transfers to
-remain active when the app exits cleanly after 20 seconds, then verifies all bytes
-and every ZIP entry. It is a local handoff/lifecycle proof, not a live R2 test.

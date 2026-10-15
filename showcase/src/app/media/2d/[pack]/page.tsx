@@ -5,7 +5,7 @@ import { ArtWorkbench } from "@/components/MediaExplorer";
 import { LicenseLink } from "@/components/LicenseLink";
 import { licenseBucket } from "@/lib/license";
 import { SiteHeader } from "@/components/SiteHeader";
-import { artPackHref, folderFromArtPackSlug } from "@/lib/art-routing";
+import { artPackHref, artPackSlug, folderFromArtPackSlug } from "@/lib/art-routing";
 import { artPackSummaries } from "@/lib/media";
 import { pageMetadata } from "@/lib/seo";
 
@@ -16,6 +16,10 @@ type Art2DPackPageProps = {
 function summaryForSlug(slug: string) {
   const folder = folderFromArtPackSlug(slug);
   return artPackSummaries.find((pack) => pack.folder === folder);
+}
+
+export function generateStaticParams() {
+  return artPackSummaries.map((summary) => ({ pack: artPackSlug(summary.folder) }));
 }
 
 export async function generateMetadata({ params }: Art2DPackPageProps): Promise<Metadata> {

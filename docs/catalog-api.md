@@ -1,27 +1,27 @@
 # Catalog JSON API
 
-`GET /api/catalog.json` returns a paginated, machine-readable catalog for the 3D model library plus sprite, sound, music, and texture entries used by coding agents.
+`GET /api/catalog.json` returns a machine-readable catalog for the 3D model library plus sprite, sound, music, and texture entries used by coding agents.
 
-Responses set:
+It is a static file, written at build time by `showcase/scripts/build-static-site.ts` and served by Cloudflare Workers static assets with the default `Cache-Control: public, max-age=0, must-revalidate` and an `ETag`.
 
-```http
-Cache-Control: public, s-maxage=3600, stale-while-revalidate=86400
-```
+## One response, no pagination
 
-## Pagination
+Until October 2026 a route handler paged the catalog with `page` and `per_page` (100 by default, 500 at most). A static file cannot read the query string, so the endpoint now returns every item in one response and ignores all query parameters:
 
-- `page`: 1-based page number. Defaults to `1`.
-- `per_page`: page size. Defaults to `100`; values above `500` are capped to `500`.
+- `page` is always `1` and `total_pages` is `1` (or `0` for an empty catalog).
+- `per_page` equals `total`.
+
+A client that requests page 1 and stops at `total_pages` gets the whole catalog in one request. A client that requests `page=2` gets the same full response again, so it must stop at `total_pages`, not at an empty `items` array.
 
 Example response shape:
 
 ```json
 {
-  "schema": "https://gamedev.trebeljahr.com/api/catalog.json?schema=1",
+  "schema": "https://gamedev.trebeljahr.com/api/catalog.schema.json",
   "page": 1,
-  "per_page": 100,
-  "total": 6432,
-  "total_pages": 65,
+  "per_page": 7472,
+  "total": 7472,
+  "total_pages": 1,
   "items": [
     {
       "id": "model:kaykit/adventurers/arrow-bow",
@@ -34,7 +34,7 @@ Example response shape:
       "downloads": [
         {
           "format": "fbx",
-          "url": "https://gamedev.trebeljahr.com/raw/kaykit/adventurers/extracted/kaykit-adventurers-2-0-free/assets/fbx-unity/arrow_bow.fbx",
+          "url": "https://assets.gamedev.trebeljahr.com/raw/kaykit/adventurers/extracted/kaykit-adventurers-2-0-free/assets/fbx-unity/arrow_bow.fbx",
           "sizeBytes": null
         }
       ]
@@ -45,118 +45,11 @@ Example response shape:
 
 `creatorUrl`, `sourceUrl`, and `downloads[].sizeBytes` are `null` when the catalog has no verified value.
 
+Sprite items list a `json` download: the full pack with resolved sample URLs, at `/api/media/art-json/<pack folder>.json`. The older `/api/media/art/<url-encoded folder>` form still answers (a redirect to that file).
+
 ## JSON Schema
 
-`GET /api/catalog.json?schema=1` returns the response schema:
-
-```json
-{
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://gamedev.trebeljahr.com/api/catalog.json?schema=1",
-  "title": "GameDev Asset Catalog Response",
-  "type": "object",
-  "additionalProperties": false,
-  "required": ["schema", "page", "per_page", "total", "total_pages", "items"],
-  "properties": {
-    "schema": {
-      "type": "string",
-      "const": "https://gamedev.trebeljahr.com/api/catalog.json?schema=1"
-    },
-    "page": {
-      "type": "integer",
-      "minimum": 1
-    },
-    "per_page": {
-      "type": "integer",
-      "minimum": 1,
-      "maximum": 500
-    },
-    "total": {
-      "type": "integer",
-      "minimum": 0
-    },
-    "total_pages": {
-      "type": "integer",
-      "minimum": 0
-    },
-    "items": {
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/catalogItem"
-      }
-    }
-  },
-  "$defs": {
-    "catalogItem": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "id",
-        "name",
-        "type",
-        "license",
-        "creator",
-        "creatorUrl",
-        "sourceUrl",
-        "downloads"
-      ],
-      "properties": {
-        "id": {
-          "type": "string",
-          "minLength": 1
-        },
-        "name": {
-          "type": "string",
-          "minLength": 1
-        },
-        "type": {
-          "type": "string",
-          "enum": ["model", "sprite", "sound", "music", "texture"]
-        },
-        "license": {
-          "type": "string"
-        },
-        "creator": {
-          "type": "string"
-        },
-        "creatorUrl": {
-          "type": ["string", "null"],
-          "format": "uri"
-        },
-        "sourceUrl": {
-          "type": ["string", "null"],
-          "format": "uri"
-        },
-        "downloads": {
-          "type": "array",
-          "items": {
-            "$ref": "#/$defs/download"
-          }
-        }
-      }
-    },
-    "download": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["format", "url", "sizeBytes"],
-      "properties": {
-        "format": {
-          "type": "string",
-          "minLength": 1
-        },
-        "url": {
-          "type": "string",
-          "format": "uri"
-        },
-        "sizeBytes": {
-          "type": ["integer", "null"],
-          "minimum": 0
-        }
-      }
-    }
-  }
-}
-```
+`GET /api/catalog.schema.json` returns the response schema; each response names it in `schema`. The older `GET /api/catalog.json?schema=1` cannot be told apart from a catalog request any more and returns the catalog.
 
 ## Example Fetch
 
@@ -178,7 +71,7 @@ type CatalogItem = {
   downloads: CatalogDownload[];
 };
 
-const response = await fetch("https://gamedev.trebeljahr.com/api/catalog.json?page=1&per_page=100", {
+const response = await fetch("https://gamedev.trebeljahr.com/api/catalog.json", {
   headers: { Accept: "application/json" },
 });
 

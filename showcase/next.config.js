@@ -3,8 +3,11 @@ const fs = require("node:fs");
 const { PHASE_DEVELOPMENT_SERVER } = require("next/constants");
 
 const DEV_LOCK = path.join(__dirname, ".next-dev.lock.json");
-const IMMUTABLE_BINARY_CACHE_CONTROL = "public, max-age=31536000, immutable";
-const IMMUTABLE_BINARY_ASSET_EXTENSIONS = "glb|gltf|fbx|obj|mp3|wav|ogg|png";
+// Development-only routes (frame inspector, local asset reader) are named
+// `*.dev.ts(x)`. Production builds never see them, so the export stays free
+// of route handlers and server-only pages.
+const PAGE_EXTENSIONS = ["tsx", "ts", "jsx", "js"];
+const DEV_PAGE_EXTENSIONS = ["dev.tsx", "dev.ts", ...PAGE_EXTENSIONS];
 
 function isPidAlive(pid) {
   if (!Number.isInteger(pid) || pid <= 0) return false;
@@ -54,46 +57,10 @@ function ensureSingleDevServer(isDevServer) {
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: false,
-  deploymentId: process.env.NEXT_DEPLOYMENT_ID,
   turbopack: {
     resolveAlias: {
       three: "./node_modules/three",
     },
-  },
-  async headers() {
-    return [
-      {
-        source: "/version.json",
-        headers: [{ key: "Cache-Control", value: "no-store, max-age=0" }],
-      },
-      {
-        source: `/:path*.:ext(${IMMUTABLE_BINARY_ASSET_EXTENSIONS})`,
-        headers: [
-          {
-            key: "Cache-Control",
-            value: IMMUTABLE_BINARY_CACHE_CONTROL,
-          },
-        ],
-      },
-    ];
-  },
-  async rewrites() {
-    return {
-      beforeFiles: [
-        {
-          source: "/manifest.json",
-          destination: "/api/models/manifest",
-        },
-        {
-          source: "/media-catalog.json",
-          destination: "/api/media/catalog",
-        },
-        {
-          source: "/media-catalog/packs/:file",
-          destination: "/api/media/catalog/packs/:file",
-        },
-      ],
-    };
   },
   webpack(config) {
     // pnpm + webpack can resolve `three` through multiple symlink paths,
@@ -113,9 +80,23 @@ const nextConfig = {
 // file is CJS, so the wrap goes here by hand.
 module.exports = async (phase) => {
   const isDevWorker = Boolean(process.env.NEXT_DEV_LOCK_TOKEN && process.env.NEXT_PRIVATE_WORKER);
-  ensureSingleDevServer(
-    phase === PHASE_DEVELOPMENT_SERVER || isDevWorker,
-  );
+  const isDevServer = phase === PHASE_DEVELOPMENT_SERVER || isDevWorker;
+  ensureSingleDevServer(isDevServer);
+
+  // Production is a static export served from Cloudflare Workers static
+  // assets: every page, catalog and redirect is a file written at build time.
+  // Headers and redirects live in public/_headers and the generated
+  // out/_redirects (scripts/build-static-site.ts), not in this config.
+  if (isDevServer) {
+    nextConfig.pageExtensions = DEV_PAGE_EXTENSIONS;
+    // Mirrors the `/media/2d/:pack/:asset` proxy in the generated _redirects.
+    nextConfig.rewrites = async () => ({
+      beforeFiles: [{ source: "/media/2d/:pack/:asset", destination: "/media/2d/item" }],
+    });
+  } else {
+    nextConfig.pageExtensions = PAGE_EXTENSIONS;
+    nextConfig.output = "export";
+  }
 
   const { withLocalDev } = await import("@hatchkit/dev-plugin-next");
   // Next 16 Turbopack evaluates next.config in main + worker processes.

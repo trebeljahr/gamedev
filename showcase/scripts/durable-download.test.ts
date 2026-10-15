@@ -6,7 +6,7 @@ import { join } from 'node:path';
 import { createHash } from 'node:crypto';
 import { unzipSync } from 'fflate';
 import { buildDownloadCatalog } from './build-download-artifacts';
-import { redirectDownload, type DownloadArtifact } from '../src/lib/durable-download';
+import { artifactUrl, type DownloadArtifact } from '../src/lib/durable-download';
 import type { Manifest } from '../src/lib/manifest';
 
 const hash = (value: Uint8Array) => createHash('sha256').update(value).digest('hex');
@@ -56,21 +56,15 @@ test('missing or escaped sources fail instead of publishing incomplete ZIPs', as
   } finally { await rm(f.root, { recursive: true, force: true }); }
 });
 
-test('redirect hands off only validated immutable objects to independent storage', async () => {
+test('links hand off only validated immutable objects on independent storage', () => {
   const artifact: DownloadArtifact = { sha256: 'a'.repeat(64), filename: 'example.glb', bytes: 10, path: `/downloads/v1/${'a'.repeat(64)}/example.glb` };
-  const req = new Request('https://gamedev.example/api/models/download');
-  const response = redirectDownload(req, artifact, 'https://assets.example');
-  assert.equal(response.status, 307);
-  assert.equal(response.headers.get('location'), `https://assets.example${artifact.path}`);
-  assert.equal(await response.text(), '');
-  assert.equal(response.headers.get('cache-control'), 'no-store');
-  for (const base of ['https://gamedev.example', 'http://assets.example', 'https://user:pass@assets.example', 'https://assets.example/path', 'https://assets.example?secret=x']) {
-    assert.equal(redirectDownload(req, artifact, base).status, 503);
+  assert.equal(artifactUrl(artifact, 'https://assets.example', 'https://gamedev.example'), `https://assets.example${artifact.path}`);
+  for (const base of ['https://gamedev.example', 'http://assets.example', 'https://user:pass@assets.example', 'https://assets.example/path', 'https://assets.example?secret=x', 'not a url']) {
+    assert.throws(() => artifactUrl(artifact, base, 'https://gamedev.example'));
   }
-  assert.equal(redirectDownload(req, undefined, 'https://assets.example').status, 503);
-  assert.equal(redirectDownload(req, { ...artifact, path: '/other' }, 'https://assets.example').status, 503);
+  assert.throws(() => artifactUrl(undefined, 'https://assets.example'));
+  assert.throws(() => artifactUrl({ ...artifact, path: '/other' }, 'https://assets.example'));
 });
-
 
 test('publication checks fail closed on stale catalogs, wrong object metadata and corrupt bytes', async () => {
   const { checkDownloadArtifacts } = await import('./check-download-artifacts.mjs');

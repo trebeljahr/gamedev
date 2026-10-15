@@ -2,13 +2,21 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { PackViewer } from "@/components/PackViewer";
 import { exactLicenseUrlFor, licenseForVendor } from "@/lib/license";
-import { findPack, modelDescription } from "@/lib/manifest";
-import { findModelRouteRef, modelHref } from "@/lib/model-routes";
+import { findPack, manifest, modelDescription } from "@/lib/manifest";
+import { findModelRouteRef, modelHref, modelRouteRefsForPack } from "@/lib/model-routes";
 import { assetJsonLd, jsonLdScriptContent, pageMetadata } from "@/lib/seo";
 
 type ModelPageProps = {
   params: Promise<{ vendor: string; pack: string; model: string }>;
 };
+
+// Prerendered as HTML only: scripts/build-static-site.ts drops these pages'
+// payload files to stay under the hosting file limit (see PackViewer).
+export function generateStaticParams() {
+  return manifest.packs.flatMap((pack) =>
+    modelRouteRefsForPack(pack).map((ref) => ({ vendor: pack.vendor, pack: pack.pack, model: ref.slug })),
+  );
+}
 
 export async function generateMetadata({ params }: ModelPageProps): Promise<Metadata> {
   const { vendor, pack, model } = await params;

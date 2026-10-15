@@ -4,6 +4,7 @@ import { OG_IMAGE_SIZE, ShowcaseOgImage } from "@/lib/og-image";
 export const alt = "Trim MP3 in browser, cut audio online, and speed up audio web";
 export const size = OG_IMAGE_SIZE;
 export const contentType = "image/png";
+export const dynamic = "force-static";
 
 export default function Image() {
   return new ImageResponse(

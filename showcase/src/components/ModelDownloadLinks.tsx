@@ -1,5 +1,7 @@
+"use client";
+
+import type { MouseEvent } from "react";
 import {
-  downloadProxyUrl,
   downloadsForModel,
   modelDownloadFilename,
   modelDownloadLabel,
@@ -7,6 +9,12 @@ import {
   type ModelDownload,
 } from "@/lib/manifest";
 import { trackAssetDownload } from "@/lib/analytics";
+import {
+  loadPackDownloadMap,
+  modelDownloadHref,
+  packKeyForFile,
+  usePackDownloadMap,
+} from "@/lib/model-downloads";
 
 type ModelDownloadLinksProps = {
   model: Model;
@@ -29,6 +37,20 @@ function primaryDownloadLabel(download: ModelDownload): string {
 
 export function ModelDownloadLinks({ model, className, compact = false }: ModelDownloadLinksProps) {
   const downloads = downloadsForModel(model);
+  const map = usePackDownloadMap(model.file);
+
+  function startDownload(event: MouseEvent<HTMLAnchorElement>, download: ModelDownload) {
+    trackAssetDownload({ format: download.format });
+    const packKey = packKeyForFile(download.file);
+    if (map !== undefined || !packKey) return;
+    // Clicked before the pack's map arrived: wait for it rather than handing
+    // out the mutable source file.
+    event.preventDefault();
+    void loadPackDownloadMap(packKey).then((loadedMap) => {
+      window.location.assign(modelDownloadHref(download.file, loadedMap));
+    });
+  }
+
   const primaryDownload = primaryDownloadFor(downloads);
   const sourceDownloads = primaryDownload
     ? downloads.filter((download) => download.file !== primaryDownload.file)
@@ -50,10 +72,10 @@ export function ModelDownloadLinks({ model, className, compact = false }: ModelD
     <div className={classes} aria-label={`Download ${model.title}`}>
       <a
         className="model-download-primary"
-        href={downloadProxyUrl(primaryDownload.file, primaryFilename)}
+        href={modelDownloadHref(primaryDownload.file, map)}
         download={primaryFilename}
         title={primaryDownload.file}
-        onClick={() => trackAssetDownload({ format: primaryDownload.format })}
+        onClick={(event) => startDownload(event, primaryDownload)}
       >
         {primaryDownloadLabel(primaryDownload)}
       </a>
@@ -68,10 +90,10 @@ export function ModelDownloadLinks({ model, className, compact = false }: ModelD
               return (
                 <a
                   key={`${download.format}:${download.file}`}
-                  href={downloadProxyUrl(download.file, filename)}
+                  href={modelDownloadHref(download.file, map)}
                   download={filename}
                   title={download.file}
-                  onClick={() => trackAssetDownload({ format: download.format })}
+                  onClick={(event) => startDownload(event, download)}
                 >
                   {label}
                 </a>

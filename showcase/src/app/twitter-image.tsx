@@ -6,6 +6,7 @@ import { OG_IMAGE_SIZE, ShowcaseOgImage } from "@/lib/og-image";
 export const alt = "GameDev Asset Library preview";
 export const size = OG_IMAGE_SIZE;
 export const contentType = "image/png";
+export const dynamic = "force-static";
 
 export default function Image() {
   const totalModels = manifest.packs.reduce((sum, pack) => sum + pack.count, 0);

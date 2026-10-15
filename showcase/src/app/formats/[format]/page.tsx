@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LicenseLink } from "@/components/LicenseLink";
+import { modelDownloadUrl } from "@/lib/download-catalog";
 import { SiteHeader } from "@/components/SiteHeader";
 import { licenseForVendor } from "@/lib/license";
 import {
   displayPackTitle,
-  downloadProxyUrl,
   downloadsForModel,
   manifest,
   modelDownloadFilename,
@@ -190,9 +190,10 @@ export default async function FormatPage({ params }: FormatPageProps) {
               return (
                 <article className="format-asset-row" key={`${asset.download.file}:${asset.model.file}`}>
                   <div className="format-asset-main">
-                    <Link className="format-asset-title" href={asset.href}>
+                    {/* Model pages ship as HTML only; see PackViewer. */}
+                    <a className="format-asset-title" href={asset.href}>
                       {asset.model.title}
-                    </Link>
+                    </a>
                     <div className="format-asset-meta">
                       <Link href={asset.packHref}>{asset.packTitle}</Link>
                       <span>{asset.vendorLabel}</span>
@@ -214,7 +215,7 @@ export default async function FormatPage({ params }: FormatPageProps) {
                   <div className="format-asset-side">
                     <span>{asset.model.category}</span>
                     <a
-                      href={downloadProxyUrl(asset.download.file, filename)}
+                      href={modelDownloadUrl(asset.download.file, filename)}
                       download={filename}
                       title={asset.download.file}
                     >

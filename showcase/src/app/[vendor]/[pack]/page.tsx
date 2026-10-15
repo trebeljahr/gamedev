@@ -1,15 +1,13 @@
 import type { Metadata } from "next";
-import { notFound, redirect } from "next/navigation";
+import { notFound } from "next/navigation";
 import { exactLicenseUrlFor, licenseForVendor } from "@/lib/license";
 import { manifest, findPack } from "@/lib/manifest";
 import { AnalyticsBeacon } from "@/components/AnalyticsBeacon";
 import { PackViewer } from "@/components/PackViewer";
 import { pageMetadata, routePath } from "@/lib/seo";
-import { findModelRouteRef, modelHref } from "@/lib/model-routes";
 
 type PackPageProps = {
   params: Promise<{ vendor: string; pack: string }>;
-  searchParams?: Promise<{ model?: string | string[] }>;
 };
 
 export function generateStaticParams() {
@@ -59,17 +57,10 @@ export async function generateMetadata({ params }: PackPageProps): Promise<Metad
   };
 }
 
-export default async function PackPage({ params, searchParams }: PackPageProps) {
+export default async function PackPage({ params }: PackPageProps) {
   const { vendor, pack } = await params;
-  const query = await searchParams;
-  const model = Array.isArray(query?.model) ? query?.model[0] : query?.model;
   const data = findPack(vendor, pack);
   if (!data) notFound();
-  if (model) {
-    const ref = findModelRouteRef(data, model);
-    if (!ref) notFound();
-    redirect(modelHref(data, ref));
-  }
   return (
     <>
       <AnalyticsBeacon event="bundle_view" />

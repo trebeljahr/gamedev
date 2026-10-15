@@ -4,6 +4,8 @@ import { manifest } from "@/lib/manifest";
 import { formatLandingPath, MODEL_FORMATS } from "@/lib/model-formats";
 import { absoluteUrl, routePath } from "@/lib/seo";
 
+export const dynamic = "force-static";
+
 const staticRoutes = [
   { pathname: "/", priority: 1, changeFrequency: "weekly" },
   { pathname: "/models", priority: 0.92, changeFrequency: "weekly" },

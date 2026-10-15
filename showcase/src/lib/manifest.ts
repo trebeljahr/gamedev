@@ -210,12 +210,6 @@ export function downloadsForModel(model: Model): ModelDownload[] {
   });
 }
 
-export function downloadProxyUrl(file: string, name?: string): string {
-  const params = new URLSearchParams({ file });
-  if (name) params.set("name", name);
-  return `/api/models/download?${params.toString()}`;
-}
-
 export function modelDownloadFilename(model: Model, download: ModelDownload): string {
   const format = modelFormatForFile(download.file);
   const base = (model.title || model.name || "model")

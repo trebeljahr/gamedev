@@ -1,0 +1,20 @@
+# Cloudflare Workers static assets headers (production only; `next dev`
+# ignores this file). Everything else keeps Cloudflare's default
+# `public, max-age=0, must-revalidate` with an ETag. No long-lived rule on
+# /_next/static/*: it would also cache a 404 for a year.
+
+/version.json
+  Cache-Control: no-store
+
+/release-assets.json
+  Cache-Control: no-store
+
+# Next writes social images without a file extension.
+/opengraph-image
+  Content-Type: image/png
+/twitter-image
+  Content-Type: image/png
+/:a/opengraph-image
+  Content-Type: image/png
+/:a/:b/opengraph-image
+  Content-Type: image/png
