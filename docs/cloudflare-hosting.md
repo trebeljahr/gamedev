@@ -8,9 +8,11 @@ assets.gamedev.trebeljahr.com, unchanged.
 ## How a request is answered
 
 - The zone route `gamedev.trebeljahr.com/*` sends the hostname to the Worker.
-  A second route, `gamedev.trebeljahr.com/.well-known/acme-challenge/*` with no
-  Worker, keeps that path on the origin while Traefik on the old Coolify host
-  still holds a certificate. Delete it when the Coolify app is retired.
+  The DNS records stay proxied: a route only runs on a proxied record. The old
+  Coolify app and its ACME route were retired on 2026-10-19; nothing on the
+  origin serves this hostname any more.
+- HTTP → HTTPS is a 301 from hatchkit's zone rule `hatchkit_https_worker_hosts`
+  (`hatchkit cloudflare https add|remove <host>`), not from the Worker.
 - `wrangler.jsonc` has `assets` only: no `main`, no `routes`, no `cache`,
   `workers_dev: false`. With no script, every request is an asset request,
   and asset requests do not count toward the 100,000 requests/day of Workers
@@ -82,9 +84,6 @@ CI holds `CLOUDFLARE_API_TOKEN` (a token for this one Worker, role
   version id from `pnpm exec wrangler versions list`, or run
   `pnpm exec wrangler versions deploy <id>@100%` with the token. A version
   keeps its own files, so the rollback is complete within seconds.
-- The whole move, while the Coolify app still runs: delete the route
-  `gamedev.trebeljahr.com/*`. The Coolify container answers again within
-  about 8 s.
 
 ## Local preview
 
