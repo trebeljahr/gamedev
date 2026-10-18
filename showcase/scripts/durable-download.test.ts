@@ -82,6 +82,13 @@ test('publication checks fail closed on stale catalogs, wrong object metadata an
     assert.equal((await checkDownloadArtifacts({ ...options, fetchImpl: transport() })).verified, 2);
     await assert.rejects(checkDownloadArtifacts({ ...options, fetchImpl: transport(true) }), /verification/);
     await assert.rejects(checkDownloadArtifacts({ ...options, fetchImpl: transport(false, 'inline') }), /verification/);
+    // Dropped connections: an object that answers on the slow second pass counts; one that never does fails.
+    const flaky = (drops: number) => { let left = drops; const ok = transport(); return async (input: string | URL | Request) => {
+      if (left-- > 0) throw new TypeError('fetch failed', { cause: { code: 'ETIMEDOUT' } });
+      return ok(input);
+    }; };
+    assert.equal((await checkDownloadArtifacts({ ...options, fetchImpl: flaky(4) })).verified, 2);
+    await assert.rejects(checkDownloadArtifacts({ ...options, fetchImpl: flaky(100) }), /verification/);
     await writeFile(f.options.manifestPath, JSON.stringify({ packs: [] }));
     await assert.rejects(checkDownloadArtifacts(options), /stale/);
   } finally { await rm(f.root, { recursive: true, force: true }); }
