@@ -21,14 +21,17 @@ export async function checkDownloadArtifacts({ remote = false, full = false, bas
     const origin = new URL(base);
     if (origin.protocol !== 'https:' || origin.username || origin.password || origin.search || origin.hash || origin.pathname !== '/') throw new Error('Invalid storage origin.');
     const pending = [...objects.values()];
+    const failures = [];
     await Promise.all(Array.from({ length: Math.min(8, pending.length) }, async () => {
       for (;;) {
         const item = pending.shift();
         if (!item) return;
         let ok = false;
+        let observed = '';
         for (let attempt = 0; attempt < 3 && !ok; attempt++) {
           try {
             const response = await fetchImpl(new URL(item.path, origin), { method: full ? 'GET' : 'HEAD', redirect: 'error', signal: AbortSignal.timeout(full ? 600_000 : 30_000) });
+            observed = `HTTP ${response.status}, content-length ${response.headers.get('content-length')} (want ${item.bytes}), content-disposition ${response.headers.get('content-disposition')}, cache-control ${response.headers.get('cache-control')}, accept-ranges ${response.headers.get('accept-ranges')}, cf-ray ${response.headers.get('cf-ray')}`;
             if (response.status !== 200 || Number(response.headers.get('content-length')) !== item.bytes || !/^attachment(?:;|$)/i.test(response.headers.get('content-disposition') ?? '') || !/immutable/i.test(response.headers.get('cache-control') ?? '') || response.headers.get('accept-ranges') !== 'bytes') { await response.body?.cancel(); throw new Error('object metadata'); }
             if (full) {
               const digest = createHash('sha256');
@@ -37,11 +40,20 @@ export async function checkDownloadArtifacts({ remote = false, full = false, bas
               if (bytes !== item.bytes || digest.digest('hex') !== item.sha256) throw new Error('object digest');
             }
             ok = true;
-          } catch { if (attempt === 2) throw new Error('Published download object failed verification.'); }
+          } catch (error) {
+            if (attempt < 2) continue;
+            // Keep checking, so one run names up to 20 bad objects.
+            failures.push(`${item.path}: ${observed || (error instanceof Error ? error.message : 'request failed')}`);
+            if (failures.length >= 20) pending.length = 0;
+          }
         }
-        verified++;
+        if (ok) verified++;
       }
     }));
+    if (failures.length) {
+      console.error(`${failures.length} of ${objects.size} download objects failed:\n${failures.slice(0, 20).join('\n')}`);
+      throw new Error('Published download object failed verification.');
+    }
   }
   return { objects: objects.size, bytes: [...objects.values()].reduce((n, item) => n + item.bytes, 0), verified, mode: full ? 'full-sha256' : remote ? 'remote-headers' : 'catalog', manifestSha256: catalog.manifestSha256 };
 }
