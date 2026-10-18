@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { resolve } from 'node:path';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
-export async function checkDownloadArtifacts({ remote = false, full = false, base = 'https://assets.gamedev.trebeljahr.com', manifestPath = resolve(root, 'public/manifest.json'), catalogPath = resolve(root, 'public/downloads.json'), fetchImpl = fetch } = {}) {
+export async function checkDownloadArtifacts({ remote = false, full = false, base = 'https://assets.gamedev.trebeljahr.com', manifestPath = resolve(root, 'public/manifest.json'), catalogPath = resolve(root, 'public/downloads.json'), fetchImpl = fetch, retryDelayMs = 500 } = {}) {
   const raw = await readFile(manifestPath);
   const catalog = JSON.parse(await readFile(catalogPath, 'utf8'));
   if (catalog.schema !== 1 || catalog.manifestSha256 !== createHash('sha256').update(raw).digest('hex')) throw new Error('Download catalog is stale; regenerate and publish its immutable objects.');
@@ -28,7 +28,10 @@ export async function checkDownloadArtifacts({ remote = false, full = false, bas
         if (!item) return;
         let ok = false;
         let observed = '';
-        for (let attempt = 0; attempt < 3 && !ok; attempt++) {
+        // Five tries with backoff: a CI runner sees occasional dropped
+        // connections over 17,000 requests (2026-10-18: 22 "fetch failed").
+        for (let attempt = 0; attempt < 5 && !ok; attempt++) {
+          if (attempt > 0) await new Promise((done) => setTimeout(done, retryDelayMs * 2 ** attempt));
           try {
             const response = await fetchImpl(new URL(item.path, origin), { method: full ? 'GET' : 'HEAD', redirect: 'error', signal: AbortSignal.timeout(full ? 600_000 : 30_000) });
             observed = `HTTP ${response.status}, content-length ${response.headers.get('content-length')} (want ${item.bytes}), content-disposition ${response.headers.get('content-disposition')}, cache-control ${response.headers.get('cache-control')}, accept-ranges ${response.headers.get('accept-ranges')}, cf-ray ${response.headers.get('cf-ray')}`;
@@ -41,9 +44,10 @@ export async function checkDownloadArtifacts({ remote = false, full = false, bas
             }
             ok = true;
           } catch (error) {
-            if (attempt < 2) continue;
+            if (attempt < 4) continue;
             // Keep checking, so one run names up to 20 bad objects.
-            failures.push(`${item.path}: ${observed || (error instanceof Error ? error.message : 'request failed')}`);
+            const cause = error instanceof Error && error.cause ? ` (${error.cause.code ?? error.cause.message ?? error.cause})` : '';
+            failures.push(`${item.path}: ${observed || (error instanceof Error ? error.message : 'request failed')}${cause}`);
             if (failures.length >= 20) pending.length = 0;
           }
         }

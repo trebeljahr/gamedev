@@ -72,7 +72,7 @@ test('publication checks fail closed on stale catalogs, wrong object metadata an
   try {
     const catalog = await buildDownloadCatalog(f.options);
     const objects = new Map([...Object.values(catalog.models).flat(), ...Object.values(catalog.packs)].map(item => [item.path, item]));
-    const options = { manifestPath: f.options.manifestPath, catalogPath: f.options.catalogPath, full: true };
+    const options = { manifestPath: f.options.manifestPath, catalogPath: f.options.catalogPath, full: true, retryDelayMs: 0 };
     const transport = (corrupt = false, disposition = 'attachment') => async (input: string | URL | Request) => {
       const item = objects.get(new URL(String(input)).pathname)!;
       const bytes = await readFile(join(f.options.outputRoot, item.sha256, item.filename));
