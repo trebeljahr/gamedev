@@ -162,7 +162,7 @@ export function modelSearchText(model: Model, pack: Pack): string {
   ].filter(Boolean).join(" ").toLowerCase();
 }
 
-export function packDescription(pack: Pack): string {
+export function packDescription(pack: Omit<Pack, "models">): string {
   const themePhrase = pack.themes.length > 0 ? pack.themes.join(", ") : "general";
   const categoryPhrase = pack.categories.length > 0 ? pack.categories.join(", ") : "game assets";
   return `${displayPackTitle(pack)} is a ${pack.source} ${pack.style.join(", ")} pack with ${pack.count.toLocaleString("en-US")} models focused on ${themePhrase}. Includes ${categoryPhrase}.`;

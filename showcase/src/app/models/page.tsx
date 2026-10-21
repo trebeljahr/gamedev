@@ -11,5 +11,15 @@ export const metadata: Metadata = pageMetadata({
 });
 
 export default function ModelsPage() {
-  return <ModelCatalog manifest={manifest} />;
+  // Render the first screen on the server. Search and filters load the full
+  // catalog from the existing static JSON instead of duplicating it in HTML.
+  let remaining = 120;
+  const preview = {
+    packs: manifest.packs.map((pack) => {
+      const models = pack.models.slice(0, remaining);
+      remaining -= models.length;
+      return { ...pack, models };
+    }),
+  };
+  return <ModelCatalog manifest={preview} loadFullCatalog />;
 }

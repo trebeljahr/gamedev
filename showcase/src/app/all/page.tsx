@@ -1,16 +1,9 @@
-import dynamic from "next/dynamic";
+import { AllModelsWorld } from "@/components/AllModelsWorld";
 import { SiteHeader } from "@/components/SiteHeader";
-import { computeAllModelsLayout } from "@/lib/layout";
 import { manifest } from "@/lib/manifest";
-
-const AllModelsScene = dynamic(
-  () => import("@/components/AllModelsScene").then((m) => m.AllModelsScene),
-  { loading: () => <div style={{ padding: 24 }}>Loading scene…</div> },
-);
 
 export default function AllModelsPage() {
   const totalModels = manifest.packs.reduce((n, p) => n + p.count, 0);
-  const sceneLayout = computeAllModelsLayout(manifest);
 
   return (
     <div className="all-scene-shell">
@@ -23,7 +16,7 @@ export default function AllModelsPage() {
         }
       />
       <div className="all-scene-canvas">
-        <AllModelsScene sceneLayout={sceneLayout} />
+        <AllModelsWorld />
       </div>
     </div>
   );

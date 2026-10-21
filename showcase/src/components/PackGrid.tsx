@@ -15,7 +15,7 @@ const PackCardPreview = dynamic(
 );
 
 export type PackGridItem = {
-  pack: Pack;
+  pack: Omit<Pack, "models">;
   actions?: ReactNode;
   previewModelFiles: string[];
   modelMatches?: number;

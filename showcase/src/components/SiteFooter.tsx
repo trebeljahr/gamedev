@@ -8,6 +8,8 @@ export function SiteFooter() {
     <footer className="site-footer">
       <p>Free game assets, checked for permissive licenses and practical formats.</p>
       <nav aria-label="Footer navigation">
+        <Link href="/creators">Creators</Link>
+        <Link href="/curation">Curation criteria</Link>
         <Link href="/support">Support the project</Link>
         <ProjectDonateLink href="https://ricos.site/donate/gamedev-asset-library">Donate</ProjectDonateLink>
         <a href={suggestPackUrl} target="_blank" rel="noreferrer">

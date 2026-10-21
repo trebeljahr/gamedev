@@ -1,7 +1,8 @@
 import type { MetadataRoute } from "next";
+import { formatPageCount, formatPagePath } from "@/components/FormatCatalogPage";
 import { getCreatorSlugs } from "@/lib/creator-pages";
 import { manifest } from "@/lib/manifest";
-import { formatLandingPath, MODEL_FORMATS } from "@/lib/model-formats";
+import { MODEL_FORMATS } from "@/lib/model-formats";
 import { absoluteUrl, routePath } from "@/lib/seo";
 
 export const dynamic = "force-static";
@@ -10,6 +11,7 @@ const staticRoutes = [
   { pathname: "/", priority: 1, changeFrequency: "weekly" },
   { pathname: "/models", priority: 0.92, changeFrequency: "weekly" },
   { pathname: "/media", priority: 0.88, changeFrequency: "weekly" },
+  { pathname: "/creators", priority: 0.7, changeFrequency: "monthly" },
   { pathname: "/curation", priority: 0.7, changeFrequency: "monthly" },
   { pathname: "/all", priority: 0.68, changeFrequency: "monthly" },
 ] as const satisfies Array<{
@@ -45,8 +47,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .sort((a, b) => a.localeCompare(b))
     .map((slug) => sitemapEntry(`/creators/${slug}`, 0.72, "weekly", lastModified));
 
-  const formatRoutes = MODEL_FORMATS.map((format) =>
-    sitemapEntry(formatLandingPath(format), 0.78, "weekly", lastModified),
+  const formatRoutes = MODEL_FORMATS.flatMap((format) =>
+    Array.from({ length: formatPageCount(format) }, (_, index) =>
+      sitemapEntry(formatPagePath(format, index + 1), index === 0 ? 0.78 : 0.5, "weekly", lastModified),
+    ),
   );
 
   return [

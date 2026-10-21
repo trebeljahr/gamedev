@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useModelManifest } from "@/components/useModelManifest";
 import dynamic from "next/dynamic";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { SelectDropdown } from "@/components/NavDrawer";
@@ -37,6 +38,7 @@ const PackCardPreview = dynamic(
 
 type ModelCatalogProps = {
   manifest: Manifest;
+  loadFullCatalog?: boolean;
 };
 
 type ModelEntry = {
@@ -72,7 +74,8 @@ function visibleModelTags(model: Model): string[] {
   return uniqueTags([model.subcategory, ...model.themes, ...model.style, ...model.tags]).slice(0, 7);
 }
 
-export function ModelCatalog({ manifest }: ModelCatalogProps) {
+export function ModelCatalog({ manifest: initialManifest, loadFullCatalog = false }: ModelCatalogProps) {
+  const { manifest, loading, error, retry } = useModelManifest(initialManifest, loadFullCatalog);
   const [query, setQuery] = useState("");
   const lastNoResultsKey = useRef("");
   const [vendor, setVendor] = useState(ALL);
@@ -130,7 +133,7 @@ export function ModelCatalog({ manifest }: ModelCatalogProps) {
     [category, entries, format, style, terms, theme, vendor],
   );
 
-  const totalModels = entries.length;
+  const totalModels = manifest.packs.reduce((sum, pack) => sum + pack.count, 0);
   const listResetKey = [category, format, normalizedQuery, style, theme, vendor].join("|");
   const infinite = useInfiniteList({
     total: filtered.length,
@@ -140,12 +143,12 @@ export function ModelCatalog({ manifest }: ModelCatalogProps) {
   const visibleEntries = filtered.slice(0, infinite.visibleCount);
 
   useEffect(() => {
-    if (!normalizedQuery || filtered.length > 0) return;
+    if (loading || error || !normalizedQuery || filtered.length > 0) return;
     const key = [normalizedQuery, vendor, category, style, theme].join("|");
     if (lastNoResultsKey.current === key) return;
     lastNoResultsKey.current = key;
     trackSearchNoResults({ query: normalizedQuery, type: "models" });
-  }, [category, filtered.length, normalizedQuery, style, theme, vendor]);
+  }, [category, error, filtered.length, loading, normalizedQuery, style, theme, vendor]);
 
   return (
     <>
@@ -225,6 +228,12 @@ export function ModelCatalog({ manifest }: ModelCatalogProps) {
           </div>
         </section>
 
+        {loading && <p role="status">Loading the full model catalog…</p>}
+        {error && (
+          <p role="alert">
+            The full model catalog could not load. <button type="button" onClick={retry}>Try again</button>
+          </p>
+        )}
         <section className="model-results" aria-label="Filtered models">
           {visibleEntries.map((entry) => (
             <article className="model-card" key={entry.model.file} id={slug(entry.model.file)}>
@@ -286,7 +295,7 @@ export function ModelCatalog({ manifest }: ModelCatalogProps) {
               </dl>
             </article>
           ))}
-          {filtered.length === 0 && (
+          {!loading && !error && filtered.length === 0 && (
             <div className="empty-model-results">
               No models match these filters.
             </div>

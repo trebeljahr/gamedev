@@ -131,7 +131,7 @@ export default async function CreatorPage({ params }: CreatorPageProps) {
           <PackGrid
             credit={credit}
             items={packs.map((pack) => ({
-              pack,
+              pack: (({ models: _models, ...summary }) => summary)(pack),
               previewModelFiles: previewModelFilesFor(pack),
             }))}
             resetKey={vendor}
