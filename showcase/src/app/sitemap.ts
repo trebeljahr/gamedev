@@ -1,8 +1,11 @@
 import type { MetadataRoute } from "next";
 import { formatPageCount, formatPagePath } from "@/components/FormatCatalogPage";
+import { artPackHref } from "@/lib/art-routing";
 import { getCreatorSlugs } from "@/lib/creator-pages";
 import { manifest } from "@/lib/manifest";
+import { artPackSummaries, mediaPackHref, mediaPacks } from "@/lib/media";
 import { MODEL_FORMATS } from "@/lib/model-formats";
+import { modelHref, modelRouteRefsForPack } from "@/lib/model-routes";
 import { absoluteUrl, routePath } from "@/lib/seo";
 
 export const dynamic = "force-static";
@@ -14,6 +17,8 @@ const staticRoutes = [
   { pathname: "/creators", priority: 0.7, changeFrequency: "monthly" },
   { pathname: "/curation", priority: 0.7, changeFrequency: "monthly" },
   { pathname: "/all", priority: 0.68, changeFrequency: "monthly" },
+  { pathname: "/sounds/editor", priority: 0.7, changeFrequency: "monthly" },
+  { pathname: "/support", priority: 0.3, changeFrequency: "monthly" },
 ] as const satisfies Array<{
   pathname: string;
   priority: number;
@@ -47,6 +52,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .sort((a, b) => a.localeCompare(b))
     .map((slug) => sitemapEntry(`/creators/${slug}`, 0.72, "weekly", lastModified));
 
+  // Use the same license-filtered catalogs and route helpers as the pages'
+  // generateStaticParams, including stable slugs for duplicate model names.
+  const modelRoutes = manifest.packs.flatMap((pack) =>
+    modelRouteRefsForPack(pack).map((ref) =>
+      sitemapEntry(modelHref(pack, ref), 0.5, "monthly", lastModified),
+    ),
+  );
+  const artRoutes = artPackSummaries.map((pack) =>
+    sitemapEntry(artPackHref(pack.folder), 0.6, "monthly", lastModified),
+  );
+  const audioRoutes = mediaPacks.map((pack) =>
+    sitemapEntry(mediaPackHref(pack.kind, pack.id), 0.6, "monthly", lastModified),
+  );
+
   const formatRoutes = MODEL_FORMATS.flatMap((format) =>
     Array.from({ length: formatPageCount(format) }, (_, index) =>
       sitemapEntry(formatPagePath(format, index + 1), index === 0 ? 0.78 : 0.5, "weekly", lastModified),
@@ -61,5 +80,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...vendorRoutes,
     ...creatorRoutes,
     ...packRoutes,
+    ...modelRoutes,
+    ...artRoutes,
+    ...audioRoutes,
   ];
 }
