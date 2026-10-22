@@ -11,6 +11,7 @@ type SiteHeaderProps = {
   meta?: ReactNode;
   compact?: boolean;
   active?: NavKey;
+  brandAsHeading?: boolean;
 };
 
 function activeKey(pathname: string, search: string, hash: string): NavKey | undefined {
@@ -42,7 +43,8 @@ function shouldUsePendingActive(event: MouseEvent): boolean {
   );
 }
 
-export function SiteHeader({ meta, compact = false, active }: SiteHeaderProps) {
+export function SiteHeader({ meta, compact = false, active, brandAsHeading = true }: SiteHeaderProps) {
+  const Brand = brandAsHeading ? "h1" : "div";
   const pathname = usePathname();
   const [locationParts, setLocationParts] = useState({ search: "", hash: "" });
   const [pendingActive, setPendingActive] = useState<NavKey | null>(null);
@@ -75,11 +77,11 @@ export function SiteHeader({ meta, compact = false, active }: SiteHeaderProps) {
   return (
     <header className={`app-header ${compact ? "compact" : ""}`}>
       <div className="app-header-main">
-        <h1>
+        <Brand className="app-brand">
           <Link className="app-title" href="/">
             GameDev Asset Library
           </Link>
-        </h1>
+        </Brand>
         <nav className="top-nav" aria-label="Primary navigation">
           {navItems.map((item) =>
             "href" in item ? (

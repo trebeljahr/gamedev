@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { CreatorAssetList } from "@/components/CreatorAssetList";
 import { SiteHeader } from "@/components/SiteHeader";
+import { creatorPageDescription } from "@/lib/catalog-seo";
 import { getCreatorPageData, getCreatorSlugs } from "@/lib/creator-pages";
 import { pageMetadata } from "@/lib/seo";
 
@@ -21,7 +22,7 @@ export async function generateMetadata({ params }: CreatorPageProps): Promise<Me
 
   return pageMetadata({
     title: `${data.metadata.name} Game Assets`,
-    description: `Browse ${data.assets.length.toLocaleString("en-US")} game assets by ${data.metadata.name}, with source links and license notes.`,
+    description: creatorPageDescription(data),
     pathname: `/creators/${slug}`,
   });
 }
@@ -36,7 +37,7 @@ export default async function CreatorPage({ params }: CreatorPageProps) {
 
   return (
     <div className="creator-page">
-      <SiteHeader active="packs" meta={`${data.assets.length.toLocaleString("en-US")} credited assets`} />
+      <SiteHeader active="packs" brandAsHeading={false} meta={`${data.assets.length.toLocaleString("en-US")} credited assets`} />
 
       <main>
         <section className="creator-hero" aria-labelledby="creator-heading">

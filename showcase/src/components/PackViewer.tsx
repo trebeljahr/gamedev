@@ -316,13 +316,13 @@ function SingleAssetViewer({
       <main>
         <Viewer key={model.file} url={assetUrl(model.file)} />
         <div className="viewer-bar">
-          <div className="name">
+          <h1 className="name">
             {model.title}{" "}
             <span style={{ color: "rgba(255,255,255,0.6)", fontSize: 12 }}>
               ({index + 1}/{pack.models.length})
             </span>
             <small>{packTitle}</small>
-          </div>
+          </h1>
           <div className="viewer-controls">
             <ModelDownloadLinks model={model} compact />
             <a

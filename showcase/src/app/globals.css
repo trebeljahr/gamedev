@@ -57,7 +57,7 @@ select:focus-visible {
   gap: clamp(16px, 3vw, 30px);
   min-width: 0;
 }
-.app-header h1 { margin: 0; font-size: 13px; font-weight: 800; }
+.app-header .app-brand { margin: 0; font-size: 13px; font-weight: 800; }
 .app-title {
   display: inline-flex;
   color: var(--accent);
@@ -2402,7 +2402,7 @@ select:focus-visible {
   color: white;
 }
 .viewer-bar > * { pointer-events: auto; }
-.viewer-bar .name { font-weight: 500; text-shadow: 0 1px 2px rgba(0,0,0,0.5); }
+.viewer-bar .name { margin: 0; font-size: inherit; font-weight: 500; text-shadow: 0 1px 2px rgba(0,0,0,0.5); }
 .viewer-bar .name small {
   display: block;
   margin-top: 3px;

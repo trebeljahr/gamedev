@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { PackViewer } from "@/components/PackViewer";
+import { modelPageCopy } from "@/lib/catalog-seo";
 import { exactLicenseUrlFor, licenseForVendor } from "@/lib/license";
-import { findPack, manifest, modelDescription } from "@/lib/manifest";
+import { findPack, manifest } from "@/lib/manifest";
 import { findModelRouteRef, modelHref, modelRouteRefsForPack } from "@/lib/model-routes";
 import { assetJsonLd, jsonLdScriptContent, pageMetadata } from "@/lib/seo";
 
@@ -30,9 +31,9 @@ export async function generateMetadata({ params }: ModelPageProps): Promise<Meta
     source: data.source,
     fallbackUrl: credit.licenseUrl,
   });
+  const copy = modelPageCopy(data, ref.model);
   const metadata = pageMetadata({
-    title: `${ref.model.title} 3D Model by ${credit.vendorLabel}`,
-    description: `${modelDescription(ref.model, data)} Browse it in ${data.title}, download source files, and review ${data.license} license notes.`,
+    ...copy,
     pathname: modelHref(data, ref),
     imagePathname: `/${data.vendor}/${data.pack}`,
     imageAlt: `${ref.model.title} 3D model`,
@@ -40,6 +41,7 @@ export async function generateMetadata({ params }: ModelPageProps): Promise<Meta
 
   return {
     ...metadata,
+    title: { absolute: copy.title },
     authors: credit.vendorUrl
       ? [{ name: credit.vendorLabel, url: credit.vendorUrl }]
       : [{ name: credit.vendorLabel }],
